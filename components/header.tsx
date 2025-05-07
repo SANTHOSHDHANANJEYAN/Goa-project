@@ -16,7 +16,7 @@
     {
       name: "Yoga Courses",
       dropdown: [
-        { name: "21 Days Course", href: "/services/21-days/21-days" },
+        { name: "21 Days Course", href: "/services" },
         { name: "50 Hr Multi-Style-Yoga TTC", href: "/services/50 Hr multi/page" },
         { name: "100 Hr Multi-Style-Yoga TTC", href: "/services/100 Hr Multi/page" },
         { name: "200 Hr Multi-Style-Yoga TTC", href: "/services/200 Hr Multi/page" },
