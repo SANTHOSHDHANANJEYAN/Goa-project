@@ -10,7 +10,7 @@ const TwoHundredHourTTPage = () => {
     <div className="mt-[6rem] p-6 md:p-12 max-w-4xl mx-auto text-gray-800">
       <div className="text-center mb-6">
         <h2 className="text-xl font-semibold text-indigo-600 uppercase tracking-wider mb-1">
-          200-Hour Accredited Yoga Teacher Training
+          21-days Accredited Yoga Teacher Training
         </h2>
         <p className="text-lg text-gray-600">In Amersham, Bali</p>
       </div>
