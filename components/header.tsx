@@ -16,11 +16,11 @@
     {
       name: "Yoga Courses",
       dropdown: [
-        { name: "21 Days Course", href: "/app/services" },
-        { name: "50 Hr Multi-Style-Yoga TTC", href: "/app/50#FiftyHourMultiPage" },
-        { name: "100 Hr Multi-Style-Yoga TTC", href: "/app/100" },
-        { name: "200 Hr Multi-Style-Yoga TTC", href: "/app/200" },
-        { name: "300 Hr Multi-Style-Yoga TTC", href: "/app/300" }
+        { name: "21 Days Course", href: "/services" },
+        { name: "50 Hr Multi-Style-Yoga TTC", href: "/50" },
+        { name: "100 Hr Multi-Style-Yoga TTC", href: "/100" },
+        { name: "200 Hr Multi-Style-Yoga TTC", href: "/200" },
+        { name: "300 Hr Multi-Style-Yoga TTC", href: "/300" }
       ]
     },
     {
