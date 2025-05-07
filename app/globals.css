@@ -39,28 +39,28 @@
     --ring: 24 9% 10%;
     --radius: 0.5rem;
   }
-
   .dark {
-    --background: 20 14% 4%;
-    --foreground: 60 9% 98%;
-    --card: 20 14% 4%;
-    --card-foreground: 60 9% 98%;
-    --popover: 20 14% 4%;
-    --popover-foreground: 60 9% 98%;
-    --primary: 60 9% 98%;
-    --primary-foreground: 24 9% 10%;
-    --secondary: 12 6% 15%;
-    --secondary-foreground: 60 9% 98%;
-    --muted: 12 6% 15%;
-    --muted-foreground: 24 5% 65%;
-    --accent: 142 70% 40%;
-    --accent-foreground: 60 9% 98%;
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 60 9% 98%;
-    --border: 12 6% 15%;
-    --input: 12 6% 15%;
-    --ring: 24 5% 65%;
+    --background: transparent; /* or white if needed */
+    --foreground: 0 0% 10%; /* Very dark gray (almost black) for text */
+    --card: transparent;
+    --card-foreground: 0 0% 10%;
+    --popover: transparent;
+    --popover-foreground: 0 0% 10%;
+    --primary: 220 100% 40%; /* Dark blue for emphasis */
+    --primary-foreground: 0 0% 100%; /* White text on primary buttons */
+    --secondary: 0 0% 90%; /* Very light gray for background blocks */
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 80%;
+    --muted-foreground: 0 0% 30%;
+    --accent: 210 80% 35%; /* Muted blue for highlights */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 80%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 60%;
   }
+
 }
 
 @layer base {
