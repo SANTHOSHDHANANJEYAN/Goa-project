@@ -49,7 +49,7 @@ const TwoHundredHourTTPage = () => {
             alt="Yoga practitioners by a waterfall"
             width={1200}
             height={400}
-            className="w-full h-[600px] object-cover"
+            className="w-full h-[600px] object-cover border-radius-[2rem] bg-transparent"
           />
         </div>
         <div className="p-6 text-center">
