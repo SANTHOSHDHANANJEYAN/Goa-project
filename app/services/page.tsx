@@ -43,7 +43,7 @@ const TwoHundredHourTTPage = () => {
 
       {/* New Section */}
       <section className="max-w-4xl mx-auto mb-12 rounded-xl overflow-hidden shadow-lg bg-white">
-        <div className="w-full h-600">
+      <div className="w-full h-[600px] rounded-[2rem]">
           <Image
             src="https://i.ibb.co/zJpVn5G/yoga-group-waterfall.jpg"
             alt="Yoga practitioners by a waterfall"
