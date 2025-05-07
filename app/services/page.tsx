@@ -35,51 +35,54 @@ export default function ServicesPage() {
             </div>
             
             <TabsContent value="yoga" className="animate-fade-in">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="relative">
-                  <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-lg">
-                    <Image
-                      src="/course1.jpg"
-                      alt="Yoga class at House of Om"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-accent/10 rounded-full -z-10" />
-                </div>
-                <div>
-                  <h2 className="font-serif text-3xl md:text-4xl mb-6" id="yoga-classes">21 Days</h2>
-                  <p className="text-lg text-muted-foreground mb-6">
-                    Our yoga classes blend ancient tradition with modern alignment principles. From dynamic flows to gentle restorative practices, we offer classes for all levels and aspirations.
-                  </p>
-                  <div className="space-y-3 mb-8">
-                    <div className="flex items-start">
-                      <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
-                      <span>Hatha Yoga - Foundation practice focusing on basic postures and breath</span>
-                    </div>
-                    <div className="flex items-start">
-                      <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
-                      <span>Vinyasa Flow - Dynamic sequences linking breath with movement</span>
-                    </div>
-                    <div className="flex items-start">
-                      <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
-                      <span>Yin Yoga - Deep tissue release through longer-held passive poses</span>
-                    </div>
-                    <div className="flex items-start">
-                      <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
-                      <span>Restorative Yoga - Gentle, supported poses for deep relaxation</span>
-                    </div>
-                    <div className="flex items-start">
-                      <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
-                      <span>Prenatal Yoga - Safe practice for expectant mothers</span>
-                    </div>
-                  </div>
-                  <Button asChild>
-                    <Link href="/schedule">View Schedule</Link>
-                  </Button>
-                </div>
-              </div>
-            </TabsContent>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    {/* Image Section */}
+    <div className="relative">
+      <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-lg">
+        <Image
+          src="/course1.jpg"
+          alt="21 Day Yoga Retreat"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-accent/10 rounded-full -z-10" />
+    </div>
+
+    {/* Content Section */}
+    <div>
+      <p className="uppercase font-bold text-sm text-muted-foreground mb-2">
+        21-Day Yoga Retreat in Goa
+      </p>
+      <h2 className="font-serif text-3xl md:text-5xl mb-4">
+        Become a certified yoga teacher by Yoga Alliance
+      </h2>
+      <p className="text-lg text-muted-foreground mb-6">
+        and take part in a life-changing journey of 21 days in Goa
+      </p>
+
+      {/* Price Display */}
+      <div className="flex items-center space-x-4 mb-2">
+        <span className="line-through text-2xl text-gray-400">₹85,000</span>
+        <span className="text-3xl font-bold text-primary">₹72,250</span>
+      </div>
+      <p className="text-sm text-accent font-medium mb-6">*early bird offer -15%</p>
+
+      {/* CTA Button */}
+      <Button asChild className="mb-4">
+        <Link href="/schedule">Book Your Spot</Link>
+      </Button>
+
+      {/* Limited Spot Info */}
+      <p className="text-sm text-muted-foreground">
+        <span className="text-primary font-medium">3 spots left</span> for the next training:
+        <br />
+        <span className="font-semibold">June 5 – June 25, 2025</span>
+      </p>
+    </div>
+  </div>
+</TabsContent>
+
             
             <TabsContent value="meditation" className="animate-fade-in">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
