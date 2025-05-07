@@ -74,9 +74,9 @@ export default function ServicesPage() {
                       <span>Prenatal Yoga - Safe practice for expectant mothers</span>
                     </div>
                   </div>
-                  {/* <Button asChild>
+                  <Button asChild>
                     <Link href="/schedule">View Schedule</Link>
-                  </Button> */}
+                  </Button>
                 </div>
               </div>
             </TabsContent>
@@ -110,9 +110,9 @@ export default function ServicesPage() {
                       <span>Meditation for Beginners - Introductory sessions for newcomers</span>
                     </div>
                   </div>
-                  {/* <Button asChild>
+                  <Button asChild>
                     <Link href="/schedule">View Schedule</Link>
-                  </Button> */}
+                  </Button>
                 </div>
                 <div className="order-1 lg:order-2 relative">
                   <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-lg">
@@ -164,9 +164,9 @@ export default function ServicesPage() {
                       <span>Voice Toning - Using vocal vibrations for self-healing</span>
                     </div>
                   </div>
-                  {/* <Button asChild>
+                  <Button asChild>
                     <Link href="/schedule">View Schedule</Link>
-                  </Button> */}
+                  </Button>
                 </div>
               </div>
             </TabsContent>
@@ -200,9 +200,9 @@ export default function ServicesPage() {
                       <span>Breathwork Intensive - Harnessing the power of pranayama</span>
                     </div>
                   </div>
-                  {/* <Button asChild>
+                  <Button asChild>
                     <Link href="/schedule">View Schedule</Link>
-                  </Button> */}
+                  </Button>
                 </div>
                 <div className="order-1 lg:order-2 relative">
                   <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-lg">
@@ -254,9 +254,9 @@ export default function ServicesPage() {
                       <span>International Journeys - Transformative experiences in sacred locations</span>
                     </div>
                   </div>
-                  {/* <Button asChild>
+                  <Button asChild>
                     <Link href="/schedule">View Schedule</Link>
-                  </Button> */}
+                  </Button>
                 </div>
               </div>
             </TabsContent>
