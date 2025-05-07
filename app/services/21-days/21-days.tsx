@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const TwentyOneDaysPage = () => {
   return (
     <div className="p-6 md:p-12 max-w-4xl mx-auto text-gray-800">
