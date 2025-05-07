@@ -35,48 +35,51 @@ export default function ServicesPage() {
             </div>
             
             <TabsContent value="yoga" className="animate-fade-in">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-    <div className="relative">
-      <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-lg">
-        <Image
-          src="/new-course-image.jpg"
-          alt="Yoga session at House of Om"
-          fill
-          className="object-cover"
-        />
-      </div>
-      <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-accent/10 rounded-full -z-10" />
-    </div>
-    <div>
-      <h2 className="font-serif text-3xl md:text-4xl mb-6" id="yoga-classes">21 Days of Transformation</h2>
-      <p className="text-lg text-muted-foreground mb-6">
-        Join us for a transformative 21-day journey where you'll explore the depth of yoga with expert guidance. Whether you're new to yoga or deepening your practice, we cater to all levels.
-      </p>
-      <div className="space-y-3 mb-8">
-        <div className="flex items-start">
-          <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
-          <span>Ashtanga Yoga - Focus on strength, flexibility, and stamina</span>
-        </div>
-        <div className="flex items-start">
-          <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
-          <span>Power Yoga - Dynamic flow for energy and fitness</span>
-        </div>
-        <div className="flex items-start">
-          <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
-          <span>Yin & Restorative Yoga - Release tension and promote deep relaxation</span>
-        </div>
-        <div className="flex items-start">
-          <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
-          <span>Yoga Nidra - A guided meditation practice for deep relaxation</span>
-        </div>
-      </div>
-      <Button asChild>
-        <Link href="/schedule">Join Us Now</Link>
-      </Button>
-    </div>
-  </div>
-</TabsContent>
-
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="relative">
+                  <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-lg">
+                    <Image
+                      src="/course1.jpg"
+                      alt="Yoga class at House of Om"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-accent/10 rounded-full -z-10" />
+                </div>
+                <div>
+                  <h2 className="font-serif text-3xl md:text-4xl mb-6" id="yoga-classes">21 Days</h2>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Our yoga classes blend ancient tradition with modern alignment principles. From dynamic flows to gentle restorative practices, we offer classes for all levels and aspirations.
+                  </p>
+                  <div className="space-y-3 mb-8">
+                    <div className="flex items-start">
+                      <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
+                      <span>Hatha Yoga - Foundation practice focusing on basic postures and breath</span>
+                    </div>
+                    <div className="flex items-start">
+                      <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
+                      <span>Vinyasa Flow - Dynamic sequences linking breath with movement</span>
+                    </div>
+                    <div className="flex items-start">
+                      <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
+                      <span>Yin Yoga - Deep tissue release through longer-held passive poses</span>
+                    </div>
+                    <div className="flex items-start">
+                      <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
+                      <span>Restorative Yoga - Gentle, supported poses for deep relaxation</span>
+                    </div>
+                    <div className="flex items-start">
+                      <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
+                      <span>Prenatal Yoga - Safe practice for expectant mothers</span>
+                    </div>
+                  </div>
+                  <Button asChild>
+                    <Link href="/schedule">View Schedule</Link>
+                  </Button>
+                </div>
+              </div>
+            </TabsContent>
             
             <TabsContent value="meditation" className="animate-fade-in">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

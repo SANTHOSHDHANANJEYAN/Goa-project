@@ -16,11 +16,11 @@ const leftNavigation = [
   {
     name: "Yoga Courses",
     dropdown: [
-      { name: "21 Days Course", href: "/services/21-days" },
-      { name: "50 Hr Multi-Style-Yoga TTC", href: "/services" },
-      { name: "100 Hr Multi-Style-Yoga TTC", href: "/services" },
-      { name: "200 Hr Multi-Style-Yoga TTC", href: "/services" },
-      { name: "300 Hr Multi-Style-Yoga TTC", href: "/services" },
+      { name: "21 Days Course", href: "/app/services/21-days" },
+      { name: "50 Hr Multi-Style-Yoga TTC", href: "/app/services/50 Hr  multi" },
+      { name: "100 Hr Multi-Style-Yoga TTC", href: "/app/services/100 Hr Multi" },
+      { name: "200 Hr Multi-Style-Yoga TTC", href: "/app/services/200 Hr Multi" },
+      { name: "300 Hr Multi-Style-Yoga TTC", href: "/app/services/300 Hr Multi" },
     ],
   },
   {
