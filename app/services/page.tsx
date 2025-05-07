@@ -1,96 +1,80 @@
-import React from "react";
-import Image from "next/image";
+'use client';
 
-const TwoHundredHourTTPage = () => {
+import { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+import { MotionDiv } from '@/components/ui/motion-div';
+
+export function HeroSection() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const parallaxOffset = scrollY * 0.4;
+
   return (
-    <div className="mt-[6rem] p-6 md:p-12 max-w-4xl mx-auto text-gray-800">
-      <div className="text-center mb-6">
-        <h2 className="text-xl font-semibold text-indigo-600 uppercase tracking-wider mb-1">
-          200-Hour Accredited Yoga Teacher Training
-        </h2>
-        <p className="text-lg text-gray-600">In Amersham, Bali</p>
+    <section className="relative h-screen overflow-hidden">
+      {/* Parallax Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url("https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
+          transform: `translateY(${parallaxOffset}px)`,
+        }}
+      />
+      
+      {/* Dark overlay with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60 dark:from-black/60 dark:via-black/50 dark:to-black/80" />
+      
+      {/* Content */}
+      <div className="relative h-full container mx-auto px-4 flex flex-col justify-center items-center text-center text-white">
+        <MotionDiv delay={0.1} distance={30} className="mb-6">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl font-light tracking-tight leading-tight mb-4">
+            Discover Inner Peace at <br />
+            <span className="font-medium">Rishikul Yogshala Goa</span>
+          </h1>
+        </MotionDiv>
+        
+        <MotionDiv delay={0.3} distance={30} className="mb-8 max-w-2xl">
+          <p className="text-lg md:text-xl text-white/80">
+            Experience authentic yoga teacher training and rejuvenating retreats in the serene surroundings of Kerala, India.
+          </p>
+        </MotionDiv>
+        
+        <MotionDiv delay={0.5} distance={30} className="flex flex-col sm:flex-row gap-4">
+          <Button 
+            size="lg" 
+            className="bg-white text-black hover:bg-white/90 transition-all duration-300 rounded-full px-8"
+          >
+            Explore Our Courses
+          </Button>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="border-white text-white hover:bg-white/20 transition-all duration-300 rounded-full px-8"
+          >
+            Book a Retreat
+          </Button>
+        </MotionDiv>
       </div>
-
-      <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center">
-        Become a certified yoga teacher by Yoga Alliance
-      </h1>
-      <p className="text-lg mb-6 text-center">
-        and take part in an exciting journey of 20 days in Bali
-      </p>
-
-      <div className="flex justify-center items-center mb-4">
-        <span className="text-xl line-through text-gray-500 mr-4">USD 2350</span>
-        <span className="text-4xl font-bold text-green-600">USD 2000</span>
+      
+      {/* Scroll indicator */}
+      <div className={cn(
+        "absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center transition-opacity duration-500",
+        scrollY > 100 ? "opacity-0" : "opacity-100"
+      )}>
+        <span className="text-white text-sm mb-2">Scroll to explore</span>
+        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white rounded-full animate-bounce mt-2"></div>
+        </div>
       </div>
-      <p className="text-center text-sm text-gray-700 mb-6">
-        *early bird offer -15%
-      </p>
-
-      <div className="text-center mb-6">
-        <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full">
-          BOOK YOUR SPOT
-        </button>
-      </div>
-
-      <div className="text-center text-sm text-gray-700 mb-8">
-        <p className="mb-1">3 spots left on the next training:</p>
-        <p className="font-semibold">May 26th - Jun 16th, 2025</p>
-      </div>
-
-      {/* New Section */}
-      <section className="max-w-4xl mx-auto mb-12 rounded-xl overflow-hidden shadow-lg bg-white">
-  <div className="w-full h-auto">
-    <Image
-      src="https://i.ibb.co/zJpVn5G/yoga-group-waterfall.jpg"
-      alt="Yoga practitioners by a waterfall"
-      width={1200}
-      height={600}
-      className="w-full h-auto object-cover"
-    />
-  </div>
-  <div className="p-6 text-center">
-    <h3 className="text-2xl font-semibold text-indigo-900 mb-4">
-      After completing the course...
-    </h3>
-    <div className="flex justify-center items-center gap-6 mb-4">
-      <div className="relative w-12 h-12">
-        <Image
-          src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
-          alt="RYS 200"
-          layout="fill"
-          objectFit="contain"
-        />
-      </div>
-      <div className="relative w-12 h-12">
-        <Image
-          src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
-          alt="RYS 300"
-          layout="fill"
-          objectFit="contain"
-        />
-      </div>
-      <div className="relative w-12 h-12">
-        <Image
-          src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
-          alt="RYS 500"
-          layout="fill"
-          objectFit="contain"
-        />
-      </div>
-    </div>
-    <p className="text-sm text-gray-700">
-      You will receive a Yoga Alliance certificate.
-      <br />
-      Recognised and accepted worldwide.
-    </p>
-  </div>
-</section>
-
-
-
-      {/* You can add more sections here with details about the training, curriculum, accommodation, etc. */}
-    </div>
+    </section>
   );
-};
-
-export default TwoHundredHourTTPage;
+}
