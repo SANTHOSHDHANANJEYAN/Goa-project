@@ -36,49 +36,43 @@ export default function ServicesPage() {
             
             <TabsContent value="yoga" className="animate-fade-in">
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-    {/* Image Section */}
     <div className="relative">
       <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-lg">
         <Image
-          src="/course1.jpg"
-          alt="21 Day Yoga Retreat"
+          src="/new-course-image.jpg"
+          alt="Yoga session at House of Om"
           fill
           className="object-cover"
         />
       </div>
       <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-accent/10 rounded-full -z-10" />
     </div>
-
-    {/* Content Section */}
     <div>
-      <p className="uppercase font-bold text-sm text-muted-foreground mb-2">
-        21-Day Yoga Retreat in Goa
-      </p>
-      <h2 className="font-serif text-3xl md:text-5xl mb-4">
-        Become a certified yoga teacher by Yoga Alliance
-      </h2>
+      <h2 className="font-serif text-3xl md:text-4xl mb-6" id="yoga-classes">21 Days of Transformation</h2>
       <p className="text-lg text-muted-foreground mb-6">
-        and take part in a life-changing journey of 21 days in Goa
+        Join us for a transformative 21-day journey where you'll explore the depth of yoga with expert guidance. Whether you're new to yoga or deepening your practice, we cater to all levels.
       </p>
-
-      {/* Price Display */}
-      <div className="flex items-center space-x-4 mb-2">
-        <span className="line-through text-2xl text-gray-400">₹85,000</span>
-        <span className="text-3xl font-bold text-primary">₹72,250</span>
+      <div className="space-y-3 mb-8">
+        <div className="flex items-start">
+          <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
+          <span>Ashtanga Yoga - Focus on strength, flexibility, and stamina</span>
+        </div>
+        <div className="flex items-start">
+          <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
+          <span>Power Yoga - Dynamic flow for energy and fitness</span>
+        </div>
+        <div className="flex items-start">
+          <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
+          <span>Yin & Restorative Yoga - Release tension and promote deep relaxation</span>
+        </div>
+        <div className="flex items-start">
+          <Check className="mr-2 mt-1 h-5 w-5 text-accent" />
+          <span>Yoga Nidra - A guided meditation practice for deep relaxation</span>
+        </div>
       </div>
-      <p className="text-sm text-accent font-medium mb-6">*early bird offer -15%</p>
-
-      {/* CTA Button */}
-      <Button asChild className="mb-4">
-        <Link href="/schedule">Book Your Spot</Link>
+      <Button asChild>
+        <Link href="/schedule">Join Us Now</Link>
       </Button>
-
-      {/* Limited Spot Info */}
-      <p className="text-sm text-muted-foreground">
-        <span className="text-primary font-medium">3 spots left</span> for the next training:
-        <br />
-        <span className="font-semibold">June 5 – June 25, 2025</span>
-      </p>
     </div>
   </div>
 </TabsContent>
