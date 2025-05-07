@@ -1,46 +1,44 @@
 import React from "react";
 
-
-const TwentyOneDaysPage = () => {
+const TwoHundredHourTTPage = () => {
   return (
     <div className="p-6 md:p-12 max-w-4xl mx-auto text-gray-800">
+      <div className="text-center mb-6">
+        <h2 className="text-xl font-semibold text-indigo-600 uppercase tracking-wider mb-1">
+          200-Hour Accredited Yoga Teacher Training
+        </h2>
+        <p className="text-lg text-gray-600">In Amersham, Bali</p>
+      </div>
+
       <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center">
-        21-Day Yoga Retreat in Goa
+        Become a certified yoga teacher by Yoga Alliance
       </h1>
       <p className="text-lg mb-6 text-center">
-        Flow, relax, and renew—immerse yourself in a 3-week transformational
-        journey.
+        and take part in an exciting journey of 20 days in Bali
       </p>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold mb-2">What to Expect</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Daily yoga sessions (Hatha, Vinyasa, and Yin)</li>
-          <li>Meditation, breathwork, and mindfulness practices</li>
-          <li>Workshops on yoga philosophy, lifestyle, and self-care</li>
-          <li>Local excursions and time to unwind</li>
-        </ul>
-      </section>
+      <div className="flex justify-center items-center mb-4">
+        <span className="text-xl line-through text-gray-500 mr-4">USD 2350</span>
+        <span className="text-4xl font-bold text-green-600">USD 2000</span>
+      </div>
+      <p className="text-center text-sm text-gray-700 mb-6">
+        *early bird offer -15%
+      </p>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold mb-2">Location & Accommodation</h2>
-        <p>
-          Nestled in the serene beaches of Goa, our retreat offers private
-          cottages, nourishing vegetarian meals, and a supportive community
-          space.
-        </p>
-      </section>
+      <div className="text-center mb-6">
+        <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full">
+          BOOK YOUR SPOT
+        </button>
+      </div>
 
-      <section>
-        <h2 className="text-2xl font-semibold mb-2">Who It's For</h2>
-        <p>
-          Open to all levels. Whether you're new to yoga or seeking space to
-          reconnect, this retreat invites you to slow down and come home to
-          yourself.
-        </p>
-      </section>
+      <div className="text-center text-sm text-gray-700">
+        <p className="mb-1">3 spots left on the next training:</p>
+        <p className="font-semibold">May 26th - Jun 16th, 2025</p>
+      </div>
+
+      {/* You can add more sections here with details about the training, curriculum, accommodation, etc. */}
     </div>
   );
 };
 
-export default TwentyOneDaysPage;
+export default TwoHundredHourTTPage;
