@@ -12,6 +12,7 @@ import Image from "next/image";
 const yellowItems = ["About Us", "Yoga Courses", "Retreats", "Gallery", "Contact Us", "Payment"];
 
 const leftNavigation = [
+  
   {
     name: "Yoga Courses",
     dropdown: [
@@ -117,39 +118,15 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent dark:bg-gray-900 backdrop-blur-md shadow-sm py-3 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
-          {/* Left: Menu (mobile) + Desktop Nav */}
+          
+          {/* Left: Menu + Links */}
           <div className="flex items-center gap-6">
-            <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMobileMenuOpen(true)}>
+            <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
               <Menu size={24} />
             </Button>
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-primary">
-              {[...leftNavigation].map((item) =>
-                item.dropdown ? (
-                  <div key={item.name} className="relative group">
-                    <button className="flex items-center gap-1 hover:text-blue-500">
-                      {item.name}
-                      <ChevronDown size={14} />
-                    </button>
-                    <div className="absolute left-0 top-full mt-2 hidden group-hover:block bg-white dark:bg-gray-800 shadow-lg rounded-md z-50">
-                      <div className="py-2">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <Link key={item.name} href={item.href} className="hover:text-blue-500">
-                    {item.name}
-                  </Link>
-                )
-              )}
+              <Link href="/services">PROGRAMS</Link>
+              <Link href="/about">ABOUT</Link>
             </nav>
           </div>
 
@@ -160,41 +137,12 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Right: Text + Theme + Right Nav */}
+          {/* Right: Text + Theme */}
           <div className="flex justify-end items-center gap-4">
             <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-primary">
               <span>YOGA SCHOOL IN GOA, INDIA</span>
               <span>ACCREDITED BY YOGA ALLIANCE</span>
             </div>
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-primary">
-              {rightNavigation.map((item) =>
-                item.dropdown ? (
-                  <div key={item.name} className="relative group">
-                    <button className="flex items-center gap-1 hover:text-blue-500">
-                      {item.name}
-                      <ChevronDown size={14} />
-                    </button>
-                    <div className="absolute left-0 top-full mt-2 hidden group-hover:block bg-white dark:bg-gray-800 shadow-lg rounded-md z-50">
-                      <div className="py-2">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <Link key={item.name} href={item.href} className="hover:text-blue-500">
-                    {item.name}
-                  </Link>
-                )
-              )}
-            </nav>
             {mounted && (
               <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
                 {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
@@ -205,32 +153,30 @@ export default function Header() {
       </div>
 
       {/* Drawer for Mobile */}
-      <div className="md:hidden">
+      <div
+        className={cn(
+          "fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300",
+          mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        )}
+        onClick={() => setMobileMenuOpen(false)}
+      >
         <div
           className={cn(
-            "fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300",
-            mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+            "fixed top-0 left-0 w-72 h-screen overflow-y-auto bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300",
+            mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
           )}
-          onClick={() => setMobileMenuOpen(false)}
+          onClick={(e) => e.stopPropagation()}
         >
-          <div
-            className={cn(
-              "fixed top-0 left-0 w-72 h-screen overflow-y-auto bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300",
-              mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-            )}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="p-4 min-h-screen flex flex-col">
-              <div className="flex justify-between items-center mb-6">
-                <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                  <Image src="/logo2.png" alt="Rishikul" width={120} height={30} className="ml-12" />
-                </Link>
-                <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
-                  <X size={24} />
-                </Button>
-              </div>
-              <nav className="space-y-4">{renderDrawerNav()}</nav>
+          <div className="p-4 min-h-screen flex flex-col">
+            <div className="flex justify-between items-center mb-6">
+              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+              <Image src="/logo2.png" alt="Rishikul" width={120} height={30} className="ml-12" />   
+              </Link>
+              <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
+                <X size={24} />
+              </Button>
             </div>
+            <nav className="space-y-4">{renderDrawerNav()}</nav>
           </div>
         </div>
       </div>

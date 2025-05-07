@@ -163,5 +163,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
+body, html {
+  overflow-x: hidden;
+}
 
   
