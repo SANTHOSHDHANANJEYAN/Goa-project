@@ -7,7 +7,8 @@ const TwentyOneDaysPage = () => {
         21-Day Yoga Retreat in Goa
       </h1>
       <p className="text-lg mb-6 text-center">
-        Flow, relax, and renew—immerse yourself in a 3-week transformational journey.
+        Flow, relax, and renew—immerse yourself in a 3-week transformational
+        journey.
       </p>
 
       <section className="mb-6">
@@ -23,14 +24,18 @@ const TwentyOneDaysPage = () => {
       <section className="mb-6">
         <h2 className="text-2xl font-semibold mb-2">Location & Accommodation</h2>
         <p>
-          Nestled in the serene beaches of Goa, our retreat offers private cottages, nourishing vegetarian meals, and a supportive community space.
+          Nestled in the serene beaches of Goa, our retreat offers private
+          cottages, nourishing vegetarian meals, and a supportive community
+          space.
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-semibold mb-2">Who It's For</h2>
         <p>
-          Open to all levels. Whether you're new to yoga or seeking space to reconnect, this retreat invites you to slow down and come home to yourself.
+          Open to all levels. Whether you're new to yoga or seeking space to
+          reconnect, this retreat invites you to slow down and come home to
+          yourself.
         </p>
       </section>
     </div>
