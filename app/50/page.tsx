@@ -59,7 +59,7 @@ const TwoHundredHourTTPage = () => {
           <div className="flex justify-center items-center gap-6 mb-4">
             <div className="relative w-12 h-12">
               <Image
-                src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
+                src="/rys 200.png"
                 alt="RYS 200"
                 layout="fill"
                 objectFit="contain"
@@ -67,7 +67,7 @@ const TwoHundredHourTTPage = () => {
             </div>
             <div className="relative w-12 h-12">
               <Image
-                src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
+                src="/rys 200.png"
                 alt="RYS 300"
                 layout="fill"
                 objectFit="contain"
@@ -75,7 +75,7 @@ const TwoHundredHourTTPage = () => {
             </div>
             <div className="relative w-12 h-12">
               <Image
-                src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
+                src="/rys 200.png"
                 alt="RYS 500"
                 layout="fill"
                 objectFit="contain"
