@@ -47,7 +47,7 @@ const TwoHundredHourTTPage = () => {
             objectFit="cover"
           />
         </div>
-        <div className="bg-gray-100 p-6 text-center">
+        <div className="bg-transparent p-6 text-center">
           <h3 className="text-xl font-semibold mb-2">After completing the course...</h3>
           <div className="flex justify-center items-center space-x-4 mb-2">
             <div className="relative w-12 h-12">
