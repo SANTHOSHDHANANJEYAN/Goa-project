@@ -38,7 +38,7 @@ const TwoHundredHourTTPage = () => {
       </div>
 
       {/* New Section */}
-      <section className="mb-8 rounded-md overflow-hidden shadow-md gap-[4rem]">
+      <section className="mb-8 rounded-md overflow-hidden shadow-md gap-[4rem] flex flex-wrap justify-center">
         <div className="relative w-full h-64 md:h-96">
           <Image
             src="https://i.ibb.co/zJpVn5G/yoga-group-waterfall.jpg" // Replace with your actual image URL
