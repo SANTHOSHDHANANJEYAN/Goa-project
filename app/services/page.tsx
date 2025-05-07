@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -31,10 +32,56 @@ const TwoHundredHourTTPage = () => {
         </button>
       </div>
 
-      <div className="text-center text-sm text-gray-700">
+      <div className="text-center text-sm text-gray-700 mb-8">
         <p className="mb-1">3 spots left on the next training:</p>
         <p className="font-semibold">May 26th - Jun 16th, 2025</p>
       </div>
+
+      {/* New Section */}
+      <section className="mb-8 rounded-md overflow-hidden shadow-md">
+        <div className="relative w-full h-64 md:h-96">
+          <Image
+            src="https://i.ibb.co/zJpVn5G/yoga-group-waterfall.jpg" // Replace with your actual image URL
+            alt="Yoga practitioners by a waterfall"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="bg-gray-100 p-6 text-center">
+          <h3 className="text-xl font-semibold mb-2">After completing the course...</h3>
+          <div className="flex justify-center items-center space-x-4 mb-2">
+            <div className="relative w-12 h-12">
+              <Image
+                src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png" // Replace with your actual logo URL
+                alt="Yoga Alliance Certified"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+            <div className="relative w-12 h-12">
+              <Image
+                src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png" // Replace with your actual logo URL
+                alt="Yoga Alliance Certified"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+            <div className="relative w-12 h-12">
+              <Image
+                src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png" // Replace with your actual logo URL
+                alt="Yoga Alliance Certified"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+          </div>
+          <p className="text-sm text-gray-700">
+            You will receive a Yoga Alliance certificate.
+            <br />
+            Recognised and accepted worldwide.
+          </p>
+        </div>
+      </section>
 
       {/* You can add more sections here with details about the training, curriculum, accommodation, etc. */}
     </div>
