@@ -48,7 +48,7 @@ const TwoHundredHourTTPage = () => {
             src="https://i.ibb.co/zJpVn5G/yoga-group-waterfall.jpg"
             alt="Yoga practitioners by a waterfall"
             width={1200}
-            height={600}
+            height={400}
             className="w-full h-auto object-cover"
           />
         </div>
