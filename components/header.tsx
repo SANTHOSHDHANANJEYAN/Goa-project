@@ -9,18 +9,29 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+// Define types for navigation items
+interface DropdownItem {
+  name: string;
+  href: string;
+}
+
+interface NavigationItem {
+  name: string;
+  href?: string;
+  dropdown?: DropdownItem[];
+}
+
 const yellowItems = ["About Us", "Yoga Courses", "Retreats", "Gallery", "Contact Us", "Payment"];
 
-const leftNavigation = [
-  
+const leftNavigation: NavigationItem[] = [
   {
     name: "Yoga Courses",
     dropdown: [
       { name: "21 Days Course", href: "/services/21-days" },
-      { name: "50 Hr Multi-Style-Yoga TTC", href: "/services/50 Hr  multi" },
-      { name: "100 Hr Multi-Style-Yoga TTC", href: "/services/100 Hr Multi" },
-      { name: "200 Hr Multi-Style-Yoga TTC", href: "/services/200 Hr Multi" },
-      { name: "300 Hr Multi-Style-Yoga TTC", href: "/services/300 Hr Multi" },
+      { name: "50 Hr Multi-Style-Yoga TTC", href: "/services/50-hr-multi" },
+      { name: "100 Hr Multi-Style-Yoga TTC", href: "/services/100-hr-multi" },
+      { name: "200 Hr Multi-Style-Yoga TTC", href: "/services/200-hr-multi" },
+      { name: "300 Hr Multi-Style-Yoga TTC", href: "/services/300-hr-multi" },
     ],
   },
   {
@@ -32,25 +43,26 @@ const leftNavigation = [
     ],
   },
   { name: "Gallery", href: "/gallery" },
+  { name: "Blog", href: "/blog" }, // Added Blog link
 ];
 
-const rightNavigation = [
+const rightNavigation: NavigationItem[] = [
   {
     name: "About Us",
     dropdown: [
       { name: "Our Teachers", href: "/about#story" },
       { name: "Our Reviews", href: "/about#team" },
       { name: "Blogs", href: "/about#philosophy" },
-      { name: "FAQs", href: "/about#philosophy" },
+      { name: "FAQs", href: "/about#faq" }, // Fixed FAQ link
     ],
   },
   { name: "Contact Us", href: "/contact" },
-  { name: "Payment", href: "/contact" },
+  { name: "Payment", href: "/payment" },
 ];
 
 export default function Header() {
-  const [mounted, setMounted] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState<boolean>(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
@@ -68,7 +80,7 @@ export default function Header() {
         <div key={item.name}>
           {!item.dropdown ? (
             <Link
-              href={item.href}
+              href={item.href || "#"}
               className={cn("block text-base font-medium py-2", isYellow && "text-blue-500")}
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -91,7 +103,7 @@ export default function Header() {
               </button>
               {expandedDropdown === item.name && (
                 <div className="ml-4 space-y-2">
-                  {item.dropdown.map((subItem: any, idx: number) => (
+                  {item.dropdown?.map((subItem, idx) => (
                     <div key={subItem.name}>
                       <Link
                         href={subItem.href}
@@ -127,6 +139,7 @@ export default function Header() {
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-primary">
               <Link href="/services">PROGRAMS</Link>
               <Link href="/about">ABOUT</Link>
+              <Link href="/blog">BLOG</Link> {/* Added Blog link */}
             </nav>
           </div>
 
@@ -170,7 +183,7 @@ export default function Header() {
           <div className="p-4 min-h-screen flex flex-col">
             <div className="flex justify-between items-center mb-6">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-              <Image src="/logo2.png" alt="Rishikul" width={120} height={30} className="ml-12" />   
+                <Image src="/logo2.png" alt="Rishikul" width={120} height={30} className="ml-12" />
               </Link>
               <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
                 <X size={24} />
