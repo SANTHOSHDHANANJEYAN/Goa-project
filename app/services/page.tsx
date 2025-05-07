@@ -38,58 +38,54 @@ const TwoHundredHourTTPage = () => {
       </div>
 
       {/* New Section */}
-      <section className="mb-12 px-6 md:px-16">
-  <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-    <div className="relative w-full h-[500px] md:h-[600px]">
-      <Image
-        src="https://i.ibb.co/zJpVn5G/yoga-group-waterfall.jpg"
-        alt="Yoga practitioners by a waterfall"
-        layout="fill"
-        objectFit="cover"
-        className="rounded-t-2xl"
-      />
-    </div>
-
-    <div className="bg-white p-8 text-center">
-      <h3 className="text-2xl font-semibold text-[#1f1c5c] mb-4">
-        After completing the course...
-      </h3>
-
-      <div className="flex justify-center items-center gap-6 mb-4">
-        <div className="relative w-14 h-14">
-          <Image
-            src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
-            alt="RYS 200 Yoga Alliance"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
-        <div className="relative w-14 h-14">
-          <Image
-            src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
-            alt="RYS 300 Yoga Alliance"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
-        <div className="relative w-14 h-14">
-          <Image
-            src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
-            alt="RYS 500 Yoga Alliance"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
+      <section className="max-w-4xl mx-auto mb-12 rounded-xl overflow-hidden shadow-lg bg-white">
+  <div className="w-full h-auto">
+    <Image
+      src="https://i.ibb.co/zJpVn5G/yoga-group-waterfall.jpg"
+      alt="Yoga practitioners by a waterfall"
+      width={1200}
+      height={600}
+      className="w-full h-auto object-cover"
+    />
+  </div>
+  <div className="p-6 text-center">
+    <h3 className="text-2xl font-semibold text-indigo-900 mb-4">
+      After completing the course...
+    </h3>
+    <div className="flex justify-center items-center gap-6 mb-4">
+      <div className="relative w-12 h-12">
+        <Image
+          src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
+          alt="RYS 200"
+          layout="fill"
+          objectFit="contain"
+        />
       </div>
-
-      <p className="text-sm text-[#4a4a4a]">
-        You will receive a Yoga Alliance certificate.
-        <br />
-        Recognised and accepted worldwide.
-      </p>
+      <div className="relative w-12 h-12">
+        <Image
+          src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
+          alt="RYS 300"
+          layout="fill"
+          objectFit="contain"
+        />
+      </div>
+      <div className="relative w-12 h-12">
+        <Image
+          src="https://i.ibb.co/tY0F3W5/yoga-alliance-logo.png"
+          alt="RYS 500"
+          layout="fill"
+          objectFit="contain"
+        />
+      </div>
     </div>
+    <p className="text-sm text-gray-700">
+      You will receive a Yoga Alliance certificate.
+      <br />
+      Recognised and accepted worldwide.
+    </p>
   </div>
 </section>
+
 
 
       {/* You can add more sections here with details about the training, curriculum, accommodation, etc. */}
