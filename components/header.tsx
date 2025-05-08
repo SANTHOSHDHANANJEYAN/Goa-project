@@ -133,15 +133,18 @@
             {/* Center: Logo */}
             <div className="flex justify-center">
               <Link href="/" className="flex-shrink-0">
-                <Image src="/YAlogo-removebg-preview.png" alt="Rishikul" width={60} height={100} className="object-contain" />
+                <Image src="/logo2.png" alt="Rishikul" width={140} height={50} className="object-contain" />
               </Link>
             </div>
 
             {/* Right: Text + Theme */}
             <div className="flex justify-end items-center gap-4">
               <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-primary">
-                <span>YOGA SCHOOL IN GOA, INDIA</span>
-                <span>ACCREDITED BY YOGA ALLIANCE</span>
+              <Link href="/" className="flex-shrink-0">
+                <Image src="/YAlogo-removebg-preview.png" alt="Rishikul" width={140} height={50} className="object-contain" />
+              </Link>
+                {/* <span>YOGA SCHOOL IN GOA, INDIA</span>
+                <span>ACCREDITED BY YOGA ALLIANCE</span> */}
               </div>
               {mounted && (
                 <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
