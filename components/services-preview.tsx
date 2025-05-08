@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 const services = [
   {
     id: 'yoga',
-    image: '/1.jpg',
+    image: '/firsstimg.jpg',
     link: '/services#yoga-classes'
   },
   {
@@ -23,13 +23,16 @@ const services = [
 export default function ServicesPreview() {
   return (
     <section className="py-20 bg-transparent relative overflow-hidden">
-      <div className="absolute inset-0  opacity-20" /> {/* Subtle gradient background */}
+      <div className="absolute inset-0 opacity-20 " />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 relative">
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={service.id} className="overflow-hidden group hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
-              <div className="relative h-56 overflow-hidden rounded-lg">
+            <Card
+              key={service.id}
+              className="overflow-hidden group hover:shadow-lg transition-shadow animate-fade-in"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <div className="relative h-80 overflow-hidden rounded-[26px]"> {/* Increased height */}
                 <Link href={service.link}>
                   <Image
                     src={service.image}
