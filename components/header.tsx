@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const yellowItems = ["About Us", "Program", "Retreat", "Gallery", "Contact Us", "Payment"];
+const yellowItems = ["About Us", "Program", "Retreat","Our Teachers","Our Reviews","Blogs", "Gallery", "Contact Us", "Payment"];
 
 const leftNavigation = [
   {
@@ -30,21 +30,18 @@ const leftNavigation = [
       { name: "21 Days Detox Retreat", href: "/schedule/thailand" }
     ]
   },
+  { name: "Our Teachers", href: "/about#story" },
+  { name: "Our Reviews", href: "/about#team" },
+  { name: "Blogs", href: "/about#philosophy" },
   { name: "Gallery", href: "/gallery" }
 ];
 
 const rightNavigation = [
   {
-    name: "About Us",
-    dropdown: [
-      { name: "Our Teachers", href: "/about#story" },
-      { name: "Our Reviews", href: "/about#team" },
-      { name: "Blogs", href: "/about#philosophy" },
-      { name: "FAQs", href: "/about#philosophy" }
-    ]
-  },
+    name: "About Us",href:"/about"},
   { name: "Contact Us", href: "/contact" },
-  { name: "Payment", href: "/contact" }
+  { name: "Payment", href: "/contact" },
+ 
 ];
 
 export default function Header() {
