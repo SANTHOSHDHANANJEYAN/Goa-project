@@ -141,7 +141,7 @@
             <div className="flex justify-end items-center gap-4">
               <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-primary">
               <Link href="/" className="flex-shrink-0">
-                <Image src="/YAlogo-removebg-preview.png" alt="Rishikul" width={140} height={50} className="object-contain" />
+                <Image src="/YAlogo-removebg-preview.png" alt="Rishikul" width={60} height={100} className="object-contain" />
               </Link>
                 {/* <span>YOGA SCHOOL IN GOA, INDIA</span>
                 <span>ACCREDITED BY YOGA ALLIANCE</span> */}
