@@ -151,14 +151,15 @@ export default function Home() {
       <img
         src="/goa 42.jpg"
         alt="Scenic Goa"
-        className="object-cover w-full max-w-4xl h-auto animate-fade-in"
+        className="object-cover w-full max-w-2xl h-auto animate-fade-in" // Reduced from max-w-4xl
       />
     </div>
 
-    {/* Optional: Glow / Blur background if you want to add ambient light */}
-    <div className="absolute -z-10 w-[120%] h-[120%] bg-yellow-100/10 rounded-full blur-3xl" />
+    {/* Reduced ambient glow size */}
+    <div className="absolute -z-10 w-[100%] h-[100%] bg-yellow-100/10 rounded-full blur-3xl" />
   </div>
 </section>
+
 
 
       {/* CTA Section */}

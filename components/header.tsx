@@ -65,8 +65,9 @@ export default function Header() {
           {!hasDropdown ? (
             <Link
               href={item.href!}
-              className={cn("block text-base font-medium py-2", isYellow && "text-blue-500")}
+              className={cn("block text-base font-medium py-2 text-blue-900", isYellow && "text-blue-500")}
               onClick={() => setMobileMenuOpen(false)}
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
             >
               {item.name}
             </Link>
@@ -74,10 +75,11 @@ export default function Header() {
             <>
               <button
                 className={cn(
-                  "w-full flex justify-between items-center text-base font-medium py-2",
+                  "w-full flex justify-between items-center text-base font-medium py-2 text-blue-900",
                   isYellow && "text-blue-500"
                 )}
                 onClick={() => toggleDropdown(item.name)}
+                style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
               >
                 <span>{item.name}</span>
                 <ChevronDown
@@ -91,8 +93,9 @@ export default function Header() {
                     <div key={subItem.name}>
                       <Link
                         href={subItem.href}
-                        className="block text-sm py-1"
+                        className="block text-sm py-1 text-blue-900"
                         onClick={() => setMobileMenuOpen(false)}
+                        style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
                       >
                         {subItem.name}
                       </Link>
@@ -111,14 +114,17 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 backdrop-blur-md shadow-sm py-3 transition-colors">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 backdrop-blur-md shadow-sm py-3 transition-colors"
+      style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
           <div className="flex items-center gap-6">
             <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
               <Menu size={24} />
             </Button>
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-primary">
+            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-blue-900">
               <Link href="/services">PROGRAMS</Link>
               <Link href="/about">RETREAT</Link>
             </nav>
@@ -131,9 +137,15 @@ export default function Header() {
           </div>
 
           <div className="flex justify-end items-center gap-4">
-            <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-primary">
+            <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-blue-900">
               <Link href="/" className="flex-shrink-0">
-                <Image src="/YAlogo-removebg-preview.png" alt="Yoga Alliance" width={60} height={100} className="object-contain" />
+                <Image
+                  src="/YAlogo-removebg-preview.png"
+                  alt="Yoga Alliance"
+                  width={60}
+                  height={100}
+                  className="object-contain"
+                />
               </Link>
             </div>
             {mounted && (
@@ -145,7 +157,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Drawer with Image */}
+      {/* Mobile Drawer */}
       <div
         className={cn(
           "fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300",
@@ -159,6 +171,7 @@ export default function Header() {
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
           onClick={(e) => e.stopPropagation()}
+          style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
         >
           <div className="p-4 h-full flex flex-col">
             <div className="flex justify-between items-center mb-6 ml-12">
@@ -169,13 +182,12 @@ export default function Header() {
                 <X size={24} />
               </Button>
             </div>
-            <nav className="space-y-4">{renderDrawerNav()}</nav>
+            <nav className="space-y-4 text-blue-900">{renderDrawerNav()}</nav>
 
-            {/* Image container at the bottom of mobile menu */}
             <div className="mt-auto mb-8 pt-4">
               <div className="relative w-full h-[100px] rounded-lg overflow-hidden">
-                <Image 
-                  src="/yg_logo-removebg-preview.png" 
+                <Image
+                  src="/yg_logo-removebg-preview.png"
                   alt="Yoga image"
                   width={120}
                   height={50}
