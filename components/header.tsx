@@ -174,12 +174,13 @@ export default function Header() {
             {/* Image container at the bottom of mobile menu */}
             <div className="mt-auto mb-8 pt-4">
               <div className="relative w-full h-40 rounded-lg overflow-hidden">
-                <Image 
-                  src="/yg_logo-removebg-preview.png" // Replace with your image path
-                  alt="Yoga image"
-                  fill
-                  className="object-cover"
-                />
+              <Image 
+    src="/yg_logo-removebg-preview.png" 
+    alt="Yoga image"
+    fill
+    className="object-cover" // or "object-contain" depending on your desired fit style
+    priority // (optional) load image earlier
+  />
               </div>
             </div>
           </div>
