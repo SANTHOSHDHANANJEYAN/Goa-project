@@ -120,7 +120,7 @@ export default function Header() {
             </Button>
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-primary">
               <Link href="/services">PROGRAMS</Link>
-              <Link href="/about">ABOUT</Link>
+              <Link href="/about">Retreat</Link>
             </nav>
           </div>
 
@@ -174,7 +174,13 @@ export default function Header() {
             {/* Image container at the bottom of mobile menu */}
             <div className="mt-auto mb-8 pt-4">
               <div className="relative w-full h-40 rounded-lg overflow-hidden">
-              <Image src="/yg_logo-removebg-preview.png" alt="Yoga Alliance" width={120} height={60} className="object-contain" />
+              <Image 
+    src="/yg_logo-removebg-preview.png" 
+    alt="Yoga image"
+    fill
+    className="object-cover" // or "object-contain" depending on your desired fit style
+   
+  />
               </div>
             </div>
           </div>
