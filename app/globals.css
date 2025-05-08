@@ -166,5 +166,7 @@ html {
 body, html {
   overflow-x: hidden;
 }
-
+.transition-colors {
+  background-color: white;
+}
   
