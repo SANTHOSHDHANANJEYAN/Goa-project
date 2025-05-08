@@ -16,19 +16,19 @@
     {
       name: "Yoga Courses",
       dropdown: [
-        { name: "21 Days Course", href: "/services" },
         { name: "50 Hr Multi-Style-Yoga TTC", href: "/50" },
         { name: "100 Hr Multi-Style-Yoga TTC", href: "/100" },
         { name: "200 Hr Multi-Style-Yoga TTC", href: "/200" },
-        { name: "300 Hr Multi-Style-Yoga TTC", href: "/300" }
+        { name: "300 Hr Multi-Style-Yoga TTC", href: "/300" },
+        { name: "21 Days Yoga Immersion Course", href: "/services" }
       ]
     },
     {
-      name: "Retreats",
+      name: "Retreat",
       dropdown: [
-        { name: "7 DAY Retreat", href: "/app/retreats" },
-        { name: "14 DAY Retreat", href: "/schedule/bali" },
-        { name: "21 DAY Retreat", href: "/schedule/thailand" },
+        { name: "7 Days Holiday Retreat", href: "/app/retreats" },
+        { name: "14 Days Wellness Retreat", href: "/schedule/bali" },
+        { name: "21 Days Detox Retreat", href: "/schedule/thailand" },
       ],
     },
     { name: "Gallery", href: "/gallery" },

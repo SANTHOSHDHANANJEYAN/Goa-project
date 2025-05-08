@@ -60,26 +60,33 @@ const TwoHundredHourTTPage = () => {
 
       {/* Certificate Info */}
       <section className="text-center mb-20">
-        <h3 className="text-2xl font-semibold text-indigo-800 mb-4">
-          After Completing the Course...
-        </h3>
-        <div className="flex justify-center items-center gap-6 mb-4">
-          {["200", "300", "500"].map((level, i) => (
-            <div key={i} className="relative w-12 h-12">
-              <Image
-                src={`/rys ${level}.png`}
-                alt={`RYS ${level} Badge`}
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
-          ))}
-        </div>
-        <p className="text-sm text-gray-600">
-          You'll receive a Yoga Alliance certificate —<br />
-          internationally recognized and accepted.
-        </p>
-      </section>
+  <h3 className="text-2xl font-semibold text-indigo-800 mb-6">
+    After Completing the Course...
+  </h3>
+
+  <div className="flex justify-center items-center gap-6 mb-6">
+    {["200", "300", "500"].map((level) => (
+      <div
+        key={level}
+        className="relative w-16 h-16 rounded-lg border border-indigo-100 shadow hover:scale-105 transition-transform duration-200 bg-white"
+      >
+        <Image
+          src={`/rys-${level}.png`} // Make sure these images exist: rys-200.png, rys-300.png, etc.
+          alt={`Registered Yoga School RYS ${level} Certification Badge`}
+          fill
+          style={{ objectFit: "contain" }}
+          sizes="64px"
+        />
+      </div>
+    ))}
+  </div>
+
+  <p className="text-sm text-gray-600 leading-relaxed">
+    You’ll receive an internationally recognized <strong>Yoga Alliance certificate</strong><br />
+    as a Registered Yoga Teacher (RYT).
+  </p>
+</section>
+
 
       {/* About Section */}
       <section className="mb-16">
