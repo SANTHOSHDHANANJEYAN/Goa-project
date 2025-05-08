@@ -173,14 +173,15 @@ export default function Header() {
             
             {/* Image container at the bottom of mobile menu */}
             <div className="mt-auto mb-8 pt-4">
-              <div className="relative w-full h-40 rounded-lg overflow-hidden">
+            <div className="relative w-full h-[100px] rounded-lg overflow-hidden">
               <Image 
-    src="/yg_logo-removebg-preview.png" 
-    alt="Yoga image"
-    fill
-    className="object-cover" // or "object-contain" depending on your desired fit style
-   
-  />
+  src="/yg_logo-removebg-preview.png" 
+  alt="Yoga image"
+  width={50} // adjust as needed
+  height={120} // adjust as needed
+  className="object-cover w-full h-auto" // Tailwind to make it responsive
+/>
+
               </div>
             </div>
           </div>
