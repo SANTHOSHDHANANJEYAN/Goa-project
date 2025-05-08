@@ -96,9 +96,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-200/10 via-pink-200/10 to-yellow-100/10 z-0" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <blockquote className="font-['Helvetica Neue',sans-serif] text-2xl md:text-3xl lg:text-4xl italic mb-8 text-blue-500 animate-fade-in transition duration-1000 ease-in-out transform-gpu hover:scale-105">
+          <p className="font-['Helvetica Neue',sans-serif] text-2xl md:text-3xl lg:text-4xl italic mb-8 text-blue-500 animate-fade-in transition duration-1000 ease-in-out transform-gpu hover:scale-105">
             “Freedom, love, care, and support are the main philosophies of the community.”
-          </blockquote>
+          </p>
 
           <div className="animate-bounce absolute bottom-0 left-1/2 transform -translate-x-1/2 text-yellow-300 text-3xl">
             <span className="animate-ping h-3 w-3 rounded-full bg-yellow-400 opacity-75 inline-block" />
