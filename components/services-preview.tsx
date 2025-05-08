@@ -15,7 +15,7 @@ const services = [
   },
   {
     id: 'sound-healing',
-    image: '/3.jpg',
+    image: '/public/3rd goa image - homwe page.svg',
     link: '/services#sound-healing'
   },
 ];
