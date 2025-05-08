@@ -133,7 +133,7 @@
             {/* Center: Logo */}
             <div className="flex justify-center">
               <Link href="/" className="flex-shrink-0">
-                <Image src="/YAlogo.jpg" alt="Rishikul" width={60} height={100} className="object-contain" />
+                <Image src="/YAlogo-removebg-preview.png" alt="Rishikul" width={60} height={100} className="object-contain" />
               </Link>
             </div>
 
