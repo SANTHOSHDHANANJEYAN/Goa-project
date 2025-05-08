@@ -120,7 +120,7 @@ export default function Header() {
             </Button>
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-primary">
               <Link href="/services">PROGRAMS</Link>
-              <Link href="/about">Retreat</Link>
+              <Link href="/about">RETREAT</Link>
             </nav>
           </div>
 
