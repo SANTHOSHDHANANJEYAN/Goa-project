@@ -177,8 +177,8 @@ export default function Header() {
               <Image 
   src="/yg_logo-removebg-preview.png" 
   alt="Yoga image"
-  width={50} // adjust as needed
-  height={120} // adjust as needed
+  width={120} // adjust as needed
+  height={50} // adjust as needed
   className="object-cover w-full " // Tailwind to make it responsive
 />
 
