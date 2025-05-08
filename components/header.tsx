@@ -9,11 +9,11 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const yellowItems = ["About Us", "Yoga Courses", "Retreats", "Gallery", "Contact Us", "Payment"];
+const yellowItems = ["About Us", "Program", "Retreat", "Gallery", "Contact Us", "Payment"];
 
 const leftNavigation = [
   {
-    name: "Yoga Courses",
+    name: "Program",
     dropdown: [
       { name: "50 Hr Multi-Style-Yoga TTC", href: "/50" },
       { name: "100 Hr Multi-Style-Yoga TTC", href: "/100" },
@@ -131,7 +131,7 @@ export default function Header() {
           {/* Center: Logo */}
           <div className="flex justify-center">
             <Link href="/" className="flex-shrink-0">
-              <Image src="/logo2.png" alt="Rishikul" width={140} height={50} className="object-contain" />
+              <Image src="  /YA2.png" alt="Rishikul" width={120} height={60} className="object-contain" />
             </Link>
           </div>
 
@@ -169,7 +169,7 @@ export default function Header() {
           <div className="p-4 min-h-screen flex flex-col">
             <div className="flex justify-between items-center mb-6">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                <Image src="/logo2.png" alt="Rishikul" width={120} height={30} className="ml-6" />
+                <Image src="/YA2.png" alt="Rishikul" width={120} height={40} className="ml-6" />
               </Link>
               <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
                 <X size={24} />

@@ -60,33 +60,26 @@ const TwoHundredHourTTPage = () => {
 
       {/* Certificate Info */}
       <section className="text-center mb-20">
-  <h3 className="text-2xl font-semibold text-indigo-800 mb-6">
-    After Completing the Course...
-  </h3>
-
-  <div className="flex justify-center items-center gap-6 mb-6">
-    {["200", "300", "500"].map((level) => (
-      <div
-        key={level}
-        className="relative w-16 h-16 rounded-lg border border-indigo-100 shadow hover:scale-105 transition-transform duration-200 bg-white"
-      >
-        <Image
-          src={`/rys-${level}.png`} // Make sure these images exist: rys-200.png, rys-300.png, etc.
-          alt={`Registered Yoga School RYS ${level} Certification Badge`}
-          fill
-          style={{ objectFit: "contain" }}
-          sizes="64px"
-        />
-      </div>
-    ))}
-  </div>
-
-  <p className="text-sm text-gray-600 leading-relaxed">
-    You’ll receive an internationally recognized <strong>Yoga Alliance certificate</strong><br />
-    as a Registered Yoga Teacher (RYT).
-  </p>
-</section>
-
+        <h3 className="text-2xl font-semibold text-indigo-800 mb-4">
+          After Completing the Course...
+        </h3>
+        <div className="flex justify-center items-center gap-6 mb-4">
+          {["200", "300", "500"].map((level, i) => (
+            <div key={i} className="relative w-12 h-12">
+              <Image
+                src={'/rys ${level}.png'}
+                alt={'RYS ${level} Badge'}
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+          ))}
+        </div>
+        <p className="text-sm text-gray-600">
+          You'll receive a Yoga Alliance certificate —<br />
+          internationally recognized and accepted.
+        </p>
+      </section>
 
       {/* About Section */}
       <section className="mb-16">
@@ -135,7 +128,7 @@ const TwoHundredHourTTPage = () => {
         </div>
       </section>
 
-      {/* Schedule */}
+      {/* Training Schedule */}
       <section className="mb-20">
         <h2 className="text-3xl font-bold text-center mb-8">Training Schedule</h2>
         <div className="bg-indigo-50 p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
@@ -144,6 +137,139 @@ const TwoHundredHourTTPage = () => {
           <p className="mb-1">📍 Location: Amersham, Bali</p>
           <p className="mb-1">🕗 Monday – Saturday: 8 AM to 6 PM</p>
           <p className="text-sm text-gray-500 mt-2">Includes breaks, workshops, and off-days</p>
+        </div>
+      </section>
+
+      {/* Accommodation Section - Scenic */}
+      <section
+        className="relative bg-cover bg-center bg-no-repeat text-white py-24 mb-20"
+        style={{
+          backgroundImage: "url('/3.jpg')",
+        }}
+      >
+        <div className="bg-black bg-opacity-50 absolute inset-0"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">Amersham</h2>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
+          <p className="text-lg mb-10">House of Om resort amidst jungle paradise in Bali</p>
+
+          <div className="grid md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto">
+            <div className="flex items-start space-x-4">
+              <img src="/icons/waterfall-icon.svg" alt="Waterfalls" className="w-8 h-8 mt-1" />
+              <p>
+                <strong>Discover Bali's cascade gems:</strong><br />
+                more than 10 waterfalls within 10 km
+              </p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <img src="/icons/nature-icon.svg" alt="Nature parks" className="w-8 h-8 mt-1" />
+              <p>
+                <strong>Exploring Bali’s natural beauty:</strong><br />
+                3 biggest parks in a 20-minute drive
+              </p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <img src="/icons/beach-icon.svg" alt="Beaches" className="w-8 h-8 mt-1" />
+              <p>
+                <strong>Enjoy swimming, surfing and relaxation:</strong><br />
+                at Bali’s 3 beaches within 10 km
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Accommodation Options */}
+      <section className="mb-20">
+        <h2 className="text-3xl font-bold text-center mb-8">Accommodation Options</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              title: "Dorm room",
+              priceOld: "$2350",
+              priceNew: "$2000",
+              details: [
+                "Four single beds",
+                "Shared AC + hot water + wifi",
+                "Breakfast, lunch, dinner",
+                "200 RYT training and all community events",
+                "Yoga equipment and learning materials",
+              ],
+              image: "/dorm-room.jpg",
+            },
+            {
+              title: "Triple bed room",
+              priceOld: "$2700",
+              priceNew: "$2295",
+              details: [
+                "Three single beds",
+                "Shared AC + hot water + wifi",
+                "Breakfast, lunch, dinner",
+                "200 RYT training and all community events",
+                "Yoga equipment and learning materials",
+              ],
+              image: "/triple-room.jpg",
+            },
+            {
+              title: "Twin bed room",
+              priceOld: "$3200",
+              priceNew: "$2720",
+              details: [
+                "Two single beds",
+                "Shared AC + hot water + wifi",
+                "Breakfast, lunch, dinner",
+                "200 RYT training and all community events",
+                "Yoga equipment and learning materials",
+              ],
+              image: "/twin-room.jpg",
+            },
+            {
+              title: "Private room",
+              priceOld: "$3750",
+              priceNew: "$3190",
+              details: [
+                "King-size bed",
+                "Private AC + hot water + wifi",
+                "Breakfast, lunch, dinner",
+                "200 RYT training and all community events",
+                "Yoga equipment and learning materials",
+              ],
+              image: "/private-room.jpg",
+            },
+          ].map(({ title, priceOld, priceNew, details, image }, i) => (
+            <div key={i} className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
+              <div className="relative h-48">
+                <Image
+                  src={image}
+                  alt={title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-t-2xl"
+                />
+                <div className="absolute bottom-2 left-2 bg-black text-white text-xs px-3 py-1 rounded">
+                  More photos
+                </div>
+              </div>
+              <div className="p-4 flex flex-col flex-grow">
+                <h3 className="text-lg font-semibold text-indigo-800 mb-1">{title}</h3>
+                <p className="text-sm text-gray-500 line-through">{priceOld}</p>
+                <p className="text-xl font-bold text-green-600 mb-2">{priceNew}</p>
+                <ul className="text-sm text-gray-700 mb-4 space-y-1">
+                  {details.map((d, idx) => (
+                    <li key={idx}>• {d}</li>
+                  ))}
+                </ul>
+                <div className="mt-auto flex justify-between space-x-2">
+                  <button className="w-1/2 bg-indigo-600 text-white py-2 rounded-full text-sm hover:bg-indigo-700 transition">
+                    Start Journey
+                  </button>
+                  <button className="w-1/2 border border-indigo-600 text-indigo-600 py-2 rounded-full text-sm hover:bg-indigo-50 transition">
+                    Deposit
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -171,19 +297,23 @@ const TwoHundredHourTTPage = () => {
         faqs={[
           {
             question: "Do I need to be an advanced yoga practitioner?",
-            answer: "No, our training welcomes dedicated students at all levels. A minimum of 6 months of consistent practice is recommended.",
+            answer:
+              "No, our training welcomes dedicated students at all levels. A minimum of 6 months of consistent practice is recommended.",
           },
           {
             question: "Is this training Yoga Alliance certified?",
-            answer: "Yes, our program is fully accredited by Yoga Alliance, allowing graduates to register as RYT-200 teachers.",
+            answer:
+              "Yes, our program is fully accredited by Yoga Alliance, allowing graduates to register as RYT-200 teachers.",
           },
           {
             question: "What is your refund policy?",
-            answer: "Deposits are non-refundable. Full refunds minus the deposit are available up to 30 days before training. After that, credits may be offered.",
+            answer:
+              "Deposits are non-refundable. Full refunds minus the deposit are available up to 30 days before training. After that, credits may be offered.",
           },
           {
             question: "Do you offer scholarships?",
-            answer: "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
           },
         ]}
       />
