@@ -65,7 +65,7 @@ export default function Header() {
           {!hasDropdown ? (
             <Link
               href={item.href!}
-              className={cn("block text-base font-medium py-2 text-blue-900", isYellow && "text-blue-500")}
+              className={cn("block text-base font-medium py-2 text-blue-900", isYellow && "text-blue-900")}
               onClick={() => setMobileMenuOpen(false)}
               style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
             >
@@ -76,7 +76,7 @@ export default function Header() {
               <button
                 className={cn(
                   "w-full flex justify-between items-center text-base font-medium py-2 text-blue-900",
-                  isYellow && "text-blue-500"
+                  isYellow && "text-blue-900"
                 )}
                 onClick={() => toggleDropdown(item.name)}
                 style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
