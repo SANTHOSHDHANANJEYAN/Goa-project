@@ -175,7 +175,7 @@ export default function Header() {
             <div className="mt-auto mb-8 pt-4">
               <div className="relative w-full h-40 rounded-lg overflow-hidden">
                 <Image 
-                  src="/your-image-path.jpg" // Replace with your image path
+                  src="/yg_logo-removebg-preview.png" // Replace with your image path
                   alt="Yoga image"
                   fill
                   className="object-cover"
