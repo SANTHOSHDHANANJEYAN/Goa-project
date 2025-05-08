@@ -179,7 +179,7 @@ export default function Header() {
   alt="Yoga image"
   width={50} // adjust as needed
   height={120} // adjust as needed
-  className="object-cover w-full h-auto" // Tailwind to make it responsive
+  className="object-cover w-full " // Tailwind to make it responsive
 />
 
               </div>
