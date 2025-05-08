@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 const services = [
   {
     id: 'yoga',
-    image: '/firsstimg.jpg',
+    image: '/IMAGE - GOA -.svg',
     link: '/services#yoga-classes'
   },
   {
