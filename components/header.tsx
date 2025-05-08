@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const yellowItems = ["About Us", "Program", "Retreat","Our Teachers","Our Reviews","Blogs", "Gallery", "Contact Us", "Payment"];
+const yellowItems = ["About Us", "Program", "Retreat", "Our Teachers", "Our Reviews", "Blogs", "Gallery", "Contact Us", "Payment"];
 
-const leftNavigation = [
+const navigation = [
   {
     name: "Program",
     dropdown: [
@@ -22,26 +22,9 @@ const leftNavigation = [
       { name: "21 Days Yoga Immersion Course", href: "/services" }
     ]
   },
-  {
-    name: "Retreat",
-    dropdown: [
-      { name: "7 Days Holiday Retreat", href: "/app/retreats" },
-      { name: "14 Days Wellness Retreat", href: "/schedule/bali" },
-      { name: "21 Days Detox Retreat", href: "/schedule/thailand" }
-    ]
-  },
-  { name: "Our Teachers", href: "/about#story" },
-  { name: "Our Reviews", href: "/about#team" },
-  { name: "Blogs", href: "/about#philosophy" },
-  { name: "Gallery", href: "/gallery" }
-];
-
-const rightNavigation = [
-  {
-    name: "About Us",href:"/about"},
+  { name: "About", href: "/about" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Payment", href: "/contact" },
- 
+  { name: "Payment", href: "/contact" }
 ];
 
 export default function Header() {
@@ -58,7 +41,7 @@ export default function Header() {
   };
 
   const renderDrawerNav = () => {
-    return [...leftNavigation, ...rightNavigation].map((item) => {
+    return navigation.map((item) => {
       const isYellow = yellowItems.includes(item.name);
       return (
         <div key={item.name}>
@@ -87,7 +70,7 @@ export default function Header() {
               </button>
               {expandedDropdown === item.name && (
                 <div className="ml-4 space-y-2">
-                  {item.dropdown.map((subItem: any, idx: number) => (
+                  {item.dropdown.map((subItem, idx) => (
                     <div key={subItem.name}>
                       <Link
                         href={subItem.href}
@@ -120,7 +103,18 @@ export default function Header() {
               <Menu size={24} />
             </Button>
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-primary">
-              <Link href="/services">PROGRAMS</Link>
+              <div className="relative group">
+                <button className="text-sm font-medium text-primary flex items-center gap-1">
+                  PROGRAMS <ChevronDown size={14} />
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-52 bg-white dark:bg-gray-800 shadow-lg rounded-md p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-50">
+                  <Link href="/50" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded">50 Hr Multi-Style Yoga TTC</Link>
+                  <Link href="/100" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded">100 Hr Multi-Style Yoga TTC</Link>
+                  <Link href="/200" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded">200 Hr Multi-Style Yoga TTC</Link>
+                  <Link href="/300" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded">300 Hr Multi-Style Yoga TTC</Link>
+                  <Link href="/services" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded">21 Days Yoga Immersion</Link>
+                </div>
+              </div>
               <Link href="/about">ABOUT</Link>
             </nav>
           </div>
@@ -128,7 +122,7 @@ export default function Header() {
           {/* Center: Logo */}
           <div className="flex justify-center">
             <Link href="/" className="flex-shrink-0">
-              <Image src="  /YA2.png" alt="Rishikul" width={120} height={60} className="object-contain" />
+              <Image src="/YA2.png" alt="Rishikul" width={120} height={60} className="object-contain" />
             </Link>
           </div>
 
