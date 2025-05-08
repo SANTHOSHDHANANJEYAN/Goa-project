@@ -9,17 +9,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const yellowItems = [
-  "About Us",
-  "Program",
-  "Retreat",
-  "Our Teachers",
-  "Our Reviews",
-  "Blogs",
-  "Gallery",
-  "Contact Us",
-  "Payment"
-];
+const yellowItems = ["About Us", "Program", "Retreat","Our Teachers","Our Reviews","Blogs", "Gallery", "Contact Us", "Payment"];
 
 const leftNavigation = [
   {
@@ -32,6 +22,14 @@ const leftNavigation = [
       { name: "21 Days Yoga Immersion Course", href: "/services" }
     ]
   },
+  {
+    name: "Retreat",
+    dropdown: [
+      { name: "7 Days Holiday Retreat", href: "/app/retreats" },
+      { name: "14 Days Wellness Retreat", href: "/schedule/bali" },
+      { name: "21 Days Detox Retreat", href: "/schedule/thailand" }
+    ]
+  },
   { name: "Our Teachers", href: "/about#story" },
   { name: "Our Reviews", href: "/about#team" },
   { name: "Blogs", href: "/about#philosophy" },
@@ -39,9 +37,11 @@ const leftNavigation = [
 ];
 
 const rightNavigation = [
-  { name: "About Us", href: "/about" },
+  {
+    name: "About Us",href:"/about"},
   { name: "Contact Us", href: "/contact" },
-  { name: "Payment", href: "/contact" }
+  { name: "Payment", href: "/contact" },
+ 
 ];
 
 export default function Header() {
@@ -114,38 +114,25 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 backdrop-blur-md shadow-sm py-3 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
+          {/* Left: Menu + Links */}
           <div className="flex items-center gap-6">
             <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
               <Menu size={24} />
             </Button>
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-primary">
-              <div className="relative group">
-                <button className="flex items-center gap-1 hover:text-blue-600">
-                  PROGRAMS
-                  <ChevronDown size={14} />
-                </button>
-                <div className="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity">
-                  <ul className="p-2 space-y-1">
-                    {leftNavigation[0].dropdown.map((item) => (
-                      <li key={item.name}>
-                        <Link href={item.href} className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              <Link href="/services">PROGRAMS</Link>
               <Link href="/about">ABOUT</Link>
             </nav>
           </div>
 
+          {/* Center: Logo */}
           <div className="flex justify-center">
             <Link href="/" className="flex-shrink-0">
-              <Image src="/YA2.png" alt="Rishikul" width={120} height={60} className="object-contain" />
+              <Image src="  /YA2.png" alt="Rishikul" width={120} height={60} className="object-contain" />
             </Link>
           </div>
 
+          {/* Right: Text + Theme */}
           <div className="flex justify-end items-center gap-4">
             <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-primary">
               <Link href="/" className="flex-shrink-0">
@@ -161,6 +148,7 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Right Drawer for Mobile */}
       <div
         className={cn(
           "fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300",
