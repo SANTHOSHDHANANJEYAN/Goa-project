@@ -9,9 +9,19 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const yellowItems = ["About Us", "Program", "Retreat", "Our Teachers", "Our Reviews", "Blogs", "Gallery", "Contact Us", "Payment"];
+const yellowItems = [
+  "About Us",
+  "Program",
+  "Retreat",
+  "Our Teachers",
+  "Our Reviews",
+  "Blogs",
+  "Gallery",
+  "Contact Us",
+  "Payment"
+];
 
-const navigation = [
+const leftNavigation = [
   {
     name: "Program",
     dropdown: [
@@ -22,7 +32,14 @@ const navigation = [
       { name: "21 Days Yoga Immersion Course", href: "/services" }
     ]
   },
-  { name: "About", href: "/about" },
+  { name: "Our Teachers", href: "/about#story" },
+  { name: "Our Reviews", href: "/about#team" },
+  { name: "Blogs", href: "/about#philosophy" },
+  { name: "Gallery", href: "/gallery" }
+];
+
+const rightNavigation = [
+  { name: "About Us", href: "/about" },
   { name: "Contact Us", href: "/contact" },
   { name: "Payment", href: "/contact" }
 ];
@@ -41,7 +58,7 @@ export default function Header() {
   };
 
   const renderDrawerNav = () => {
-    return navigation.map((item) => {
+    return [...leftNavigation, ...rightNavigation].map((item) => {
       const isYellow = yellowItems.includes(item.name);
       return (
         <div key={item.name}>
@@ -70,7 +87,7 @@ export default function Header() {
               </button>
               {expandedDropdown === item.name && (
                 <div className="ml-4 space-y-2">
-                  {item.dropdown.map((subItem, idx) => (
+                  {item.dropdown.map((subItem: any, idx: number) => (
                     <div key={subItem.name}>
                       <Link
                         href={subItem.href}
@@ -97,36 +114,38 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 backdrop-blur-md shadow-sm py-3 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
-          {/* Left: Menu + Links */}
           <div className="flex items-center gap-6">
             <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
               <Menu size={24} />
             </Button>
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-primary">
               <div className="relative group">
-                <button className="text-sm font-medium text-primary flex items-center gap-1">
-                  PROGRAMS <ChevronDown size={14} />
+                <button className="flex items-center gap-1 hover:text-blue-600">
+                  PROGRAMS
+                  <ChevronDown size={14} />
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-52 bg-white dark:bg-gray-800 shadow-lg rounded-md p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-50">
-                  <Link href="/50" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded">50 Hr Multi-Style Yoga TTC</Link>
-                  <Link href="/100" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded">100 Hr Multi-Style Yoga TTC</Link>
-                  <Link href="/200" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded">200 Hr Multi-Style Yoga TTC</Link>
-                  <Link href="/300" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded">300 Hr Multi-Style Yoga TTC</Link>
-                  <Link href="/services" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded">21 Days Yoga Immersion</Link>
+                <div className="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity">
+                  <ul className="p-2 space-y-1">
+                    {leftNavigation[0].dropdown.map((item) => (
+                      <li key={item.name}>
+                        <Link href={item.href} className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
               <Link href="/about">ABOUT</Link>
             </nav>
           </div>
 
-          {/* Center: Logo */}
           <div className="flex justify-center">
             <Link href="/" className="flex-shrink-0">
               <Image src="/YA2.png" alt="Rishikul" width={120} height={60} className="object-contain" />
             </Link>
           </div>
 
-          {/* Right: Text + Theme */}
           <div className="flex justify-end items-center gap-4">
             <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-primary">
               <Link href="/" className="flex-shrink-0">
@@ -142,7 +161,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Right Drawer for Mobile */}
       <div
         className={cn(
           "fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300",
