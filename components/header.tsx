@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const yellowItems = ["About Us", "Program", "Retreat","Our Teachers","Our Reviews","Blogs", "Gallery", "Contact Us", "Payment"];
+const yellowItems = ["About Us", "Program", "Retreat","Our Teachers"," Reviews","Blogs", "Gallery", "Contact Us", "Payment"];
 
 const leftNavigation = [
   {
