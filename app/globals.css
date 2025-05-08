@@ -144,7 +144,7 @@
 /* globals.css */
 body {
   @apply bg-cover bg-center bg-no-repeat;
-  background-image: url('/backgd.jpg'); /* Ensure this file exists in /public */
+  background-image: url('/NEW\ -\ GOA\ FXD\ BG.svg'); /* Ensure this file exists in /public */
   background-attachment: fixed; /* Keeps the background stable */
   background-size: cover;
   background-position: center;
