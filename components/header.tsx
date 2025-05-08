@@ -174,7 +174,7 @@ export default function Header() {
             {/* Image container at the bottom of mobile menu */}
             <div className="mt-auto mb-8 pt-4">
               <div className="relative w-full h-40 rounded-lg overflow-hidden">
-              <Image src="/public/yg_logo-removebg-preview.png" alt="Yoga Alliance" width={120} height={60} className="object-contain" />
+              <Image src="/yg_logo-removebg-preview.png" alt="Yoga Alliance" width={120} height={60} className="object-contain" />
               </div>
             </div>
           </div>
