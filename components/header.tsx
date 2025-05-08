@@ -25,7 +25,7 @@ const leftNavigation = [
   {
     name: "Retreat",
     dropdown: [
-      { name: "7 Days Holiday Retreat", href: "/app/retreats" },
+      { name: "7 Days Holiday Retreat", href: "/app/retreats/" },
       { name: "14 Days Wellness Retreat", href: "/schedule/bali" },
       { name: "21 Days Detox Retreat", href: "/schedule/thailand" }
     ]
