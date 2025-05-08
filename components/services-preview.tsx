@@ -10,7 +10,7 @@ const services = [
   },
   {
     id: 'meditation',
-    image: '/2.jpg',
+    image: '/2nd images.svg',
     link: '/services#meditation'
   },
   {
@@ -23,9 +23,9 @@ const services = [
 export default function ServicesPreview() {
   return (
     <section className="py-20 bg-transparent relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20 rounded-[25px]" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="absolute inset-0 opacity-20 rounded-[2rem]" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 relative ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 rounded-[2rem]">
           {services.map((service, index) => (
             <Card
               key={service.id}
