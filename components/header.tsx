@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const yellowItems = ["About Us", "Program", "Retreat", "Our Teachers", "Our Reviews", "Blogs", "Gallery", "Contact Us", "Payment"];
+const yellowItems = ["About Us", "Program", "Retreat", "Our Teachers", "Our Reviews", "Blogs", "Gallery", "Contact Us", "Payment", "Préparation"];
 
 const leftNavigation = [
   {
@@ -39,7 +39,8 @@ const leftNavigation = [
 const rightNavigation = [
   { name: "About Us", href: "/about" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Payment", href: "/contact" }
+  { name: "Payment", href: "/contact" },
+  { name: "Préparation", href: "/preparation" }
 ];
 
 export default function Header() {
@@ -59,6 +60,50 @@ export default function Header() {
     return [...leftNavigation, ...rightNavigation].map((item) => {
       const isYellow = yellowItems.includes(item.name);
       const hasDropdown = "dropdown" in item && Array.isArray(item.dropdown);
+
+      // Special case for Préparation dropdown
+      if (item.name === "Préparation") {
+        return (
+          <div key={item.name}>
+            <button
+              className={cn(
+                "w-full flex justify-between items-center text-base font-medium py-2",
+                isYellow && "text-blue-500"
+              )}
+              onClick={() => toggleDropdown(item.name)}
+            >
+              <span>{item.name}</span>
+              <ChevronDown
+                size={16}
+                className={cn("transition-transform", expandedDropdown === item.name && "rotate-180")}
+              />
+            </button>
+            {expandedDropdown === item.name && (
+              <div className="ml-4 space-y-2">
+                <Link href="/retreat" className="block text-sm py-1" onClick={() => setMobileMenuOpen(false)}>
+                  Retreat
+                </Link>
+                <div className="border-t border-gray-200 dark:border-gray-700" />
+                <Link href="/gallery" className="block text-sm py-1" onClick={() => setMobileMenuOpen(false)}>
+                  Gallery
+                </Link>
+                <div className="border-t border-gray-200 dark:border-gray-700" />
+                <Link href="/about" className="block text-sm py-1" onClick={() => setMobileMenuOpen(false)}>
+                  About Us
+                </Link>
+                <div className="border-t border-gray-200 dark:border-gray-700" />
+                <Link href="/contact" className="block text-sm py-1" onClick={() => setMobileMenuOpen(false)}>
+                  Contact Us
+                </Link>
+                <div className="border-t border-gray-200 dark:border-gray-700" />
+                <Link href="/payment" className="block text-sm py-1" onClick={() => setMobileMenuOpen(false)}>
+                  Payment
+                </Link>
+              </div>
+            )}
+          </div>
+        );
+      }
 
       return (
         <div key={item.name}>
@@ -121,6 +166,29 @@ export default function Header() {
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-primary">
               <Link href="/services">PROGRAMS</Link>
               <Link href="/about">ABOUT</Link>
+              <div className="relative group">
+                <button className="flex items-center gap-1">
+                  PRÉPARATION
+                  <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
+                </button>
+                <div className="absolute hidden group-hover:block bg-white dark:bg-gray-800 shadow-lg rounded-md p-2 w-48 z-10">
+                  <Link href="/retreat" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    Retreat
+                  </Link>
+                  <Link href="/gallery" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    Gallery
+                  </Link>
+                  <Link href="/about" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    About Us
+                  </Link>
+                  <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    Contact Us
+                  </Link>
+                  <Link href="/payment" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    Payment
+                  </Link>
+                </div>
+              </div>
             </nav>
           </div>
 
@@ -170,6 +238,17 @@ export default function Header() {
               </Button>
             </div>
             <nav className="space-y-4">{renderDrawerNav()}</nav>
+            
+            {/* Image below the navigation in mobile menu */}
+            <div className="mt-auto mb-8">
+              <Image 
+                src="/your-image-path.jpg" // Replace with your image path
+                alt="Preparation image"
+                width={250}
+                height={150}
+                className="object-cover rounded-lg mx-auto"
+              />
+            </div>
           </div>
         </div>
       </div>
