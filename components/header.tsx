@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const yellowItems = ["About Us", "Program", "Retreat","Our Teachers","Our Reviews","Blogs", "Gallery", "Contact Us", "Payment"];
+const yellowItems = ["About Us", "Program", "Retreat", "Our Teachers", "Our Reviews", "Blogs", "Gallery", "Contact Us", "Payment"];
 
 const leftNavigation = [
   {
@@ -37,11 +37,9 @@ const leftNavigation = [
 ];
 
 const rightNavigation = [
-  {
-    name: "About Us",href:"/about"},
+  { name: "About Us", href: "/about" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Payment", href: "/contact" },
- 
+  { name: "Payment", href: "/contact" }
 ];
 
 export default function Header() {
@@ -60,11 +58,13 @@ export default function Header() {
   const renderDrawerNav = () => {
     return [...leftNavigation, ...rightNavigation].map((item) => {
       const isYellow = yellowItems.includes(item.name);
+      const hasDropdown = "dropdown" in item && Array.isArray(item.dropdown);
+
       return (
         <div key={item.name}>
-          {!item.dropdown ? (
+          {!hasDropdown ? (
             <Link
-              href={item.href}
+              href={item.href!}
               className={cn("block text-base font-medium py-2", isYellow && "text-blue-500")}
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -87,7 +87,7 @@ export default function Header() {
               </button>
               {expandedDropdown === item.name && (
                 <div className="ml-4 space-y-2">
-                  {item.dropdown.map((subItem: any, idx: number) => (
+                  {item.dropdown.map((subItem, idx) => (
                     <div key={subItem.name}>
                       <Link
                         href={subItem.href}
@@ -114,7 +114,6 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 backdrop-blur-md shadow-sm py-3 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
-          {/* Left: Menu + Links */}
           <div className="flex items-center gap-6">
             <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
               <Menu size={24} />
@@ -125,14 +124,12 @@ export default function Header() {
             </nav>
           </div>
 
-          {/* Center: Logo */}
           <div className="flex justify-center">
             <Link href="/" className="flex-shrink-0">
-              <Image src="  /YA2.png" alt="Rishikul" width={120} height={60} className="object-contain" />
+              <Image src="/YA2.png" alt="Rishikul" width={120} height={60} className="object-contain" />
             </Link>
           </div>
 
-          {/* Right: Text + Theme */}
           <div className="flex justify-end items-center gap-4">
             <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-primary">
               <Link href="/" className="flex-shrink-0">
@@ -148,7 +145,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Right Drawer for Mobile */}
+      {/* Mobile Drawer */}
       <div
         className={cn(
           "fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300",
