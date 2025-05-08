@@ -160,8 +160,8 @@ export default function Header() {
           )}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="p-4 min-h-screen flex flex-col">
-            <div className="flex justify-between items-center mb-6">
+          <div className="p-4 h-full flex flex-col">
+          <div className="flex justify-between items-center mb-6 ml-12">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                 <Image src="/YA2.png" alt="Rishikul" width={120} height={40} className="ml-6" />
               </Link>
@@ -174,13 +174,14 @@ export default function Header() {
             {/* Image container at the bottom of mobile menu */}
             <div className="mt-auto mb-8 pt-4">
             <div className="relative w-full h-[100px] rounded-lg overflow-hidden">
-              <Image 
+            <Image 
   src="/yg_logo-removebg-preview.png" 
   alt="Yoga image"
-  width={120} // adjust as needed
-  height={50} // adjust as needed
-  className="object-cover w-full " // Tailwind to make it responsive
+  width={120}
+  height={50}
+  className="object-cover ml-16"
 />
+
 
               </div>
             </div>
