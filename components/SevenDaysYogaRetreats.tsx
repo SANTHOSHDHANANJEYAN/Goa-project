@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { CheckCircle, Leaf, Heart, Sunrise } from 'lucide-react';
 
 interface Session {
   time: string;
@@ -19,36 +20,12 @@ interface Plan {
 
 const SevenDaysYogaRetreatPage: React.FC = () => {
   const dailySchedule: Session[] = [
-    {
-      time: '6:00 AM - 7:30 AM',
-      activity: 'Morning Meditation & Pranayama',
-      description: 'Start your day with mindful breathing and meditation.',
-    },
-    {
-      time: '8:00 AM - 10:00 AM',
-      activity: 'Vinyasa Flow Yoga',
-      description: 'Dynamic and rejuvenating flow to energize the body.',
-    },
-    {
-      time: '11:00 AM - 12:30 PM',
-      activity: 'Yoga Philosophy & Teachings',
-      description: 'Deep dive into ancient yoga texts and philosophy.',
-    },
-    {
-      time: '1:00 PM - 2:00 PM',
-      activity: 'Healthy Lunch & Rest',
-      description: 'Enjoy delicious vegetarian meals and relax.',
-    },
-    {
-      time: '2:30 PM - 4:00 PM',
-      activity: 'Sound Healing & Restorative Yoga',
-      description: 'Experience deep healing through sound therapy.',
-    },
-    {
-      time: '4:30 PM - 6:00 PM',
-      activity: 'Sunset Meditation & Closing Circle',
-      description: 'Reflect on your day and set intentions for tomorrow.',
-    },
+    { time: '6:00 AM - 7:30 AM', activity: 'Morning Meditation & Pranayama', description: 'Start your day with mindful breathing and meditation.' },
+    { time: '8:00 AM - 10:00 AM', activity: 'Vinyasa Flow Yoga', description: 'Dynamic and rejuvenating flow to energize the body.' },
+    { time: '11:00 AM - 12:30 PM', activity: 'Yoga Philosophy & Teachings', description: 'Deep dive into ancient yoga texts and philosophy.' },
+    { time: '1:00 PM - 2:00 PM', activity: 'Healthy Lunch & Rest', description: 'Enjoy delicious vegetarian meals and relax.' },
+    { time: '2:30 PM - 4:00 PM', activity: 'Sound Healing & Restorative Yoga', description: 'Experience deep healing through sound therapy.' },
+    { time: '4:30 PM - 6:00 PM', activity: 'Sunset Meditation & Closing Circle', description: 'Reflect on your day and set intentions for tomorrow.' },
   ];
 
   const pricingPlans: Plan[] = [
@@ -62,58 +39,62 @@ const SevenDaysYogaRetreatPage: React.FC = () => {
         'Vegetarian meals and snacks',
         'Accommodation in nature',
       ],
-      button: 'Book Now',
+      button: 'Reserve Your Spot',
     },
   ];
 
   return (
     <div className="pt-24">
-      {/* Hero Section */}
-      <section className="py-16 md:py-20 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6">7 Days Yoga Retreat in Goa</h1>
-            <p className="text-lg text-muted-foreground">
-              Experience rejuvenation and spiritual awakening in the serene landscapes of Goa.
+      {/* Hero */}
+      <section className="relative h-[80vh] w-full bg-black text-white">
+        <Image
+          src="/goa-retreat.jpg"
+          alt="Yoga in Goa"
+          fill
+          className="object-cover opacity-70"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90 flex items-center justify-center text-center px-4">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-4">7-Day Yoga Retreat in Goa</h1>
+            <p className="text-lg md:text-xl mb-6 text-white/80">
+              A soulful experience of peace, movement, and nature.
             </p>
+            <Button className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-6 py-3 rounded-full">
+              <Link href="#pricing">Join Now</Link>
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-serif text-3xl md:text-4xl mb-6">About the Retreat</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Our 7 Days Yoga Retreat in Goa offers a transformative experience for the mind, body, and soul.
-                Dive deep into ancient yoga practices, unwind in nature, and reconnect with your inner peace.
-              </p>
-            </div>
-            <div className="relative">
-              <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/goa-retreat.jpg"  // Replace with your image URL
-                  alt="Yoga Retreat in Goa"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+      {/* About */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-serif mb-6">Retreat Overview</h2>
+            <p className="text-lg text-muted-foreground mb-4">
+              Escape into the lush landscapes of Goa where you'll practice yoga, meditate, eat well, and reconnect with your essence.
+            </p>
+            <ul className="space-y-3 mt-6 text-muted-foreground">
+              <li className="flex items-center"><Leaf className="text-accent mr-2" /> Set in natural, serene surroundings</li>
+              <li className="flex items-center"><Heart className="text-accent mr-2" /> Suitable for all levels</li>
+              <li className="flex items-center"><Sunrise className="text-accent mr-2" /> Guided by certified yoga teachers</li>
+            </ul>
+          </div>
+          <div className="aspect-video relative rounded-lg overflow-hidden shadow-xl">
+            <Image src="/goa-retreat.jpg" alt="Yoga Overview" fill className="object-cover" />
           </div>
         </div>
       </section>
 
-      {/* Daily Schedule Section */}
-      <section className="py-16 md:py-24 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl md:text-4xl mb-6 text-center">Daily Schedule</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      {/* Schedule */}
+      <section className="py-20 bg-muted">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">Daily Schedule</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {dailySchedule.map((session, index) => (
-              <Card key={index} className="flex flex-col">
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
-                  <CardTitle className="font-serif text-xl">{session.time}</CardTitle>
+                  <CardTitle className="text-xl">{session.time}</CardTitle>
                   <CardDescription>{session.activity}</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -125,41 +106,46 @@ const SevenDaysYogaRetreatPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl md:text-4xl mb-6 text-center">Pricing</h2>
-          <p className="text-lg text-muted-foreground text-center mb-6">
-            Affordable and flexible pricing for your wellness journey.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan) => (
-              <Card key={plan.name} className="flex flex-col">
-                <CardHeader>
-                  <CardTitle className="font-serif text-xl">{plan.name}</CardTitle>
-                  <CardDescription>{plan.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold">{plan.price}</span>
-                  </div>
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="mr-2 mt-1 h-5 w-5 text-accent flex-shrink-0">✔</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link href="/booking">{plan.button}</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+      {/* Pricing */}
+      <section id="pricing" className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-serif mb-6">Retreat Pricing</h2>
+          <p className="text-muted-foreground text-lg mb-8">One price. Everything included.</p>
+          {pricingPlans.map((plan) => (
+            <Card key={plan.name} className="max-w-xl mx-auto p-6 border-accent border-2 shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                <CardDescription>{plan.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="text-4xl font-bold text-accent mb-4">{plan.price}</div>
+                <ul className="space-y-3 text-left text-muted-foreground">
+                  {plan.features.map((feature, index) => (
+                    <li key={index} className="flex items-center">
+                      <CheckCircle className="text-green-500 mr-2 h-5 w-5" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90 text-lg">
+                  <Link href="/booking">{plan.button}</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-20 bg-gradient-to-b from-accent to-accent/80 text-white text-center">
+        <div className="max-w-xl mx-auto px-4">
+          <h3 className="text-3xl font-serif mb-4">Are You Ready for Inner Transformation?</h3>
+          <p className="mb-6 text-white/90">Secure your spot now and begin a journey back to yourself.</p>
+          <Button className="bg-white text-accent font-semibold hover:bg-white/90 px-6 py-3 text-lg">
+            <Link href="/booking">Book Now</Link>
+          </Button>
         </div>
       </section>
     </div>

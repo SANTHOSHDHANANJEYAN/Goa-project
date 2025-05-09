@@ -1,120 +1,125 @@
-import Link from 'next/link';
-import { Instagram, Facebook, Twitter, Mail, MapPin, Phone } from 'lucide-react';
+import Link from "next/link";
+import {
+  Instagram,
+  Facebook,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative py-16 overflow-hidden bg-muted bg-cover bg-center dark:bg-gray-900 dark:text-white" style={{ backgroundImage: 'url(/footer-bg.jpg)' }}>
-      {/* Decorative Background (Optional if you need additional styling) */}
-      {/* <div className="absolute inset-0 -z-10">
-        <img
-          src="/footer-bg.jpg" // Ensure this path is correct, and the image is in the public folder
-          alt="Decorative Background"
-          className="w-full h-full object-cover opacity-10"
-        />
-      </div> */}
+    <footer className="relative bg-[#f9f3ec] text-[#15005c] pt-16 pb-10 px-6 shadow-inner border-t-4 border-gradient-to-r from-[#15005c] via-[#9f87ff] to-[#15005c]">
+      {/* Optional decorative background pattern */}
+      <div className="absolute inset-0 opacity-5 bg-[url('/pattern.svg')] bg-repeat pointer-events-none"></div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-          {/* About */}
-          <div>
-            <h3 className="font-serif text-2xl font-semibold mb-4 text-accent dark:text-accent-light">Rishikul Yogshala Goa</h3>
-            <p className="text-muted-foreground mb-6 text-sm leading-relaxed dark:text-muted-foreground-dark">
-              Yoga Teacher Training does not necessarily mean performing difficult asanas which pertain to abject failure. The process is inclined towards replenishment of our heart, mind, and soul; it blends them to carve a shiny new personality.
-            </p>
-            <div className="flex space-x-4">
-              <Link href="https://instagram.com" className="text-foreground/70 hover:text-accent transition-colors dark:text-foreground/50 dark:hover:text-accent-light">
-                <Instagram size={20} />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="https://facebook.com" className="text-foreground/70 hover:text-accent transition-colors dark:text-foreground/50 dark:hover:text-accent-light">
-                <Facebook size={20} />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="https://twitter.com" className="text-foreground/70 hover:text-accent transition-colors dark:text-foreground/50 dark:hover:text-accent-light">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </Link>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-serif text-lg font-medium mb-4 text-foreground dark:text-foreground-light">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              {['Home', 'About Us', 'Yoga Courses', 'Retreats', 'Gallery', 'Contact', 'Payment'].map((item) => (
-                <li key={item}>
-                  <Link 
-                    href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-foreground/70 hover:text-accent transition-colors dark:text-foreground/50 dark:hover:text-accent-light"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Yoga Courses */}
-          <div>
-            <h3 className="font-serif text-lg font-medium mb-4 text-foreground dark:text-foreground-light">Yoga Courses</h3>
-            <ul className="space-y-2 text-sm">
-              {[
-                '21 Days Course',
-                '50 Hr Multi-Style-Yoga TTC',
-                '100 Hr Multi-Style-Yoga TTC',
-                '200 Hr Multi-Style-Yoga TTC',
-                '300 Hr Multi-Style-Yoga TTC'
-              ].map((item) => (
-                <li key={item}>
-                  <Link 
-                    href={`/services#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-foreground/70 hover:text-accent transition-colors dark:text-foreground/50 dark:hover:text-accent-light"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Us */}
-          <div>
-            <h3 className="font-serif text-lg font-medium mb-4 text-foreground dark:text-foreground-light">Contact Us</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start">
-                <MapPin size={18} className="mr-2 mt-0.5 text-accent dark:text-accent-light" />
-                <span className="text-foreground/70 dark:text-foreground/50">
-                  128, Thorlebag, Querim, Arambol, Goa 403524.
-                </span>
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 items-start text-sm z-10">
+        {/* Programs Column */}
+        <div>
+          <h3 className="text-xl font-serif font-semibold mb-4 relative">
+            Programs
+            <span className="block w-10 h-[2px] bg-[#15005c] mt-1 rounded"></span>
+          </h3>
+          <ul className="space-y-2">
+            {[
+              "21 Days Course",
+              "50 Hr Multi-Style-Yoga TTC",
+              "100 Hr Multi-Style-Yoga TTC",
+              "200 Hr Multi-Style-Yoga TTC",
+              "300 Hr Multi-Style-Yoga TTC",
+            ].map((item) => (
+              <li key={item}>
+                <Link
+                  href={`/services#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="hover:text-accent transition-colors"
+                >
+                  {item}
+                </Link>
               </li>
-              <li className="flex items-center">
-                <Phone size={18} className="mr-2 text-accent dark:text-accent-light" />
-                <span className="text-foreground/70 dark:text-foreground/50">(555) 123-4567</span>
+            ))}
+          </ul>
+        </div>
+
+        {/* Retreats Column */}
+        <div>
+          <h3 className="text-xl font-serif font-semibold mb-4 relative">
+            Retreats
+            <span className="block w-10 h-[2px] bg-[#15005c] mt-1 rounded"></span>
+          </h3>
+          <ul className="space-y-2">
+            {[
+              { name: "7-Day Yoga Retreat", href: "/retreats/7-day-yoga-retreat" },
+              { name: "Weekend Wellness", href: "/retreats/weekend-wellness" },
+              { name: "Detox & Cleanse", href: "/retreats/detox-cleanse" },
+              { name: "Silent Retreat", href: "/retreats/silent-retreat" },
+            ].map((retreat) => (
+              <li key={retreat.name}>
+                <Link
+                  href={retreat.href}
+                  className="hover:text-accent transition-colors"
+                >
+                  {retreat.name}
+                </Link>
               </li>
-              <li className="flex items-center">
-                <Mail size={18} className="mr-2 text-accent dark:text-accent-light" />
-                <span className="text-foreground/70 dark:text-foreground/50">rishikulyogshalagoa@gmail.com</span>
-              </li>
-            </ul>
+            ))}
+          </ul>
+        </div>
+
+        {/* Logo & Socials */}
+        <div className="flex flex-col items-center space-y-6 pr-[10rem]">
+          <img
+            src="/logo2.png"
+            alt="Logo"
+            className="w-[9rem] h-[5rem] mx-auto drop-shadow-md gap-4"
+          />
+          <div className="flex space-x-4">
+            <Link href="https://youtube.com">
+              <span className="sr-only">YouTube</span>
+              <div className="w-8 h-8 bg-[#15005c] hover:bg-[#322177] transition rounded-full flex items-center justify-center shadow-md">
+                <span className="text-white text-xs font-bold">YT</span>
+              </div>
+            </Link>
+            <Link href="https://instagram.com" className="hover:scale-110 transition-transform">
+              <Instagram className="text-[#15005c]" />
+            </Link>
+            <Link href="https://facebook.com" className="hover:scale-110 transition-transform">
+              <Facebook className="text-[#15005c]" />
+            </Link>
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="mt-12 pt-8 border-t border-border dark:border-border-dark">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <p className="text-sm text-muted-foreground dark:text-muted-foreground-dark">
-              &copy; {new Date().getFullYear()} Rishikul Yogshala Goa. All rights reserved.
-            </p>
-            <div className="mt-4 md:mt-0 flex space-x-6">
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-accent transition-colors dark:text-muted-foreground-dark dark:hover:text-accent-light">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-accent transition-colors dark:text-muted-foreground-dark dark:hover:text-accent-light">
-                Terms of Service
-              </Link>
-            </div>
+        {/* Contact Info */}
+        <div>
+          <h3 className="text-xl font-serif font-semibold mb-4 relative">
+            About Us
+            <span className="block w-10 h-[2px] bg-[#15005c] mt-1 rounded"></span>
+          </h3>
+          <p className="mb-2 font-medium">Contacts</p>
+          <ul className="space-y-2 text-sm leading-relaxed">
+            <li>
+              <Mail size={16} className="inline mr-2 text-[#15005c]" />
+              rishikulyogshalagoa@gmail.com
+            </li>
+            <li>
+              <Phone size={16} className="inline mr-2 text-[#15005c]" />
+              (555) 123-4567
+            </li>
+            <li>
+              <MapPin size={16} className="inline mr-2 text-[#15005c]" />
+              128, Thorlebag, Querim, Arambol, Goa 403524.
+            </li>
+          </ul>
+          <div className="mt-4">
+            <Link href="/privacy" className="underline text-sm hover:text-accent transition-colors">
+              Privacy Policy
+            </Link>
           </div>
         </div>
+      </div>
+
+      {/* Footer Note */}
+      <div className="mt-12 text-center text-xs text-[#6a5d8c] z-10 relative">
+        &copy; {new Date().getFullYear()} Rishikul Yogshala Goa. All rights reserved.
       </div>
     </footer>
   );
