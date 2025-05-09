@@ -148,11 +148,11 @@ export default function Header() {
                 />
               </Link>
             </div>
-            {/* {mounted && (
+            {mounted && (
               <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
                 {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
               </Button>
-            )} */}
+            )}
           </div>
         </div>
       </div>
