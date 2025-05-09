@@ -5,6 +5,10 @@ import Image from "next/image";
 import TestimonialCarousel from "@/components/testimonials-section";
 import FAQSection from "@/components/FAQSection";
 import ApplicationForm from "@/components/ApplicationForm";
+import CurriculumSection from "@/components/CurriculumSection";
+import ActivitiesSection from "@/components/ActivitiesSection";
+import BatchScheduleTable from "@/components/BatchScheduleTable";
+import AnimateButton from "@/components/AnimateButton";
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -12,7 +16,7 @@ const TwoHundredHourTTPage = () => {
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-sm md:text-base font-semibold text-indigo-600 uppercase tracking-wide">
-          300-hrs Accredited Yoga Teacher Training
+         50-hrs Accredited Yoga Teacher Training
         </h2>
         <p className="text-lg text-gray-600">In Amersham, Bali</p>
       </div>
@@ -47,69 +51,77 @@ const TwoHundredHourTTPage = () => {
       </div>
 
       {/* Hero Image */}
-      <div className="rounded-2xl overflow-hidden shadow-lg mb-16">
-        <Image
-          src="/course2.jpg"
-          alt="Yoga retreat in Bali"
-          width={1200}
-          height={600}
-          className="w-full object-cover max-h-[600px]"
-          priority
-        />
-      </div>
+     <div className="flex justify-center items-center min-h-screen bg-transparent">
+  <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
+    <Image
+      src="/course2.jpg"
+      alt="Yoga retreat in Bali"
+      width={1200}
+      height={900}
+      className="object-cover max-h-[500px]"
+      priority
+    />
+  </div>
+</div>
 
       {/* Certificate Info */}
       <section className="text-center mb-20">
-        <h3 className="text-2xl font-semibold text-indigo-800 mb-4">
-          After Completing the Course...
-        </h3>
-        <div className="flex justify-center items-center gap-6 mb-4">
-          {["200", "300", "500"].map((level, i) => (
-            <div key={i} className="relative w-12 h-12">
-              <Image
-                src={'/rys ${level}.png'}
-                alt={'RYS ${level} Badge'}
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
-          ))}
+  <h3 className="text-2xl font-semibold text-indigo-800 mb-6">
+    After Completing the Course...
+  </h3>
+  <div className="flex justify-center gap-10 mb-4">
+    {[
+      { level: "200",  src: "/rys 200.png" },
+      { level: "300", src: "/rpysall.png" },
+      { level: "500",  src: "/300 rys.png" },
+    ].map(({ level, src }, i) => (
+      <div key={i} className="flex flex-col items-center">
+        <div className="relative w-16 h-16 mb-2">
+          <Image
+            src={src}
+            alt={`RYS ${level} Badge`}
+            layout="fill"
+            objectFit="contain"
+          />
         </div>
-        <p className="text-sm text-gray-600">
-          You'll receive a Yoga Alliance certificate —<br />
-          internationally recognized and accepted.
-        </p>
-      </section>
+       
+      </div>
+    ))}
+  </div>
+  <p className="text-sm text-gray-600">
+    You’ll receive a Yoga Alliance certificate —<br />
+    internationally recognized and accepted.
+  </p>
+</section>
+
 
       {/* About Section */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-center mb-6">What You’ll Learn</h2>
-        <p className="text-center text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          This 200-hour training covers the foundations of yoga philosophy, asana practice,
-          anatomy, teaching methodology, meditation, pranayama, and yogic lifestyle.
-          You’ll develop the skills to confidently lead classes, deepen your personal practice,
-          and integrate yoga into your daily life.
-        </p>
-      </section>
+  <AnimateButton/>
+
+  <section className="mt-20 mb-20">
+  <h2 className="text-[22px] font-bold text-center mb-8 text-blue-900"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
+  <h2 className="text-[10px] font-bold text-center mb-8 text-blue-900"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
+ <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
+  {/* Card 1 */}
+  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
+    <img src="/1.jpg" alt="Image 1" className="w-full h-full object-cover" />
+  </div>
+  {/* Card 2 */}
+  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
+    <img src="/2.jpg" alt="Image 2" className="w-full h-full object-cover" />
+  </div>
+  {/* Card 3 */}
+  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
+    <img src="/3.jpg" alt="Image 3" className="w-full h-full object-cover" />
+  </div>
+</div>
+
+</section>
+
+
 
       {/* Curriculum */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Curriculum Overview</h2>
-        <div className="grid md:grid-cols-2 gap-8 text-gray-700">
-          <ul className="space-y-2">
-            <li>✓ Asana techniques & alignment</li>
-            <li>✓ Yoga philosophy & ethics</li>
-            <li>✓ Teaching methodology</li>
-            <li>✓ Anatomy & physiology</li>
-          </ul>
-          <ul className="space-y-2">
-            <li>✓ Meditation & pranayama</li>
-            <li>✓ Practice teaching sessions</li>
-            <li>✓ Class sequencing & theming</li>
-            <li>✓ Business of yoga</li>
-          </ul>
-        </div>
-      </section>
+      <CurriculumSection/>
 
       {/* Instructor Info */}
       <section className="mb-20">
@@ -120,7 +132,7 @@ const TwoHundredHourTTPage = () => {
         </p>
         <div className="w-full h-80 relative rounded-xl overflow-hidden shadow">
           <Image
-            src="/yoga-instructors.jpg"
+            src="/goa4111.jpg"
             alt="House of Om instructors"
             layout="fill"
             objectFit="cover"
@@ -142,7 +154,7 @@ const TwoHundredHourTTPage = () => {
 
       {/* Accommodation Section - Scenic */}
       <section
-        className="relative bg-cover bg-center bg-no-repeat text-white py-24 mb-20"
+        className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20"
         style={{
           backgroundImage: "url('/3.jpg')",
         }}
@@ -180,98 +192,9 @@ const TwoHundredHourTTPage = () => {
       </section>
 
       {/* Accommodation Options */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Accommodation Options</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            {
-              title: "Dorm room",
-              priceOld: "$2350",
-              priceNew: "$2000",
-              details: [
-                "Four single beds",
-                "Shared AC + hot water + wifi",
-                "Breakfast, lunch, dinner",
-                "200 RYT training and all community events",
-                "Yoga equipment and learning materials",
-              ],
-              image: "/dorm-room.jpg",
-            },
-            {
-              title: "Triple bed room",
-              priceOld: "$2700",
-              priceNew: "$2295",
-              details: [
-                "Three single beds",
-                "Shared AC + hot water + wifi",
-                "Breakfast, lunch, dinner",
-                "200 RYT training and all community events",
-                "Yoga equipment and learning materials",
-              ],
-              image: "/triple-room.jpg",
-            },
-            {
-              title: "Twin bed room",
-              priceOld: "$3200",
-              priceNew: "$2720",
-              details: [
-                "Two single beds",
-                "Shared AC + hot water + wifi",
-                "Breakfast, lunch, dinner",
-                "200 RYT training and all community events",
-                "Yoga equipment and learning materials",
-              ],
-              image: "/twin-room.jpg",
-            },
-            {
-              title: "Private room",
-              priceOld: "$3750",
-              priceNew: "$3190",
-              details: [
-                "King-size bed",
-                "Private AC + hot water + wifi",
-                "Breakfast, lunch, dinner",
-                "200 RYT training and all community events",
-                "Yoga equipment and learning materials",
-              ],
-              image: "/private-room.jpg",
-            },
-          ].map(({ title, priceOld, priceNew, details, image }, i) => (
-            <div key={i} className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
-              <div className="relative h-48">
-                <Image
-                  src={image}
-                  alt={title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-t-2xl"
-                />
-                <div className="absolute bottom-2 left-2 bg-black text-white text-xs px-3 py-1 rounded">
-                  More photos
-                </div>
-              </div>
-              <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-lg font-semibold text-indigo-800 mb-1">{title}</h3>
-                <p className="text-sm text-gray-500 line-through">{priceOld}</p>
-                <p className="text-xl font-bold text-green-600 mb-2">{priceNew}</p>
-                <ul className="text-sm text-gray-700 mb-4 space-y-1">
-                  {details.map((d, idx) => (
-                    <li key={idx}>• {d}</li>
-                  ))}
-                </ul>
-                <div className="mt-auto flex justify-between space-x-2">
-                  <button className="w-1/2 bg-indigo-600 text-white py-2 rounded-full text-sm hover:bg-indigo-700 transition">
-                    Start Journey
-                  </button>
-                  <button className="w-1/2 border border-indigo-600 text-indigo-600 py-2 rounded-full text-sm hover:bg-indigo-50 transition">
-                    Deposit
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ActivitiesSection/>
+       {/* Course Details Section */}
+      <BatchScheduleTable/>
 
       {/* Testimonials */}
       <TestimonialCarousel
@@ -309,6 +232,31 @@ const TwoHundredHourTTPage = () => {
             question: "What is your refund policy?",
             answer:
               "Deposits are non-refundable. Full refunds minus the deposit are available up to 30 days before training. After that, credits may be offered.",
+          },
+          {
+            question: "Do you offer scholarships?",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+          },
+          {
+            question: "Do you offer scholarships?",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+          },
+          {
+            question: "Do you offer scholarships?",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+          },
+          {
+            question: "Do you offer scholarships?",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+          },
+          {
+            question: "Do you offer scholarships?",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
           },
           {
             question: "Do you offer scholarships?",
