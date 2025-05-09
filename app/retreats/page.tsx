@@ -1,6 +1,6 @@
 // app/retreats/page.tsx
 
-import SevenDaysYogaRetreats from './SevenDaysYogaRetreats';
+import SevenDaysYogaRetreats from '../../components/SevenDaysYogaRetreats';
 
 export default function Page() {
   return <SevenDaysYogaRetreats />;

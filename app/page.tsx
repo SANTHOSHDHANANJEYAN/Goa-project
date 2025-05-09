@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import ServicesPreview from '@/components/services-preview';
 import Youtube from '@/components/youtube';
+import ApplicationForm from '@/components/ApplicationForm';
+import Appform from '@/components/Appform';
 
 export default function Home() {
   return (
@@ -160,6 +162,7 @@ export default function Home() {
       </section>
 
       <Youtube />
+      <Appform/>
     </div>
   );
 }

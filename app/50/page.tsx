@@ -6,6 +6,9 @@ import TestimonialCarousel from "@/components/testimonials-section";
 import FAQSection from "@/components/FAQSection";
 import ApplicationForm from "@/components/ApplicationForm";
 import CurriculumSection from "@/components/CurriculumSection";
+import ActivitiesSection from "@/components/ActivitiesSection";
+import BatchScheduleTable from "@/components/BatchScheduleTable";
+import AnimateButton from "@/components/AnimateButton";
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -93,81 +96,7 @@ const TwoHundredHourTTPage = () => {
 
 
       {/* About Section */}
-  <section
-  className="relative w-full bg-fixed bg-cover bg-center text-white py-16 px-4 md:px-8"
-  style={{
-    backgroundImage: "url('/backgdf.jpg')",
-  }}
->
-  {/* Overlay for readability */}
-  <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-
-  {/* Play Button */}
-  <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10">
-    <div className="relative w-28 h-28">
-      <svg viewBox="0 0 100 100" className="absolute w-full h-full animate-spin-slow">
-        <defs>
-          <path
-            id="circlePath"
-            d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"
-          />
-        </defs>
-        <text fill="white" fontSize="8" fontWeight="600" letterSpacing="2">
-          <textPath href="#circlePath" startOffset="0%">
-            WATCH VIDEO • WATCH VIDEO • WATCH VIDEO •
-          </textPath>
-        </text>
-      </svg>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-14 h-14 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:scale-125 transition-transform cursor-pointer shadow-xl">
-          <svg className="w-6 h-6 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {/* Full-Width Content */}
-  <div className="relative z-10 w-full text-center">
-    <h2 className="text-xl font-semibold uppercase tracking-wider mb-2 text-shadow-md">House of Om</h2>
-    <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-relaxed text-shadow-md">
-      Join our life-changing community of over 34,000 students.
-      <br />
-      Become part of our family at one of the leading accredited
-      <br />
-      schools in Bali and India!
-    </h1>
-
-    {/* Full-Width Stats Grid */}
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-10 text-sm md:text-base font-medium bg-black bg-opacity-60 p-6 rounded-xl w-full max-w-none">
-      <div>
-        <p className="text-2xl font-bold">33%</p>
-        <p>graduates return to sign up for new programs</p>
-      </div>
-      <div>
-        <p className="text-2xl font-bold">10,000+</p>
-        <p>graduated online</p>
-      </div>
-      <div>
-        <p className="text-2xl font-bold">6,000+</p>
-        <p>graduated in Bali</p>
-      </div>
-      <div>
-        <p className="text-2xl font-bold">18,000+</p>
-        <p>graduated in India</p>
-      </div>
-      <div>
-        <p className="text-2xl font-bold">★ 5★</p>
-        <p>Google and Facebook</p>
-      </div>
-      <div>
-        <p className="text-2xl font-bold">200k+</p>
-        <p>Instagram & Facebook community</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <AnimateButton/>
 
   <section className="mt-20 mb-20">
   <h2 className="text-[22px] font-bold text-center mb-8 text-blue-900"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
@@ -263,124 +192,9 @@ const TwoHundredHourTTPage = () => {
       </section>
 
       {/* Accommodation Options */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Accommodation Options</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            {
-              title: "Dorm room",
-              priceOld: "$2350",
-              priceNew: "$2000",
-              details: [
-                "Four single beds",
-                "Shared AC + hot water + wifi",
-                "Breakfast, lunch, dinner",
-                "200 RYT training and all community events",
-                "Yoga equipment and learning materials",
-              ],
-              image: "/dorm-room.jpg",
-            },
-            {
-              title: "Triple bed room",
-              priceOld: "$2700",
-              priceNew: "$2295",
-              details: [
-                "Three single beds",
-                "Shared AC + hot water + wifi",
-                "Breakfast, lunch, dinner",
-                "200 RYT training and all community events",
-                "Yoga equipment and learning materials",
-              ],
-              image: "/triple-room.jpg",
-            },
-            {
-              title: "Twin bed room",
-              priceOld: "$3200",
-              priceNew: "$2720",
-              details: [
-                "Two single beds",
-                "Shared AC + hot water + wifi",
-                "Breakfast, lunch, dinner",
-                "200 RYT training and all community events",
-                "Yoga equipment and learning materials",
-              ],
-              image: "/twin-room.jpg",
-            },
-            {
-              title: "Private room",
-              priceOld: "$3750",
-              priceNew: "$3190",
-              details: [
-                "King-size bed",
-                "Private AC + hot water + wifi",
-                "Breakfast, lunch, dinner",
-                "200 RYT training and all community events",
-                "Yoga equipment and learning materials",
-              ],
-              image: "/private-room.jpg",
-            },
-          ].map(({ title, priceOld, priceNew, details, image }, i) => (
-            <div key={i} className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
-              <div className="relative h-48">
-                <Image
-                  src={image}
-                  alt={title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-t-2xl"
-                />
-                <div className="absolute bottom-2 left-2 bg-black text-white text-xs px-3 py-1 rounded">
-                  More photos
-                </div>
-              </div>
-              <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-lg font-semibold text-indigo-800 mb-1">{title}</h3>
-                <p className="text-sm text-gray-500 line-through">{priceOld}</p>
-                <p className="text-xl font-bold text-green-600 mb-2">{priceNew}</p>
-                <ul className="text-sm text-gray-700 mb-4 space-y-1">
-                  {details.map((d, idx) => (
-                    <li key={idx}>• {d}</li>
-                  ))}
-                </ul>
-                <div className="mt-auto flex justify-between space-x-2">
-                  <button className="w-1/2 bg-indigo-600 text-white py-2 rounded-full text-sm hover:bg-indigo-700 transition">
-                    Start Journey
-                  </button>
-                  <button className="w-1/2 border border-indigo-600 text-indigo-600 py-2 rounded-full text-sm hover:bg-indigo-50 transition">
-                    Deposit
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ActivitiesSection/>
        {/* Course Details Section */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Course Details</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
-          <div className="bg-gray-50 p-6 rounded-lg shadow">
-            <h4 className="font-semibold text-indigo-600 mb-2">Duration</h4>
-            <p>21 days (200 hours)</p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow">
-            <h4 className="font-semibold text-indigo-600 mb-2">Level</h4>
-            <p>Beginner to Intermediate</p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow">
-            <h4 className="font-semibold text-indigo-600 mb-2">Language</h4>
-            <p>English</p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow">
-            <h4 className="font-semibold text-indigo-600 mb-2">Format</h4>
-            <p>In-person, immersive residential training</p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow">
-            <h4 className="font-semibold text-indigo-600 mb-2">Certification</h4>
-            <p>Yoga Alliance RYT 200 Certification</p>
-          </div>
-        </div>
-      </section>
+      <BatchScheduleTable/>
 
       {/* Testimonials */}
       <TestimonialCarousel
