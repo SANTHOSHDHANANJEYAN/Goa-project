@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, Leaf, Heart, Sunrise } from 'lucide-react';
+import GoaRetreatSection from './GoaRetreatSection';
 
 interface Session {
   time: string;
@@ -65,6 +66,8 @@ const SevenDaysYogaRetreatPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <GoaRetreatSection/>
 
       {/* About */}
       <section className="py-20 bg-white">
