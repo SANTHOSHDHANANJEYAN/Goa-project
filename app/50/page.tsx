@@ -10,6 +10,8 @@ import ActivitiesSection from "@/components/ActivitiesSection";
 import BatchScheduleTable from "@/components/BatchScheduleTable";
 import AnimateButton from "@/components/AnimateButton";
 import TestimonialSection from "@/components/TestimonialSection";
+import AboutTraining from "@/components/AboutTraining";
+import RetreatSchedule from "@/components/RetreatSchedule";
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -95,7 +97,7 @@ const TwoHundredHourTTPage = () => {
   </p>
 </section>
 
-
+<AboutTraining/>
       {/* About Section */}
   <AnimateButton/>
 
@@ -193,7 +195,7 @@ const TwoHundredHourTTPage = () => {
         </div>
       </section>
 
-      {/* Accommodation Options */}
+      <RetreatSchedule/>
       <ActivitiesSection/>
        {/* Course Details Section */}
       <BatchScheduleTable/>

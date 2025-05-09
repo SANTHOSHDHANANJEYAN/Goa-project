@@ -9,6 +9,9 @@ import CurriculumSection from "@/components/CurriculumSection";
 import ActivitiesSection from "@/components/ActivitiesSection";
 import BatchScheduleTable from "@/components/BatchScheduleTable";
 import AnimateButton from "@/components/AnimateButton";
+import TestimonialSection from "@/components/TestimonialSection";
+import AboutTraining from "@/components/AboutTraining";
+import RetreatSchedule from "@/components/RetreatSchedule";
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -18,14 +21,14 @@ const TwoHundredHourTTPage = () => {
         <h2 className="text-sm md:text-base font-semibold text-indigo-600 uppercase tracking-wide">
          50-hrs Accredited Yoga Teacher Training
         </h2>
-        <p className="text-lg text-gray-600">In Amersham, Bali</p>
+        <p className="text-lg text-gray-600">In Goa</p>
       </div>
 
       <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4">
         Become a Certified Yoga Teacher by Yoga Alliance
       </h1>
       <p className="text-lg text-center text-gray-700 mb-6">
-        Join an exciting and life-changing 21-day journey in Bali
+        Join an exciting and life-changing 21-day journey in Goa
       </p>
 
       {/* Price and CTA */}
@@ -94,7 +97,7 @@ const TwoHundredHourTTPage = () => {
   </p>
 </section>
 
-
+<AboutTraining/>
       {/* About Section */}
   <AnimateButton/>
 
@@ -146,7 +149,7 @@ const TwoHundredHourTTPage = () => {
         <div className="bg-indigo-50 p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
           <p className="mb-4 font-medium text-lg">Intensive Format (21 Days)</p>
           <p className="mb-1">🗓 May 26 – June 16, 2025</p>
-          <p className="mb-1">📍 Location: Amersham, Bali</p>
+          <p className="mb-1">📍 Location: Goa</p>
           <p className="mb-1">🕗 Monday – Saturday: 8 AM to 6 PM</p>
           <p className="text-sm text-gray-500 mt-2">Includes breaks, workshops, and off-days</p>
         </div>
@@ -154,29 +157,30 @@ const TwoHundredHourTTPage = () => {
 
       {/* Accommodation Section - Scenic */}
       <section
-        className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20"
-        style={{
-          backgroundImage: "url('/3.jpg')",
-        }}
-      >
+  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
+  style={{
+    backgroundImage: "url('/3.jpg')",
+  }}
+>
+
         <div className="bg-black bg-opacity-50 absolute inset-0"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">Amersham</h2>
+          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">YOGSHALA</h2>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
-          <p className="text-lg mb-10">House of Om resort amidst jungle paradise in Bali</p>
+          <p className="text-lg mb-10">Palm Paradise Resort amidst jungle paradise in Goa</p>
 
           <div className="grid md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto">
             <div className="flex items-start space-x-4">
               <img src="/icons/waterfall-icon.svg" alt="Waterfalls" className="w-8 h-8 mt-1" />
               <p>
-                <strong>Discover Bali's cascade gems:</strong><br />
+                <strong>Discover Goa's cascade gems:</strong><br />
                 more than 10 waterfalls within 10 km
               </p>
             </div>
             <div className="flex items-start space-x-4">
               <img src="/icons/nature-icon.svg" alt="Nature parks" className="w-8 h-8 mt-1" />
               <p>
-                <strong>Exploring Bali’s natural beauty:</strong><br />
+                <strong>Exploring Goa’s natural beauty:</strong><br />
                 3 biggest parks in a 20-minute drive
               </p>
             </div>
@@ -184,18 +188,18 @@ const TwoHundredHourTTPage = () => {
               <img src="/icons/beach-icon.svg" alt="Beaches" className="w-8 h-8 mt-1" />
               <p>
                 <strong>Enjoy swimming, surfing and relaxation:</strong><br />
-                at Bali’s 3 beaches within 10 km
+                at Goa’s 3 beaches within 10 km
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Accommodation Options */}
+      <RetreatSchedule/>
       <ActivitiesSection/>
        {/* Course Details Section */}
       <BatchScheduleTable/>
-
+<TestimonialSection/>
       {/* Testimonials */}
       <TestimonialCarousel
         testimonials={[
