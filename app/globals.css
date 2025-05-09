@@ -169,4 +169,6 @@ body, html {
 .transition-colors {
   background-color: white;
 }
-  
+.p{
+  color: darkblue;
+}
