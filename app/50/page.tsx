@@ -168,7 +168,25 @@ const TwoHundredHourTTPage = () => {
   </div>
 </section>
 
+  <section className="mt-20 mb-20">
+  <h2 className="text-[22px] font-bold text-center mb-8 text-blue-900"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
+  <h2 className="text-[10px] font-bold text-center mb-8 text-blue-900"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
+ <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
+  {/* Card 1 */}
+  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
+    <img src="/1.jpg" alt="Image 1" className="w-full h-full object-cover" />
+  </div>
+  {/* Card 2 */}
+  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
+    <img src="/2.jpg" alt="Image 2" className="w-full h-full object-cover" />
+  </div>
+  {/* Card 3 */}
+  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
+    <img src="/3.jpg" alt="Image 3" className="w-full h-full object-cover" />
+  </div>
+</div>
 
+</section>
 
 
 
@@ -415,6 +433,31 @@ const TwoHundredHourTTPage = () => {
             question: "What is your refund policy?",
             answer:
               "Deposits are non-refundable. Full refunds minus the deposit are available up to 30 days before training. After that, credits may be offered.",
+          },
+          {
+            question: "Do you offer scholarships?",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+          },
+          {
+            question: "Do you offer scholarships?",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+          },
+          {
+            question: "Do you offer scholarships?",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+          },
+          {
+            question: "Do you offer scholarships?",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+          },
+          {
+            question: "Do you offer scholarships?",
+            answer:
+              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
           },
           {
             question: "Do you offer scholarships?",
