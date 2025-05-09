@@ -5,6 +5,7 @@ import Image from "next/image";
 import TestimonialCarousel from "@/components/testimonials-section";
 import FAQSection from "@/components/FAQSection";
 import ApplicationForm from "@/components/ApplicationForm";
+import CurriculumSection from "@/components/CurriculumSection";
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -191,23 +192,7 @@ const TwoHundredHourTTPage = () => {
 
 
       {/* Curriculum */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Curriculum Overview</h2>
-        <div className="grid md:grid-cols-2 gap-8 text-gray-700">
-          <ul className="space-y-2">
-            <li>✓ Asana techniques & alignment</li>
-            <li>✓ Yoga philosophy & ethics</li>
-            <li>✓ Teaching methodology</li>
-            <li>✓ Anatomy & physiology</li>
-          </ul>
-          <ul className="space-y-2">
-            <li>✓ Meditation & pranayama</li>
-            <li>✓ Practice teaching sessions</li>
-            <li>✓ Class sequencing & theming</li>
-            <li>✓ Business of yoga</li>
-          </ul>
-        </div>
-      </section>
+      <CurriculumSection/>
 
       {/* Instructor Info */}
       <section className="mb-20">
@@ -218,7 +203,7 @@ const TwoHundredHourTTPage = () => {
         </p>
         <div className="w-full h-80 relative rounded-xl overflow-hidden shadow">
           <Image
-            src="/yoga-instructors.jpg"
+            src="/goa4111.jpg"
             alt="House of Om instructors"
             layout="fill"
             objectFit="cover"
