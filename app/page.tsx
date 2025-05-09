@@ -147,19 +147,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-transparent text-primary-foreground relative overflow-hidden">
-        <img
-          src="/5.jpg"
-          alt="image"
-          style={{
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-          }}
-        />
-      </section>
+    <section className="relative h-[765px] overflow-hidden bg-fixed bg-cover bg-center text-white">
+  {/* Background Image */}
+  <img
+    src="/bag1.jpg" // replace with your uploaded path if different
+    alt="Yoga Retreat"
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+  />
+
+  {/* Text Overlay */}
+  <div className="absolute inset-0 flex items-center px-8 md:px-20 z-10 bg-black/20">
+    <div className="max-w-xl">
+      <h2 className="text-2xl md:text-4xl font-semibold leading-snug mb-2">
+        Take the journey inward!
+      </h2>
+      <p className="text-lg md:text-xl leading-relaxed">
+        Connect with yoga traditions while immersing yourself in awe-inspiring natural lands
+      </p>
+    </div>
+  </div>
+</section>
+
 
       <Youtube />
       <Appform/>

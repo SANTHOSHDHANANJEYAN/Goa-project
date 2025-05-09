@@ -9,6 +9,7 @@ import CurriculumSection from "@/components/CurriculumSection";
 import ActivitiesSection from "@/components/ActivitiesSection";
 import BatchScheduleTable from "@/components/BatchScheduleTable";
 import AnimateButton from "@/components/AnimateButton";
+import TestimonialSection from "@/components/TestimonialSection";
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -196,7 +197,7 @@ const TwoHundredHourTTPage = () => {
       <ActivitiesSection/>
        {/* Course Details Section */}
       <BatchScheduleTable/>
-
+<TestimonialSection/>
       {/* Testimonials */}
       <TestimonialCarousel
         testimonials={[

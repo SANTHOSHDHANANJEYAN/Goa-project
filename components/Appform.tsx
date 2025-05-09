@@ -50,7 +50,7 @@ const QuickContactForm: React.FC = () => {
         className="max-w-xl mx-auto p-8 bg-white/30 backdrop-blur-lg rounded-2xl shadow-xl border border-white/20"
       >
         <h2 className="text-3xl font-semibold mb-6 text-center text-purple-800 drop-shadow-sm">
-          Stay Updated
+          Do you have any Questions?
         </h2>
 
         {submitSuccess && (

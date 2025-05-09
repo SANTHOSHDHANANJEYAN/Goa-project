@@ -16,9 +16,9 @@ const TwoHundredHourTTPage = () => {
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-sm md:text-base font-semibold text-indigo-600 uppercase tracking-wide">
-         50-hrs Accredited Yoga Teacher Training
+         100-hrs Accredited Yoga Teacher Training
         </h2>
-        <p className="text-lg text-gray-600">In Amersham, Bali</p>
+        <p className="text-lg text-gray-600">In Goa</p>
       </div>
 
       <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4">
