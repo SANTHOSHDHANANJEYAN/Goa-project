@@ -47,39 +47,49 @@ const TwoHundredHourTTPage = () => {
       </div>
 
       {/* Hero Image */}
-      <div className="rounded-2xl overflow-hidden shadow-lg mb-16">
-        <Image
-          src="/course2.jpg"
-          alt="Yoga retreat in Bali"
-          width={1200}
-          height={600}
-          className="w-full object-cover max-h-[600px]"
-          priority
-        />
-      </div>
+     <div className="flex justify-center items-center min-h-screen bg-transparent">
+  <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
+    <Image
+      src="/course2.jpg"
+      alt="Yoga retreat in Bali"
+      width={1200}
+      height={900}
+      className="object-cover max-h-[500px]"
+      priority
+    />
+  </div>
+</div>
 
       {/* Certificate Info */}
       <section className="text-center mb-20">
-        <h3 className="text-2xl font-semibold text-indigo-800 mb-4">
-          After Completing the Course...
-        </h3>
-        <div className="flex justify-center items-center gap-6 mb-4">
-          {["200", "300", "500"].map((level, i) => (
-            <div key={i} className="relative w-12 h-12">
-              <Image
-                src={'/rys ${level}.png'}
-                alt={'RYS ${level} Badge'}
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
-          ))}
+  <h3 className="text-2xl font-semibold text-indigo-800 mb-6">
+    After Completing the Course...
+  </h3>
+  <div className="flex justify-center gap-10 mb-4">
+    {[
+      { level: "200",  src: "/rys 200.png" },
+      { level: "300", src: "/rpysall.png" },
+      { level: "500",  src: "/300 rys.png" },
+    ].map(({ level, src }, i) => (
+      <div key={i} className="flex flex-col items-center">
+        <div className="relative w-16 h-16 mb-2">
+          <Image
+            src={src}
+            alt={`RYS ${level} Badge`}
+            layout="fill"
+            objectFit="contain"
+          />
         </div>
-        <p className="text-sm text-gray-600">
-          You'll receive a Yoga Alliance certificate —<br />
-          internationally recognized and accepted.
-        </p>
-      </section>
+       
+      </div>
+    ))}
+  </div>
+  <p className="text-sm text-gray-600">
+    You’ll receive a Yoga Alliance certificate —<br />
+    internationally recognized and accepted.
+  </p>
+</section>
+
 
       {/* About Section */}
       <section className="mb-16">
@@ -270,6 +280,32 @@ const TwoHundredHourTTPage = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+       {/* Course Details Section */}
+      <section className="mb-20">
+        <h2 className="text-3xl font-bold text-center mb-8">Course Details</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
+          <div className="bg-gray-50 p-6 rounded-lg shadow">
+            <h4 className="font-semibold text-indigo-600 mb-2">Duration</h4>
+            <p>21 days (200 hours)</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg shadow">
+            <h4 className="font-semibold text-indigo-600 mb-2">Level</h4>
+            <p>Beginner to Intermediate</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg shadow">
+            <h4 className="font-semibold text-indigo-600 mb-2">Language</h4>
+            <p>English</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg shadow">
+            <h4 className="font-semibold text-indigo-600 mb-2">Format</h4>
+            <p>In-person, immersive residential training</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg shadow">
+            <h4 className="font-semibold text-indigo-600 mb-2">Certification</h4>
+            <p>Yoga Alliance RYT 200 Certification</p>
+          </div>
         </div>
       </section>
 
