@@ -92,16 +92,18 @@ const TwoHundredHourTTPage = () => {
 
 
       {/* About Section */}
-   <section
-  className="relative mb-16 bg-fixed bg-cover bg-center text-white py-16 px-4"
+  <section
+  className="relative w-full bg-fixed bg-cover bg-center text-white py-16 px-4 md:px-8"
   style={{
     backgroundImage: "url('/backgdf.jpg')",
   }}
 >
-  {/* Play Button on Left */}
+  {/* Overlay for readability */}
+  <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
+  {/* Play Button */}
   <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10">
     <div className="relative w-28 h-28">
-      {/* Rotating text circle */}
       <svg viewBox="0 0 100 100" className="absolute w-full h-full animate-spin-slow">
         <defs>
           <path
@@ -115,10 +117,8 @@ const TwoHundredHourTTPage = () => {
           </textPath>
         </text>
       </svg>
-
-      {/* Play Icon */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-14 h-14 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
+        <div className="w-14 h-14 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:scale-125 transition-transform cursor-pointer shadow-xl">
           <svg className="w-6 h-6 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
             <path d="M8 5v14l11-7z" />
           </svg>
@@ -127,10 +127,10 @@ const TwoHundredHourTTPage = () => {
     </div>
   </div>
 
-  {/* Main Content */}
-  <div className="max-w-4xl mx-auto text-center">
-    <h2 className="text-xl font-semibold uppercase tracking-wider mb-2">House of Om</h2>
-    <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-relaxed">
+  {/* Full-Width Content */}
+  <div className="relative z-10 w-full text-center">
+    <h2 className="text-xl font-semibold uppercase tracking-wider mb-2 text-shadow-md">House of Om</h2>
+    <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-relaxed text-shadow-md">
       Join our life-changing community of over 34,000 students.
       <br />
       Become part of our family at one of the leading accredited
@@ -138,22 +138,22 @@ const TwoHundredHourTTPage = () => {
       schools in Bali and India!
     </h1>
 
-    {/* Stats Grid */}
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-10 text-sm md:text-base font-medium bg-black bg-opacity-50 p-6 rounded-xl">
+    {/* Full-Width Stats Grid */}
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-10 text-sm md:text-base font-medium bg-black bg-opacity-60 p-6 rounded-xl w-full max-w-none">
       <div>
         <p className="text-2xl font-bold">33%</p>
         <p>graduates return to sign up for new programs</p>
       </div>
       <div>
-        <p className="text-2xl font-bold">10.000+</p>
+        <p className="text-2xl font-bold">10,000+</p>
         <p>graduated online</p>
       </div>
       <div>
-        <p className="text-2xl font-bold">6.000+</p>
+        <p className="text-2xl font-bold">6,000+</p>
         <p>graduated in Bali</p>
       </div>
       <div>
-        <p className="text-2xl font-bold">18.000+</p>
+        <p className="text-2xl font-bold">18,000+</p>
         <p>graduated in India</p>
       </div>
       <div>
@@ -167,6 +167,7 @@ const TwoHundredHourTTPage = () => {
     </div>
   </div>
 </section>
+
 
 
 
@@ -221,7 +222,7 @@ const TwoHundredHourTTPage = () => {
 
       {/* Accommodation Section - Scenic */}
       <section
-        className="relative bg-cover bg-center bg-no-repeat text-white py-24 mb-20"
+        className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20"
         style={{
           backgroundImage: "url('/3.jpg')",
         }}
