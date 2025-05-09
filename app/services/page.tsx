@@ -320,9 +320,7 @@ const TwoHundredHourTTPage = () => {
 
       {/* Application Form */}
       <ApplicationForm
-        id="application"
-        title="Apply Now"
-        subtitle="Begin your journey to becoming a certified yoga teacher"
+        
       />
     </div>
   );
