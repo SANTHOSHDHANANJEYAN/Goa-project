@@ -22,7 +22,6 @@ export default function ContactForm() {
           width="100%"
           height="450"
           style={{ border: '0' }}
-          allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           className="rounded-lg"
