@@ -7,34 +7,59 @@ import { motion } from 'framer-motion';
 
 const teachers = [
   {
-    name: 'Faaria',
-    handle: '@faa_b',
-    image: '/teachers/teacher1.jpg',
+    name: 'Abin Ji',
+    handle: '@Philosophy',
+    image: '/Abin Ji.jpg',
   },
   {
-    name: 'Alice',
-    handle: '@alistique_',
-    image: '/teachers/teacher2.jpg',
+    name: 'Arshdeep Singh Behal',
+    handle: '@Teaching_Methodology',
+    image: 'Arshdeep Singh Behal.jpg',
   },
   {
-    name: 'Simran',
-    handle: '@simran_nazare',
-    image: '/teachers/teacher3.jpg',
+    name: 'Bipin Singh Pharswan',
+    handle: '@Ashtanga_Vinyasa_Yoga',
+    image: '/Bipin Singh Pharswan.jpg',
   },
   {
-    name: 'Javier',
-    handle: '@fjavierleon',
-    image: '/teachers/teacher4.jpg',
+    name: ' Gangesha Chaitanya',
+    handle: '@Yoga_Philosophy',
+    image: '/gangesh sir.jpg',
   },
   {
-    name: 'Meera',
-    handle: '@meera_d',
-    image: '/teachers/teacher5.jpg',
+    name: 'Himanshu Ji',
+    handle: '@meera_Hatha_&_Ashtangad',
+    image: '/Himanshu Ji.jpg',
   },
   {
-    name: 'Ravi',
-    handle: '@ravi_yogi',
-    image: '/teachers/teacher6.jpg',
+    name: 'Pooja Ji',
+    handle: '@Medititation_&_Pranayama',
+    image: '/pooja ji.jpg',
+  },
+  {
+    name: 'Purnima hi',
+    handle: '@ Spiritual_Guidance',
+    image: '/Purnima hi.jpg',
+  },
+  {
+    name: 'Rahul Negi',
+    handle: '@Hatha_Yoga_&_Ashtanga',
+    image: '/Rahul Negi.jpg',
+  },
+  {
+    name: 'Rishi Raj',
+    handle: '@Philosophy_&_Meditation',
+    image: '/Rishi Raj.jpg',
+  },
+   {
+    name: 'Sukra Chaitanya',
+    handle: '@Mantra_Meditation_Pranayama',
+    image: '/Sukra Chaitanya.jpg',
+  },
+   {
+    name: 'Yogesh Ji',
+    handle: '@Philosophy_Meditation_&_Pranayama',
+    image: '/Yogesh Ji.jpg',
   },
 ];
 
@@ -47,7 +72,7 @@ export default function TeacherSlider() {
     stopAutoSlide();
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % teachers.length);
-    }, 4000);
+    }, 2000);
   };
 
   const stopAutoSlide = () => {
