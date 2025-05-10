@@ -18,31 +18,31 @@ const TwoHundredHourTTPage = () => {
     <div className="mt-24 px-6 md:px-12 max-w-6xl mx-auto text-gray-800">
       {/* Header Info */}
       <div className="text-center mb-6">
-        <h2 className="text-sm md:text-base font-semibold text-indigo-600 uppercase tracking-wide">
+        <h2 className="text-sm md:text-base font-semibold text-blue-900 uppercase tracking-wide">
          50-hrs Accredited Yoga Teacher Training
         </h2>
-        <p className="text-lg text-gray-600">In Goa</p>
+        <p className="text-lg text-blue-900">In Goa</p>
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-blue-900">
         Become a Certified Yoga Teacher by Yoga Alliance
       </h1>
-      <p className="text-lg text-center text-gray-700 mb-6">
+      <p className="text-lg text-center text-blue-900 mb-6">
         Join an exciting and life-changing 50-hours journey in Goa
       </p>
 
       {/* Price and CTA */}
       <div className="flex justify-center items-center text-center mb-2">
-        <span className="text-xl line-through text-gray-400 mr-4">USD 2350</span>
+        <span className="text-xl line-through text-blue-900 mr-4">USD 2350</span>
         <span className="text-4xl font-bold text-green-600">USD 2000</span>
       </div>
-      <p className="text-center text-sm text-gray-600 mb-6">
+      <p className="text-center text-sm text-blue-900 mb-6">
         *Early bird offer – Save 15%
       </p>
 
       <div className="text-center mb-6">
         <a href="#application">
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+          <button className="bg-blue-900 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
             Book Your Spot
           </button>
         </a>
@@ -69,7 +69,7 @@ const TwoHundredHourTTPage = () => {
 
       {/* Certificate Info */}
       <section className="text-center mb-20">
-  <h3 className="text-2xl font-semibold text-indigo-800 mb-6">
+  <h3 className="text-2xl font-semibold text-blue-900 mb-6">
     After Completing the Course...
   </h3>
   <div className="flex justify-center gap-10 mb-4">
@@ -91,7 +91,7 @@ const TwoHundredHourTTPage = () => {
       </div>
     ))}
   </div>
-  <p className="text-sm text-gray-600">
+  <p className="text-sm text-blue-900">
     You’ll receive a Yoga Alliance certificate —<br />
     internationally recognized and accepted.
   </p>
@@ -128,8 +128,8 @@ const TwoHundredHourTTPage = () => {
 
       {/* Instructor Info */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-6">Meet Your Instructors</h2>
-        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-6">
+        <h2 className="text-3xl font-bold text-center mb-6 text-blue-900">Meet Your Instructors</h2>
+        <p className="text-center text-blue-900 max-w-3xl mx-auto mb-6 ">
           Our experienced team brings decades of collective practice from multiple yoga disciplines.
           They’re dedicated to helping you grow — physically, mentally, and spiritually — in a supportive, inclusive environment.
         </p>
@@ -145,7 +145,7 @@ const TwoHundredHourTTPage = () => {
 
       {/* Training Schedule */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Training Schedule</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Training Schedule</h2>
         <div className="bg-indigo-50 p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
           <p className="mb-4 font-medium text-lg">Intensive Format (50-hours)</p>
           <p className="mb-1">🗓 May 26 – June 16, 2025</p>

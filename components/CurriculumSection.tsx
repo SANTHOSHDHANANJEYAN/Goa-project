@@ -71,7 +71,7 @@ const CurriculumSection: React.FC = () => {
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-indigo-500 to-purple-500 text-transparent bg-clip-text"
+        className="relative z-10 text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-900 to-blue-900 text-transparent bg-clip-text"
       >
         Curriculum Overview
       </motion.h2>
