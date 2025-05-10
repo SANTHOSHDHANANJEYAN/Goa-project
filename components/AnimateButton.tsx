@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
     <section
       className="relative w-full bg-fixed bg-cover bg-center text-white py-16 px-4 md:px-8"
       style={{
-        backgroundImage: "url('/backgdf.jpg')",
+        backgroundImage: "url('/54.jpg')",
       }}
     >
       {/* Overlay for readability */}

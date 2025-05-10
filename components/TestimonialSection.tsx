@@ -2,13 +2,13 @@ import React from 'react';
 
 const TestimonialSection: React.FC = () => {
   return (
-    <section className="relative text-center py-20 bg-white">
-      <h3 className="text-sm text-primary uppercase tracking-widest mb-2">
-        Testimonials
-      </h3>
+    <section className="relative text-center py-20 bg-transparent pt-8">
       <h2 className="text-2xl md:text-4xl font-semibold mb-10 text-blue-900">
-        View the self-transformation<br />stories of our students
+        Testimonials
       </h2>
+      <h3 className="text-2xl md:text-4xl font-semibold mb-10 text-blue-900">
+        View the self-transformation<br />stories of our students
+      </h3>
 
       <div className="flex justify-center">
         <div className="w-full max-w-4xl aspect-video rounded-2xl shadow-xl overflow-hidden border border-gray-200">

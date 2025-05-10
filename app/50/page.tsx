@@ -28,7 +28,7 @@ const TwoHundredHourTTPage = () => {
         Become a Certified Yoga Teacher by Yoga Alliance
       </h1>
       <p className="text-lg text-center text-gray-700 mb-6">
-        Join an exciting and life-changing 21-day journey in Goa
+        Join an exciting and life-changing 50-hours journey in Goa
       </p>
 
       {/* Price and CTA */}
@@ -147,7 +147,7 @@ const TwoHundredHourTTPage = () => {
       <section className="mb-20">
         <h2 className="text-3xl font-bold text-center mb-8">Training Schedule</h2>
         <div className="bg-indigo-50 p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
-          <p className="mb-4 font-medium text-lg">Intensive Format (21 Days)</p>
+          <p className="mb-4 font-medium text-lg">Intensive Format (50-hours)</p>
           <p className="mb-1">🗓 May 26 – June 16, 2025</p>
           <p className="mb-1">📍 Location: Goa</p>
           <p className="mb-1">🕗 Monday – Saturday: 8 AM to 6 PM</p>
@@ -159,7 +159,7 @@ const TwoHundredHourTTPage = () => {
       <section
   className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
   style={{
-    backgroundImage: "url('/3.jpg')",
+    backgroundImage: "url('/56.jpg')",
   }}
 >
 
@@ -223,50 +223,46 @@ const TwoHundredHourTTPage = () => {
         title="Frequently Asked Questions"
         faqs={[
           {
-            question: "Do I need to be an advanced yoga practitioner?",
+            question: "1. Where is your yoga teacher training course located?",
             answer:
-              "No, our training welcomes dedicated students at all levels. A minimum of 6 months of consistent practice is recommended.",
+              "Our course is located in Goa, the Pearl of the Orient, offering a serene environment amidst its beautiful coastal landscapes.",
           },
           {
-            question: "Is this training Yoga Alliance certified?",
+            question: "2. What style of yoga do you teach in the training course?",
             answer:
-              "Yes, our program is fully accredited by Yoga Alliance, allowing graduates to register as RYT-200 teachers.",
+              "We specialize in Hatha Vinyasa yoga, blending traditional Hatha principles with dynamic Vinyasa flow.",
           },
           {
-            question: "What is your refund policy?",
+            question: "3. What is the duration of the training program?",
             answer:
-              "Deposits are non-refundable. Full refunds minus the deposit are available up to 30 days before training. After that, credits may be offered.",
+              "The program typically spans 12 days for the 100-hr course.",
           },
           {
-            question: "Do you offer scholarships?",
+            question: "4. What are the prerequisites for enrolling in the program?",
             answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+              "Participants are encouraged to have a basic understanding and regular practice of yoga before joining.",
           },
           {
-            question: "Do you offer scholarships?",
+            question: "5. What does a typical day look like during the training?",
             answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+              "Each day includes yoga practice, meditation, theory classes, workshops, and dedicated time for self-study.",
           },
           {
-            question: "Do you offer scholarships?",
+            question: "6. Is the program conducted in English?",
             answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+              "Yes, the entire course is conducted in English to cater to international participants.",
           },
           {
-            question: "Do you offer scholarships?",
+            question: "7. Who are the instructors leading the training?",
             answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+              "Our instructors are professionals certified in Hatha Vinyasa yoga, ensuring top-notch teaching and guidance.",
           },
           {
-            question: "Do you offer scholarships?",
+            question: "8. What certification will I receive upon completing the course?",
             answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+              "Upon successful completion, you will receive a Yoga Alliance accredited certification, recognized globally for teaching yoga.",
           },
-          {
-            question: "Do you offer scholarships?",
-            answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
-          },
+          
         ]}
       />
 
