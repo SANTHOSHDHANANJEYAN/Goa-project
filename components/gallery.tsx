@@ -1,8 +1,7 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 
 const images: string[] = [
   "/gallery/1.WEBP",
@@ -21,108 +20,122 @@ const images: string[] = [
 ];
 
 export default function GalleryPage() {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let scrollAmount = 0;
+    const cardWidth = 320; // Adjust based on your card width + margin
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
+      scrollAmount += cardWidth;
+      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
+        scrollAmount = 0;
+        scrollContainer.scrollLeft = 0;
+      }
+
+      scrollContainer.scrollTo({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+    }, 1000);
+
     return () => clearInterval(interval);
   }, []);
 
-  const openSlider = (index: number) => setSelectedIndex(index);
-  const closeSlider = () => setSelectedIndex(null);
-  const showPrev = () =>
-    setSelectedIndex((prev) =>
-      prev !== null ? (prev - 1 + images.length) % images.length : null
-    );
-  const showNext = () =>
-    setSelectedIndex((prev) =>
-      prev !== null ? (prev + 1) % images.length : null
-    );
+  const openPreview = (src: string, index: number) => {
+    setSelectedImage(src);
+    setSelectedIndex(index);
+  };
+
+  const closePreview = () => {
+    setSelectedImage(null);
+  };
+
+  const showPrev = () => {
+    setSelectedIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setSelectedImage(images[(selectedIndex - 1 + images.length) % images.length]);
+  };
+
+  const showNext = () => {
+    setSelectedIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setSelectedImage(images[(selectedIndex + 1) % images.length]);
+  };
 
   return (
     <div className="mb-20 bg-gradient-to-b from-white to-blue-50 px-4 overflow-hidden">
-      <motion.h1
-        className="text-6xl font-extrabold text-center mb-16 text-blue-900 uppercase tracking-wider"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
+      <h1 className="text-6xl font-extrabold text-center mb-16 text-blue-900 uppercase tracking-wider">
         Gallery
-      </motion.h1>
+      </h1>
 
-      {/* Larger Autoplay Carousel */}
-     <div className="relative w-full max-w-6xl h-[500px] mx-auto overflow-hidden rounded-3xl shadow-2xl">
-  <AnimatePresence>
-    <motion.div
-      key={currentIndex}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.8 }}
-      className="flex justify-center items-center w-full h-full"
-      onClick={() => openSlider(currentIndex)}
-    >
-      <Image
-        src={images[currentIndex]}
-        alt={`Gallery image ${currentIndex + 1}`}
-        width={1200}
-        height={800}
-        className="rounded-3xl cursor-pointer object-contain transition-transform duration-500 hover:scale-105"
-      />
-    </motion.div>
-  </AnimatePresence>
-</div>
-
-
-      {/* Fullscreen Modal */}
-      <AnimatePresence>
-        {selectedIndex !== null && (
-          <motion.div
-            className="fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-50"
-            onClick={closeSlider}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+      {/* Horizontal Scroll Cards */}
+      <div
+        ref={scrollRef}
+        className="flex overflow-hidden whitespace-nowrap space-x-4 scroll-smooth"
+      >
+        {/* Duplicate images for infinite scroll effect */}
+        {[...images, ...images].map((src, i) => (
+          <div
+            key={i}
+            className="relative w-[300px] h-[400px] flex-shrink-0 rounded-2xl shadow-lg overflow-hidden"
+            onClick={() => openPreview(src, i)} // Open preview on click
           >
-            <motion.div
-              className="relative w-full max-w-[90%] h-[90%] md:h-[85%]"
-              onClick={(e) => e.stopPropagation()}
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3 }}
+            <Image
+              src={src}
+              alt={`Gallery image ${i + 1}`}
+              fill
+              className="object-cover object-top rounded-2xl cursor-pointer"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Image Preview Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closePreview}
+        >
+          <div
+            className="relative max-w-[90%] md:max-w-3xl bg-white p-4 rounded-3xl"
+            onClick={(e) => e.stopPropagation()} // Prevent modal close when clicking inside
+          >
+            {/* Image */}
+            <Image
+              src={selectedImage}
+              alt="Selected Image"
+              width={800}
+              height={600}
+              className="rounded-3xl object-contain"
+            />
+
+            {/* Close Button */}
+            <button
+              onClick={closePreview}
+              className="absolute top-2 right-2 text-white text-3xl font-bold hover:text-red-400"
             >
-              <Image
-                src={images[selectedIndex]}
-                alt={`Full view of image ${selectedIndex + 1}`}
-                fill
-                className="rounded-lg object-contain shadow-2xl"
-              />
-              <button
-                onClick={closeSlider}
-                className="absolute top-6 right-6 text-white text-4xl font-bold hover:text-red-400"
-              >
-                &times;
-              </button>
-              <button
-                onClick={showPrev}
-                className="absolute top-1/2 left-6 transform -translate-y-1/2 text-white text-5xl hover:text-blue-400"
-              >
-                &#10094;
-              </button>
-              <button
-                onClick={showNext}
-                className="absolute top-1/2 right-6 transform -translate-y-1/2 text-white text-5xl hover:text-blue-400"
-              >
-                &#10095;
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              &times;
+            </button>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={showPrev}
+              className="absolute left-6 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-blue-400"
+            >
+              &#10094;
+            </button>
+            <button
+              onClick={showNext}
+              className="absolute right-6 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-blue-400"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
