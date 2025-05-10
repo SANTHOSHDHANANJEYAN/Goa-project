@@ -36,10 +36,10 @@ const VideoCard = ({ title, embedId }: { title: string; embedId: string }) => (
 
 const CodeOfConduct = () => {
   return (
-    <section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 py-20 px-6 sm:px-8 lg:px-20">
+    <section className="bg-transparent py-20 px-6 sm:px-8 lg:px-20 mb-16">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">
             Code of Conduct
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

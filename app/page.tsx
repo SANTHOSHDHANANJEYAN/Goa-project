@@ -114,13 +114,14 @@ export default function Home() {
       <section className="py-8 bg-transparent text-primary-foreground">
         <div className="flex justify-center items-center px-4 sm:px-6 lg:px-8 relative">
           <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-1000 ease-in-out ring-4 ring-yellow-300/40">
-            <img
-              src="/goa 42.jpg"
-              alt="Scenic Goa"
-              className="object-cover w-full max-w-4xl h-auto animate-fade-in"
-            />
-          </div>
-          <div className="absolute -z-10 w-[120%] h-[120%] bg-yellow-100/10 rounded-full blur-3xl" />
+  <img
+    src="/image.png"
+    alt="Scenic Goa"
+    className="object-cover w-full h-[33rem] animate-fade-in" // reduced height
+  />
+</div>
+
+          <div className="absolute -z-10 w-[120%] h-[120%]  rounded-full blur-3xl" />
         </div>
       </section>
 
@@ -314,7 +315,7 @@ export default function Home() {
             href="https://r.yogaalliance.org/SchoolProfileReviews?sid=3584"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-yellow-400 text-white font-semibold rounded-full shadow-md hover:bg-yellow-500 transition"
+            className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-yellow-500 transition"
           >
             More Reviews
           </a>
