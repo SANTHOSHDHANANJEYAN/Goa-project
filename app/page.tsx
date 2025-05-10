@@ -186,7 +186,7 @@ export default function Home() {
           title: "Ultimate Guide to 200-Hour Yoga TTC in Goa",
           excerpt:
             "Goa, known for its stunning beaches, vibrant culture, and laid-back vibe, is also a haven for those looking to deepen their yoga journey.",
-          image: "/blog/blog1.jpg",
+          image: "/b2.jpg",
           date: "December 10, 2024",
           link: "/blogs/200-hour-guide",
         },
@@ -194,7 +194,7 @@ export default function Home() {
           title: "11 Reasons Why You Should Start Fasting",
           excerpt:
             "When we wake up, we step into a new chance to live healthy. Learn how fasting transforms your mind and body.",
-          image: "/blog/blog2.jpg",
+          image: "/b1.jpg",
           date: "December 10, 2024",
           link: "/blogs/fasting-benefits",
         },
@@ -202,7 +202,7 @@ export default function Home() {
           title: "Healing Through Sound: A Beginner’s Guide",
           excerpt:
             "Sound therapy uses vibrations to heal the mind and body. Discover how it can create harmony within.",
-          image: "/blog/blog3.jpg",
+          image: "/b3.jpg",
           date: "December 10, 2024",
           link: "/blogs/sound-healing-guide",
         },
