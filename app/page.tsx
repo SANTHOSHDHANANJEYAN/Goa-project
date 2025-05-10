@@ -8,6 +8,7 @@ import Appform from '@/components/Appform';
 import GalleryPage from '@/components/gallery';
 import TeacherSlider from '@/components/TeacherSlider';
 import CodeOfConduct from '@/components/CodeOfConduct';
+import ServicesPreviews from '@/components/ServicesPreviews';
 
 export default function Home() {
   return (
@@ -94,7 +95,7 @@ export default function Home() {
         </div>
       </section>
 
-      <ServicesPreview />
+      <ServicesPreviews />
 
       <section className="py-10 bg-transparent relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-200/10 via-pink-200/10 to-yellow-100/10 z-0" />
@@ -151,7 +152,7 @@ export default function Home() {
       
 
 <section
-  className="relative h-[765px] overflow-hidden bg-fixed bg-cover bg-center text-white mt-16 "
+  className="relative h-[765px] overflow-hidden bg-fixed bg-cover bg-center text-white mt-16 mb-16"
   style={{ backgroundImage: "url('/bag1.jpg')" }}
 >
   {/* Dark overlay for text readability */}
@@ -170,7 +171,7 @@ export default function Home() {
   </div>
 </section>
 
-      <section className="py-20 bg-gradient-to-br from-white via-blue-50 to-white">
+      <section className="py-20 bg-transparent">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
       <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-4">From Our Blog</h2>

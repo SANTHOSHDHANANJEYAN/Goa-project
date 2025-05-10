@@ -1,0 +1,53 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import { Card } from '@/components/ui/card';
+
+const services = [
+  {
+    id: 'yoga',
+    image: '/r1.jpg',
+    link: '/services#yoga-classes'
+  },
+  {
+    id: 'meditation',
+    image: '/r2.jpg',
+    link: '/services#meditation'
+  },
+  {
+    id: 'sound-healing',
+    image: '/r3.jpg',
+    link: '/services#sound-healing'
+  },
+];
+
+export default function ServicesPreviews() {
+  return (
+    <section className="py-20 bg-transparent relative overflow-hidden">
+      <div className="absolute inset-0 opacity-20 rounded-[2rem]" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <Card
+              key={service.id}
+              className="overflow-hidden group hover:shadow-2xl transition-shadow duration-300 rounded-[2rem]"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <Link href={service.link}>
+                <div className="relative h-[24rem] overflow-hidden rounded-[2rem]">
+                  <Image
+                    src={service.image}
+                    alt="Service Image"
+                    fill
+                    className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+              </Link>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
