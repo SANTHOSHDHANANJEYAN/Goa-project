@@ -4,9 +4,9 @@ import React from "react";
 import Image from "next/image";
 import TestimonialCarousel from "@/components/testimonials-section";
 import FAQSection from "@/components/FAQSection";
-import ApplicationForm from "@/components/ApplicationForm";
-import ActivitiesSection from "@/components/ActivitiesSection";
-import RetreatSchedule from "@/components/RetreatSchedule";
+import ApplicationForm from "@/components/50hr/ApplicationForm";
+import ActivitiesSection from "@/components/50hr/ActivitiesSection";
+import RetreatSchedule from "@/components/50hr/RetreatSchedule";
 
 const SevenDayRetreatPage = () => {
   return (

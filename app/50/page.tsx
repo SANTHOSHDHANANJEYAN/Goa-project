@@ -4,41 +4,50 @@ import React from "react";
 import Image from "next/image";
 import TestimonialCarousel from "@/components/testimonials-section";
 import FAQSection from "@/components/FAQSection";
-import ApplicationForm from "@/components/ApplicationForm";
-import CurriculumSection from "@/components/CurriculumSection";
-import ActivitiesSection from "@/components/ActivitiesSection";
-import BatchScheduleTable from "@/components/BatchScheduleTable";
-import AnimateButton from "@/components/AnimateButton";
-import TestimonialSection from "@/components/TestimonialSection";
-import AboutTraining from "@/components/AboutTraining";
-import RetreatSchedule from "@/components/RetreatSchedule";
+import ApplicationForm from "@/components/50hr/ApplicationForm";
+import CurriculumSection from "@/components/50hr/CurriculumSection";
+import ActivitiesSection from "@/components/50hr/ActivitiesSection";
+import BatchScheduleTable from "@/components/50hr/BatchScheduleTable";
+import AnimateButton from "@/components/50hr/AnimateButton";
+import TestimonialSection from "@/components/50hr/TestimonialSection";
+import AboutTraining from "@/components/50hr/AboutTraining";
+import RetreatSchedule from "@/components/50hr/RetreatSchedule";
+import YogaHighlights from "@/components/50hr/training";
 
 const TwoHundredHourTTPage = () => {
   return (
     <div className="mt-24 px-6 md:px-12 max-w-6xl mx-auto text-gray-800">
       {/* Header Info */}
       <div className="text-center mb-6">
-        <h2 className="text-sm md:text-base font-semibold text-blue-900 uppercase tracking-wide">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-blue-900">
          50-hrs Accredited Yoga Teacher Training
         </h2>
         <p className="text-lg text-blue-900">In Goa</p>
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-blue-900">
-        Become a Certified Yoga Teacher by Yoga Alliance
-      </h1>
+     <h1 className="text-lg md:text-xl font-semibold text-blue-900 uppercase tracking-wide text-center">
+  Become a Certified Yoga Teacher by Yoga Alliance
+</h1>
+
       <p className="text-lg text-center text-blue-900 mb-6">
         Join an exciting and life-changing 50-hours journey in Goa
       </p>
 
-      {/* Price and CTA */}
-      <div className="flex justify-center items-center text-center mb-2">
-        <span className="text-xl line-through text-blue-900 mr-4">USD 2350</span>
-        <span className="text-4xl font-bold text-green-600">USD 2000</span>
-      </div>
-      <p className="text-center text-sm text-blue-900 mb-6">
-        *Early bird offer – Save 15%
-      </p>
+     <div className="flex justify-center items-end text-center gap-8 mb-4">
+  <div>
+    <span className="text-4xl font-bold text-green-600 block">USD 350</span>
+    <span className="text-sm text-gray-600">Private Room</span>
+  </div>
+  <div>
+    <span className="text-4xl font-bold text-green-600 block">USD 500</span>
+    <span className="text-sm text-gray-600">Shared Room</span>
+  </div>
+</div>
+   <div className="flex justify-center gap-6 mb-6">
+  <p className="text-sm text-blue-900">Duration-50 Hrs</p>
+  <p className="text-sm text-blue-900">Language-English</p>
+</div>
+
 
       <div className="text-center mb-6">
         <a href="#application">
@@ -49,7 +58,6 @@ const TwoHundredHourTTPage = () => {
       </div>
 
       <div className="text-center text-sm text-gray-700 mb-12">
-        <p className="mb-1">Only <strong>3 spots left</strong> for the next training:</p>
         <p className="font-semibold">May 26th – June 16th, 2025</p>
       </div>
 
@@ -68,34 +76,49 @@ const TwoHundredHourTTPage = () => {
 </div>
 
       {/* Certificate Info */}
-      <section className="text-center mb-20">
-  <h3 className="text-2xl font-semibold text-blue-900 mb-6">
-    After Completing the Course...
-  </h3>
-  <div className="flex justify-center gap-10 mb-4">
-    {[
-      { level: "200",  src: "/rys 200.png" },
-      { level: "300", src: "/rpysall.png" },
-      { level: "500",  src: "/300 rys.png" },
-    ].map(({ level, src }, i) => (
-      <div key={i} className="flex flex-col items-center">
-        <div className="relative w-16 h-16 mb-2">
+    <section className="text-center mb-20 relative">
+      <h3 className="text-2xl font-semibold text-blue-900 mb-6">
+        After Completing the Course...
+      </h3>
+
+      <div className="flex justify-center items-center gap-10 mb-4">
+        {/* Yellow area image (uploaded image) */}
+        <div className="relative w-28 h-28">
           <Image
-            src={src}
-            alt={`RYS ${level} Badge`}
+            src="/YAlogo-removebg-preview.png"
+            alt="Yoga Visual Icon"
             layout="fill"
             objectFit="contain"
           />
         </div>
-       
+
+        {/* Certification badges */}
+        <div className="flex gap-10">
+          {[
+            { level: "200", src: "/rys 200.png" },
+            { level: "RPYS", src: "/rpysall.png" },
+            { level: "300", src: "/300 rys.png" },
+          ].map(({ level, src }, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <div className="relative w-16 h-16 mb-2">
+                <Image
+                  src={src}
+                  alt={`RYS ${level} Badge`}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-  <p className="text-sm text-blue-900">
-    You’ll receive a Yoga Alliance certificate —<br />
-    internationally recognized and accepted.
-  </p>
-</section>
+
+      <p className="text-sm text-blue-900">
+        You’ll receive a Yoga Alliance certificate —<br />
+        internationally recognized and accepted.
+      </p>
+    </section>
+
 
 <AboutTraining/>
       {/* About Section */}
@@ -165,7 +188,7 @@ const TwoHundredHourTTPage = () => {
 
         <div className="bg-black bg-opacity-50 absolute inset-0"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">YOGSHALA</h2>
+          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">Rishikul Yogshala Goa</h2>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
           <p className="text-lg mb-10">Palm Paradise Resort amidst jungle paradise in Goa</p>
 
@@ -217,7 +240,7 @@ const TwoHundredHourTTPage = () => {
           },
         ]}
       />
-
+<YogaHighlights/>
       {/* FAQ */}
       <FAQSection
         title="Frequently Asked Questions"

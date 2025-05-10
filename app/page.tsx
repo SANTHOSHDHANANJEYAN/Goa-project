@@ -3,8 +3,11 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import ServicesPreview from '@/components/services-preview';
 import Youtube from '@/components/youtube';
-import ApplicationForm from '@/components/ApplicationForm';
+import ApplicationForm from '@/components/50hr/ApplicationForm';
 import Appform from '@/components/Appform';
+import GalleryPage from '@/components/gallery';
+import TeacherSlider from '@/components/TeacherSlider';
+import CodeOfConduct from '@/components/CodeOfConduct';
 
 export default function Home() {
   return (
@@ -31,7 +34,7 @@ export default function Home() {
           <h1 className="font-['Helvetica Neue',sans-serif] text-white text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 animate-fade-in glow-text floating">
             Flow, Relax, and Renew
             <br className="hidden md:inline" />
-            <span className="text-yellow-300">– Yoga in Goa Awaits You</span>
+            <span className="text-yellow-300">– Carnival Capital  Goa</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-white/90 mb-8 animate-fade-in animation-delay-300">
@@ -66,10 +69,9 @@ export default function Home() {
                 Become part of our family at one of the leading accredited schools in Goa!
               </p>
             </div>
-
             <div>
               <h3 className="text-xl md:text-2xl text-indigo-900 font-medium mb-6">
-                Since 2016, students from around the world have been joining our programs and earning their Yoga Alliance accredited certifications.
+                Since 2009, students from around the world have been joining our programs and earning their Yoga Alliance accredited certifications.
               </h3>
 
               <div className="flex justify-center md:justify-start items-center gap-6">
@@ -94,7 +96,7 @@ export default function Home() {
 
       <ServicesPreview />
 
-      <section className="py-20 bg-transparent relative overflow-hidden">
+      <section className="py-10 bg-transparent relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-200/10 via-pink-200/10 to-yellow-100/10 z-0" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -107,8 +109,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="py-20 bg-transparent text-primary-foreground">
+ <ServicesPreview />
+      <section className="py-8 bg-transparent text-primary-foreground">
         <div className="flex justify-center items-center px-4 sm:px-6 lg:px-8 relative">
           <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-1000 ease-in-out ring-4 ring-yellow-300/40">
             <img
@@ -121,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-transparent text-primary-foreground relative overflow-hidden">
+      <section className=" bg-transparent text-primary-foreground relative overflow-hidden mt-16">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/10 via-purple-100/10 to-yellow-100/10 z-0 pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
@@ -146,30 +148,166 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
 
-    <section className="relative h-[765px] overflow-hidden bg-fixed bg-cover bg-center text-white">
-  {/* Background Image */}
-  <img
-    src="/bag1.jpg" // replace with your uploaded path if different
-    alt="Yoga Retreat"
-    className="absolute top-0 left-0 w-full h-full object-cover z-0"
-  />
+<section
+  className="relative h-[765px] overflow-hidden bg-fixed bg-cover bg-center text-white mt-16 "
+  style={{ backgroundImage: "url('/bag1.jpg')" }}
+>
+  {/* Dark overlay for text readability */}
+  <div className="absolute inset-0 bg-black/30 z-0" />
 
-  {/* Text Overlay */}
-  <div className="absolute inset-0 flex items-center px-8 md:px-20 z-10 bg-black/20">
+  {/* Text content */}
+  <div className="absolute inset-0 flex items-center px-8 md:px-20 z-10">
     <div className="max-w-xl">
       <h2 className="text-2xl md:text-4xl font-semibold leading-snug mb-2">
-        Take the journey inward!
+        Take the Journey Inward
       </h2>
       <p className="text-lg md:text-xl leading-relaxed">
-        Connect with yoga traditions while immersing yourself in awe-inspiring natural lands
+        The traditional yoga journey begins with a simple, powerful step: turning your awareness inward. In a world filled with noise and distraction, this inner shift is a profound act of self-discovery. Yoga teaches that everything you seek — peace, clarity, strength, and joy — already exists within you. Through disciplined practice, self-inquiry, and silence, you learn to listen to your inner wisdom and live with greater intention.
       </p>
     </div>
   </div>
 </section>
 
+        <section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 ">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-3xl md:text-4xl mb-6">Blogs</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Meet our experienced and compassionate instructors dedicated to guiding you on your wellness journey
+              </p>
+            </div>
 
-      <Youtube />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Maya Wilson",
+                  role: "Founder & Lead Yoga Instructor",
+                  image: "https://images.pexels.com/photos/5386541/pexels-photo-5386541.jpeg",
+                  bio: "With over 20 years of practice and study across India and Nepal, Maya brings depth and authenticity to her teachings.",
+                },
+                {
+                  name: "David Chen",
+                  role: "Meditation & Mindfulness Guide",
+                  image: "https://images.pexels.com/photos/4608208/pexels-photo-4608208.jpeg",
+                  bio: "A former Buddhist monk, David specializes in mindfulness meditation and stress reduction techniques.",
+                },
+                {
+                  name: "Leila Patel",
+                  role: "Sound Healing Practitioner",
+                  image: "https://images.pexels.com/photos/5922764/pexels-photo-5922764.jpeg",
+                  bio: "Certified in sound therapy, Leila creates transformative experiences using singing bowls and other instruments.",
+                },
+              ].map((teacher, index) => (
+                <div key={teacher.name} className="bg-card rounded-lg overflow-hidden shadow-sm animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
+                  <div className="aspect-[3/4] relative">
+                    <Image
+                      src={teacher.image}
+                      alt={teacher.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-medium mb-1">{teacher.name}</h3>
+                    <p className="text-accent mb-3">{teacher.role}</p>
+                    <p className="text-muted-foreground">{teacher.bio}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Button asChild>
+                <Link href="/services">Explore Our Services</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+    <section className="md:bg-transparent relative overflow-hidden py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          Yoga Alliance Reviews
+        </h2>
+
+        {/* Review Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {[
+            {
+              name: "RAMKISHAN KUGATHAS",
+              role: "RYT 200 Graduate",
+              image: "/review1.jpg",
+              text: "I recently completed the Prenatal Yoga course at Rishikul Yogshala and it was a truly enriching experience. The teachers were kind, knowledgeable, and supportive throughout. I learned safe and effective yoga practices for pregnancy, along with breathing techniques and relaxation methods. The environment was peaceful and well-organized. I highly recommend Rishikul Yogshala for anyone seeking authentic and caring yoga education.",
+            },
+            {
+              name: "Liam D'Souza",
+              role: "RYT 200 Graduate",
+              image: "/review2.jpg",
+              text: "A truly immersive and transformational experience. I learned so much not just about yoga, but about myself. The setting in India made it even more meaningful. Highly recommend Rishikul Yogshala.",
+            },
+            {
+              name: "Emma Johansson",
+              role: "Yoga Teacher",
+              image: "/review3.jpg",
+              text: "I appreciated the depth of philosophy and the balance with physical practice. The community was welcoming and nurturing. I'm so grateful I chose this school for my yoga journey.",
+            },
+            {
+              name: "Carlos Martinez",
+              role: "Wellness Coach",
+              image: "/review4.jpg",
+              text: "Rishikul Yogshala exceeded my expectations. The teaching methods were clear and effective, and I left with a strong foundation in both teaching and personal practice.",
+            },
+          ].map((review, index) => (
+            <div
+              key={index}
+              className="bg-[bisque] p-6 rounded-lg shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src={review.image}
+                    alt={review.name}
+                    width={64}
+                    height={64}
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg text-gray-900">{review.name}</h3>
+                  <p className="text-sm text-gray-600">{review.role}</p>
+                </div>
+              </div>
+              <p className="text-gray-800 leading-relaxed italic">“{review.text}”</p>
+            </div>
+          ))}
+        </div>
+
+        {/* More Reviews Button */}
+        <div className="text-center mt-12">
+          <a
+            href="https://r.yogaalliance.org/SchoolProfileReviews?sid=3584"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-yellow-400 text-white font-semibold rounded-full shadow-md hover:bg-yellow-500 transition"
+          >
+            More Reviews
+          </a>
+        </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-10 w-36 h-36 bg-yellow-100 opacity-40 blur-3xl rounded-full z-0 animate-pulse"></div>
+        <div className="absolute bottom-0 right-10 w-48 h-48 bg-yellow-200 opacity-30 blur-3xl rounded-full z-0 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-yellow-200 opacity-30 z-0"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-yellow-200 opacity-30 z-0"></div>
+      </div>
+    </section>
+
+
+
+      <CodeOfConduct />
+      <GalleryPage/>
+      <TeacherSlider />
       <Appform/>
     </div>
   );

@@ -4,14 +4,22 @@ import React from "react";
 import Image from "next/image";
 import TestimonialCarousel from "@/components/testimonials-section";
 import FAQSection from "@/components/FAQSection";
-import ApplicationForm from "@/components/ApplicationForm";
-import CurriculumSection from "@/components/CurriculumSection";
-import ActivitiesSection from "@/components/ActivitiesSection";
-import BatchScheduleTable from "@/components/BatchScheduleTable";
-import AnimateButton from "@/components/AnimateButton";
-import TestimonialSection from "@/components/TestimonialSection";
-import AboutTraining from "@/components/AboutTraining";
-import RetreatSchedule from "@/components/RetreatSchedule";
+import ApplicationForm from "@/components/50hr/ApplicationForm";
+import CurriculumSection from "@/components/50hr/CurriculumSection";
+import ActivitiesSection from "@/components/50hr/ActivitiesSection";
+import BatchScheduleTable from "@/components/50hr/BatchScheduleTable";
+import AnimateButton from "@/components/50hr/AnimateButton";
+import TestimonialSection from "@/components/50hr/TestimonialSection";
+import AboutTraining from "@/components/50hr/AboutTraining";
+import RetreatSchedule from "@/components/50hr/RetreatSchedule";
+import AboutTraining300 from "@/components/300hr/AboutTraining300";
+import AnimateButton300 from "@/components/300hr/AnimateButton300";
+import CurriculumSection300 from "@/components/300hr/CurriculumSection300";
+import RetreatSchedule300 from "@/components/300hr/RetreatSchedule300";
+import ActivitiesSection300 from "@/components/300hr/ActivitiesSection300";
+import BatchScheduleTable300 from "@/components/300hr/BatchScheduleTable300";
+import TestimonialSection300 from "@/components/300hr/TestimonialSection300";
+import ApplicationForm300 from "@/components/300hr/ApplicationForm300";
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -97,9 +105,9 @@ const TwoHundredHourTTPage = () => {
   </p>
 </section>
 
-<AboutTraining/>
+<AboutTraining300/>
       {/* About Section */}
-  <AnimateButton/>
+  <AnimateButton300/>
 
   <section className="mt-20 mb-20">
   <h2 className="text-[22px] font-bold text-center mb-8 text-blue-900"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
@@ -124,7 +132,7 @@ const TwoHundredHourTTPage = () => {
 
 
       {/* Curriculum */}
-      <CurriculumSection/>
+      <CurriculumSection300/>
 
       {/* Instructor Info */}
       <section className="mb-20">
@@ -195,11 +203,11 @@ const TwoHundredHourTTPage = () => {
         </div>
       </section>
 
-      <RetreatSchedule/>
-      <ActivitiesSection/>
+      <RetreatSchedule300/>
+      <ActivitiesSection300/>
        {/* Course Details Section */}
-      <BatchScheduleTable/>
-<TestimonialSection/>
+      <BatchScheduleTable300/>
+<TestimonialSection300/>
       {/* Testimonials */}
       <TestimonialCarousel
         testimonials={[
@@ -271,7 +279,7 @@ const TwoHundredHourTTPage = () => {
       />
 
       {/* Application Form */}
-      <ApplicationForm
+      <ApplicationForm300
         
       />
     </div>
