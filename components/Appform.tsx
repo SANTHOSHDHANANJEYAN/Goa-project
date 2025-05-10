@@ -38,11 +38,11 @@ export default function ContactForm() {
           <p className="text-[#555] text-base">
             Our team is here to assist you. Simply fill out the form below, and we’ll get back to you as soon as possible!
           </p>
-          <div className="flex gap-5 mt-4">
-            <a href="#"><img src="/facebook.svg" alt="Facebook" className="w-6 hover:opacity-80" /></a>
-            <a href="#"><img src="/instagram.svg" alt="Instagram" className="w-6 hover:opacity-80" /></a>
+          {/* <div className="flex gap-5 mt-4">
+            <a href="#"><img src="/facebook logo.jpg" alt="Facebook" className="w-6 hover:opacity-80" /></a>
+            <a href="#"><img src="/youtubelogo" alt="Instagram" className="w-6 hover:opacity-80" /></a>
             <a href="#"><img src="/youtube.svg" alt="YouTube" className="w-6 hover:opacity-80" /></a>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Section - Form */}
