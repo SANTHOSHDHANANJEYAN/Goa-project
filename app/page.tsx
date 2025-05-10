@@ -170,61 +170,85 @@ export default function Home() {
   </div>
 </section>
 
-        <section>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 ">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-3xl md:text-4xl mb-6">Blogs</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Meet our experienced and compassionate instructors dedicated to guiding you on your wellness journey
-              </p>
-            </div>
+      <section className="py-20 bg-gradient-to-br from-white via-blue-50 to-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-4">From Our Blog</h2>
+      <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+        Insights, stories, and guidance from our community to inspire your yoga journey.
+      </p>
+    </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Maya Wilson",
-                  role: "Founder & Lead Yoga Instructor",
-                  image: "https://images.pexels.com/photos/5386541/pexels-photo-5386541.jpeg",
-                  bio: "With over 20 years of practice and study across India and Nepal, Maya brings depth and authenticity to her teachings.",
-                },
-                {
-                  name: "David Chen",
-                  role: "Meditation & Mindfulness Guide",
-                  image: "https://images.pexels.com/photos/4608208/pexels-photo-4608208.jpeg",
-                  bio: "A former Buddhist monk, David specializes in mindfulness meditation and stress reduction techniques.",
-                },
-                {
-                  name: "Leila Patel",
-                  role: "Sound Healing Practitioner",
-                  image: "https://images.pexels.com/photos/5922764/pexels-photo-5922764.jpeg",
-                  bio: "Certified in sound therapy, Leila creates transformative experiences using singing bowls and other instruments.",
-                },
-              ].map((teacher, index) => (
-                <div key={teacher.name} className="bg-card rounded-lg overflow-hidden shadow-sm animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
-                  <div className="aspect-[3/4] relative">
-                    <Image
-                      src={teacher.image}
-                      alt={teacher.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-serif text-xl font-medium mb-1">{teacher.name}</h3>
-                    <p className="text-accent mb-3">{teacher.role}</p>
-                    <p className="text-muted-foreground">{teacher.bio}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Button asChild>
-                <Link href="/services">Explore Our Services</Link>
-              </Button>
-            </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {[
+        {
+          title: "Ultimate Guide to 200-Hour Yoga TTC in Goa",
+          excerpt:
+            "Goa, known for its stunning beaches, vibrant culture, and laid-back vibe, is also a haven for those looking to deepen their yoga journey.",
+          image: "/blog/blog1.jpg",
+          date: "December 10, 2024",
+          link: "/blogs/200-hour-guide",
+        },
+        {
+          title: "11 Reasons Why You Should Start Fasting",
+          excerpt:
+            "When we wake up, we step into a new chance to live healthy. Learn how fasting transforms your mind and body.",
+          image: "/blog/blog2.jpg",
+          date: "December 10, 2024",
+          link: "/blogs/fasting-benefits",
+        },
+        {
+          title: "Healing Through Sound: A Beginner’s Guide",
+          excerpt:
+            "Sound therapy uses vibrations to heal the mind and body. Discover how it can create harmony within.",
+          image: "/blog/blog3.jpg",
+          date: "December 10, 2024",
+          link: "/blogs/sound-healing-guide",
+        },
+      ].map((post, index) => (
+        <div
+          key={post.title}
+          className="rounded-2xl overflow-hidden shadow-lg bg-white group transition-transform transform hover:-translate-y-1 hover:shadow-2xl"
+        >
+          <div className="relative h-56 overflow-hidden">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(min-width: 1024px) 33vw, 100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
           </div>
-        </section>
+          <div className="p-6">
+            <span className="text-sm text-gray-400">{post.date}</span>
+            <h3 className="mt-2 text-2xl font-semibold text-gray-800 group-hover:text-blue-700 transition">
+              {post.title}
+            </h3>
+            <p className="text-gray-600 mt-2">{post.excerpt}</p>
+            <Link
+              href={post.link}
+              className="inline-block mt-4 text-blue-600 hover:underline font-medium"
+            >
+              Read More »
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div className="text-center mt-16">
+      <Link
+        href="/blogs"
+        className="px-6 py-3 bg-blue-600 text-white rounded-full text-lg hover:bg-blue-700 transition"
+      >
+        View All Blog Posts
+      </Link>
+    </div>
+  </div>
+</section>
+
+
     <section className="md:bg-transparent relative overflow-hidden py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">

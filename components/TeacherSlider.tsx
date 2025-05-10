@@ -80,7 +80,7 @@ export default function TeacherSlider() {
       {/* Title */}
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-blue-900 mb-4">
-          Yoga Community Of Vinyasa Yogashala
+          Our Teacher
         </h2>
         <div className="flex justify-center items-center">
           <span className="w-10 h-px bg-blue-700 mx-2" />
