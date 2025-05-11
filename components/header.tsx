@@ -46,6 +46,7 @@ export default function Header() {
   const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null);
+  const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
 
@@ -53,6 +54,10 @@ export default function Header() {
 
   const toggleDropdown = (name: string) => {
     setExpandedDropdown((prev) => (prev === name ? null : name));
+  };
+
+  const toggleDesktopDropdown = (name: string) => {
+    setDesktopDropdown((prev) => (prev === name ? null : name));
   };
 
   const renderDrawerNav = () => {
@@ -114,69 +119,86 @@ export default function Header() {
   };
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 backdrop-blur-md shadow-sm py-3 transition-colors"
-      style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 backdrop-blur-md shadow-sm py-3 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
           <div className="flex items-center gap-6">
             <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
               <Menu size={24} />
             </Button>
-      <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-blue-900">
-  {/* PROGRAMS Dropdown */}
-  <div className="relative group">
-    <button className="flex items-center gap-1 hover:text-purple-600">
-      PROGRAMS
-      <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
-    </button>
-    <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-purple-600 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200 z-50">
-      <ul className="py-2">
-        <li><Link href="/50" className="block px-4 py-2 text-sm hover:bg-gray-100">50 Hr Multi-Style-Yoga TTC</Link></li>
-        <li><Link href="/100" className="block px-4 py-2 text-sm hover:bg-gray-100">100 Hr Multi-Style-Yoga TTC</Link></li>
-        <li><Link href="/200" className="block px-4 py-2 text-sm hover:bg-gray-100">200 Hr Multi-Style-Yoga TTC</Link></li>
-        <li><Link href="/300" className="block px-4 py-2 text-sm hover:bg-gray-100">300 Hr Multi-Style-Yoga TTC</Link></li>
-        <li><Link href="/services" className="block px-4 py-2 text-sm hover:bg-gray-100">21 Days Yoga Immersion</Link></li>
-      </ul>
-    </div>
-  </div>
 
-  {/* RETREAT Dropdown */}
-  <div className="relative group">
-    <button className="flex items-center gap-1 hover:text-purple-600">
-      RETREAT
-      <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
-    </button>
-    <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-purple-600 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200 z-50">
-      <ul className="py-2">
-        <li><Link href="/retreats" className="block px-4 py-2 text-sm hover:bg-gray-100">7 Days Holiday Retreat</Link></li>
-        <li><Link href="/schedule/bali" className="block px-4 py-2 text-sm hover:bg-gray-100">14 Days Wellness Retreat</Link></li>
-        <li><Link href="/schedule/thailand" className="block px-4 py-2 text-sm hover:bg-gray-100">21 Days Detox Retreat</Link></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-blue-900">
+              {/* PROGRAMS */}
+              <div className="relative">
+                <button
+                  onClick={() => toggleDesktopDropdown("Program")}
+                  className="flex items-center gap-1 hover:text-purple-600"
+                >
+                  PROGRAMS
+                  <ChevronDown size={16} className={cn("transition-transform", desktopDropdown === "Program" && "rotate-180")} />
+                </button>
+                {desktopDropdown === "Program" && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-purple-600 rounded-md shadow-lg z-50">
+                    <ul className="py-2">
+                      {leftNavigation[0].dropdown.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            onClick={() => setDesktopDropdown(null)}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
 
-
+              {/* RETREAT */}
+              <div className="relative">
+                <button
+                  onClick={() => toggleDesktopDropdown("Retreat")}
+                  className="flex items-center gap-1 hover:text-purple-600"
+                >
+                  RETREAT
+                  <ChevronDown size={16} className={cn("transition-transform", desktopDropdown === "Retreat" && "rotate-180")} />
+                </button>
+                {desktopDropdown === "Retreat" && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-purple-600 rounded-md shadow-lg z-50">
+                    <ul className="py-2">
+                      {leftNavigation[1].dropdown.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            onClick={() => setDesktopDropdown(null)}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </nav>
           </div>
 
+          {/* Logo Center */}
           <div className="flex justify-center">
             <Link href="/" className="flex-shrink-0">
               <Image src="/YA2.png" alt="Rishikul" width={120} height={60} className="object-contain" />
             </Link>
           </div>
 
+          {/* Right Side */}
           <div className="flex justify-end items-center gap-4">
             <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-blue-900">
               <Link href="/" className="flex-shrink-0">
-                <Image
-                  src="/YAlogo-removebg-preview.png"
-                  alt="Yoga Alliance"
-                  width={60}
-                  height={100}
-                  className="object-contain"
-                />
+                <Image src="/YAlogo-removebg-preview.png" alt="Yoga Alliance" width={60} height={100} className="object-contain" />
               </Link>
             </div>
             {mounted && (
@@ -202,7 +224,6 @@ export default function Header() {
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
           onClick={(e) => e.stopPropagation()}
-          style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
         >
           <div className="p-4 h-full flex flex-col">
             <div className="flex justify-between items-center mb-6 ml-12">
@@ -217,13 +238,7 @@ export default function Header() {
 
             <div className="mt-auto mb-8 pt-4">
               <div className="relative w-full h-[100px] rounded-lg overflow-hidden">
-                <Image
-                  src="/yg_logo-removebg-preview.png"
-                  alt="Yoga image"
-                  width={120}
-                  height={50}
-                  className="object-cover ml-16"
-                />
+                <Image src="/yg_logo-removebg-preview.png" alt="Yoga image" width={120} height={50} className="object-cover ml-16" />
               </div>
             </div>
           </div>

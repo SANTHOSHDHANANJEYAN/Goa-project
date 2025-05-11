@@ -246,7 +246,7 @@ const TwoHundredHourTTPage = () => {
         title="Frequently Asked Questions"
         faqs={[
           {
-            question: "1. Where is your yoga teacher training course located?",
+            question: "Introduction to Yoga and Teacher Training",
             answer:
               "Our course is located in Goa, the Pearl of the Orient, offering a serene environment amidst its beautiful coastal landscapes.",
           },

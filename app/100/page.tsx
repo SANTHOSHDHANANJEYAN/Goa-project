@@ -237,49 +237,44 @@ const TwoHundredHourTTPage = () => {
         title="Frequently Asked Questions"
         faqs={[
           {
-            question: "Do I need to be an advanced yoga practitioner?",
+            question: "Where is your yoga teacher training course located?",
             answer:
-              "No, our training welcomes dedicated students at all levels. A minimum of 6 months of consistent practice is recommended.",
+              "Our course is located in Goa, the Pearl of the Orient, offering a serene environment amidst its beautiful coastal landscapes.",
           },
           {
-            question: "Is this training Yoga Alliance certified?",
+            question: "What style of yoga do you teach in the training course?",
             answer:
-              "Yes, our program is fully accredited by Yoga Alliance, allowing graduates to register as RYT-200 teachers.",
+              "We specialize in Hatha Vinyasa yoga, blending traditional Hatha principles with dynamic Vinyasa flow.",
           },
           {
-            question: "What is your refund policy?",
+            question: " What is the duration of the training program?",
             answer:
-              "Deposits are non-refundable. Full refunds minus the deposit are available up to 30 days before training. After that, credits may be offered.",
+              "The program typically spans 12 days for the 100-hr course.",
           },
           {
-            question: "Do you offer scholarships?",
+            question: "What are the prerequisites for enrolling in the program?",
             answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+              "Participants are encouraged to have a basic understanding and regular practice of yoga before joining.",
           },
           {
-            question: "Do you offer scholarships?",
+            question: "What does a typical day look like during the training?",
             answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+              "Each day includes yoga practice, meditation, theory classes, workshops, and dedicated time for self-study.",
           },
           {
-            question: "Do you offer scholarships?",
+            question: "Is the program conducted in English?",
             answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+              "Yes, the entire course is conducted in English to cater to international participants.",
           },
           {
-            question: "Do you offer scholarships?",
+            question: "Who are the instructors leading the training?",
             answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+              "Our instructors are professionals certified in Hatha Vinyasa yoga, ensuring top-notch teaching and guidance.",
           },
           {
-            question: "Do you offer scholarships?",
+            question: "What certification will I receive upon completing the course?",
             answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
-          },
-          {
-            question: "Do you offer scholarships?",
-            answer:
-              "Yes, we offer a limited number of diversity and financial need scholarships for each training. Please inquire for details.",
+              "Upon successful completion, you will receive a Yoga Alliance accredited certification, recognized globally for teaching yoga.",
           },
         ]}
       />
