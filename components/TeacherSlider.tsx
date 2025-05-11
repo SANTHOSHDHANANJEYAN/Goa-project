@@ -104,7 +104,7 @@ export default function TeacherSlider() {
     >
       {/* Title */}
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-blue-900 mb-4">
+        <h2 className="text-4xl font-bold text-[#150e70] mb-4">
           Our Teacher
         </h2>
         <div className="flex justify-center items-center">

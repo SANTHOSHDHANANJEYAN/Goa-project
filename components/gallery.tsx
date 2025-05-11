@@ -67,7 +67,7 @@ export default function GalleryPage() {
 
   return (
     <div className=" bg-gradient-to-b from-white to-blue-50 px-4 overflow-hidden">
-      <h1 className="text-6xl font-extrabold text-center mb-16 text-blue-900 uppercase tracking-wider">
+      <h1 className="text-4xl font-extrabold text-center mb-16 text-[#150e70] uppercase tracking-wider">
         Gallery
       </h1>
 

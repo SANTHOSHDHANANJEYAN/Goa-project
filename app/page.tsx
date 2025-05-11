@@ -63,15 +63,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-center md:text-left">
             <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#150e70] mb-4">
                 Join a Life-Changing Community of Over 34,000 Students
               </h2>
-              <p className="text-xl md:text-2xl text-indigo-900 font-medium">
+              <p className="text-xl md:text-2xl text-[#150e70] font-medium">
                 Become part of our family at one of the leading accredited schools in Goa!
               </p>
             </div>
             <div>
-              <h3 className="text-xl md:text-2xl text-indigo-900 font-medium mb-6">
+              <h3 className="text-xl md:text-2xl text-[#150e70] font-medium mb-6">
                 Since 2009, students from around the world have been joining our programs and earning their Yoga Alliance accredited certifications.
               </h3>
 
@@ -101,7 +101,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-200/10 via-pink-200/10 to-yellow-100/10 z-0" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <p className="font-['Helvetica Neue',sans-serif] text-2xl md:text-3xl lg:text-4xl italic mb-8 text-blue-500 animate-fade-in transition duration-1000 ease-in-out transform-gpu hover:scale-105">
+          <p className="font-['Helvetica Neue',sans-serif] text-2xl md:text-3xl lg:text-4xl italic mb-8 text-[#150e70] animate-fade-in transition duration-1000 ease-in-out transform-gpu hover:scale-105">
             “Freedom, love, care, and support are the main philosophies of the community.”
           </p>
 
@@ -129,22 +129,22 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/10 via-purple-100/10 to-yellow-100/10 z-0 pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
-          <h1 className="font-['Helvetica Neue',sans-serif] text-3xl sm:text-4xl font-bold tracking-tight text-blue-500 mb-4 animate-slide-up">
+          <h1 className="font-['Helvetica Neue',sans-serif] text-3xl sm:text-4xl font-bold tracking-tight text-[#150e70] mb-4 animate-slide-up">
             Rishikul Yogshala Goa – Your transformation starts here.
           </h1>
 
-          <p className="text-lg sm:text-xl text-blue-500 mb-6 animate-slide-up animation-delay-200">
+          <p className="text-lg sm:text-xl text-[#150e70] mb-6 animate-slide-up animation-delay-200">
             A place to learn, love, and find your true path
           </p>
 
-          <p className="text-md sm:text-lg text-gray-700 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto animate-slide-up animation-delay-400">
+          <p className="text-md sm:text-lg text-gray-900 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto animate-slide-up animation-delay-400">
             We don’t impose opinions or concepts — we expand opportunities for growth.
             People from all over the world are undergoing transformation with us.
             Some are just starting their journey, while others are seasoned mentors.
           </p>
 
           <div className="mt-10 animate-fade-in animation-delay-600">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-300 font-['Helvetica Neue',sans-serif]">
+            <button className="bg-[#150e70] hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-300 font-['Helvetica Neue',sans-serif]">
               YOUR STORIES
             </button>
           </div>
@@ -175,8 +175,8 @@ export default function Home() {
       <section className="py-20 bg-transparent">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
-      <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-4">From Our Blog</h2>
-      <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+      <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#150e70] mb-4">From Our Blog</h2>
+      <p className="text-lg text-[#150e70] max-w-2xl mx-auto">
         Insights, stories, and guidance from our community to inspire your yoga journey.
       </p>
     </div>
@@ -230,7 +230,7 @@ export default function Home() {
             <p className="text-gray-600 mt-2">{post.excerpt}</p>
             <Link
               href={post.link}
-              className="inline-block mt-4 text-blue-600 hover:underline font-medium"
+              className="inline-block mt-4 text-[#150e70] hover:underline font-medium"
             >
               Read More »
             </Link>
@@ -242,7 +242,7 @@ export default function Home() {
     <div className="text-center mt-16">
       <Link
         href="/blogs"
-        className="px-6 py-3 bg-blue-600 text-white rounded-full text-lg hover:bg-blue-700 transition"
+        className="px-6 py-3 bg-[#150e70] text-white rounded-full text-lg hover:bg-blue-700 transition"
       >
         View All Blog Posts
       </Link>
@@ -253,7 +253,7 @@ export default function Home() {
 
     <section className="md:bg-transparent relative overflow-hidden py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#150e70] mb-12 text-center">
           Yoga Alliance Reviews
         </h2>
 
@@ -315,7 +315,7 @@ export default function Home() {
             href="https://r.yogaalliance.org/SchoolProfileReviews?sid=3584"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-yellow-500 transition"
+            className="inline-block px-6 py-3 bg-[#150e70] text-white font-semibold rounded-full shadow-md hover:bg-yellow-500 transition"
           >
             More Reviews
           </a>

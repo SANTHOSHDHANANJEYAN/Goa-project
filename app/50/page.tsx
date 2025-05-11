@@ -130,15 +130,15 @@ const TwoHundredHourTTPage = () => {
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
   {/* Card 1 */}
   <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/1.jpg" alt="Image 1" className="w-full h-full object-cover" />
+    <img src="/11 .jpg" alt="Image 1" className="w-full h-full object-cover" />
   </div>
   {/* Card 2 */}
   <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/2.jpg" alt="Image 2" className="w-full h-full object-cover" />
+    <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
   </div>
   {/* Card 3 */}
   <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/3.jpg" alt="Image 3" className="w-full h-full object-cover" />
+    <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
   </div>
 </div>
 
@@ -246,7 +246,7 @@ const TwoHundredHourTTPage = () => {
         title="Frequently Asked Questions"
         faqs={[
           {
-            question: "Introduction to Yoga and Teacher Training",
+            question: "1. Where is your yoga teacher training course located?",
             answer:
               "Our course is located in Goa, the Pearl of the Orient, offering a serene environment amidst its beautiful coastal landscapes.",
           },
