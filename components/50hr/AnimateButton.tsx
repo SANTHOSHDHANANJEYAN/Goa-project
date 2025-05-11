@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
           </svg>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-14 h-14 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:scale-125 transition-transform cursor-pointer shadow-xl">
-              <svg className="w-6 h-6 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-6 h-6 text-[#150e70] ml-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z" />
               </svg>
             </div>
@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
           <br />
           Become part of our family at one of the leading accredited
           <br />
-          schools in Bali and India!
+          schools in Goa!
         </h1>
 
         {/* Full-Width Stats Grid */}
@@ -62,7 +62,7 @@ const HeroSection: React.FC = () => {
           </div>
           <div>
             <p className="text-2xl font-bold">6,000+</p>
-            <p>graduated in Bali</p>
+            <p>graduated in Goa</p>
           </div>
           <div>
             <p className="text-2xl font-bold">18,000+</p>

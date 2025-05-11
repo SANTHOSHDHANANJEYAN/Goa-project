@@ -84,7 +84,7 @@ const BatchScheduleTable: React.FC = () => {
         <div className="overflow-x-auto">
           <table className="w-full table-auto border-collapse text-left">
             <thead>
-              <tr className="bg-white text-indigo-900 border-b-2 border-indigo-200">
+              <tr className="bg-white text-[#150e70] border-b-2 border-indigo-200">
                 <th className="py-3 px-4 font-semibold">Start date</th>
                 <th className="py-3 px-4 font-semibold">End date</th>
                 <th className="py-3 px-4 font-semibold">Price</th>

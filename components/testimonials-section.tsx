@@ -24,7 +24,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ testimonials 
   return (
     <section className="py-16 bg-purple-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+        <h2 className="text-3xl font-bold text-center mb-12 text-[#150e70]">
           What Our Graduates Say
         </h2>
 
@@ -44,8 +44,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ testimonials 
                 >
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="text-lg mb-6 text-gray-600">{testimonial.quote}</p>
-                <p className="font-medium text-purple-600">{testimonial.author}</p>
+                <p className="text-lg mb-6 text-[#150e70]">{testimonial.quote}</p>
+                <p className="font-medium text-[#150e70]">{testimonial.author}</p>
               </div>
             </div>
           ))}

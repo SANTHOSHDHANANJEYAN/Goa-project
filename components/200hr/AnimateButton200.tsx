@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
           </svg>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-14 h-14 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:scale-125 transition-transform cursor-pointer shadow-xl">
-              <svg className="w-6 h-6 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-6 h-6 text-[#150e70] ml-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z" />
               </svg>
             </div>

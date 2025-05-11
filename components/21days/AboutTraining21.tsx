@@ -14,28 +14,28 @@ export default function AboutTraining() {
             <span className="w-3 h-3 bg-indigo-900 rounded-full inline-block" />
             About the Training
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-indigo-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
             Join us for an immersive <br />
-            21 days Yoga Alliance <br />
+            20 days 50-hours Yoga Alliance <br />
             Certified Teacher training
           </h2>
 
-          <ul className="space-y-4 text-indigo-900">
+          <ul className="space-y-4 text-[#150e70]">
             <li className="flex items-start gap-3">
-              <FaCertificate className="text-indigo-900 mt-1" size={20} />
+              <FaCertificate className="text-[#150e70] mt-1" size={20} />
               Yoga Alliance accredited certificate (worldwide)
             </li>
             <li className="flex items-start gap-3">
-              <GiMeditation className="text-indigo-900 mt-1" size={22} />
+              <GiMeditation className="text-[#150e70] mt-1" size={22} />
               20 days / 19 nights in a boutique resort in Goa.
             </li>
             <li className="flex items-start gap-3">
-              <FaUtensils className="text-indigo-900 mt-1" size={20} />
+              <FaUtensils className="text-[#150e70] mt-1" size={20} />
               Daily delicious vegan/vegetarian meals a day (buffet style)
             </li>
             <li className="flex items-start gap-3">
-              <MdOnlinePrediction className="text-indigo-900 mt-1" size={22} />
-              BONUS: lifelong access to our Online 21-days Yoga Alliance course
+              <MdOnlinePrediction className="text-[#150e70] mt-1" size={22} />
+              BONUS: lifelong access to our Online 50hr Yoga Alliance course
             </li>
           </ul>
         </div>
@@ -62,9 +62,9 @@ export default function AboutTraining() {
           </div>
           <div>
             <Image
-              src="/53.jpg"
+              src="/54.jpg"
               alt="Resort Room"
-              className="rounded-xl object-cover w-full"
+              className="rounded-xl object-cover w-full h-[83%]"
               width={300}
               height={200}
             />

@@ -49,7 +49,7 @@ const ActivitiesSection: React.FC = () => {
       <div className="absolute inset-0 opacity-10 z-0 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#150e70] mb-[8rem]">
           Activities included in the course
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -65,10 +65,10 @@ const ActivitiesSection: React.FC = () => {
                   className="w-20 h-20 rounded-full border-4 border-white shadow object-cover"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-indigo-900">
+              <h3 className="text-lg font-semibold text-[#150e70]">
                 {activity.title}
               </h3>
-              <p className="text-sm text-gray-700 mt-2">{activity.description}</p>
+              <p className="text-sm text-[#150e70] mt-2">{activity.description}</p>
             </div>
           ))}
         </div>

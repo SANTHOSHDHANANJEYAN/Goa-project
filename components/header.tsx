@@ -70,7 +70,7 @@ export default function Header() {
           {!hasDropdown ? (
             <Link
               href={item.href!}
-              className={cn("block text-base font-medium py-2 text-blue-900", isYellow && "text-blue-900")}
+              className={cn("block text-base font-medium py-2 text-[#150e70]", isYellow && "text-[#150e70]")}
               onClick={() => setMobileMenuOpen(false)}
               style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
             >
@@ -80,8 +80,8 @@ export default function Header() {
             <>
               <button
                 className={cn(
-                  "w-full flex justify-between items-center text-base font-medium py-2 text-blue-900",
-                  isYellow && "text-blue-900"
+                  "w-full flex justify-between items-center text-base font-medium py-2 text-[#150e70]",
+                  isYellow && "text-[#150e70]"
                 )}
                 onClick={() => toggleDropdown(item.name)}
                 style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
@@ -98,7 +98,7 @@ export default function Header() {
                     <div key={subItem.name}>
                       <Link
                         href={subItem.href}
-                        className="block text-sm py-1 text-blue-900"
+                        className="block text-sm py-1 text-[#150e70]"
                         onClick={() => setMobileMenuOpen(false)}
                         style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
                       >
@@ -128,7 +128,7 @@ export default function Header() {
             </Button>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-blue-900">
+            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-[#150e70]">
               {/* PROGRAMS */}
               <div className="relative">
                 <button

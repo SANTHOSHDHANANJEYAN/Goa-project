@@ -10,65 +10,59 @@ import ActivitiesSection from "@/components/50hr/ActivitiesSection";
 import BatchScheduleTable from "@/components/50hr/BatchScheduleTable";
 import AnimateButton from "@/components/50hr/AnimateButton";
 import TestimonialSection from "@/components/50hr/TestimonialSection";
+import AboutTraining from "@/components/50hr/AboutTraining";
 import RetreatSchedule from "@/components/50hr/RetreatSchedule";
-import AboutTraining100 from "@/components/100hr/AboutTraining100";
-import AnimateButton100 from "@/components/100hr/AnimateButton100";
-import CurriculumSection100 from "@/components/100hr/CurriculumSection100";
-import RetreatSchedule100 from "@/components/100hr/RetreatSchedule100";
-import ActivitiesSection100 from "@/components/100hr/ActivitiesSection100";
-import BatchScheduleTable100 from "@/components/100hr/BatchScheduleTable100";
-import TestimonialSection100 from "@/components/100hr/TestimonialSection100";
-import ApplicationForm100 from "@/components/100hr/ApplicationForm100";
+import YogaHighlights from "@/components/50hr/training";
 
 const TwoHundredHourTTPage = () => {
   return (
-
-         <div className="mt-24  max-w-6xl mx-auto text-gray-800">
+    <div className="mt-24  max-w-6xl mx-auto text-gray-800">
       {/* Header Info */}
       <div className="text-center mb-6">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-blue-900">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
          100-hrs Accredited Yoga Teacher Training
         </h2>
-        <p className="text-lg text-blue-900">In Goa</p>
+        <p className="text-lg text-[#150e70]">In Goa</p>
       </div>
 
-     <h1 className="text-lg md:text-xl font-semibold text-blue-900 uppercase tracking-wide text-center">
+     <h1 className="text-lg md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
   Become a Certified Yoga Teacher by Yoga Alliance
 </h1>
 
-      <p className="text-lg text-center text-blue-900 mb-6">
-        Join an exciting and life-changing 50-hours journey in Goa
+      <p className="text-lg text-center text-[#150e70] mb-6">
+        Join an exciting and life-changing 100-hours journey in Goa
       </p>
 
      <div className="flex justify-center items-end text-center gap-8 mb-4">
   <div>
     <span className="text-4xl font-bold text-green-600 block">USD 350</span>
-    <span className="text-sm text-gray-600">Private Room</span>
+    <span className="text-sm text-[#150e70]">Private Room</span>
   </div>
   <div>
     <span className="text-4xl font-bold text-green-600 block">USD 500</span>
-    <span className="text-sm text-gray-600">Shared Room</span>
+    <span className="text-sm text-[#150e70]">Shared Room</span>
   </div>
 </div>
    <div className="flex justify-center gap-6 mb-6">
-  <p className="text-sm text-blue-900">Duration-50 Hrs</p>
-  <p className="text-sm text-blue-900">Language-English</p>
+  <p className="text-sm text-[#150e70]">Duration-100 Hrs</p>
+  <p className="text-sm text-[#150e70]">Language-English</p>
 </div>
+
+
       <div className="text-center mb-6">
         <a href="#application">
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+          <button className="bg-[#150e70] hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
             Book Your Spot
           </button>
         </a>
       </div>
 
-      <div className="text-center text-sm text-gray-700 mb-12">
-        <p className="mb-1">Only <strong>3 spots left</strong> for the next training:</p>
+      <div className="text-center text-sm text-[#150e70] mb-12">
         <p className="font-semibold">May 26th – June 16th, 2025</p>
       </div>
 
       {/* Hero Image */}
-     <div className="flex justify-center items-center min-h-screen bg-transparent">
+     <div className="flex justify-center items-center bg-transparent">
   <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
     <Image
       src="/course2.jpg"
@@ -82,54 +76,69 @@ const TwoHundredHourTTPage = () => {
 </div>
 
       {/* Certificate Info */}
-      <section className="text-center mb-20">
-  <h3 className="text-2xl font-semibold text-indigo-800 mb-6">
-    After Completing the Course...
-  </h3>
-  <div className="flex justify-center gap-10 mb-4">
-    {[
-      { level: "200",  src: "/rys 200.png" },
-      { level: "300", src: "/rpysall.png" },
-      { level: "500",  src: "/300 rys.png" },
-    ].map(({ level, src }, i) => (
-      <div key={i} className="flex flex-col items-center">
-        <div className="relative w-16 h-16 mb-2">
+    <section className="text-center mb-8 relative">
+      <h3 className="text-2xl font-semibold text-[#150e70] mb-6">
+        After Completing the Course...
+      </h3>
+
+      <div className="flex justify-center items-center gap-10  mr-24">
+        {/* Yellow area image (uploaded image) */}
+        <div className="relative w-28 h-28">
           <Image
-            src={src}
-            alt={`RYS ${level} Badge`}
+            src="/YAlogo-removebg-preview.png"
+            alt="Yoga Visual Icon"
             layout="fill"
             objectFit="contain"
           />
         </div>
-       
+
+        {/* Certification badges */}
+        <div className="flex gap-10">
+          {[
+            { level: "200", src: "/rys 200.png" },
+            { level: "RPYS", src: "/rpysall.png" },
+            { level: "300", src: "/300 rys.png" },
+          ].map(({ level, src }, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <div className="relative w-16 h-16 mb-2">
+                <Image
+                  src={src}
+                  alt={`RYS ${level} Badge`}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-  <p className="text-sm text-gray-600">
-    You’ll receive a Yoga Alliance certificate —<br />
-    internationally recognized and accepted.
-  </p>
-</section>
 
-<AboutTraining100/>
+      <p className="text-sm text-[#150e70]">
+        You’ll receive a Yoga Alliance certificate —<br />
+        internationally recognized and accepted.
+      </p>
+    </section>
+
+
+<AboutTraining/>
       {/* About Section */}
-  <AnimateButton100/>
+  <AnimateButton/>
 
-  <section className="mt-20 mb-20">
-  <h2 className="text-[22px] font-bold text-center mb-8 text-blue-900"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
-  <h2 className="text-[10px] font-bold text-center mb-8 text-blue-900"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
+  <section className="mt-20 ">
+  <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
+  <h2 className="text-[10px] font-bold text-center mb-8 text-[#150e70]"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
   {/* Card 1 */}
   <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/1.jpg" alt="Image 1" className="w-full h-full object-cover" />
+    <img src="/11 .jpg" alt="Image 1" className="w-full h-full object-cover" />
   </div>
   {/* Card 2 */}
   <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/2.jpg" alt="Image 2" className="w-full h-full object-cover" />
+    <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
   </div>
   {/* Card 3 */}
   <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/3.jpg" alt="Image 3" className="w-full h-full object-cover" />
+    <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
   </div>
 </div>
 
@@ -138,16 +147,16 @@ const TwoHundredHourTTPage = () => {
 
 
       {/* Curriculum */}
-      <CurriculumSection100/>
+      <CurriculumSection/>
 
       {/* Instructor Info */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-6">Meet Your Instructors</h2>
-        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-6">
+        <h2 className="text-3xl font-bold text-center mb-6 text-[#150e70]">Meet Your Instructors</h2>
+        <p className="text-center text-[#150e70] max-w-3xl mx-auto mb-6 ">
           Our experienced team brings decades of collective practice from multiple yoga disciplines.
           They’re dedicated to helping you grow — physically, mentally, and spiritually — in a supportive, inclusive environment.
         </p>
-        <div className="w-full h-80 relative rounded-xl overflow-hidden shadow">
+        <div className="w-full h-[42rem] relative rounded-xl overflow-hidden shadow">
           <Image
             src="/goa4111.jpg"
             alt="House of Om instructors"
@@ -159,13 +168,13 @@ const TwoHundredHourTTPage = () => {
 
       {/* Training Schedule */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Training Schedule</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
         <div className="bg-indigo-50 p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
-          <p className="mb-4 font-medium text-lg">Intensive Format (21 Days)</p>
+          <p className="mb-4 font-medium text-lg">Intensive Format (100-hours)</p>
           <p className="mb-1">🗓 May 26 – June 16, 2025</p>
           <p className="mb-1">📍 Location: Goa</p>
           <p className="mb-1">🕗 Monday – Saturday: 8 AM to 6 PM</p>
-          <p className="text-sm text-gray-500 mt-2">Includes breaks, workshops, and off-days</p>
+          <p className="text-sm text-[#150e70] mt-2">Includes breaks, workshops, and off-days</p>
         </div>
       </section>
 
@@ -173,13 +182,13 @@ const TwoHundredHourTTPage = () => {
       <section
   className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
   style={{
-    backgroundImage: "url('/3.jpg')",
+    backgroundImage: "url('/56.jpg')",
   }}
 >
 
         <div className="bg-black bg-opacity-50 absolute inset-0"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">YOGSHALA</h2>
+          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">Rishikul Yogshala Goa</h2>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
           <p className="text-lg mb-10">Palm Paradise Resort amidst jungle paradise in Goa</p>
 
@@ -209,11 +218,11 @@ const TwoHundredHourTTPage = () => {
         </div>
       </section>
 
-      <RetreatSchedule100/>
-      <ActivitiesSection100/>
+      
+      <ActivitiesSection/>
        {/* Course Details Section */}
-      <BatchScheduleTable100/>
-<TestimonialSection100/>
+      <BatchScheduleTable/>
+<TestimonialSection/>
       {/* Testimonials */}
       <TestimonialCarousel
         testimonials={[
@@ -231,56 +240,57 @@ const TwoHundredHourTTPage = () => {
           },
         ]}
       />
-
+<YogaHighlights/>
       {/* FAQ */}
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
           {
-            question: "Where is your yoga teacher training course located?",
+            question: "1. Where is your yoga teacher training course located?",
             answer:
               "Our course is located in Goa, the Pearl of the Orient, offering a serene environment amidst its beautiful coastal landscapes.",
           },
           {
-            question: "What style of yoga do you teach in the training course?",
+            question: "2. What style of yoga do you teach in the training course?",
             answer:
               "We specialize in Hatha Vinyasa yoga, blending traditional Hatha principles with dynamic Vinyasa flow.",
           },
           {
-            question: " What is the duration of the training program?",
+            question: "3. What is the duration of the training program?",
             answer:
               "The program typically spans 12 days for the 100-hr course.",
           },
           {
-            question: "What are the prerequisites for enrolling in the program?",
+            question: "4. What are the prerequisites for enrolling in the program?",
             answer:
               "Participants are encouraged to have a basic understanding and regular practice of yoga before joining.",
           },
           {
-            question: "What does a typical day look like during the training?",
+            question: "5. What does a typical day look like during the training?",
             answer:
               "Each day includes yoga practice, meditation, theory classes, workshops, and dedicated time for self-study.",
           },
           {
-            question: "Is the program conducted in English?",
+            question: "6. Is the program conducted in English?",
             answer:
               "Yes, the entire course is conducted in English to cater to international participants.",
           },
           {
-            question: "Who are the instructors leading the training?",
+            question: "7. Who are the instructors leading the training?",
             answer:
               "Our instructors are professionals certified in Hatha Vinyasa yoga, ensuring top-notch teaching and guidance.",
           },
           {
-            question: "What certification will I receive upon completing the course?",
+            question: "8. What certification will I receive upon completing the course?",
             answer:
               "Upon successful completion, you will receive a Yoga Alliance accredited certification, recognized globally for teaching yoga.",
           },
+          
         ]}
       />
 
       {/* Application Form */}
-      <ApplicationForm100
+      <ApplicationForm
         
       />
     </div>

@@ -5,15 +5,15 @@ const FreeManualSignup: React.FC = () => {
     <section className="relative bg-transparent py-20 text-center overflow-hidden">
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
       <div className="relative z-10 max-w-4xl mx-auto px-4 flex flex-col items-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-indigo-900 mb-4">
-          Get your FREE <br className="sm:hidden" /> 21-days study manual
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] mb-4">
+          Get your FREE <br className="sm:hidden" /> 50-hour study manual
         </h2>
-        <p className="text-gray-700 max-w-xl mb-8">
+        <p className="text-[#150e70] max-w-xl mb-8">
           and 5 video lessons to discover the fundamental principles of creating your own
           yoga class and essential tools for teaching
         </p>
 
-        <form className="w-full max-w-md space-y-4">
+        <form className="w-full max-w-md space-y-4 text-[#150e70]">
           <input
             type="email"
             placeholder="e-mail"
@@ -30,9 +30,9 @@ const FreeManualSignup: React.FC = () => {
           >
             GET IT
           </button>
-          <p className="text-xs text-gray-600 mt-2">
+          <p className="text-xs text-[#150e70] mt-2">
             By clicking "Get It", you agree to the{" "}
-            <a href="/privacy-policy" className="underline text-indigo-700">
+            <a href="/privacy-policy" className="underline text-[#150e70]">
               privacy policy
             </a>
           </p>

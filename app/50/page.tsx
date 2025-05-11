@@ -19,45 +19,45 @@ const TwoHundredHourTTPage = () => {
     <div className="mt-24  max-w-6xl mx-auto text-gray-800">
       {/* Header Info */}
       <div className="text-center mb-6">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-blue-900">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
          50-hrs Accredited Yoga Teacher Training
         </h2>
-        <p className="text-lg text-blue-900">In Goa</p>
+        <p className="text-lg text-[#150e70]">In Goa</p>
       </div>
 
-     <h1 className="text-lg md:text-xl font-semibold text-blue-900 uppercase tracking-wide text-center">
+     <h1 className="text-lg md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
   Become a Certified Yoga Teacher by Yoga Alliance
 </h1>
 
-      <p className="text-lg text-center text-blue-900 mb-6">
+      <p className="text-lg text-center text-[#150e70] mb-6">
         Join an exciting and life-changing 50-hours journey in Goa
       </p>
 
      <div className="flex justify-center items-end text-center gap-8 mb-4">
   <div>
     <span className="text-4xl font-bold text-green-600 block">USD 350</span>
-    <span className="text-sm text-gray-600">Private Room</span>
+    <span className="text-sm text-[#150e70]">Private Room</span>
   </div>
   <div>
     <span className="text-4xl font-bold text-green-600 block">USD 500</span>
-    <span className="text-sm text-gray-600">Shared Room</span>
+    <span className="text-sm text-[#150e70]">Shared Room</span>
   </div>
 </div>
    <div className="flex justify-center gap-6 mb-6">
-  <p className="text-sm text-blue-900">Duration-50 Hrs</p>
-  <p className="text-sm text-blue-900">Language-English</p>
+  <p className="text-sm text-[#150e70]">Duration-50 Hrs</p>
+  <p className="text-sm text-[#150e70]">Language-English</p>
 </div>
 
 
       <div className="text-center mb-6">
         <a href="#application">
-          <button className="bg-blue-900 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+          <button className="bg-[#150e70] hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
             Book Your Spot
           </button>
         </a>
       </div>
 
-      <div className="text-center text-sm text-gray-700 mb-12">
+      <div className="text-center text-sm text-[#150e70] mb-12">
         <p className="font-semibold">May 26th – June 16th, 2025</p>
       </div>
 
@@ -77,7 +77,7 @@ const TwoHundredHourTTPage = () => {
 
       {/* Certificate Info */}
     <section className="text-center mb-8 relative">
-      <h3 className="text-2xl font-semibold text-blue-900 mb-6">
+      <h3 className="text-2xl font-semibold text-[#150e70] mb-6">
         After Completing the Course...
       </h3>
 
@@ -113,7 +113,7 @@ const TwoHundredHourTTPage = () => {
         </div>
       </div>
 
-      <p className="text-sm text-blue-900">
+      <p className="text-sm text-[#150e70]">
         You’ll receive a Yoga Alliance certificate —<br />
         internationally recognized and accepted.
       </p>
@@ -125,8 +125,8 @@ const TwoHundredHourTTPage = () => {
   <AnimateButton/>
 
   <section className="mt-20 ">
-  <h2 className="text-[22px] font-bold text-center mb-8 text-blue-900"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
-  <h2 className="text-[10px] font-bold text-center mb-8 text-blue-900"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
+  <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
+  <h2 className="text-[10px] font-bold text-center mb-8 text-[#150e70]"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
   {/* Card 1 */}
   <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
@@ -151,8 +151,8 @@ const TwoHundredHourTTPage = () => {
 
       {/* Instructor Info */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-6 text-blue-900">Meet Your Instructors</h2>
-        <p className="text-center text-blue-900 max-w-3xl mx-auto mb-6 ">
+        <h2 className="text-3xl font-bold text-center mb-6 text-[#150e70]">Meet Your Instructors</h2>
+        <p className="text-center text-[#150e70] max-w-3xl mx-auto mb-6 ">
           Our experienced team brings decades of collective practice from multiple yoga disciplines.
           They’re dedicated to helping you grow — physically, mentally, and spiritually — in a supportive, inclusive environment.
         </p>
@@ -168,13 +168,13 @@ const TwoHundredHourTTPage = () => {
 
       {/* Training Schedule */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Training Schedule</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
         <div className="bg-indigo-50 p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
           <p className="mb-4 font-medium text-lg">Intensive Format (50-hours)</p>
           <p className="mb-1">🗓 May 26 – June 16, 2025</p>
           <p className="mb-1">📍 Location: Goa</p>
           <p className="mb-1">🕗 Monday – Saturday: 8 AM to 6 PM</p>
-          <p className="text-sm text-gray-500 mt-2">Includes breaks, workshops, and off-days</p>
+          <p className="text-sm text-[#150e70] mt-2">Includes breaks, workshops, and off-days</p>
         </div>
       </section>
 
@@ -218,7 +218,7 @@ const TwoHundredHourTTPage = () => {
         </div>
       </section>
 
-      <RetreatSchedule/>
+    
       <ActivitiesSection/>
        {/* Course Details Section */}
       <BatchScheduleTable/>

@@ -22,11 +22,11 @@ const RetreatSchedule: React.FC = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Left column - description */}
         <div>
-          <h2 className="text-3xl font-semibold text-indigo-900 mb-4">
+          <h2 className="text-3xl font-semibold text-[#150e70] mb-4">
             7-Days Yoga Retreat in Goa - Daily Schedule
           </h2>
           <div className="h-1 w-20 bg-indigo-900 mb-6" />
-          <p className="text-indigo-900 leading-relaxed">
+          <p className="text-[#150e70] leading-relaxed">
             Experience rejuvenation at our Yoga Retreat in Goa. Each day is
             thoughtfully curated to bring a harmonious blend of yoga practices
             and relaxation. Enjoy a balance of Hatha and Flow Yoga, Pranayam,
@@ -42,8 +42,8 @@ const RetreatSchedule: React.FC = () => {
               key={idx}
               className="flex justify-between border-b border-dotted border-gray-300 pb-2"
             >
-              <span className="text-indigo-900 font-medium">{item.time}</span>
-              <span className="text-indigo-900">{item.activity}</span>
+              <span className="text-[#150e70] font-medium">{item.time}</span>
+              <span className="text-[#150e70]">{item.activity}</span>
             </div>
           ))}
         </div>
