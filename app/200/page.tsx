@@ -23,30 +23,37 @@ import ApplicationForm200 from "@/components/200hr/ApplicationForm200";
 
 const TwoHundredHourTTPage = () => {
   return (
-    <div className="mt-24 px-6 md:px-12 max-w-6xl mx-auto text-gray-800">
+        <div className="mt-24  max-w-6xl mx-auto text-gray-800">
       {/* Header Info */}
       <div className="text-center mb-6">
-        <h2 className="text-sm md:text-base font-semibold text-indigo-600 uppercase tracking-wide">
-         50-hrs Accredited Yoga Teacher Training
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-blue-900">
+         200-hrs Accredited Yoga Teacher Training
         </h2>
-        <p className="text-lg text-gray-600">In Goa</p>
+        <p className="text-lg text-blue-900">In Goa</p>
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4">
-        Become a Certified Yoga Teacher by Yoga Alliance
-      </h1>
-      <p className="text-lg text-center text-gray-700 mb-6">
-        Join an exciting and life-changing 21-day journey in Goa
+     <h1 className="text-lg md:text-xl font-semibold text-blue-900 uppercase tracking-wide text-center">
+  Become a Certified Yoga Teacher by Yoga Alliance
+</h1>
+
+      <p className="text-lg text-center text-blue-900 mb-6">
+        Join an exciting and life-changing 50-hours journey in Goa
       </p>
 
-      {/* Price and CTA */}
-      <div className="flex justify-center items-center text-center mb-2">
-        <span className="text-xl line-through text-gray-400 mr-4">USD 2350</span>
-        <span className="text-4xl font-bold text-green-600">USD 2000</span>
-      </div>
-      <p className="text-center text-sm text-gray-600 mb-6">
-        *Early bird offer – Save 15%
-      </p>
+     <div className="flex justify-center items-end text-center gap-8 mb-4">
+  <div>
+    <span className="text-4xl font-bold text-green-600 block">USD 350</span>
+    <span className="text-sm text-gray-600">Private Room</span>
+  </div>
+  <div>
+    <span className="text-4xl font-bold text-green-600 block">USD 500</span>
+    <span className="text-sm text-gray-600">Shared Room</span>
+  </div>
+</div>
+   <div className="flex justify-center gap-6 mb-6">
+  <p className="text-sm text-blue-900">Duration-50 Hrs</p>
+  <p className="text-sm text-blue-900">Language-English</p>
+</div>
 
       <div className="text-center mb-6">
         <a href="#application">
