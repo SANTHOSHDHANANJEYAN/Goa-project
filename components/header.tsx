@@ -94,7 +94,7 @@ export default function Header() {
               </button>
               {expandedDropdown === item.name && (
                 <div className="ml-4 space-y-2">
-                  {item.dropdown.map((subItem, idx) => (
+                  {item.dropdown?.map((subItem, idx) => (
                     <div key={subItem.name}>
                       <Link
                         href={subItem.href}
@@ -141,7 +141,7 @@ export default function Header() {
                 {desktopDropdown === "Program" && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-purple-600 rounded-md shadow-lg z-50">
                     <ul className="py-2">
-                      {leftNavigation[0].dropdown.map((item) => (
+                      {leftNavigation[0]?.dropdown?.map((item) => (
                         <li key={item.name}>
                           <Link
                             href={item.href}
@@ -169,7 +169,7 @@ export default function Header() {
                 {desktopDropdown === "Retreat" && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-purple-600 rounded-md shadow-lg z-50">
                     <ul className="py-2">
-                      {leftNavigation[1].dropdown.map((item) => (
+                      {leftNavigation[1]?.dropdown?.map((item) => (
                         <li key={item.name}>
                           <Link
                             href={item.href}
