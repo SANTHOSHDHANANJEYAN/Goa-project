@@ -10,36 +10,37 @@ interface Activity {
 
 const activities: Activity[] = [
   {
-    title: "Yoga Nidra sessions",
+    title: "Yoga and Meditation Sessions",
     description:
-      "Unwind and deeply relax with the Yoga Nidra session, designed to help you absorb the day's lessons and restore your mind",
-    image: "/images/yoga-nidra.jpg",
-  },
+      "Experience daily guided yoga and meditation sessions designed to enhance flexibility, inner peace, and mindfulness.",
+    image: "/Meditation.jpg", // Updated file name to better match title
+    },
   {
-    title: "Introduction to the Ayurvedic diet",
+    title: "Accommodation",
     description:
-      "Get introduced to Ayurveda, a traditional system of medicine from India that emphasizes holistic health and wellness through a balance of mind, body, and spirit",
-    image: "/images/ayurvedic-diet.jpg",
-  },
+      "Stay in comfortable, peaceful rooms designed with natural materials and minimalist decor, offering rest and rejuvenation.",
+    image: "/Accommodation.jpg",
+     },
   {
-    title: "Sound session",
+    title: "Meals (Vegetarian & Vegan Options)",
     description:
-      "Delve into sound healing sessions that use therapeutic vibrations to promote inner peace and bodily harmony",
-    image: "/images/sound-session.jpg",
-  },
+      "Enjoy nourishing vegetarian and vegan meals made from fresh, locally sourced ingredients, supporting a healthy lifestyle.",
+    image: "/Meals.jpg",
+    },
   {
-    title: "Ice Bath experience",
+    title: "Wellness Treatments",
     description:
-      "Energize and invigorate your body with an ice bath session, a powerful practice to enhance circulation and mental resilience",
-    image: "/images/ice-bath.jpg",
-  },
+      "Indulge in holistic wellness treatments such as massages, herbal therapies, and detox practices for physical and mental balance.",
+    image: "/Wellness.jpg",
+    },
   {
-    title: "Business of Yoga Workshop",
+    title: "Cultural Excursions",
     description:
-      "Learn to navigate the business aspects of yoga, from marketing strategies to studio management, crucial for aspiring yoga professionals",
-    image: "/images/business-yoga.jpg",
-  },
+      "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
+    image: "/Cultural.jpg",
+     }
 ];
+
 
 const ActivitiesSection: React.FC = () => {
   return (
