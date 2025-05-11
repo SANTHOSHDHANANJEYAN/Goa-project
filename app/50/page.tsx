@@ -16,7 +16,7 @@ import YogaHighlights from "@/components/50hr/training";
 
 const TwoHundredHourTTPage = () => {
   return (
-    <div className="mt-24 px-6 md:px-12 max-w-6xl mx-auto text-gray-800">
+    <div className="mt-24  max-w-6xl mx-auto text-gray-800">
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-blue-900">
@@ -62,7 +62,7 @@ const TwoHundredHourTTPage = () => {
       </div>
 
       {/* Hero Image */}
-     <div className="flex justify-center items-center min-h-screen bg-transparent">
+     <div className="flex justify-center items-center bg-transparent">
   <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
     <Image
       src="/course2.jpg"
@@ -76,12 +76,12 @@ const TwoHundredHourTTPage = () => {
 </div>
 
       {/* Certificate Info */}
-    <section className="text-center mb-20 relative">
+    <section className="text-center mb-8 relative">
       <h3 className="text-2xl font-semibold text-blue-900 mb-6">
         After Completing the Course...
       </h3>
 
-      <div className="flex justify-center items-center gap-10 mb-4">
+      <div className="flex justify-center items-center gap-10  mr-24">
         {/* Yellow area image (uploaded image) */}
         <div className="relative w-28 h-28">
           <Image
@@ -124,7 +124,7 @@ const TwoHundredHourTTPage = () => {
       {/* About Section */}
   <AnimateButton/>
 
-  <section className="mt-20 mb-20">
+  <section className="mt-20 ">
   <h2 className="text-[22px] font-bold text-center mb-8 text-blue-900"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
   <h2 className="text-[10px] font-bold text-center mb-8 text-blue-900"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
@@ -156,7 +156,7 @@ const TwoHundredHourTTPage = () => {
           Our experienced team brings decades of collective practice from multiple yoga disciplines.
           They’re dedicated to helping you grow — physically, mentally, and spiritually — in a supportive, inclusive environment.
         </p>
-        <div className="w-full h-80 relative rounded-xl overflow-hidden shadow">
+        <div className="w-full h-[42rem] relative rounded-xl overflow-hidden shadow">
           <Image
             src="/goa4111.jpg"
             alt="House of Om instructors"

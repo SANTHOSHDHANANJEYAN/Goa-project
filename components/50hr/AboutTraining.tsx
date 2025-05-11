@@ -62,9 +62,9 @@ export default function AboutTraining() {
           </div>
           <div>
             <Image
-              src="/53.jpg"
+              src="/54.jpg"
               alt="Resort Room"
-              className="rounded-xl object-cover w-full"
+              className="rounded-xl object-cover w-full h-[83%]"
               width={300}
               height={200}
             />
