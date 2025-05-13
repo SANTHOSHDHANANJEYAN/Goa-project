@@ -83,7 +83,7 @@ export default function Home() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center transition-all transform hover:scale-105 border-4 border-indigo-900 p-4 rounded-xl shadow-lg hover:shadow-2xl bg-white bg-opacity-90 hover:bg-opacity-100"
+                    className="flex flex-col items-center transition-all transform hover:scale-105 border-[transparent] p-4 rounded-xl shadow-lg hover:shadow-2xl bg-[transparent] hover:bg-opacity-100"
                   >
                     <Image src={item.src} alt={item.alt} width={80} height={80} className="mb-3" />
                     <span className="font-semibold text-lg text-indigo-900">{item.label}</span>
