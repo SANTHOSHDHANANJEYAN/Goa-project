@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="absolute inset-0 opacity-5 bg-[url('/pattern.svg')] bg-repeat pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 items-start text-sm z-10">
-        {/* Programs Column */}
+        {/* Programs + Retreats */}
         <div>
           <h3 className="text-xl font-serif font-semibold mb-4 relative text-[#150e70]">
             Programs
@@ -20,27 +20,27 @@ export default function Footer() {
             <li><Link href="/200">200 Hr Multi-Style-Yoga TTC</Link></li>
             <li><Link href="/300">300 Hr Multi-Style-Yoga TTC</Link></li>
           </ul>
+
+          {/* Retreats */}
+          <div className="mt-8">
+            <h3 className="text-xl font-serif font-semibold mb-4 relative text-[#150e70]">
+              Retreats
+              <span className="block w-10 h-[2px] bg-[#15005c] mt-1 rounded"></span>
+            </h3>
+            <ul className="space-y-2 text-[#150e70]">
+              <li><Link href="/retreats">7 Days Holiday Retreat</Link></li>
+              <li><Link href="/schedule/bali">14 Days Wellness Retreat</Link></li>
+              <li><Link href="/schedule/thailand">21 Days Detox Retreat</Link></li>
+            </ul>
+          </div>
         </div>
 
-        {/* Retreats Column */}
-        <div>
-          <h3 className="text-xl font-serif font-semibold mb-4 relative text-[#150e70]">
-            Retreats
-            <span className="block w-10 h-[2px] bg-[#15005c] mt-1 rounded"></span>
-          </h3>
-          <ul className="space-y-2 text-[#150e70]">
-            <li><Link href="/retreats">7 Days Holiday Retreat</Link></li>
-            <li><Link href="/schedule/bali">14 Days Wellness Retreat</Link></li>
-            <li><Link href="/schedule/thailand">21 Days Detox Retreat</Link></li>
-          </ul>
-        </div>
-
-        {/* Logo & Socials */}
-        <div className="flex flex-col items-center space-y-6 pr-[6rem]">
+        {/* Logo & Socials - CENTERED */}
+        <div className="flex flex-col items-center justify-center space-y-6 text-center col-span-1">
           <img
-            src="/logo2.png"
+            src="/logo30-removebg-preview.png"
             alt="Logo"
-            className="w-[9rem] h-[5rem] mx-auto drop-shadow-md"
+            className="w-[9rem] h-[5rem] drop-shadow-md"
           />
           <div className="flex space-x-4">
             <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer">
