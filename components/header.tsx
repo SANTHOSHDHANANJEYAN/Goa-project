@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -43,14 +42,10 @@ const rightNavigation = [
 ];
 
 export default function Header() {
-  const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null);
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
   const pathname = usePathname();
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => setMounted(true), []);
 
   const toggleDropdown = (name: string) => {
     setExpandedDropdown((prev) => (prev === name ? null : name));
@@ -105,7 +100,7 @@ export default function Header() {
                         {subItem.name}
                       </Link>
                       {idx !== item.dropdown.length - 1 && (
-                        <div className="border-t border-gray-200 dark:border-gray-700" />
+                        <div className="border-t border-gray-200" />
                       )}
                     </div>
                   ))}
@@ -119,7 +114,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 backdrop-blur-md shadow-sm py-3 transition-colors">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md shadow-sm py-3 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
           <div className="flex items-center gap-6">
@@ -129,7 +124,6 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-[#150e70]">
-              {/* PROGRAMS */}
               <div className="relative">
                 <button
                   onClick={() => toggleDesktopDropdown("Program")}
@@ -157,7 +151,6 @@ export default function Header() {
                 )}
               </div>
 
-              {/* RETREAT */}
               <div className="relative">
                 <button
                   onClick={() => toggleDesktopDropdown("Retreat")}
@@ -201,11 +194,6 @@ export default function Header() {
                 <Image src="/YAlogo-removebg-preview.png" alt="Yoga Alliance" width={60} height={100} className="object-contain" />
               </Link>
             </div>
-            {mounted && (
-              <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-                {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
-              </Button>
-            )}
           </div>
         </div>
       </div>
@@ -220,7 +208,7 @@ export default function Header() {
       >
         <div
           className={cn(
-            "fixed top-0 right-0 w-72 h-screen overflow-y-auto bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300",
+            "fixed top-0 right-0 w-72 h-screen overflow-y-auto bg-white shadow-lg transform transition-transform duration-300",
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
           onClick={(e) => e.stopPropagation()}
