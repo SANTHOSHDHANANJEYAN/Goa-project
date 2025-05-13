@@ -191,7 +191,7 @@ export default function Header() {
           <div className="flex justify-end items-center gap-4">
             <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-blue-900">
               <Link href="/" className="flex-shrink-0">
-                <Image src="/YAlogo-removebg-preview.png" alt="Yoga Alliance" width={60} height={100} className="object-contain" />
+                <Image src="/yg_logo-removebg-preview.png" alt="Yoga Alliance" width={80} height={100} className="object-contain" />
               </Link>
             </div>
           </div>
