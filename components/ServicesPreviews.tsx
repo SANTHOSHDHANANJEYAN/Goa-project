@@ -7,22 +7,25 @@ import { Card } from '@/components/ui/card';
 const services = [
   {
     id: 'yoga',
+    title: '200 HRS Multi-Style Yoga TTC',
     image: '/r1.jpg',
-    link: '/services#yoga-classes'
+    link: '/services#yoga-classes',
   },
   {
     id: 'meditation',
+    title: '300 HRS Multi-Style Yoga TTC',
     image: '/r2.jpg',
-    link: '/services#meditation'
+    link: '/services#meditation',
   },
   {
     id: 'sound-healing',
+    title: '21 Days Yoga Immersion Course',
     image: '/r3.jpg',
-    link: '/services#sound-healing'
+    link: '/services#sound-healing',
   },
 ];
 
-export default function ServicesPreviews() {
+export default function ServicesPreview() {
   return (
     <section className="py-20 bg-transparent relative overflow-hidden">
       <div className="absolute inset-0 opacity-20 rounded-[2rem]" />
@@ -31,17 +34,27 @@ export default function ServicesPreviews() {
           {services.map((service, index) => (
             <Card
               key={service.id}
-              className="overflow-hidden group hover:shadow-2xl transition-shadow duration-300 rounded-[2rem]"
+              className="group relative overflow-hidden rounded-[2rem] shadow-md hover:shadow-2xl transition duration-300"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <Link href={service.link}>
-                <div className="relative h-[24rem] overflow-hidden rounded-[2rem]">
+                <div className="relative h-[24rem] w-full cursor-pointer">
+                  {/* Background Image */}
                   <Image
                     src={service.image}
-                    alt="Service Image"
+                    alt={service.title}
                     fill
                     className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                   />
+
+                  {/* Overlay content on hover */}
+                  <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center px-6">
+                    <h3 className="text-white text-2xl font-bold">{service.title}</h3>
+                    <p className="text-white text-base mt-2">{service.subtitle}</p>
+                    <span className="mt-5 bg-white text-[#150e70] px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition-all duration-200">
+                      Know more
+                    </span>
+                  </div>
                 </div>
               </Link>
             </Card>
