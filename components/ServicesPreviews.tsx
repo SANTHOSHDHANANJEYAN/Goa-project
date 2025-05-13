@@ -50,7 +50,7 @@ export default function ServicesPreview() {
                   {/* Overlay content on hover */}
                   <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center px-6">
                     <h3 className="text-white text-2xl font-bold">{service.title}</h3>
-                    <p className="text-white text-base mt-2">{service.subtitle}</p>
+                   
                     <span className="mt-5 bg-white text-[#150e70] px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition-all duration-200">
                       Know more
                     </span>
