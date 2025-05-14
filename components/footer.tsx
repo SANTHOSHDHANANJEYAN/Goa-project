@@ -12,12 +12,12 @@ export default function Footer() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/ftv.mp4" type="video/mp4" />
+        <source src="/ftvbg.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Optional semi-transparent overlay */}
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-0" />
+      <div className="absolute inset-0  backdrop-blur-sm z-0" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left items-start">

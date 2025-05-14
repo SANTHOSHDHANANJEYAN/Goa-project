@@ -2,13 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import ServicesPreview from '@/components/services-preview';
-import Youtube from '@/components/youtube';
-import ApplicationForm from '@/components/50hr/ApplicationForm';
-import Appform from '@/components/Appform';
 import GalleryPage from '@/components/gallery';
 import TeacherSlider from '@/components/TeacherSlider';
 import CodeOfConduct from '@/components/CodeOfConduct';
 import ServicesPreviews from '@/components/ServicesPreviews';
+import Appform from '@/components/Appform';
 
 export default function Home() {
   return (

@@ -4,63 +4,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const teachers = [
-  {
-    name: 'Abin Ji',
-    handle: '@Philosophy',
-    image: '/Abin Ji.jpg',
-  },
-  {
-    name: 'Arshdeep Singh Behal',
-    handle: '@Teaching_Methodology',
-    image: 'Arshdeep Singh Behal.jpg',
-  },
-  {
-    name: 'Bipin Singh Pharswan',
-    handle: '@Ashtanga_Vinyasa_Yoga',
-    image: '/Bipin Singh Pharswan.jpg',
-  },
-  {
-    name: ' Gangesha Chaitanya',
-    handle: '@Yoga_Philosophy',
-    image: '/gangesh sir.jpg',
-  },
-  {
-    name: 'Himanshu Ji',
-    handle: '@meera_Hatha_&_Ashtangad',
-    image: '/Himanshu Ji.jpg',
-  },
-  {
-    name: 'Pooja Ji',
-    handle: '@Medititation_&_Pranayama',
-    image: '/pooja ji.jpg',
-  },
-  {
-    name: 'Purnima hi',
-    handle: '@ Spiritual_Guidance',
-    image: '/Purnima hi.jpg',
-  },
-  {
-    name: 'Rahul Negi',
-    handle: '@Hatha_Yoga_&_Ashtanga',
-    image: '/Rahul Negi.jpg',
-  },
-  {
-    name: 'Rishi Raj',
-    handle: '@Philosophy_&_Meditation',
-    image: '/Rishi Raj.jpg',
-  },
-   {
-    name: 'Sukra Chaitanya',
-    handle: '@Mantra_Meditation_Pranayama',
-    image: '/Sukra Chaitanya.jpg',
-  },
-   {
-    name: 'Yogesh Ji',
-    handle: '@Philosophy_Meditation_&_Pranayama',
-    image: '/Yogesh Ji.jpg',
-  },
+  { name: 'Abin Ji', handle: 'Philosophy', image: '/Abin Ji.jpg' },
+  { name: 'Arshdeep Singh Behal', handle: 'Teaching_Methodology', image: '/Arshdeep Singh Behal.jpg' },
+  { name: 'Bipin Singh Pharswan', handle: 'Ashtanga_Vinyasa_Yoga', image: '/Bipin Singh Pharswan.jpg' },
+  { name: 'Gangesha Chaitanya', handle: 'Yoga_Philosophy', image: '/gangesh sir.jpg' },
+  { name: 'Himanshu Ji', handle: 'meera_Hatha_&_Ashtangad', image: '/Himanshu Ji.jpg' },
+  { name: 'Pooja Ji', handle: 'Medititation_&_Pranayama', image: '/pooja ji.jpg' },
+  { name: 'Purnima hi', handle: 'Spiritual_Guidance', image: '/Purnima hi.jpg' },
+  { name: 'Rahul Negi', handle: 'Hatha_Yoga_&_Ashtanga', image: '/Rahul Negi.jpg' },
+  { name: 'Rishi Raj', handle: 'Philosophy_&_Meditation', image: '/Rishi Raj.jpg' },
+  { name: 'Sukra Chaitanya', handle: 'Mantra_Meditation_Pranayama', image: '/Sukra Chaitanya.jpg' },
+  { name: 'Yogesh Ji', handle: 'Philosophy_Meditation_&_Pranayama', image: '/Yogesh Ji.jpg' },
 ];
 
 export default function TeacherSlider() {
@@ -71,8 +28,8 @@ export default function TeacherSlider() {
   const startAutoSlide = () => {
     stopAutoSlide();
     intervalRef.current = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % teachers.length);
-    }, 2000);
+      nextSlide();
+    }, 4000);
   };
 
   const stopAutoSlide = () => {
@@ -80,6 +37,14 @@ export default function TeacherSlider() {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % teachers.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + teachers.length) % teachers.length);
   };
 
   useEffect(() => {
@@ -97,54 +62,60 @@ export default function TeacherSlider() {
 
   return (
     <section
-      className="py-16 relative overflow-hidden"
-      style={{ backgroundColor: 'transparent' }}
+      className="py-20 px-4 bg-transparent relative overflow-hidden mt-[4rem]"
       onMouseEnter={stopAutoSlide}
       onMouseLeave={startAutoSlide}
     >
       {/* Title */}
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-[#150e70] mb-4">
-          Our Teacher
-        </h2>
-        <div className="flex justify-center items-center">
-          <span className="w-10 h-px bg-blue-700 mx-2" />
-          <svg
-            className="w-6 h-6 text-purple-300"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 2L15 8H9L12 2ZM12 22L9 16H15L12 22Z" />
-          </svg>
-          <span className="w-10 h-px bg-blue-900 mx-2" />
+      <div className="text-center mb-14">
+        <h2 className="text-5xl font-extrabold text-indigo-800 mb-4">Our Beloved Teachers</h2>
+        <p className="text-lg text-indigo-600 max-w-xl mx-auto">Meet the guiding lights of your yogic journey</p>
+        <div className="mt-6 flex justify-center items-center gap-4">
+          <span className="w-10 h-1 bg-indigo-500 rounded-full" />
+          <span className="w-4 h-4 bg-indigo-300 rounded-full" />
+          <span className="w-10 h-1 bg-purple-500 rounded-full" />
         </div>
       </div>
 
+      {/* Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10"
+        aria-label="Previous"
+      >
+        <ChevronLeft size={28} />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10"
+        aria-label="Next"
+      >
+        <ChevronRight size={28} />
+      </button>
+
       {/* Cards */}
-      <div className="max-w-7xl mx-auto flex justify-center gap-10 flex-wrap px-4 transition-all duration-700 ease-in-out mt-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 transition-all duration-500 ease-in-out px-4">
         {getVisibleTeachers().map((teacher, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center transition-transform transform hover:scale-105"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            className="relative bg-white rounded-2xl shadow-lg border border-purple-100 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center p-5"
           >
             <Link href="/about">
-              <div className="rounded-full border-4 border-rose-300 overflow-hidden w-48 h-48 mb-5 cursor-pointer">
+              <div className="rounded-full overflow-hidden w-36 h-36 border-4 border-indigo-300 mb-4 cursor-pointer">
                 <Image
                   src={teacher.image}
                   alt={teacher.name}
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-cover"
+                  width={144}
+                  height={144}
+                  className="object-cover w-full h-full"
                 />
               </div>
             </Link>
-            <div className="bg-blue-600 text-white font-semibold px-6 py-2 rounded-md text-center w-full max-w-[180px]">
-              {teacher.name}
-            </div>
-            <p className="text-blue-900 mt-2">{teacher.handle}</p>
+            <h3 className="text-xl font-semibold text-indigo-800">{teacher.name}</h3>
+            <p className="text-sm text-purple-600 mt-1">{teacher.handle}</p>
           </motion.div>
         ))}
       </div>
