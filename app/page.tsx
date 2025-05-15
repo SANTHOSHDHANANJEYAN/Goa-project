@@ -78,7 +78,8 @@ export default function Home() {
                 {[
                   { src: '/new200.png', alt: 'RYS 200', label: 'RYS 200' },
                   { src: '/new300.png', alt: 'RYS 300', label: 'RYS 300' },
-                  { src: '/rpysall.png', alt: 'RYS 500', label: 'RPYS' },
+                  { src: '/rpysall.png', alt: 'RPYS', label: 'RPYS' },
+                  { src: '/rpysall.png', alt: 'YACEP', label: 'YACEP' },
                 ].map((item, index) => (
                   <div
                     key={index}
@@ -104,15 +105,13 @@ export default function Home() {
             “Freedom, love, care, and support are the main philosophies of the community.”
           </p>
 
-          <div className="animate-bounce absolute bottom-0 left-1/2 transform -translate-x-1/2 text-yellow-300 text-3xl">
-            <span className="animate-ping h-3 w-3 rounded-full bg-yellow-400 opacity-75 inline-block" />
-          </div>
+          
         </div>
       </section>
  <ServicesPreview />
       <section className="py-8 bg-transparent text-primary-foreground">
         <div className="flex justify-center items-center px-4 sm:px-6 lg:px-8 relative">
-          <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-1000 ease-in-out ring-4 ring-yellow-300/40">
+          <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-1000 ease-in-out  ">
   <img
     src="/image.png"
     alt="Scenic Goa"
@@ -178,14 +177,7 @@ export default function Home() {
       This sacred practice of movement, breath, and mindfulness empowers you to discover peace, purpose, and clarity — already residing within.
     </p>
 
-    <div className="mt-8">
-      <a
-        href="/courses"
-        className="inline-block px-8 py-3 text-lg font-medium rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
-      >
-        Explore Our Trainings
-      </a>
-    </div>
+    
   </div>
 </section>
 

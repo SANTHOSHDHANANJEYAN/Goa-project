@@ -131,7 +131,7 @@ const FiftyHourTTPage = () => {
       {/* Training Schedule */}
       <section className="mb-20">
         <h2 className="text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
-        <div className="bg-indigo-50 p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
+        <div className="bg-[#fcdede] p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
           <p className="mb-4 font-medium text-lg">Intensive Format (50-hours)</p>
           <p className="mb-1">🗓 May 26 – June 16, 2025</p>
           <p className="mb-1">📍 Location: Goa</p>
@@ -278,9 +278,9 @@ const FiftyHourTTPage = () => {
         {/* Certification badges */}
         <div className="flex gap-10">
           {[
-            { level: "200", src: "/rys 200.png" },
-            { level: "RPYS", src: "/rpysall.png" },
-            { level: "300", src: "/300 rys.png" },
+            { level: "200", src: "/new200.png" },
+            { level: "RPYS", src: "/new300.png" },
+            { level: "300", src: "/rpysall.png" },
           ].map(({ level, src }, i) => (
             <div key={i} className="flex flex-col items-center">
               <div className="relative w-16 h-16 mb-2">

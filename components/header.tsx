@@ -183,7 +183,7 @@ export default function Header() {
           {/* Logo Center */}
           <div className="flex justify-center">
             <Link href="/" className="flex-shrink-0">
-              <Image src="/YA2.png" alt="Rishikul" width={120} height={60} className="object-contain" />
+              <Image src="/logo30-removebg-preview.png" alt="Rishikul" width={120} height={60} className="object-contain" />
             </Link>
           </div>
 
@@ -214,19 +214,19 @@ export default function Header() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="p-4 h-full flex flex-col">
-            <div className="flex justify-between items-center mb-6 ml-12">
+            <div className="flex justify-between items-center mb-6 ml-[1rem]">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                <Image src="/YA2.png" alt="Rishikul" width={120} height={40} className="ml-6" />
+                <Image src="/logo30-removebg-preview.png" alt="Rishikul" width={120} height={30} className="ml-6" />
               </Link>
               <Button variant="ghost" size="icon" className="hover:bg-transparent focus:bg-transparent active:bg-transparent" onClick={() => setMobileMenuOpen(false)}>
                 <X size={24} />
               </Button>
             </div>
-            <nav className="space-y-4 text-blue-900">{renderDrawerNav()}</nav>
+            <nav className="space-y-4 text-blue-900 pl-[0.5rem]">{renderDrawerNav()}</nav>
 
             <div className="mt-auto mb-8 pt-4">
-              <div className="relative w-full h-[100px] rounded-lg overflow-hidden">
-                <Image src="/yg_logo-removebg-preview.png" alt="Yoga image" width={120} height={50} className="object-cover ml-16" />
+              <div className="relative w-full h-[90px] rounded-lg overflow-hidden">
+                <Image src="/yg_logo-removebg-preview.png" alt="Yoga image" width={120} height={50} className="object-cover ml-[2rem]" />
               </div>
             </div>
           </div>

@@ -88,7 +88,7 @@ const CodeOfConduct = () => {
         </div>
 
         {/* Right Side: Features (updated) */}
-        <div className="space-y-10">
+        <div className="space-y-10 pt-[3rem]">
           {features.map((item, index) => (
             <div key={index} className="flex items-start gap-4">
               <div className="mt-1">{item.icon}</div>
