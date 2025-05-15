@@ -117,8 +117,8 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md shadow-sm py-3 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
-          <div className="flex items-center gap-6">
-            <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
+          <div className="flex items-center gap-6 ">
+            <Button variant="ghost" size="icon" className="hover:bg-transparent focus:bg-transparent active:bg-transparent" onClick={() => setMobileMenuOpen(true)}>
               <Menu size={24} />
             </Button>
 
@@ -218,7 +218,7 @@ export default function Header() {
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                 <Image src="/YA2.png" alt="Rishikul" width={120} height={40} className="ml-6" />
               </Link>
-              <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
+              <Button variant="ghost" size="icon" className="hover:bg-transparent focus:bg-transparent active:bg-transparent" onClick={() => setMobileMenuOpen(false)}>
                 <X size={24} />
               </Button>
             </div>

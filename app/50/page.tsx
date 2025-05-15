@@ -12,8 +12,11 @@ import AnimateButton from "@/components/50hr/AnimateButton";
 import TestimonialSection from "@/components/50hr/TestimonialSection";
 import AboutTraining from "@/components/50hr/AboutTraining";
 import YogaHighlights from "@/components/50hr/training";
-import Accommodation from "@/components/accommodation";
+
 import AccommodationSlider from "@/components/AccommodationSlider";
+import TeachersSection from "@/components/TeachersSection";
+
+
 
 
 const TwoHundredHourTTPage = () => {
@@ -109,7 +112,7 @@ const TwoHundredHourTTPage = () => {
       <CurriculumSection/>
 
       {/* Instructor Info */}
-      <section className="mb-20">
+      {/* <section className="mb-20">
         <h2 className="text-3xl font-bold text-center mb-6 text-[#150e70]">Meet Your Instructors</h2>
         <p className="text-center text-[#150e70] max-w-3xl mx-auto mb-6 ">
           Our experienced team brings decades of collective practice from multiple yoga disciplines.
@@ -123,7 +126,8 @@ const TwoHundredHourTTPage = () => {
             objectFit="cover"
           />
         </div>
-      </section>
+      </section> */}
+      
 
       {/* Training Schedule */}
       <section className="mb-20">
@@ -137,6 +141,8 @@ const TwoHundredHourTTPage = () => {
         </div>
       </section>
 
+<TeachersSection/>
+
       {/* Accommodation Section - Scenic */}
       <section
   className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
@@ -144,6 +150,7 @@ const TwoHundredHourTTPage = () => {
     backgroundImage: "url('/56.jpg')",
   }}
 >
+  
 
         <div className="bg-black bg-opacity-50 absolute inset-0"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
