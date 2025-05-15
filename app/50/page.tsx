@@ -258,7 +258,7 @@ const TwoHundredHourTTPage = () => {
         After Completing the Course...
       </h3>
 
-      <div className="flex justify-center items-center gap-10  mr-24">
+      <div className="flex justify-center items-center gap-10 pb-[1rem]">
         {/* Yellow area image (uploaded image) */}
         <div className="relative w-16 h-16    ">
           <Image
@@ -290,7 +290,7 @@ const TwoHundredHourTTPage = () => {
         </div>
       </div>
 
-      <p className="text-sm text-[#150e70]">
+      <p className="text-medium text-[#150e70]">
         You’ll receive a Yoga Alliance certificate —<br />
         internationally recognized and accepted.
       </p>
