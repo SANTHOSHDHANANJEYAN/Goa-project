@@ -16,7 +16,7 @@ const trainingDates = [
 
 const YogaTeacherTraining = () => {
   return (
-    <section className="bg-white py-16 px-4 md:px-20">
+    <section className="bg-transparent py-16 px-4 md:px-20">
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">

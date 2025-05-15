@@ -1,13 +1,64 @@
-// components/AboutTraining.tsx
 import { FaCertificate, FaUtensils } from "react-icons/fa";
 import { GiMeditation } from "react-icons/gi";
 import { MdOnlinePrediction } from "react-icons/md";
 import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 export default function AboutTraining() {
+  const ref = useRef(null);
+  const controls = useAnimation();
+  const [sectionRef, inView] = useInView({ threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.3,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
+  const iconList = [
+    {
+      Icon: FaCertificate,
+      text: "Yoga Alliance accredited certificate (worldwide)",
+      size: 20,
+    },
+    {
+      Icon: GiMeditation,
+      text: "20 days / 19 nights in a boutique resort in Goa.",
+      size: 22,
+    },
+    {
+      Icon: FaUtensils,
+      text: "Daily delicious vegan/vegetarian meals a day (buffet style)",
+      size: 20,
+    },
+    {
+      Icon: MdOnlinePrediction,
+      text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course",
+      size: 22,
+    },
+  ];
+
   return (
     <section className="relative py-16 px-6 md:px-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10">
+      <div
+        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10"
+        ref={sectionRef}
+      >
         {/* Left Text Content */}
         <div>
           <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2">
@@ -21,22 +72,19 @@ export default function AboutTraining() {
           </h2>
 
           <ul className="space-y-4 text-[#150e70]">
-            <li className="flex items-start gap-3">
-              <FaCertificate className="text-[#150e70] mt-1" size={20} />
-              Yoga Alliance accredited certificate (worldwide)
-            </li>
-            <li className="flex items-start gap-3">
-              <GiMeditation className="text-[#150e70] mt-1" size={22} />
-              20 days / 19 nights in a boutique resort in Goa.
-            </li>
-            <li className="flex items-start gap-3">
-              <FaUtensils className="text-[#150e70] mt-1" size={20} />
-              Daily delicious vegan/vegetarian meals a day (buffet style)
-            </li>
-            <li className="flex items-start gap-3">
-              <MdOnlinePrediction className="text-[#150e70] mt-1" size={22} />
-              BONUS: lifelong access to our Online 200hr Yoga Alliance course
-            </li>
+            {iconList.map(({ Icon, text, size }, i) => (
+              <motion.li
+                className="flex items-start gap-3"
+                key={i}
+                custom={i}
+                initial="hidden"
+                animate={controls}
+                variants={itemVariants}
+              >
+                <Icon className="text-[#150e70] mt-1" size={size} />
+                {text}
+              </motion.li>
+            ))}
           </ul>
         </div>
 

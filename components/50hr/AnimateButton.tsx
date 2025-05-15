@@ -41,8 +41,8 @@ const HeroSection: React.FC = () => {
 
       {/* Full-Width Content */}
       <div className="relative z-10 w-full text-center">
-        <h2 className="text-xl font-semibold uppercase tracking-wider mb-2 text-shadow-md">Rishikul Yogshala Goa</h2>
-        <h1 className="text-3xl md:text-[26px] font-bold mb-6 leading-relaxed text-shadow-md">
+        <h2 className="text-xl font-normal uppercase tracking-wider mb-2 text-shadow-md font-sans">Rishikul Yogshala Goa</h2>
+        <h1 className="font-sans text-white  md:text-[35px] font-semibold leading-relaxed">
           Join our life-changing community of over 34,000 students.
           <br />
           Become part of our family at one of the leading accredited
@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
             <p>Google and Facebook</p>
           </div>
           <div>
-            <p className="text-2xl font-bold">200k+</p>
+            <p className="text-2xl font-bold">2k+</p>
             <p>Instagram & Facebook community</p>
           </div>
         </div>

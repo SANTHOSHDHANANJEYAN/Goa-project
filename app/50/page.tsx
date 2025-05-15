@@ -11,8 +11,10 @@ import BatchScheduleTable from "@/components/50hr/BatchScheduleTable";
 import AnimateButton from "@/components/50hr/AnimateButton";
 import TestimonialSection from "@/components/50hr/TestimonialSection";
 import AboutTraining from "@/components/50hr/AboutTraining";
-import RetreatSchedule from "@/components/50hr/RetreatSchedule";
 import YogaHighlights from "@/components/50hr/training";
+import Accommodation from "@/components/accommodation";
+import AccommodationSlider from "@/components/AccommodationSlider";
+
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -20,9 +22,9 @@ const TwoHundredHourTTPage = () => {
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
-         50-hrs Accredited Yoga Teacher Training
+         50-Hrs Mulit-Style Yoga Teacher Training
         </h2>
-        <p className="text-lg text-[#150e70]">In Goa</p>
+        <p className="text-[2rem] text-[#150e70]">In Goa</p>
       </div>
 
      <h1 className="text-lg md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
@@ -76,48 +78,7 @@ const TwoHundredHourTTPage = () => {
 </div>
 
       {/* Certificate Info */}
-    <section className="text-center mb-8 relative">
-      <h3 className="text-2xl font-semibold text-[#150e70] mb-6">
-        After Completing the Course...
-      </h3>
-
-      <div className="flex justify-center items-center gap-10  mr-24">
-        {/* Yellow area image (uploaded image) */}
-        <div className="relative w-28 h-28">
-          <Image
-            src="/YAlogo-removebg-preview.png"
-            alt="Yoga Visual Icon"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
-
-        {/* Certification badges */}
-        <div className="flex gap-10">
-          {[
-            { level: "200", src: "/rys 200.png" },
-            { level: "RPYS", src: "/rpysall.png" },
-            { level: "300", src: "/300 rys.png" },
-          ].map(({ level, src }, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <div className="relative w-16 h-16 mb-2">
-                <Image
-                  src={src}
-                  alt={`RYS ${level} Badge`}
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <p className="text-sm text-[#150e70]">
-        You’ll receive a Yoga Alliance certificate —<br />
-        internationally recognized and accepted.
-      </p>
-    </section>
+    
 
 
 <AboutTraining/>
@@ -192,7 +153,7 @@ const TwoHundredHourTTPage = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
           <p className="text-lg mb-10">Palm Paradise Resort amidst jungle paradise in Goa</p>
 
-          <div className="grid md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto">
+          <div className="flex flex-col text-left max-w-3xl mx-auto gap-12 items-center pt-[2rem]"> 
             <div className="flex items-start space-x-4">
               <img src="/icons/waterfall-icon.svg" alt="Waterfalls" className="w-8 h-8 mt-1" />
               <p>
@@ -207,7 +168,7 @@ const TwoHundredHourTTPage = () => {
                 3 biggest parks in a 20-minute drive
               </p>
             </div>
-            <div className="flex items-start space-x-4">
+            <div className="flex items-start space-x-4 pl-[3rem]">
               <img src="/icons/beach-icon.svg" alt="Beaches" className="w-8 h-8 mt-1" />
               <p>
                 <strong>Enjoy swimming, surfing and relaxation:</strong><br />
@@ -218,6 +179,7 @@ const TwoHundredHourTTPage = () => {
         </div>
       </section>
 
+      <AccommodationSlider/>
     
       <ActivitiesSection/>
        {/* Course Details Section */}
@@ -290,9 +252,50 @@ const TwoHundredHourTTPage = () => {
       />
 
       {/* Application Form */}
-      <ApplicationForm
-        
-      />
+      <ApplicationForm/>
+
+      <section className="text-center mb-8 relative">
+      <h3 className="text-2xl font-semibold text-[#150e70] mb-6">
+        After Completing the Course...
+      </h3>
+
+      <div className="flex justify-center items-center gap-10  mr-24">
+        {/* Yellow area image (uploaded image) */}
+        <div className="relative w-16 h-16  ">
+          <Image
+            src="/YAlogo-removebg-preview.png"
+            alt="Yoga Visual Icon"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+
+        {/* Certification badges */}
+        <div className="flex gap-10">
+          {[
+            { level: "200", src: "/rys 200.png" },
+            { level: "RPYS", src: "/rpysall.png" },
+            { level: "300", src: "/300 rys.png" },
+          ].map(({ level, src }, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <div className="relative w-16 h-16 mb-2">
+                <Image
+                  src={src}
+                  alt={`RYS ${level} Badge`}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <p className="text-sm text-[#150e70]">
+        You’ll receive a Yoga Alliance certificate —<br />
+        internationally recognized and accepted.
+      </p>
+    </section>
     </div>
   );
 };
