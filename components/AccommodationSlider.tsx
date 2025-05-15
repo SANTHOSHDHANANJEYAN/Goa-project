@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const images = ['/1.jpg', '/2.jpg', '/3.jpg','/3.jpg','/3.jpg','/3.jpg','/3.jpg','/3.jpg','/3.jpg','/3.jpg','/3.jpg'];
+const images = ['/1.jpg', '/2.jpg', '/3.jpg','/1.jpg','/2.jpg','/3.jpg','/1.jpg','/2.jpg','/3.jpg','/1.jpg','/2.jpg','/3.jpg'];
 
 export default function AccommodationSlider() {
   return (
@@ -16,10 +16,10 @@ export default function AccommodationSlider() {
       <div className="max-w-6xl mx-auto px-4 relative">
 
         {/* Custom Arrows */}
-        <div className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/70 rounded-full shadow hover:bg-white transition">
+        <div className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2  rounded-full ">
           <ChevronLeft size={20} />
         </div>
-        <div className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/70 rounded-full shadow hover:bg-white transition">
+        <div className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full ">
           <ChevronRight size={20} />
         </div>
 

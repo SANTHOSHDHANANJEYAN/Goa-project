@@ -28,27 +28,27 @@ const TwoHundredHourTTPage = () => {
       </div>
 
      <h1 className="text-lg md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
-  Become a Certified Yoga Teacher by Yoga Alliance
-</h1>
+     Become a Certified Yoga Teacher by Yoga Alliance
+     </h1>
 
       <p className="text-lg text-center text-[#150e70] mb-6">
         Join an exciting and life-changing 50-hours journey in Goa
       </p>
 
      <div className="flex justify-center items-end text-center gap-8 mb-4">
-  <div>
-    <span className="text-4xl font-bold text-green-600 block">USD 350</span>
-    <span className="text-sm text-[#150e70]">Private Room</span>
-  </div>
-  <div>
-    <span className="text-4xl font-bold text-green-600 block">USD 500</span>
-    <span className="text-sm text-[#150e70]">Shared Room</span>
-  </div>
-</div>
-   <div className="flex justify-center gap-6 mb-6">
-  <p className="text-sm text-[#150e70]">Duration-50 Hrs</p>
-  <p className="text-sm text-[#150e70]">Language-English</p>
-</div>
+      <div>
+        <span className="text-4xl font-bold text-green-600 block">USD 350</span>
+        <span className="text-sm text-[#150e70]">Private Room</span>
+      </div>
+      <div>
+        <span className="text-4xl font-bold text-green-600 block">USD 500</span>
+        <span className="text-sm text-[#150e70]">Shared Room</span>
+      </div>
+    </div>
+      <div className="flex justify-center gap-6 mb-6">
+      <p className="text-sm text-[#150e70]">Duration-50 Hrs</p>
+      <p className="text-sm text-[#150e70]">Language-English</p>
+      </div>
 
 
       <div className="text-center mb-6">
@@ -65,23 +65,21 @@ const TwoHundredHourTTPage = () => {
 
       {/* Hero Image */}
      <div className="flex justify-center items-center bg-transparent">
-  <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
-    <Image
-      src="/course2.jpg"
-      alt="Yoga retreat in Bali"
-      width={1200}
-      height={900}
-      className="object-cover max-h-[500px]"
-      priority
-    />
-  </div>
-</div>
+        <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
+          <Image
+            src="/course2.jpg"
+            alt="Yoga retreat in Bali"
+            width={1200}
+            height={900}
+            className="object-cover max-h-[500px]"
+            priority
+          />
+        </div>
+      </div>
 
       {/* Certificate Info */}
-    
 
-
-<AboutTraining/>
+  <AboutTraining/>
       {/* About Section */}
   <AnimateButton/>
 
@@ -157,7 +155,8 @@ const TwoHundredHourTTPage = () => {
             <div className="flex items-start space-x-4">
               <img src="/icons/waterfall-icon.svg" alt="Waterfalls" className="w-8 h-8 mt-1" />
               <p>
-                <strong>Discover Goa's cascade gems:</strong><br />
+                <strong>Discover Goa's cascade gems:</strong>
+                <br />
                 more than 10 waterfalls within 10 km
               </p>
             </div>
@@ -184,7 +183,7 @@ const TwoHundredHourTTPage = () => {
       <ActivitiesSection/>
        {/* Course Details Section */}
       <BatchScheduleTable/>
-<TestimonialSection/>
+      <TestimonialSection/>
       {/* Testimonials */}
       <TestimonialCarousel
         testimonials={[
@@ -202,7 +201,7 @@ const TwoHundredHourTTPage = () => {
           },
         ]}
       />
-<YogaHighlights/>
+      <YogaHighlights/>
       {/* FAQ */}
       <FAQSection
         title="Frequently Asked Questions"
@@ -261,7 +260,7 @@ const TwoHundredHourTTPage = () => {
 
       <div className="flex justify-center items-center gap-10  mr-24">
         {/* Yellow area image (uploaded image) */}
-        <div className="relative w-16 h-16  ">
+        <div className="relative w-16 h-16    ">
           <Image
             src="/YAlogo-removebg-preview.png"
             alt="Yoga Visual Icon"
