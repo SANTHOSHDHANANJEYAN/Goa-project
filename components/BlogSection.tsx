@@ -40,7 +40,7 @@ const BlogSection = () => {
               date: "December 10, 2024",
               link: "",
             },
-          ].map((post, index) => (
+          ].map((post) => (
             <div
               key={post.title}
               className="rounded-2xl overflow-hidden shadow-lg bg-white group transition-transform transform hover:-translate-y-1 hover:shadow-2xl"
@@ -62,17 +62,22 @@ const BlogSection = () => {
                   {post.title}
                 </h3>
                 <p className="text-gray-600 mt-2">{post.excerpt}</p>
-                <Link href={post.link} legacyBehavior>
-                  <a className="inline-block mt-4 text-[#150e70] hover:underline font-medium">
+                {post.link ? (
+                  <Link
+                    href={post.link}
+                    className="inline-block mt-4 text-[#150e70] hover:underline font-medium"
+                  >
                     Read More »
-                  </a>
-                </Link>
+                  </Link>
+                ) : (
+                  <span className="inline-block mt-4 text-gray-400 cursor-not-allowed">
+                    Coming Soon
+                  </span>
+                )}
               </div>
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );
