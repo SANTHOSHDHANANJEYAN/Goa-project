@@ -11,15 +11,14 @@ import BatchScheduleTable from "@/components/50hr/BatchScheduleTable";
 import AnimateButton from "@/components/50hr/AnimateButton";
 import TestimonialSection from "@/components/50hr/TestimonialSection";
 import AboutTraining from "@/components/50hr/AboutTraining";
-import YogaHighlights from "@/components/50hr/training";
-
+import YogaHighlights from "@/components/50hr/YogaHighlights";
 import AccommodationSlider from "@/components/AccommodationSlider";
 import TeachersSection from "@/components/TeachersSection";
 
 
 
 
-const TwoHundredHourTTPage = () => {
+const FiftyHourTTPage = () => {
   return (
     <div className="mt-24  max-w-6xl mx-auto text-gray-800">
       {/* Header Info */}
@@ -306,4 +305,4 @@ const TwoHundredHourTTPage = () => {
   );
 };
 
-export default TwoHundredHourTTPage;
+export default FiftyHourTTPage;

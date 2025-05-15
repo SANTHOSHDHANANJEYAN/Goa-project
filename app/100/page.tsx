@@ -4,17 +4,16 @@ import React from "react";
 import Image from "next/image";
 import TestimonialCarousel from "@/components/testimonials-section";
 import FAQSection from "@/components/FAQSection";
-import ApplicationForm from "@/components/50hr/ApplicationForm";
-import CurriculumSection from "@/components/50hr/CurriculumSection";
-import ActivitiesSection from "@/components/50hr/ActivitiesSection";
-import BatchScheduleTable from "@/components/50hr/BatchScheduleTable";
-import AnimateButton from "@/components/50hr/AnimateButton";
-import TestimonialSection from "@/components/50hr/TestimonialSection";
-import AboutTraining from "@/components/50hr/AboutTraining";
-import RetreatSchedule from "@/components/50hr/RetreatSchedule";
-import YogaHighlights from "@/components/50hr/training";
+import AboutTraining100 from "@/components/100hr/AboutTraining100";
+import AnimateButton100 from "@/components/100hr/AnimateButton100";
+import CurriculumSection100 from "@/components/100hr/CurriculumSection100";
+import ActivitiesSection100 from "@/components/100hr/ActivitiesSection100";
+import BatchScheduleTable100 from "@/components/100hr/BatchScheduleTable100";
+import TestimonialSection100 from "@/components/100hr/TestimonialSection100";
+import YogaHighlights100 from "@/components/100hr/YogaHighlights100";
+import ApplicationForm100 from "@/components/100hr/ApplicationForm100";
 
-const TwoHundredHourTTPage = () => {
+const HundredHourTTPage = () => {
   return (
     <div className="mt-24  max-w-6xl mx-auto text-gray-800">
       {/* Header Info */}
@@ -120,9 +119,9 @@ const TwoHundredHourTTPage = () => {
     </section>
 
 
-<AboutTraining/>
+<AboutTraining100/>
       {/* About Section */}
-  <AnimateButton/>
+  <AnimateButton100/>
 
   <section className="mt-20 ">
   <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
@@ -147,7 +146,7 @@ const TwoHundredHourTTPage = () => {
 
 
       {/* Curriculum */}
-      <CurriculumSection/>
+      <CurriculumSection100/>
 
       {/* Instructor Info */}
       <section className="mb-20">
@@ -219,10 +218,10 @@ const TwoHundredHourTTPage = () => {
       </section>
 
       
-      <ActivitiesSection/>
+      <ActivitiesSection100/>
        {/* Course Details Section */}
-      <BatchScheduleTable/>
-<TestimonialSection/>
+      <BatchScheduleTable100/>
+<TestimonialSection100/>
       {/* Testimonials */}
       <TestimonialCarousel
         testimonials={[
@@ -240,7 +239,7 @@ const TwoHundredHourTTPage = () => {
           },
         ]}
       />
-<YogaHighlights/>
+<YogaHighlights100/>
       {/* FAQ */}
       <FAQSection
         title="Frequently Asked Questions"
@@ -290,11 +289,9 @@ const TwoHundredHourTTPage = () => {
       />
 
       {/* Application Form */}
-      <ApplicationForm
-        
-      />
+      <ApplicationForm100/>
     </div>
   );
 };
 
-export default TwoHundredHourTTPage;
+export default HundredHourTTPage;

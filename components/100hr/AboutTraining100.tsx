@@ -4,7 +4,7 @@ import { GiMeditation } from "react-icons/gi";
 import { MdOnlinePrediction } from "react-icons/md";
 import Image from "next/image";
 
-export default function AboutTraining() {
+export default function AboutTraining100() {
   return (
     <section className="relative py-16 px-6 md:px-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10">

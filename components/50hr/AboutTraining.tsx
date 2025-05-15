@@ -67,7 +67,7 @@ export default function AboutTraining() {
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
             Join us for an immersive <br />
-            20 days 200-hours Yoga Alliance <br />
+            20 days 50-hours Yoga Alliance <br />
             Certified Teacher training
           </h2>
 

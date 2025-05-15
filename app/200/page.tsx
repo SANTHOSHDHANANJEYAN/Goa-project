@@ -4,15 +4,14 @@ import React from "react";
 import Image from "next/image";
 import TestimonialCarousel from "@/components/testimonials-section";
 import FAQSection from "@/components/FAQSection";
-import ApplicationForm from "@/components/50hr/ApplicationForm";
-import CurriculumSection from "@/components/50hr/CurriculumSection";
-import ActivitiesSection from "@/components/50hr/ActivitiesSection";
-import BatchScheduleTable from "@/components/50hr/BatchScheduleTable";
-import AnimateButton from "@/components/50hr/AnimateButton";
-import TestimonialSection from "@/components/50hr/TestimonialSection";
-import AboutTraining from "@/components/50hr/AboutTraining";
-import RetreatSchedule from "@/components/50hr/RetreatSchedule";
-import YogaHighlights from "@/components/50hr/training";
+import AboutTraining200 from "@/components/200hr/AboutTraining200";
+import AnimateButton200 from "@/components/200hr/AnimateButton200";
+import CurriculumSection200 from "@/components/200hr/CurriculumSection200";
+import ActivitiesSection200 from "@/components/200hr/ActivitiesSection200";
+import BatchScheduleTable200 from "@/components/200hr/BatchScheduleTable200";
+import TestimonialSection200 from "@/components/200hr/TestimonialSection200";
+import YogaHighlights200 from "@/components/200hr/YogaHighlights200";
+import ApplicationForm200 from "@/components/200hr/ApplicationForm200";
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -120,9 +119,9 @@ const TwoHundredHourTTPage = () => {
     </section>
 
 
-<AboutTraining/>
+<AboutTraining200/>
       {/* About Section */}
-  <AnimateButton/>
+  <AnimateButton200/>
 
   <section className="mt-20 ">
   <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
@@ -147,7 +146,7 @@ const TwoHundredHourTTPage = () => {
 
 
       {/* Curriculum */}
-      <CurriculumSection/>
+      <CurriculumSection200/>
 
       {/* Instructor Info */}
       <section className="mb-20">
@@ -219,10 +218,10 @@ const TwoHundredHourTTPage = () => {
       </section>
 
       
-      <ActivitiesSection/>
+      <ActivitiesSection200/>
        {/* Course Details Section */}
-      <BatchScheduleTable/>
-<TestimonialSection/>
+      <BatchScheduleTable200/>
+<TestimonialSection200/>
       {/* Testimonials */}
       <TestimonialCarousel
         testimonials={[
@@ -240,7 +239,7 @@ const TwoHundredHourTTPage = () => {
           },
         ]}
       />
-<YogaHighlights/>
+<YogaHighlights200/>
       {/* FAQ */}
       <FAQSection
         title="Frequently Asked Questions"
@@ -290,9 +289,7 @@ const TwoHundredHourTTPage = () => {
       />
 
       {/* Application Form */}
-      <ApplicationForm
-        
-      />
+      <ApplicationForm200/>
     </div>
   );
 };

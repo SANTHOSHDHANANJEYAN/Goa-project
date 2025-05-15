@@ -4,23 +4,22 @@ import React from "react";
 import Image from "next/image";
 import TestimonialCarousel from "@/components/testimonials-section";
 import FAQSection from "@/components/FAQSection";
-import ApplicationForm from "@/components/50hr/ApplicationForm";
-import CurriculumSection from "@/components/50hr/CurriculumSection";
-import ActivitiesSection from "@/components/50hr/ActivitiesSection";
-import BatchScheduleTable from "@/components/50hr/BatchScheduleTable";
-import AnimateButton from "@/components/50hr/AnimateButton";
-import TestimonialSection from "@/components/50hr/TestimonialSection";
-import AboutTraining from "@/components/50hr/AboutTraining";
-import RetreatSchedule from "@/components/50hr/RetreatSchedule";
-import YogaHighlights from "@/components/50hr/training";
+import AboutTraining21 from "@/components/21days/AboutTraining21";
+import AnimateButton21 from "@/components/21days/AnimateButton21";
+import CurriculumSection21 from "@/components/21days/CurriculumSection21";
+import ActivitiesSection21 from "@/components/21days/ActivitiesSection21";
+import BstchScheduleTable21 from "@/components/21days/BstchScheduleTable21";
+import TestimonialSection21 from "@/components/21days/TestimonialSection21";
+import YogaHighlights21 from "@/components/21days/YogaHighlights21";
+import ApplicationForm21 from "@/components/21days/ApplicationForm21";
 
-const TwoHundredHourTTPage = () => {
+const TwentyOneTTPage = () => {
   return (
     <div className="mt-24  max-w-6xl mx-auto text-gray-800">
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
-         50-hrs Accredited Yoga Teacher Training
+         21-Days Yoga Teacher Training
         </h2>
         <p className="text-lg text-[#150e70]">In Goa</p>
       </div>
@@ -30,7 +29,7 @@ const TwoHundredHourTTPage = () => {
 </h1>
 
       <p className="text-lg text-center text-[#150e70] mb-6">
-        Join an exciting and life-changing 50-hours journey in Goa
+        Join an exciting and life-changing 21-Days journey in Goa
       </p>
 
      <div className="flex justify-center items-end text-center gap-8 mb-4">
@@ -44,7 +43,7 @@ const TwoHundredHourTTPage = () => {
   </div>
 </div>
    <div className="flex justify-center gap-6 mb-6">
-  <p className="text-sm text-[#150e70]">Duration-50 Hrs</p>
+  <p className="text-sm text-[#150e70]">Duration-21-Days</p>
   <p className="text-sm text-[#150e70]">Language-English</p>
 </div>
 
@@ -120,9 +119,9 @@ const TwoHundredHourTTPage = () => {
     </section>
 
 
-<AboutTraining/>
+<AboutTraining21/>
       {/* About Section */}
-  <AnimateButton/>
+  <AnimateButton21/>
 
   <section className="mt-20 ">
   <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
@@ -147,7 +146,7 @@ const TwoHundredHourTTPage = () => {
 
 
       {/* Curriculum */}
-      <CurriculumSection/>
+      <CurriculumSection21/>
 
       {/* Instructor Info */}
       <section className="mb-20">
@@ -218,11 +217,11 @@ const TwoHundredHourTTPage = () => {
         </div>
       </section>
 
-      <RetreatSchedule/>
-      <ActivitiesSection/>
+      
+      <ActivitiesSection21/>
        {/* Course Details Section */}
-      <BatchScheduleTable/>
-<TestimonialSection/>
+      <BstchScheduleTable21/>
+<TestimonialSection21/>
       {/* Testimonials */}
       <TestimonialCarousel
         testimonials={[
@@ -240,7 +239,7 @@ const TwoHundredHourTTPage = () => {
           },
         ]}
       />
-<YogaHighlights/>
+<YogaHighlights21/>
       {/* FAQ */}
       <FAQSection
         title="Frequently Asked Questions"
@@ -290,11 +289,9 @@ const TwoHundredHourTTPage = () => {
       />
 
       {/* Application Form */}
-      <ApplicationForm
-        
-      />
+      <ApplicationForm21/>
     </div>
   );
 };
 
-export default TwoHundredHourTTPage;
+export default TwentyOneTTPage;

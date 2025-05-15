@@ -6,7 +6,7 @@ const FreeManualSignup: React.FC = () => {
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
       <div className="relative z-10 max-w-4xl mx-auto px-4 flex flex-col items-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] mb-4">
-          Get your FREE <br className="sm:hidden" /> 200-hour study manual
+          Get your FREE <br className="sm:hidden" /> 50-hour study manual
         </h2>
         <p className="text-[#150e70] max-w-xl mb-8">
           and 5 video lessons to discover the fundamental principles of creating your own

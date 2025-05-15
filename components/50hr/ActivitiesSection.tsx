@@ -38,13 +38,19 @@ const activities: Activity[] = [
     description:
       "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
     image: "/Cultural.jpg",
+     },
+     {
+    title: "Cultural Excursions",
+    description:
+      "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
+    image: "/Cultural.jpg",
      }
 ];
 
 
 const ActivitiesSection: React.FC = () => {
   return (
-    <section className="bg-transparent py-16 text-center relative overflow-hidden">
+    <section className="bg-transparent py-16 text-center relative overflow-hidden ">
       {/* Optional radial background decoration */}
       <div className="absolute inset-0 opacity-10 z-0 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
 
@@ -52,11 +58,11 @@ const ActivitiesSection: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-[#150e70] mb-[8rem]">
           Activities included in the course
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[4.5rem] pl-[6rem] pr-[6rem]">
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="bg-amber-50 p-6 rounded-xl shadow hover:shadow-lg transition relative"
+              className="bg-amber-100 p-6 rounded-xl shadow hover:shadow-lg transition relative"
             >
               <div className="flex justify-center -mt-16 mb-4">
                 <img
