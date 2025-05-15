@@ -12,20 +12,20 @@ export default function Footer() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/ftvbg.mp4" type="video/mp4" />
+        <source src="/ftvbg2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Optional semi-transparent overlay */}
-      <div className="absolute inset-0  backdrop-blur-sm z-0" />
+      <div className="absolute inset-0  " />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left items-start">
         {/* Left Column */}
-        <div className="space-y-8 pl-[8rem]">
+        <div className="space-y-8 pl-[11rem] pt-[1rem]">
           <div>
-            <h3 className="text-xl font-bold border-b-4 border-[#15005c] inline-block pb-1">Programs</h3>
-            <ul className="mt-3 space-y-2">
+            <h3 className="text-[30px] font-bold border-b-4 border-[#15005c] inline-block pb-1">Programs</h3>
+            <ul className=" space-y-2 pt-[1.5rem]  font-semibold">
               <li><Link href="#">21 Days Yoga Immersion Course</Link></li>
               <li><Link href="#">50 Hr Multi-Style-Yoga TTC</Link></li>
               <li><Link href="#">100 Hr Multi-Style-Yoga TTC</Link></li>
@@ -35,8 +35,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold border-b-4 border-[#15005c] inline-block pb-1">Retreats</h3>
-            <ul className="mt-3 space-y-2">
+            <h3 className="text-[30px] font-bold border-b-4 border-[#15005c] inline-block pb-1">Retreats</h3>
+            <ul className="pt-[1.5rem] space-y-2  font-semibold">
               <li><Link href="#">7 Days Holiday Retreat</Link></li>
               <li><Link href="#">14 Days Wellness Retreat</Link></li>
               <li><Link href="#">21 Days Detox Retreat</Link></li>
@@ -49,17 +49,17 @@ export default function Footer() {
           <img
             src="/logo30-removebg-preview.png"
             alt="Rishikul Yogshala Logo"
-            className="w-[180px] h-auto"
+            className="w-[300px] h-auto"
           />
         </div>
 
         {/* Right Column: Contact Info */}
         <div className="space-y-4 ml-[3rem] mt-[1rem]">
           <div>
-            <h3 className="text-xl font-bold border-b-4 border-[#15005c] inline-block pb-1">About Us</h3>
-            <p className="mt-2 font-semibold">Contacts</p>
+            <h3 className="text-[30px] font-bold border-b-4 border-[#15005c] inline-block pb-1">About Us</h3>
+            <p className="mt-[2rem] font-semibold">Contacts</p>
           </div>
-          <ul className="space-y-2 text-sm leading-relaxed">
+          <ul className="space-y-2 text-sm leading-relaxed  font-semibold">
             <li><Mail className="inline-block w-4 h-4 mr-2" /> rishikulyogshalagoa@gmail.com</li>
             <li><Phone className="inline-block w-4 h-4 mr-2" /> (555) 123-4567</li>
             <li><MapPin className="inline-block w-4 h-4 mr-2" /> 128, Thorlebag, Querim, Arambol, Goa 403524.</li>

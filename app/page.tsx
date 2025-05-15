@@ -7,6 +7,7 @@ import TeacherSlider from '@/components/TeacherSlider';
 import CodeOfConduct from '@/components/CodeOfConduct';
 import ServicesPreviews from '@/components/ServicesPreviews';
 import Appform from '@/components/Appform';
+import BlogSection from '@/components/BlogSection';
 
 export default function Home() {
   return (
@@ -136,9 +137,9 @@ export default function Home() {
           </p>
 
           <p className="text-md sm:text-lg text-gray-900 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto animate-slide-up animation-delay-400">
-            We don’t impose opinions or concepts — we expand opportunities for growth.
-            People from all over the world are undergoing transformation with us.
-            Some are just starting their journey, while others are seasoned mentors.
+            We don’t teach what to think — we open paths to explore who you truly are. 
+            With students and teachers from around the globe, each journey here is deeply personal. 
+            Whether you’re just beginning or have walked this path for years, you belong.
           </p>
 
           <div className="mt-10 animate-fade-in animation-delay-600">
@@ -151,102 +152,45 @@ export default function Home() {
       
 
 <section
-  className="relative h-[765px] overflow-hidden bg-fixed bg-cover bg-center text-white mt-16 mb-16"
+  className="relative h-[800px] overflow-hidden bg-fixed bg-center bg-cover flex items-center justify-center mt-[5rem]"
   style={{ backgroundImage: "url('/bag1.jpg')" }}
 >
-  {/* Dark overlay for text readability */}
-  <div className="absolute inset-0 bg-black/30 z-0" />
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60 z-0" />
 
-  {/* Text content */}
-  <div className="absolute inset-0 flex items-center px-8 md:px-20 z-10">
-    <div className="max-w-xl">
-      <h2 className="text-2xl md:text-4xl font-semibold leading-snug mb-2">
-        Take the Journey Inward
-      </h2>
-      <p className="text-lg md:text-xl leading-relaxed">
-        The traditional yoga journey begins with a simple, powerful step: turning your awareness inward. In a world filled with noise and distraction, this inner shift is a profound act of self-discovery. Yoga teaches that everything you seek — peace, clarity, strength, and joy — already exists within you. Through disciplined practice, self-inquiry, and silence, you learn to listen to your inner wisdom and live with greater intention.
-      </p>
-    </div>
-  </div>
-</section>
+  {/* Decorative Glow Overlay */}
+  <div className="absolute w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-3xl top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none" />
 
-      <section className="py-20 bg-transparent">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-16">
-      <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#150e70] mb-4">From Our Blog</h2>
-      <p className="text-lg text-[#150e70] max-w-2xl mx-auto">
-        Insights, stories, and guidance from our community to inspire your yoga journey.
+  {/* Content */}
+  <div className="relative z-10 max-w-4xl px-6 md:px-16 text-white">
+    <h2 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-white to-indigo-300 drop-shadow-md">
+      Take the Journey Inward
+    </h2>
+
+    <div className="mb-6 border-l-4 border-purple-400 pl-5">
+      <p className="text-lg md:text-xl font-light italic">
+        “The answers you seek aren’t far away — they’ve been within you all along. All you have to do is look inward.”
       </p>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {[
-        {
-          title: "Ultimate Guide to 200-Hour Yoga TTC in Goa",
-          excerpt:
-            "Goa, known for its stunning beaches, vibrant culture, and laid-back vibe, is also a haven for those looking to deepen their yoga journey.",
-          image: "/b2.jpg",
-          date: "December 10, 2024",
-          link: "/blogs/200-hour-guide",
-        },
-        {
-          title: "11 Reasons Why You Should Start Fasting",
-          excerpt:
-            "When we wake up, we step into a new chance to live healthy. Learn how fasting transforms your mind and body.",
-          image: "/b1.jpg",
-          date: "December 10, 2024",
-          link: "/blogs/fasting-benefits",
-        },
-        {
-          title: "Healing Through Sound: A Beginner’s Guide",
-          excerpt:
-            "Sound therapy uses vibrations to heal the mind and body. Discover how it can create harmony within.",
-          image: "/b3.jpg",
-          date: "December 10, 2024",
-          link: "/blogs/sound-healing-guide",
-        },
-      ].map((post, index) => (
-        <div
-          key={post.title}
-          className="rounded-2xl overflow-hidden shadow-lg bg-white group transition-transform transform hover:-translate-y-1 hover:shadow-2xl"
-        >
-          <div className="relative h-56 overflow-hidden">
-            <Image
-              src={post.image}
-              alt={post.title}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-              sizes="(min-width: 1024px) 33vw, 100vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-          </div>
-          <div className="p-6">
-            <span className="text-sm text-gray-400">{post.date}</span>
-            <h3 className="mt-2 text-2xl font-semibold text-gray-800 group-hover:text-blue-700 transition">
-              {post.title}
-            </h3>
-            <p className="text-gray-600 mt-2">{post.excerpt}</p>
-            <Link
-              href={post.link}
-              className="inline-block mt-4 text-[#150e70] hover:underline font-medium"
-            >
-              Read More »
-            </Link>
-          </div>
-        </div>
-      ))}
-    </div>
+    <p className="text-md md:text-lg leading-relaxed text-gray-100">
+      In today’s fast-moving world, the ancient wisdom of yoga invites you to pause and reconnect with your true self. 
+      This sacred practice of movement, breath, and mindfulness empowers you to discover peace, purpose, and clarity — already residing within.
+    </p>
 
-    <div className="text-center mt-16">
-      <Link
-        href="/blogs"
-        className="px-6 py-3 bg-[#150e70] text-white rounded-full text-lg hover:bg-blue-700 transition"
+    <div className="mt-8">
+      <a
+        href="/courses"
+        className="inline-block px-8 py-3 text-lg font-medium rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
       >
-        View All Blog Posts
-      </Link>
+        Explore Our Trainings
+      </a>
     </div>
   </div>
 </section>
+
+
+     <BlogSection/>
 
 
     <section className="md:bg-transparent relative overflow-hidden py-20">
