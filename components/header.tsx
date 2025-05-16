@@ -18,7 +18,7 @@ const leftNavigation = [
       { name: "100 Hr Multi-Style-Yoga TTC", href: "/100" },
       { name: "200 Hr Multi-Style-Yoga TTC", href: "/200" },
       { name: "300 Hr Multi-Style-Yoga TTC", href: "/300" },
-      { name: "21 Days Yoga Immersion Course", href: "/services" }
+      { name: "21 Days Yoga Immersion Course", href: "/21days" }
     ]
   },
   {

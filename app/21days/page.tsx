@@ -269,9 +269,10 @@ const TwentyOneTTPage = () => {
         {/* Certification badges */}
         <div className="flex gap-10">
           {[
-            { level: "200", src: "/rys 200.png" },
-            { level: "RPYS", src: "/rpysall.png" },
-            { level: "300", src: "/300 rys.png" },
+            { level: "200", src: "/nw200.png" },
+             { level: "300", src: "/nw300.png" },
+            { level: "RPYS", src: "/nwrpys.png" },
+           
           ].map(({ level, src }, i) => (
             <div key={i} className="flex flex-col items-center">
               <div className="relative w-16 h-16 mb-2">

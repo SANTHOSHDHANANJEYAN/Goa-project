@@ -20,7 +20,7 @@ const ThreeHundredHourTTPage = () => {
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
-         50-hrs Accredited Yoga Teacher Training
+         300-Hrs Accredited Yoga Teacher Training
         </h2>
         <p className="text-lg text-[#150e70]">In Goa</p>
       </div>
@@ -30,7 +30,7 @@ const ThreeHundredHourTTPage = () => {
 </h1>
 
       <p className="text-lg text-center text-[#150e70] mb-6">
-        Join an exciting and life-changing 50-hours journey in Goa
+        Join an exciting and life-changing 300-Hours journey in Goa
       </p>
 
      <div className="flex justify-center items-end text-center gap-8 mb-4">
@@ -250,6 +250,10 @@ const ThreeHundredHourTTPage = () => {
         ]}
       />
 
+
+
+      {/* Application Form */}
+      <ApplicationForm300/>
 <section className="text-center mb-8 relative">
       <h3 className="text-2xl font-semibold text-[#150e70] mb-6">
         After Completing the Course...
@@ -269,9 +273,9 @@ const ThreeHundredHourTTPage = () => {
         {/* Certification badges */}
         <div className="flex gap-10">
           {[
-            { level: "200", src: "/rys 200.png" },
-            { level: "RPYS", src: "/rpysall.png" },
-            { level: "300", src: "/300 rys.png" },
+            { level: "200", src: "/nw200.png" },
+             { level: "300", src: "/nw300.png" },
+            { level: "RPYS", src: "/nwrpys.png" },
           ].map(({ level, src }, i) => (
             <div key={i} className="flex flex-col items-center">
               <div className="relative w-16 h-16 mb-2">
@@ -293,8 +297,6 @@ const ThreeHundredHourTTPage = () => {
       </p>
     </section>
 
-      {/* Application Form */}
-      <ApplicationForm300/>
     </div>
   );
 };

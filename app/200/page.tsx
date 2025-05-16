@@ -250,7 +250,11 @@ const TwoHundredHourTTPage = () => {
         ]}
       />
 
-<section className="text-center mb-8 relative">
+
+
+      {/* Application Form */}
+      <ApplicationForm200/>
+      <section className="text-center mb-8 relative">
       <h3 className="text-2xl font-semibold text-[#150e70] mb-6">
         After Completing the Course...
       </h3>
@@ -269,9 +273,9 @@ const TwoHundredHourTTPage = () => {
         {/* Certification badges */}
         <div className="flex gap-10">
           {[
-            { level: "200", src: "/rys 200.png" },
-            { level: "RPYS", src: "/rpysall.png" },
-            { level: "300", src: "/300 rys.png" },
+            { level: "200", src: "/nw200.png" },
+             { level: "300", src: "/nw300.png" },
+            { level: "RPYS", src: "/nwrpys.png" },
           ].map(({ level, src }, i) => (
             <div key={i} className="flex flex-col items-center">
               <div className="relative w-16 h-16 mb-2">
@@ -292,9 +296,7 @@ const TwoHundredHourTTPage = () => {
         internationally recognized and accepted.
       </p>
     </section>
-
-      {/* Application Form */}
-      <ApplicationForm200/>
+    
     </div>
   );
 };
