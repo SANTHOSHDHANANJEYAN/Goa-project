@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
             <p>Google and Facebook</p>
           </div>
           <div>
-            <p className="text-2xl font-bold">200k+</p>
+            <p className="text-2xl font-bold">2k+</p>
             <p>Instagram & Facebook community</p>
           </div>
         </div>

@@ -13,7 +13,7 @@ import TestimonialSection from "@/components/50hr/TestimonialSection";
 import AboutTraining from "@/components/50hr/AboutTraining";
 import YogaHighlights from "@/components/50hr/YogaHighlights";
 import AccommodationSlider from "@/components/AccommodationSlider";
-import TeachersSection from "@/components/TeachersSection";
+import TeachersSection from "@/components/50hr/TeachersSection";
 
 
 

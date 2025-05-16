@@ -12,6 +12,7 @@ import BstchScheduleTable21 from "@/components/21days/BstchScheduleTable21";
 import TestimonialSection21 from "@/components/21days/TestimonialSection21";
 import YogaHighlights21 from "@/components/21days/YogaHighlights21";
 import ApplicationForm21 from "@/components/21days/ApplicationForm21";
+import TeachersSection21 from "@/components/21days/TeachersSection21";
 
 const TwentyOneTTPage = () => {
   return (
@@ -75,48 +76,7 @@ const TwentyOneTTPage = () => {
 </div>
 
       {/* Certificate Info */}
-    <section className="text-center mb-8 relative">
-      <h3 className="text-2xl font-semibold text-[#150e70] mb-6">
-        After Completing the Course...
-      </h3>
-
-      <div className="flex justify-center items-center gap-10  mr-24">
-        {/* Yellow area image (uploaded image) */}
-        <div className="relative w-28 h-28">
-          <Image
-            src="/YAlogo-removebg-preview.png"
-            alt="Yoga Visual Icon"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
-
-        {/* Certification badges */}
-        <div className="flex gap-10">
-          {[
-            { level: "200", src: "/rys 200.png" },
-            { level: "RPYS", src: "/rpysall.png" },
-            { level: "300", src: "/300 rys.png" },
-          ].map(({ level, src }, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <div className="relative w-16 h-16 mb-2">
-                <Image
-                  src={src}
-                  alt={`RYS ${level} Badge`}
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <p className="text-sm text-[#150e70]">
-        You’ll receive a Yoga Alliance certificate —<br />
-        internationally recognized and accepted.
-      </p>
-    </section>
+    
 
 
 <AboutTraining21/>
@@ -164,6 +124,8 @@ const TwentyOneTTPage = () => {
           />
         </div>
       </section>
+
+      <TeachersSection21/>
 
       {/* Training Schedule */}
       <section className="mb-20">
@@ -287,6 +249,49 @@ const TwentyOneTTPage = () => {
           
         ]}
       />
+
+      <section className="text-center mb-8 relative">
+      <h3 className="text-2xl font-semibold text-[#150e70] mb-6">
+        After Completing the Course...
+      </h3>
+
+      <div className="flex justify-center items-center gap-10  mr-24">
+        {/* Yellow area image (uploaded image) */}
+        <div className="relative w-28 h-28">
+          <Image
+            src="/YAlogo-removebg-preview.png"
+            alt="Yoga Visual Icon"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+
+        {/* Certification badges */}
+        <div className="flex gap-10">
+          {[
+            { level: "200", src: "/rys 200.png" },
+            { level: "RPYS", src: "/rpysall.png" },
+            { level: "300", src: "/300 rys.png" },
+          ].map(({ level, src }, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <div className="relative w-16 h-16 mb-2">
+                <Image
+                  src={src}
+                  alt={`RYS ${level} Badge`}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <p className="text-sm text-[#150e70]">
+        You’ll receive a Yoga Alliance certificate —<br />
+        internationally recognized and accepted.
+      </p>
+    </section>
 
       {/* Application Form */}
       <ApplicationForm21/>
