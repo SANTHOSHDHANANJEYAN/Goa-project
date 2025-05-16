@@ -26,7 +26,7 @@
     {/* Image with abstract background shapes */}
     <div className="relative w-60 h-60 flex-shrink-0 mb-8 md:mb-0">
       {/* Background blob shape (optional style, adjust as needed) */}
-      <div className="absolute -inset-5 rounded-full bg-yellow-200 opacity-40 blur-lg z-0"></div>
+      <div className="absolute -inset-5 rounded-full bg-blue-200 opacity-40 blur-lg z-0"></div>
       <Image
         src="/gangesh sir.jpg" // Replace with your image path
         alt="Gangesha Chaitanya"
