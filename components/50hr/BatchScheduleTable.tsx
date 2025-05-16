@@ -15,46 +15,50 @@ const courseDates = [
 
 const CourseSchedule = () => {
   return (
-    <section className="bg-transparent py-12 px-4 sm:px-8 lg:px-20">
-      <div className="max-w-7xl mx-auto bg-white shadow-xl rounded-md p-8 grid md:grid-cols-2 gap-10">
-        {/* Left - Course Dates */}
-        <div className="grid sm:grid-cols-2 gap-6">
+    <section className="py-12 px-4 sm:px-6 lg:px-20 bg-[#f9f8f6]">
+      <div className="max-w-7xl mx-auto bg-white rounded-md shadow-md p-8 grid md:grid-cols-2 gap-10">
+        
+        {/* Left: Course Dates */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {courseDates.map((item, index) => (
-            <div
-              key={index}
-              className="border-b border-gray-200 pb-3 flex items-start gap-3"
-            >
-              <FaCalendarAlt className="text-[#150e70] text-lg mt-1" />
-              <div>
-                <div className="text-sm font-semibold text-gray-800">
-                  {item.date}
-                </div>
-                <div className="text-sm text-[#150e70]">
-                  Seats: {item.seats} left
-                </div>
+            <div key={index} className="flex items-start gap-3 border-b pb-2 border-gray-200">
+              <FaCalendarAlt className="text-[#d9442e] text-xl mt-1" />
+              <div className="pl-[1rem]">
+                <p className="text-sm font-semibold text-gray-800">{item.date}</p>
+                <p className="text-sm text-[#d9442e] font-medium">Seats: {item.seats} left</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Right - Fees Info */}
-        <div className="space-y-4 text-center md:text-left">
-          <p className="text-sm font-medium text-gray-600">COURSE DURATION:</p>
-          <h2 className="text-2xl font-bold text-[#8c794f]">24 DAYS</h2>
+        {/* Right: Fee Info */}
+        <div className="flex flex-col justify-between pl-[7rem]">
+          <div>
+            <p className="text-sm text-gray-600 font-medium">COURSE DURATION:</p>
+            <h2 className="text-2xl font-bold text-[#8c794f] mb-6">24 DAYS</h2>
 
-          <p className="text-sm font-medium text-gray-600 mt-6">200 HOUR YOGA TTC FEES:</p>
-          <div className="flex gap-8 justify-center md:justify-start text-[#8c794f] font-bold text-xl">
-            <div>USD 1249 <p className="text-sm font-normal text-gray-600">PRIVATE ROOM</p></div>
-            <div>USD 1049 <p className="text-sm font-normal text-gray-600">SHARED ROOM</p></div>
+            <p className="text-sm text-gray-600 font-medium">200 HOUR YOGA TTC FEES:</p>
+            <div className="flex flex-col sm:flex-row sm:gap-10 mt-2 mb-6 text-[#8c794f] font-bold text-xl">
+              <div>
+                USD 1249
+                <p className="text-sm font-normal text-gray-600">PRIVATE ROOM</p>
+              </div>
+              <div>
+                USD 1049
+                <p className="text-sm font-normal text-gray-600">SHARED ROOM</p>
+              </div>
+            </div>
+
+            <p className="text-sm text-gray-600 font-medium">COURSE FEE WITHOUT STAY:</p>
+            <h3 className="text-xl font-bold text-[#8c794f]">USD 749</h3>
+            <p className="text-sm text-gray-600 mb-4">FOOD IS INCLUDED</p>
           </div>
 
-          <p className="text-sm font-medium text-gray-600 mt-6">COURSE FEE WITHOUT STAY:</p>
-          <h3 className="text-xl font-bold text-[#8c794f]">USD 749</h3>
-          <p className="text-sm text-gray-600">FOOD IS INCLUDED</p>
-
-          <button className="mt-6 bg-[#150e70] text-white px-6 py-3 rounded shadow hover:bg-[#d9442e] transition">
-            BOOK NOW
-          </button>
+          <div className="pt-6 text-center md:text-left">
+            <button className="bg-[#d9442e] hover:bg-[#150e70] transition text-white px-8 py-3 rounded shadow">
+              BOOK NOW
+            </button>
+          </div>
         </div>
       </div>
     </section>

@@ -76,9 +76,9 @@ export default function Home() {
 
               <div className="flex justify-center md:justify-start items-center gap-6">
                 {[
-                  { src: '/new200.png', alt: 'RYS 200', label: 'RYS 200' },
+                  { src: '/nw200.png', alt: 'RYS 200', label: 'RYS 200' },
                   { src: '/new300.png', alt: 'RYS 300', label: 'RYS 300' },
-                  { src: '/rpysall.png', alt: 'RPYS', label: 'RPYS' },
+                  { src: '/nwrpys.png', alt: 'RPYS', label: 'RPYS' },
                   { src: '/rpysall.png', alt: 'YACEP', label: 'YACEP' },
                 ].map((item, index) => (
                   <div
