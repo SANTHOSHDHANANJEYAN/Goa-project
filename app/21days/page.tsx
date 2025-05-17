@@ -250,14 +250,18 @@ const TwentyOneTTPage = () => {
         ]}
       />
 
-      <section className="text-center mb-8 relative">
+     
+
+      {/* Application Form */}
+      <ApplicationForm21/>
+ <section className="text-center mb-8 relative">
       <h3 className="text-2xl font-semibold text-[#150e70] mb-6">
         After Completing the Course...
       </h3>
 
       <div className="flex justify-center items-center gap-10  mr-24">
         {/* Yellow area image (uploaded image) */}
-        <div className="relative w-28 h-28">
+        <div className="relative w-[5rem] h-[8rem]">
           <Image
             src="/YAlogo-removebg-preview.png"
             alt="Yoga Visual Icon"
@@ -272,10 +276,11 @@ const TwentyOneTTPage = () => {
             { level: "200", src: "/nw200.png" },
              { level: "300", src: "/nw300.png" },
             { level: "RPYS", src: "/nwrpys.png" },
+            { level: "YACEP", src: "/nwyacep.png" },
            
           ].map(({ level, src }, i) => (
             <div key={i} className="flex flex-col items-center">
-              <div className="relative w-16 h-16 mb-2">
+              <div className="relative w-[5rem] h-[8rem] mb-2">
                 <Image
                   src={src}
                   alt={`RYS ${level} Badge`}
@@ -294,8 +299,6 @@ const TwentyOneTTPage = () => {
       </p>
     </section>
 
-      {/* Application Form */}
-      <ApplicationForm21/>
     </div>
   );
 };

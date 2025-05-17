@@ -79,7 +79,7 @@ export default function Home() {
                   { src: '/nw200.png', alt: 'RYS 200', label: 'RYS 200' },
                   { src: '/new300.png', alt: 'RYS 300', label: 'RYS 300' },
                   { src: '/nwrpys.png', alt: 'RPYS', label: 'RPYS' },
-                  { src: '/rpysall.png', alt: 'YACEP', label: 'YACEP' },
+                  { src: '/nwyacep.png', alt: 'YACEP', label: 'YACEP' },
                 ].map((item, index) => (
                   <div
                     key={index}
