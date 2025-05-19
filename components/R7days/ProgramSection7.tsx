@@ -16,7 +16,7 @@ export default function ProgramSection7() {
           <div className="bg-white rounded-xl shadow p-4">
             <div className="overflow-hidden rounded-lg">
               <Image
-                src="/images/yin-yoga-room.jpg"
+                src="/r2.jpg"
                 alt="Yin Yoga Program"
                 width={500}
                 height={300}
@@ -36,7 +36,7 @@ export default function ProgramSection7() {
           <div className="bg-white rounded-xl shadow p-4">
             <div className="overflow-hidden rounded-lg">
               <Image
-                src="/images/aromayin-massage.jpg"
+                src="/r1.jpg"
                 alt="AromaYin Program"
                 width={500}
                 height={300}
@@ -55,9 +55,9 @@ export default function ProgramSection7() {
       </div>
 
       {/* Side Yoga Image */}
-      <div className="hidden md:block rounded-tl-[150px] overflow-hidden w-[350px] shrink-0">
+      <div className="hidden md:block rounded-tl-[150px] rounded-tr-[150px] overflow-hidden w-[350px] shrink-0">
         <Image
-          src="/images/yoga-pose.png"
+          src="/gallery/11.WEBP"
           alt="Yoga Pose"
           width={350}
           height={500}

@@ -42,7 +42,7 @@ export default function Highlights7() {
         {/* Right Column */}
         <div className="space-y-12 text-center md:text-left">
           <div>
-            <h3 className="text-xl font-semibold mb-2">Nalanda Online</h3>
+            <h3 className="text-xl font-semibold mb-2">Rishikul Yogshala Goa</h3>
             <p>
               Practice anywhere, anytime. Access trusted guidance through online yoga,
               meditation, and wellness courses rooted in Nalanda’s philosophy of precision

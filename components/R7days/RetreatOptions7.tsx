@@ -4,20 +4,20 @@ const RetreatOptions7 = () => {
       title: "Host A Retreat",
       description:
         "Host a yoga retreat where wisdom thrives. Nalanda offers a seamless, oceanfront sanctuary for teachers to inspire, transform, and elevate.",
-      image: "/images/host-retreat.jpg", // Place your image in /public/images/
+      image: "/gallery/12.WEBP", // Place your image in /public/images/
       link: "#",
     },
     {
       title: "Join a Retreat",
       description:
         "Step into a sanctuary of growth with our yoga and meditation courses in India. At Nalanda, expert-led retreats guide you to clarity, mastery, and transformation.",
-      image: "/images/join-retreat.jpg", // Place your image in /public/images/
+      image: "/gallery/13.WEBPg", // Place your image in /public/images/
       link: "#",
     },
   ];
 
   return (
-    <section className="bg-[#f9f6ef] py-16 px-6 lg:px-20">
+    <section className="bg-[transparent] py-16 px-6 lg:px-20">
       <div className="grid md:grid-cols-2 gap-8">
         {retreats.map((retreat, idx) => (
           <div

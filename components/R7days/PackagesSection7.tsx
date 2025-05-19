@@ -3,13 +3,13 @@ const packages = [
     title: "Stress Management Through Yoga & Meditation",
     description:
       "Step away from the noise and return to calm. This healing programme blends yoga, mindfulness, breathwork, and energy therapies to soothe the nervous system, ease emotional tension, and help you reconnect with clarity, resilience, and inner peace.",
-    image: "/images/stress-mgmt.jpg",
+    image: "/r1.jpg",
   },
   {
     title: "Panchkarma Detox Programme",
     description:
       "Rooted in Ayurvedic tradition, this personalised panchakarma cleanse offers deep purification through daily treatments, sattvic meals, and coastal calm. Whether for detox or full rejuvenation, experience balance, clarity, and renewal—guided by nature and crafted with care.",
-    image: "/images/panchkarma.jpg",
+    image: "/r2.jpg",
   },
 ];
 
