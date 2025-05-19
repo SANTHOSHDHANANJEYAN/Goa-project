@@ -33,15 +33,9 @@ export default function Highlights7() {
         </div>
 
         {/* Center Image */}
-        <div className="flex justify-center">
-          <div className="rounded-full overflow-hidden w-[300px] h-[420px] md:w-[400px] md:h-[560px]">
-            <Image
-              src="/images/yoga-woman.png"
-              alt="Yoga Pose"
-              width={400}
-              height={560}
-              className="object-cover h-full w-full"
-            />
+        <div className="flex justify-center ">
+          <div className="rounded-full overflow-hidden w-[300px] h-[420px] md:w-[400px] md:h-[560px] bg-[url('/gallery/11.WEBP')] bg-cover bg-center ">
+
           </div>
         </div>
 
