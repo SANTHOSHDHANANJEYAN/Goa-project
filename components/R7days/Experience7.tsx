@@ -5,9 +5,9 @@ export default function Experience7() {
   return (
     <section className="relative bg-[#eaf8f8] py-20 px-6 text-center overflow-hidden">
       {/* Decorative background flower */}
-      <div className="absolute top-0 right-0 w-1/2 max-w-[400px] opacity-20 pointer-events-none">
+      <div className="absolute top-0 right-0 w-1/2 max-w-[400px] opacity-30 pointer-events-none">
         <Image
-          src="/gallery/1.WEBP"
+          src="/yogabg-removebg-preview.png"
           alt="Decorative Flower"
           width={400}
           height={400}
@@ -55,7 +55,7 @@ export default function Experience7() {
 
       {/* Description */}
       <p className="max-w-4xl mx-auto text-lg leading-relaxed text-gray-800">
-        Nalanda is more than a{' '}
+        Rishikul Yogshala is more than a{' '}
         <strong className="font-semibold">wellness resort in Goa</strong>—it’s a
         space where transformation is woven into every detail. Set along the
         tranquil shores of Mandrem in North Goa, it blends tradition with quiet

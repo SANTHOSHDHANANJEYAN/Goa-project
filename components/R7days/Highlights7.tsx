@@ -23,7 +23,7 @@ export default function Highlights7() {
             </p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-2">Nalanda Teachers</h3>
+            <h3 className="text-xl font-semibold mb-2">Our Teachers</h3>
             <p>
               Practice with experienced teachers who lead with clarity, depth, and care—
               mentors committed to your personal growth and professional evolution at the
@@ -45,22 +45,21 @@ export default function Highlights7() {
             <h3 className="text-xl font-semibold mb-2">Rishikul Yogshala Goa</h3>
             <p>
               Practice anywhere, anytime. Access trusted guidance through online yoga,
-              meditation, and wellness courses rooted in Nalanda’s philosophy of precision
+              meditation, and wellness courses rooted in Rishikul Yogshala’s philosophy of precision
               and care.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">Location</h3>
             <p>
-              Tucked along Mandrem Beach in North Goa—where stillness, beauty, and natural
-              rhythm offer the perfect setting for deep rest and renewal.
+              Rishikul yogshala in Palm beach resort 128, Thorlebag, Querim, Arambol, Goa 403524
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">Offers</h3>
             <p>
               Explore thoughtfully timed offers and seasonal specials—pathways to engage
-              more deeply and experience Nalanda with added ease and flexibility.
+              more deeply and experience Rishikul Yogshala with added ease and flexibility.
             </p>
           </div>
         </div>

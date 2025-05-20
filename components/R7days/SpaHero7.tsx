@@ -1,29 +1,58 @@
 import React from 'react';
 
-const SpaHero7: React.FC = () => {
+const Hero: React.FC = () => {
   return (
-    <div className="relative w-full h-screen bg-[url('/gallery/11.WEBP')] bg-cover bg-center bg-fixed">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30" />
-
-      {/* Running Text */}
-      <div className="absolute top-4 w-full overflow-hidden z-20">
-        <div className="whitespace-nowrap animate-marquee text-white text-sm md:text-base font-light">
-          Rejuvenating Spa | Beachfront Yoga | Ayurvedic Treatments | Wellness Retreat | House of Om Goa |
+    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://images.pexels.com/photos/8436566/pexels-photo-8436566.jpeg?auto=compress&cs=tinysrgb&w=1600')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10 text-center">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+          7-Day Yoga Retreat in Goa
+        </h1>
+        <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+          Find inner peace and rejuvenate your spirit with our transformative yoga experience in the serene beaches of Goa.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <a 
+            href="#program" 
+            className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-8 py-3 rounded-full transition-colors duration-300"
+          >
+            Explore Program
+          </a>
+          <a 
+            href="#contact" 
+            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-medium px-8 py-3 rounded-full transition-colors duration-300"
+          >
+            Book Now
+          </a>
         </div>
       </div>
-
-      {/* Main Content */}
-      <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-4">
-        <p className="text-sm md:text-base tracking-widest uppercase mb-4">
-          Rishikul Yogshala Goa
-        </p>
-        <h1 className="text-4xl md:text-6xl font-serif leading-tight">
-          Experience Tranquility Among Goa's Natural Beauty
-        </h1>
+      
+      {/* Scroll down indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg 
+          className="w-6 h-6 text-white" 
+          fill="none" 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          strokeWidth="2" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
       </div>
     </div>
   );
 };
 
-export default SpaHero7;
+export default Hero;

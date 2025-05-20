@@ -5,15 +5,27 @@ import { Dialog } from '@headlessui/react';
 const videos = [
   {
     thumbnail: '/videos/thumb1.jpg',
-    videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_1',
+    videoUrl: 'https://www.youtube.com/embed/0L8pv3fixrg?si=FKn7QFeH2gm6uCVu" ',
   },
   {
     thumbnail: '/videos/thumb2.jpg',
-    videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_2',
+    videoUrl: 'https://www.youtube.com/embed/1oxK0cYax9s?si=t7mJlSOHdRUnXDTC',
   },
   {
     thumbnail: '/videos/thumb3.jpg',
-    videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_3',
+    videoUrl: 'https://www.youtube.com/embed/s6VazbcpPko?si=IQLhIaErC_bu9dYC',
+  },
+   {
+    thumbnail: '/videos/thumb3.jpg',
+    videoUrl: 'https://www.youtube.com/embed/s6VazbcpPko?si=IQLhIaErC_bu9dYC',
+  },
+   {
+    thumbnail: '/videos/thumb3.jpg',
+    videoUrl: 'https://www.youtube.com/embed/s6VazbcpPko?si=IQLhIaErC_bu9dYC',
+  },
+   {
+    thumbnail: '/videos/thumb3.jpg',
+    videoUrl: 'https://www.youtube.com/embed/s6VazbcpPko?si=IQLhIaErC_bu9dYC',
   },
 ];
 

@@ -4,7 +4,7 @@ import Highlights7 from "@/components/R7days/Highlights7";
 import HighlightSlider7 from "@/components/R7days/HighlightSlider7";
 import PackagesSection7 from "@/components/R7days/PackagesSection7";
 import ProgramSection7 from "@/components/R7days/ProgramSection7";
-import RetreatOptions7 from "@/components/R7days/RetreatOptions7";
+import RetreatOptions7 from "@/components/R7days/About7";
 import TestimonialVideos7 from "@/components/R7days/TestimonialVideos7";
 
 
