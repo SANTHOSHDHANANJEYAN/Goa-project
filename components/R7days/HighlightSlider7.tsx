@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 const slides = [
-  { src: '/images/restorative.jpg', label: 'Restorative Vibes' },
-  { src: '/images/teacher-training.jpg', label: 'Teacher Training' },
-  { src: '/images/tranquil-stay.jpg', label: 'Tranquil Stay' },
-  { src: '/images/sunset.jpg', label: 'Sunset Bliss' },
+  { src: '/Restorarion.jpg', label: 'Restorative Vibes' },
+  { src: '/teacher training.jpg', label: 'Teacher Training' },
+  { src: '/tranquil.jpg', label: 'Tranquil Stay' },
+  { src: '/sunset.jpg', label: 'Sunset Bliss' },
 ];
 
 export default function HighlightSlider() {

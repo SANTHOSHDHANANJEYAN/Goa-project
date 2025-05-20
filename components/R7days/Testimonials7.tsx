@@ -101,7 +101,7 @@ const Testimonials7: React.FC = () => {
           
           {/* Navigation arrows */}
           <button 
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-3 shadow-md text-emerald-700 hover:text-emerald-500 transition-colors focus:outline-none md:-translate-x-6"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-3 shadow-md text-emerald-700 hover:text-emerald-500  focus:outline-none md:-translate-x-6"
             onClick={prev}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,7 +109,7 @@ const Testimonials7: React.FC = () => {
             </svg>
           </button>
           <button 
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-3 shadow-md text-emerald-700 hover:text-emerald-500 transition-colors focus:outline-none md:translate-x-6"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-3 shadow-md text-emerald-700 hover:text-emerald-500  focus:outline-none md:translate-x-6"
             onClick={next}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,7 +122,7 @@ const Testimonials7: React.FC = () => {
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                className={`w-3 h-3 rounded-full transition-colors ${
+                className={`w-3 h-3 rounded-full  ${
                   active === index ? 'bg-emerald-500' : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 onClick={() => setActive(index)}

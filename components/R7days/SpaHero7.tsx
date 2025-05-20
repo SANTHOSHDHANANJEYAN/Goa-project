@@ -24,13 +24,13 @@ const Hero: React.FC = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a 
             href="#program" 
-            className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-8 py-3 rounded-full transition-colors duration-300"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-8 py-3 rounded-full  duration-300"
           >
             Explore Program
           </a>
           <a 
             href="#contact" 
-            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-medium px-8 py-3 rounded-full transition-colors duration-300"
+            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-medium px-8 py-3 rounded-full  duration-300"
           >
             Book Now
           </a>
