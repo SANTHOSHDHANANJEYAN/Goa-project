@@ -48,7 +48,7 @@ const Contact7: React.FC = () => {
           <div className="bg-transparent rounded-xl shadow-lg overflow-hidden">
             <div className="grid md:grid-cols-2">
               {/* Contact Information */}
-              <div className="bg-[#150e70] p-8 md:p-12 text-white">
+              <div className="bg-[#6077ba] p-8 md:p-12 text-white">
                 <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -214,7 +214,7 @@ const Contact7: React.FC = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+                      className="w-full bg-[#6077ba] hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
                     >
                       Book Now
                     </button>
