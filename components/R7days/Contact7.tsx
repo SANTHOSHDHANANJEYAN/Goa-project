@@ -32,10 +32,10 @@ const Contact7: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-emerald-50">
+    <section id="contact" className="py-20 bg-emerald-50 ">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4 pt-[4rem]">
             Book Your Retreat
           </h2>
           <div className="w-20 h-1 bg-emerald-500 mx-auto mb-6"></div>

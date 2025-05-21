@@ -41,6 +41,30 @@ const curriculum = [
     description:
       "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
   },
+   {
+    title: "Master Breathwork",
+    image: "/images/pranayama.png",
+    description:
+      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+  },
+   {
+    title: "Master Breathwork",
+    image: "/images/pranayama.png",
+    description:
+      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+  },
+   {
+    title: "Master Breathwork",
+    image: "/images/pranayama.png",
+    description:
+      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+  },
+   {
+    title: "Master Breathwork",
+    image: "/images/pranayama.png",
+    description:
+      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+  },
 ];
 
 const CurriculumSection: React.FC = () => {
