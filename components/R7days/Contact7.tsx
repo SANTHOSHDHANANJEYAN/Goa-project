@@ -35,7 +35,7 @@ const Contact7: React.FC = () => {
     <section id="contact" className="py-20 bg-emerald-50 ">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4 pt-[4rem]">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#150e70] mb-4 pt-[4rem]">
             Book Your Retreat
           </h2>
           <div className="w-20 h-1 bg-emerald-500 mx-auto mb-6"></div>
@@ -116,7 +116,7 @@ const Contact7: React.FC = () => {
               
               {/* Contact Form */}
               <div className="p-8 md:p-12">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Book Your Retreat</h3>
+                <h3 className="text-2xl font-bold text-[#150e70] mb-6">Book Your Retreat</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">

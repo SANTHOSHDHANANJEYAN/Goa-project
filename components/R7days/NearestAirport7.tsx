@@ -1,7 +1,7 @@
 export default function NearestAirport7() {
   return (
     <section className="bg-white py-12 px-6 lg:px-20 text-center">
-      <h2 className="text-2xl md:text-3xl font-semibold text-purple-800 mb-6">Nearest Airport</h2>
+      <h2 className="text-2xl md:text-3xl font-semibold text-[#150e70] mb-6">Nearest Airport</h2>
       
       <div className="max-w-4xl mx-auto">
         <iframe

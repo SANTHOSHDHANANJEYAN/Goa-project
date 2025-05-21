@@ -17,7 +17,7 @@ export default function Benefit7() {
       {/* Right content */}
       <div className="w-full lg:w-1/2 lg:pl-12">
         <p className="text-orange-500 font-medium tracking-wide uppercase mb-2">Transform Lives</p>
-        <h1 className="text-4xl lg:text-5xl font-semibold text-purple-800 mb-4">
+        <h1 className="text-4xl lg:text-5xl font-semibold text-[#150e70] mb-4">
           Benefits of our retreats 
         </h1>
         <p className="text-gray-800 font-semibold mb-4">
@@ -31,10 +31,10 @@ export default function Benefit7() {
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-4 mb-6">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded shadow-md">
+          <button className="bg-[#150e70] hover:bg-orange-600 text-white font-bold py-3 px-6 rounded shadow-md">
             Reserve Your Spot
           </button>
-          <button className="flex items-center gap-2 border-2 border-purple-700 text-purple-700 hover:bg-purple-50 font-semibold py-3 px-6 rounded shadow-sm">
+          <button className="flex items-center gap-2 border-2 border-[#150e70] text-[#150e70] hover:bg-purple-50 font-semibold py-3 px-6 rounded shadow-sm">
             📅 View Full Schedule
           </button>
         </div>

@@ -62,7 +62,7 @@ export default function DailySchedule7() {
           alt="Retreat"
           width={900}
           height={1200}
-          className="rounded-lg shadow-lg object-cover w-full"
+          className="rounded-lg shadow-lg object-cover w-full "
         />
       </div>
     </section>
