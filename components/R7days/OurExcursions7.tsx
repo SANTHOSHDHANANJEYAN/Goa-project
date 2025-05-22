@@ -68,7 +68,7 @@ export default function TestimonialSlider() {
                 rel="noopener noreferrer"
                 className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition"
               >
-                <div className="bg-orange-400 p-4 rounded-full shadow-lg">
+                <div className="bg-orange-400 p-4 rounded-full">
                   <svg
                     className="w-10 h-10 text-white"
                     fill="currentColor"

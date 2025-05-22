@@ -22,21 +22,29 @@ export default function DailySchedule7() {
       description:
         'Day starts with morning Nature Walk – Holistic Drink – Ganga Bath and Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga asana – Yoga Nidra – Holistic Dinner',
     },
-     {
-      day: 'Day 4:',
+    {
+      day: 'Day 5:',
       description:
         'Day starts with morning Nature Walk – Holistic Drink – Ganga Bath and Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga asana – Yoga Nidra – Holistic Dinner',
     },
-    
-    
+    {
+      day: 'Day 6:',
+      description:
+        'Day starts with morning Nature Walk – Holistic Drink – Ganga Bath and Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga asana – Yoga Nidra – Holistic Dinner',
+    },
+    {
+      day: 'Day 7:',
+      description:
+        'Day starts with morning Nature Walk – Holistic Drink – Ganga Bath and Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga asana – Yoga Nidra – Holistic Dinner',
+    },
   ];
 
   return (
-    <section className="flex flex-col lg:flex-row px-4 lg:px-20 py-10 gap-10 items-start">
+    <section className="flex flex-col lg:flex-row px-4 sm:px-8 md:px-16 lg:px-20 py-10 gap-10 items-stretch">
       {/* Left - Timeline */}
       <div className="w-full lg:w-2/3">
-        <h2 className="text-3xl text-center lg:text-left font-semibold text-[#0C1B4D] mb-6">
-          Our Sample Schedule : Table of time and program
+        <h2 className="text-2xl sm:text-3xl text-center lg:text-left font-semibold text-[#0C1B4D] mb-6">
+          Our Sample Schedule: Table of Time and Program
         </h2>
         <div className="border-l-2 border-dotted border-orange-500 ml-4 pl-6 space-y-8 relative">
           {itinerary.map((item, index) => (
@@ -48,22 +56,24 @@ export default function DailySchedule7() {
                   <span className="w-2 h-2 bg-orange-500 rounded-full" />
                 )}
               </div>
-              <h3 className="text-xl font-bold">{item.day}</h3>
-              <p className="text-gray-700">{item.description}</p>
+              <h3 className="text-lg sm:text-xl font-bold">{item.day}</h3>
+              <p className="text-gray-700 text-sm sm:text-base">{item.description}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Right - Image */}
-      <div className="w-full lg:w-1/3">
-        <Image
-          src="/gallery/12.WEBP"
-          alt="Retreat"
-          width={900}
-          height={1200}
-          className="rounded-lg shadow-lg object-cover w-full "
-        />
+      <div className="w-full lg:w-1/3 h-full">
+        <div className="relative w-full h-full min-h-[784px]">
+          <Image
+            src="/gallery/12.WEBP"
+            alt="Retreat"
+            fill
+            className="rounded-lg shadow-lg object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+        </div>
       </div>
     </section>
   );

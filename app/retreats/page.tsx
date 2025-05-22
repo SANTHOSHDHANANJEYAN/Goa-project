@@ -22,6 +22,10 @@ import Benefit7 from "@/components/R7days/Benefit7";
 import NearestAirport7 from "@/components/R7days/NearestAirport7";
 import Beauty7 from "@/components/R7days/Beauty7";
 import KeySkills7 from "@/components/R7days/KeySkills7";
+import TwoListing7 from "@/components/R7days/TwoListing7";
+import DinningSlides7 from "@/components/R7days/DinningSlides7";
+import RoomSlides7 from "@/components/R7days/RoomSlides7";
+
 
 
 export default function Page() {
@@ -30,10 +34,13 @@ export default function Page() {
   <SpaHero7/>
   <RetreatOptions7/>
   <KeySkills7/>
+  <TwoListing7/>
   <WhatsIncludes7/>
   <OurExcursions7/>
   <OurRooms7/>
+  <RoomSlides7/>
   <OurDinning7/>
+  <DinningSlides7/>
   <DailySchedule7/>
   <Importance7/>
   <Benefit7/>
@@ -47,7 +54,7 @@ export default function Page() {
   <Testimonials7/>
   <TestimonialVideos7/> */}
   <Beauty7/>
-  <Contact7/>
+  {/* <Contact7/> */}
   </>
   ) 
 } 

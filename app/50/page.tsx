@@ -14,6 +14,7 @@ import AboutTraining from "@/components/50hr/AboutTraining";
 import YogaHighlights from "@/components/50hr/YogaHighlights";
 import AccommodationSlider from "@/components/AccommodationSlider";
 import TeachersSection from "@/components/50hr/TeachersSection";
+import Schedule from "@/components/50hr/Schedule";
 
 
 
@@ -84,6 +85,7 @@ const FiftyHourTTPage = () => {
   <AboutTraining/>
       {/* About Section */}
   <AnimateButton/>
+  <Schedule/>
 
   <section className="mt-20 ">
   <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
@@ -159,7 +161,7 @@ const FiftyHourTTPage = () => {
 
           <div className="flex flex-col text-left max-w-3xl mx-auto gap-12 items-center pt-[2rem]"> 
             <div className="flex items-start space-x-4">
-              <img src="/icons/waterfall-icon.svg" alt="Waterfalls" className="w-8 h-8 mt-1" />
+              <img src="/Acc1.png" alt="Waterfalls" className="w-[4rem] h-[3rem] mt-1" />
               <p>
                 <strong>Discover Goa's cascade gems:</strong>
                 <br />
@@ -167,14 +169,14 @@ const FiftyHourTTPage = () => {
               </p>
             </div>
             <div className="flex items-start space-x-4">
-              <img src="/icons/nature-icon.svg" alt="Nature parks" className="w-8 h-8 mt-1" />
+              <img src="/Acc2.png" alt="Nature parks" className="w-[3rem] h-[3rem] mt-1" />
               <p>
                 <strong>Exploring Goa’s natural beauty:</strong><br />
                 3 biggest parks in a 20-minute drive
               </p>
             </div>
             <div className="flex items-start space-x-4 pl-[3rem]">
-              <img src="/icons/beach-icon.svg" alt="Beaches" className="w-8 h-8 mt-1" />
+              <img src="/Acc3.png" alt="Beaches" className="w-[3rem] h-[3rem] mt-1" />
               <p>
                 <strong>Enjoy swimming, surfing and relaxation:</strong><br />
                 at Goa’s 3 beaches within 10 km
