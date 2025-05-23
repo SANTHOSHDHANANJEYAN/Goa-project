@@ -17,7 +17,7 @@ const skills: string[] = [
 const KeySkills14: React.FC = () => {
   return (
     <section className="bg-white py-16 px-6 md:px-20">
-      <h2 className="text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-[1rem]">
         Key Skills You Will Gain
       </h2>
 
