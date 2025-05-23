@@ -13,7 +13,7 @@ const teachers = [
   { name: 'Gangesha Chaitanya', handle: 'Yoga_Philosophy', image: '/gangesh sir.jpg' },
   { name: 'Himanshu Ji', handle: 'meera_Hatha_&_Ashtangad', image: '/Himanshu Ji.jpg' },
   { name: 'Pooja Ji', handle: 'Medititation_&_Pranayama', image: '/pooja ji.jpg' },
-  { name: 'Purnima hi', handle: 'Spiritual_Guidance', image: '/Purnima hi.jpg' },
+  { name: 'Purnima G', handle: 'Spiritual_Guidance', image: '/Purnima hi.jpg' },
   { name: 'Rahul Negi', handle: 'Hatha_Yoga_&_Ashtanga', image: '/Rahul Negi.jpg' },
   { name: 'Rishi Raj', handle: 'Philosophy_&_Meditation', image: '/Rishi Raj.jpg' },
   { name: 'Sukra Chaitanya', handle: 'Mantra_Meditation_Pranayama', image: '/Sukra Chaitanya.jpg' },
