@@ -10,11 +10,12 @@ import Image from 'next/image';
 import { useRef } from 'react';
 
 const images = [
-  '/images/yoga1.jpg',
-  '/images/yoga2.jpg',
-  '/images/yoga3.jpg',
-  '/images/yoga4.jpg',
-  '/images/yoga5.jpg',
+  '/Food/Food 7.jpg',
+  '/Food/Food 8.jpg',
+  '/Food/Food 9.jpg',
+  '/Food/Food 10.jpg',
+  '/Food/Food 11.jpg',
+  '/Food/Food 12.jpg',
 ];
 
 export default function DinningSlides14() {

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   FaCertificate,
   FaClock,
@@ -5,22 +7,34 @@ import {
   FaChalkboardTeacher,
   FaBroadcastTower,
   FaUsers,
-  FaBookOpen,
-  FaMoneyCheckAlt,
-  FaCheckCircle,
+  FaPlayCircle,
 } from 'react-icons/fa';
 
-const VideoCard = ({ title, embedId }: { title: string; embedId: string }) => (
-  <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 border border-gray-100">
-    <iframe
-      className="w-full h-56 md:h-64"
-      src={`https://www.youtube.com/embed/${embedId}`}
-      title={title}
-      allowFullScreen
-    ></iframe>
-    <div className="p-4 text-center font-semibold text-gray-800">{title}</div>
-  </div>
-);
+const VideoYoutubeCard = ({ title, embedId }: { title: string; embedId: string }) => {
+  const thumbnailUrl = `https://img.youtube.com/vi/${embedId}/hqdefault.jpg`;
+
+  return (
+    <div
+      className="cursor-pointer group max-w-sm"
+      onClick={() => window.open(`https://www.youtube.com/watch?v=${embedId}`, '_blank')}
+      role="button"
+      tabIndex={0}
+      onKeyDown={e => {
+        if (e.key === 'Enter') window.open(`https://www.youtube.com/watch?v=${embedId}`, '_blank');
+      }}
+    >
+      <div className="relative rounded-lg overflow-hidden shadow-lg">
+        <img
+          src={thumbnailUrl}
+          alt={title}
+          className="w-full h-48 object-cover group-hover:brightness-90 transition"
+        />
+        <FaPlayCircle className="absolute top-1/2 left-1/2 text-white text-6xl opacity-80 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      </div>
+      <h3 className="mt-2 text-gray-900 font-semibold text-lg line-clamp-2">{title}</h3>
+    </div>
+  );
+};
 
 const features = [
   {
@@ -66,36 +80,37 @@ const CodeOfConduct = () => {
     <section className="bg-white py-20 px-6 sm:px-8 lg:px-20 mb-16">
       <div className="max-w-7xl mx-auto space-y-16 pb-[3rem]">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-[#150e70] mb-4">
-            Code of Conduct
-          </h1>
+          <h1 className="text-4xl font-bold text-[#150e70] mb-4">Code of Conduct</h1>
           <p className="text-lg text-[#150e70] max-w-2xl mx-auto">
-            At Rishikul Yogshala Goa, we uphold a tradition of respect, responsibility, and discipline in our yoga training journey.
+            At Rishikul Yogshala Goa, we uphold a tradition of respect, responsibility, and discipline
+            in our yoga training journey.
           </p>
         </div>
-        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-start">
-        {/* Left Side: Videos (unchanged) */}
-        <div className="space-y-6">
-          <div className="flex items-center gap-2 text-green-700 font-semibold text-xl mb-2">
+        {/* Left Side: YouTube Style Video Cards */}
+        <div>
+          <div className="flex items-center gap-2 text-green-700 font-semibold text-xl mb-[2rem]">
             <FaVideo className="text-green-600" />
             <span>Yoga TTC Videos</span>
           </div>
 
-          <VideoCard title="Rishikul Yogshala Goa" embedId="dQw4w9WgXcQ" />
-          <VideoCard title="Guru Mantra – Yoga TTC" embedId="tgbNymZ7vqY" />
-          <VideoCard title="Student’s Review – Yoga TTC" embedId="C0DPdy98e4c" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[3.5rem]">
+            <VideoYoutubeCard title="Rishikul Yogshala Goa" embedId="dQw4w9WgXcQ" />
+            <VideoYoutubeCard title="Guru Mantra – Yoga TTC" embedId="tgbNymZ7vqY" />
+            <VideoYoutubeCard title="Student’s Review – Yoga TTC" embedId="C0DPdy98e4c" />
+            <VideoYoutubeCard title="Additional Yoga Session" embedId="YOUR_NEW_VIDEO_ID" />
+          </div>
         </div>
 
-        {/* Right Side: Features (updated) */}
+        {/* Right Side: Features */}
         <div className="space-y-10 pt-[3rem]">
           {features.map((item, index) => (
             <div key={index} className="flex items-start gap-4">
               <div className="mt-1">{item.icon}</div>
               <div>
-                <h3 className="text-lg font-bold text-gray-900">
-                  {item.title}
-                </h3>
+                <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
                 <p className="text-gray-700 text-sm">{item.description}</p>
               </div>
             </div>

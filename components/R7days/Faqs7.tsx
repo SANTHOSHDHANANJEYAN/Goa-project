@@ -20,6 +20,14 @@ const faqs = [
     question: 'Are meals and accommodation included?',
     answer: 'Yes, all packages include 3 nourishing vegetarian meals per day and shared or private accommodations.',
   },
+    {
+    question: 'Are meals and accommodation included?',
+    answer: 'Yes, all packages include 3 nourishing vegetarian meals per day and shared or private accommodations.',
+  },
+    {
+    question: 'Are meals and accommodation included?',
+    answer: 'Yes, all packages include 3 nourishing vegetarian meals per day and shared or private accommodations.',
+  },
 ];
 
 export default function Faqs7() {

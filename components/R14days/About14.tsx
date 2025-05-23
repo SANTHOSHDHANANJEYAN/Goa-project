@@ -58,11 +58,11 @@ export default function About14() {
   return (
     <section className="relative bg-white overflow-hidden pt-[4rem]">
       <div
-        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10"
+        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10 "
         ref={sectionRef}
       >
         {/* ✅ Updated Left Text Content */}
-        <div>
+        <div className="pb-[15rem]">
           <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2">
             <span className="w-3 h-3 bg-indigo-900 rounded-full inline-block" />
             Why Choose Us
