@@ -5,11 +5,10 @@ import { GiMeditation } from "react-icons/gi";
 import { MdOnlinePrediction } from "react-icons/md";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-export default function About14() {
-  const ref = useRef(null);
+export default function About141() {
   const controls = useAnimation();
   const [sectionRef, inView] = useInView({ threshold: 0.2 });
 
@@ -76,14 +75,45 @@ export default function About14() {
   ];
 
   return (
-    <section className="relative bg-white overflow-hidden pt-[4rem] pb-[3rem]">
+    <section className="relative bg-white  px-4 ">
       <div
-        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10 "
         ref={sectionRef}
+        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-[7rem] items-center"
       >
-        {/* ✅ Updated Left Text Content */}
-        <div className="pb-[5rem]">
-          <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2">
+        {/* Left: Image Grid */}
+        <div className="grid grid-cols-2 gap-4 ">
+          <div className="col-span-2">
+            <Image
+              src="/51.jpg"
+              alt="Yoga Group"
+              className="rounded-xl object-cover w-full"
+              width={600}
+              height={300}
+            />
+          </div>
+          <div>
+            <Image
+              src="/52.jpg"
+              alt="Vegan Food"
+              className="rounded-xl object-cover w-full"
+              width={300}
+              height={200}
+            />
+          </div>
+          <div>
+            <Image
+              src="/54.jpg"
+              alt="Resort Room"
+              className="rounded-xl object-cover w-full h-[83%]"
+              width={300}
+              height={200}
+            />
+          </div>
+        </div>
+
+        {/* Right: Text Content */}
+        <div className="pb-[3rem]">
+          <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2 ">
             <span className="w-3 h-3 bg-indigo-900 rounded-full inline-block" />
             Why Choose Us
           </p>
@@ -109,37 +139,6 @@ export default function About14() {
             ))}
           </ul>
         </div>
-
-        {/* Right Image Content */}
-       <div className="grid grid-cols-2 gap-4">
-                 <div className="col-span-2">
-                   <Image
-                     src="/51.jpg"
-                     alt="Yoga Group"
-                     className="rounded-xl object-cover w-full"
-                     width={600}
-                     height={300}
-                   />
-                 </div>
-                 <div>
-                   <Image
-                     src="/52.jpg"
-                     alt="Vegan Food"
-                     className="rounded-xl object-cover w-full"
-                     width={300}
-                     height={200}
-                   />
-                 </div>
-                 <div>
-                   <Image
-                     src="/54.jpg"
-                     alt="Resort Room"
-                     className="rounded-xl object-cover w-full h-[83%]"
-                     width={300}
-                     height={200}
-                   />
-                 </div>
-               </div>
       </div>
     </section>
   );

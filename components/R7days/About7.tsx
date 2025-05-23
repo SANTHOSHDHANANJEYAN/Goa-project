@@ -53,16 +53,36 @@ export default function About7() {
       text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course",
       size: 22,
     },
+        {
+      Icon: FaCertificate,
+      text: "Yoga Alliance accredited certificate (worldwide)",
+      size: 20,
+    },
+    {
+      Icon: GiMeditation,
+      text: "20 days / 19 nights in a boutique resort in Goa.",
+      size: 22,
+    },
+    {
+      Icon: FaUtensils,
+      text: "Daily delicious vegan/vegetarian meals a day (buffet style)",
+      size: 20,
+    },
+    {
+      Icon: MdOnlinePrediction,
+      text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course",
+      size: 22,
+    },
   ];
 
   return (
-    <section className="relative bg-white overflow-hidden pt-[4rem]">
+    <section className="relative bg-white overflow-hidden pt-[4rem] pb-[3rem]">
       <div
         className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10"
         ref={sectionRef}
       >
         {/* ✅ Updated Left Text Content */}
-        <div  className="pb-[15rem]" >
+        <div  className="pb-[3rem]" >
           <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2">
             <span className="w-3 h-3 bg-indigo-900 rounded-full inline-block" />
             Why Choose Us

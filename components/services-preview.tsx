@@ -7,21 +7,21 @@ import { Card } from '@/components/ui/card';
 const services = [
   {
     id: 'yoga',
-    title: '7 Days Holiday Retreat',
+    title: '7 Days Yoga Holiday Retreat - Path to Serenity',
     subtitle: 'Explore holistic sessions',
     image: '/IMAGE - GOA -.svg',
     link: '/services#yoga-classes',
   },
   {
     id: 'meditation',
-    title: '14 Days Wellness Retreat',
+    title: '14 Days Yoga Detox Retreat-Balance Body & Mind',
     subtitle: 'Find your inner peace',
     image: '/2nd images.svg',
     link: '/services#meditation',
   },
   {
     id: 'sound-healing',
-    title: '21 Days Detox Retrea',
+    title: '21 Days Yoga Wellness Retreat- A Journey to Self Discovery',
     subtitle: 'Heal through vibrations',
     image: '/3rd goa image - homwe page.svg',
     link: '/services#sound-healing',

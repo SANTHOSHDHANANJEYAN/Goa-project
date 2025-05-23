@@ -1,4 +1,5 @@
 import About21 from "@/components/R21days/About21";
+import About211 from "@/components/R21days/About211";
 import Beauty21 from "@/components/R21days/Beauty21";
 import Benefit21 from "@/components/R21days/Benefit21";
 import DailySchedule21 from "@/components/R21days/DailySchedule21";
@@ -21,6 +22,7 @@ export default function Page() {
   return (<>
   <SpaHero21/>
   <About21/>
+  <About211/>
   <KeySkills21/>
   <TwoListing21/>
   <WhatsIncludes21/>

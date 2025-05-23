@@ -16,7 +16,7 @@ const SpaHero7: React.FC = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-          7-Day Yoga Retreat in Goa
+          7 Days Yoga Holiday Retreat - Path to Serenity
         </h1>
         <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
           Find inner peace and rejuvenate your spirit with our transformative yoga experience in the serene beaches of Goa.

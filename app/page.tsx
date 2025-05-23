@@ -101,8 +101,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-200/10 via-pink-200/10 to-yellow-100/10 z-0" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <p className="font-['Helvetica Neue',sans-serif] text-2xl md:text-3xl lg:text-4xl italic mb-8 text-[#150e70] animate-fade-in transition duration-1000 ease-in-out transform-gpu hover:scale-105">
-            “Freedom, love, care, and support are the main philosophies of the community.”
+          <p className="font-['Helvetica Neue',sans-serif] text-2xl md:text-3xl lg:text-4xl italic mb-[1rem] text-[#150e70] animate-fade-in transition duration-1000 ease-in-out transform-gpu hover:scale-105">
+            “Empower- Evolve- Thrive.”
+          </p>
+            <p className="font-['Helvetica Neue',sans-serif] text-[25px] italic mb-8 text-[#150e70] animate-fade-in transition duration-1000 ease-in-out transform-gpu hover:scale-105">
+            - By Our Yoga Retreats
           </p>
 
           
