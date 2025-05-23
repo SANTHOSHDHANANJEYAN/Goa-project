@@ -16,7 +16,7 @@ const teachers = [
     bio: `She has spent years researching yoga and health sciences, including teaching MSc and PhD students on the effectiveness of yoga in the medical field.`,
   },
   {
-    name: 'Purnima hi',
+    name: 'Purnima Ji',
     title: 'Lead teacher',
     image: '/Purnima hi.jpg',
     bio: `She has a deep passion for yoga that has lead to years of studying the topics of Sanskrit and Yoga studies. He loves to empower his students to find the same sense of passion.`,

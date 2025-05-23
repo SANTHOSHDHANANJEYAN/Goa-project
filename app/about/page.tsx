@@ -328,7 +328,7 @@
     {/* Content */}
     <div className="flex-1">
       <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight tracking-wide">
-        Purnima G
+        Purnima Ji
       </h2>
       <h3 className="mt-2 font-semibold text-xl text-gray-800 uppercase tracking-wide">
         (Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)
