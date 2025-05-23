@@ -17,7 +17,7 @@ const images = [
   '/images/yoga5.jpg',
 ];
 
-export default function DinningSlides7() {
+export default function DinningSlides14() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
 

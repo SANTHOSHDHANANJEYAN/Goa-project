@@ -1,11 +1,11 @@
-'use client'; // if using app directory
+'use client';
 
 import Image from 'next/image';
 
 export default function Schedule() {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-4">
-      <div className="bg-green-50 rounded-xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row gap-10 w-full max-w-5xl">
+    <section className="w-full bg-green-50 py-12 px-4">
+      <div className="flex flex-col md:flex-row gap-10 w-full max-w-7xl mx-auto">
         {/* Left Side: Daily Schedule */}
         <div className="md:w-1/2">
           <h2 className="text-2xl font-bold text-green-900 mb-6">Daily Schedule</h2>
@@ -53,12 +53,14 @@ export default function Schedule() {
               </button>
             </div>
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900">Yoga Retreat Introduction</h3>
-              <p className="text-gray-600 text-sm mt-1">Watch this short video to get a feel of your upcoming experience.</p>
+              <h3 className="text-lg font-semibold text-gray-900">Yoga Course Introduction</h3>
+              <p className="text-gray-600 text-sm mt-1">
+                Watch this short video to get a feel of your upcoming experience.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -10,14 +10,15 @@ import Image from 'next/image';
 import { useRef } from 'react';
 
 const images = [
-  '/images/yoga1.jpg',
-  '/images/yoga2.jpg',
-  '/images/yoga3.jpg',
-  '/images/yoga4.jpg',
-  '/images/yoga5.jpg',
+  '/Accomdation/Accom1.jpg',
+  '/Accomdation/Accom2.jpg',
+  '/Accomdation/Accom3.jpg',
+  '/Accomdation/Accom4.jpg',
+  '/Accomdation/Accom5.jpg',
+  '/Accomdation/Accom6.jpg',
 ];
 
-export default function DinningSlides7() {
+export default function RoomSlides14() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
 

@@ -1,0 +1,50 @@
+'use client';
+import React from 'react';
+import { FaCheckCircle } from 'react-icons/fa';
+import Image from 'next/image';
+
+const skills: string[] = [
+  "Deep understanding of yoga philosophy and history",
+  "Correct alignment and adjustment techniques",
+  "Effective cueing and voice modulation for classes",
+  "Hands-on experience with pranayama and meditation",
+  "Anatomy knowledge relevant to yoga practice",
+  "Confidence in leading group and private sessions",
+  "Developing personalized yoga sequences",
+  "Time management and class planning",
+];
+
+const KeySkills21: React.FC = () => {
+  return (
+    <section className="bg-white py-16 px-6 md:px-20">
+      <h2 className="text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-12">
+        Key Skills You Will Gain
+      </h2>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Left: Skills List */}
+        <ul className="space-y-5">
+          {skills.map((skill, idx) => (
+            <li key={idx} className="flex items-start gap-3 text-[#150e70] text-lg">
+              <FaCheckCircle className="text-green-600 mt-1" />
+              <span>{skill}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Right: Image */}
+        <div className="relative rounded-xl overflow-hidden min-h-[500px] w-full">
+          <Image
+            src="/keyskill.avif" // Replace this with your actual image path
+            alt="Yoga training skills"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default KeySkills21;

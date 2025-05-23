@@ -8,7 +8,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-export default function About7() {
+export default function About14() {
   const ref = useRef(null);
   const controls = useAnimation();
   const [sectionRef, inView] = useInView({ threshold: 0.2 });

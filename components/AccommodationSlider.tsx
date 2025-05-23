@@ -8,7 +8,21 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const images = ['/1.jpg', '/2.jpg', '/3.jpg','/1.jpg','/2.jpg','/3.jpg','/1.jpg','/2.jpg','/3.jpg','/1.jpg','/2.jpg','/3.jpg'];
+const images = [
+  
+  '/Accomdation/Accom1.jpg', 
+  '/Accomdation/Accom2.jpg', 
+  '/Accomdation/Accom3.jpg',
+  '/Accomdation/Accom4.jpg',
+  '/Accomdation/Accom5.jpg',
+  '/Accomdation/Accom6.jpg',
+  '/Accomdation/Accom7.jpg',
+  '/Accomdation/Accom8.jpg',
+  '/Accomdation/Accom9.jpg',
+  '/Accomdation/Accom10.jpg',
+  '/Accomdation/Accom12.jpg',
+  '/Accomdation/Accom13.jpg',
+];
 
 export default function AccommodationSlider() {
   return (

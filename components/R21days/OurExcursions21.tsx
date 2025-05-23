@@ -1,3 +1,5 @@
+'use client';
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
@@ -27,7 +29,7 @@ const testimonials = [
   },
 ];
 
-export default function OurExcursions7() {
+export default function OurExcursions21() {
   return (
     <section className="bg-[#fff8f5] py-20 px-4 text-center">
       <h2 className="text-4xl md:text-5xl font-semibold text-[#4c2a65] mb-4">

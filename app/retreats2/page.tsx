@@ -1,16 +1,44 @@
-import Experience7 from "@/components/R7days/Experience7";
-import HeroSection7 from "@/components/R7days/Herosection7";
-import Highlights7 from "@/components/R7days/Highlights7";
-import HighlightSlider7 from "@/components/R7days/HighlightSlider7";
-import PackagesSection7 from "@/components/R7days/PackagesSection7";
-import ProgramSection7 from "@/components/R7days/ProgramSection7";
-import RetreatOptions7 from "@/components/R7days/About7";
-import TestimonialVideos7 from "@/components/R7days/TestimonialVideos7";
+import About14 from "@/components/R14days/About14";
+import Beauty14 from "@/components/R14days/Beauty14";
+import Benefit14 from "@/components/R14days/Benefit14";
+import DailySchedule14 from "@/components/R14days/DailySchedule14";
+import DinningSlides14 from "@/components/R14days/DinningSlides14";
+import Faqs14 from "@/components/R14days/Faqs14";
+import Importance14 from "@/components/R14days/Importance14";
+import KeySkills14 from "@/components/R14days/KeySkills14";
+import NearestAirport14 from "@/components/R14days/NearestAirport14";
+import OurDinning14 from "@/components/R14days/OurDinning14";
+import OurExcursions14 from "@/components/R14days/OurExcursions14";
+import OurRooms14 from "@/components/R14days/OurRooms14";
+import RoomSlides14 from "@/components/R14days/RoomSlides14";
+import SpaHero14 from "@/components/R14days/SpaHero14";
+import TwoListing14 from "@/components/R14days/TwoListing14";
+import WhatsIncludes14 from "@/components/R14days/WhatsIncludes14";
+
+
 
 
 
 export default function Page() {
 
-  return (<><HeroSection7/><RetreatOptions7/><PackagesSection7/><ProgramSection7/><Experience7/><Highlights7/><HighlightSlider7/><TestimonialVideos7/></>
+  return (<>
+  <SpaHero14/>
+  <About14/>
+  <KeySkills14/>
+  <TwoListing14/>
+  <WhatsIncludes14/>
+  <OurExcursions14/>
+  <OurRooms14/>
+  <RoomSlides14/>
+  <OurDinning14/>
+  <DinningSlides14/>
+  <DailySchedule14/>
+  <Importance14/>
+  <Benefit14/>
+  <NearestAirport14/>
+  <Beauty14/>
+  <Faqs14/>
+ 
+  </>
   ) 
 } 
