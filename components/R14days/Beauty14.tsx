@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const Beauty14: React.FC = () => {
+const Beauty7: React.FC = () => {
   return (
     <section
       className="relative w-full bg-fixed bg-cover bg-center text-white py-16 px-4 md:px-8"
@@ -14,7 +14,7 @@ const Beauty14: React.FC = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
 
       {/* Play Button */}
-      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10">
+      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10 pb-[12rem]">
         <div className="relative w-28 h-28">
           <svg viewBox="0 0 100 100" className="absolute w-full h-full animate-spin-slow">
             <defs>
@@ -79,4 +79,4 @@ const Beauty14: React.FC = () => {
   );
 };
 
-export default Beauty14;
+export default Beauty7;

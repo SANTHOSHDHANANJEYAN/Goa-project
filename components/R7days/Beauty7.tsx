@@ -14,7 +14,7 @@ const Beauty7: React.FC = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
 
       {/* Play Button */}
-      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10">
+      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10 pb-[12rem]">
         <div className="relative w-28 h-28">
           <svg viewBox="0 0 100 100" className="absolute w-full h-full animate-spin-slow">
             <defs>
