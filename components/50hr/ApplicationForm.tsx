@@ -1,14 +1,19 @@
+'use client';
+
 import React from "react";
 
 const FreeManualSignup: React.FC = () => {
   return (
-    <section className="relative bg-transparent py-20 text-center overflow-hidden">
+    <section className="relative bg-transparent py-16 sm:py-20 text-center overflow-hidden">
+      {/* Background pattern */}
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
-      <div className="relative z-10 max-w-4xl mx-auto px-4 flex flex-col items-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] mb-4">
+
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        <h2 className="text-2xl sm:text-4xl font-bold text-[#150e70] mb-4 leading-snug">
           Get your FREE <br className="sm:hidden" /> 50-hour study manual
         </h2>
-        <p className="text-[#150e70] max-w-xl mb-8">
+
+        <p className="text-[#150e70] max-w-xl mb-8 text-sm sm:text-base">
           and 5 video lessons to discover the fundamental principles of creating your own
           yoga class and essential tools for teaching
         </p>
@@ -17,16 +22,16 @@ const FreeManualSignup: React.FC = () => {
           <input
             type="email"
             placeholder="e-mail"
-            className="w-full px-4 py-3 border border-indigo-200 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-3 text-sm sm:text-base border border-indigo-200 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full px-4 py-3 border border-indigo-200 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-3 text-sm sm:text-base border border-indigo-200 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
           <button
             type="submit"
-            className="w-full py-3 bg-indigo-900 text-white font-semibold rounded-full hover:bg-indigo-800 transition"
+            className="w-full py-3 bg-indigo-900 text-white font-semibold rounded-full hover:bg-indigo-800 transition text-sm sm:text-base"
           >
             GET IT
           </button>
@@ -42,7 +47,7 @@ const FreeManualSignup: React.FC = () => {
           <img
             src="/yg_logo-removebg-preview.png"
             alt="200 hrs Yoga Teacher Training Manual"
-            className="w-40 sm:w-56 mx-auto shadow-lg"
+            className="w-32 sm:w-44 md:w-56 mx-auto shadow-lg"
           />
         </div>
       </div>
