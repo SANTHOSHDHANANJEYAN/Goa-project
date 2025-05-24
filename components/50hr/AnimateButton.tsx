@@ -1,21 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 const HeroSection: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section
       className="relative w-full bg-fixed bg-cover bg-center text-white py-16 px-4 sm:px-6 md:px-8"
-      style={{
-        backgroundImage: "url('/54.jpg')",
-      }}
+      style={{ backgroundImage: "url('/54.jpg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
 
       {/* Play Button */}
       <div className="absolute left-4 sm:left-6 md:left-8 top-1/2 transform -translate-y-1/2 z-10">
-        <div className="relative w-24 h-24 sm:w-28 sm:h-28">
+        <div
+          className="relative w-24 h-24 sm:w-28 sm:h-28 cursor-pointer"
+          onClick={() => setIsModalOpen(true)}
+        >
           <svg viewBox="0 0 100 100" className="absolute w-full h-full animate-spin-slow">
             <defs>
               <path
@@ -30,7 +33,7 @@ const HeroSection: React.FC = () => {
             </text>
           </svg>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center hover:scale-125 transition-transform cursor-pointer shadow-xl">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full hover:scale-125 transition-transform shadow-xl">
               <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z" />
               </svg>
@@ -39,9 +42,9 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Text Content */}
       <div className="relative z-10 w-full text-center mt-10">
-        <h2 className="text-sm sm:text-base md:text-lg font-normal uppercase tracking-wider mb-2 font-sans text-shadow-md">
+        <h2 className="text-sm sm:text-base md:text-lg uppercase tracking-wider mb-2 font-sans text-shadow-md">
           Rishikul Yogshala Goa
         </h2>
         <h1 className="font-sans text-white text-lg sm:text-xl md:text-2xl lg:text-[35px] font-semibold leading-relaxed">
@@ -54,32 +57,36 @@ const HeroSection: React.FC = () => {
 
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12 text-sm sm:text-base font-medium p-6 w-full max-w-5xl mx-auto bg-black bg-opacity-40 rounded-xl">
-          <div>
-            <p className="text-xl sm:text-2xl font-bold">33%</p>
-            <p>graduates return to sign up for new programs</p>
-          </div>
-          <div>
-            <p className="text-xl sm:text-2xl font-bold">10,000+</p>
-            <p>graduated online</p>
-          </div>
-          <div>
-            <p className="text-xl sm:text-2xl font-bold">6,000+</p>
-            <p>graduated in Goa</p>
-          </div>
-          <div>
-            <p className="text-xl sm:text-2xl font-bold">18,000+</p>
-            <p>graduated in India</p>
-          </div>
-          <div>
-            <p className="text-xl sm:text-2xl font-bold">★ 5★</p>
-            <p>Google and Facebook</p>
-          </div>
-          <div>
-            <p className="text-xl sm:text-2xl font-bold">2k+</p>
-            <p>Instagram & Facebook community</p>
-          </div>
+          <div><p className="text-xl sm:text-2xl font-bold">33%</p><p>graduates return to sign up for new programs</p></div>
+          <div><p className="text-xl sm:text-2xl font-bold">10,000+</p><p>graduated online</p></div>
+          <div><p className="text-xl sm:text-2xl font-bold">6,000+</p><p>graduated in Goa</p></div>
+          <div><p className="text-xl sm:text-2xl font-bold">18,000+</p><p>graduated in India</p></div>
+          <div><p className="text-xl sm:text-2xl font-bold">★ 5★</p><p>Google and Facebook</p></div>
+          <div><p className="text-xl sm:text-2xl font-bold">2k+</p><p>Instagram & Facebook community</p></div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center px-4">
+          <div className="relative w-full max-w-3xl aspect-video">
+            <iframe
+              className="w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              title="Intro Video"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            ></iframe>
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute -top-4 -right-4 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl shadow-lg"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
