@@ -117,7 +117,7 @@ export default function About7() {
               alt="Yoga Group"
               className="object-cover w-full h-auto"
               width={600}
-              height={300}
+              height={200}
               priority
             />
           </div>
