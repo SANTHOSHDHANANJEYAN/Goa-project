@@ -110,39 +110,36 @@ export default function About7() {
       </ul>
     </div>
 
-    {/* Right Image Content */}
-    <div className="grid grid-cols-2 gap-4 sm:gap-6">
-      <div className="col-span-2 rounded-xl overflow-hidden">
-        <Image
-          src="/51.jpg"
-          alt="Yoga Group"
-          className="object-cover w-full h-auto"
-          width={600}
-          height={300}
-          priority
-        />
-      </div>
-      <div className="rounded-xl overflow-hidden">
-        <Image
-          src="/52.jpg"
-          alt="Vegan Food"
-          className="object-cover w-full h-auto"
-          width={300}
-          height={200}
-          priority
-        />
-      </div>
-      <div className="rounded-xl overflow-hidden">
-        <Image
-          src="/54.jpg"
-          alt="Resort Room"
-          className="object-cover w-full h-auto"
-          width={300}
-          height={200}
-          priority
-        />
-      </div>
-    </div>
+   {/* Right Image Content */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="col-span-2">
+              <Image
+                src="/51.jpg"
+                alt="Yoga Group"
+                className="rounded-xl object-cover w-full"
+                width={600}
+                height={300}
+              />
+            </div>
+            <div>
+              <Image
+                src="/52.jpg"
+                alt="Vegan Food"
+                className="rounded-xl object-cover w-full"
+                width={300}
+                height={200}
+              />
+            </div>
+            <div>
+              <Image
+                src="/54.jpg"
+                alt="Resort Room"
+                className="rounded-xl object-cover w-full h-[83%]"
+                width={300}
+                height={200}
+              />
+            </div>
+          </div>
   </div>
 </section>
 
