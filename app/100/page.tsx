@@ -85,25 +85,32 @@ const HundredHourTTPage = () => {
   <AnimateButton100/>
   <Schedule100/>
 
-  <section className="mt-20 ">
-  <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
-  <h2 className="text-[10px] font-bold text-center mb-8 text-[#150e70]"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
- <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
-  {/* Card 1 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/11 .jpg" alt="Image 1" className="w-full h-full object-cover" />
-  </div>
-  {/* Card 2 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
-  </div>
-  {/* Card 3 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
-  </div>
-</div>
+<section className="mt-20 px-4 sm:px-6 lg:px-8">
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
+    Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga Yoga to give our students an extensive and comprehensive teaching experience
+  </h2>
+  <h2 className="text-xs sm:text-sm md:text-base lg:text-[10px] font-bold text-center mb-8 text-[#150e70]">
+    Education experience covering all key aspects of the ancient practice and philosophy of yoga
+  </h2>
 
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+    {/* Card 1 */}
+    <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
+      <img src="/11.jpg" alt="Image 1" className="w-full h-full object-cover" />
+    </div>
+
+    {/* Card 2 */}
+    <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
+      <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
+    </div>
+
+    {/* Card 3 */}
+    <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
+      <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
+    </div>
+  </div>
 </section>
+    
 
 
 
@@ -111,7 +118,7 @@ const HundredHourTTPage = () => {
       <CurriculumSection100/>
 
       {/* Instructor Info */}
-      <section className="mb-20">
+      {/* <section className="mb-20">
         <h2 className="text-3xl font-bold text-center mb-6 text-[#150e70]">Meet Your Instructors</h2>
         <p className="text-center text-[#150e70] max-w-3xl mx-auto mb-6 ">
           Our experienced team brings decades of collective practice from multiple yoga disciplines.
@@ -125,61 +132,78 @@ const HundredHourTTPage = () => {
             objectFit="cover"
           />
         </div>
-      </section>
+      </section> */}
 
       <TeachersSection100/>
 
       {/* Training Schedule */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
-        <div className="bg-indigo-50 p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
-          <p className="mb-4 font-medium text-lg">Intensive Format (100-hours)</p>
-          <p className="mb-1">🗓 May 26 – June 16, 2025</p>
-          <p className="mb-1">📍 Location: Goa</p>
-          <p className="mb-1">🕗 Monday – Saturday: 8 AM to 6 PM</p>
-          <p className="text-sm text-[#150e70] mt-2">Includes breaks, workshops, and off-days</p>
-        </div>
-      </section>
+<section className="mb-20 px-4 sm:px-6 md:px-8">
+  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-[#150e70]">
+    Training Schedule
+  </h2>
+  <div className="bg-indigo-50 p-6 sm:p-8 rounded-lg shadow text-center text-gray-700 max-w-md sm:max-w-xl md:max-w-3xl mx-auto">
+    <p className="mb-4 font-medium text-lg sm:text-xl">Intensive Format (100-hours)</p>
+    <p className="mb-1 text-base sm:text-lg">🗓 May 26 – June 16, 2025</p>
+    <p className="mb-1 text-base sm:text-lg">📍 Location: Goa</p>
+    <p className="mb-1 text-base sm:text-lg">🕗 Monday – Saturday: 8 AM to 6 PM</p>
+    <p className="text-sm sm:text-base text-[#150e70] mt-2">
+      Includes breaks, workshops, and off-days
+    </p>
+  </div>
+</section>
+
 
       {/* Accommodation Section - Scenic */}
-      <section
-  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
+<section
+  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-20 sm:py-24 mb-20 min-h-[600px] sm:min-h-[700px] md:min-h-[750px]"
   style={{
     backgroundImage: "url('/56.jpg')",
   }}
 >
+  {/* Overlay */}
+  <div className="bg-black bg-opacity-60 absolute inset-0"></div>
 
-        <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">Rishikul Yogshala Goa</h2>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
-          <p className="text-lg mb-10">Palm Paradise Resort amidst jungle paradise in Goa</p>
+  {/* Content */}
+  <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-[5rem]">
+    <h2 className="text-sm sm:text-lg uppercase tracking-wide text-gray-200 mb-2">
+      Rishikul Yogshala Goa
+    </h2>
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+      Accommodation
+    </h1>
+    <p className="text-base sm:text-lg mb-10 max-w-xl mx-auto">
+      Palm Paradise Resort amidst jungle paradise in Goa
+    </p>
 
-          <div className="grid md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto">
-            <div className="flex items-start space-x-4">
-              <img src="/Acc1.png" alt="Waterfalls" className="w-8 h-8 mt-1" />
-              <p>
-                <strong>Discover Goa's cascade gems:</strong><br />
-                more than 10 waterfalls within 10 km
-              </p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <img src="/Acc2.png" alt="Nature parks" className="w-8 h-8 mt-1" />
-              <p>
-                <strong>Exploring Goa’s natural beauty:</strong><br />
-                3 biggest parks in a 20-minute drive
-              </p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <img src="/Acc3.png" alt="Beaches" className="w-8 h-8 mt-1" />
-              <p>
-                <strong>Enjoy swimming, surfing and relaxation:</strong><br />
-                at Goa’s 3 beaches within 10 km
-              </p>
-            </div>
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto px-4 sm:px-0">
+      {[{
+        icon: "/Acc1.png",
+        alt: "Waterfalls",
+        title: "Discover Goa's cascade gems:",
+        desc: "more than 10 waterfalls within 10 km",
+      }, {
+        icon: "/Acc2.png",
+        alt: "Nature parks",
+        title: "Exploring Goa’s natural beauty:",
+        desc: "3 biggest parks in a 20-minute drive",
+      }, {
+        icon: "/Acc3.png",
+        alt: "Beaches",
+        title: "Enjoy swimming, surfing and relaxation:",
+        desc: "at Goa’s 3 beaches within 10 km",
+      }].map(({ icon, alt, title, desc }, i) => (
+        <div key={i} className="flex items-start space-x-4">
+          <img src={icon} alt={alt} className="w-7 h-7 sm:w-8 sm:h-8 mt-1" />
+          <p className="text-sm sm:text-base">
+            <strong>{title}</strong><br />
+            {desc}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       
       <ActivitiesSection100/>
