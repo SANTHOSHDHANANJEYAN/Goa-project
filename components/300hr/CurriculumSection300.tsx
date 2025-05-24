@@ -41,6 +41,30 @@ const curriculum = [
     description:
       "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
   },
+    {
+    title: "Master Asanas",
+    image: "/images/asana.png",
+    description:
+      "Explore postures from beginner to advanced, with detailed alignment and flow practices in Vinyasa, Hatha, and Ashtanga styles.",
+  },
+  {
+    title: "Build Teaching Skills",
+    image: "/images/teaching.png",
+    description:
+      "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
+  },
+  {
+    title: "Understand Anatomy",
+    image: "/images/anatomy.png",
+    description:
+      "Deep dive into body mechanics, injury prevention, and the science behind safe movement in every pose.",
+  },
+  {
+    title: "Master Breathwork",
+    image: "/images/pranayama.png",
+    description:
+      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+  },
 ];
 
 const CurriculumSection300: React.FC = () => {

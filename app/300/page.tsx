@@ -85,62 +85,53 @@ const ThreeHundredHourTTPage = () => {
   <AnimateButton300/>
   <Schedule300/>
 
-  <section className="mt-20 ">
-  <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
-  <h2 className="text-[10px] font-bold text-center mb-8 text-[#150e70]"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
- <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
-  {/* Card 1 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/11 .jpg" alt="Image 1" className="w-full h-full object-cover" />
-  </div>
-  {/* Card 2 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
-  </div>
-  {/* Card 3 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
-  </div>
-</div>
+<section className="mt-20 px-4 sm:px-6 lg:px-8">
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
+    Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga Yoga to give our students an extensive and comprehensive teaching experience
+  </h2>
+  <h2 className="text-xs sm:text-sm md:text-base lg:text-[10px] font-bold text-center mb-8 text-[#150e70]">
+    Education experience covering all key aspects of the ancient practice and philosophy of yoga
+  </h2>
 
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+    {/* Card 1 */}
+    <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
+      <img src="/11.jpg" alt="Image 1" className="w-full h-full object-cover" />
+    </div>
+
+    {/* Card 2 */}
+    <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
+      <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
+    </div>
+
+    {/* Card 3 */}
+    <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
+      <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
+    </div>
+  </div>
 </section>
-
 
 
       {/* Curriculum */}
       <CurriculumSection300/>
 
       {/* Instructor Info */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-6 text-[#150e70]">Meet Your Instructors</h2>
-        <p className="text-center text-[#150e70] max-w-3xl mx-auto mb-6 ">
-          Our experienced team brings decades of collective practice from multiple yoga disciplines.
-          They’re dedicated to helping you grow — physically, mentally, and spiritually — in a supportive, inclusive environment.
-        </p>
-        <div className="w-full h-[42rem] relative rounded-xl overflow-hidden shadow">
-          <Image
-            src="/goa4111.jpg"
-            alt="House of Om instructors"
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
-      </section>
+
+
 
       <TeachersSection300/>
 
       {/* Training Schedule */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
-        <div className="bg-indigo-50 p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
-          <p className="mb-4 font-medium text-lg">Intensive Format (50-hours)</p>
-          <p className="mb-1">🗓 May 26 – June 16, 2025</p>
-          <p className="mb-1">📍 Location: Goa</p>
-          <p className="mb-1">🕗 Monday – Saturday: 8 AM to 6 PM</p>
-          <p className="text-sm text-[#150e70] mt-2">Includes breaks, workshops, and off-days</p>
-        </div>
-      </section>
-
+      <section className="mb-20 px-4 sm:px-6 lg:px-0">
+  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
+  <div className="bg-[#fcdede] p-4 sm:p-6 rounded-lg shadow text-center text-gray-700 max-w-md sm:max-w-3xl mx-auto">
+    <p className="mb-4 font-medium text-lg sm:text-xl">Intensive Format (50-hours)</p>
+    <p className="mb-1 text-base sm:text-lg">🗓 May 26 – June 16, 2025</p>
+    <p className="mb-1 text-base sm:text-lg">📍 Location: Goa</p>
+    <p className="mb-1 text-base sm:text-lg">🕗 Monday – Saturday: 8 AM to 6 PM</p>
+    <p className="text-sm sm:text-base text-[#150e70] mt-2">Includes breaks, workshops, and off-days</p>
+  </div>
+</section>
       {/* Accommodation Section - Scenic */}
       <section
   className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
