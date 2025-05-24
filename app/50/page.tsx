@@ -67,18 +67,19 @@ const FiftyHourTTPage = () => {
       </div>
 
       {/* Hero Image */}
-     <div className="flex justify-center items-center bg-transparent">
-        <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
-          <Image
-            src="/course2.jpg"
-            alt="Yoga retreat in Bali"
-            width={1200}
-            height={900}
-            className="object-cover max-h-[500px]"
-            priority
-          />
-        </div>
-      </div>
+    <div className="flex justify-center items-center bg-transparent px-4 sm:px-6 lg:px-0">
+  <div className="rounded-2xl overflow-hidden shadow-lg mb-16 max-w-full w-full sm:w-[600px] md:w-[700px] lg:w-[800px]">
+    <Image
+      src="/course2.jpg"
+      alt="Yoga retreat in Bali"
+      width={1200}
+      height={900}
+      className="object-cover w-full h-auto max-h-[500px]"
+      priority
+    />
+  </div>
+</div>
+
 
       {/* Certificate Info */}
 
@@ -87,25 +88,42 @@ const FiftyHourTTPage = () => {
   <AnimateButton/>
   <Schedule/>
 
-  <section className="mt-20 ">
-  <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
-  <h2 className="text-[10px] font-bold text-center mb-8 text-[#150e70]"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
- <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
-  {/* Card 1 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/11 .jpg" alt="Image 1" className="w-full h-full object-cover" />
-  </div>
-  {/* Card 2 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
-  </div>
-  {/* Card 3 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
-  </div>
-</div>
+ <section className="mt-20 px-4 sm:px-6 lg:px-0">
+  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-6 text-[#150e70] max-w-4xl mx-auto leading-tight">
+    Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience
+  </h2>
+  <h3 className="text-xs sm:text-sm md:text-base font-semibold text-center mb-10 text-[#150e70] max-w-3xl mx-auto">
+    Education experience covering all key aspects of the ancient practice and philosophy of yoga
+  </h3>
 
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    {/* Card 1 */}
+    <div className="relative h-64 sm:h-80 md:h-96 rounded-2xl shadow overflow-hidden">
+      <img
+        src="/11 .jpg"
+        alt="Image 1"
+        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+      />
+    </div>
+    {/* Card 2 */}
+    <div className="relative h-64 sm:h-80 md:h-96 rounded-2xl shadow overflow-hidden">
+      <img
+        src="/12.jpg"
+        alt="Image 2"
+        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+      />
+    </div>
+    {/* Card 3 */}
+    <div className="relative h-64 sm:h-80 md:h-96 rounded-2xl shadow overflow-hidden">
+      <img
+        src="/13.jpg"
+        alt="Image 3"
+        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+      />
+    </div>
+  </div>
 </section>
+
 
 
 
@@ -131,60 +149,77 @@ const FiftyHourTTPage = () => {
       
 
       {/* Training Schedule */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
-        <div className="bg-[#fcdede] p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
-          <p className="mb-4 font-medium text-lg">Intensive Format (50-hours)</p>
-          <p className="mb-1">🗓 May 26 – June 16, 2025</p>
-          <p className="mb-1">📍 Location: Goa</p>
-          <p className="mb-1">🕗 Monday – Saturday: 8 AM to 6 PM</p>
-          <p className="text-sm text-[#150e70] mt-2">Includes breaks, workshops, and off-days</p>
-        </div>
-      </section>
+<section className="mb-20 px-4 sm:px-6 lg:px-0">
+  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
+  <div className="bg-[#fcdede] p-4 sm:p-6 rounded-lg shadow text-center text-gray-700 max-w-md sm:max-w-3xl mx-auto">
+    <p className="mb-4 font-medium text-lg sm:text-xl">Intensive Format (50-hours)</p>
+    <p className="mb-1 text-base sm:text-lg">🗓 May 26 – June 16, 2025</p>
+    <p className="mb-1 text-base sm:text-lg">📍 Location: Goa</p>
+    <p className="mb-1 text-base sm:text-lg">🕗 Monday – Saturday: 8 AM to 6 PM</p>
+    <p className="text-sm sm:text-base text-[#150e70] mt-2">Includes breaks, workshops, and off-days</p>
+  </div>
+</section>
+        
 
 <TeachersSection/>
 
       {/* Accommodation Section - Scenic */}
-      <section
-  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
+{/* Training Schedule Section */}
+
+
+{/* Accommodation Section */}
+{/* Accommodation Section - Stacked Column */}
+<section
+  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 px-4"
   style={{
     backgroundImage: "url('/56.jpg')",
   }}
 >
-  
+  {/* Dark overlay */}
+  <div className="bg-black bg-opacity-50 absolute inset-0"></div>
 
-        <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">Rishikul Yogshala Goa</h2>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
-          <p className="text-lg mb-10">Palm Paradise Resort amidst jungle paradise in Goa</p>
+  <div className="relative z-10 max-w-3xl mx-auto text-center">
+    <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">
+      Rishikul Yogshala Goa
+    </h2>
+    <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
+    <p className="text-lg mb-10">
+      Palm Paradise Resort amidst jungle paradise in Goa
+    </p>
 
-          <div className="flex flex-col text-left max-w-3xl mx-auto gap-12 items-center pt-[2rem]"> 
-            <div className="flex items-start space-x-4">
-              <img src="/Acc1.png" alt="Waterfalls" className="w-[4rem] h-[3rem] mt-1" />
-              <p>
-                <strong>Discover Goa's cascade gems:</strong>
-                <br />
-                more than 10 waterfalls within 10 km
-              </p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <img src="/Acc2.png" alt="Nature parks" className="w-[3rem] h-[3rem] mt-1" />
-              <p>
-                <strong>Exploring Goa’s natural beauty:</strong><br />
-                3 biggest parks in a 20-minute drive
-              </p>
-            </div>
-            <div className="flex items-start space-x-4 pl-[3rem]">
-              <img src="/Acc3.png" alt="Beaches" className="w-[3rem] h-[3rem] mt-1" />
-              <p>
-                <strong>Enjoy swimming, surfing and relaxation:</strong><br />
-                at Goa’s 3 beaches within 10 km
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="flex flex-col items-center gap-8">
+      {/* Item 1 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc1.png" alt="Waterfalls" className="w-10 h-10" />
+        <p>
+          <strong>Discover Goa's cascade gems:</strong><br />
+          more than 10 waterfalls within 10 km
+        </p>
+      </div>
+
+      {/* Item 2 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc2.png" alt="Nature parks" className="w-10 h-10" />
+        <p>
+          <strong>Exploring Goa’s natural beauty:</strong><br />
+          3 biggest parks in a 20-minute drive
+        </p>
+      </div>
+
+      {/* Item 3 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc3.png" alt="Beaches" className="w-10 h-10" />
+        <p className="pl-1rem">
+          <strong>Enjoy swimming, surfing and relaxation:</strong><br />
+          at Goa’s 3 beaches within 10 km
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
       <AccommodationSlider/>
     

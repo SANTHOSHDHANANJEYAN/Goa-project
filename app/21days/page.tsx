@@ -85,25 +85,31 @@ const TwentyOneTTPage = () => {
   <AnimateButton21/>
   <Schedule21/>
 
-  <section className="mt-20 ">
-  <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>
-  <h2 className="text-[10px] font-bold text-center mb-8 text-[#150e70]"> Education experience covering all key aspects of the ancient practice and philosophy of yoga</h2>
- <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 max-w-5xl mx-auto">
-  {/* Card 1 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/11 .jpg" alt="Image 1" className="w-full h-full object-cover" />
-  </div>
-  {/* Card 2 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
-  </div>
-  {/* Card 3 */}
-  <div className="relative h-[24rem] overflow-hidden rounded-[26px] shadow">
-    <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
-  </div>
-</div>
+ <section className="mt-20 px-4 sm:px-6 lg:px-8">
+  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-4 text-[#150e70] max-w-4xl mx-auto">
+    Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience
+  </h2>
 
+  <h3 className="text-xs sm:text-sm md:text-base font-semibold text-center mb-8 text-[#150e70] max-w-3xl mx-auto">
+    Education experience covering all key aspects of the ancient practice and philosophy of yoga
+  </h3>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-gray-700 max-w-6xl mx-auto">
+    {/* Card 1 */}
+    <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+      <img src="/11.jpg" alt="Image 1" className="w-full h-full object-cover" loading="lazy" />
+    </div>
+    {/* Card 2 */}
+    <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+      <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" loading="lazy" />
+    </div>
+    {/* Card 3 */}
+    <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+      <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" loading="lazy" />
+    </div>
+  </div>
 </section>
+
 
 
 
@@ -111,7 +117,7 @@ const TwentyOneTTPage = () => {
       <CurriculumSection21/>
 
       {/* Instructor Info */}
-      <section className="mb-20">
+      {/* <section className="mb-20">
         <h2 className="text-3xl font-bold text-center mb-6 text-[#150e70]">Meet Your Instructors</h2>
         <p className="text-center text-[#150e70] max-w-3xl mx-auto mb-6 ">
           Our experienced team brings decades of collective practice from multiple yoga disciplines.
@@ -125,61 +131,85 @@ const TwentyOneTTPage = () => {
             objectFit="cover"
           />
         </div>
-      </section>
+      </section> */}
 
       <TeachersSection21/>
 
       {/* Training Schedule */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
-        <div className="bg-indigo-50 p-6 rounded-lg shadow text-center text-gray-700 max-w-3xl mx-auto">
-          <p className="mb-4 font-medium text-lg">Intensive Format (50-hours)</p>
-          <p className="mb-1">🗓 May 26 – June 16, 2025</p>
-          <p className="mb-1">📍 Location: Goa</p>
-          <p className="mb-1">🕗 Monday – Saturday: 8 AM to 6 PM</p>
-          <p className="text-sm text-[#150e70] mt-2">Includes breaks, workshops, and off-days</p>
-        </div>
-      </section>
+     <section className="mb-20 px-4 sm:px-6 lg:px-8">
+  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-[#150e70]">
+    Training Schedule
+  </h2>
+
+  <div className="bg-indigo-50 p-4 sm:p-6 rounded-xl shadow-md text-center text-gray-700 max-w-2xl mx-auto">
+    <p className="mb-3 text-base sm:text-lg font-semibold">
+      Intensive Format (50-hours)
+    </p>
+    <p className="mb-1 text-sm sm:text-base">🗓 May 26 – June 16, 2025</p>
+    <p className="mb-1 text-sm sm:text-base">📍 Location: Goa</p>
+    <p className="mb-1 text-sm sm:text-base">🕗 Monday – Saturday: 8 AM to 6 PM</p>
+    <p className="text-xs sm:text-sm text-[#150e70] mt-2">
+      Includes breaks, workshops, and off-days
+    </p>
+  </div>
+</section>
+
 
       {/* Accommodation Section - Scenic */}
       <section
-  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
+  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white h-[700px] sm:h-[750px] mb-20"
   style={{
     backgroundImage: "url('/56.jpg')",
   }}
 >
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">Rishikul Yogshala Goa</h2>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
-          <p className="text-lg mb-10">Palm Paradise Resort amidst jungle paradise in Goa</p>
+  {/* Centered Content */}
+  <div className="relative z-10 flex flex-col justify-center items-center h-full px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-sm sm:text-base uppercase tracking-wide text-gray-200 mb-2">
+      Rishikul Yogshala Goa
+    </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto">
-            <div className="flex items-start space-x-4">
-              <img src="/icons/waterfall-icon.svg" alt="Waterfalls" className="w-8 h-8 mt-1" />
-              <p>
-                <strong>Discover Goa's cascade gems:</strong><br />
-                more than 10 waterfalls within 10 km
-              </p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <img src="/icons/nature-icon.svg" alt="Nature parks" className="w-8 h-8 mt-1" />
-              <p>
-                <strong>Exploring Goa’s natural beauty:</strong><br />
-                3 biggest parks in a 20-minute drive
-              </p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <img src="/icons/beach-icon.svg" alt="Beaches" className="w-8 h-8 mt-1" />
-              <p>
-                <strong>Enjoy swimming, surfing and relaxation:</strong><br />
-                at Goa’s 3 beaches within 10 km
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+      Accommodation
+    </h1>
+
+    <p className="text-base sm:text-lg mb-8 sm:mb-10">
+      Palm Paradise Resort amidst jungle paradise in Goa
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left max-w-4xl w-full">
+      {/* Card 1 */}
+      <div className="flex items-start space-x-4">
+        <img src="/icons/waterfall-icon.svg" alt="Waterfalls" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
+        <p className="text-sm sm:text-base">
+          <strong>Discover Goa's cascade gems:</strong><br />
+          more than 10 waterfalls within 10 km
+        </p>
+      </div>
+
+      {/* Card 2 */}
+      <div className="flex items-start space-x-4">
+        <img src="/icons/nature-icon.svg" alt="Nature parks" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
+        <p className="text-sm sm:text-base">
+          <strong>Exploring Goa’s natural beauty:</strong><br />
+          3 biggest parks in a 20-minute drive
+        </p>
+      </div>
+
+      {/* Card 3 */}
+      <div className="flex items-start space-x-4">
+        <img src="/icons/beach-icon.svg" alt="Beaches" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
+        <p className="text-sm sm:text-base">
+          <strong>Enjoy swimming, surfing and relaxation:</strong><br />
+          at Goa’s 3 beaches within 10 km
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       
       <ActivitiesSection21/>
@@ -256,14 +286,14 @@ const TwentyOneTTPage = () => {
 
       {/* Application Form */}
       <ApplicationForm21/>
- <section className="text-center mb-12 relative px-4 sm:px-6 lg:px-8">
-  <h3 className="text-xl sm:text-2xl font-semibold text-[#150e70] mb-6">
+<section className="text-center mb-12 relative px-4 sm:px-6 lg:px-8">
+  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#150e70] mb-6">
     After Completing the Course...
   </h3>
 
   <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
-    {/* Yellow area image */}
-    <div className="relative w-20 h-28 md:w-20 md:h-32">
+    {/* Yoga Alliance Logo */}
+    <div className="relative w-16 h-24 sm:w-20 sm:h-28 md:w-20 md:h-32">
       <Image
         src="/YAlogo-removebg-preview.png"
         alt="Yoga Visual Icon"
@@ -272,8 +302,8 @@ const TwentyOneTTPage = () => {
       />
     </div>
 
-    {/* Certification badges */}
-    <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+    {/* Certification Badges */}
+    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
       {[
         { level: "200", src: "/nw200.png" },
         { level: "300", src: "/nw300.png" },
@@ -281,7 +311,7 @@ const TwentyOneTTPage = () => {
         { level: "YACEP", src: "/nwyacep.png" },
       ].map(({ level, src }, i) => (
         <div key={i} className="flex flex-col items-center">
-          <div className="relative w-20 h-28 md:w-20 md:h-32 mb-2">
+          <div className="relative w-16 h-24 sm:w-20 sm:h-28 md:w-20 md:h-32 mb-2">
             <Image
               src={src}
               alt={`RYS ${level} Badge`}
@@ -294,8 +324,8 @@ const TwentyOneTTPage = () => {
     </div>
   </div>
 
-  <p className="text-sm sm:text-base text-[#150e70] mt-6">
-    You’ll receive a Yoga Alliance certificate —<br />
+  <p className="text-sm sm:text-base text-[#150e70] mt-6 leading-relaxed">
+    You’ll receive a Yoga Alliance certificate —<br className="hidden sm:inline" />
     internationally recognized and accepted.
   </p>
 </section>
