@@ -37,6 +37,12 @@ const activities: Activity[] = [
       "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
     image: "/Cultural.jpg",
   },
+    {
+    title: "Cultural Excursions",
+    description:
+      "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
+    image: "/Cultural.jpg",
+  },
 ];
 
 const ActivitiesSection: React.FC = () => {

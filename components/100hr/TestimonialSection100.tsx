@@ -2,11 +2,11 @@ import React from 'react';
 
 const TestimonialSection: React.FC = () => {
   return (
-    <section className="relative text-center py-20 bg-transparent pt-8">
-      <h2 className="text-2xl md:text-4xl font-semibold mb-10 text-[#150e70]">
+    <section className="relative text-center py-12 sm:py-20 bg-transparent px-4 sm:px-6 lg:px-8">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 sm:mb-10 text-[#150e70]">
         Testimonials
       </h2>
-      <h3 className="text-2xl md:text-[12px]  mb-10 text-[#150e70]">
+      <h3 className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 text-[#150e70] max-w-xl mx-auto">
         View the self-transformation stories of our students
       </h3>
 

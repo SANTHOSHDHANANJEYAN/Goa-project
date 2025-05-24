@@ -4,12 +4,12 @@ import Image from 'next/image';
 
 export default function Schedule100() {
   return (
-    <section className="w-full bg-green-50 py-12 px-4">
-      <div className="flex flex-col md:flex-row gap-10 w-full max-w-7xl mx-auto">
+    <section className="w-full bg-green-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col md:flex-row gap-12 max-w-7xl mx-auto">
         {/* Left Side: Daily Schedule */}
         <div className="md:w-1/2">
-          <h2 className="text-2xl font-bold text-green-900 mb-6">Daily Schedule</h2>
-          <ul className="space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-green-900 mb-6">Daily Schedule</h2>
+          <ul className="space-y-4 text-sm sm:text-base">
             {[
               ['6:00 AM', 'Morning bell & tea'],
               ['6:30 AM', 'Meditation & pranayama'],
@@ -23,7 +23,7 @@ export default function Schedule100() {
               ['8:00 PM', 'Evening program / Meditation'],
             ].map(([time, activity], idx) => (
               <li key={idx} className="flex items-start">
-                <span className="font-semibold text-green-900 w-24">{time}</span>
+                <span className="font-semibold text-green-900 w-24 flex-shrink-0">{time}</span>
                 <span className="text-gray-800">{activity}</span>
               </li>
             ))}
@@ -32,16 +32,19 @@ export default function Schedule100() {
 
         {/* Right Side: Video Card */}
         <div className="md:w-1/2">
-          <div className="rounded-xl overflow-hidden shadow-md bg-white">
-            <div className="relative">
+          <div className="rounded-xl overflow-hidden shadow-md bg-white max-w-full">
+            <div className="relative aspect-video w-full">
               <Image
                 src="/27e28055-7a42-4503-9987-5f7a626972b1.jpg"
                 alt="Video Thumbnail"
-                width={640}
-                height={360}
-                className="w-full h-auto object-cover"
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <button className="absolute inset-0 flex items-center justify-center">
+              <button
+                aria-label="Play Video"
+                className="absolute inset-0 flex items-center justify-center"
+              >
                 <svg
                   className="h-16 w-16 text-white opacity-80 hover:opacity-100 transition"
                   fill="currentColor"
