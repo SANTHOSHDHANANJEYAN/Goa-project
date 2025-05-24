@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
           <ul className="space-y-2 text-sm leading-relaxed font-semibold">
             <li><Mail className="inline-block w-4 h-4 mr-2" /> rishikulyogshalagoa@gmail.com</li>
-            <li><Phone className="inline-block w-4 h-4 mr-2" /> (555) 123-4567</li>
+            <li><Phone className="inline-block w-4 h-4 mr-2" /> +91 80899 92515</li>
             <li><MapPin className="inline-block w-4 h-4 mr-2" /> 128, Thorlebag, Querim, Arambol, Goa 403524</li>
           </ul>
           <div>
