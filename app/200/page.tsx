@@ -299,7 +299,6 @@ const TwoHundredHourTTPage = () => {
     internationally recognized and accepted.
   </p>
 </section>
-    
     </div>
   );
 };
