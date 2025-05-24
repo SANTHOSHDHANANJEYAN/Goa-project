@@ -77,45 +77,44 @@ export default function TwoListing7() {
   ];
 
   return (
-    <section className="bg-[#FFF7F3] px-4 sm:px-8 md:px-16 py-12 sm:py-16 text-[#262626] font-sans">
+    <section className="bg-[#FFF7F3] px-4 md:px-16 py-20 text-[#262626] font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Headings */}
-        <div className="mb-10 max-w-3xl mx-auto text-center md:text-left">
-          <h4 className="text-[#F97316] font-semibold tracking-widest uppercase text-xs sm:text-sm">Application Process</h4>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#4B2E83] mt-2 mb-4 leading-snug">
+        <div className="mb-10">
+          <h4 className="text-[#F97316] font-semibold tracking-widest uppercase text-sm">Application Process</h4>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#4B2E83] mt-2 mb-4 leading-snug">
             Book Your Yoga Retreat in 4 Easy Steps
           </h2>
-          <p className="text-gray-700 max-w-xl text-base sm:text-lg mx-auto md:mx-0">
+          <p className="text-gray-700 max-w-2xl text-lg">
             Embarking on your yoga retreat journey is simple and stress-free. Just follow these steps to reserve your spot and prepare for a peaceful escape into nature, self-care, and inner stillness.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-10">
           {/* Left - Steps */}
-          <div className="relative pl-10 md:pl-16">
-            {/* Vertical line */}
-            <div className="hidden md:block absolute left-8 top-4 bottom-24 w-1 bg-[#7C4D99] rounded" />
+          <div className="relative pl-10">
+            <div className="absolute left-8 top-4 bottom-24 w-1 bg-[#7C4D99]"></div>
 
             {steps.map((step, index) => (
-              <div key={index} className="relative pl-10 mb-10 group">
-                <div className="absolute left-[-22px] top-4 w-8 h-8 rounded-full bg-[#7C4D99] text-white flex items-center justify-center font-bold shadow-md group-hover:scale-110 transition-transform duration-200 ease-in-out text-sm sm:text-base">
+              <div key={index} className="relative pl-10 mb-8 group">
+                <div className="absolute left-[-22px] top-4 w-8 h-8 rounded-full bg-[#7C4D99] text-white flex items-center justify-center font-bold shadow-md group-hover:scale-110 transition-transform duration-200 ease-in-out">
                   {index + 1}
                 </div>
 
                 <div className="bg-white border border-orange-200 rounded-xl p-5 shadow-sm group-hover:shadow-md transition duration-300">
-                  <h4 className="text-lg sm:text-xl font-semibold text-[#1C1C1C] mb-1">{step.title}</h4>
-                  <p className="text-sm sm:text-base text-gray-600">{step.description}</p>
+                  <h4 className="text-lg font-semibold text-[#1C1C1C] mb-1">{step.title}</h4>
+                  <p className="text-sm text-gray-600">{step.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Right - Pricing */}
-          <div className="bg-white border border-[#F97316] rounded-2xl px-6 py-8 sm:px-10 sm:py-10">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#1C1C1C] mb-6 text-center md:text-left">{selected} Yoga Retreat</h3>
+          <div className="bg-white border border-[#F97316] rounded-2xl px-6 py-8">
+            <h3 className="text-2xl font-bold text-[#1C1C1C] mb-4">{selected} Yoga Retreat</h3>
 
             {/* Duration Buttons */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-6">
+            <div className="flex flex-wrap gap-2 mb-4">
               {durations.map((day) => (
                 <button
                   key={day}
@@ -132,12 +131,12 @@ export default function TwoListing7() {
             </div>
 
             {/* Currency Buttons */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-6">
+            <div className="flex flex-wrap gap-2 mb-6">
               {(['INR', 'USD', 'EUR'] as Currency[]).map((cur) => (
                 <button
                   key={cur}
                   onClick={() => setCurrency(cur)}
-                  className={`px-4 py-1 rounded-full text-xs sm:text-sm font-medium border ${
+                  className={`px-4 py-1 rounded-full text-xs font-medium border ${
                     currency === cur
                       ? 'bg-emerald-600 text-white'
                       : 'text-emerald-700 border-emerald-600 bg-white'
@@ -149,26 +148,26 @@ export default function TwoListing7() {
             </div>
 
             {/* Offer Note */}
-            <div className="bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm inline-flex items-center font-medium mb-6 justify-center md:justify-start">
+            <div className="bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm inline-flex items-center font-medium mb-4">
               <span className="mr-2">🔸</span> 20% Off for Groups of 3+
             </div>
 
             {/* Pricing Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-orange-50 p-5 rounded-xl text-center">
-                <h4 className="text-[#F97316] font-semibold mb-2">Sharing</h4>
-                <p className="text-3xl sm:text-4xl font-bold text-[#1C1C1C]">
+                <h4 className="text-[#F97316] font-semibold mb-1">Sharing</h4>
+                <p className="text-2xl font-bold text-[#1C1C1C]">
                   {getPrice(data.sharing)}{' '}
-                  <span className="text-gray-400 line-through text-base sm:text-lg">
+                  <span className="text-gray-400 line-through text-base">
                     {getPrice(data.sharingOld)}
                   </span>
                 </p>
               </div>
               <div className="bg-orange-50 p-5 rounded-xl text-center">
-                <h4 className="text-[#F97316] font-semibold mb-2">Private</h4>
-                <p className="text-3xl sm:text-4xl font-bold text-[#1C1C1C]">
+                <h4 className="text-[#F97316] font-semibold mb-1">Private</h4>
+                <p className="text-2xl font-bold text-[#1C1C1C]">
                   {getPrice(data.private)}{' '}
-                  <span className="text-gray-400 line-through text-base sm:text-lg">
+                  <span className="text-gray-400 line-through text-base">
                     {getPrice(data.privateOld)}
                   </span>
                 </p>
@@ -176,7 +175,7 @@ export default function TwoListing7() {
             </div>
 
             {/* Inclusions List */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base text-gray-800">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-800">
               <li>✔️ {selected} Stay in Rishikesh</li>
               <li>✔️ Yoga Equipment</li>
               <li>✔️ Nutritional Guidance</li>
