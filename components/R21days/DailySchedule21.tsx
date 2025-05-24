@@ -10,32 +10,102 @@ export default function DailySchedule21() {
     {
       day: 'Day 2:',
       description:
-        'Day starts with morning Nature Walk – Holistic Drink – Yoga Asana – Meditation – Healthy Breakfast – Yoga Therapy – Digestive Lunch – Visit To World Famous Ganga Arati – Holistic Dinner',
+        'Morning Nature Walk – Holistic Drink – Yoga Asana – Meditation – Healthy Breakfast – Yoga Therapy – Digestive Lunch – Visit To World Famous Ganga Arati – Holistic Dinner',
     },
     {
       day: 'Day 3:',
       description:
-        'Day starts with morning Nature Walk – Holistic Drink – Yoga Asana – Pranayama – Healthy Breakfast – Wellness Holistic Massage – Digestive Lunch – Yoga Nidra and Meditation – Holistic Dinner',
+        'Nature Walk – Holistic Drink – Yoga Asana – Pranayama – Healthy Breakfast – Wellness Holistic Massage – Digestive Lunch – Yoga Nidra and Meditation – Holistic Dinner',
     },
     {
       day: 'Day 4:',
       description:
-        'Day starts with morning Nature Walk – Holistic Drink – Ganga Bath and Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga asana – Yoga Nidra – Holistic Dinner',
+        'Nature Walk – Holistic Drink – Ganga Bath – Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga Asana – Yoga Nidra – Holistic Dinner',
     },
     {
       day: 'Day 5:',
       description:
-        'Day starts with morning Nature Walk – Holistic Drink – Ganga Bath and Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga asana – Yoga Nidra – Holistic Dinner',
+        'Nature Walk – Holistic Drink – Yoga Asana – Meditation – Breakfast – Ayurvedic Cooking Workshop – Digestive Lunch – Mantra Chanting – Holistic Dinner',
     },
     {
       day: 'Day 6:',
       description:
-        'Day starts with morning Nature Walk – Holistic Drink – Ganga Bath and Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga asana – Yoga Nidra – Holistic Dinner',
+        'Sunrise Yoga – Holistic Drink – Breathwork Session – Breakfast – Free Time for Reflection – Digestive Lunch – Creative Journaling – Yoga Nidra – Dinner',
     },
     {
       day: 'Day 7:',
       description:
-        'Day starts with morning Nature Walk – Holistic Drink – Ganga Bath and Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga asana – Yoga Nidra – Holistic Dinner',
+        'Nature Walk – Yoga Asana – Guided Meditation – Breakfast – Chakra Workshop – Digestive Lunch – Sound Healing – Dinner – Stargazing',
+    },
+    {
+      day: 'Day 8:',
+      description:
+        'Yoga – Meditation – Philosophy Talk – Healthy Breakfast – Forest Walk – Digestive Lunch – Reiki Healing – Holistic Dinner',
+    },
+    {
+      day: 'Day 9:',
+      description:
+        'Pranayama – Sunrise Yoga – Herbal Drink – Breakfast – Volunteer Activity – Digestive Lunch – Guided Visualization – Dinner',
+    },
+    {
+      day: 'Day 10:',
+      description:
+        'Nature Walk – Holistic Drink – Partner Yoga – Breakfast – Wellness Workshop – Digestive Lunch – Sunset Meditation – Dinner',
+    },
+    {
+      day: 'Day 11:',
+      description:
+        'Yoga Asana – Chanting – Philosophy Lecture – Breakfast – Massage Therapy – Digestive Lunch – Group Circle – Dinner',
+    },
+    {
+      day: 'Day 12:',
+      description:
+        'Meditation – Breathwork – Breakfast – Day Trip to Temple – Packed Lunch – Return & Rest – Restorative Yoga – Dinner',
+    },
+    {
+      day: 'Day 13:',
+      description:
+        'Yoga – Tea Ceremony – Breakfast – Sound Bath – Digestive Lunch – Nature Sketching – Evening Meditation – Dinner',
+    },
+    {
+      day: 'Day 14:',
+      description:
+        'Pranayama – Yoga Flow – Meditation – Breakfast – Yoga Nidra Workshop – Digestive Lunch – Campfire Sharing – Dinner',
+    },
+    {
+      day: 'Day 15:',
+      description:
+        'Silent Morning – Meditation – Holistic Drink – Breakfast – Free Exploration Time – Digestive Lunch – Restorative Yoga – Dinner',
+    },
+    {
+      day: 'Day 16:',
+      description:
+        'Kriya Yoga Practice – Herbal Tea – Light Breakfast – Ayurvedic Lecture – Digestive Lunch – Deep Stretching – Evening Kirtan',
+    },
+    {
+      day: 'Day 17:',
+      description:
+        'Nature Walk – Yoga – Breakfast – Workshop on Yogic Diet – Digestive Lunch – Gratitude Journaling – Sunset Asana – Dinner',
+    },
+    {
+      day: 'Day 18:',
+      description:
+        'Meditation – Yoga – Philosophy Talk – Breakfast – Sharing Circle – Digestive Lunch – Candlelight Yoga – Dinner',
+    },
+    {
+      day: 'Day 19:',
+      description:
+        'Sun Salutations – Pranayama – Breakfast – Free Time – Digestive Lunch – Gentle Yoga – Yoga Nidra – Dinner',
+    },
+    {
+      day: 'Day 20:',
+      description:
+        'Morning Routine – Sound Therapy – Breakfast – Rejuvenation Massage – Digestive Lunch – Kirtan – Dinner',
+    },
+    {
+      day: 'Day 21: Departure Day',
+      description:
+        'Morning Meditation – Light Breakfast – Closing Ceremony – Feedback Sharing – Check-Out before 12 PM – Airport Drop-off',
     },
   ];
 
@@ -63,18 +133,55 @@ export default function DailySchedule21() {
         </div>
       </div>
 
-      {/* Right - Image */}
-      <div className="w-full lg:w-1/3 h-full">
-        <div className="relative w-full h-full min-h-[784px]">
-          <Image
-            src="/gallery/12.WEBP"
-            alt="Retreat"
-            fill
-            className="rounded-lg shadow-lg object-cover"
-            sizes="(max-width: 768px) 100vw, 33vw"
-          />
-        </div>
-      </div>
+     {/* Right - Two stacked images */}
+<div className="w-full lg:w-1/3 flex flex-col gap-[2.5rem]">
+  <div className="relative w-full h-[400px]">
+    <Image
+      src="/gallery/12.WEBP"
+      alt="Retreat Top"
+      fill
+      className="rounded-lg shadow-lg object-cover"
+      sizes="(max-width: 768px) 100vw, 33vw"
+    />
+  </div>
+  <div className="relative w-full h-[400px]">
+    <Image
+      src="/gallery/13.WEBP"
+      alt="Retreat Bottom"
+      fill
+      className="rounded-lg shadow-lg object-cover"
+      sizes="(max-width: 768px) 100vw, 33vw"
+    />
+  </div>
+   <div className="relative w-full h-[400px]">
+    <Image
+      src="/gallery/13.WEBP"
+      alt="Retreat Bottom"
+      fill
+      className="rounded-lg shadow-lg object-cover"
+      sizes="(max-width: 768px) 100vw, 33vw"
+    />
+  </div>
+   <div className="relative w-full h-[400px]">
+    <Image
+      src="/gallery/13.WEBP"
+      alt="Retreat Bottom"
+      fill
+      className="rounded-lg shadow-lg object-cover"
+      sizes="(max-width: 768px) 100vw, 33vw"
+    />
+  </div>
+   <div className="relative w-full h-[400px]">
+    <Image
+      src="/gallery/13.WEBP"
+      alt="Retreat Bottom"
+      fill
+      className="rounded-lg shadow-lg object-cover"
+      sizes="(max-width: 768px) 100vw, 33vw"
+    />
+  </div>
+</div>
+
     </section>
   );
 }

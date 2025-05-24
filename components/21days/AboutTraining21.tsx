@@ -9,7 +9,7 @@ export default function AboutTraining() {
     <section className="relative py-16 px-6 md:px-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10">
         {/* Left Text Content */}
-        <div>
+        <div className="pb-[4rem]">
           <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2">
             <span className="w-3 h-3 bg-indigo-900 rounded-full inline-block" />
             About the Training
@@ -22,6 +22,22 @@ export default function AboutTraining() {
 
           <ul className="space-y-4 text-[#150e70]">
             <li className="flex items-start gap-3">
+              <FaCertificate className="text-[#150e70] mt-1" size={20} />
+              Yoga Alliance accredited certificate (worldwide)
+            </li>
+            <li className="flex items-start gap-3">
+              <GiMeditation className="text-[#150e70] mt-1" size={22} />
+              20 days / 19 nights in a boutique resort in Goa.
+            </li>
+            <li className="flex items-start gap-3">
+              <FaUtensils className="text-[#150e70] mt-1" size={20} />
+              Daily delicious vegan/vegetarian meals a day (buffet style)
+            </li>
+            <li className="flex items-start gap-3">
+              <MdOnlinePrediction className="text-[#150e70] mt-1" size={22} />
+              BONUS: lifelong access to our Online 21-Days Yoga Alliance course
+            </li>
+              <li className="flex items-start gap-3">
               <FaCertificate className="text-[#150e70] mt-1" size={20} />
               Yoga Alliance accredited certificate (worldwide)
             </li>

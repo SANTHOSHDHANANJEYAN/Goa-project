@@ -74,11 +74,11 @@ export default function TwoListing21() {
         <div className="grid md:grid-cols-2 gap-10">
           {/* Left - Application Steps */}
           <div className="relative pl-10">
-            <div className="absolute left-4 top-0 bottom-0 w-1 bg-[#7C4D99]"></div>
+            <div className="absolute left-8 top-4 bottom-24 w-1 bg-[#7C4D99]"></div>
 
-            {[1, 2, 3].map((step) => (
+            {[1, 2, 3, 4].map((step) => (
               <div key={step} className="relative pl-10 mb-8">
-                <div className="absolute left-[-22px] top-0 w-8 h-8 rounded-full bg-[#7C4D99] text-white flex items-center justify-center font-bold z-10">
+                <div className="absolute left-[-22px] top-4 w-8 h-8 rounded-full bg-[#7C4D99] text-white flex items-center justify-center font-bold z-10">
                   {step}
                 </div>
 
@@ -100,6 +100,14 @@ export default function TwoListing21() {
                     </>
                   )}
                   {step === 3 && (
+                    <>
+                      <h4 className="text-lg font-semibold text-[#1C1C1C]">Confirm Your Spot with ₹5,000</h4>
+                      <p className="text-sm text-gray-600">
+                        Pay a small deposit to block your seat. Remaining amount can be paid on arrival.
+                      </p>
+                    </>
+                  )}
+                   {step === 4 && (
                     <>
                       <h4 className="text-lg font-semibold text-[#1C1C1C]">Confirm Your Spot with ₹5,000</h4>
                       <p className="text-sm text-gray-600">

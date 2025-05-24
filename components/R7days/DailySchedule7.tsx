@@ -37,6 +37,7 @@ export default function DailySchedule7() {
       description:
         'Day starts with morning Nature Walk – Holistic Drink – Ganga Bath and Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga asana – Yoga Nidra – Holistic Dinner',
     },
+    
   ];
 
   return (

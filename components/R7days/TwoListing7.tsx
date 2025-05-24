@@ -93,11 +93,11 @@ export default function TwoListing7() {
         <div className="grid md:grid-cols-2 gap-10">
           {/* Left - Steps */}
           <div className="relative pl-10">
-            <div className="absolute left-4 top-0 bottom-0 w-1 bg-[#7C4D99]"></div>
+            <div className="absolute left-8 top-4 bottom-24 w-1 bg-[#7C4D99]"></div>
 
             {steps.map((step, index) => (
               <div key={index} className="relative pl-10 mb-8 group">
-                <div className="absolute left-[-22px] top-0 w-8 h-8 rounded-full bg-[#7C4D99] text-white flex items-center justify-center font-bold shadow-md group-hover:scale-110 transition-transform duration-200 ease-in-out">
+                <div className="absolute left-[-22px] top-4 w-8 h-8 rounded-full bg-[#7C4D99] text-white flex items-center justify-center font-bold shadow-md group-hover:scale-110 transition-transform duration-200 ease-in-out">
                   {index + 1}
                 </div>
 

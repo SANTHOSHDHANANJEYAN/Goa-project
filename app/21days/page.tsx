@@ -13,6 +13,7 @@ import TestimonialSection21 from "@/components/21days/TestimonialSection21";
 import YogaHighlights21 from "@/components/21days/YogaHighlights21";
 import ApplicationForm21 from "@/components/21days/ApplicationForm21";
 import TeachersSection21 from "@/components/21days/TeachersSection21";
+import Schedule21 from "@/components/21days/Schedule21";
 
 const TwentyOneTTPage = () => {
   return (
@@ -75,13 +76,14 @@ const TwentyOneTTPage = () => {
   </div>
 </div>
 
-      {/* Certificate Info */}
+ 
     
 
 
 <AboutTraining21/>
       {/* About Section */}
   <AnimateButton21/>
+  <Schedule21/>
 
   <section className="mt-20 ">
   <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>

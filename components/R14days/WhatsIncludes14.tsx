@@ -62,7 +62,7 @@ const WhatsIncludes14: React.FC = () => {
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="bg-[#fcdede] p-6 rounded-xl shadow hover:shadow-lg transition relative"
+              className="bg-[#9EC6F3] p-6 rounded-xl shadow hover:shadow-lg transition relative"
             >
               <div className="flex justify-center -mt-16 mb-4">
                 <img

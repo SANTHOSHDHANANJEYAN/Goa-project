@@ -13,6 +13,7 @@ import TestimonialSection100 from "@/components/100hr/TestimonialSection100";
 import YogaHighlights100 from "@/components/100hr/YogaHighlights100";
 import ApplicationForm100 from "@/components/100hr/ApplicationForm100";
 import TeachersSection100 from "@/components/100hr/TeachersSection100";
+import Schedule100 from "@/components/100hr/Schedule100";
 
 const HundredHourTTPage = () => {
   return (
@@ -82,6 +83,7 @@ const HundredHourTTPage = () => {
 <AboutTraining100/>
       {/* About Section */}
   <AnimateButton100/>
+  <Schedule100/>
 
   <section className="mt-20 ">
   <h2 className="text-[22px] font-bold text-center mb-8 text-[#150e70]"> Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga yoga to give our students an extensive and comprehensive teaching experience</h2>

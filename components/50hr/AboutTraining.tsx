@@ -51,6 +51,26 @@ export default function AboutTraining() {
       text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course",
       size: 22,
     },
+    {
+      Icon: FaCertificate,
+      text: "Yoga Alliance accredited certificate (worldwide)",
+      size: 20,
+    },
+    {
+      Icon: GiMeditation,
+      text: "20 days / 19 nights in a boutique resort in Goa.",
+      size: 22,
+    },
+    {
+      Icon: FaUtensils,
+      text: "Daily delicious vegan/vegetarian meals a day (buffet style)",
+      size: 20,
+    },
+    {
+      Icon: MdOnlinePrediction,
+      text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course",
+      size: 22,
+    },
   ];
 
   return (
@@ -60,7 +80,7 @@ export default function AboutTraining() {
         ref={sectionRef}
       >
         {/* Left Text Content */}
-        <div>
+        <div className="pb-[4rem]">
           <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2">
             <span className="w-3 h-3 bg-indigo-900 rounded-full inline-block" />
             About the Training
