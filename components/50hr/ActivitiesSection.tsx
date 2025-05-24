@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 interface Activity {
@@ -39,35 +37,43 @@ const activities: Activity[] = [
       "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
     image: "/Cultural.jpg",
   },
+    {
+    title: "Cultural Excursions",
+    description:
+      "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
+    image: "/Cultural.jpg",
+  },
 ];
 
 const ActivitiesSection: React.FC = () => {
   return (
-    <section className="bg-transparent py-16 text-center relative overflow-hidden">
-      {/* Optional background decoration */}
+    <section className="bg-transparent py-12 sm:py-16 text-center relative overflow-hidden">
+      {/* Optional radial background decoration */}
       <div className="absolute inset-0 opacity-10 z-0 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 lg:px-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#150e70] mb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-16 sm:mb-20">
           Activities included in the course
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 ">
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="bg-[#fcdede] p-6 rounded-xl shadow hover:shadow-lg transition relative"
+              className="bg-amber-50 p-6 rounded-xl shadow hover:shadow-lg transition relative flex flex-col items-center"
             >
-              <div className="flex justify-center -mt-14 mb-4">
+              <div className="-mt-16 mb-6">
                 <img
                   src={activity.image}
                   alt={activity.title}
-                  className="w-20 h-20 rounded-full border-4 border-white shadow object-cover"
+                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow object-cover"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-[#150e70]">
+              <h3 className="text-lg sm:text-xl font-semibold text-[#150e70] text-center">
                 {activity.title}
               </h3>
-              <p className="text-sm text-[#150e70] mt-2">{activity.description}</p>
+              <p className="text-sm sm:text-base text-[#150e70] mt-3 text-center">
+                {activity.description}
+              </p>
             </div>
           ))}
         </div>
