@@ -261,50 +261,50 @@ const FiftyHourTTPage = () => {
       {/* Application Form */}
       <ApplicationForm/>
 
-      <section className="text-center mb-8 relative">
-      <h3 className="text-2xl font-semibold text-[#150e70] mb-6">
-        After Completing the Course...
-      </h3>
+<section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
+  <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
+    After Completing the Course...
+  </h3>
 
-      <div className="flex justify-center items-center gap-10 pb-[1rem]">
-        {/* Yellow area image (uploaded image) */}
-        <div className="relative w-[5rem] h-[8rem]    ">
-          <Image
-            src="/YAlogo-removebg-preview.png"
-            alt="Yoga Visual Icon"
-            layout="fill"
-            objectFit="contain"
-          />
+  <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 pb-4">
+    {/* Yellow area image (uploaded image) */}
+    <div className="relative w-[4rem] h-[6rem] sm:w-[5rem] sm:h-[8rem] mx-auto sm:mx-0">
+      <Image
+        src="/YAlogo-removebg-preview.png"
+        alt="Yoga Visual Icon"
+        layout="fill"
+        objectFit="contain"
+      />
+    </div>
+
+    {/* Certification badges */}
+    <div className="flex flex-wrap justify-center gap-6 sm:gap-10 max-w-lg mx-auto sm:mx-0">
+      {[
+        { level: "200", src: "/nw200.png" },
+        { level: "300", src: "/nw300.png" },
+        { level: "RPYS", src: "/nwrpys.png" },
+        { level: "YACEP", src: "/nwyacep.png" },
+      ].map(({ level, src }, i) => (
+        <div key={i} className="flex flex-col items-center w-[4rem] h-[6rem] sm:w-[5rem] sm:h-[8rem]">
+          <div className="relative w-full h-full mb-2">
+            <Image
+              src={src}
+              alt={`RYS ${level} Badge`}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
         </div>
+      ))}
+    </div>
+  </div>
 
-        {/* Certification badges */}
-        <div className="flex gap-10">
-          {[
-             { level: "200", src: "/nw200.png" },
-             { level: "300", src: "/nw300.png" },
-            { level: "RPYS", src: "/nwrpys.png" },
-             { level: "YACEP", src: "/nwyacep.png" },
-            
-          ].map(({ level, src }, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <div className="relative w-[5rem] h-[8rem] mb-2">
-                <Image
-                  src={src}
-                  alt={`RYS ${level} Badge`}
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+  <p className="text-medium text-[#150e70] max-w-md mx-auto leading-relaxed">
+    You’ll receive a Yoga Alliance certificate —<br />
+    internationally recognized and accepted.
+  </p>
+</section>
 
-      <p className="text-medium text-[#150e70]">
-        You’ll receive a Yoga Alliance certificate —<br />
-        internationally recognized and accepted.
-      </p>
-    </section>
     </div>
   );
 };
