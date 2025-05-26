@@ -12,7 +12,7 @@ const yellowItems = ["About Us", "Program", "Retreat", "Our Teachers", "Our Revi
 
 const leftNavigation = [
   {
-    name: "Program",
+    name: "Courses",
     dropdown: [
       { name: "50 Hr Multi-Style-Yoga TTC", href: "/50" },
       { name: "100 Hr Multi-Style-Yoga TTC", href: "/100" },
@@ -22,7 +22,7 @@ const leftNavigation = [
     ]
   },
   {
-    name: "Retreat",
+    name: "Retreats",
     dropdown: [
       { name: "7 Days Holiday Retreat", href: "/retreats" },
       { name: "14 Days Wellness Retreat", href: "/retreats2" },
@@ -129,7 +129,7 @@ export default function Header() {
                   onClick={() => toggleDesktopDropdown("Program")}
                   className="flex items-center gap-1 hover:text-purple-600"
                 >
-                  PROGRAMS
+                  COURSES
                   <ChevronDown size={16} className={cn("transition-transform", desktopDropdown === "Program" && "rotate-180")} />
                 </button>
                 {desktopDropdown === "Program" && (
@@ -156,7 +156,7 @@ export default function Header() {
                   onClick={() => toggleDesktopDropdown("Retreat")}
                   className="flex items-center gap-1 hover:text-purple-600"
                 >
-                  RETREAT
+                  RETREATS
                   <ChevronDown size={16} className={cn("transition-transform", desktopDropdown === "Retreat" && "rotate-180")} />
                 </button>
                 {desktopDropdown === "Retreat" && (
