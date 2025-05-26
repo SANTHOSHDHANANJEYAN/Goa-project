@@ -61,10 +61,10 @@ export default function ContactPage() {
   return (
     <div className="pt-24">
       {/* Hero Section */}
-      <section className="py-16 md:py-20 bg-muted">
+      <section className="pt-[4rem]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">Contact Us</h1>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">GET IN TOUCH</h1>
             <p className="text-lg text-muted-foreground animate-fade-in animation-delay-300">
               We're here to answer your questions and welcome you to Rishikul yogshala goa portal
             </p>
@@ -74,7 +74,7 @@ export default function ContactPage() {
 
       {/* Contact Info and Form */}
       <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pd-[2rem]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Information */}
             <div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                 </div>
               </div>
               
-              <div className="rounded-lg overflow-hidden h-64 relative">
+              <div className="rounded-lg overflow-hidden h-64 relative mt-[3rem]">
                 <Image
                   src="https://images.pexels.com/photos/6647037/pexels-photo-6647037.jpeg"
                   alt="House of Om studio exterior"
@@ -129,7 +129,7 @@ export default function ContactPage() {
             </div>
             
             {/* Contact Form */}
-            <div className="bg-muted rounded-lg p-8">
+            <div className=" rounded-lg p-8">
               <h2 className="font-serif text-2xl mb-6">Send Us a Message</h2>
               
               {isSuccess ? (
@@ -219,13 +219,13 @@ export default function ContactPage() {
                     )}
                   />
                   
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  <Button type="submit" className="w-full  " disabled={isSubmitting}>
                     {isSubmitting ? (
-                      <span className="flex items-center">
+                      <span className="flex items-center ">
                         <span className="animate-spin mr-2">⟳</span> Sending...
                       </span>
                     ) : (
-                      <span className="flex items-center">
+                      <span className="flex items-center ">
                         <Send size={16} className="mr-2" /> Send Message
                       </span>
                     )}

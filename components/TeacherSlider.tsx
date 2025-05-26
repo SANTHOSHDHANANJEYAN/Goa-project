@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const teachers = [
@@ -11,8 +11,8 @@ const teachers = [
   { name: 'Arshdeep Singh Behal', handle: 'Teaching_Methodology', image: '/Arshdeep Singh Behal.jpg' },
   { name: 'Bipin Singh Pharswan', handle: 'Ashtanga_Vinyasa_Yoga', image: '/Bipin Singh Pharswan.jpg' },
   { name: 'Gangesha Chaitanya', handle: 'Yoga_Philosophy', image: '/gangesh sir.jpg' },
-  { name: 'Himanshu Ji', handle: 'meera_Hatha_&_Ashtangad', image: '/Himanshu Ji.jpg' },
-  { name: 'Pooja Ji', handle: 'Medititation_&_Pranayama', image: '/pooja ji.jpg' },
+  { name: 'Himanshu Ji', handle: 'Meera_Hatha_&_Ashtanga', image: '/Himanshu Ji.jpg' },
+  { name: 'Pooja Ji', handle: 'Meditation_&_Pranayama', image: '/pooja ji.jpg' },
   { name: 'Purnima Ji', handle: 'Spiritual_Guidance', image: '/Purnima hi.jpg' },
   { name: 'Rahul Negi', handle: 'Hatha_Yoga_&_Ashtanga', image: '/Rahul Negi.jpg' },
   { name: 'Rishi Raj', handle: 'Philosophy_&_Meditation', image: '/Rishi Raj.jpg' },
@@ -29,7 +29,7 @@ export default function TeacherSlider() {
     stopAutoSlide();
     intervalRef.current = setInterval(() => {
       nextSlide();
-    }, 4000);
+    }, 5000);
   };
 
   const stopAutoSlide = () => {
@@ -62,14 +62,16 @@ export default function TeacherSlider() {
 
   return (
     <section
-      className="py-20 px-4 bg-transparent relative overflow-hidden mt-[4rem]"
+      className="relative overflow-hidden py-20 px-4 sm:px-8 bg-gradient-to-b from-white via-indigo-50 to-indigo-100"
       onMouseEnter={stopAutoSlide}
       onMouseLeave={startAutoSlide}
     >
-      {/* Title */}
+      {/* Heading */}
       <div className="text-center mb-14">
-        <h2 className="text-5xl font-extrabold text-indigo-800 mb-4">Our Beloved Teachers</h2>
-        <p className="text-lg text-indigo-600 max-w-xl mx-auto">Meet the guiding lights of your yogic journey</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-indigo-800">Our Beloved Teachers</h2>
+        <p className="text-lg text-indigo-600 mt-2 max-w-xl mx-auto">
+          Meet the guiding lights of your yogic journey
+        </p>
         <div className="mt-6 flex justify-center items-center gap-4">
           <span className="w-10 h-1 bg-indigo-500 rounded-full" />
           <span className="w-4 h-4 bg-indigo-300 rounded-full" />
@@ -77,47 +79,50 @@ export default function TeacherSlider() {
         </div>
       </div>
 
-      {/* Arrows */}
+      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
         aria-label="Previous"
       >
         <ChevronLeft size={28} />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
         aria-label="Next"
       >
         <ChevronRight size={28} />
       </button>
 
-      {/* Cards */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 transition-all duration-500 ease-in-out px-4">
-        {getVisibleTeachers().map((teacher, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="relative bg-white rounded-2xl shadow-lg border border-purple-100 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center p-5"
-          >
-            <Link href="/about">
-              <div className="rounded-full overflow-hidden w-36 h-36 border-4 border-indigo-300 mb-4 cursor-pointer">
-                <Image
-                  src={teacher.image}
-                  alt={teacher.name}
-                  width={144}
-                  height={144}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            </Link>
-            <h3 className="text-xl font-semibold text-indigo-800">{teacher.name}</h3>
-            <p className="text-sm text-purple-600 mt-1">{teacher.handle}</p>
-          </motion.div>
-        ))}
+      {/* Teacher Cards */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 transition duration-500 ease-in-out">
+        <AnimatePresence mode="wait">
+          {getVisibleTeachers().map((teacher, index) => (
+            <motion.div
+              key={teacher.name}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 30 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative bg-white backdrop-blur-md border border-indigo-100 rounded-3xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center px-6 py-8"
+            >
+              <Link href="/about" passHref>
+                <div className="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-indigo-200 shadow-md mb-4 cursor-pointer transition group-hover:scale-105">
+                  <Image
+                    src={teacher.image}
+                    alt={teacher.name}
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </Link>
+              <h3 className="text-lg font-semibold text-indigo-900">{teacher.name}</h3>
+              <p className="text-sm text-indigo-500 mt-1">{teacher.handle.replaceAll('_', ' ')}</p>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
     </section>
   );

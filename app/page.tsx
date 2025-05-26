@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import ServicesPreview from '@/components/services-preview';
+
 import GalleryPage from '@/components/gallery';
 import TeacherSlider from '@/components/TeacherSlider';
 import CodeOfConduct from '@/components/CodeOfConduct';
-import ServicesPreviews from '@/components/ServicesPreviews';
+
 import Appform from '@/components/Appform';
 import BlogSection from '@/components/BlogSection';
+import CourseCard from '@/components/CourseCard';
+import RetreatsCard from '@/components/RetreatsCard';
 
 export default function Home() {
   return (
@@ -102,7 +104,7 @@ export default function Home() {
 </section>
 
 
-      <ServicesPreviews />
+      <CourseCard />
 
       <section className="py-10 bg-transparent relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-200/10 via-pink-200/10 to-yellow-100/10 z-0" />
@@ -118,7 +120,7 @@ export default function Home() {
           
         </div>
       </section>
- <ServicesPreview />
+ <RetreatsCard />
       <section className="py-8 bg-transparent text-primary-foreground">
         <div className="flex justify-center items-center px-4 sm:px-6 lg:px-8 relative">
           <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-1000 ease-in-out  ">

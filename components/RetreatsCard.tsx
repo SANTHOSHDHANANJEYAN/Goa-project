@@ -10,25 +10,25 @@ const services = [
     title: '7 Days Yoga Holiday Retreat - Path to Serenity',
     subtitle: 'Explore holistic sessions',
     image: '/IMAGE - GOA -.svg',
-    link: '/services#yoga-classes',
+    link: '/retreats',
   },
   {
     id: 'meditation',
     title: '14 Days Yoga Detox Retreat-Balance Body & Mind',
     subtitle: 'Find your inner peace',
     image: '/2nd images.svg',
-    link: '/services#meditation',
+    link: '/retreats2',
   },
   {
     id: 'sound-healing',
     title: '21 Days Yoga Wellness Retreat- A Journey to Self Discovery',
     subtitle: 'Heal through vibrations',
     image: '/3rd goa image - homwe page.svg',
-    link: '/services#sound-healing',
+    link: '/retreats3',
   },
 ];
 
-export default function ServicesPreview() {
+export default function RetreatsCard() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

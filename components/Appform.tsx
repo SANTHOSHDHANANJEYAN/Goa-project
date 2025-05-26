@@ -60,7 +60,7 @@ export default function ContactForm() {
             />
             <input
               type="tel"
-              placeholder="+1 E.g. +1 300 400 5000"
+              placeholder="Contact"
               className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
             />
             <select className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300">

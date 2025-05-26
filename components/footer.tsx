@@ -26,20 +26,22 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">Programs</h3>
             <ul className="space-y-2 pt-4 font-semibold">
-              <li><Link href="#">21 Days Yoga Immersion Course</Link></li>
+              
               <li><Link href="#">50 Hr Multi-Style-Yoga TTC</Link></li>
               <li><Link href="#">100 Hr Multi-Style-Yoga TTC</Link></li>
               <li><Link href="#">200 Hr Multi-Style-Yoga TTC</Link></li>
               <li><Link href="#">300 Hr Multi-Style-Yoga TTC</Link></li>
+              <li><Link href="#">21 Days Yoga Immersion Course</Link></li>
+
             </ul>
           </div>
 
           <div>
             <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">Retreats</h3>
             <ul className="pt-4 space-y-2 font-semibold">
-              <li><Link href="#">7 Days Holiday Retreat</Link></li>
-              <li><Link href="#">14 Days Wellness Retreat</Link></li>
-              <li><Link href="#">21 Days Detox Retreat</Link></li>
+              <li><Link href="#">7 Days Yoga Holiday Retreat</Link></li>
+              <li><Link href="#">14 Days Yoga Detox Retreat</Link></li>
+              <li><Link href="#">21 Days Yoga Wellness Retreat</Link></li>
             </ul>
           </div>
         </div>

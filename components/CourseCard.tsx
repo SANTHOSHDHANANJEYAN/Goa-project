@@ -9,23 +9,23 @@ const services = [
     id: 'yoga',
     title: '200 Hrs Multi-Style Yoga TTC',
     image: '/r1.jpg',
-    link: '/services#yoga-classes',
+    link: '/200',
   },
   {
     id: 'meditation',
     title: '300 Hrs Multi-Style Yoga TTC',
     image: '/r2.jpg',
-    link: '/services#meditation',
+    link: '/300',
   },
   {
     id: 'sound-healing',
     title: '⁠21 Days Yoga Immersion Course',
     image: '/r3.jpg',
-    link: '/services#sound-healing',
+    link: '/21days',
   },
 ];
 
-export default function ServicesPreview() {
+export default function CourseCard() {
   return (
     <section className="py-20 bg-transparent pb-[3rem]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

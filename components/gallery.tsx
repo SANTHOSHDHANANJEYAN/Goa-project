@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -8,68 +8,95 @@ const images: string[] = [
   '/gallery/1.WEBP', '/gallery/2.WEBP', '/gallery/3.WEBP',
   '/gallery/4.WEBP', '/gallery/5.WEBP', '/gallery/6.WEBP',
   '/gallery/7.WEBP', '/gallery/8.WEBP', '/gallery/9.WEBP',
-  '/gallery/10.WEBP', '/gallery/11.WEBP', '/gallery/12.WEBP', '/gallery/13.WEBP'
+  '/gallery/10.WEBP', '/gallery/12.WEBP', '/gallery/13.WEBP',
+  '/gallery/11.WEBP'
 ];
 
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll carousel
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let scrollAmount = 0;
+    const cardWidth = 320;
+    const interval = setInterval(() => {
+      scrollAmount += cardWidth;
+      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
+        scrollAmount = 0;
+        scrollContainer.scrollLeft = 0;
+      }
+      scrollContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const openPreview = (src: string, index: number) => {
     setSelectedImage(src);
-    setSelectedIndex(index);
+    setSelectedIndex(index % images.length);
   };
 
   const closePreview = () => setSelectedImage(null);
 
   const showPrev = () => {
     const newIndex = (selectedIndex - 1 + images.length) % images.length;
-    setSelectedImage(images[newIndex]);
     setSelectedIndex(newIndex);
+    setSelectedImage(images[newIndex]);
   };
 
   const showNext = () => {
     const newIndex = (selectedIndex + 1) % images.length;
-    setSelectedImage(images[newIndex]);
     setSelectedIndex(newIndex);
+    setSelectedImage(images[newIndex]);
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-blue-50 min-h-screen px-4 py-12 sm:px-8">
-      <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-indigo-800 tracking-wide uppercase">
-        Explore Our Gallery
+    <div className="bg-transparent min-h-screen px-4 py-12 sm:px-6 lg:px-16 overflow-hidden">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-indigo-800 uppercase tracking-wider drop-shadow mb-12">
+        Gallery Showcase
       </h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        {images.map((src, i) => (
+      {/* Scrollable Carousel */}
+      <div
+        ref={scrollRef}
+        className="flex overflow-x-auto space-x-4 scroll-smooth snap-x snap-mandatory pb-6"
+      >
+        {[...images, ...images].map((src, i) => (
           <motion.div
             key={i}
             whileHover={{ scale: 1.03 }}
-            className="cursor-pointer overflow-hidden rounded-2xl shadow-md"
+            className="snap-start relative w-[80vw] xs:w-[65vw] sm:w-[45vw] md:w-[300px] h-[60vw] xs:h-[45vw] sm:h-[280px] md:h-[400px] flex-shrink-0 rounded-xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out bg-white/60 backdrop-blur"
             onClick={() => openPreview(src, i)}
           >
             <Image
               src={src}
               alt={`Gallery image ${i + 1}`}
-              width={500}
-              height={400}
-              className="w-full h-full object-cover aspect-[4/3] transition-transform duration-300"
+              fill
+              className="object-cover object-center rounded-xl cursor-pointer"
+              sizes="(max-width: 480px) 80vw, (max-width: 768px) 45vw, 300px"
+              priority={i < 6} // preload initial images
             />
           </motion.div>
         ))}
       </div>
 
+      {/* Fullscreen Preview */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md px-4 py-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closePreview}
           >
             <motion.div
-              className="relative max-w-[95%] sm:max-w-3xl md:max-w-4xl w-full bg-white p-4 rounded-3xl"
+              className="relative w-full max-w-[95%] sm:max-w-2xl md:max-w-4xl rounded-3xl bg-white/10 p-4"
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
@@ -77,28 +104,30 @@ export default function GalleryPage() {
             >
               <Image
                 src={selectedImage}
-                alt="Selected Image"
+                alt="Selected"
                 width={1200}
                 height={800}
-                className="rounded-xl w-full h-auto max-h-[80vh] object-contain"
+                className="rounded-2xl object-contain w-full max-h-[75vh]"
               />
 
+              {/* Close Button */}
               <button
                 onClick={closePreview}
-                className="absolute top-4 right-4 text-white text-3xl bg-black/50 hover:bg-red-500 rounded-full px-3 py-1"
+                className="absolute top-4 right-4 text-white bg-black/50 hover:bg-red-600 rounded-full w-10 h-10 flex items-center justify-center text-2xl"
               >
                 &times;
               </button>
 
+              {/* Navigation Arrows */}
               <button
                 onClick={showPrev}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-indigo-300"
+                className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-blue-400"
               >
                 &#10094;
               </button>
               <button
                 onClick={showNext}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-indigo-300"
+                className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-blue-400"
               >
                 &#10095;
               </button>
