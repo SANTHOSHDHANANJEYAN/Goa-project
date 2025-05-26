@@ -26,7 +26,6 @@ const YogaTeacherTraining = () => {
           Transform and Elevate Your Practice to New Heights
         </p>
       </div>
-
       {/* Image and Overview */}
       <div className="flex flex-col md:flex-row items-center md:items-start mb-16">
         <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
@@ -53,15 +52,16 @@ const YogaTeacherTraining = () => {
             <li>Globally Recognized Certification</li>
           </ul>
           <div className="mt-6">
-            <Link href="/apply">
-              <a className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition">
+            <Link
+              href="/apply"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition">
+              
                 Apply Now
-              </a>
+              
             </Link>
           </div>
         </div>
       </div>
-
       {/* Upcoming Dates */}
       <div className="mb-16">
         <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
@@ -85,7 +85,6 @@ const YogaTeacherTraining = () => {
           ))}
         </div>
       </div>
-
       {/* Testimonials */}
       <div className="bg-gray-100 py-12 px-6 rounded-lg">
         <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">

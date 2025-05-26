@@ -66,9 +66,7 @@ const SevenDaysYogaRetreatPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <GoaRetreatSection/>
-
       {/* About */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
@@ -88,7 +86,6 @@ const SevenDaysYogaRetreatPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Schedule */}
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4">
@@ -108,7 +105,6 @@ const SevenDaysYogaRetreatPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing */}
       <section id="pricing" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -133,14 +129,13 @@ const SevenDaysYogaRetreatPage: React.FC = () => {
               </CardContent>
               <CardFooter>
                 <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90 text-lg">
-                  <Link href="/booking">{plan.button}</Link>
+                  <Link href="/booking" legacyBehavior>{plan.button}</Link>
                 </Button>
               </CardFooter>
             </Card>
           ))}
         </div>
       </section>
-
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-b from-accent to-accent/80 text-white text-center">
         <div className="max-w-xl mx-auto px-4">

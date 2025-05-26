@@ -78,7 +78,6 @@ export default function TeacherSlider() {
           <span className="w-10 h-1 bg-purple-500 rounded-full" />
         </div>
       </div>
-
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
@@ -94,7 +93,6 @@ export default function TeacherSlider() {
       >
         <ChevronRight size={28} />
       </button>
-
       {/* Teacher Cards */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 transition duration-500 ease-in-out">
         <AnimatePresence mode="wait">

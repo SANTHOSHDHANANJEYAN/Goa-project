@@ -68,7 +68,7 @@ export default function Header() {
               className={cn("block text-base font-medium py-2 text-[#150e70]", isYellow && "text-[#150e70]")}
               onClick={() => setMobileMenuOpen(false)}
               style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
-            >
+              >
               {item.name}
             </Link>
           ) : (
@@ -96,7 +96,7 @@ export default function Header() {
                         className="block text-sm py-1 text-[#150e70]"
                         onClick={() => setMobileMenuOpen(false)}
                         style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
-                      >
+                        >
                         {subItem.name}
                       </Link>
                       {idx !== item.dropdown.length - 1 && (
@@ -141,7 +141,7 @@ export default function Header() {
                             href={item.href}
                             className="block px-4 py-2 text-sm hover:bg-gray-100"
                             onClick={() => setDesktopDropdown(null)}
-                          >
+                            >
                             {item.name}
                           </Link>
                         </li>
@@ -168,7 +168,7 @@ export default function Header() {
                             href={item.href}
                             className="block px-4 py-2 text-sm hover:bg-gray-100"
                             onClick={() => setDesktopDropdown(null)}
-                          >
+                            >
                             {item.name}
                           </Link>
                         </li>
@@ -182,7 +182,7 @@ export default function Header() {
 
           {/* Logo Center */}
           <div className="flex justify-center">
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0" >
               <Image src="/logo30-removebg-preview.png" alt="Rishikul" width={120} height={60} className="object-contain" />
             </Link>
           </div>
@@ -190,14 +190,13 @@ export default function Header() {
           {/* Right Side */}
           <div className="flex justify-end items-center gap-4">
             <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-blue-900">
-              <Link href="/" className="flex-shrink-0">
+              <Link href="/" className="flex-shrink-0" >
                 <Image src="/yg_logo-removebg-preview.png" alt="Yoga Alliance" width={100} height={100} className="object-contain" />
               </Link>
             </div>
           </div>
         </div>
       </div>
-
       {/* Mobile Drawer */}
       <div
         className={cn(

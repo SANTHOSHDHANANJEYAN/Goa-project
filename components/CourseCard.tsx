@@ -47,7 +47,7 @@ export default function CourseCard() {
                 <h3 className="text-xl font-semibold text-[#150e70]">
                   {service.title}
                 </h3>
-                <Link href={service.link}>
+                <Link href={service.link} >
                   <span className="inline-block mt-4 bg-[#150e70] text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-[#0f0a5c] transition">
                     Know more
                   </span>

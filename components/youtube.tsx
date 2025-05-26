@@ -42,7 +42,7 @@ export default function ServicesPreview() {
               target="_blank"
               rel="noopener noreferrer"
               className="block group transition-transform duration-300 hover:scale-[1.02]"
-            >
+              legacyBehavior>
               <Card
                 className="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-500 bg-white/10 backdrop-blur-lg border border-white/20 animate-fade-in"
                 style={{ animationDelay: `${index * 200}ms`, animationFillMode: 'both' }}
