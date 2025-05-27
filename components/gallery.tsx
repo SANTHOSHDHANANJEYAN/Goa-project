@@ -17,7 +17,6 @@ export default function GalleryPage() {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll carousel
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
@@ -56,8 +55,8 @@ export default function GalleryPage() {
   };
 
   return (
-    <div className="bg-transparent min-h-screen px-4 py-12 sm:px-6 lg:px-16 overflow-hidden">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-indigo-800 uppercase tracking-wider drop-shadow mb-12">
+    <div className="bg-transparent px-4 py-10 sm:px-6 lg:px-16">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-indigo-800 uppercase tracking-wider drop-shadow mb-10">
         Gallery Showcase
       </h1>
 
@@ -70,7 +69,7 @@ export default function GalleryPage() {
           <motion.div
             key={i}
             whileHover={{ scale: 1.03 }}
-            className="snap-start relative w-[80vw] xs:w-[65vw] sm:w-[45vw] md:w-[300px] h-[60vw] xs:h-[45vw] sm:h-[280px] md:h-[400px] flex-shrink-0 rounded-xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out bg-white/60 backdrop-blur"
+            className="snap-start relative w-[85vw] xs:w-[65vw] sm:w-[45vw] md:w-[320px] h-[60vw] xs:h-[45vw] sm:h-[280px] md:h-[400px] flex-shrink-0 rounded-xl overflow-hidden shadow-xl bg-white/70 backdrop-blur-lg transition-all"
             onClick={() => openPreview(src, i)}
           >
             <Image
@@ -78,8 +77,8 @@ export default function GalleryPage() {
               alt={`Gallery image ${i + 1}`}
               fill
               className="object-cover object-center rounded-xl cursor-pointer"
-              sizes="(max-width: 480px) 80vw, (max-width: 768px) 45vw, 300px"
-              priority={i < 6} // preload initial images
+              sizes="(max-width: 480px) 85vw, (max-width: 768px) 45vw, 320px"
+              priority={i < 6}
             />
           </motion.div>
         ))}

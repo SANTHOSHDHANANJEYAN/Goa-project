@@ -77,7 +77,7 @@ const features = [
 
 const CodeOfConduct = () => {
   return (
-    <section className="bg-white py-20 px-6 sm:px-8 lg:px-20 mb-16">
+    <section className="bg-white px-6 sm:px-8 lg:px-20 ">
       <div className="max-w-7xl mx-auto space-y-16 pb-[3rem]">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-[#150e70] mb-4">Empowering Yoga Teachers Internationally through our Yoga Courses & Retreats</h1>
