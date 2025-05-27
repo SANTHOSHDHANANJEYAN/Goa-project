@@ -121,7 +121,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md shadow-sm py-3 transition-colors">
       <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
-          <div className="flex items-center gap-6 ">
+          <div className="flex items-center gap-[3rem] ">
             <Button variant="ghost" size="icon" className="hover:bg-transparent focus:bg-transparent active:bg-transparent" onClick={() => setMobileMenuOpen(true)}>
               <Menu size={24} />
             </Button>
