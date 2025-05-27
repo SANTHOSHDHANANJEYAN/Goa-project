@@ -29,7 +29,7 @@ export default function Home() {
    </video>
 
    {/* Overlay */}
-   <div className="absolute inset-0 bg-black/50 z-0" />
+   <div className="absolute inset-0 z-0" />
 
    {/* Content */}
    <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
