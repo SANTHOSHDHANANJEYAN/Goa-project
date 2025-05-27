@@ -1,4 +1,5 @@
-'use client';
+"use client"
+
 import { useState } from 'react';
 
 export default function ContactForm() {
@@ -6,17 +7,8 @@ export default function ContactForm() {
 
   return (
     <section className="relative bg-gradient-to-br from-[#f9fafb] to-[#eef2f5] py-16 px-6 md:px-20 overflow-hidden">
-      {/* Location Image - clickable & animated */}
-      {/* <a href="https://maps.app.goo.gl/coKQnkNite9r9fpA6" target="_blank" rel="noopener noreferrer">
-        <img
-          src="/location.png" // Make sure the location image path is correct (should be in the public folder)
-          alt="Our Location"
-          className="w-20 md:w-28 opacity-80 hover:scale-105 transition-transform duration-300 absolute bottom-10 left-10"
-        />
-      </a> */}
-
       {/* Google Maps iframe */}
-      <div className="mt-10">
+      <div className="mt-10 overflow-hidden rounded-lg">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3840.7496538103755!2d73.7032!3d15.711433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfef00335f248f%3A0xa96dc6480dde342e!2sRishikul%20Yogshala!5e0!3m2!1sen!2sin!4v1746891791703!5m2!1sen!2sin"
           width="100%"
@@ -24,7 +16,7 @@ export default function ContactForm() {
           style={{ border: '0' }}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="rounded-lg"
+          className="w-full h-[300px] md:h-[450px]"
         ></iframe>
       </div>
 
@@ -38,15 +30,10 @@ export default function ContactForm() {
           <p className="text-[#150e70] text-base">
             Our team is here to assist you. Simply fill out the form below, and we’ll get back to you as soon as possible!
           </p>
-          {/* <div className="flex gap-5 mt-4">
-            <a href="#"><img src="/facebook logo.jpg" alt="Facebook" className="w-6 hover:opacity-80" /></a>
-            <a href="#"><img src="/youtubelogo" alt="Instagram" className="w-6 hover:opacity-80" /></a>
-            <a href="#"><img src="/youtube.svg" alt="YouTube" className="w-6 hover:opacity-80" /></a>
-          </div> */}
         </div>
 
         {/* Right Section - Form */}
-        <div className="md:w-1/2 w-full  shadow-lg rounded-xl p-8">
+        <div className="md:w-1/2 w-full bg-white shadow-lg rounded-xl p-8">
           <form className="flex flex-col gap-4">
             <input
               type="text"
@@ -78,7 +65,9 @@ export default function ContactForm() {
                 onChange={(e) => setMessage(e.target.value)}
                 className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
               />
-              <span className="absolute bottom-2 right-3 text-sm text-gray-400">{message.length} / 180</span>
+              <span className="absolute bottom-2 right-3 text-sm text-gray-400">
+                {message.length} / 180
+              </span>
             </div>
             <button
               type="submit"
