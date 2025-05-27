@@ -210,13 +210,14 @@ export default function Header() {
         )}
         onClick={() => setMobileMenuOpen(false)}
       >
-        <div
-          className={cn(
-            "fixed top-0 right-0 w-72 h-screen overflow-y-auto bg-white shadow-lg transform transition-transform duration-300",
-            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          )}
-          onClick={(e) => e.stopPropagation()}
-        >
+       <div
+  className={cn(
+    "fixed top-0 right-0 w-72 h-screen overflow-y-auto bg-white shadow-lg transform transition-transform duration-300 rounded-tl-[25px] rounded-bl-[25px]",
+    mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+  )}
+  onClick={(e) => e.stopPropagation()}
+>
+
           <div className="p-4 h-full flex flex-col">
             <div className="flex justify-between items-center mb-[0.5rem] ml-[1rem]">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
