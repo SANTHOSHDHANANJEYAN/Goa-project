@@ -31,7 +31,7 @@ const leftNavigation = [
   },
   { name: "Our Teachers", href: "/about#story" },
   { name: "Our Reviews", href: "/about#team" },
-  { name: "Blogs", href: "/about#philosophy" },
+  { name: "Blogs", href: "/app" },
   { name: "Gallery", href: "/gallery" }
 ];
 
@@ -56,7 +56,8 @@ export default function Header() {
   };
 
   const renderDrawerNav = () => {
-    return [...leftNavigation, ...rightNavigation].map((item) => {
+    const allItems = [...leftNavigation, ...rightNavigation];
+    return allItems.map((item, index) => {
       const isYellow = yellowItems.includes(item.name);
       const hasDropdown = "dropdown" in item && Array.isArray(item.dropdown);
 
@@ -68,7 +69,7 @@ export default function Header() {
               className={cn("block text-base font-medium py-2 text-[#150e70]", isYellow && "text-[#150e70]")}
               onClick={() => setMobileMenuOpen(false)}
               style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
-              >
+            >
               {item.name}
             </Link>
           ) : (
@@ -96,7 +97,7 @@ export default function Header() {
                         className="block text-sm py-1 text-[#150e70]"
                         onClick={() => setMobileMenuOpen(false)}
                         style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
-                        >
+                      >
                         {subItem.name}
                       </Link>
                       {idx !== item.dropdown.length - 1 && (
@@ -108,6 +109,9 @@ export default function Header() {
               )}
             </>
           )}
+
+          {/* Divider after each top-level item */}
+          {index !== allItems.length - 1 && <div className="border-t border-gray-300 my-2" />}
         </div>
       );
     });
@@ -141,7 +145,7 @@ export default function Header() {
                             href={item.href}
                             className="block px-4 py-2 text-sm hover:bg-gray-100"
                             onClick={() => setDesktopDropdown(null)}
-                            >
+                          >
                             {item.name}
                           </Link>
                         </li>
@@ -168,7 +172,7 @@ export default function Header() {
                             href={item.href}
                             className="block px-4 py-2 text-sm hover:bg-gray-100"
                             onClick={() => setDesktopDropdown(null)}
-                            >
+                          >
                             {item.name}
                           </Link>
                         </li>
@@ -182,7 +186,7 @@ export default function Header() {
 
           {/* Logo Center */}
           <div className="flex justify-center">
-            <Link href="/" className="flex-shrink-0" >
+            <Link href="/" className="flex-shrink-0">
               <Image src="/logo30-removebg-preview.png" alt="Rishikul" width={120} height={60} className="object-contain" />
             </Link>
           </div>
@@ -190,13 +194,14 @@ export default function Header() {
           {/* Right Side */}
           <div className="flex justify-end items-center gap-4">
             <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-blue-900">
-              <Link href="/" className="flex-shrink-0" >
+              <Link href="/" className="flex-shrink-0">
                 <Image src="/yg_logo-removebg-preview.png" alt="Yoga Alliance" width={100} height={100} className="object-contain" />
               </Link>
             </div>
           </div>
         </div>
       </div>
+
       {/* Mobile Drawer */}
       <div
         className={cn(
@@ -213,19 +218,22 @@ export default function Header() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="p-4 h-full flex flex-col">
-            <div className="flex justify-between items-center mb-6 ml-[1rem]">
+            <div className="flex justify-between items-center mb-[0.5rem] ml-[1rem]">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                <Image src="/logo30-removebg-preview.png" alt="Rishikul" width={120} height={30} className="ml-6" />
+                <Image src="/logo30-removebg-preview.png" alt="Rishikul" width={120} height={30} className="ml-[2.5rem]" />
               </Link>
               <Button variant="ghost" size="icon" className="hover:bg-transparent focus:bg-transparent active:bg-transparent" onClick={() => setMobileMenuOpen(false)}>
                 <X size={24} />
               </Button>
             </div>
-            <nav className="space-y-4 text-blue-900 pl-[0.5rem]">{renderDrawerNav()}</nav>
+
+            <nav className=" text-blue-900 pl-[0.5rem] mt-0">
+              {renderDrawerNav()}
+            </nav>
 
             <div className="mt-auto mb-8 pt-4">
               <div className="relative w-full h-[90px] rounded-lg overflow-hidden">
-                <Image src="/yg_logo-removebg-preview.png" alt="Yoga image" width={120} height={50} className="object-cover ml-[2rem]" />
+                <Image src="/yg_logo-removebg-preview.png" alt="Yoga image" width={120} height={50} className="object-cover ml-[3rem]" />
               </div>
             </div>
           </div>
