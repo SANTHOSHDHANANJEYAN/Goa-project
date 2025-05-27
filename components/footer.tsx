@@ -74,11 +74,13 @@ export default function Footer() {
       {/* Footer Social Icons */}
       <div className="relative z-10 mt-10 flex justify-center space-x-6">
         <Link
-          href="#"
-          className="w-9 h-9 bg-[#15005c] text-white rounded-full flex items-center justify-center shadow hover:bg-purple-800"
-          >
-          <Youtube className="w-5 h-5" />
-        </Link>
+  href="#"
+  className="text-[#15005c] hover:text-purple-700 pb-[0.5rem]"
+  aria-label="YouTube"
+>
+  <Youtube className="w-8 h-6" />
+</Link>
+
         <Link href="#" className="text-[#15005c] hover:text-purple-700" >
           <Instagram className="w-6 h-6" />
         </Link>
