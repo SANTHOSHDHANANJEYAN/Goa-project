@@ -59,7 +59,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="pt-24">
+    <div className="pt-22">
       {/* Hero Section */}
       <section className="pt-[4rem]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +71,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Info and Form */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pd-[2rem]">
