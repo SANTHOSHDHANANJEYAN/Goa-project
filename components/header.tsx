@@ -66,7 +66,7 @@ export default function Header() {
           {!hasDropdown ? (
             <Link
               href={item.href!}
-              className={cn("block text-base font-medium py-2 text-[#150e70]", isYellow && "text-[#150e70]")}
+              className={cn("block text-base font-medium py-2 text-[#1F2937]", isYellow && "text-[#1F2937]")}
               onClick={() => setMobileMenuOpen(false)}
               style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
             >
@@ -76,8 +76,8 @@ export default function Header() {
             <>
               <button
                 className={cn(
-                  "w-full flex justify-between items-center text-base font-medium py-2 text-[#150e70]",
-                  isYellow && "text-[#150e70]"
+                  "w-full flex justify-between items-center text-base font-medium py-2 text-[#1F2937] hover:text-[#3E8E7E]",
+                  isYellow && "text-[#1F2937]"
                 )}
                 onClick={() => toggleDropdown(item.name)}
                 style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
@@ -94,7 +94,7 @@ export default function Header() {
                     <div key={subItem.name}>
                       <Link
                         href={subItem.href}
-                        className="block text-sm py-1 text-[#150e70]"
+                        className="block text-sm py-1 text-[#1F2937] hover:text-[#3E8E7E]"
                         onClick={() => setMobileMenuOpen(false)}
                         style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
                       >
@@ -110,7 +110,6 @@ export default function Header() {
             </>
           )}
 
-          {/* Divider after each top-level item */}
           {index !== allItems.length - 1 && <div className="border-t border-gray-300 my-2" />}
         </div>
       );
@@ -118,7 +117,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md shadow-sm py-3 transition-colors">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F9FAF8] backdrop-blur-md shadow-sm py-3 transition-colors">
       <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
           <div className="flex items-center gap-[3rem] ">
@@ -126,18 +125,17 @@ export default function Header() {
               <Menu size={24} />
             </Button>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-[#150e70]">
+            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-[#1F2937]">
               <div className="relative">
                 <button
                   onClick={() => toggleDesktopDropdown("Program")}
-                  className="flex items-center gap-1 hover:text-purple-600"
+                  className="flex items-center gap-1 hover:text-[#E0B973]"
                 >
                   COURSES
                   <ChevronDown size={16} className={cn("transition-transform", desktopDropdown === "Program" && "rotate-180")} />
                 </button>
                 {desktopDropdown === "Program" && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-purple-600 rounded-md shadow-lg z-50">
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-[#E0B973] rounded-md shadow-lg z-50">
                     <ul className="py-2">
                       {leftNavigation[0]?.dropdown?.map((item) => (
                         <li key={item.name}>
@@ -158,13 +156,13 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={() => toggleDesktopDropdown("Retreat")}
-                  className="flex items-center gap-1 hover:text-purple-600"
+                  className="flex items-center gap-1 hover:text-[#E0B973]"
                 >
                   RETREATS
                   <ChevronDown size={16} className={cn("transition-transform", desktopDropdown === "Retreat" && "rotate-180")} />
                 </button>
                 {desktopDropdown === "Retreat" && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-purple-600 rounded-md shadow-lg z-50">
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-[#E0B973] rounded-md shadow-lg z-50">
                     <ul className="py-2">
                       {leftNavigation[1]?.dropdown?.map((item) => (
                         <li key={item.name}>
@@ -184,16 +182,14 @@ export default function Header() {
             </nav>
           </div>
 
-          {/* Logo Center */}
           <div className="flex justify-center">
             <Link href="/" className="flex-shrink-0">
               <Image src="/logo30-removebg-preview.png" alt="Rishikul" width={120} height={60} className="object-contain" />
             </Link>
           </div>
 
-          {/* Right Side */}
           <div className="flex justify-end items-center gap-4">
-            <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-blue-900">
+            <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-[#1F2937]">
               <Link href="/" className="flex-shrink-0">
                 <Image src="/yg_logo-removebg-preview.png" alt="Yoga Alliance" width={100} height={100} className="object-contain" />
               </Link>
@@ -202,7 +198,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
       <div
         className={cn(
           "fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300",
@@ -210,14 +205,13 @@ export default function Header() {
         )}
         onClick={() => setMobileMenuOpen(false)}
       >
-       <div
-  className={cn(
-    "fixed top-0 right-0 w-72 h-screen overflow-y-auto bg-white shadow-lg transform transition-transform duration-300 rounded-tl-[25px] rounded-bl-[25px]",
-    mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-  )}
-  onClick={(e) => e.stopPropagation()}
->
-
+        <div
+          className={cn(
+            "fixed top-0 right-0 w-72 h-screen overflow-y-auto bg-white shadow-lg transform transition-transform duration-300 rounded-tl-[25px] rounded-bl-[25px] border-l-4 border-[#3E8E7E]",
+            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          )}
+          onClick={(e) => e.stopPropagation()}
+        >
           <div className="p-4 h-full flex flex-col">
             <div className="flex justify-between items-center mb-[0.5rem] ml-[1rem]">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
@@ -228,7 +222,7 @@ export default function Header() {
               </Button>
             </div>
 
-            <nav className=" text-blue-900 pl-[0.5rem] mt-0">
+            <nav className="text-[#1F2937] pl-[0.5rem] mt-0">
               {renderDrawerNav()}
             </nav>
 
