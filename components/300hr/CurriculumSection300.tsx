@@ -41,7 +41,7 @@ const curriculum = [
     description:
       "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
   },
-    {
+  {
     title: "Master Asanas",
     image: "/gallery/5.WEBP",
     description:
@@ -69,7 +69,7 @@ const curriculum = [
 
 const CurriculumSection300: React.FC = () => {
   return (
-    <section className="relative py-28 px-4 sm:px-10 bg-[transparent] overflow-hidden">
+    <section className="relative py-28 px-4 sm:px-10 bg-transparent overflow-hidden">
       {/* Floating Sparkle */}
       <div className="absolute top-10 left-10 z-0 opacity-10">
         <Sparkles size={180} strokeWidth={0.8} />
@@ -94,7 +94,7 @@ const CurriculumSection300: React.FC = () => {
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto mt-16">
         {curriculum.map((item, i) => (
           <motion.div
-            key={item.title}
+            key={item.title + i}
             custom={i}
             initial="hidden"
             whileInView="visible"
@@ -103,13 +103,13 @@ const CurriculumSection300: React.FC = () => {
             className="bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group"
           >
             <div className="flex justify-center mb-4">
-              <div className="w-20 h-20 bg-[#fef3f7] rounded-full flex items-center justify-center shadow-inner">
+              <div className="w-20 h-20 bg-[#fef3f7] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={50}
-                  height={50}
-                  className="object-contain"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
