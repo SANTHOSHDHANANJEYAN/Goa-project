@@ -17,12 +17,12 @@ const FreeManualSignup: React.FC = () => {
           <input
             type="email"
             placeholder="e-mail"
-            className="w-full px-4 py-3 border border-indigo-200 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full bg-white px-4 py-3 border border-indigo-200 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full px-4 py-3 border border-indigo-200 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full bg-white px-4 py-3 border border-indigo-200 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
           <button
             type="submit"
