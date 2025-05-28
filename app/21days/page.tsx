@@ -97,7 +97,7 @@ const TwentyOneTTPage = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-gray-700 max-w-6xl mx-auto">
     {/* Card 1 */}
     <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-      <img src="/11.jpg" alt="Image 1" className="w-full h-full object-cover" loading="lazy" />
+      <img src="/12.jpg" alt="Image 1" className="w-full h-full object-cover" loading="lazy" />
     </div>
     {/* Card 2 */}
     <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
