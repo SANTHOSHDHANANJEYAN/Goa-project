@@ -63,7 +63,7 @@ export default function GalleryPage() {
       {/* Scrollable Carousel */}
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto space-x-4 scroll-smooth snap-x snap-mandatory pb-6"
+        className="flex overflow-x-auto space-x-4 scroll-smooth snap-x snap-mandatory pb-6 scrollbar-hide"
       >
         {[...images, ...images].map((src, i) => (
           <motion.div
