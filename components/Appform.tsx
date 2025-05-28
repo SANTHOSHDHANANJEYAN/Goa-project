@@ -63,7 +63,7 @@ export default function ContactForm() {
                 placeholder="Enter your message..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-white"
               />
               <span className="absolute bottom-2 right-3 text-sm text-gray-400">
                 {message.length} / 180
