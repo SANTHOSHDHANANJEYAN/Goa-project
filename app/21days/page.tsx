@@ -182,7 +182,7 @@ const TwentyOneTTPage = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left max-w-4xl w-full">
       {/* Card 1 */}
       <div className="flex items-start space-x-4">
-        <img src="/icons/waterfall-icon.svg" alt="Waterfalls" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
+        <img src="/Acc1.png" alt="Waterfalls" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
         <p className="text-sm sm:text-base">
           <strong>Discover Goa's cascade gems:</strong><br />
           more than 10 waterfalls within 10 km
@@ -191,7 +191,7 @@ const TwentyOneTTPage = () => {
 
       {/* Card 2 */}
       <div className="flex items-start space-x-4">
-        <img src="/icons/nature-icon.svg" alt="Nature parks" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
+        <img src="/Acc2.png" alt="Nature parks" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
         <p className="text-sm sm:text-base">
           <strong>Exploring Goa’s natural beauty:</strong><br />
           3 biggest parks in a 20-minute drive
@@ -200,7 +200,7 @@ const TwentyOneTTPage = () => {
 
       {/* Card 3 */}
       <div className="flex items-start space-x-4">
-        <img src="/icons/beach-icon.svg" alt="Beaches" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
+        <img src="/Acc3.png" alt="Beaches" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
         <p className="text-sm sm:text-base">
           <strong>Enjoy swimming, surfing and relaxation:</strong><br />
           at Goa’s 3 beaches within 10 km
