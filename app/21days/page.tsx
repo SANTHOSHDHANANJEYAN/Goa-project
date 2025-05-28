@@ -111,8 +111,6 @@ const TwentyOneTTPage = () => {
 </section>
 
 
-
-
       {/* Curriculum */}
       <CurriculumSection21/>
 
