@@ -148,21 +148,21 @@ const ThreeHundredHourTTPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto">
             <div className="flex items-start space-x-4">
-              <img src="/icons/waterfall-icon.svg" alt="Waterfalls" className="w-8 h-8 mt-1" />
+              <img src="/Acc1.png" alt="Waterfalls" className="w-8 h-8 mt-1" />
               <p>
                 <strong>Discover Goa's cascade gems:</strong><br />
                 more than 10 waterfalls within 10 km
               </p>
             </div>
             <div className="flex items-start space-x-4">
-              <img src="/icons/nature-icon.svg" alt="Nature parks" className="w-8 h-8 mt-1" />
+              <img src="/Acc2.png" alt="Nature parks" className="w-8 h-8 mt-1" />
               <p>
                 <strong>Exploring Goa’s natural beauty:</strong><br />
                 3 biggest parks in a 20-minute drive
               </p>
             </div>
             <div className="flex items-start space-x-4">
-              <img src="/icons/beach-icon.svg" alt="Beaches" className="w-8 h-8 mt-1" />
+              <img src="/Acc3.png" alt="Beaches" className="w-8 h-8 mt-1" />
               <p>
                 <strong>Enjoy swimming, surfing and relaxation:</strong><br />
                 at Goa’s 3 beaches within 10 km
