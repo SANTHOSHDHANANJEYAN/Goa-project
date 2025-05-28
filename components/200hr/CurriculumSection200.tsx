@@ -19,49 +19,49 @@ const cardVariants = {
 const curriculum = [
   {
     title: "Master Asanas",
-    image: "/images/asana.png",
+    image: "/gallery/1.WEBP",
     description:
       "Explore postures from beginner to advanced, with detailed alignment and flow practices in Vinyasa, Hatha, and Ashtanga styles.",
   },
   {
     title: "Build Teaching Skills",
-    image: "/images/teaching.png",
+    image: "/gallery/2.WEBP",
     description:
       "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
   },
   {
     title: "Understand Anatomy",
-    image: "/images/anatomy.png",
+    image: "/gallery/3.WEBP",
     description:
       "Deep dive into body mechanics, injury prevention, and the science behind safe movement in every pose.",
   },
   {
     title: "Master Breathwork",
-    image: "/images/pranayama.png",
+    image: "/gallery/4.WEBP",
     description:
       "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
   },
     {
     title: "Master Asanas",
-    image: "/images/asana.png",
+    image: "/gallery/5.WEBP",
     description:
       "Explore postures from beginner to advanced, with detailed alignment and flow practices in Vinyasa, Hatha, and Ashtanga styles.",
   },
   {
     title: "Build Teaching Skills",
-    image: "/images/teaching.png",
+    image: "/gallery/6.WEBP",
     description:
       "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
   },
   {
     title: "Understand Anatomy",
-    image: "/images/anatomy.png",
+    image: "/gallery/7.WEBP",
     description:
       "Deep dive into body mechanics, injury prevention, and the science behind safe movement in every pose.",
   },
   {
     title: "Master Breathwork",
-    image: "/images/pranayama.png",
+    image: "/gallery/8.WEBP",
     description:
       "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
   },
