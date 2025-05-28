@@ -33,7 +33,7 @@ export default function ContactForm() {
         </div>
 
         {/* Right Section - Form */}
-        <div className="md:w-1/2 w-full bg-white  rounded-xl p-8">
+        <div className="md:w-1/2 w-full  rounded-xl p-8">
           <form className="flex flex-col gap-4">
             <input
               type="text"
