@@ -34,23 +34,23 @@ export default function ContactForm() {
 
         {/* Right Section - Form */}
         <div className="md:w-1/2 w-full  rounded-xl p-8">
-          <form className="flex flex-col gap-4 bg-white">
+          <form className="flex flex-col gap-4">
             <input
               type="text"
               placeholder="Name"
-              className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
+              className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-white"
             />
             <input
               type="email"
               placeholder="Email"
-              className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
+              className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-white"
             />
             <input
               type="tel"
               placeholder="Contact"
-              className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
+              className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-white"
             />
-            <select className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300">
+            <select className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-white">
               <option>Select Course</option>
               <option>Beginner Yoga</option>
               <option>Advanced Yoga</option>
