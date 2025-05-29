@@ -8,7 +8,6 @@ import {
   FaUsers,
   FaPlayCircle,
 } from 'react-icons/fa';
-
 // Updated component to accept thumbnailUrl
 const VideoYoutubeCard = ({
   title,
