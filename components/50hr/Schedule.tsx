@@ -36,7 +36,7 @@ export default function Schedule() {
           <div className="rounded-xl overflow-hidden shadow-md bg-white">
             <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 Aspect Ratio */}
               <Image
-                src="/27e28055-7a42-4503-9987-5f7a626972b1.jpg"
+                src="/Yogacourses 1.jpg"
                 alt="Video Thumbnail"
                 fill
                 className="absolute inset-0 object-cover w-full h-full"
