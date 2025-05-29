@@ -4,21 +4,21 @@ import { FaCheckCircle } from 'react-icons/fa';
 import Image from 'next/image';
 
 const skills: string[] = [
-  "Deep understanding of yoga philosophy and history",
-  "Correct alignment and adjustment techniques",
-  "Effective cueing and voice modulation for classes",
-  "Hands-on experience with pranayama and meditation",
-  "Anatomy knowledge relevant to yoga practice",
-  "Confidence in leading group and private sessions",
-  "Developing personalized yoga sequences",
-  "Time management and class planning",
+  "Scenic Location: Retreat set in a tranquil, picturesque spot in Goa with beach and nature views.",
+  "Expert Guidance: Led by experienced yoga instructors specializing in Hatha, Vinyasa, and Ashtanga.",
+  "All Levels Welcome: Classes tailored to beginners and advanced practitioners alike.",
+  "Holistic Approach: Includes meditation, pranayama, and mindfulness workshops for full well-being.",
+  "Personalized Experience: Focus on individual growth and support throughout the retreat.",
+  "Affordable Pricing: High-quality retreat at a budget-friendly rate.",
+  "Comfortable Stay: Clean, cozy, and fully equipped accommodations.",
+  "Transformative Journey: Designed for deep relaxation, self-discovery, and spiritual renewal.",
 ];
 
 const KeySkills7: React.FC = () => {
   return (
     <section className="bg-white py-16 px-6 md:px-20">
       <h2 className="text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-[1rem]">
-        Key Skills You Will Gain
+        Why Choose Rishikul Yogshala’s 7-Day Yoga Retreat in Goa?
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
