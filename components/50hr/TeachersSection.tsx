@@ -1,143 +1,126 @@
-import { FaCertificate, FaUtensils } from "react-icons/fa";
-import { GiMeditation } from "react-icons/gi";
-import { MdOnlinePrediction } from "react-icons/md";
-import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
-import { useRef, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+'use client';
 
-export default function AboutTraining() {
-  const ref = useRef(null);
-  const controls = useAnimation();
-  const [sectionRef, inView] = useInView({ threshold: 0.2 });
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+const teachers = [
+  { name: 'Abin Ji', handle: 'Philosophy', image: '/Abin Ji.jpg' },
+  { name: 'Arshdeep Singh Behal', handle: 'Teaching_Methodology', image: '/Arshdeep Singh Behal.jpg' },
+  { name: 'Bipin Singh Pharswan', handle: 'Ashtanga_Vinyasa_Yoga', image: '/Bipin Singh Pharswan.jpg' },
+  { name: 'Gangesha Chaitanya', handle: 'Yoga_Philosophy', image: '/gangesh sir.jpg' },
+  { name: 'Himanshu Ji', handle: 'Meera_Hatha_&_Ashtanga', image: '/Himanshu Ji.jpg' },
+  { name: 'Pooja Ji', handle: 'Meditation_&_Pranayama', image: '/pooja ji.jpg' },
+  { name: 'Purnima Ji', handle: 'Spiritual_Guidance', image: '/Purnima hi.jpg' },
+  { name: 'Rahul Negi', handle: 'Hatha_Yoga_&_Ashtanga', image: '/Rahul Negi.jpg' },
+  { name: 'Rishi Raj', handle: 'Philosophy_&_Meditation', image: '/Rishi Raj.jpg' },
+  { name: 'Sukra Chaitanya', handle: 'Mantra_Meditation_Pranayama', image: '/Sukra Chaitanya.jpg' },
+  { name: 'Yogesh Ji', handle: 'Philosophy_Meditation_&_Pranayama', image: '/Yogesh Ji.jpg' },
+];
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.3,
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    }),
+export default function TeachersSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const visibleCount = 4;
+
+  const startAutoSlide = () => {
+    stopAutoSlide();
+    intervalRef.current = setInterval(() => {
+      nextSlide();
+    }, 5000);
   };
 
-  const iconList = [
-    {
-      Icon: GiMeditation,
-      text: "Yoga Alliance Accredited Certificate (valid worldwide)",
-      size: 20,
-    },
-    {
-      Icon: GiMeditation,
-      text: "7-Days in a luxurious boutique resort in Goa",
-      size: 22,
-    },
-    {
-      Icon: GiMeditation,
-      text: "Three healthy vegan/vegetarian buffet meals daily ",
-      size: 20,
-    },
-    {
-      Icon: GiMeditation,
-      text: "Daily Asana Practice, Meditation & Pranayama Sessions",
-      size: 22,
-    },
-    {
-      Icon: GiMeditation,
-      text: "Teaching Methodology & Hands-on Teaching Practice",
-      size: 20,
-    },
-    {
-      Icon: GiMeditation,
-      text: "Comfortable accommodation in a peaceful, nature-filled setting",
-      size: 22,
-    },
-    {
-      Icon: GiMeditation,
-      text: "Small Group Size for personalized attention and guidance",
-      size: 20,
-    },
-    {
-      Icon: GiMeditation,
-      text: "Personal Growth & Transformation in a supportive community",
-      size: 22,
-    },
-  ];
+  const stopAutoSlide = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % teachers.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + teachers.length) % teachers.length);
+  };
+
+  useEffect(() => {
+    startAutoSlide();
+    return () => stopAutoSlide();
+  }, []);
+
+  const getVisibleTeachers = () => {
+    const visible = [];
+    for (let i = 0; i < visibleCount; i++) {
+      visible.push(teachers[(currentIndex + i) % teachers.length]);
+    }
+    return visible;
+  };
 
   return (
-    <section className="relative py-16 px-6 md:px-24 bg-white overflow-hidden">
-      <div
-        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10"
-        ref={sectionRef}
+    <section
+      className="relative overflow-hidden py-20 px-4 sm:px-8 bg-transparent"
+      onMouseEnter={stopAutoSlide}
+      onMouseLeave={startAutoSlide}
+    >
+      {/* Heading */}
+      <div className="text-center mb-14">
+        <h2 className="text-4xl sm:text-4xl md:text-4xl font-extrabold text-indigo-800">Our Beloved Teachers</h2>
+        <p className="text-lg text-indigo-600 mt-2 max-w-xl mx-auto">
+          Meet the guiding lights of your yogic journey
+        </p>
+        <div className="mt-6 flex justify-center items-center gap-4">
+          <span className="w-10 h-1 bg-indigo-500 rounded-full" />
+          <span className="w-4 h-4 bg-indigo-300 rounded-full" />
+          <span className="w-10 h-1 bg-purple-500 rounded-full" />
+        </div>
+      </div>
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
+        aria-label="Previous"
       >
-        {/* Left Text Content */}
-        <div className="pb-[4rem]">
-          <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2">
-            <span className="w-3 h-3 bg-indigo-900 rounded-full inline-block" />
-            About the Training
-          </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
-            Join us for an immersive <br />
-            7-Days  Yoga Alliance <br />
-            Certified Teacher training
-          </h2>
-
-          <ul className="space-y-4 text-[#150e70]">
-            {iconList.map(({ Icon, text, size }, i) => (
-              <motion.li
-                className="flex items-start gap-3"
-                key={i}
-                custom={i}
-                initial="hidden"
-                animate={controls}
-                variants={itemVariants}
-              >
-                <Icon className="text-[#150e70] mt-1" size={size} />
-                {text}
-              </motion.li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Right Image Content */}
-        <div className="grid grid-cols-2 gap-4">
-          <div className="col-span-2">
-            <Image
-              src="/51.jpg"
-              alt="Yoga Group"
-              className="rounded-xl object-cover w-full"
-              width={600}
-              height={300}
-            />
-          </div>
-          <div>
-            <Image
-              src="/52.jpg"
-              alt="Vegan Food"
-              className="rounded-xl object-cover w-full"
-              width={300}
-              height={200}
-            />
-          </div>
-          <div>
-            <Image
-              src="/54.jpg"
-              alt="Resort Room"
-              className="rounded-xl object-cover w-full h-[83%]"
-              width={300}
-              height={200}
-            />
-          </div>
-        </div>
+        <ChevronLeft size={28} />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
+        aria-label="Next"
+      >
+        <ChevronRight size={28} />
+      </button>
+      {/* Teacher Cards */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 transition duration-500 ease-in-out">
+        <AnimatePresence mode="wait">
+          {getVisibleTeachers().map((teacher, index) => (
+            <motion.div
+              key={teacher.name}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 30 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative bg-white backdrop-blur-md border border-indigo-100 rounded-3xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center px-6 py-8"
+            >
+              <Link href="/about" passHref>
+                <div className="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-indigo-200 shadow-md mb-4 cursor-pointer transition group-hover:scale-105">
+                  <Image
+                    src={teacher.image}
+                    alt={teacher.name}
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </Link>
+              <h3 className="text-lg font-semibold text-indigo-900">{teacher.name}</h3>
+              <p className="text-sm text-indigo-500 mt-1">{teacher.handle.replaceAll('_', ' ')}</p>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
     </section>
   );
