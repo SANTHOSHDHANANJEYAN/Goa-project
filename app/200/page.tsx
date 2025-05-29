@@ -36,11 +36,11 @@ const TwoHundredHourTTPage = () => {
 
      <div className="flex justify-center items-end text-center gap-8 mb-4">
   <div>
-    <span className="text-4xl font-bold text-green-600 block">USD 350</span>
+    <span className="text-4xl font-bold text-green-600 block">USD 1600</span>
     <span className="text-sm text-[#150e70]">Private Room</span>
   </div>
   <div>
-    <span className="text-4xl font-bold text-green-600 block">USD 500</span>
+    <span className="text-4xl font-bold text-green-600 block">USD 1300</span>
     <span className="text-sm text-[#150e70]">Shared Room</span>
   </div>
 </div>
