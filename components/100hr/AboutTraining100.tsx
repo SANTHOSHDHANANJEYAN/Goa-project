@@ -28,11 +28,11 @@ export default function AboutTraining100() {
   </li>
   <li className="flex items-start gap-3">
     <MdHotelClass className="text-[#150e70] mt-1" size={22} />
-    20 Days / 19 Nights in a luxurious boutique resort in Goa
+    12 Days / 11 Nights in a luxurious boutique resort in Goa
   </li>
   <li className="flex items-start gap-3">
     <FaUtensils className="text-[#150e70] mt-1" size={20} />
-    Three healthy vegan/vegetarian buffet meals daily (wholesome and delicious)
+    Three healthy vegan/vegetarian buffet meals daily
   </li>
   <li className="flex items-start gap-3">
     <GiMeditation className="text-[#150e70] mt-1" size={22} />
