@@ -19,7 +19,7 @@ const TestimonialSection: React.FC = () => {
         {videos.map((video, idx) => (
           <div
             key={idx}
-            className="aspect-video rounded-xl border-4 border-yellow-400 overflow-hidden shadow-lg"
+            className="aspect-video rounded-xl border-4  overflow-hidden shadow-lg"
           >
             <iframe
               className="w-full h-full"
