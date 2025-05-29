@@ -11,7 +11,7 @@ import BatchScheduleTable100 from "@/components/100hr/BatchScheduleTable100";
 import TestimonialSection100 from "@/components/100hr/TestimonialSection100";
 import YogaHighlights100 from "@/components/100hr/YogaHighlights100";
 import ApplicationForm100 from "@/components/100hr/ApplicationForm100";
-import TeacherSlider from "@/components/TeacherSlider";
+import TeachersSection200 from "@/components/200hr/TeachersSection200";
 import Schedule100 from "@/components/100hr/Schedule100";
 
 const HundredHourTTPage = () => {
@@ -127,7 +127,7 @@ const HundredHourTTPage = () => {
           />
         </div>
       </section> */}
-      <TeacherSlider/>
+      <TeachersSection200/>
       {/* Training Schedule */}
       {/* Accommodation Section - Scenic */}
 <section
