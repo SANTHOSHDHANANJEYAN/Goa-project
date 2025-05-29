@@ -134,24 +134,7 @@ const TwentyOneTTPage = () => {
       <TeachersSection21/>
 
       {/* Training Schedule */}
-     <section className="mb-20 px-4 sm:px-6 lg:px-8">
-  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-[#150e70]">
-    Training Schedule
-  </h2>
-
-  <div className="bg-indigo-50 p-4 sm:p-6 rounded-xl shadow-md text-center text-gray-700 max-w-2xl mx-auto">
-    <p className="mb-3 text-base sm:text-lg font-semibold">
-      Intensive Format (50-hours)
-    </p>
-    <p className="mb-1 text-sm sm:text-base">🗓 May 26 – June 16, 2025</p>
-    <p className="mb-1 text-sm sm:text-base">📍 Location: Goa</p>
-    <p className="mb-1 text-sm sm:text-base">🕗 Monday – Saturday: 8 AM to 6 PM</p>
-    <p className="text-xs sm:text-sm text-[#150e70] mt-2">
-      Includes breaks, workshops, and off-days
-    </p>
-  </div>
-</section>
-
+     
 
       {/* Accommodation Section - Scenic */}
       <section
