@@ -13,7 +13,6 @@ import YogaHighlights100 from "@/components/100hr/YogaHighlights100";
 import ApplicationForm100 from "@/components/100hr/ApplicationForm100";
 import TeachersSection200 from "@/components/200hr/TeachersSection200";
 import Schedule100 from "@/components/100hr/Schedule100";
-
 const HundredHourTTPage = () => {
   return (
     <div className="mt-24  max-w-6xl mx-auto text-gray-800">
