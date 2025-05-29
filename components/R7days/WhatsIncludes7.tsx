@@ -7,43 +7,42 @@ interface Activity {
 }
 
 const activities: Activity[] = [
-  {
-    title: "Multi-Style Yoga Classes",
-    description:
-      "Daily sessions in Hatha, Vinyasa, and Ashtanga for all levels.",
-    image: "/Meditation.jpg",
-  },
-  {
-    title: "Meditation & Pranayama",
-    description:
-      "Guided practices for mental clarity and inner peace.",
-    image: "/Accommodation.jpg",
-  },
-  {
-    title: "Yoga Philosophy & Anatomy",
-    description:
-      "Learn the foundations of yogic wisdom and body alignment.",
-    image: "/Meals.jpg",
-  },
-  {
-    title: "Ayurvedic Meals & Cleansing",
-    description:
-      "Sattvic food and detox practices like Shatkarma for overall wellness.",
-    image: "/Wellness.jpg",
-  },
-  {
-    title: "
-Mantra Chanting & Kirtan",
-    description:
-      "Uplifting group chanting for spiritual connection.",
-    image: "/Cultural.jpg",
-  },
-    {
-    title: "Beachside Relaxation & Cultural Visits",
-    description:
-      "Free time to explore Goa’s beaches and local culture.",
-    image: "/Cultural.jpg",
-  },
+ {
+  title: "Multi-Style Yoga Classes",
+  description:
+    "Daily sessions in Hatha, Vinyasa, and Ashtanga for all levels.",
+  image: "/Meditation.jpg",
+},
+{
+  title: "Meditation & Pranayama",
+  description:
+    "Guided practices for mental clarity and inner peace.",
+  image: "/Accommodation.jpg",
+},
+{
+  title: "Yoga Philosophy & Anatomy",
+  description:
+    "Learn the foundations of yogic wisdom and body alignment.",
+  image: "/Meals.jpg",
+},
+{
+  title: "Ayurvedic Meals & Cleansing",
+  description:
+    "Sattvic food and detox practices like Shatkarma for overall wellness.",
+  image: "/Wellness.jpg",
+},
+{
+  title: "Mantra Chanting & Kirtan",
+  description:
+    "Uplifting group chanting for spiritual connection.",
+  image: "/Cultural.jpg",
+},
+{
+  title: "Beachside Relaxation & Cultural Visits",
+  description:
+    "Free time to explore Goa’s beaches and local culture.",
+  image: "/Cultural.jpg",
+},
 ];
 
 const ActivitiesSection: React.FC = () => {
