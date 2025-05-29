@@ -16,7 +16,7 @@ export default function AboutTraining100() {
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
             Join us for an immersive <br />
-            20 days 100-hours Yoga Alliance <br />
+            12 days 100-hours Yoga Alliance <br />
             Certified Teacher training
           </h2>
 
@@ -27,7 +27,7 @@ export default function AboutTraining100() {
             </li>
             <li className="flex items-start gap-3">
               <GiMeditation className="text-[#150e70] mt-1" size={22} />
-              20 days / 19 nights in a boutique resort in Goa.
+              12 days / 11 nights in a boutique resort in Goa.
             </li>
             <li className="flex items-start gap-3">
               <FaUtensils className="text-[#150e70] mt-1" size={20} />
@@ -35,7 +35,7 @@ export default function AboutTraining100() {
             </li>
             <li className="flex items-start gap-3">
               <MdOnlinePrediction className="text-[#150e70] mt-1" size={22} />
-              BONUS: lifelong access to our Online 50hr Yoga Alliance course
+              Accommodation: Options for single or twin-sharing rooms.
             </li>
               <li className="flex items-start gap-3">
               <FaCertificate className="text-[#150e70] mt-1" size={20} />
