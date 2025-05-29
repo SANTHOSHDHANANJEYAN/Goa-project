@@ -18,34 +18,34 @@ const cardVariants = {
 
 const curriculum = [
   {
-    title: "Master Asanas",
+    title: "Hatha Yoga ",
     image: "/gallery/1.WEBP",
     description:
-      "Explore postures from beginner to advanced, with detailed alignment and flow practices in Vinyasa, Hatha, and Ashtanga styles.",
+      "This Hatha Yoga course covers classical asanas, breath awareness, alignment, posture sequencing, and therapeutic benefits for holistic body-mind balance.",
   },
   {
-    title: "Build Teaching Skills",
+    title: "Vinyasa Yoga",
     image: "/gallery/2.WEBP",
     description:
-      "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
+      "Explore the dynamic practice of Vinyasa Yoga, including breath-synchronized movement, preparatory techniques, structured sequences, and flowing postures for strength and flexibility.",
   },
   {
-    title: "Understand Anatomy",
+    title: "Ashtanga Vinyas",
     image: "/gallery/3.WEBP",
     description:
-      "Deep dive into body mechanics, injury prevention, and the science behind safe movement in every pose.",
+      "Ashtanga Vinyasa covers a progressive sequence of postures from the Primary Series, focusing on breath-led movement, strength, flexibility, and flow.",
   },
   {
-    title: "Master Breathwork",
+    title: "Yoga Philosophy",
     image: "/gallery/4.WEBP",
     description:
-      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+      "Yoga Philosophy explores the origin, purpose, mind-body connection, and deeper spiritual concepts like karma, chakras, kundalini, and liberation in yogic science.",
   },
   {
-    title: "Master Asanas",
+    title: "Yoga Anatomy",
     image: "/gallery/5.WEBP",
     description:
-      "Explore postures from beginner to advanced, with detailed alignment and flow practices in Vinyasa, Hatha, and Ashtanga styles.",
+      "Yoga Anatomy provides an understanding of the body's structure, systems, and functions to support safe, effective, and aligned yoga practice.",
   },
   {
     title: "Build Teaching Skills",
@@ -54,16 +54,16 @@ const curriculum = [
       "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
   },
   {
-    title: "Understand Anatomy",
+    title: "Pranayama",
     image: "/gallery/7.WEBP",
     description:
-      "Deep dive into body mechanics, injury prevention, and the science behind safe movement in every pose.",
+      "Learn the science and techniques of breath control, prana flow, nostril activation, and various pranayama practices for physical, emotional, and mental purification.",
   },
   {
-    title: "Master Breathwork",
+    title: "Relaxation Techniques",
     image: "/gallery/8.WEBP",
     description:
-      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+      "Practice full-body, emotional, chakra, and deep causal relaxation methods including Yoga Nidra to promote restful sleep and mental calm.",
   },
 ];
 
