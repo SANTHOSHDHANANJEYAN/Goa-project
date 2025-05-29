@@ -18,52 +18,52 @@ const cardVariants = {
 
 const curriculum = [
   {
-    title: "Master Asanas",
+    title: "Foundations of Yoga & Teaching",
     image: "/gallery/1.WEBP",
     description:
-      "Explore postures from beginner to advanced, with detailed alignment and flow practices in Vinyasa, Hatha, and Ashtanga styles.",
+      "Explore the origins, philosophies, diverse styles of yoga, and the essential role of a yoga teacher.",
   },
   {
-    title: "Build Teaching Skills",
+    title: "Asana Mastery & Alignment Techniques",
     image: "/gallery/2.WEBP",
     description:
-      "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
+      "Learn key yoga poses with proper alignment, modifications, hands-on adjustments, and guided practice to ensure safety, strength, and mindfulness.",
   },
   {
-    title: "Understand Anatomy",
+    title: "Pranayama & Energetic Awareness",
     image: "/gallery/3.WEBP",
     description:
-      "Deep dive into body mechanics, injury prevention, and the science behind safe movement in every pose.",
+      "Discover powerful breathwork techniques, their benefits, and how to harness breath and energy flow through pranayama, chakra awareness, and mindful movement.",
   },
   {
-    title: "Master Breathwork",
+    title: "Yoga Anatomy & Safe Movement",
     image: "/gallery/4.WEBP",
     description:
-      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+      "Understand the body’s structure, key muscle groups, breath mechanics, and injury prevention to support safe, effective, and informed yoga practice.",
   },
   {
-    title: "Master Asanas",
+    title: "Teaching Methodology & Class Leadership",
     image: "/gallery/5.WEBP",
     description:
-      "Explore postures from beginner to advanced, with detailed alignment and flow practices in Vinyasa, Hatha, and Ashtanga styles.",
+      "Learn to communicate effectively, structure balanced classes, apply teaching techniques, and embody the ethics and responsibilities of a yoga teacher.",
   },
   {
-    title: "Build Teaching Skills",
+    title: "Sequencing & Intentional Class Design",
     image: "/gallery/6.WEBP",
     description:
-      "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
+      "Master the art of creating balanced, level-appropriate class sequences with purposeful themes, effective timing, and engaging flow from start to finish.",
   },
   {
-    title: "Understand Anatomy",
+    title: "Teaching Practicum & Constructive Feedback",
     image: "/gallery/7.WEBP",
     description:
-      "Deep dive into body mechanics, injury prevention, and the science behind safe movement in every pose.",
+      "Gain real-world teaching experience through guided practice sessions, peer reviews, and expert feedback to refine your skills and build confidence as a yoga teacher.",
   },
   {
-    title: "Master Breathwork",
+    title: "Personal Growth & Wellness for Yoga Teachers",
     image: "/gallery/8.WEBP",
     description:
-      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+      "Cultivating mindful self-reflection, journaling insights, and sustainable self-care to manage stress and prevent burnout.",
   },
 ];
 
