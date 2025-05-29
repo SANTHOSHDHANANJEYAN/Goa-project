@@ -82,7 +82,7 @@ const TwoHundredHourTTPage = () => {
 
 <AboutTraining200/>
       {/* About Section */}
-  <AnimateButton200/>
+  {/* <AnimateButton200/> */}
   <Schedule200/>
 
  <section className="mt-20 px-4 sm:px-6 lg:px-8">
@@ -122,16 +122,7 @@ const TwoHundredHourTTPage = () => {
       <TeachersSection200/>
 
       {/* Training Schedule */}
-     <section className="mb-20 px-4 sm:px-6 lg:px-0">
-  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
-  <div className="bg-[#fcdede] p-4 sm:p-6 rounded-lg shadow text-center text-gray-700 max-w-md sm:max-w-3xl mx-auto">
-    <p className="mb-4 font-medium text-lg sm:text-xl">Intensive Format (50-hours)</p>
-    <p className="mb-1 text-base sm:text-lg">🗓 May 26 – June 16, 2025</p>
-    <p className="mb-1 text-base sm:text-lg">📍 Location: Goa</p>
-    <p className="mb-1 text-base sm:text-lg">🕗 Monday – Saturday: 8 AM to 6 PM</p>
-    <p className="text-sm sm:text-base text-[#150e70] mt-2">Includes breaks, workshops, and off-days</p>
-  </div>
-</section>
+ 
 
       {/* Accommodation Section - Scenic */}
       <section
