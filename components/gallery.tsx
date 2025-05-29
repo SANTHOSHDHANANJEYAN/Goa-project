@@ -56,7 +56,7 @@ export default function GalleryPage() {
 
   return (
     <div className="bg-transparent px-4 py-10 sm:px-6 lg:px-16">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-indigo-800 uppercase tracking-wider drop-shadow mb-10">
+      <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-center text-indigo-800 uppercase tracking-wider drop-shadow mb-10">
         Gallery Showcase
       </h1>
 

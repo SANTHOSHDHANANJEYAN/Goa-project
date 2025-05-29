@@ -23,7 +23,7 @@ export default function ContactForm() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mt-10">
         {/* Left Section */}
         <div className="md:w-1/2 space-y-5">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] leading-tight">
+          <h2 className="text-4xl md:text-4xl font-extrabold text-[#150e70] leading-tight">
             Ready to Become a Certified <br />
             <span className="underline decoration-yellow-400">Yoga</span> Trainer !!
           </h2>

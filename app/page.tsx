@@ -65,7 +65,7 @@ export default function Home() {
             
             {/* Left Column */}
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-4">
+              <h2 className="text-4xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-4">
                 Join a Life-Changing Community of Over 34,000 Students
               </h2>
               <p className="text-lg sm:text-xl md:text-2xl text-[#150e70] font-medium">
@@ -99,7 +99,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <CourseCard />
+
       <section className="py-10 bg-transparent relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-200/10 via-pink-200/10 to-yellow-100/10 z-0" />
 
@@ -115,17 +117,17 @@ export default function Home() {
         </div>
       </section>
       <RetreatsCard />
-      <section className="py-8 bg-transparent text-primary-foreground">
+      <section className="bg-transparent text-primary-foreground">
         <div className="flex justify-center items-center px-4 sm:px-6 lg:px-8 relative">
           
           <div className="absolute -z-10 w-[120%] h-[120%]  rounded-full blur-3xl" />
         </div>
       </section>
-      <section className=" bg-transparent text-primary-foreground relative overflow-hidden mt-16">
+      <section className=" bg-transparent text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/10 via-purple-100/10 to-yellow-100/10 z-0 pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
-          <h1 className="font-['Helvetica Neue',sans-serif] text-3xl sm:text-4xl font-bold tracking-tight text-[#150e70] mb-4 animate-slide-up">
+          <h1 className="font-['Helvetica Neue',sans-serif] text-2xl sm:text-4xl font-bold tracking-tight text-[#150e70] mb-4 animate-slide-up">
             Rishikul Yogshala Goa – Your transformation starts here.
           </h1>
 
@@ -144,7 +146,7 @@ export default function Home() {
               YOUR STORIES
             </button>
           </div>
-          <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-1000 ease-in-out  ">
+          <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-1000 ease-in-out pt-[2rem]  ">
   <img
     src="/image.png"
     alt="Scenic Goa"
@@ -156,18 +158,12 @@ export default function Home() {
       </section>
       <section
         className="relative h-[800px] overflow-hidden bg-fixed bg-center bg-cover flex items-center justify-center mt-[5rem]"
-        style={{ backgroundImage: "url('/bag1.jpg')" }}
+        style={{ backgroundImage: "url('/H1.PNG')" }}
       >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60 z-0" />
-
-        {/* Decorative Glow Overlay */}
-        <div className="absolute w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-3xl top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none" />
-
         {/* Content */}
         <div className="relative z-10 max-w-4xl px-6 md:px-16 text-white">
-          <h2 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-white to-indigo-300 drop-shadow-md">
-            Take the Journey Inward
+          <h2 className="text-2xl md:text-6xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-white to-indigo-300 drop-shadow-md">
+           Breathe. Move. Awaken. 
           </h2>
 
           <div className="mb-6 border-l-4 border-purple-400 pl-5">
@@ -184,12 +180,13 @@ export default function Home() {
           
         </div>
       </section>
+
       <BlogSection/>
-      
       <CodeOfConduct />
       <GalleryPage/>
       <TeacherSlider />
       <Appform/>
+
       <section className="md:bg-transparent relative overflow-hidden py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#150e70] mb-12 text-center">

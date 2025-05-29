@@ -41,7 +41,7 @@ const BlogSection: React.FC = () => {
     <section className="py-20 bg-transparent mt-[4rem]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#150e70] mb-4">
+          <h2 className="font-serif text-2xl font-bold text-[#150e70] mb-4">
             From Our Blog
           </h2>
           <p className="text-lg text-[#150e70] max-w-2xl mx-auto">
