@@ -1,62 +1,142 @@
-'use client';
+import { FaCertificate, FaUtensils } from "react-icons/fa";
+import { GiMeditation } from "react-icons/gi";
+import { MdOnlinePrediction } from "react-icons/md";
+import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
-import Image from 'next/image';
+export default function AboutTraining() {
+  const ref = useRef(null);
+  const controls = useAnimation();
+  const [sectionRef, inView] = useInView({ threshold: 0.2 });
 
-const teachers = [
-  {
-    name: 'Gangesha Chaitanya',
-    title: 'Lead teacher',
-    image: '/gangesh sir.jpg',
-    bio: `He is a seasoned Yoga Teacher in Rishikesh with 6+ years' experience. Specializing in Hatha, Ashtanga, Vinyasa, Pranayama, and Meditation, he prioritizes safe and effective poses through precise alignment.`,
-  },
-  {
-    name: 'Pooja Ji',
-    title: 'PhD Yoga and Life Sciences',
-    image: '/pooja ji.jpg',
-    bio: `She has spent years researching yoga and health sciences, including teaching MSc and PhD students on the effectiveness of yoga in the medical field.`,
-  },
-  {
-    name: 'Purnima Ji',
-    title: 'Lead teacher',
-    image: '/Purnima hi.jpg',
-    bio: `She has a deep passion for yoga that has led to years of studying the topics of Sanskrit and Yoga studies. She loves to empower her students to find the same sense of passion.`,
-  },
-];
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
 
-export default function TeachersSection() {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.3,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
+  const iconList = [
+    {
+      Icon: GiMeditation,
+      text: "Yoga Alliance Accredited Certificate (valid worldwide)",
+      size: 20,
+    },
+    {
+      Icon: GiMeditation,
+      text: "7-Days in a luxurious boutique resort in Goa",
+      size: 22,
+    },
+    {
+      Icon: GiMeditation,
+      text: "Three healthy vegan/vegetarian buffet meals daily ",
+      size: 20,
+    },
+    {
+      Icon: GiMeditation,
+      text: "Daily Asana Practice, Meditation & Pranayama Sessions",
+      size: 22,
+    },
+    {
+      Icon: GiMeditation,
+      text: "Teaching Methodology & Hands-on Teaching Practice",
+      size: 20,
+    },
+    {
+      Icon: GiMeditation,
+      text: "Comfortable accommodation in a peaceful, nature-filled setting",
+      size: 22,
+    },
+    {
+      Icon: GiMeditation,
+      text: "Small Group Size for personalized attention and guidance",
+      size: 20,
+    },
+    {
+      Icon: GiMeditation,
+      text: "Personal Growth & Transformation in a supportive community",
+      size: 22,
+    },
+  ];
+
   return (
-    <section className="relative py-20 bg-transparent">
-      {/* Optional Lotus Background */}
-      <div className="absolute inset-0 bg-[url('/lotus-bg.png')] bg-center bg-no-repeat bg-contain opacity-10 pointer-events-none" />
+    <section className="relative py-16 px-6 md:px-24 bg-white overflow-hidden">
+      <div
+        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10"
+        ref={sectionRef}
+      >
+        {/* Left Text Content */}
+        <div className="pb-[4rem]">
+          <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2">
+            <span className="w-3 h-3 bg-indigo-900 rounded-full inline-block" />
+            About the Training
+          </p>
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
+            Join us for an immersive <br />
+            7-Days  Yoga Alliance <br />
+            Certified Teacher training
+          </h2>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 lg:px-16 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] mb-4">
-          Meet Your Instructors
-        </h2>
-        <p className="text-[#150e70] max-w-3xl mx-auto pb-10 text-base sm:text-lg">
-          Our experienced team brings decades of collective practice from multiple yoga disciplines.
-          They’re dedicated to helping you grow — physically, mentally, and spiritually — in a supportive, inclusive environment.
-        </p>
+          <ul className="space-y-4 text-[#150e70]">
+            {iconList.map(({ Icon, text, size }, i) => (
+              <motion.li
+                className="flex items-start gap-3"
+                key={i}
+                custom={i}
+                initial="hidden"
+                animate={controls}
+                variants={itemVariants}
+              >
+                <Icon className="text-[#150e70] mt-1" size={size} />
+                {text}
+              </motion.li>
+            ))}
+          </ul>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {teachers.map((teacher, index) => (
-            <div key={index} className="flex flex-col items-center text-center px-4">
-              <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                <Image
-                  src={teacher.image}
-                  alt={teacher.name}
-                  width={160}
-                  height={160}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-indigo-900">
-                {teacher.name}
-              </h3>
-              <p className="text-sm text-gray-500 mb-2">{teacher.title}</p>
-              <p className="text-sm text-gray-700">{teacher.bio}</p>
-            </div>
-          ))}
+        {/* Right Image Content */}
+        <div className="grid grid-cols-2 gap-4">
+          <div className="col-span-2">
+            <Image
+              src="/51.jpg"
+              alt="Yoga Group"
+              className="rounded-xl object-cover w-full"
+              width={600}
+              height={300}
+            />
+          </div>
+          <div>
+            <Image
+              src="/52.jpg"
+              alt="Vegan Food"
+              className="rounded-xl object-cover w-full"
+              width={300}
+              height={200}
+            />
+          </div>
+          <div>
+            <Image
+              src="/54.jpg"
+              alt="Resort Room"
+              className="rounded-xl object-cover w-full h-[83%]"
+              width={300}
+              height={200}
+            />
+          </div>
         </div>
       </div>
     </section>
