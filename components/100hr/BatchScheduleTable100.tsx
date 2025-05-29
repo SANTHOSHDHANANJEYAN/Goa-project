@@ -37,16 +37,10 @@ const CourseSchedule = () => {
             <p className="text-sm text-gray-600 font-medium">COURSE DURATION:</p>
             <h2 className="text-2xl font-bold text-[#8c794f] mb-6">12 DAYS</h2>
 
-            <p className="text-sm text-gray-600 font-medium mb-2">COURSE FEE WITHOUT STAY:</p>
-            <h3 className="text-xl font-bold text-[#8c794f] mb-4">USD 749</h3>
-            <p className="text-sm text-gray-600 mb-8">FOOD IS INCLUDED</p>
-
-            {/* Added Room Fees */}
-            <div className="mb-6">
-              <p className="text-sm text-gray-600 font-medium mb-1">WITH STAY:</p>
-              <p className="text-base font-semibold text-[#8c794f] mb-1">$750 <span className="text-sm text-gray-500">(Shared Room)</span></p>
-              <p className="text-base font-semibold text-[#8c794f] mb-1">$900 <span className="text-sm text-gray-500">(Private Room)</span></p>
-            </div>
+            <p className="text-sm text-gray-600 font-medium mb-2">Shared Room</p>
+            <h3 className="text-xl font-bold text-[#8c794f] mb-4">USD $750</h3>
+            <p className="text-sm text-gray-600 font-medium mb-2">Private Room</p>
+            <h3 className="text-xl font-bold text-[#8c794f] mb-4">USD $900</h3>
 
             <div className="text-center md:text-left">
               <button className="bg-[#d9442e] hover:bg-[#150e70] transition text-white px-8 py-3 rounded shadow text-sm sm:text-base">
