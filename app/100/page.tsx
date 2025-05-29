@@ -127,12 +127,8 @@ const HundredHourTTPage = () => {
           />
         </div>
       </section> */}
-
       <TeacherSlider/>
-
       {/* Training Schedule */}
-
-
       {/* Accommodation Section - Scenic */}
 <section
   className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-20 sm:py-24 mb-20 min-h-[600px] sm:min-h-[700px] md:min-h-[750px]"
@@ -293,14 +289,11 @@ const HundredHourTTPage = () => {
       ))}
     </div>
   </div>
-
   <p className="text-medium text-[#150e70] max-w-md mx-auto leading-relaxed">
     You’ll receive a Yoga Alliance certificate —<br />
     internationally recognized and accepted.
   </p>
 </section>
-
-
       {/* Application Form */}
       <ApplicationForm100/>
     </div>
