@@ -52,7 +52,7 @@ export default function ContactForm() {
             />
             <select className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-white">
               <option>Select Course</option>
-              <option>Beginner Yoga</option>
+              <option>50 Hr Multi-Style-Yoga TTC</option>
               <option>Advanced Yoga</option>
               <option>Meditation</option>
             </select>
