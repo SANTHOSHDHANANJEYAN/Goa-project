@@ -3,16 +3,14 @@
 import { FaCalendarAlt } from 'react-icons/fa';
 
 const courseDates = [
-  { date: '1 Jun - 24 Jun 2025', seats: 4 },
-  { date: '1 Jul - 24 Jul 2025', seats: 7 },
-  { date: '1 Aug - 24 Aug 2025', seats: 8 },
-  { date: '1 Sep - 24 Sep 2025', seats: 7 },
-  { date: '1 Oct - 24 Oct 2025', seats: 9 },
-  { date: '1 Nov - 24 Nov 2025', seats: 10 },
-  { date: '1 Dec - 24 Dec 2025', seats: 11 },
-  { date: '1 Jan - 24 Jan 2026', seats: 12 },
-  { date: '1 Feb - 24 Feb 2026', seats: 14 },
-  { date: '1 Mar - 24 Mar 2026', seats: 15 },
+  { date: '07 Sep - 18 Sep 2025', seats: 4 },
+  { date: '07 Oct - 18 Oct 2025', seats: 7 },
+  { date: '07 Nov - 18 Nov 2025', seats: 8 },
+  { date: '07 Dec - 18 Dec 2025', seats: 7 },
+  { date: '07 Jan - 18 Jan 2026', seats: 9 },
+  { date: '07 Feb - 18 Feb 2026', seats: 10 },
+  { date: '07 Mar - 18 Mar 2026', seats: 11 },
+  { date: '07 Apr - 18 Apr 2026', seats: 12 },
 ];
 
 const CourseSchedule = () => {
@@ -33,33 +31,21 @@ const CourseSchedule = () => {
           ))}
         </div>
 
-        {/* Right: Fee Info */}
+        {/* Right: Info and Button */}
         <div className="flex flex-col justify-between md:pl-6">
           <div>
             <p className="text-sm text-gray-600 font-medium">COURSE DURATION:</p>
             <h2 className="text-2xl font-bold text-[#8c794f] mb-6">12 DAYS</h2>
 
-            <p className="text-sm text-gray-600 font-medium">100 HOUR YOGA TTC FEES:</p>
-            <div className="flex flex-col sm:flex-row sm:gap-10 mt-2 mb-6 text-[#8c794f] font-bold text-xl">
-              <div>
-                USD 1249
-                <p className="text-sm font-normal text-gray-600">PRIVATE ROOM</p>
-              </div>
-              <div>
-                USD 1049
-                <p className="text-sm font-normal text-gray-600">SHARED ROOM</p>
-              </div>
+            <p className="text-sm text-gray-600 font-medium mb-2">COURSE FEE WITHOUT STAY:</p>
+            <h3 className="text-xl font-bold text-[#8c794f] mb-4">USD 749</h3>
+            <p className="text-sm text-gray-600 mb-8">FOOD IS INCLUDED</p>
+
+            <div className="text-center md:text-left">
+              <button className="bg-[#d9442e] hover:bg-[#150e70] transition text-white px-8 py-3 rounded shadow text-sm sm:text-base">
+                BOOK NOW
+              </button>
             </div>
-
-            <p className="text-sm text-gray-600 font-medium">COURSE FEE WITHOUT STAY:</p>
-            <h3 className="text-xl font-bold text-[#8c794f]">USD 749</h3>
-            <p className="text-sm text-gray-600 mb-4">FOOD IS INCLUDED</p>
-          </div>
-
-          <div className="pt-6 text-center md:text-left">
-            <button className="bg-[#d9442e] hover:bg-[#150e70] transition text-white px-8 py-3 rounded shadow text-sm sm:text-base">
-              BOOK NOW
-            </button>
           </div>
         </div>
       </div>
