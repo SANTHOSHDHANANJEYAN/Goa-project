@@ -35,22 +35,25 @@ const FiftyHourTTPage = () => {
      </h1>
 
       <p className="text-lg text-center text-[#150e70] mb-6">
-        Join an exciting and life-changing 50-hours journey in Goa
+        Join an exciting and life-changing 7-Days journey in Goa
       </p>
 
      <div className="flex justify-center items-end text-center gap-8 mb-4">
       <div>
-        <span className="text-4xl font-bold text-green-600 block">USD 350</span>
+        <span className="text-4xl font-bold text-green-600 block">USD 500</span>
         <span className="text-sm text-[#150e70]">Private Room</span>
       </div>
       <div>
-        <span className="text-4xl font-bold text-green-600 block">USD 500</span>
+        <span className="text-4xl font-bold text-green-600 block">USD 350</span>
         <span className="text-sm text-[#150e70]">Shared Room</span>
       </div>
     </div>
       <div className="flex justify-center gap-6 mb-6">
-      <p className="text-sm text-[#150e70]">Duration-50 Hrs</p>
+      <p className="text-sm text-[#150e70]">Duration-7 Days</p>
       <p className="text-sm text-[#150e70]">Language-English</p>
+      <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
+      <p className="text-sm text-[#150e70]">Level: all level </p> 
+      <p className="text-sm text-[#150e70]">Certification: Yoga Alliance</p>  
       </div>
 
 
@@ -62,9 +65,6 @@ const FiftyHourTTPage = () => {
         </a>
       </div>
 
-      <div className="text-center text-sm text-[#150e70] mb-12">
-        <p className="font-semibold">May 26th – June 16th, 2025</p>
-      </div>
 
       {/* Hero Image */}
     <div className="flex justify-center items-center bg-transparent px-4 sm:px-6 lg:px-0">
@@ -85,7 +85,7 @@ const FiftyHourTTPage = () => {
 
   <AboutTraining/>
       {/* About Section */}
-  <AnimateButton/>
+  {/* <AnimateButton/> */}
   <Schedule/>
 
  <section className="mt-20 px-4 sm:px-6 lg:px-0">
@@ -149,16 +149,7 @@ const FiftyHourTTPage = () => {
       
 
       {/* Training Schedule */}
-<section className="mb-20 px-4 sm:px-6 lg:px-0">
-  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-[#150e70]">Training Schedule</h2>
-  <div className="bg-[#fcdede] p-4 sm:p-6 rounded-lg shadow text-center text-gray-700 max-w-md sm:max-w-3xl mx-auto">
-    <p className="mb-4 font-medium text-lg sm:text-xl">Intensive Format (50-hours)</p>
-    <p className="mb-1 text-base sm:text-lg">🗓 May 26 – June 16, 2025</p>
-    <p className="mb-1 text-base sm:text-lg">📍 Location: Goa</p>
-    <p className="mb-1 text-base sm:text-lg">🕗 Monday – Saturday: 8 AM to 6 PM</p>
-    <p className="text-sm sm:text-base text-[#150e70] mt-2">Includes breaks, workshops, and off-days</p>
-  </div>
-</section>
+
         
 
 <TeachersSection/>
@@ -172,7 +163,7 @@ const FiftyHourTTPage = () => {
 <section
   className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 px-4"
   style={{
-    backgroundImage: "url('/56.jpg')",
+    backgroundImage: "url('/Accomdation/Accom2.jpg')",
   }}
 >
   {/* Dark overlay */}
