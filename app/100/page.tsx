@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import TestimonialCarousel from "@/components/testimonials-section";
 import FAQSection from "@/components/FAQSection";
-import AboutTraining100 from "@/components/100hr/AboutTraining100";=
+import AboutTraining100 from "@/components/100hr/AboutTraining100";
 import CurriculumSection100 from "@/components/100hr/CurriculumSection100";
 import ActivitiesSection100 from "@/components/100hr/ActivitiesSection100";
 import BatchScheduleTable100 from "@/components/100hr/BatchScheduleTable100";
