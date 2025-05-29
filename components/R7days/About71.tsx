@@ -1,7 +1,7 @@
 'use client';
 
 import { FaSpa, FaGlobeAsia, FaSeedling, FaHeart } from "react-icons/fa";
-import { GiMeditationCushion, GiIndiaGate, GiLotus } from "react-icons/gi";
+import { GiMeditation, GiIndiaGate, GiLotus } from "react-icons/gi";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { TbYoga } from "react-icons/tb";
 import Image from "next/image";
@@ -54,9 +54,9 @@ export default function About71() {
       text: "Optional Excursions",
     },
     {
-      Icon: GiMeditationCushion,
-      text: "Personalized Yoga Schedule",
-    },
+  Icon: GiMeditation,
+  text: "Personalized Yoga Schedule",
+},
     {
       Icon: FaSeedling,
       text: "Holistic Mind-Body-Spirit Experience",
