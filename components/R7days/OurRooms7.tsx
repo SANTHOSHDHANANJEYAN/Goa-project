@@ -7,7 +7,7 @@ export default function OurRooms7() {
     <section
       className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
       style={{
-        backgroundImage: "url('/room.jpg')",
+        backgroundImage: "url('/rooms11.png')",
       }}
     >
       {/* Overlay */}
