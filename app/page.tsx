@@ -158,7 +158,7 @@ export default function Home() {
       </section>
       <section
         className="relative h-[800px] overflow-hidden bg-fixed bg-center bg-cover flex items-center justify-center mt-[5rem]"
-        style={{ backgroundImage: "url('/H1.PNG')" }}
+        style={{ backgroundImage: "url('/H1.png')" }}
       >
         {/* Content */}
         <div className="relative z-10 max-w-4xl px-6 md:px-16 text-white">
@@ -173,8 +173,9 @@ export default function Home() {
           </div>
 
           <p className="text-md md:text-lg leading-relaxed text-gray-100">
-            In today’s fast-moving world, the ancient wisdom of yoga invites you to pause and reconnect with your true self. 
-            This sacred practice of movement, breath, and mindfulness empowers you to discover peace, purpose, and clarity — already residing within.
+           Experience the sacred essence of yoga in the heart of Goa! 
+           This immersive Yoga TTC offers authentic teachings in Ashtanga, Hatha, meditation, and pranayama — all under the guidance of experienced gurus. 
+           Whether you're deepening your practice or beginning your teaching journey, this course empowers you with confidence, clarity, and certified skills.
           </p>
 
           
