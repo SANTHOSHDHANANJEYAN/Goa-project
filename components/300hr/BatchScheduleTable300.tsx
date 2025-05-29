@@ -3,16 +3,10 @@
 import { FaCalendarAlt } from 'react-icons/fa';
 
 const courseDates = [
-  { date: '1 Jun - 24 Jun 2025', seats: 4 },
-  { date: '1 Jul - 24 Jul 2025', seats: 7 },
-  { date: '1 Aug - 24 Aug 2025', seats: 8 },
-  { date: '1 Sep - 24 Sep 2025', seats: 7 },
-  { date: '1 Oct - 24 Oct 2025', seats: 9 },
-  { date: '1 Nov - 24 Nov 2025', seats: 10 },
-  { date: '1 Dec - 24 Dec 2025', seats: 11 },
-  { date: '1 Jan - 24 Jan 2026', seats: 12 },
-  { date: '1 Feb - 24 Feb 2026', seats: 14 },
-  { date: '1 Mar - 24 Mar 2026', seats: 15 },
+  { date: '7 Nov - 3 Dec 2025', seats: 4 },
+  { date: '7 Jan - 3 Feb 2026', seats: 7 },
+  { date: '7 Feb - 3 Mar 2026', seats: 8 },
+  
 ];
 
 const CourseSchedule = () => {
@@ -45,11 +39,11 @@ const CourseSchedule = () => {
               <p className="text-sm text-gray-600 font-medium uppercase">200 Hour Yoga TTC Fees:</p>
               <div className="flex flex-col sm:flex-row sm:gap-10 mt-2 text-xl font-bold">
                 <div>
-                  USD 500
+                  USD 1700
                   <p className="text-sm font-normal text-gray-600">Private Room</p>
                 </div>
                 <div>
-                  USD 350
+                  USD 1400
                   <p className="text-sm font-normal text-gray-600">Shared Room</p>
                 </div>
               </div>

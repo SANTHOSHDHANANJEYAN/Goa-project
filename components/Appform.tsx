@@ -53,8 +53,13 @@ export default function ContactForm() {
             <select className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-white">
               <option>Select Course</option>
               <option>50 Hr Multi-Style-Yoga TTC</option>
-              <option>Advanced Yoga</option>
-              <option>Meditation</option>
+              <option>100 Hr Multi-Style-Yoga TTC</option>
+              <option>200 Hr Multi-Style-Yoga TTC</option>
+              <option>300 Hr Multi-Style-Yoga TTC</option>
+              <option>21 Days Yoga Immersion Course</option>
+              <option>7 Days Yoga Holiday Retreat</option>
+              <option>14 Days Yoga Detox Retreat</option>
+              <option>21 Days Yoga Wellness Retreat</option>  
             </select>
             <div className="relative">
               <textarea
