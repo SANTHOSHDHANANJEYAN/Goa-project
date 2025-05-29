@@ -57,11 +57,6 @@ const TwoHundredHourTTPage = () => {
           </button>
         </a>
       </div>
-
-      <div className="text-center text-sm text-[#150e70] mb-12">
-        <p className="font-semibold">May 26th – June 16th, 2025</p>
-      </div>
-
       {/* Hero Image */}
      <div className="flex justify-center items-center bg-transparent">
   <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
