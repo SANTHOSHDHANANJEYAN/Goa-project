@@ -8,46 +8,46 @@ interface Activity {
 
 const activities: Activity[] = [
   {
-    title: "Yoga and Meditation Sessions",
+    title: "Multi-Style Yoga Classes",
     description:
-      "Experience daily guided yoga and meditation sessions designed to enhance flexibility, inner peace, and mindfulness.",
+      "Daily sessions in Hatha, Vinyasa, and Ashtanga for all levels.",
     image: "/Meditation.jpg",
   },
   {
-    title: "Accommodation",
+    title: "Meditation & Pranayama",
     description:
-      "Stay in comfortable, peaceful rooms designed with natural materials and minimalist decor, offering rest and rejuvenation.",
+      "Guided practices for mental clarity and inner peace.",
     image: "/Accommodation.jpg",
   },
   {
-    title: "Meals (Vegetarian & Vegan Options)",
+    title: "Yoga Philosophy & Anatomy",
     description:
-      "Enjoy nourishing vegetarian and vegan meals made from fresh, locally sourced ingredients, supporting a healthy lifestyle.",
+      "Learn the foundations of yogic wisdom and body alignment.",
     image: "/Meals.jpg",
   },
   {
-    title: "Wellness Treatments",
+    title: "Ayurvedic Meals & Cleansing",
     description:
-      "Indulge in holistic wellness treatments such as massages, herbal therapies, and detox practices for physical and mental balance.",
+      " Sattvic food and detox practices like Shatkarma for overall wellness.",
     image: "/Wellness.jpg",
   },
   {
-    title: "Cultural Excursions",
+    title: "Mantra Chanting & Kirtan",
     description:
-      "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
+      "Uplifting group chanting for spiritual connection.",
     image: "/Cultural.jpg",
   },
     {
-    title: "Cultural Excursions",
+    title: "Beachside Relaxation & Cultural Visits ",
     description:
-      "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
+      "Free time to explore Goa’s beaches and local culture.",
     image: "/Cultural.jpg",
   },
 ];
 
 const ActivitiesSection: React.FC = () => {
   return (
-    <section className="bg-transparent py-12 sm:py-16 text-center relative overflow-hidden">
+    <section className="bg-transparent  text-center relative overflow-hidden">
       {/* Optional radial background decoration */}
       <div className="absolute inset-0 opacity-10 z-0 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
 
