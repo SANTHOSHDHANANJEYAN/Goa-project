@@ -1,7 +1,8 @@
 // components/AboutTraining.tsx
-import { FaCertificate, FaUtensils } from "react-icons/fa";
-import { GiMeditation } from "react-icons/gi";
-import { MdOnlinePrediction } from "react-icons/md";
+import { FaCertificate, FaUtensils, FaLeaf, FaPeopleCarry } from "react-icons/fa";
+import { GiMeditation, GiTeacher } from "react-icons/gi";
+import { MdHotelClass } from "react-icons/md";
+import { IoIosPeople } from "react-icons/io";
 import Image from "next/image";
 
 export default function AboutTraining() {
@@ -16,42 +17,42 @@ export default function AboutTraining() {
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
             Join us for an immersive <br />
-            20 days 300-hours Yoga Alliance <br />
-            Certified Teacher training
+            27 days 300-hours Yoga Alliance <br />
+            Certified Teacher Training
           </h2>
 
           <ul className="space-y-4 text-[#150e70]">
             <li className="flex items-start gap-3">
               <FaCertificate className="text-[#150e70] mt-1" size={20} />
-              Yoga Alliance accredited certificate (worldwide)
+              Yoga Alliance Accredited Certificate (valid worldwide)
             </li>
             <li className="flex items-start gap-3">
-              <GiMeditation className="text-[#150e70] mt-1" size={22} />
-              20 days / 19 nights in a boutique resort in Goa.
-            </li>
-            <li className="flex items-start gap-3">
-              <FaUtensils className="text-[#150e70] mt-1" size={20} />
-              Daily delicious vegan/vegetarian meals a day (buffet style)
-            </li>
-            <li className="flex items-start gap-3">
-              <MdOnlinePrediction className="text-[#150e70] mt-1" size={22} />
-              BONUS: lifelong access to our Online 300 Hrs Yoga Alliance course
-            </li>
-              <li className="flex items-start gap-3">
-              <FaCertificate className="text-[#150e70] mt-1" size={20} />
-              Yoga Alliance accredited certificate (worldwide)
-            </li>
-            <li className="flex items-start gap-3">
-              <GiMeditation className="text-[#150e70] mt-1" size={22} />
-              20 days / 19 nights in a boutique resort in Goa.
+              <MdHotelClass className="text-[#150e70] mt-1" size={22} />
+              27 Days / 26 Nights in a luxurious boutique resort in Goa
             </li>
             <li className="flex items-start gap-3">
               <FaUtensils className="text-[#150e70] mt-1" size={20} />
-              Daily delicious vegan/vegetarian meals a day (buffet style)
+              Three healthy vegan/vegetarian buffet meals daily
             </li>
             <li className="flex items-start gap-3">
-              <MdOnlinePrediction className="text-[#150e70] mt-1" size={22} />
-              BONUS: lifelong access to our Online 50hr Yoga Alliance course
+              <GiMeditation className="text-[#150e70] mt-1" size={22} />
+              Daily Asana Practice, Meditation & Pranayama Sessions
+            </li>
+            <li className="flex items-start gap-3">
+              <GiTeacher className="text-[#150e70] mt-1" size={22} />
+              Teaching Methodology & Hands-on Teaching Practice
+            </li>
+            <li className="flex items-start gap-3">
+              <FaLeaf className="text-[#150e70] mt-1" size={20} />
+              Comfortable accommodation in a peaceful, nature-filled setting
+            </li>
+            <li className="flex items-start gap-3">
+              <IoIosPeople className="text-[#150e70] mt-1" size={22} />
+              Small Group Size for personalized attention and guidance
+            </li>
+            <li className="flex items-start gap-3">
+              <FaPeopleCarry className="text-[#150e70] mt-1" size={22} />
+              Personal Growth & Transformation in a supportive community
             </li>
           </ul>
         </div>
