@@ -10,16 +10,23 @@ import {
   FaPlayCircle,
 } from 'react-icons/fa';
 
-const VideoYoutubeCard = ({ title, embedId }: { title: string; embedId: string }) => {
-  const thumbnailUrl = `https://img.youtube.com/vi/${embedId}/hqdefault.jpg`;
-
+// Updated component to accept thumbnailUrl
+const VideoYoutubeCard = ({
+  title,
+  embedId,
+  thumbnailUrl,
+}: {
+  title: string;
+  embedId: string;
+  thumbnailUrl: string;
+}) => {
   return (
     <div
       className="cursor-pointer group max-w-sm"
       onClick={() => window.open(`https://www.youtube.com/watch?v=${embedId}`, '_blank')}
       role="button"
       tabIndex={0}
-      onKeyDown={e => {
+      onKeyDown={(e) => {
         if (e.key === 'Enter') window.open(`https://www.youtube.com/watch?v=${embedId}`, '_blank');
       }}
     >
@@ -40,47 +47,43 @@ const features = [
   {
     icon: <FaCertificate className="text-green-600 text-3xl" />,
     title: '500-Hour Yoga Alliance Certification',
-    description:
-      'Gain two certifications (200-Hour YTTC and 300-Hour YTTC) that prove you’re qualified to teach yoga worldwide.',
+    description: 'Gain two certifications (200-Hour YTTC and 300-Hour YTTC) that prove you’re qualified to teach yoga worldwide.',
   },
   {
     icon: <FaClock className="text-green-600 text-3xl" />,
     title: '500+ Hours of Self-Paced Training',
-    description:
-      'Learn yoga at your own speed with over 500 hours of flexible lessons that fit your schedule.',
+    description: 'Learn yoga at your own speed with over 500 hours of flexible lessons that fit your schedule.',
   },
   {
     icon: <FaVideo className="text-green-600 text-3xl" />,
     title: '500+ Video Lessons',
-    description:
-      'Access easy-to-follow videos covering poses, philosophy, and more to deepen your understanding.',
+    description: 'Access easy-to-follow videos covering poses, philosophy, and more to deepen your understanding.',
   },
   {
     icon: <FaChalkboardTeacher className="text-green-600 text-3xl" />,
     title: 'World Renowned Yoga Gurus from India',
-    description:
-      'Learn from top teachers from India known for their deep knowledge and expertise in yoga.',
+    description: 'Learn from top teachers from India known for their deep knowledge and expertise in yoga.',
   },
   {
     icon: <FaBroadcastTower className="text-green-600 text-3xl" />,
     title: 'Daily Live Sessions',
-    description:
-      'Attend live classes daily for real-time learning and direct interaction with instructors.',
+    description: 'Attend live classes daily for real-time learning and direct interaction with instructors.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
     title: 'Supportive Community',
-    description:
-      'Join a vibrant community of fellow students to share, grow, and stay inspired.',
+    description: 'Join a vibrant community of fellow students to share, grow, and stay inspired.',
   },
 ];
 
 const CodeOfConduct = () => {
   return (
-    <section className="bg-white px-6 sm:px-8 lg:px-20 ">
+    <section className="bg-white px-6 sm:px-8 lg:px-20">
       <div className="max-w-7xl mx-auto space-y-16 pb-[3rem]">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-[#150e70] mb-4">Empowering global yoga teachers through transformative courses and retreats</h1>
+          <h1 className="text-4xl font-bold text-[#150e70] mb-4">
+            Empowering global yoga teachers through transformative courses and retreats
+          </h1>
           <p className="text-lg text-[#150e70] max-w-2xl mx-auto">
             At Rishikul Yogshala Goa, we uphold a tradition of respect, responsibility, and discipline
             in our yoga training journey.
@@ -89,7 +92,7 @@ const CodeOfConduct = () => {
       </div>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-start">
-        {/* Left Side: YouTube Style Video Cards */}
+        {/* Left Side: YouTube Video Cards */}
         <div>
           <div className="flex items-center gap-2 text-green-700 font-semibold text-xl mb-[2rem]">
             <FaVideo className="text-green-600" />
@@ -97,14 +100,30 @@ const CodeOfConduct = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-[3.5rem]">
-            <VideoYoutubeCard title="Rishikul Yogshala Goa" embedId="dQw4w9WgXcQ" />
-            <VideoYoutubeCard title="Guru Mantra – Yoga TTC" embedId="tgbNymZ7vqY" />
-            <VideoYoutubeCard title="Student’s Review – Yoga TTC" embedId="C0DPdy98e4c" />
-            <VideoYoutubeCard title="Additional Yoga Session" embedId="YOUR_NEW_VIDEO_ID" />
+            <VideoYoutubeCard
+              title="Rishikul Yogshala Goa"
+              embedId="D3qUjvOPxak"
+              thumbnailUrl="/thumb1.jpg"
+            />
+            <VideoYoutubeCard
+              title="Guru Mantra – Yoga TTC"
+              embedId="tgbNymZ7vqY"
+              thumbnailUrl="/thumb2.jpg"
+            />
+            <VideoYoutubeCard
+              title="Student’s Review – Yoga TTC"
+              embedId="C0DPdy98e4c"
+              thumbnailUrl="/thumb3.jpg"
+            />
+            <VideoYoutubeCard
+              title="Additional Yoga Session"
+              embedId="YOUR_NEW_VIDEO_ID"
+              thumbnailUrl="/thumb4.jpg"
+            />
           </div>
         </div>
 
-        {/* Right Side: Features */}
+        {/* Right Side: Feature List */}
         <div className="space-y-10 pt-[3rem]">
           {features.map((item, index) => (
             <div key={index} className="flex items-start gap-4">
