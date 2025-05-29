@@ -78,10 +78,9 @@ const HundredHourTTPage = () => {
   <Schedule100/>
 
 <section className="mt-20 px-4 sm:px-6 lg:px-8">
-<h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
-  Transformational teachings of Hatha Yoga, Vinyasa Yoga and Ashtanga Yoga to give<br className="hidden sm:inline" />
-  our students an extensive and comprehensive teaching experience
-</h2>
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
+    Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
+  </h2>
   <h2 className="text-xs sm:text-sm md:text-base lg:text-[15px] font-bold text-center mb-8 text-[#150e70]">
     Education experience covering all key aspects of the ancient practice and philosophy of yoga
   </h2>
