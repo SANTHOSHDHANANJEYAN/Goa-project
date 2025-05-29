@@ -117,14 +117,7 @@ export default function Home() {
       <RetreatsCard />
       <section className="py-8 bg-transparent text-primary-foreground">
         <div className="flex justify-center items-center px-4 sm:px-6 lg:px-8 relative">
-          <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-1000 ease-in-out  ">
-  <img
-    src="/image.png"
-    alt="Scenic Goa"
-    className="object-cover w-full h-[33rem] animate-fade-in" // reduced height
-  />
-</div>
-
+          
           <div className="absolute -z-10 w-[120%] h-[120%]  rounded-full blur-3xl" />
         </div>
       </section>
@@ -151,6 +144,14 @@ export default function Home() {
               YOUR STORIES
             </button>
           </div>
+          <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-1000 ease-in-out  ">
+  <img
+    src="/image.png"
+    alt="Scenic Goa"
+    className="object-cover w-full h-[33rem] animate-fade-in" // reduced height
+  />
+</div>
+
         </div>
       </section>
       <section
@@ -184,6 +185,11 @@ export default function Home() {
         </div>
       </section>
       <BlogSection/>
+      
+      <CodeOfConduct />
+      <GalleryPage/>
+      <TeacherSlider />
+      <Appform/>
       <section className="md:bg-transparent relative overflow-hidden py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#150e70] mb-12 text-center">
@@ -261,10 +267,6 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 w-full h-1 bg-yellow-200 opacity-30 z-0"></div>
         </div>
       </section>
-      <CodeOfConduct />
-      <GalleryPage/>
-      <TeacherSlider />
-      <Appform/>
     </div>
   );
 }
