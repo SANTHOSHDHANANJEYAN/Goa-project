@@ -17,7 +17,7 @@ const CourseSchedule = () => {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-20 bg-[#f9f8f6]">
       <div className="max-w-7xl mx-auto bg-white rounded-md shadow-md p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 gap-10">
-        
+
         {/* Left: Course Dates */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {courseDates.map((item, index) => (
@@ -32,17 +32,27 @@ const CourseSchedule = () => {
         </div>
 
         {/* Right: Info and Button */}
-        <div className="flex flex-col justify-between md:pl-6">
+        <div className="flex flex-col justify-between md:pl-6 text-center md:text-center">
           <div>
             <p className="text-sm text-gray-600 font-medium">COURSE DURATION:</p>
             <h2 className="text-2xl font-bold text-[#8c794f] mb-6">12 DAYS</h2>
 
-            <p className="text-sm text-gray-600 font-medium mb-2">Shared Room</p>
-            <h3 className="text-xl font-bold text-[#8c794f] mb-4">USD $750</h3>
-            <p className="text-sm text-gray-600 font-medium mb-2">Private Room</p>
-            <h3 className="text-xl font-bold text-[#8c794f] mb-4">USD $900</h3>
+            <div className="flex justify-between items-start mb-6">
+              {/* Left: Shared Room */}
+              <div className="text-left">
+                <p className="text-sm text-gray-600 font-medium mb-1">Shared Room</p>
+                <h3 className="text-xl font-bold text-[#8c794f]">USD $750</h3>
+              </div>
 
-            <div className="text-center md:text-left">
+              {/* Right: Private Room */}
+              <div className="text-right">
+                <h3 className="text-xl font-bold text-[#8c794f]">USD $900</h3>
+                <p className="text-sm text-gray-600 font-medium mt-1">Private Room</p>
+              </div>
+            </div>
+
+            {/* Centered Button */}
+            <div className="text-center">
               <button className="bg-[#d9442e] hover:bg-[#150e70] transition text-white px-8 py-3 rounded shadow text-sm sm:text-base">
                 BOOK NOW
               </button>
