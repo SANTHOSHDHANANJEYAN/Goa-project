@@ -18,52 +18,52 @@ const cardVariants = {
 
 const curriculum = [
   {
-    title: "Master Asanas",
+    title: "Asana",
     image: "/gallery/1.WEBP",
     description:
-      "Explore postures from beginner to advanced, with detailed alignment and flow practices in Vinyasa, Hatha, and Ashtanga styles.",
+      "Focus on advanced pose study, building flexibility and strength, maintaining hydration, and mastering systematic sequences including the Ashtanga Vinyasa Intermediate Series.",
   },
   {
-    title: "Build Teaching Skills",
+    title: "Ashtanga Vinyasa",
     image: "/gallery/2.WEBP",
     description:
-      "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
+      "Advanced Ashtanga Vinyasa postures focusing on strength, flexibility, balance, and breath control through a diverse range of seated, backbends, arm balances, and twists.",
   },
   {
-    title: "Understand Anatomy",
+    title: "Relaxation Techniques",
     image: "/gallery/3.WEBP",
     description:
-      "Deep dive into body mechanics, injury prevention, and the science behind safe movement in every pose.",
+      "Explore Yoga Nidra’s role in intuition development, mind-heart connection, lucid and intuitive dreams, and traditional Himalayan practices.",
   },
   {
-    title: "Master Breathwork",
+    title: "Pranayama",
     image: "/gallery/4.WEBP",
     description:
-      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+      "Study breath retention (Kumbhaka), awakening Sushumna energy, balancing Nadis through Nadi Shodhanam, and understanding the five vital forces and the functions of Ida, Pingala, and Sushumna.",
   },
   {
-    title: "Master Asanas",
+    title: "Yoga Anatomy ",
     image: "/gallery/5.WEBP",
     description:
-      "Explore postures from beginner to advanced, with detailed alignment and flow practices in Vinyasa, Hatha, and Ashtanga styles.",
+      "Explore the impact of asanas on muscles, glandular anatomy linked to chakras, major body systems, and the effects of pranayama on cardiovascular and nervous systems.",
   },
   {
-    title: "Build Teaching Skills",
+    title: "Yoga Philosophy ",
     image: "/gallery/6.WEBP",
     description:
-      "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
+      "Explore meditation, spiritual heart, karma, yogic obstacles, kundalini, chakras, various yoga paths, consciousness levels, samadhi, and reincarnation in yogic science.",
   },
   {
-    title: "Understand Anatomy",
+    title: "Meditation and Concentration",
     image: "/gallery/7.WEBP",
     description:
-      "Deep dive into body mechanics, injury prevention, and the science behind safe movement in every pose.",
+      "Learn diverse meditation techniques including mantra, chakra, third eye, yantra, and non-duality practices, while understanding and overcoming common obstacles.",
   },
   {
-    title: "Master Breathwork",
+    title: "Mantra Yoga and Its Importance",
     image: "/gallery/8.WEBP",
     description:
-      "Control your life force through pranayama — discover techniques like Ujjayi, Nadi Shodhana, and more.",
+      "Study key mantras like So-HUM and invocation chants for wisdom, fearlessness, completeness, and the sacred bond between teacher and student.",
   },
 ];
 
