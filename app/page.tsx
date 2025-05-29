@@ -127,7 +127,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/10 via-purple-100/10 to-yellow-100/10 z-0 pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
-          <h1 className="font-['Helvetica Neue',sans-serif] text-2xl sm:text-4xl font-bold tracking-tight text-[#150e70] mb-4 animate-slide-up">
+          <h1 className="font-['Helvetica Neue',sans-serif] text-4xl sm:text-4xl font-bold tracking-tight text-[#150e70] mb-4 animate-slide-up">
             Rishikul Yogshala Goa – Your transformation starts here.
           </h1>
 

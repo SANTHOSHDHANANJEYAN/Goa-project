@@ -68,7 +68,7 @@ export default function TeacherSlider() {
     >
       {/* Heading */}
       <div className="text-center mb-14">
-        <h2 className="text-4xl sm:text-4xl md:text-5xl font-extrabold text-indigo-800">Our Beloved Teachers</h2>
+        <h2 className="text-4xl sm:text-4xl md:text-4xl font-extrabold text-indigo-800">Our Beloved Teachers</h2>
         <p className="text-lg text-indigo-600 mt-2 max-w-xl mx-auto">
           Meet the guiding lights of your yogic journey
         </p>

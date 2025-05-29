@@ -80,7 +80,7 @@ const CodeOfConduct = () => {
     <section className="bg-white px-6 sm:px-8 lg:px-20 ">
       <div className="max-w-7xl mx-auto space-y-16 pb-[3rem]">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-[#150e70] mb-4">Empowering Yoga Teachers Internationally through our Yoga Courses & Retreats</h1>
+          <h1 className="text-4xl font-bold text-[#150e70] mb-4">Empowering global yoga teachers through transformative courses and retreats</h1>
           <p className="text-lg text-[#150e70] max-w-2xl mx-auto">
             At Rishikul Yogshala Goa, we uphold a tradition of respect, responsibility, and discipline
             in our yoga training journey.
