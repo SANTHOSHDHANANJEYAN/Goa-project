@@ -3,6 +3,12 @@
 import Image from 'next/image';
 
 export default function Schedule100() {
+  const videoUrl = 'https://youtu.be/D3qUjvOPxak?si=RfPpigP4b3409UxY';
+
+  const handlePlayClick = () => {
+    window.open(videoUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="w-full bg-green-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row gap-12 max-w-7xl mx-auto">
@@ -44,6 +50,7 @@ export default function Schedule100() {
               <button
                 aria-label="Play Video"
                 className="absolute inset-0 flex items-center justify-center"
+                onClick={handlePlayClick}
               >
                 <svg
                   className="h-16 w-16 text-white opacity-80 hover:opacity-100 transition"
