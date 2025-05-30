@@ -30,14 +30,14 @@ export default function Benefit21() {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-wrap gap-4 mb-6">
+        {/* <div className="flex flex-wrap gap-4 mb-6">
           <button className="bg-[#150e70] hover:bg-orange-600 text-white font-bold py-3 px-6 rounded shadow-md">
             Reserve Your Spot
           </button>
           <button className="flex items-center gap-2 border-2 border-[#150e70] text-[#150e70] hover:bg-purple-50 font-semibold py-3 px-6 rounded shadow-sm">
             📅 View Full Schedule
           </button>
-        </div>
+        </div> */}
 
         {/* Trust Logos */}
         <div className="flex flex-wrap items-center gap-4">
