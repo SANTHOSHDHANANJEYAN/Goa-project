@@ -110,7 +110,7 @@ export default function TwoListing7() {
           </div>
 
           {/* Right - Pricing */}
-          <div className="bg-white border border-[#F97316] rounded-2xl px-6 py-8">
+          <div className="bg-white border border-[#F97316] rounded-2xl px-6 py-8 mb-[2rem]">
             <h3 className="text-2xl font-bold text-[#1C1C1C] mb-4">{selected} Yoga Retreat</h3>
 
             {/* Duration Buttons */}

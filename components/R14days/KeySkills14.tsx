@@ -21,7 +21,19 @@ const KeySkills14: React.FC = () => {
         Key Skills You Will Gain
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[12rem] items-center">
+
+ {/* Right: Image */}
+        <div className="relative rounded-xl overflow-hidden min-h-[500px] w-full">
+          <Image
+            src="/keyskill.avif" // Replace this with your actual image path
+            alt="Yoga training skills"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
         {/* Left: Skills List */}
         <ul className="space-y-5">
           {skills.map((skill, idx) => (
@@ -32,16 +44,7 @@ const KeySkills14: React.FC = () => {
           ))}
         </ul>
 
-        {/* Right: Image */}
-        <div className="relative rounded-xl overflow-hidden min-h-[500px] w-full">
-          <Image
-            src="/keyskill.avif" // Replace this with your actual image path
-            alt="Yoga training skills"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+       
       </div>
     </section>
   );

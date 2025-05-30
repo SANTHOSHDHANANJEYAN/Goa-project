@@ -75,7 +75,7 @@ export default function About71() {
     <section className="relative bg-white px-6 sm:px-10 lg:px-20 py-12">
       <div
         ref={sectionRef}
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[7rem] items-center"
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-[7rem] items-center"
       >
         {/* Left: Image Grid */}
         <div className="grid grid-cols-2 gap-4">
@@ -83,7 +83,7 @@ export default function About71() {
             <Image
               src="/aboutpics/112.jpg"
               alt="Yoga Group"
-              className="rounded-xl object-cover w-full"
+              className="rounded-xl object-cover w-full h-[355px]"
               width={600}
               height={300}
             />
@@ -92,7 +92,7 @@ export default function About71() {
             <Image
               src="/aboutpics/113.jpg"
               alt="Vegan Food"
-              className="rounded-xl object-cover w-full"
+              className="rounded-xl object-cover w-full h-[170px]"
               width={300}
               height={200}
             />
@@ -101,7 +101,7 @@ export default function About71() {
             <Image
               src="/aboutpics/114.jpg"
               alt="Resort Room"
-              className="rounded-xl object-cover w-full h-[83%]"
+              className="rounded-xl object-cover w-full h-[170px]"
               width={300}
               height={200}
             />

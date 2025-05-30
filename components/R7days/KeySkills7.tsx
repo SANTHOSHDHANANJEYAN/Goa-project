@@ -4,14 +4,14 @@ import { FaCheckCircle } from 'react-icons/fa';
 import Image from 'next/image';
 
 const skills: string[] = [
-  "Scenic Location: Retreat set in a tranquil, picturesque spot in Goa with beach and nature views.",
-  "Expert Guidance: Led by experienced yoga instructors specializing in Hatha, Vinyasa, and Ashtanga.",
-  "All Levels Welcome: Classes tailored to beginners and advanced practitioners alike.",
-  "Holistic Approach: Includes meditation, pranayama, and mindfulness workshops for full well-being.",
-  "Personalized Experience: Focus on individual growth and support throughout the retreat.",
-  "Affordable Pricing: High-quality retreat at a budget-friendly rate.",
-  "Comfortable Stay: Clean, cozy, and fully equipped accommodations.",
-  "Transformative Journey: Designed for deep relaxation, self-discovery, and spiritual renewal.",
+  "Deep understanding of yoga philosophy and history",
+  "Correct alignment and adjustment techniques",
+  "Effective cueing and voice modulation for classes",
+  "Hands-on experience with pranayama and meditation",
+  "Anatomy knowledge relevant to yoga practice",
+  "Confidence in leading group and private sessions",
+  "Developing personalized yoga sequences",
+  "Time management and class planning",
 ];
 
 const KeySkills7: React.FC = () => {
@@ -21,7 +21,19 @@ const KeySkills7: React.FC = () => {
         Why Choose Rishikul Yogshala’s 7-Day Yoga Retreat in Goa?
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[12rem] items-center ">
+
+         {/* Right: Image */}
+        <div className="relative rounded-xl overflow-hidden min-h-[500px] w-full">
+          <Image
+            src="/keyskill.avif" // Replace this with your actual image path
+            alt="Yoga training skills"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        
         {/* Left: Skills List */}
         <ul className="space-y-5">
           {skills.map((skill, idx) => (
@@ -32,16 +44,7 @@ const KeySkills7: React.FC = () => {
           ))}
         </ul>
 
-        {/* Right: Image */}
-        <div className="relative rounded-xl overflow-hidden min-h-[500px] w-full">
-          <Image
-            src="/keyskill.avif" // Replace this with your actual image path
-            alt="Yoga training skills"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+       
       </div>
     </section>
   );

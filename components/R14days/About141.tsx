@@ -78,7 +78,7 @@ export default function About141() {
     <section className="relative bg-white  px-4 ">
       <div
         ref={sectionRef}
-        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-[7rem] items-center"
+        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-[7rem] items-center pt-[3rem]"
       >
         {/* Left: Image Grid */}
         <div className="grid grid-cols-2 gap-4 ">
@@ -86,7 +86,7 @@ export default function About141() {
             <Image
               src="/aboutpics/115.jpg"
               alt="Yoga Group"
-              className="rounded-xl object-cover w-full"
+              className="rounded-xl object-cover w-full h-[325px]"
               width={600}
               height={300}
             />
@@ -95,7 +95,7 @@ export default function About141() {
             <Image
               src="/aboutpics/116.jpg"
               alt="Vegan Food"
-              className="rounded-xl object-cover w-full"
+              className="rounded-xl  w-full h-[160px]"
               width={300}
               height={200}
             />
@@ -104,7 +104,7 @@ export default function About141() {
             <Image
               src="/aboutpics/117.jpg"
               alt="Resort Room"
-              className="rounded-xl object-cover w-full h-[83%]"
+              className="rounded-xl object-cover w-full h-[160px]"
               width={300}
               height={200}
             />
@@ -112,7 +112,7 @@ export default function About141() {
         </div>
 
         {/* Right: Text Content */}
-        <div className="pb-[3rem]">
+        <div className="pb-[1rem]">
           <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2 ">
             <span className="w-3 h-3 bg-indigo-900 rounded-full inline-block" />
             Why Choose Us

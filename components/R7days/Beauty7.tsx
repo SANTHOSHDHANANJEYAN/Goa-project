@@ -14,30 +14,7 @@ const Beauty7: React.FC = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
 
       {/* Play Button */}
-      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10 pb-[12rem]">
-        <div className="relative w-28 h-28">
-          <svg viewBox="0 0 100 100" className="absolute w-full h-full animate-spin-slow">
-            <defs>
-              <path
-                id="circlePath"
-                d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"
-              />
-            </defs>
-            <text fill="white" fontSize="8" fontWeight="600" letterSpacing="2">
-              <textPath href="#circlePath" startOffset="0%">
-                WATCH VIDEO • WATCH VIDEO • WATCH VIDEO • 
-              </textPath>
-            </text>
-          </svg>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-14 h-14 bg-[transparent] bg-opacity-90 rounded-full flex items-center justify-center hover:scale-125 transition-transform cursor-pointer shadow-xl">
-              <svg className="w-[4rem] h-[7rem] text-white " viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Full-Width Content */}
       <div className="relative z-10 w-full text-center">
@@ -46,6 +23,11 @@ const Beauty7: React.FC = () => {
           Beauty Of Goa
          
         </h1>
+        <div className="mb-6 border-l-4 border-purple-400 pl-5 pt-[2.5rem]">
+            <p className="text-lg md:text-xl font-light italic">
+              “Goa is a tropical paradise known for its golden beaches, vibrant culture, and laid-back vibe. From scenic sunsets to Portuguese heritage, it’s the perfect blend of nature and charm.”
+            </p>
+          </div>
 
         {/* Full-Width Stats Grid */}
        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-24 text-sm md:text-base font-medium bg-transparent bg-opacity-60 p-6 rounded-xl w-full max-w-none mt-[10rem]">
