@@ -81,7 +81,7 @@ export default function About71() {
         <div className="grid grid-cols-2 gap-4">
           <div className="col-span-2">
             <Image
-              src="/51.jpg"
+              src="/aboutpics/112.jpg"
               alt="Yoga Group"
               className="rounded-xl object-cover w-full"
               width={600}
@@ -90,7 +90,7 @@ export default function About71() {
           </div>
           <div>
             <Image
-              src="/52.jpg"
+              src="/aboutpics/113.jpg"
               alt="Vegan Food"
               className="rounded-xl object-cover w-full"
               width={300}
@@ -99,7 +99,7 @@ export default function About71() {
           </div>
           <div>
             <Image
-              src="/54.jpg"
+              src="/aboutpics/114.jpg"
               alt="Resort Room"
               className="rounded-xl object-cover w-full h-[83%]"
               width={300}

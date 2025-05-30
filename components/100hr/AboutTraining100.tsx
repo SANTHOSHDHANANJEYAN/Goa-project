@@ -61,7 +61,7 @@ export default function AboutTraining100() {
         <div className="grid grid-cols-2 gap-4">
           <div className="col-span-2">
             <Image
-              src="/51.jpg"
+              src="/aboutpics/100.jpg"
               alt="Yoga Group"
               className="rounded-xl object-cover w-full"
               width={600}
@@ -70,7 +70,7 @@ export default function AboutTraining100() {
           </div>
           <div>
             <Image
-              src="/52.jpg"
+              src="/aboutpics/101.jpg"
               alt="Vegan Food"
               className="rounded-xl object-cover w-full"
               width={300}
@@ -79,7 +79,7 @@ export default function AboutTraining100() {
           </div>
           <div>
             <Image
-              src="/54.jpg"
+              src="/aboutpics/102.jpg"
               alt="Resort Room"
               className="rounded-xl object-cover w-full h-[83%]"
               width={300}

@@ -100,22 +100,22 @@ const CodeOfConduct = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-[3.5rem]">
             <VideoYoutubeCard
               title="Rishikul Yogshala Goa"
-              embedId="D3qUjvOPxak"
+              embedId="wFNmPHrxVZo?si=as8F1q3BWOjweDmi"
               thumbnailUrl="/Thumbnail/2.png"
             />
             <VideoYoutubeCard
               title="Guru Mantra – Yoga TTC"
-              embedId="tgbNymZ7vqY"
+              embedId="ZefriV55M-A?si=UZ4PM3XbLCJKKzxR"
               thumbnailUrl="/Thumbnail/3.png"
             />
             <VideoYoutubeCard
               title="Student’s Review – Yoga TTC"
-              embedId="C0DPdy98e4c"
+              embedId="1oxK0cYax9s?si=MMqH1kM2Kcp0_6_z"
               thumbnailUrl="/Thumbnail/5.png"
             />
             <VideoYoutubeCard
               title="Additional Yoga Session"
-              embedId="YOUR_NEW_VIDEO_ID"
+              embedId="5o9pIWEC2eE?si=6TDXmlDFRE-WuojI"
               thumbnailUrl="/Thumbnail/4.png"
             />
           </div>
