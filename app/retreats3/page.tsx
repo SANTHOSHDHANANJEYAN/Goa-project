@@ -21,7 +21,7 @@ export default function Page() {
 
   return (<>
   <SpaHero21/>
-  <About21/>
+  
   <About211/>
   <KeySkills21/>
   <TwoListing21/>
