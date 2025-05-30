@@ -119,7 +119,7 @@ export default function ContactPage() {
               
               <div className="rounded-lg overflow-hidden h-64 relative mt-[3rem]">
                 <Image
-                  src="https://images.pexels.com/photos/6647037/pexels-photo-6647037.jpeg"
+                  src="/Contact_us2.png"
                   alt="House of Om studio exterior"
                   fill
                   className="object-cover"
@@ -218,7 +218,7 @@ export default function ContactPage() {
                     )}
                   />
                   
-                  <Button type="submit" className="w-full  " disabled={isSubmitting}>
+                  <Button type="submit" className="w-full bg-black " disabled={isSubmitting}>
                     {isSubmitting ? (
                       <span className="flex items-center ">
                         <span className="animate-spin mr-2">⟳</span> Sending...

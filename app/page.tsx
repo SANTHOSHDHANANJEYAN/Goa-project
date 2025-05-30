@@ -162,7 +162,7 @@ export default function Home() {
       >
         {/* Content */}
         <div className="relative z-10 max-w-4xl px-6 md:px-16 text-white">
-          <h2 className="text-2xl md:text-6xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-white to-indigo-300 drop-shadow-md">
+          <h2 className="text-2xl md:text-6xl font-extrabold leading-tight mb-6 text-[#d2cb02] bg-clip-text bg-gradient-to-r from-purple-300 via-white to-indigo-300 drop-shadow-md">
            Breathe. Move. Awaken. 
           </h2>
 

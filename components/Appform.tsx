@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function ContactForm() {
   const [message, setMessage] = useState('');
@@ -22,7 +23,7 @@ export default function ContactForm() {
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mt-10">
         {/* Left Section */}
-        <div className="md:w-1/2 space-y-5">
+        <div className="md:w-1/2 gap-[2rem]">
           <h2 className="text-4xl md:text-4xl font-extrabold text-[#150e70] leading-tight">
             Ready to Become a Certified <br />
             <span className="underline decoration-yellow-400">Yoga</span> Trainer !!
@@ -30,6 +31,15 @@ export default function ContactForm() {
           <p className="text-[#150e70] text-base">
             Our team is here to assist you. Simply fill out the form below, and we’ll get back to you as soon as possible!
           </p>
+
+          <div className="rounded-lg overflow-hidden h-64 relative mt-[3rem] ">
+                          <Image
+                            src="/Contact_9-removebg-preview (1).png"
+                            alt="House of Om studio exterior"
+                            fill
+                            
+                          />
+          </div>
         </div>
 
         {/* Right Section - Form */}

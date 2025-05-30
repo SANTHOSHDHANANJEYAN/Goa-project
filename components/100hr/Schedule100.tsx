@@ -41,7 +41,7 @@ export default function Schedule100() {
           <div className="rounded-xl overflow-hidden shadow-md bg-white max-w-full">
             <div className="relative aspect-video w-full">
               <Image
-                src="/27e28055-7a42-4503-9987-5f7a626972b1.jpg"
+                src="/Thumbnail/Yogacourses 2.jpg"
                 alt="Video Thumbnail"
                 fill
                 style={{ objectFit: 'cover' }}
