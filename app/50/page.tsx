@@ -99,17 +99,17 @@ const FiftyHourTTPage = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
     {/* Card 1 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/HVA/hatha 1.jpg" alt="Hatha Yoga" className="w-full h-full object-cover" />
+      <img src="/HVA/Hatha Yoga 1 .jpg" alt="Hatha Yoga" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 2 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/HVA/vinyasa 1.jfif.jpg" alt="Vinyasa Yoga" className="w-full h-full object-cover" />
+      <img src="/HVA/Vinyasa yoga 1 .jpg" alt="Vinyasa Yoga" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 3 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/HVA/ashtanga 1.jfif.jpg" alt="Ashtanga Yoga" className="w-full h-full object-cover" />
+      <img src="/HVA/Ashtanga yoga  1 .jpg" alt="Ashtanga Yoga" className="w-full h-full object-cover" />
     </div>
   </div>
 </section>
@@ -154,7 +154,7 @@ const FiftyHourTTPage = () => {
 <section
   className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 px-4"
   style={{
-    backgroundImage: "url('/Accomdation/Accom2.jpg')",
+    backgroundImage: "url('/Accomdation/Accom4.jpg')",
   }}
 >
   {/* Dark overlay */}

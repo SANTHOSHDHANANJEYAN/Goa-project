@@ -27,7 +27,7 @@ const YogaHighlights: React.FC = () => {
   return (
     <section className="bg-gradient-to-br from-white to-[#4377B2]/10 py-16 px-6 md:px-20">
       <h2 className="text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-14">
-        Discover What Makes Our 50-Hour YTTC Special
+        Discover What Makes Our 7-Days YTTC Special
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

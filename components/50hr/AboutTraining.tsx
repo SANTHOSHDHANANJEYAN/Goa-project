@@ -38,7 +38,7 @@ export default function AboutTraining() {
     },
     {
       Icon: GiMeditation,
-      text: "20 days / 19 nights in a boutique resort in Goa.",
+      text: "7-Days / 6-Nights in a boutique resort in Goa.",
       size: 22,
     },
     {
@@ -87,7 +87,7 @@ export default function AboutTraining() {
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
             Join us for an immersive <br />
-            20 days 50-hours Yoga Alliance <br />
+            7-Days Yoga Alliance <br />
             Certified Teacher training
           </h2>
 

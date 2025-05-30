@@ -17,7 +17,7 @@ export default function AboutTraining() {
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
             Join us for an immersive <br />
-            27 days 300-hours Yoga Alliance <br />
+            27-Days Yoga Alliance <br />
             Certified Teacher Training
           </h2>
 
@@ -28,7 +28,7 @@ export default function AboutTraining() {
             </li>
             <li className="flex items-start gap-3">
               <MdHotelClass className="text-[#150e70] mt-1" size={22} />
-              27 Days / 26 Nights in a luxurious boutique resort in Goa
+              27-Days / 26-Nights in a luxurious boutique resort in Goa
             </li>
             <li className="flex items-start gap-3">
               <FaUtensils className="text-[#150e70] mt-1" size={20} />

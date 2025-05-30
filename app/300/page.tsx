@@ -31,7 +31,7 @@ const ThreeHundredHourTTPage = () => {
 </h1>
 
       <p className="text-lg text-center text-[#150e70] mb-6">
-        Join an exciting and life-changing 300-Hours journey in Goa
+        Join an exciting and life-changing 27-Days journey in Goa
       </p>
 
      <div className="flex justify-center items-end text-center gap-8 mb-4">
@@ -97,17 +97,17 @@ const ThreeHundredHourTTPage = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
     {/* Card 1 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/11.jpg" alt="Image 1" className="w-full h-full object-cover" />
+      <img src="/HVA/Hatha Yoga 4 .jpg" alt="Image 1" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 2 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
+      <img src="/HVA/Ashtanga yoga 5 .jpg" alt="Image 2" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 3 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
+      <img src="/HVA/Vinyasa yoga 4 .jpg" alt="Image 3" className="w-full h-full object-cover" />
     </div>
   </div>
 </section>
@@ -125,45 +125,54 @@ const ThreeHundredHourTTPage = () => {
       {/* Training Schedule */}
 
       {/* Accommodation Section - Scenic */}
-      <section
-  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
+ <section
+  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 px-4"
   style={{
-    backgroundImage: "url('/56.jpg')",
+    backgroundImage: "url('/Accomdation/Accom4.jpg')",
   }}
 >
+  {/* Dark overlay */}
+  <div className="bg-black bg-opacity-50 absolute inset-0"></div>
 
-        <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">Rishikul Yogshala Goa</h2>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
-          <p className="text-lg mb-10">Palm Paradise Resort amidst jungle paradise in Goa</p>
+  <div className="relative z-10 max-w-3xl mx-auto text-center">
+    <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">
+      Rishikul Yogshala Goa
+    </h2>
+    <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
+    <p className="text-lg mb-10">
+      Palm Paradise Resort amidst jungle paradise in Goa
+    </p>
 
-          <div className="grid md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto">
-            <div className="flex items-start space-x-4">
-              <img src="/Acc1.png" alt="Waterfalls" className="w-8 h-8 mt-1" />
-              <p>
-                <strong>Discover Goa's cascade gems:</strong><br />
-                more than 10 waterfalls within 10 km
-              </p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <img src="/Acc2.png" alt="Nature parks" className="w-8 h-8 mt-1" />
-              <p>
-                <strong>Exploring Goa’s natural beauty:</strong><br />
-                3 biggest parks in a 20-minute drive
-              </p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <img src="/Acc3.png" alt="Beaches" className="w-8 h-8 mt-1" />
-              <p>
-                <strong>Enjoy swimming, surfing and relaxation:</strong><br />
-                at Goa’s 3 beaches within 10 km
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="flex flex-col items-center gap-8">
+      {/* Item 1 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc1.png" alt="Waterfalls" className="w-10 h-10" />
+        <p>
+          <strong>Discover Goa's cascade gems:</strong><br />
+          more than 10 waterfalls within 10 km
+        </p>
+      </div>
 
+      {/* Item 2 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc2.png" alt="Nature parks" className="w-10 h-10" />
+        <p>
+          <strong>Exploring Goa’s natural beauty:</strong><br />
+          3 biggest parks in a 20-minute drive
+        </p>
+      </div>
+
+      {/* Item 3 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc3.png" alt="Beaches" className="w-10 h-10" />
+        <p className="pl-1rem">
+          <strong>Enjoy swimming, surfing and relaxation:</strong><br />
+          at Goa’s 3 beaches within 10 km
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
      
       <ActivitiesSection300/>
        {/* Course Details Section */}
@@ -194,42 +203,42 @@ const ThreeHundredHourTTPage = () => {
           {
             question: "1. Where is your yoga teacher training course located?",
             answer:
-              "Our course is located in Goa, the Pearl of the Orient, offering a serene environment amidst its beautiful coastal landscapes.",
+              "Our course is located in Goa, the Pearl of the Orient, offering a serene environment amidst its beautiful coastal landscapes.",
           },
           {
             question: "2. What style of yoga do you teach in the training course?",
             answer:
-              "We specialize in Hatha Vinyasa yoga, blending traditional Hatha principles with dynamic Vinyasa flow.",
+              "We specialize in Hatha Vinyasa yoga, blending traditional Hatha principles with dynamic Vinyasa flow.",
           },
           {
             question: "3. What is the duration of the training program?",
             answer:
-              "The program typically spans 12 days for the 100-hr course.",
+              "The program typically spans 27 days for the 300-hr course.",
           },
           {
-            question: "4. What are the prerequisites for enrolling in the program?",
+            question: "4. What does a typical day look like during the training?",
             answer:
-              "Participants are encouraged to have a basic understanding and regular practice of yoga before joining.",
+              "Participants are encouraged to have a basic understanding and regular practice of yoga before joining.",
           },
           {
             question: "5. What does a typical day look like during the training?",
             answer:
-              "Each day includes yoga practice, meditation, theory classes, workshops, and dedicated time for self-study.",
+              "Each day includes yoga practice, meditation, theory classes, workshops, and dedicated time for self-study.",
           },
           {
             question: "6. Is the program conducted in English?",
             answer:
-              "Yes, the entire course is conducted in English to cater to international participants.",
+              "Yes, the entire course is conducted in English to cater to international participants.",
           },
           {
             question: "7. Who are the instructors leading the training?",
             answer:
-              "Our instructors are professionals certified in Hatha Vinyasa yoga, ensuring top-notch teaching and guidance.",
+              "Our instructors are professionals certified in Hatha Vinyasa yoga, ensuring top-notch teaching and guidance.",
           },
           {
             question: "8. What certification will I receive upon completing the course?",
             answer:
-              "Upon successful completion, you will receive a Yoga Alliance accredited certification, recognized globally for teaching yoga.",
+              "Upon successful completion, you will receive a Yoga Alliance accredited certification, recognized globally for teaching yoga.",
           },
           
         ]}

@@ -40,7 +40,7 @@ const CourseSchedule = () => {
             </div>
 
             <div>
-              <p className="text-sm text-gray-600 font-medium uppercase">200 Hour Yoga TTC Fees:</p>
+              <p className="text-sm text-gray-600 font-medium uppercase">50 Hour Yoga TTC Fees:</p>
               <div className="flex flex-col sm:flex-row sm:gap-10 mt-2 text-xl font-bold">
                 <div>
                   USD 500

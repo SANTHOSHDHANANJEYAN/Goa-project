@@ -95,15 +95,15 @@ const TwentyOneTTPage = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-gray-700 max-w-6xl mx-auto">
     {/* Card 1 */}
     <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-      <img src="/12.jpg" alt="Image 1" className="w-full h-full object-cover" loading="lazy" />
+      <img src="/HVA/Hatha Yoga 5 .jpg" alt="Image 1" className="w-full h-full object-cover" loading="lazy" />
     </div>
     {/* Card 2 */}
     <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-      <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" loading="lazy" />
+      <img src="/HVA/Vinyasa yoga 5 .jpg" alt="Image 2" className="w-full h-full object-cover" loading="lazy" />
     </div>
     {/* Card 3 */}
     <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-      <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" loading="lazy" />
+      <img src="/HVA/Ashtanga yoga 5 .jpg" alt="Image 3" className="w-full h-full object-cover" loading="lazy" />
     </div>
   </div>
 </section>
@@ -135,52 +135,47 @@ const TwentyOneTTPage = () => {
      
 
       {/* Accommodation Section - Scenic */}
-      <section
-  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white h-[700px] sm:h-[750px] mb-20"
+<section
+  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 px-4"
   style={{
-    backgroundImage: "url('/56.jpg')",
+    backgroundImage: "url('/Accomdation/Accom4.jpg')",
   }}
 >
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  {/* Dark overlay */}
+  <div className="bg-black bg-opacity-50 absolute inset-0"></div>
 
-  {/* Centered Content */}
-  <div className="relative z-10 flex flex-col justify-center items-center h-full px-4 sm:px-6 lg:px-8 text-center">
-    <h2 className="text-sm sm:text-base uppercase tracking-wide text-gray-200 mb-2">
+  <div className="relative z-10 max-w-3xl mx-auto text-center">
+    <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">
       Rishikul Yogshala Goa
     </h2>
-
-    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-      Accommodation
-    </h1>
-
-    <p className="text-base sm:text-lg mb-8 sm:mb-10">
+    <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
+    <p className="text-lg mb-10">
       Palm Paradise Resort amidst jungle paradise in Goa
     </p>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left max-w-4xl w-full">
-      {/* Card 1 */}
-      <div className="flex items-start space-x-4">
-        <img src="/Acc1.png" alt="Waterfalls" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
-        <p className="text-sm sm:text-base">
+    <div className="flex flex-col items-center gap-8">
+      {/* Item 1 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc1.png" alt="Waterfalls" className="w-10 h-10" />
+        <p>
           <strong>Discover Goa's cascade gems:</strong><br />
           more than 10 waterfalls within 10 km
         </p>
       </div>
 
-      {/* Card 2 */}
-      <div className="flex items-start space-x-4">
-        <img src="/Acc2.png" alt="Nature parks" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
-        <p className="text-sm sm:text-base">
+      {/* Item 2 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc2.png" alt="Nature parks" className="w-10 h-10" />
+        <p>
           <strong>Exploring Goa’s natural beauty:</strong><br />
           3 biggest parks in a 20-minute drive
         </p>
       </div>
 
-      {/* Card 3 */}
-      <div className="flex items-start space-x-4">
-        <img src="/Acc3.png" alt="Beaches" className="w-6 sm:w-8 h-6 sm:h-8 mt-1" />
-        <p className="text-sm sm:text-base">
+      {/* Item 3 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc3.png" alt="Beaches" className="w-10 h-10" />
+        <p className="pl-1rem">
           <strong>Enjoy swimming, surfing and relaxation:</strong><br />
           at Goa’s 3 beaches within 10 km
         </p>
@@ -218,44 +213,44 @@ const TwentyOneTTPage = () => {
         title="Frequently Asked Questions"
         faqs={[
           {
-            question: "1. Where is your yoga teacher training course located?",
+            question: "1. What is a 21-day immersion yoga course?",
             answer:
-              "Our course is located in Goa, the Pearl of the Orient, offering a serene environment amidst its beautiful coastal landscapes.",
+              "It’s an intensive, full-time yoga teacher training program designed to complete the 200-hour certification in just 21 days of immersive learning.",
           },
           {
-            question: "2. What style of yoga do you teach in the training course?",
+            question: "2. Who can join this course?",
             answer:
-              "We specialize in Hatha Vinyasa yoga, blending traditional Hatha principles with dynamic Vinyasa flow.",
+              "Anyone with a passion for yoga! It’s ideal for beginners, intermediate practitioners, or those looking to deepen their practice and become certified teachers.",
           },
           {
-            question: "3. What is the duration of the training program?",
+            question: "3. What does the daily schedule look like?",
             answer:
-              "The program typically spans 12 days for the 100-hr course.",
+              "Expect a full-day schedule with asana practice, pranayama, meditation, anatomy, philosophy, teaching methodology, and self-study.",
           },
           {
-            question: "4. What are the prerequisites for enrolling in the program?",
+            question: "4. Is it certified by Yoga Alliance?",
             answer:
-              "Participants are encouraged to have a basic understanding and regular practice of yoga before joining.",
+              "Yes, most 21-day immersion courses are Yoga Alliance certified, allowing you to register as a RYT-200 and teach globally.",
           },
           {
-            question: "5. What does a typical day look like during the training?",
+            question: "5. Is it too intense for beginners?",
             answer:
-              "Each day includes yoga practice, meditation, theory classes, workshops, and dedicated time for self-study.",
+              "It’s intensive but beginner-friendly. Our experienced instructors offer support and modifications to match your level.",
           },
           {
-            question: "6. Is the program conducted in English?",
+            question: "6. What is included in the course fee?",
             answer:
-              "Yes, the entire course is conducted in English to cater to international participants.",
+              "Typically, the fee includes tuition, course materials, accommodation, and meals (if in-person). Online versions may offer digital resources and live sessions.",
           },
           {
-            question: "7. Who are the instructors leading the training?",
+            question: "7. Will I be qualified to teach after 21 days?",
             answer:
-              "Our instructors are professionals certified in Hatha Vinyasa yoga, ensuring top-notch teaching and guidance.",
+              "Yes. Once you complete all course requirements, you will receive a 200-hour certification that qualifies you to teach yoga professionally",
           },
           {
-            question: "8. What certification will I receive upon completing the course?",
+            question: "8. What should I bring to the course?",
             answer:
-              "Upon successful completion, you will receive a Yoga Alliance accredited certification, recognized globally for teaching yoga.",
+              "Bring comfortable yoga clothes, a notebook, your personal yoga mat, and an open heart ready for transformation!",
           },
           
         ]}

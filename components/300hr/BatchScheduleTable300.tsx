@@ -32,7 +32,7 @@ const CourseSchedule = () => {
           <div className="space-y-6">
             <div>
               <p className="text-sm text-gray-600 font-medium uppercase">Course Duration:</p>
-              <h2 className="text-2xl font-bold">7 Days</h2>
+              <h2 className="text-2xl font-bold">27 Days</h2>
             </div>
 
             <div>

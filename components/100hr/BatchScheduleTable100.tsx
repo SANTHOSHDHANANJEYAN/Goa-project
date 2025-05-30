@@ -38,18 +38,18 @@ const CourseSchedule = () => {
           <div className="space-y-6">
             <div>
               <p className="text-sm text-gray-600 font-medium uppercase">Course Duration:</p>
-              <h2 className="text-2xl font-bold">7 Days</h2>
+              <h2 className="text-2xl font-bold">14 Days</h2>
             </div>
 
             <div>
-              <p className="text-sm text-gray-600 font-medium uppercase">200 Hour Yoga TTC Fees:</p>
+              <p className="text-sm text-gray-600 font-medium uppercase">100 Hours Yoga TTC Fees:</p>
               <div className="flex flex-col sm:flex-row sm:gap-10 mt-2 text-xl font-bold">
                 <div>
-                  USD 500
+                  USD 900
                   <p className="text-sm font-normal text-gray-600">Private Room</p>
                 </div>
                 <div>
-                  USD 350
+                  USD 750
                   <p className="text-sm font-normal text-gray-600">Shared Room</p>
                 </div>
               </div>

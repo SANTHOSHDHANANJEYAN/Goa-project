@@ -29,7 +29,7 @@ const HundredHourTTPage = () => {
 </h1>
 
       <p className="text-lg text-center text-[#150e70] mb-6">
-        Join an exciting and life-changing 100-hours journey in Goa
+        Join an exciting and life-changing 14-Days journey in Goa
       </p>
 
      <div className="flex justify-center items-end text-center gap-8 mb-4">
@@ -91,17 +91,17 @@ const HundredHourTTPage = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
     {/* Card 1 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/HVA/Hatha 2.jpg" alt="Image 1" className="w-full h-full object-cover" />
+      <img src="/HVA/Hatha Yoga 2 .jpg" alt="Image 1" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 2 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/HVA/vinyasa 2.jfif.jpg" alt="Image 2" className="w-full h-full object-cover" />
+      <img src="/HVA/Vinyasa yoga 2 .jpg" alt="Image 2" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 3 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/HVA/ashtanga 2.jfif.jpg" alt="Image 3" className="w-full h-full object-cover" />
+      <img src="/HVA/Ashtanga yoga 2 .jpg" alt="Image 3" className="w-full h-full object-cover" />
     </div>
   </div>
 </section>
@@ -132,51 +132,50 @@ const HundredHourTTPage = () => {
       {/* Training Schedule */}
       {/* Accommodation Section - Scenic */}
 <section
-  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-20 sm:py-24 mb-20 min-h-[600px] sm:min-h-[700px] md:min-h-[750px]"
+  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 px-4"
   style={{
-    backgroundImage: "url('/56.jpg')",
+    backgroundImage: "url('/Accomdation/Accom4.jpg')",
   }}
 >
-  {/* Overlay */}
-  <div className="bg-black bg-opacity-60 absolute inset-0"></div>
+  {/* Dark overlay */}
+  <div className="bg-black bg-opacity-50 absolute inset-0"></div>
 
-  {/* Content */}
-  <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-[5rem]">
-    <h2 className="text-sm sm:text-lg uppercase tracking-wide text-gray-200 mb-2">
+  <div className="relative z-10 max-w-3xl mx-auto text-center">
+    <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">
       Rishikul Yogshala Goa
     </h2>
-    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-      Accommodation
-    </h1>
-    <p className="text-base sm:text-lg mb-10 max-w-xl mx-auto">
+    <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
+    <p className="text-lg mb-10">
       Palm Paradise Resort amidst jungle paradise in Goa
     </p>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto px-4 sm:px-0">
-      {[{
-        icon: "/Acc1.png",
-        alt: "Waterfalls",
-        title: "Discover Goa's cascade gems:",
-        desc: "more than 10 waterfalls within 10 km",
-      }, {
-        icon: "/Acc2.png",
-        alt: "Nature parks",
-        title: "Exploring Goa’s natural beauty:",
-        desc: "3 biggest parks in a 20-minute drive",
-      }, {
-        icon: "/Acc3.png",
-        alt: "Beaches",
-        title: "Enjoy swimming, surfing and relaxation:",
-        desc: "at Goa’s 3 beaches within 10 km",
-      }].map(({ icon, alt, title, desc }, i) => (
-        <div key={i} className="flex items-start space-x-4">
-          <img src={icon} alt={alt} className="w-7 h-7 sm:w-8 sm:h-8 mt-1" />
-          <p className="text-sm sm:text-base">
-            <strong>{title}</strong><br />
-            {desc}
-          </p>
-        </div>
-      ))}
+    <div className="flex flex-col items-center gap-8">
+      {/* Item 1 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc1.png" alt="Waterfalls" className="w-10 h-10" />
+        <p>
+          <strong>Discover Goa's cascade gems:</strong><br />
+          more than 10 waterfalls within 10 km
+        </p>
+      </div>
+
+      {/* Item 2 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc2.png" alt="Nature parks" className="w-10 h-10" />
+        <p>
+          <strong>Exploring Goa’s natural beauty:</strong><br />
+          3 biggest parks in a 20-minute drive
+        </p>
+      </div>
+
+      {/* Item 3 */}
+      <div className="flex items-center text-left max-w-md space-x-4">
+        <img src="/Acc3.png" alt="Beaches" className="w-10 h-10" />
+        <p className="pl-1rem">
+          <strong>Enjoy swimming, surfing and relaxation:</strong><br />
+          at Goa’s 3 beaches within 10 km
+        </p>
+      </div>
     </div>
   </div>
 </section>
