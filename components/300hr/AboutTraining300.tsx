@@ -63,7 +63,7 @@ export default function AboutTraining() {
             <Image
               src="/aboutpics/106.jpg"
               alt="Yoga Group"
-              className="rounded-xl object-cover w-full"
+              className="rounded-xl object-cover w-full h-[325px]"
               width={600}
               height={300}
             />
@@ -72,7 +72,7 @@ export default function AboutTraining() {
             <Image
               src="/aboutpics/107.jpg"
               alt="Vegan Food"
-              className="rounded-xl object-cover w-full"
+              className="rounded-xl object-cover w-full h-[160px]"
               width={300}
               height={200}
             />
@@ -81,7 +81,7 @@ export default function AboutTraining() {
             <Image
               src="/aboutpics/108.jpg"
               alt="Resort Room"
-              className="rounded-xl object-cover w-full h-[83%]"
+              className="rounded-xl object-cover w-full h-[160px]"
               width={300}
               height={200}
             />

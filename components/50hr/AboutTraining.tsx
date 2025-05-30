@@ -123,7 +123,7 @@ export default function AboutTraining() {
             <Image
               src="/52.jpg"
               alt="Vegan Food"
-              className="rounded-xl object-cover w-full"
+              className="rounded-xl object-cover w-full "
               width={300}
               height={200}
             />
@@ -132,7 +132,7 @@ export default function AboutTraining() {
             <Image
               src="/54.jpg"
               alt="Resort Room"
-              className="rounded-xl object-cover w-full h-[83%]"
+              className="rounded-xl object-cover w-full h-[83%] "
               width={300}
               height={200}
             />

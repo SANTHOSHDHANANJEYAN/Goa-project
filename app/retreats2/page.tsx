@@ -16,15 +16,10 @@ import SpaHero14 from "@/components/R14days/SpaHero14";
 import TwoListing14 from "@/components/R14days/TwoListing14";
 import WhatsIncludes14 from "@/components/R14days/WhatsIncludes14";
 
-
-
-
-
 export default function Page() {
 
   return (<>
-  <SpaHero14/>
-  
+  <SpaHero14/>  
   <About141/>
   <KeySkills14/>
   <TwoListing14/>
