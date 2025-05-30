@@ -7,7 +7,7 @@ export default function ContactForm() {
   const [message, setMessage] = useState('');
 
   return (
-    <section className="relative bg-gradient-to-br from-[#f9fafb] to-[#eef2f5] py-16 px-6 md:px-20 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#f9fafb] to-[#eef2f5] py-16 px-6 md:px-20 overflow-hidden mb-[2rem]">
       {/* Google Maps iframe */}
       <div className="mt-10 overflow-hidden rounded-lg">
         <iframe

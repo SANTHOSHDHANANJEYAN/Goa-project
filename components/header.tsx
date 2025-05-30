@@ -31,7 +31,7 @@ const leftNavigation = [
   },
   { name: "Our Teachers", href: "/about#story" },
   { name: "Our Reviews", href: "/about#team" },
-  { name: "Blogs", href: "/app" },
+  { name: "Blogs", href: "/Blog" },
   { name: "Gallery", href: "/gallery" }
 ];
 

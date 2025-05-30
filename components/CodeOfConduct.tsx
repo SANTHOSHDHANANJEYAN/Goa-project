@@ -111,12 +111,12 @@ const CodeOfConduct = () => {
             <VideoYoutubeCard
               title="Student’s Review – Yoga TTC"
               embedId="C0DPdy98e4c"
-              thumbnailUrl="/Thumbnail/4.png"
+              thumbnailUrl="/Thumbnail/5.png"
             />
             <VideoYoutubeCard
               title="Additional Yoga Session"
               embedId="YOUR_NEW_VIDEO_ID"
-              thumbnailUrl="/Thumbnail/5.png"
+              thumbnailUrl="/Thumbnail/4.png"
             />
           </div>
         </div>
