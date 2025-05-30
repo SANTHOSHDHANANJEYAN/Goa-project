@@ -39,7 +39,7 @@ const posts: BlogPost[] = [
 const BlogSection: React.FC = () => {
   return (
     <section className="py-20 bg-transparent ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[13rem]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[10rem]">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl font-bold text-[#150e70] mb-4 ">
             From Our Blog
