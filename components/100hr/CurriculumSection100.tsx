@@ -19,49 +19,49 @@ const cardVariants = {
 const curriculum = [
   {
     title: "Foundations of Yoga & Teaching",
-    image: "/gallery/1.WEBP",
+    image: "/Curriculumimg/1.jpg",
     description:
       "Explore the origins, philosophies, diverse styles of yoga, and the essential role of a yoga teacher.",
   },
   {
     title: "Asana Mastery & Alignment Techniques",
-    image: "/gallery/2.WEBP",
+    image: "/Curriculumimg/2.jpg",
     description:
       "Learn key yoga poses with proper alignment, modifications, hands-on adjustments, and guided practice to ensure safety, strength, and mindfulness.",
   },
   {
     title: "Pranayama & Energetic Awareness",
-    image: "/gallery/3.WEBP",
+    image: "/Curriculumimg/3.jpg",
     description:
       "Discover powerful breathwork techniques, their benefits, and how to harness breath and energy flow through pranayama, chakra awareness, and mindful movement.",
   },
   {
     title: "Yoga Anatomy & Safe Movement",
-    image: "/gallery/4.WEBP",
+    image: "/Curriculumimg/4.jpg",
     description:
       "Understand the body’s structure, key muscle groups, breath mechanics, and injury prevention to support safe, effective, and informed yoga practice.",
   },
   {
     title: "Teaching Methodology & Class Leadership",
-    image: "/gallery/5.WEBP",
+    image: "/Curriculumimg/5.jpg",
     description:
       "Learn to communicate effectively, structure balanced classes, apply teaching techniques, and embody the ethics and responsibilities of a yoga teacher.",
   },
   {
     title: "Sequencing & Intentional Class Design",
-    image: "/gallery/6.WEBP",
+    image: "/Curriculumimg/6.jpg",
     description:
       "Master the art of creating balanced, level-appropriate class sequences with purposeful themes, effective timing, and engaging flow from start to finish.",
   },
   {
     title: "Teaching Practicum & Constructive Feedback",
-    image: "/gallery/7.WEBP",
+    image: "/Curriculumimg/7.jpg",
     description:
       "Gain real-world teaching experience through guided practice sessions, peer reviews, and expert feedback to refine your skills and build confidence as a yoga teacher.",
   },
   {
     title: "Personal Growth & Wellness for Yoga Teachers",
-    image: "/gallery/8.WEBP",
+    image: "/Curriculumimg/8.jpg",
     description:
       "Cultivating mindful self-reflection, journaling insights, and sustainable self-care to manage stress and prevent burnout.",
   },

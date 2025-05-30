@@ -45,8 +45,11 @@ const TwentyOneTTPage = () => {
   </div>
 </div>
    <div className="flex justify-center gap-6 mb-6">
-  <p className="text-sm text-[#150e70]">Duration-21-Days</p>
-  <p className="text-sm text-[#150e70]">Language-English</p>
+      <p className="text-sm text-[#150e70]">Duration-21-Days</p>
+      <p className="text-sm text-[#150e70]">Language-English</p>
+      <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
+      <p className="text-sm text-[#150e70]">Level: all level </p> 
+      <p className="text-sm text-[#150e70]">Certification: Yoga Alliance</p>
 </div>
 
 
@@ -58,9 +61,7 @@ const TwentyOneTTPage = () => {
         </a>
       </div>
 
-      <div className="text-center text-sm text-[#150e70] mb-12">
-        <p className="font-semibold">May 26th – June 16th, 2025</p>
-      </div>
+     
 
       {/* Hero Image */}
      <div className="flex justify-center items-center bg-transparent">
@@ -76,13 +77,10 @@ const TwentyOneTTPage = () => {
   </div>
 </div>
 
- 
-    
-
 
 <AboutTraining21/>
       {/* About Section */}
-  <AnimateButton21/>
+  
   <Schedule21/>
 
  <section className="mt-20 px-4 sm:px-6 lg:px-8">

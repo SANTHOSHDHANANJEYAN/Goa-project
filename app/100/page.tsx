@@ -45,6 +45,9 @@ const HundredHourTTPage = () => {
    <div className="flex justify-center gap-6 mb-6">
   <p className="text-sm text-[#150e70]">Duration-100 Hrs</p>
   <p className="text-sm text-[#150e70]">Language-English</p>
+  <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
+  <p className="text-sm text-[#150e70]">Level: all level </p> 
+  <p className="text-sm text-[#150e70]">Certification: Yoga Alliance</p>
 </div>
 
 
@@ -88,17 +91,17 @@ const HundredHourTTPage = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
     {/* Card 1 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/11.jpg" alt="Image 1" className="w-full h-full object-cover" />
+      <img src="/HVA/Hatha 2.jpg" alt="Image 1" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 2 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
+      <img src="/HVA/vinyasa 2.jfif.jpg" alt="Image 2" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 3 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
+      <img src="/HVA/ashtanga 2.jfif.jpg" alt="Image 3" className="w-full h-full object-cover" />
     </div>
   </div>
 </section>

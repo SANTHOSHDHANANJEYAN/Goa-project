@@ -88,31 +88,32 @@ const FiftyHourTTPage = () => {
   {/* <AnimateButton/> */}
   <Schedule/>
 
- <section className="mt-20 px-4 sm:px-6 lg:px-8">
-  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
-    Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
+<section className="mt-20 px-4 sm:px-6 lg:px-8">
+  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 text-[#150e70]">
+    Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
   </h2>
-  <h2 className="text-xs sm:text-sm md:text-base lg:text-[10px] font-bold text-center mb-8 text-[#150e70]">
-    Education experience covering all key aspects of the ancient practice and philosophy of yoga
-  </h2>
+  <p className="text-sm sm:text-base md:text-lg text-center mb-8 text-[#150e70] font-medium">
+    Education experience covering all key aspects of the ancient practice and philosophy of yoga.
+  </p>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
     {/* Card 1 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/11.jpg" alt="Image 1" className="w-full h-full object-cover" />
+      <img src="/HVA/hatha 1.jpg" alt="Hatha Yoga" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 2 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/12.jpg" alt="Image 2" className="w-full h-full object-cover" />
+      <img src="/HVA/vinyasa 1.jfif.jpg" alt="Vinyasa Yoga" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 3 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/13.jpg" alt="Image 3" className="w-full h-full object-cover" />
+      <img src="/HVA/ashtanga 1.jfif.jpg" alt="Ashtanga Yoga" className="w-full h-full object-cover" />
     </div>
   </div>
 </section>
+
 
 
 

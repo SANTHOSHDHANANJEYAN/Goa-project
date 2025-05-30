@@ -19,49 +19,49 @@ const cardVariants = {
 const curriculum = [
   {
     title: "Hatha Yoga ",
-    image: "/gallery/1.WEBP",
+    image: "/Curriculumimg/1.jpg",
     description:
       "This Hatha Yoga course covers classical asanas, breath awareness, alignment, posture sequencing, and therapeutic benefits for holistic body-mind balance.",
   },
   {
     title: "Vinyasa Yoga",
-    image: "/gallery/2.WEBP",
+    image: "/Curriculumimg/2.jpg",
     description:
       "Explore the dynamic practice of Vinyasa Yoga, including breath-synchronized movement, preparatory techniques, structured sequences, and flowing postures for strength and flexibility.",
   },
   {
     title: "Ashtanga Vinyas",
-    image: "/gallery/3.WEBP",
+    image: "/Curriculumimg/3.jpg",
     description:
       "Ashtanga Vinyasa covers a progressive sequence of postures from the Primary Series, focusing on breath-led movement, strength, flexibility, and flow.",
   },
   {
     title: "Yoga Philosophy",
-    image: "/gallery/4.WEBP",
+    image: "/Curriculumimg/4.jpg",
     description:
       "Yoga Philosophy explores the origin, purpose, mind-body connection, and deeper spiritual concepts like karma, chakras, kundalini, and liberation in yogic science.",
   },
   {
     title: "Yoga Anatomy",
-    image: "/gallery/5.WEBP",
+    image: "/Curriculumimg/5.jpg",
     description:
       "Yoga Anatomy provides an understanding of the body's structure, systems, and functions to support safe, effective, and aligned yoga practice.",
   },
   {
     title: "Build Teaching Skills",
-    image: "/gallery/6.WEBP",
+    image: "/Curriculumimg/6.jpgP",
     description:
       "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
   },
   {
     title: "Pranayama",
-    image: "/gallery/7.WEBP",
+    image: "/Curriculumimg/7.jpg",
     description:
       "Learn the science and techniques of breath control, prana flow, nostril activation, and various pranayama practices for physical, emotional, and mental purification.",
   },
   {
     title: "Relaxation Techniques",
-    image: "/gallery/8.WEBP",
+    image: "/Curriculumimg/8.jpg",
     description:
       "Practice full-body, emotional, chakra, and deep causal relaxation methods including Yoga Nidra to promote restful sleep and mental calm.",
   },

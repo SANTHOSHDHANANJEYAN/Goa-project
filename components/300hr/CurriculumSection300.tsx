@@ -19,49 +19,49 @@ const cardVariants = {
 const curriculum = [
   {
     title: "Asana",
-    image: "/gallery/1.WEBP",
+    image: "/Curriculumimg/1.jpg",
     description:
       "Focus on advanced pose study, building flexibility and strength, maintaining hydration, and mastering systematic sequences including the Ashtanga Vinyasa Intermediate Series.",
   },
   {
     title: "Ashtanga Vinyasa",
-    image: "/gallery/2.WEBP",
+    image: "/Curriculumimg/2.jpg",
     description:
       "Advanced Ashtanga Vinyasa postures focusing on strength, flexibility, balance, and breath control through a diverse range of seated, backbends, arm balances, and twists.",
   },
   {
     title: "Relaxation Techniques",
-    image: "/gallery/3.WEBP",
+    image: "/Curriculumimg/3.jpg",
     description:
       "Explore Yoga Nidra’s role in intuition development, mind-heart connection, lucid and intuitive dreams, and traditional Himalayan practices.",
   },
   {
     title: "Pranayama",
-    image: "/gallery/4.WEBP",
+    image: "/Curriculumimg/4.jpg",
     description:
       "Study breath retention (Kumbhaka), awakening Sushumna energy, balancing Nadis through Nadi Shodhanam, and understanding the five vital forces and the functions of Ida, Pingala, and Sushumna.",
   },
   {
     title: "Yoga Anatomy ",
-    image: "/gallery/5.WEBP",
+    image: "/Curriculumimg/5.jpg",
     description:
       "Explore the impact of asanas on muscles, glandular anatomy linked to chakras, major body systems, and the effects of pranayama on cardiovascular and nervous systems.",
   },
   {
     title: "Yoga Philosophy ",
-    image: "/gallery/6.WEBP",
+    image: "/Curriculumimg/6.jpg",
     description:
       "Explore meditation, spiritual heart, karma, yogic obstacles, kundalini, chakras, various yoga paths, consciousness levels, samadhi, and reincarnation in yogic science.",
   },
   {
     title: "Meditation and Concentration",
-    image: "/gallery/7.WEBP",
+    image: "/Curriculumimg/7.jpg",
     description:
       "Learn diverse meditation techniques including mantra, chakra, third eye, yantra, and non-duality practices, while understanding and overcoming common obstacles.",
   },
   {
     title: "Mantra Yoga and Its Importance",
-    image: "/gallery/8.WEBP",
+    image: "/Curriculumimg/8.jpg",
     description:
       "Study key mantras like So-HUM and invocation chants for wisdom, fearlessness, completeness, and the sacred bond between teacher and student.",
   },

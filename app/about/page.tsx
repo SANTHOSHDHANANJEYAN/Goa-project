@@ -8,17 +8,7 @@
     return (
       
       <div className="pt-24">
-        {/* Hero Section */}
-        <section className="py-16 md:py-20 bg-muted">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">About Us</h1>
-              <p className="text-lg text-muted-foreground animate-fade-in animation-delay-300">
-              Yoga Teacher Training does not necessarily mean performing difficult asanas which pertain to abject failure, the process is inclined towards replenishment of our heart, mind, and soul, it blends them to carve a shiny new personality. Our school is a haven for the mind, body, and spirit, welcoming both beginners and experienced yogis. Join us to explore the magic of yoga through our retreats and teacher training programs in the peaceful setting of Goa.
-              </p>
-            </div>
-          </div>
-        </section>
+       
 
         {/* Our Journey */}
         <section className="bg-transparent py-16 px-6 md:px-10 rounded-lg max-w-7xl mx-auto shadow-lg hover:shadow-2xl transition-shadow duration-300">

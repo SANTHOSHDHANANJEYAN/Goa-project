@@ -35,7 +35,7 @@ export default function Schedule21() {
           <div className="rounded-xl overflow-hidden shadow-md bg-white">
             <div className="relative">
               <Image
-                src="/27e28055-7a42-4503-9987-5f7a626972b1.jpg"
+                src="/Thumbnail/Yogacourses 5.jpg"
                 alt="Video Thumbnail"
                 width={640}
                 height={360}

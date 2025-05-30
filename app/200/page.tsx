@@ -45,8 +45,11 @@ const TwoHundredHourTTPage = () => {
   </div>
 </div>
    <div className="flex justify-center gap-6 mb-6">
-  <p className="text-sm text-[#150e70]">Duration-200 Hrs</p>
-  <p className="text-sm text-[#150e70]">Language-English</p>
+      <p className="text-sm text-[#150e70]">Duration-200 Hrs</p>
+      <p className="text-sm text-[#150e70]">Language-English</p>
+      <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
+      <p className="text-sm text-[#150e70]">Level: all level </p> 
+      <p className="text-sm text-[#150e70]">Certification: Yoga Alliance</p>
 </div>
 
 
