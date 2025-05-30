@@ -38,7 +38,7 @@ export default function AboutPage() {
           <div className="flex justify-center">
             <Image
               src="/boat.png"
-              
+              alt="Goa Houseboat"
               width={600}
               height={400}
               className="rounded-lg shadow-lg"
