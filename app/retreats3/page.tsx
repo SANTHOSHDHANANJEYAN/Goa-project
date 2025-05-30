@@ -1,4 +1,4 @@
-import About21 from "@/components/R21days/About21";
+
 import About211 from "@/components/R21days/About211";
 import Beauty21 from "@/components/R21days/Beauty21";
 import Benefit21 from "@/components/R21days/Benefit21";

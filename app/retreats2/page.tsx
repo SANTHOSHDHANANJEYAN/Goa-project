@@ -1,4 +1,4 @@
-import About14 from "@/components/R14days/About14";
+
 import About141 from "@/components/R14days/About141";
 import Beauty14 from "@/components/R14days/Beauty14";
 import Benefit14 from "@/components/R14days/Benefit14";
@@ -24,7 +24,7 @@ export default function Page() {
 
   return (<>
   <SpaHero14/>
-  <About14/>
+  
   <About141/>
   <KeySkills14/>
   <TwoListing14/>
