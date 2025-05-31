@@ -89,12 +89,13 @@ const FiftyHourTTPage = () => {
   <Schedule/>
 
 <section className="mt-20 px-4 sm:px-6 lg:px-8">
-  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 text-[#150e70]">
-    Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
+    Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
   </h2>
-  <p className="text-sm sm:text-base md:text-lg text-center mb-8 text-[#150e70] font-medium">
-    Education experience covering all key aspects of the ancient practice and philosophy of yoga.
-  </p>
+
+  <h3 className="text-xs sm:text-sm md:text-base font-semibold text-center mb-8 text-[#150e70] max-w-3xl mx-auto">
+    Education experience covering all key aspects of the ancient practice and philosophy of yoga
+  </h3>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
     {/* Card 1 */}
