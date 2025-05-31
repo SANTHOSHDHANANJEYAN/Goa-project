@@ -3,9 +3,9 @@
 import { FaCalendarAlt } from 'react-icons/fa';
 
 const courseDates = [
-  { date: '7 Nov - 3 Dec 2025', seats: 4 },
-  { date: '7 Jan - 3 Feb 2026', seats: 7 },
-  { date: '7 Feb - 3 Mar 2026', seats: 8 },
+  { date: '7 Nov - 3 Dec 2025'},
+  { date: '7 Jan - 3 Feb 2026'},
+  { date: '7 Feb - 3 Mar 2026'},
   
 ];
 
@@ -21,7 +21,7 @@ const CourseSchedule = () => {
               <FaCalendarAlt className="text-[#d9442e] text-xl mt-1 shrink-0" />
               <div>
                 <p className="text-sm sm:text-base font-semibold text-gray-800">{item.date}</p>
-                <p className="text-sm sm:text-base text-[#d9442e] font-medium">Seats: {item.seats} left</p>
+               
               </div>
             </div>
           ))}

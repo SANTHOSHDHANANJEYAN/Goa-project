@@ -3,14 +3,14 @@
 import { FaCalendarAlt } from 'react-icons/fa';
 
 const courseDates = [
-  { date: '7 Sept - 30 Sept 2025', seats: 4 },
-  { date: '7 Oct - 30 Oct 2025', seats: 7 },
-  { date: '7 Nov - 30 Nov 2025', seats: 8 },
-  { date: '7 Dec - 30 Dec 2025', seats: 7 },
-  { date: '7 Jan - 30 Jan 2026', seats: 9 },
-  { date: '7 Feb - 30 Feb 2026', seats: 10 },
-  { date: '7 Mar - 30 Mar 2026', seats: 11 },
-  { date: '7 Apr - 30 Apr 2026', seats: 12 },
+  { date: '7 Sept - 30 Sept 2025'},
+  { date: '7 Oct - 30 Oct 2025'},
+  { date: '7 Nov - 30 Nov 2025'},
+  { date: '7 Dec - 30 Dec 2025'},
+  { date: '7 Jan - 30 Jan 2026'},
+  { date: '7 Feb - 30 Feb 2026'},
+  { date: '7 Mar - 30 Mar 2026'},
+  { date: '7 Apr - 30 Apr 2026'},
 ];
 
 const CourseSchedule = () => {
@@ -25,7 +25,7 @@ const CourseSchedule = () => {
               <FaCalendarAlt className="text-[#d9442e] text-xl mt-1 shrink-0" />
               <div>
                 <p className="text-sm sm:text-base font-semibold text-gray-800">{item.date}</p>
-                <p className="text-sm sm:text-base text-[#d9442e] font-medium">Seats: {item.seats} left</p>
+                
               </div>
             </div>
           ))}
