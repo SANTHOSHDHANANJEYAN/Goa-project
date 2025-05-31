@@ -44,33 +44,33 @@ const VideoYoutubeCard = ({
 const features = [
   {
     icon: <FaCertificate className="text-green-600 text-3xl" />,
-    title: '500-Hour Yoga Alliance Certification',
-    description: 'Gain two certifications (200-Hour YTTC and 300-Hour YTTC) that prove you’re qualified to teach yoga worldwide.',
+    title: '300-Hour Yoga Teacher Training Course',
+    description: 'Take your yoga journey to the next level with a Yoga Alliance certified 300-Hour YTTC  designed for those who have completed a 200-Hour YTTC and want to deepen their practice and teaching skills.',
   },
   {
     icon: <FaClock className="text-green-600 text-3xl" />,
-    title: '500+ Hours of Self-Paced Training',
-    description: 'Learn yoga at your own speed with over 500 hours of flexible lessons that fit your schedule.',
+    title: '300+ Hours of Flexible, Self-Paced Learning',
+    description: 'Study at your own pace with 300+ hours of training that fits your schedule  no deadlines, no pressure.',
   },
   {
     icon: <FaVideo className="text-green-600 text-3xl" />,
-    title: '500+ Video Lessons',
-    description: 'Access easy-to-follow videos covering poses, philosophy, and more to deepen your understanding.',
+    title: '300+ Easy-to-Follow Video Lessons',
+    description: 'Explore detailed video lessons on advanced asanas, yoga philosophy, teaching methodology, pranayama, meditation, and more.',
   },
   {
     icon: <FaChalkboardTeacher className="text-green-600 text-3xl" />,
-    title: 'World Renowned Yoga Gurus from India',
-    description: 'Learn from top teachers from India known for their deep knowledge and expertise in yoga.',
+    title: 'Learn from India’s Top Yoga Master',
+    description: 'Get trained by renowned Indian yoga gurus with years of authentic teaching experience and deep yogic knowledge.',
   },
   {
     icon: <FaBroadcastTower className="text-green-600 text-3xl" />,
-    title: 'Daily Live Sessions',
-    description: 'Attend live classes daily for real-time learning and direct interaction with instructors.',
+    title: 'Daily Live Classes & Instructor Support',
+    description: 'Join live sessions every day for real-time guidance, Q&A, and feedback from experienced teachers.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
-    title: 'Supportive Community',
-    description: 'Join a vibrant community of fellow students to share, grow, and stay inspired.',
+    title: 'Supportive Global Community',
+    description: 'Be part of a vibrant, inspiring yoga family  share your journey, ask questions, and stay motivated together.',
   },
 ];
 
