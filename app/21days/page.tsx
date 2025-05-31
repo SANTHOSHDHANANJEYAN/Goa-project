@@ -141,46 +141,54 @@ const TwentyOneTTPage = () => {
   {/* Dark overlay */}
   <div className="bg-black bg-opacity-50 absolute inset-0"></div>
 
-  <div className="relative z-10 max-w-3xl mx-auto text-center">
+  <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center px-4">
     <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">
       Rishikul Yogshala Goa
     </h2>
-    <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
-    <p className="text-lg mb-10">
+    <h1 className="text-4xl md:text-5xl font-bold mb-4">Accommodation</h1>
+    <p className="text-lg mb-10 max-w-xl">
       Palm Paradise Resort amidst jungle paradise in Goa
     </p>
 
-    <div className="flex flex-col items-center gap-8">
+    {/* Features list */}
+    <div className="flex flex-col gap-6 w-full max-w-lg text-left pl-[4rem] pt-[2rem]">
       {/* Item 1 */}
-      <div className="flex items-center text-left max-w-md space-x-4">
-        <img src="/Acc1.png" alt="Waterfalls" className="w-10 h-10" />
-        <p>
-          <strong>Discover Goa's cascade gems:</strong><br />
-          more than 10 waterfalls within 10 km
-        </p>
+      <div className="flex items-start gap-4">
+        <img src="/Acc1.png" alt="Waterfalls" className="w-8 h-8 mt-1" />
+        <div>
+          <p className="font-semibold">Discover Goa's cascade gems:</p>
+          <p className="text-sm">
+            10+ Waterfalls nearby for weekend getaways
+          </p>
+        </div>
       </div>
 
       {/* Item 2 */}
-      <div className="flex items-center text-left max-w-md space-x-4">
-        <img src="/Acc2.png" alt="Nature parks" className="w-10 h-10" />
-        <p>
-          <strong>Exploring Goa’s natural beauty:</strong><br />
-          3 biggest parks in a 20-minute drive
-        </p>
+      <div className="flex items-start gap-4">
+        <img src="/Acc2.png" alt="Nature parks" className="w-8 h-8 mt-1" />
+        <div>
+          <p className="font-semibold">Exploring Goa’s natural beauty:</p>
+          <p className="text-sm">
+            3 Nature Parks just 20 minutes away
+          </p>
+        </div>
       </div>
 
       {/* Item 3 */}
-      <div className="flex items-center text-left max-w-md space-x-4">
-        <img src="/Acc3.png" alt="Beaches" className="w-10 h-10" />
-        <p className="pl-1rem">
-          <strong>Enjoy swimming, surfing and relaxation:</strong><br />
-          at Goa’s 3 beaches within 10 km
-        </p>
+      <div className="flex items-start gap-4">
+        <img src="/Acc3.png" alt="Beaches" className="w-8 h-8 mt-1" />
+        <div>
+          <p className="font-semibold">
+            Enjoy swimming, surfing and relaxation:
+          </p>
+          <p className="text-sm">
+            3 Beaches within 10 km – perfect for swimming & surfing
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 
       
       <ActivitiesSection21/>

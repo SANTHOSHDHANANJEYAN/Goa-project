@@ -175,7 +175,7 @@ const FiftyHourTTPage = () => {
         <img src="/Acc1.png" alt="Waterfalls" className="w-10 h-10" />
         <p>
           <strong>Discover Goa's cascade gems:</strong><br />
-          more than 10 waterfalls within 10 km
+          10+ Waterfalls nearby for weekend getaways
         </p>
       </div>
 
@@ -184,7 +184,7 @@ const FiftyHourTTPage = () => {
         <img src="/Acc2.png" alt="Nature parks" className="w-10 h-10" />
         <p>
           <strong>Exploring Goa’s natural beauty:</strong><br />
-          3 biggest parks in a 20-minute drive
+          3 Nature Parks just 20 minutes awa
         </p>
       </div>
 
@@ -193,7 +193,7 @@ const FiftyHourTTPage = () => {
         <img src="/Acc3.png" alt="Beaches" className="w-10 h-10" />
         <p className="pl-1rem">
           <strong>Enjoy swimming, surfing and relaxation:</strong><br />
-          at Goa’s 3 beaches within 10 km
+          3 Beaches within 10 km – perfect for swimming & surfing
         </p>
       </div>
     </div>

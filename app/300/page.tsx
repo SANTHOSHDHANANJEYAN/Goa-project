@@ -87,12 +87,12 @@ const ThreeHundredHourTTPage = () => {
   <Schedule300/>
 
 <section className="mt-20 px-4 sm:px-6 lg:px-8">
-  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
-    Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
+  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 text-[#150e70]">
+    Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
   </h2>
-  <h2 className="text-xs sm:text-sm md:text-base lg:text-[10px] font-bold text-center mb-8 text-[#150e70]">
-    Education experience covering all key aspects of the ancient practice and philosophy of yoga
-  </h2>
+  <p className="text-sm sm:text-base md:text-lg text-center mb-8 text-[#150e70] font-medium">
+    Education experience covering all key aspects of the ancient practice and philosophy of yoga.
+  </p>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
     {/* Card 1 */}
@@ -149,7 +149,7 @@ const ThreeHundredHourTTPage = () => {
         <img src="/Acc1.png" alt="Waterfalls" className="w-10 h-10" />
         <p>
           <strong>Discover Goa's cascade gems:</strong><br />
-          more than 10 waterfalls within 10 km
+          10+ Waterfalls nearby for weekend getaways
         </p>
       </div>
 
@@ -158,7 +158,7 @@ const ThreeHundredHourTTPage = () => {
         <img src="/Acc2.png" alt="Nature parks" className="w-10 h-10" />
         <p>
           <strong>Exploring Goa’s natural beauty:</strong><br />
-          3 biggest parks in a 20-minute drive
+          3 Nature Parks just 20 minutes awa
         </p>
       </div>
 
@@ -167,7 +167,7 @@ const ThreeHundredHourTTPage = () => {
         <img src="/Acc3.png" alt="Beaches" className="w-10 h-10" />
         <p className="pl-1rem">
           <strong>Enjoy swimming, surfing and relaxation:</strong><br />
-          at Goa’s 3 beaches within 10 km
+          3 Beaches within 10 km – perfect for swimming & surfing
         </p>
       </div>
     </div>

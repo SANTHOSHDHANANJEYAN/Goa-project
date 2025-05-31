@@ -33,42 +33,42 @@ export default function AboutTraining() {
   const iconList = [
     {
       Icon: GiMeditation,
-      text: "Yoga Alliance accredited certificate (worldwide)",
+      text: "Yoga Alliance Accredited Certificate (valid worldwide)",
       size: 20,
     },
     {
       Icon: GiMeditation,
-      text: "7-Days / 6-Nights in a boutique resort in Goa.",
+      text: "7-Days / 6-Nights in a luxurious boutique resort in Goa",
       size: 22,
     },
     {
       Icon: GiMeditation,
-      text: "Daily delicious vegan/vegetarian meals a day (buffet style)",
+      text: "Three healthy vegan/vegetarian buffet meals daily.",
       size: 20,
     },
     {
       Icon: GiMeditation,
-      text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course",
+      text: "Teaching Methodology & Hands-on Teaching Practice",
       size: 22,
     },
     {
       Icon: GiMeditation,
-      text: "Yoga Alliance accredited certificate (worldwide)",
+      text: "Comfortable accommodation in a peaceful, nature-filled setting",
       size: 20,
     },
     {
       Icon: GiMeditation,
-      text: "20 days / 19 nights in a boutique resort in Goa.",
+      text: "Small Group Size for personalized attention and guidance",
       size: 22,
     },
     {
       Icon: GiMeditation,
-      text: "Daily delicious vegan/vegetarian meals a day (buffet style)",
+      text: "Personal Growth & Transformation in a supportive community ",
       size: 20,
     },
     {
       Icon: GiMeditation,
-      text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course",
+      text: "Daily Asana Practice, Meditation & Pranayama Sessions",
       size: 22,
     },
   ];

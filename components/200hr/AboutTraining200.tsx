@@ -23,35 +23,35 @@ export default function AboutTraining() {
 
           <ul className="space-y-4 text-[#150e70]">
             <li className="flex items-start gap-3">
-              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
+              <MdHotelClass className="text-[#150e70] mt-1" size={20} />
               Yoga Alliance Accredited Certificate (valid worldwide)
             </li>
             <li className="flex items-start gap-3">
-              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
-              24-Days / 23-Nights in a luxurious boutique resort in Goa
+              <MdHotelClass className="text-[#150e70] mt-1" size={22} />
+              7-Days / 6-Nights in a luxurious boutique resort in Goa
             </li>
             <li className="flex items-start gap-3">
-              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
+              <MdHotelClass className="text-[#150e70] mt-1" size={20} />
               Three healthy vegan/vegetarian buffet meals daily
             </li>
             <li className="flex items-start gap-3">
-              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
+              <MdHotelClass className="text-[#150e70] mt-1" size={22} />
               Daily Asana Practice, Meditation & Pranayama Sessions
             </li>
             <li className="flex items-start gap-3">
-              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
+              <MdHotelClass className="text-[#150e70] mt-1" size={22} />
               Teaching Methodology & Hands-on Teaching Practice
             </li>
             <li className="flex items-start gap-3">
-              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
+              <MdHotelClass className="text-[#150e70] mt-1" size={20} />
               Comfortable accommodation in a peaceful, nature-filled setting
             </li>
             <li className="flex items-start gap-3">
-              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
+              <MdHotelClass className="text-[#150e70] mt-1" size={22} />
               Small Group Size for personalized attention and guidance
             </li>
             <li className="flex items-start gap-3">
-              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
+              <MdHotelClass className="text-[#150e70] mt-1" size={22} />
               Personal Growth & Transformation in a supportive community
             </li>
           </ul>
