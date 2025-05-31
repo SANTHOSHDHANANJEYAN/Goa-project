@@ -20,46 +20,46 @@ export default function OurRooms7() {
         </h2>
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Rooms</h1>
         <p className="text-lg mb-10">
-          Palm Paradise Resort amidst jungle paradise in Goa
+          Comfort and peace await you at Palm Paradise Resort, nestled in Goa’s lush jungle.
         </p>
 
         <div className="flex flex-col text-left max-w-3xl mx-auto gap-12 items-center pt-[2rem]">
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-4 gap-[1rem]">
             <img
-              src="/icons/waterfall-icon.svg"
+              src="/Accomdation/Ambience.png"
               alt="Waterfalls"
-              className="w-8 h-8 mt-1"
+              className="w-[5rem] h-[5rem] mt-1"
             />
             <p>
-              <strong>Discover Goa&apos;s cascade gems:</strong>
-              <br />
-              more than 10 waterfalls within 10 km
+              <strong>Cozy Ambiance:</strong>
+              <br/>
+             Relax in spacious, well-appointed rooms designed<br/>for your restful stay.
             </p>
           </div>
 
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-4 gap-[1rem]">
             <img
-              src="/icons/nature-icon.svg"
+              src="/Accomdation/Modern Amenities.png"
               alt="Nature parks"
-              className="w-8 h-8 mt-1"
+              className="w-[5rem] h-[5rem] mt-1"
             />
             <p>
-              <strong>Exploring Goa’s natural beauty:</strong>
-              <br />
-              3 biggest parks in a 20-minute drive
+              <strong>Modern Amenities:</strong>
+              <br/>
+              Enjoy all the comforts you need, from cozy beds to  <br/>clean bathrooms and Wi-Fi.
             </p>
           </div>
 
-          <div className="flex items-start space-x-4 pl-[3rem]">
+          <div className="flex items-start space-x-4 pl-[3rem] gap-[1rem]">
             <img
-              src="/icons/beach-icon.svg"
+              src="/Accomdation/Scenic vews.png"
               alt="Beaches"
-              className="w-8 h-8 mt-1"
+              className="w-[5rem] h-[5rem] mt-1"
             />
             <p>
-              <strong>Enjoy swimming, surfing and relaxation:</strong>
-              <br />
-              at Goa’s 3 beaches within 10 km
+              <strong>Scenic Views:</strong>
+              <br/>
+              Wake up to the calming sights and sounds of nature right<br/>outside your window.
             </p>
           </div>
         </div>
