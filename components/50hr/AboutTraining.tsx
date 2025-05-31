@@ -32,7 +32,7 @@ export default function AboutTraining() {
 
   const iconList = [
     {
-      Icon: FaCertificate,
+      Icon: GiMeditation,
       text: "Yoga Alliance accredited certificate (worldwide)",
       size: 20,
     },
@@ -42,17 +42,17 @@ export default function AboutTraining() {
       size: 22,
     },
     {
-      Icon: FaUtensils,
+      Icon: GiMeditation,
       text: "Daily delicious vegan/vegetarian meals a day (buffet style)",
       size: 20,
     },
     {
-      Icon: MdOnlinePrediction,
+      Icon: GiMeditation,
       text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course",
       size: 22,
     },
     {
-      Icon: FaCertificate,
+      Icon: GiMeditation,
       text: "Yoga Alliance accredited certificate (worldwide)",
       size: 20,
     },
@@ -62,12 +62,12 @@ export default function AboutTraining() {
       size: 22,
     },
     {
-      Icon: FaUtensils,
+      Icon: GiMeditation,
       text: "Daily delicious vegan/vegetarian meals a day (buffet style)",
       size: 20,
     },
     {
-      Icon: MdOnlinePrediction,
+      Icon: GiMeditation,
       text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course",
       size: 22,
     },

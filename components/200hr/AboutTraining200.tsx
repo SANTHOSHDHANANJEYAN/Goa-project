@@ -23,42 +23,42 @@ export default function AboutTraining() {
 
           <ul className="space-y-4 text-[#150e70]">
             <li className="flex items-start gap-3">
-              <FaCertificate className="text-[#150e70] mt-1" size={20} />
+              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
               Yoga Alliance Accredited Certificate (valid worldwide)
             </li>
             <li className="flex items-start gap-3">
-              <MdHotelClass className="text-[#150e70] mt-1" size={22} />
+              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
               24-Days / 23-Nights in a luxurious boutique resort in Goa
             </li>
             <li className="flex items-start gap-3">
-              <FaUtensils className="text-[#150e70] mt-1" size={20} />
+              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
               Three healthy vegan/vegetarian buffet meals daily
             </li>
             <li className="flex items-start gap-3">
-              <GiMeditation className="text-[#150e70] mt-1" size={22} />
+              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
               Daily Asana Practice, Meditation & Pranayama Sessions
             </li>
             <li className="flex items-start gap-3">
-              <GiTeacher className="text-[#150e70] mt-1" size={22} />
+              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
               Teaching Methodology & Hands-on Teaching Practice
             </li>
             <li className="flex items-start gap-3">
-              <FaLeaf className="text-[#150e70] mt-1" size={20} />
+              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
               Comfortable accommodation in a peaceful, nature-filled setting
             </li>
             <li className="flex items-start gap-3">
-              <IoIosPeople className="text-[#150e70] mt-1" size={22} />
+              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
               Small Group Size for personalized attention and guidance
             </li>
             <li className="flex items-start gap-3">
-              <FaPeopleCarry className="text-[#150e70] mt-1" size={22} />
+              <FaLeaf className="text-[#150e70] mt-1 ml-[1rem]" size={20} />
               Personal Growth & Transformation in a supportive community
             </li>
           </ul>
         </div>
 
         {/* Right Image Content */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 pb-[2rem]">
           <div className="col-span-2">
             <Image
               src="/aboutpics/103.jpg"
