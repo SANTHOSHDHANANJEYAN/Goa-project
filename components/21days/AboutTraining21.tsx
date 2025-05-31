@@ -28,7 +28,7 @@ export default function AboutTraining() {
             </li>
             <li className="flex items-start gap-3">
               <MdHotelClass className="text-[#150e70] mt-1" size={22} />
-              7-Days / 6-Nights in a luxurious boutique resort in Goa
+              21-Days / 20-Nights in a luxurious boutique resort in Goa
             </li>
             <li className="flex items-start gap-3">
               <MdHotelClass className="text-[#150e70] mt-1" size={20} />
