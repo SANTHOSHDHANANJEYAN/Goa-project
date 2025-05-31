@@ -66,7 +66,7 @@ export default function Home() {
             {/* Left Column */}
             <div>
               <h2 className="text-4xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-4">
-                Join a Life-Changing Community of Over 34,000 Students
+                Join a Life-Changing Community of Over 15,000+ Students
               </h2>
               <p className="text-lg sm:text-xl md:text-2xl text-[#150e70] font-medium">
                 Become part of our family at one of the leading accredited schools in Goa!
