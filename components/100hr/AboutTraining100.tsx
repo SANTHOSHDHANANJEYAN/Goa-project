@@ -17,7 +17,7 @@ export default function AboutTraining100() {
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
             Join us for an immersive <br />
-            14-Days Yoga Alliance <br />
+            12-Days Yoga Alliance <br />
             Certified Teacher training
           </h2>
 
@@ -28,7 +28,7 @@ export default function AboutTraining100() {
             </li>
             <li className="flex items-start gap-3">
               <MdHotelClass className="text-[#150e70] mt-1" size={22} />
-              14-Days / 13-Nights in a luxurious boutique resort in Goa
+              12-Days / 11-Nights in a luxurious boutique resort in Goa
             </li>
             <li className="flex items-start gap-3">
               <MdHotelClass className="text-[#150e70] mt-1" size={20} />

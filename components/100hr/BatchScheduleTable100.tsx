@@ -3,16 +3,15 @@
 import { FaCalendarAlt } from 'react-icons/fa';
 
 const courseDates = [
-  { date: '1 Jun - 24 Jun 2025'},
-  { date: '1 Jul - 24 Jul 2025'},
-  { date: '1 Aug - 24 Aug 2025'},
-  { date: '1 Sep - 24 Sep 2025'},
-  { date: '1 Oct - 24 Oct 2025'},
-  { date: '1 Nov - 24 Nov 2025'},
-  { date: '1 Dec - 24 Dec 2025'},
-  { date: '1 Jan - 24 Jan 2026'},
-  { date: '1 Feb - 24 Feb 2026'},
-  { date: '1 Mar - 24 Mar 2026'},
+  { date: '7 Sep - 18 Sep 2025'},
+  { date: '7 Oct - 18 Oct 2025'},
+  { date: '7 Nov - 18 Nov 2025'},
+  { date: '7 Dec - 18 Dec 2025'},
+  { date: '7 Jan - 18 Jan 2026'},
+  { date: '7 Feb - 18 Feb 2026'},
+  { date: '7 Mar - 18 Mar 2026'},
+  { date: '7 Apr - 18 Apr 2026'},
+
 ];
 
 const CourseSchedule = () => {
@@ -37,7 +36,7 @@ const CourseSchedule = () => {
           <div className="space-y-6">
             <div>
               <p className="text-sm text-gray-600 font-medium uppercase">Course Duration:</p>
-              <h2 className="text-2xl font-bold">14 Days</h2>
+              <h2 className="text-2xl font-bold">12 Days</h2>
             </div>
 
             <div>
