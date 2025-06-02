@@ -294,13 +294,7 @@ export default function Home() {
       </div>
     </div>
 
-    {/* Decorative Flourishes */}
-    <div className="absolute top-0 left-10 w-36 h-36 bg-yellow-100 opacity-40 blur-3xl rounded-full z-0 animate-pulse"></div>
-    <div className="absolute bottom-0 right-10 w-48 h-48 bg-yellow-200 opacity-30 blur-3xl rounded-full z-0 animate-pulse"></div>
 
-    {/* Decorative Borders */}
-    <div className="absolute top-0 left-0 w-full h-1 bg-yellow-200 opacity-30 z-0"></div>
-    <div className="absolute bottom-0 left-0 w-full h-1 bg-yellow-200 opacity-30 z-0"></div>
   </div>
      <div className="text-center mt-12">
               <a
