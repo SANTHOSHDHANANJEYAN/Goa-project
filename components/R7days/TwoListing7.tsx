@@ -77,7 +77,7 @@ export default function TwoListing7() {
   ];
 
   return (
-    <section className="bg-[#FFF7F3] px-4 md:px-16 py-20 text-[#262626] font-sans">
+    <section className="bg-[#FFF7F3] px-4 md:px-16  text-[#262626] font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Headings */}
         <div className="mb-10">

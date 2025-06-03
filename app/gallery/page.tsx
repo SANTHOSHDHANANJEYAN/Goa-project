@@ -5,23 +5,21 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const images = [
-  { src: '/gallery/1.WEBP', title: 'Accomdation', slug: '/components/AccomdationGallery' },
-  { src: '/gallery/2.WEBP', title: 'Excursion', slug: '/components/ExcursionGallery' },
-  { src: '/gallery/3.WEBP', title: 'Food and Dishes', slug: '/components/FoodGallery' },
-  { src: '/gallery/4.WEBP', title: 'Yoga & Certification', slug: '/components/YCGallery' },
+  { src: '/gallery/1.WEBP', title: 'Accomdation', href: '/AccomdationGallery' }, 
+  { src: '/gallery/2.WEBP', title: 'Excursion', href: '/excursion-gallery' },
+  { src: '/gallery/3.WEBP', title: 'Food and Dishes', href: '/food-gallery' },
+  { src: '/gallery/4.WEBP', title: 'Yoga & Certification', href: '/yoga-gallery' },
 ];
 
 export default function GalleryPage() {
   return (
     <div className="relative min-h-screen pt-[7rem] px-4 sm:px-6 lg:px-16 pb-20 overflow-hidden">
-      {/* 🔽 Background image using <img> tag */}
+      {/* 🔽 Background image */}
       <img
         src="/gallerybg.png"
         alt="Gallery Background"
         className="absolute inset-0 w-full h-full object-cover -z-10"
       />
-
-  
 
       {/* Content container */}
       <div className="relative z-10">
@@ -30,8 +28,8 @@ export default function GalleryPage() {
         </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-          {images.map(({ src, slug, title }, i) => (
-            <Link key={i} href={`/gallery/${slug}`} className="group block">
+          {images.map(({ src, href, title }, i) => (
+            <Link key={i} href={href} className="group block">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="relative rounded-2xl overflow-hidden shadow-xl border border-indigo-100 dark:border-gray-700"
