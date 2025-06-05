@@ -32,33 +32,8 @@ export default function Home() {
 
         {/* Hero Section */}
 <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-  {/* Background Video */}
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="none"
-    poster="/fallback.jpg"
-    className="absolute inset-0 w-full h-full object-cover z-0"
-    aria-label="Background video showing yoga scenes"
-  >
-    <source src="/homepageclip.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/30 z-0" />
-
-  {/* Content */}
+  {/* Ensure First Paint: Visible Heading Above */}
   <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
-    {/* Fallback for FCP */}
-    <noscript>
-      <h1 style={{ color: 'white', fontSize: '2rem' }}>
-        Flow, Relax, and Renew – Carnival Capital Goa
-      </h1>
-    </noscript>
-
     <h1 className="text-white text-4xl md:text-6xl font-bold leading-snug mb-6 animate-fade-in glow-text floating">
       Flow, Relax, and Renew
       <br className="hidden md:inline" />
@@ -83,7 +58,6 @@ export default function Home() {
             viewBox="0 0 24 24"
             strokeLinecap="round"
             strokeLinejoin="round"
-            aria-hidden="true"
           >
             <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
@@ -92,7 +66,26 @@ export default function Home() {
       </Link>
     </div>
   </div>
+
+  {/* Background Video with Poster */}
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="none"
+    poster="/fallback.jpg"
+    className="absolute inset-0 w-full h-full object-cover z-0"
+    aria-label="Background video showing yoga scenes"
+  >
+    <source src="/homepageclip.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/30 z-0" />
 </section>
+
 
 
         {/* Accreditation Section */}
