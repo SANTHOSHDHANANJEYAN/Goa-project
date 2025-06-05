@@ -42,6 +42,7 @@ export default function Home() {
             <source src="/homepageclip.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          
 
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/20 z-0" />

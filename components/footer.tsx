@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Instagram, Facebook, Mail, Phone, MapPin, Youtube } from "lucide-react";
 import Image from "next/image";
 
+
+
 export default function Footer() {
   return (
     <footer className="relative text-[#15005c] px-6 py-12 text-sm overflow-hidden">
@@ -47,11 +49,14 @@ export default function Footer() {
 
         {/* Center Column: Logo */}
         <div className="flex justify-center md:justify-center items-center">
-          <Image
-            src="/logo30-removebg-preview.png"
-            alt="Rishikul Yogshala Logo"
-            className="w-[200px] md:w-[280px] h-auto"
-          />
+        <Image
+          src="/logo30-removebg-preview.png"
+          alt="Rishikul Yogshala Logo"
+          width={280}      // use max width or actual image width
+          height={100}     // approximate height or actual image height
+          className="mx-auto"
+        />
+
         </div>
 
         {/* Right Column: Contact Info */}

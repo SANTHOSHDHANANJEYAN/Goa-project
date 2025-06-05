@@ -96,17 +96,38 @@ const TwentyOneTTPage = () => {
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-gray-700 max-w-6xl mx-auto">
     {/* Card 1 */}
-    <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-      <Image src="/HVA/Hatha 5.jpg" alt="Image 1" className="w-full h-full object-cover" loading="lazy" />
-    </div>
-    {/* Card 2 */}
-    <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-      <Image src="/HVA/Vinyasa 5.jpg" alt="Image 2" className="w-full h-full object-cover" loading="lazy" />
-    </div>
-    {/* Card 3 */}
-    <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-      <Image src="/HVA/Ashtanga 5.jpg" alt="Image 3" className="w-full h-full object-cover" loading="lazy" />
-    </div>
+   <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+  <Image 
+    src="/HVA/Hatha 5.jpg"  
+    alt="Image 1" 
+    fill
+    className="object-cover"
+    loading="lazy"
+  />   
+</div>
+
+{/* Card 2 */}
+<div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+  <Image 
+    src="/HVA/Vinyasa 5.jpg" 
+    alt="Image 2" 
+    fill 
+    className="object-cover"
+    loading="lazy" 
+  />
+</div>
+
+{/* Card 3 */}
+<div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+  <Image 
+    src="/HVA/Ashtanga 5.jpg" 
+    alt="Image 3" 
+    fill 
+    className="object-cover"
+    loading="lazy" 
+  />
+</div>
+
   </div>
 </section>
 
@@ -156,42 +177,35 @@ const TwentyOneTTPage = () => {
     </p>
 
     {/* Features list */}
-    <div className="flex flex-col gap-6 w-full max-w-lg text-left pl-[4rem] pt-[2rem]">
-      {/* Item 1 */}
-      <div className="flex items-start gap-4">
-        <Image src="/Acc1.png" alt="Waterfalls" className="w-8 h-8 mt-1" />
-        <div>
-          <p className="font-semibold">Discover Goa's cascade gems:</p>
-          <p className="text-sm">
-            10+ Waterfalls nearby for weekend getaways
-          </p>
-        </div>
-      </div>
-
-      {/* Item 2 */}
-      <div className="flex items-start gap-4">
-        <Image src="/Acc2.png" alt="Nature parks" className="w-8 h-8 mt-1" />
-        <div>
-          <p className="font-semibold">Exploring Goa’s natural beauty:</p>
-          <p className="text-sm">
-            3 Nature Parks just 20 minutes away
-          </p>
-        </div>
-      </div>
-
-      {/* Item 3 */}
-      <div className="flex items-start gap-4">
-        <Image src="/Acc3.png" alt="Beaches" className="w-8 h-8 mt-1" />
-        <div>
-          <p className="font-semibold">
-            Enjoy swimming, surfing and relaxation:
-          </p>
-          <p className="text-sm">
-            3 Beaches within 10 km – perfect for swimming & surfing
-          </p>
-        </div>
-      </div>
+   <div className="flex flex-col gap-6 w-full max-w-lg text-left pl-[4rem] pt-[2rem]">
+  {/* Item 1 */}
+  <div className="flex items-start gap-4">
+    <Image src="/Acc1.png" alt="Waterfalls" width={32} height={32} className="mt-1" />
+    <div>
+      <p className="font-semibold">Discover Goa's cascade gems:</p>
+      <p className="text-sm">10+ Waterfalls nearby for weekend getaways</p>
     </div>
+  </div>
+
+  {/* Item 2 */}
+  <div className="flex items-start gap-4">
+    <Image src="/Acc2.png" alt="Nature parks" width={32} height={32} className="mt-1" />
+    <div>
+      <p className="font-semibold">Exploring Goa’s natural beauty:</p>
+      <p className="text-sm">3 Nature Parks just 20 minutes away</p>
+    </div>
+  </div>
+
+  {/* Item 3 */}
+  <div className="flex items-start gap-4">
+    <Image src="/Acc3.png" alt="Beaches" width={32} height={32} className="mt-1" />
+    <div>
+      <p className="font-semibold">Enjoy swimming, surfing and relaxation:</p>
+      <p className="text-sm">3 Beaches within 10 km – perfect for swimming & surfing</p>
+    </div>
+  </div>
+</div>
+
   </div>
 </section>
 

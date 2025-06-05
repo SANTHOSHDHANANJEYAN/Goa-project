@@ -1,4 +1,4 @@
-'use client'; // only if you're using App Router and client-side behavior
+'use client';
 
 import Image from "next/image";
 
@@ -24,42 +24,51 @@ export default function OurRooms7() {
         </p>
 
         <div className="flex flex-col text-left max-w-3xl mx-auto gap-12 items-center pt-[2rem]">
+          {/* Item 1 */}
           <div className="flex items-start space-x-4 gap-[1rem]">
             <Image
               src="/Accomdation/Ambience.png"
-              alt="Waterfalls"
+              alt="Ambience"
+              width={80}
+              height={80}
               className="w-[5rem] h-[5rem] mt-1"
             />
             <p>
               <strong>Cozy Ambiance:</strong>
-              <br/>
-             Relax in spacious, well-appointed rooms designed<br/>for your restful stay.
+              <br />
+              Relax in spacious, well-appointed rooms designed<br />for your restful stay.
             </p>
           </div>
 
+          {/* Item 2 */}
           <div className="flex items-start space-x-4 gap-[1rem]">
             <Image
               src="/Accomdation/Modern Amenities.png"
-              alt="Nature parks"
+              alt="Modern Amenities"
+              width={80}
+              height={80}
               className="w-[5rem] h-[5rem] mt-1"
             />
             <p>
               <strong>Modern Amenities:</strong>
-              <br/>
-              Enjoy all the comforts you need, from cozy beds to  <br/>clean bathrooms and Wi-Fi.
+              <br />
+              Enjoy all the comforts you need, from cozy beds to<br />clean bathrooms and Wi-Fi.
             </p>
           </div>
 
+          {/* Item 3 */}
           <div className="flex items-start space-x-4 pl-[3rem] gap-[1rem]">
             <Image
               src="/Accomdation/Scenic vews.png"
-              alt="Beaches"
+              alt="Scenic Views"
+              width={80}
+              height={80}
               className="w-[5rem] h-[5rem] mt-1"
             />
             <p>
               <strong>Scenic Views:</strong>
-              <br/>
-              Wake up to the calming sights and sounds of nature right<br/>outside your window.
+              <br />
+              Wake up to the calming sights and sounds of nature right<br />outside your window.
             </p>
           </div>
         </div>

@@ -10,7 +10,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from "next/image";
 
 const images = [
-  
   '/Accomdation/Accom1.jpg', 
   '/Accomdation/Accom2.jpg', 
   '/Accomdation/Accom3.jpg',
@@ -31,10 +30,10 @@ export default function AccommodationSlider() {
       <div className="max-w-6xl mx-auto px-4 relative">
 
         {/* Custom Arrows */}
-        <div className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2  rounded-full ">
+        <div className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full">
           <ChevronLeft size={20} />
         </div>
-        <div className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full ">
+        <div className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full">
           <ChevronRight size={20} />
         </div>
 
@@ -75,6 +74,8 @@ export default function AccommodationSlider() {
               <Image
                 src={src}
                 alt={`Slide ${index}`}
+                width={736}
+                height={471}
                 className="rounded-xl shadow-lg w-full h-full object-cover"
               />
             </SwiperSlide>

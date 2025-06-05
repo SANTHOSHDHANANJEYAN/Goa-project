@@ -1,4 +1,4 @@
-'use client'; // only if you're using App Router and client-side behavior
+'use client';
 
 import Image from "next/image";
 
@@ -28,6 +28,8 @@ export default function OurDinning7() {
             <Image
               src="/Accomdation/Fresh healthy logo 1.png"
               alt="Waterfalls"
+              width={80}
+              height={80}
               className="w-[5rem] h-[5rem] mt-1"
             />
             <p>
@@ -41,6 +43,8 @@ export default function OurDinning7() {
             <Image
               src="/Accomdation/Variety of flavours.png"
               alt="Nature parks"
+              width={80}
+              height={80}
               className="w-[5rem] h-[5rem] mt-1"
             />
             <p>
@@ -54,12 +58,14 @@ export default function OurDinning7() {
             <Image
               src="/Accomdation/Relaxed Setting 1.png"
               alt="Beaches"
+              width={80}
+              height={80}
               className="w-[5rem] h-[5rem] mt-1"
             />
             <p>
               <strong>Relaxed Setting:</strong>
               <br />
-              Dine indoors or outdoors while soaking in the peaceful of jungle<br/> surroundings
+              Dine indoors or outdoors while soaking in the peaceful of jungle<br/>surroundings
             </p>
           </div>
         </div>
