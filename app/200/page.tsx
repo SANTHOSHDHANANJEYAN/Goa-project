@@ -14,6 +14,11 @@ import YogaHighlights200 from "@/components/200hr/YogaHighlights200";
 import ApplicationForm200 from "@/components/200hr/ApplicationForm200";
 import TeachersSection200 from "@/components/200hr/TeachersSection200";
 import Schedule200 from "@/components/200hr/Schedule200";
+import AccommodationSlider from "@/components/AccommodationSlider";
+import OurDinning7 from "@/components/R7days/OurDinning7";
+import DinningSlides7 from "@/components/R7days/DinningSlides7";
+import OurRooms7 from "@/components/R7days/OurRooms7";
+import RoomSlides7 from "@/components/R7days/RoomSlides7";
 
 const TwoHundredHourTTPage = () => {
   return (
@@ -21,9 +26,9 @@ const TwoHundredHourTTPage = () => {
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
-         200-hrs Accredited Yoga Teacher Training
+         200-Hours Accredited Yoga Teacher Training
         </h2>
-        <p className="text-lg text-[#150e70]">In Goa</p>
+        <p className="text-[1.5rem] font-semibold text-[#150e70]">In Goa</p>
       </div>
 
      <h1 className="text-lg md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
@@ -95,17 +100,17 @@ const TwoHundredHourTTPage = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
     {/* Card 1 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/HVA/Hatha Yoga 3 .jpg" alt="Image 1" className="w-full h-full object-cover" />
+      <Image src="/HVA/Hatha yoga 3.jpg" alt="Image 1" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 2 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/HVA/Vinyasa yoga 3 .jpg" alt="Image 2" className="w-full h-full object-cover" />
+      <Image src="/HVA/Vinyasa3.jpg" alt="Image 2" className="w-full h-full object-cover" />
     </div>
 
     {/* Card 3 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <img src="/HVA/Ashtanga yoga 3 .jpg" alt="Image 3" className="w-full h-full object-cover" />
+      <Image src="/HVA/Ashtanga3.jpg" alt="Image 3" className="w-full h-full object-cover" />
     </div>
   </div>
 </section>
@@ -146,7 +151,7 @@ const TwoHundredHourTTPage = () => {
     <div className="flex flex-col gap-6 w-full max-w-lg text-left pl-[4rem] pt-[2rem]">
       {/* Item 1 */}
       <div className="flex items-start gap-4">
-        <img src="/Acc1.png" alt="Waterfalls" className="w-8 h-8 mt-1" />
+        <Image src="/Acc1.png" alt="Waterfalls" className="w-8 h-8 mt-1" />
         <div>
           <p className="font-semibold">Discover Goa's cascade gems:</p>
           <p className="text-sm">
@@ -157,7 +162,7 @@ const TwoHundredHourTTPage = () => {
 
       {/* Item 2 */}
       <div className="flex items-start gap-4">
-        <img src="/Acc2.png" alt="Nature parks" className="w-8 h-8 mt-1" />
+        <Image src="/Acc2.png" alt="Nature parks" className="w-8 h-8 mt-1" />
         <div>
           <p className="font-semibold">Exploring Goa’s natural beauty:</p>
           <p className="text-sm">
@@ -168,7 +173,7 @@ const TwoHundredHourTTPage = () => {
 
       {/* Item 3 */}
       <div className="flex items-start gap-4">
-        <img src="/Acc3.png" alt="Beaches" className="w-8 h-8 mt-1" />
+        <Image src="/Acc3.png" alt="Beaches" className="w-8 h-8 mt-1" />
         <div>
           <p className="font-semibold">
             Enjoy swimming, surfing and relaxation:
@@ -182,7 +187,11 @@ const TwoHundredHourTTPage = () => {
   </div>
 </section>
 
-      
+    <AccommodationSlider/>
+      <OurDinning7/>
+      <DinningSlides7/>
+      <OurRooms7/>
+      <RoomSlides7/> 
       <ActivitiesSection200/>
        {/* Course Details Section */}
       <BatchScheduleTable200/>

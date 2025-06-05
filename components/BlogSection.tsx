@@ -42,7 +42,7 @@ const BlogSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl font-bold text-[#150e70] mb-4">
-            From Our Blog
+            Our Journal
           </h2>
           <p className="text-lg text-[#150e70] max-w-2xl mx-auto">
             Insights, stories, and guidance from our community to inspire your yoga journey.

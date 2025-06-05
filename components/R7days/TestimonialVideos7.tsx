@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from "next/image";
 import { Dialog } from '@headlessui/react';
 
 const videos = [
@@ -46,7 +47,7 @@ export default function TestimonialVideos7() {
               setOpen(true);
             }}
           >
-            <img
+            <Image
               src={video.thumbnail}
               alt="Video thumbnail"
               className="w-full h-64 object-cover"

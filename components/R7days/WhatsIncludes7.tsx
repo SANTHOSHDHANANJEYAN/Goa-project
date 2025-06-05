@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 interface Activity {
   title: string;
@@ -62,7 +63,7 @@ const ActivitiesSection: React.FC = () => {
               className="bg-amber-50 p-6 rounded-xl shadow hover:shadow-lg transition relative flex flex-col items-center"
             >
               <div className="-mt-16 mb-6">
-                <img
+                <Image
                   src={activity.image}
                   alt={activity.title}
                   className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow object-cover"

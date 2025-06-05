@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from "next/image";
 
 const images = [
   
@@ -71,7 +72,7 @@ export default function AccommodationSlider() {
               className="transition-transform duration-300"
               style={{ width: '736px', height: '471px' }}
             >
-              <img
+              <Image
                 src={src}
                 alt={`Slide ${index}`}
                 className="rounded-xl shadow-lg w-full h-full object-cover"

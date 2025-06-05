@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Image from "next/image";
 
 const FreeManualSignup: React.FC = () => {
   return (
@@ -44,7 +45,7 @@ const FreeManualSignup: React.FC = () => {
         </form>
 
         <div className="mt-10">
-          <img
+          <Image
             src="/yg_logo-removebg-preview.png"
             alt="200 hrs Yoga Teacher Training Manual"
             className="w-32 sm:w-44 md:w-56 mx-auto shadow-lg"

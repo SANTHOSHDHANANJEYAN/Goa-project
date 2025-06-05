@@ -1,9 +1,12 @@
+import Image from "next/image";
+
+
 export default function HeroSection7() {
   return (
     <section className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 gap-12 mt-[4rem]">
       {/* Left Side - Logo and Title */}
       <div className="text-center lg:text-left max-w-md">
-        <img src="/gallery/1.WEBP" alt="Logo" className="mx-auto lg:mx-0 mb-6 w-48" />
+        <Image src="/gallery/1.WEBP" alt="Logo" className="mx-auto lg:mx-0 mb-6 w-48" />
         <h2 className="text-2xl font-light tracking-wide">DESTINATION WELLNESS AND</h2>
         <h2 className="text-2xl font-light tracking-wide">YOGA RESORT IN INDIA</h2>
       </div>

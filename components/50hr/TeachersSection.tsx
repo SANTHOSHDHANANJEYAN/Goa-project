@@ -50,7 +50,7 @@ export default function TeachersSection() {
   useEffect(() => {
     startAutoSlide();
     return () => stopAutoSlide();
-  }, []);
+  }, [startAutoSlide]);
 
   const getVisibleTeachers = () => {
     const visible = [];

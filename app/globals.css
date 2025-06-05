@@ -114,7 +114,7 @@ body {
 
 /* Utility overrides and layout helpers */
 .transition-colors {
-  background-color: white !important;
+  background-color: white ;
 }
 
 .p-4 {
@@ -160,3 +160,4 @@ body, html {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;             /* Chrome, Safari and Opera */
 }
+

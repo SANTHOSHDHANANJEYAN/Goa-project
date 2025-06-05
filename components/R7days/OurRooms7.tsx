@@ -25,7 +25,7 @@ export default function OurRooms7() {
 
         <div className="flex flex-col text-left max-w-3xl mx-auto gap-12 items-center pt-[2rem]">
           <div className="flex items-start space-x-4 gap-[1rem]">
-            <img
+            <Image
               src="/Accomdation/Ambience.png"
               alt="Waterfalls"
               className="w-[5rem] h-[5rem] mt-1"
@@ -38,7 +38,7 @@ export default function OurRooms7() {
           </div>
 
           <div className="flex items-start space-x-4 gap-[1rem]">
-            <img
+            <Image
               src="/Accomdation/Modern Amenities.png"
               alt="Nature parks"
               className="w-[5rem] h-[5rem] mt-1"
@@ -51,7 +51,7 @@ export default function OurRooms7() {
           </div>
 
           <div className="flex items-start space-x-4 pl-[3rem] gap-[1rem]">
-            <img
+            <Image
               src="/Accomdation/Scenic vews.png"
               alt="Beaches"
               className="w-[5rem] h-[5rem] mt-1"

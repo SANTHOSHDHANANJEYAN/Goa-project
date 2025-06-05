@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import {
   FaCertificate,
   FaClock,
@@ -29,7 +30,7 @@ const VideoYoutubeCard = ({
       }}
     >
       <div className="relative rounded-lg overflow-hidden shadow-lg">
-        <img
+        <Image
           src={thumbnailUrl}
           alt={title}
           className="w-full h-48 object-cover group-hover:brightness-90 transition"
@@ -43,34 +44,39 @@ const VideoYoutubeCard = ({
 
 const features = [
   {
-    icon: <FaCertificate className="text-green-600 text-3xl" />,
-    title: '300-Hour Yoga Teacher Training Course',
-    description: 'Take your yoga journey to the next level with a Yoga Alliance certified 300-Hour YTTC  designed for those who have completed a 200-Hour YTTC and want to deepen their practice and teaching skills.',
-  },
-  {
-    icon: <FaClock className="text-green-600 text-3xl" />,
-    title: '300+ Hours of Flexible, Self-Paced Learning',
-    description: 'Study at your own pace with 300+ hours of training that fits your schedule  no deadlines, no pressure.',
-  },
-  {
-    icon: <FaVideo className="text-green-600 text-3xl" />,
-    title: '300+ Easy-to-Follow Video Lessons',
-    description: 'Explore detailed video lessons on advanced asanas, yoga philosophy, teaching methodology, pranayama, meditation, and more.',
-  },
-  {
-    icon: <FaChalkboardTeacher className="text-green-600 text-3xl" />,
-    title: 'Learn from India’s Top Yoga Master',
-    description: 'Get trained by renowned Indian yoga gurus with years of authentic teaching experience and deep yogic knowledge.',
-  },
-  {
-    icon: <FaBroadcastTower className="text-green-600 text-3xl" />,
-    title: 'Daily Live Classes & Instructor Support',
-    description: 'Join live sessions every day for real-time guidance, Q&A, and feedback from experienced teachers.',
+    icon: <FaUsers className="text-green-600 text-3xl" />,
+    title: '100-Hour Multi-Style Yoga TTC',
+    description: 'Deepen your practice and understanding with a compact, immersive 100-hour course.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
-    title: 'Supportive Global Community',
-    description: 'Be part of a vibrant, inspiring yoga family  share your journey, ask questions, and stay motivated together.',
+    title: '200-Hour Multi-Style Yoga TTC',
+    description: 'Become a certified teacher through our comprehensive, Yoga Alliance-approved training.',
+  },
+  {
+    icon: <FaUsers className="text-green-600 text-3xl" />,
+    title: '300-Hour Multi-Style Yoga TTC',
+    description: 'Advance your skills and teaching with deeper knowledge in multi-style yoga.',
+  },
+  {
+    icon: <FaUsers className="text-green-600 text-3xl" />,
+    title: '21 Days Immersion Yoga',
+    description: 'Transform your life through 21 days of immersive yoga, healing, and self-growth.',
+  },
+  {
+    icon: <FaUsers className="text-green-600 text-3xl" />,
+    title: '7 Days Yoga Retreat',
+    description: 'Rejuvenate your body and mind with a blissful 7-day yoga escape.',
+  },
+  {
+    icon: <FaUsers className="text-green-600 text-3xl" />,
+    title: '14 Days Yoga Retreat',
+    description: 'Experience peace and wellness in this 14-day journey of yoga and relaxation.',
+  },
+    {
+    icon: <FaUsers className="text-green-600 text-3xl" />,
+    title: '21 Days Yoga Retreat',
+    description: 'Go deep within on a 21-day soulful retreat for complete mind-body renewal.',
   },
 ];
 

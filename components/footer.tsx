@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Instagram, Facebook, Mail, Phone, MapPin, Youtube } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -46,7 +47,7 @@ export default function Footer() {
 
         {/* Center Column: Logo */}
         <div className="flex justify-center md:justify-center items-center">
-          <img
+          <Image
             src="/logo30-removebg-preview.png"
             alt="Rishikul Yogshala Logo"
             className="w-[200px] md:w-[280px] h-auto"

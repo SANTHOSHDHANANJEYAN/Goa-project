@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const packages = [
   {
     title: "Stress Management Through Yoga & Meditation",
@@ -41,7 +43,7 @@ const PackagesSection7 = () => {
         {/* Package Cards */}
         {packages.map((pkg, index) => (
           <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm">
-            <img
+            <Image
               src={pkg.image}
               alt={pkg.title}
               className="w-full h-56 object-cover"
