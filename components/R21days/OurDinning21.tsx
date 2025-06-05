@@ -25,11 +25,14 @@ export default function OurDinning21() {
 
         <div className="flex flex-col text-left max-w-3xl mx-auto gap-12 items-center pt-[2rem]">
           <div className="flex items-start space-x-4 gap-[1rem]">
-            <Image
-              src="/Accomdation/Fresh healthy logo 1.png"
-              alt="Waterfalls"
-              className="w-[5rem] h-[5rem] mt-1"
-            />
+          <Image
+            src="/Accomdation/Fresh healthy logo 1.png"
+            alt="Waterfalls"
+            width={80}
+            height={80}
+            className="mt-1"
+          />
+
             <p>
               <strong>Fresh & Healthy:</strong>
               <br />
@@ -38,11 +41,13 @@ export default function OurDinning21() {
           </div>
 
           <div className="flex items-start space-x-4 gap-[1rem]">
-            <Image
-              src="/Accomdation/Variety of flavours.png"
-              alt="Nature parks"
-              className="w-[5rem] h-[5rem] mt-1"
-            />
+          <Image
+            src="/Accomdation/Variety of flavours.png"
+            alt="Nature parks"
+            width={80}
+            height={80}
+            className="mt-1"
+          />
             <p>
               <strong>Variety of Flavors:</strong>
               <br />
@@ -51,11 +56,13 @@ export default function OurDinning21() {
           </div>
 
           <div className="flex items-start space-x-4 pl-[3rem] gap-[1rem]">
-            <Image
-              src="/Accomdation/Relaxed Setting 1.png"
-              alt="Beaches"
-              className="w-[5rem] h-[5rem] mt-1"
-            />
+          <Image
+            src="/Accomdation/Relaxed Setting 1.png"
+            alt="Beaches"
+            width={80}
+            height={80}
+            className="mt-1"
+          />
             <p>
               <strong>Relaxed Setting:</strong>
               <br />

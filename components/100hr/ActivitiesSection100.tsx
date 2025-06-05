@@ -9,40 +9,40 @@ interface Activity {
 
 const activities: Activity[] = [
   {
-    title: "Yoga and Meditation Sessions",
+    title: "Multi-Style Yoga Classes",
     description:
-      "Experience daily guided yoga and meditation sessions designed to enhance flexibility, inner peace, and mindfulness.",
-    image: "/Meditation.jpg",
+      "Daily sessions in Hatha, Vinyasa, and Ashtanga for all levels.",
+    image: "/Activity/Multi-Style Yoga Classes.png",
   },
   {
-    title: "Accommodation",
+    title: "Meditation & Pranayama",
     description:
-      "Stay in comfortable, peaceful rooms designed with natural materials and minimalist decor, offering rest and rejuvenation.",
-    image: "/Accommodation.jpg",
+      "Guided practices for mental clarity and inner peace.",
+    image: "/Activity/Meditation & Pranayama.png",
   },
   {
-    title: "Meals (Vegetarian & Vegan Options)",
+    title: "Yoga Philosophy & Anatomy",
     description:
-      "Enjoy nourishing vegetarian and vegan meals made from fresh, locally sourced ingredients, supporting a healthy lifestyle.",
-    image: "/Meals.jpg",
+      "Learn the foundations of yogic wisdom and body alignment.",
+    image: "/Activity/Yoga Philosophy & Anatomy.png",
   },
   {
-    title: "Wellness Treatments",
+    title: "Ayurvedic Meals & Cleansing",
     description:
-      "Indulge in holistic wellness treatments such as massages, herbal therapies, and detox practices for physical and mental balance.",
-    image: "/Wellness.jpg",
+      " Sattvic food and detox practices like Shatkarma for overall wellness.",
+    image: "/Activity/Ayurvedic Meals & Cleansing.png",
   },
   {
-    title: "Cultural Excursions",
+    title: "Mantra Chanting & Kirtan",
     description:
-      "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
-    image: "/Cultural.jpg",
+      "Uplifting group chanting for spiritual connection.",
+    image: "/Activity/Mantra Chanting & Kirtan.png",
   },
     {
-    title: "Cultural Excursions",
+    title: "Beachside Relaxation & Cultural Visits ",
     description:
-      "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
-    image: "/Cultural.jpg",
+      "Free time to explore Goa’s beaches and local culture.",
+    image: "/Activity/Beachside Relaxation & Cultural Visits.png",
   },
 ];
 

@@ -45,11 +45,14 @@ const FreeManualSignup: React.FC = () => {
         </form>
 
         <div className="mt-10">
-          <Image
-            src="/yg_logo-removebg-preview.png"
-            alt="200 hrs Yoga Teacher Training Manual"
-            className="w-32 sm:w-44 md:w-56 mx-auto shadow-lg"
-          />
+      <Image
+        src="/yg_logo-removebg-preview.png"
+        alt="200 hrs Yoga Teacher Training Manual"
+        width={224}  // 56 * 4 = 224px
+        height={224} // assuming square image; adjust if needed
+        className="w-32 sm:w-44 md:w-56 mx-auto shadow-lg"
+      />
+
         </div>
       </div>
     </section>

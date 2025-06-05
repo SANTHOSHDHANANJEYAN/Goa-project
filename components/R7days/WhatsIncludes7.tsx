@@ -63,11 +63,14 @@ const ActivitiesSection: React.FC = () => {
               className="bg-amber-50 p-6 rounded-xl shadow hover:shadow-lg transition relative flex flex-col items-center"
             >
               <div className="-mt-16 mb-6">
-                <Image
-                  src={activity.image}
-                  alt={activity.title}
-                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow object-cover"
-                />
+            <Image
+              src={activity.image}
+              alt={activity.title}
+              width={96}
+              height={96}
+              className="rounded-full border-4 border-white shadow object-cover"
+            />
+
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-[#150e70] text-center">
                 {activity.title}

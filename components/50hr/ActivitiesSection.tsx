@@ -12,37 +12,37 @@ const activities: Activity[] = [
     title: "Multi-Style Yoga Classes",
     description:
       "Daily sessions in Hatha, Vinyasa, and Ashtanga for all levels.",
-    image: "/Meditation.jpg",
+    image: "/Activity/Multi-Style Yoga Classes.png",
   },
   {
     title: "Meditation & Pranayama",
     description:
       "Guided practices for mental clarity and inner peace.",
-    image: "/Accommodation.jpg",
+    image: "/Activity/Meditation & Pranayama.png",
   },
   {
     title: "Yoga Philosophy & Anatomy",
     description:
       "Learn the foundations of yogic wisdom and body alignment.",
-    image: "/Meals.jpg",
+    image: "/Activity/Yoga Philosophy & Anatomy.png",
   },
   {
     title: "Ayurvedic Meals & Cleansing",
     description:
       " Sattvic food and detox practices like Shatkarma for overall wellness.",
-    image: "/Wellness.jpg",
+    image: "/Activity/Ayurvedic Meals & Cleansing.png",
   },
   {
     title: "Mantra Chanting & Kirtan",
     description:
       "Uplifting group chanting for spiritual connection.",
-    image: "/Cultural.jpg",
+    image: "/Activity/Mantra Chanting & Kirtan.png",
   },
     {
     title: "Beachside Relaxation & Cultural Visits ",
     description:
       "Free time to explore Goa’s beaches and local culture.",
-    image: "/Cultural.jpg",
+    image: "/Activity/Beachside Relaxation & Cultural Visits.png",
   },
 ];
 
@@ -63,11 +63,14 @@ const ActivitiesSection: React.FC = () => {
               className="bg-amber-50 p-6 rounded-xl shadow hover:shadow-lg transition relative flex flex-col items-center"
             >
               <div className="-mt-16 mb-6">
-                <Image
-                  src={activity.image}
-                  alt={activity.title}
-                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow object-cover"
-                />
+            <Image
+              src={activity.image}
+              alt={activity.title}
+              width={96}  // w-24 = 96px
+              height={96} // h-24 = 96px
+              className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow object-cover"
+            />
+
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-[#150e70] text-center">
                 {activity.title}

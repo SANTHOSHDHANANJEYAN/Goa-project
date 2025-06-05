@@ -26,7 +26,7 @@ const KeySkills21: React.FC = () => {
                 {/* Right: Image */}
         <div className="relative rounded-xl overflow-hidden min-h-[500px] w-full">
           <Image
-            src="/keyskill.avif" // Replace this with your actual image path
+            src="/Activity/keyskill.gif" // Replace this with your actual image path
             alt="Yoga training skills"
             fill
             className="object-cover"

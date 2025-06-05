@@ -104,17 +104,22 @@ const FiftyHourTTPage = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
     {/* Card 1 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <Image src="/HVA/Hatha yoga 1 .jpg" alt="Hatha Yoga" className="w-full h-full object-cover" />
+        <Image 
+    src="/HVA/Hatha yoga 1 .jpg" 
+    alt="Hatha Yoga" 
+    fill 
+    className="object-cover" 
+  />
     </div>
 
     {/* Card 2 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <Image src="/HVA/Vinyasayoga1.jpg" alt="Vinyasa Yoga" className="w-full h-full object-cover" />
+      <Image src="/HVA/Vinyasayoga1.jpg" alt="Vinyasa Yoga"fill className=" object-cover" />
     </div>
 
     {/* Card 3 */}
     <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-      <Image src="/HVA/Ashtanga 1.jpg" alt="Ashtanga Yoga" className="w-full h-full object-cover" />
+      <Image src="/HVA/Ashtanga 1.jpg" alt="Ashtanga Yoga" fill className=" object-cover" />
     </div>
   </div>
 </section>
@@ -178,7 +183,14 @@ const FiftyHourTTPage = () => {
     <div className="flex flex-col gap-6 w-full max-w-lg text-left pl-[4rem] pt-[2rem]">
       {/* Item 1 */}
       <div className="flex items-start gap-4">
-        <Image src="/Acc1.png" alt="Waterfalls" className="w-8 h-8 mt-1" />
+        <Image 
+  src="/Acc1.png" 
+  alt="Waterfalls" 
+  width={32} 
+  height={32} 
+  className="mt-1" 
+/>
+
         <div>
           <p className="font-semibold">Discover Goa's cascade gems:</p>
           <p className="text-sm">
@@ -189,7 +201,10 @@ const FiftyHourTTPage = () => {
 
       {/* Item 2 */}
       <div className="flex items-start gap-4">
-        <Image src="/Acc2.png" alt="Nature parks" className="w-8 h-8 mt-1" />
+        <Image src="/Acc2.png" alt="Nature parks"
+         width={32} 
+          height={32} 
+          className="mt-1" />
         <div>
           <p className="font-semibold">Exploring Goa’s natural beauty:</p>
           <p className="text-sm">
@@ -200,7 +215,10 @@ const FiftyHourTTPage = () => {
 
       {/* Item 3 */}
       <div className="flex items-start gap-4">
-        <Image src="/Acc3.png" alt="Beaches" className="w-8 h-8 mt-1" />
+        <Image src="/Acc3.png" alt="Beaches"
+          width={32} 
+          height={32} 
+          className="mt-1"/>
         <div>
           <p className="font-semibold">
             Enjoy swimming, surfing and relaxation:

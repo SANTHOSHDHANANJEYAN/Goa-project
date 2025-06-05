@@ -25,11 +25,14 @@ export default function OurRooms14() {
 
         <div className="flex flex-col text-left max-w-3xl mx-auto gap-12 items-center pt-[2rem]">
           <div className="flex items-start space-x-4 gap-[1rem]">
-            <Image
-              src="/Accomdation/Ambience.png"
-              alt="Waterfalls"
-              className="w-[5rem] h-[5rem] mt-1"
-            />
+          <Image
+            src="/Accomdation/Ambience.png"
+            alt="Waterfalls"
+            width={80}
+            height={80}
+            className="mt-1"
+          />
+
             <p>
               <strong>Cozy Ambiance:</strong>
               <br/>
@@ -38,11 +41,14 @@ export default function OurRooms14() {
           </div>
 
           <div className="flex items-start space-x-4 gap-[1rem]">
-            <Image
-              src="/Accomdation/Modern Amenities.png"
-              alt="Nature parks"
-              className="w-8 h-8 mt-1"
-            />
+          <Image
+            src="/Accomdation/Modern Amenities.png"
+            alt="Nature parks"
+            width={32}
+            height={32}
+            className="mt-1"
+          />
+
             <p>
               <strong>Modern Amenities:</strong>
               <br/>
@@ -51,11 +57,14 @@ export default function OurRooms14() {
           </div>
 
           <div className="flex items-start space-x-4 pl-[3rem] gap-[1rem]">
-            <Image
-              src="/Accomdation/Scenic vews.png"
-              alt="Beaches"
-              className="w-8 h-8 mt-1"
-            />
+          <Image
+            src="/Accomdation/Scenic vews.png"
+            alt="Beaches"
+            width={32}
+            height={32}
+            className="mt-1"
+          />
+
             <p>
               <strong>Scenic Views:</strong>
               <br/>
