@@ -30,11 +30,14 @@ const VideoYoutubeCard = ({
       }}
     >
       <div className="relative rounded-lg overflow-hidden shadow-lg">
-        <Image
-          src={thumbnailUrl}
-          alt={title}
-          className="w-full h-48 object-cover group-hover:brightness-90 transition"
-        />
+      <Image
+        src={thumbnailUrl}
+        alt={title}
+        width={400}    // or any desired width in px
+        height={192}   // 48 * 4 = 192px height
+        className="object-cover group-hover:brightness-90 transition"
+      />
+
         <FaPlayCircle className="absolute top-1/2 left-1/2 text-white text-6xl opacity-80 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       </div>
       <h3 className="mt-2 text-gray-900 font-semibold text-lg line-clamp-2">{title}</h3>
