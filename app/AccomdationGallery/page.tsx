@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 
 export default function AccomdationGallery() {
   const images = [
@@ -17,7 +18,7 @@ export default function AccomdationGallery() {
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {images.map((src, index) => (
           <div key={index} className="break-inside-avoid overflow-hidden rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
-            <img
+            <Image
               src={src}
               alt={`Gallery Image ${index + 1}`}
               className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300"
