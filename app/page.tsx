@@ -1,10 +1,10 @@
-"use client"
+// pages/index.tsx
 
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { useEffect, useState } from 'react';
+
 import GalleryPage from '@/components/gallery';
 import TeacherSlider from '@/components/TeacherSlider';
 import CodeOfConduct from '@/components/CodeOfConduct';
@@ -14,16 +14,6 @@ import CourseCard from '@/components/CourseCard';
 import RetreatsCard from '@/components/RetreatsCard';
 
 export default function Home() {
-    const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const checkMobile = () => setIsMobile(window.innerWidth < 768);
-      checkMobile();
-      window.addEventListener('resize', checkMobile);
-      return () => window.removeEventListener('resize', checkMobile);
-    }
-  }, []);
   return (
     <>
       <Head>
@@ -38,65 +28,55 @@ export default function Home() {
       <div className="flex flex-col min-h-screen bg-[url('/bodybg.jpg')] font-['Helvetica Neue',sans-serif] bg-cover bg-no-repeat bg-center">
 
         {/* Hero Section */}
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <h1 className="text-white text-4xl md:text-6xl font-bold leading-snug mb-6 animate-fade-in glow-text floating">
-          Flow, Relax, and Renew
-          <br className="hidden md:inline" />
-          <span className="text-yellow-300">– Carnival Capital Goa</span>
-        </h1>
-        <p className="text-lg md:text-2xl text-white/90 mb-8 animate-fade-in animation-delay-300">
-          Awaken your spirit and embrace peace by the ocean breeze.
-        </p>
-        <div className="flex justify-center gap-4 animate-fade-in animation-delay-600">
-          <Link href="/about" passHref>
-            <Button
-              size="lg"
-              className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-              Learn More
-            </Button>
-          </Link>
-        </div>
-      </div>
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+          <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <h1 className="text-white text-4xl md:text-6xl font-bold leading-snug mb-6 animate-fade-in glow-text floating">
+              Flow, Relax, and Renew
+              <br className="hidden md:inline" />
+              <span className="text-yellow-300">– Carnival Capital Goa</span>
+            </h1>
+            <p className="text-lg md:text-2xl text-white/90 mb-8 animate-fade-in animation-delay-300">
+              Awaken your spirit and embrace peace by the ocean breeze.
+            </p>
+            <div className="flex justify-center gap-4 animate-fade-in animation-delay-600">
+              <Link href="/about" passHref>
+                <Button
+                  size="lg"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                  Learn More
+                </Button>
+              </Link>
+            </div>
+          </div>
 
-      {isMobile ? (
-        <Image
-          src="/fallback.jpg"
-          alt="Yoga background"
-          fill
-          priority
-          className="object-cover z-0"
-        />
-      ) : (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          poster="/fallback.jpg"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          aria-label="Background video showing yoga scenes"
-        >
-          <source src="/homepageclip.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      )}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            poster="/fallback.jpg"
+            className="absolute inset-0 w-full h-full object-cover z-0"
+            aria-label="Background video showing yoga scenes"
+          >
+            <source src="/homepageclip.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black/30 z-0" />
+        </section>
 
-      <div className="absolute inset-0 bg-black/30 z-0" />
-    </section>
         {/* Accreditation */}
         <section className="py-16 bg-transparent">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 text-center md:text-left">
