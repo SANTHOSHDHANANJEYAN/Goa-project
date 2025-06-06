@@ -43,7 +43,9 @@ const FreeManualSignup: React.FC = () => {
           <Image
             src="/yg_logo-removebg-preview.png"
             alt="200 hrs Yoga Teacher Training Manual"
-            className="w-40 sm:w-56 mx-auto shadow-lg"
+            width={224}  // 56 * 4 = 224px
+            height={224} // assuming square image; adjust if needed
+            className="w-32 sm:w-44 md:w-56 mx-auto shadow-lg"
           />
         </div>
       </div>

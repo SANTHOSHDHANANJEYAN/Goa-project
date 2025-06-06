@@ -66,7 +66,9 @@ const ActivitiesSection: React.FC = () => {
                 <Image
                   src={activity.image}
                   alt={activity.title}
-                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow object-cover"
+                  width={96} // 24px * 4 = 96px
+                  height={96}
+                  className="rounded-full border-4 border-white shadow object-cover"
                 />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-[#150e70] text-center">

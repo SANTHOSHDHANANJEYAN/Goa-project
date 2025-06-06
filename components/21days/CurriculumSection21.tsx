@@ -18,52 +18,52 @@ const cardVariants = {
 
 const curriculum = [
   {
-    title: "Foundations of Yoga & Teaching",
+    title: "Daily Asana Practice",
     image: "/Curriculumimg/1.jpg",
     description:
-      "Explore the origins, philosophies, diverse styles of yoga, and the essential role of a yoga teacher.",
+      "Learn and practice Hatha, Vinyasa, and Restorative yoga to improve strength, flexibility, and posture.Each session is designed to deepen body awareness and energize your day.",
   },
   {
-    title: "Asana Mastery & Alignment Techniques ",
+    title: "Pranayama & Breath Control ",
     image: "/Curriculumimg/2.jpg",
     description:
-      "Learn key yoga poses with proper alignment, modifications, hands-on adjustments, and guided practice to ensure safety, strength, and mindfulness.",
+      "Explore powerful breathing techniques to calm the mind and balance emotions.Build a daily routine that supports clarity, energy, and relaxation.",
   },
   {
-    title: "Pranayama & Energetic Awareness",
+    title: "Meditation & Mindfulness",
     image: "/Curriculumimg/3.jpg",
     description:
-      "Discover powerful breathwork techniques, their benefits, and how to harness breath and energy flow through pranayama, chakra awareness, and mindful movement.",
+      "Practice guided meditation, mantra, and silent sitting to develop inner stillness.Cultivate focus, peace, and a deeper connection to yourself.",
   },
   {
-    title: "Yoga Anatomy & Safe Movement",
+    title: "Yoga Philosophy & Lifestyle",
     image: "/Curriculumimg/4.jpg",
     description:
-      "Understand the body’s structure, key muscle groups, breath mechanics, and injury prevention to support safe, effective, and informed yoga practice.",
+      "Understand the core teachings of yoga beyond the mat, including Yamas & Niyamas.Learn how to live with awareness, balance, and purpose.",
   },
   {
-    title: "Teaching Methodology & Class Leadership",
+    title: "Anatomy & Body Awareness",
     image: "/Curriculumimg/5.jpg",
     description:
-      "Learn to communicate effectively, structure balanced classes, apply teaching techniques, and embody the ethics and responsibilities of a yoga teacher.",
+      "Discover how your body works during yoga with simple, practical anatomy lessons.Improve alignment, prevent injury, and support safe practice.",
   },
   {
-    title: "Sequencing & Intentional Class Design ",
+    title: "Ayurveda & Yogic Nutrition ",
     image: "/Curriculumimg/6.jpg",
     description:
-      " Master the art of creating balanced, level-appropriate class sequences with purposeful themes, effective timing, and engaging flow from start to finish.",
+      "Learn basic Ayurveda principles for healthy living and natural detox.Explore diet, routines, and herbs to support your yoga journey.",
   },
   {
-    title: "Teaching Practicum & Constructive Feedback ",
+    title: "Chakra & Energy Work",
     image: "/Curriculumimg/7.jpg",
     description:
-      "Gain real-world teaching experience through guided practice sessions, peer reviews, and expert feedback to refine your skills and build confidence as a yoga teacher.",
+      "Understand the body’s energy centers and how yoga affects your inner flow.Balance your chakras through breath, sound, and movement.",
   },
   {
-    title: "Personal Growth & Wellness for Yoga Teachers",
+    title: "Nature Excursions & Healing Activities",
     image: "/Curriculumimg/8.jpg",
     description:
-      "Cultivating mindful self-reflection, journaling insights, and sustainable self-care to manage stress and prevent burnout.",
+      "Enjoy time in nature with beach yoga, forest walks, and waterfall visits.Let nature recharge your spirit and deepen your retreat experience.",
   },
 ];
 
