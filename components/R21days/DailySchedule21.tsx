@@ -137,7 +137,7 @@ export default function DailySchedule21() {
 <div className="w-full lg:w-1/3 flex flex-col gap-[2.5rem]">
   <div className="relative w-full h-[400px]">
     <Image
-      src="/aboutpics/109.jpg"
+      src="/Curriculumimg/8.jpg"
       alt="Retreat Top"
       fill
       className="rounded-lg shadow-lg object-cover"
@@ -146,7 +146,7 @@ export default function DailySchedule21() {
   </div>
   <div className="relative w-full h-[400px]">
     <Image
-      src="/Accomdation/Accom7.jpg"
+      src="/Curriculumimg/5.jpg"
       alt="Retreat Bottom"
       fill
       className="rounded-lg shadow-lg object-cover"
@@ -155,7 +155,7 @@ export default function DailySchedule21() {
   </div>
    <div className="relative w-full h-[400px]">
     <Image
-      src="/Curriculumimg/3.jpg"
+      src="/Curriculumimg/4.jpg"
       alt="Retreat Bottom"
       fill
       className="rounded-lg shadow-lg object-cover"
@@ -164,7 +164,7 @@ export default function DailySchedule21() {
   </div>
    <div className="relative w-full h-[400px]">
     <Image
-      src="/Food/Food 2.jpg"
+      src="/Curriculumimg/2.jpg"
       alt="Retreat Bottom"
       fill
       className="rounded-lg shadow-lg object-cover"
@@ -173,7 +173,7 @@ export default function DailySchedule21() {
   </div>
    <div className="relative w-full h-[400px]">
     <Image
-      src="/HVA/Hatha Yoga 4 .jpg"
+      src="/Curriculumimg/1.jpg"
       alt="Retreat Bottom"
       fill
       className="rounded-lg shadow-lg object-cover"

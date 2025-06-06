@@ -103,7 +103,7 @@ export default function DailySchedule14() {
      <div className="w-full lg:w-1/3 flex flex-col gap-[1rem]">
        <div className="relative w-full h-[400px]">
          <Image
-           src="/gallery/12.WEBP"
+           src="/Curriculumimg/1.jpg"
            alt="Retreat Top"
            fill
            className="rounded-lg shadow-lg object-cover"
@@ -112,7 +112,7 @@ export default function DailySchedule14() {
        </div>
        <div className="relative w-full h-[384px]">
          <Image
-           src="/gallery/13.WEBP"
+           src="/Curriculumimg/2.jpg"
            alt="Retreat Bottom"
            fill
            className="rounded-lg shadow-lg object-cover"
@@ -121,7 +121,7 @@ export default function DailySchedule14() {
        </div>
         <div className="relative w-full h-[384px]">
          <Image
-           src="/gallery/13.WEBP"
+           src="/Curriculumimg/4.jpg"
            alt="Retreat Bottom"
            fill
            className="rounded-lg shadow-lg object-cover"
@@ -130,7 +130,7 @@ export default function DailySchedule14() {
        </div>
         <div className="relative w-full h-[384px]">
          <Image
-           src="/gallery/13.WEBP"
+           src="/Curriculumimg/5.jpg"
            alt="Retreat Bottom"
            fill
            className="rounded-lg shadow-lg object-cover"
