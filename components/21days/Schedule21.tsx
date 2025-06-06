@@ -17,16 +17,17 @@ export default function Schedule100() {
           <h2 className="text-2xl sm:text-3xl font-bold text-green-900 mb-6">Daily Schedule</h2>
           <ul className="space-y-4 text-sm sm:text-base">
             {[
-              ['6:00 AM', 'Morning bell & tea'],
-              ['6:30 AM', 'Meditation & pranayama'],
-              ['7:30 AM', 'Yoga asana practice'],
-              ['9:30 AM', 'Breakfast'],
-              ['11:00 AM', 'Workshop / Activity'],
-              ['1:00 PM', 'Lunch'],
-              ['2:00 PM', 'Free time / Beach'],
-              ['4:30 PM', 'Evening yoga session'],
-              ['6:30 PM', 'Dinner'],
-              ['8:00 PM', 'Evening program / Meditation'],
+              ['05:00 AM', ' Morning Tea'],
+              ['05:30 AM', 'Hatha- Vinayasa- Flow  Yoga'],
+              ['07:30 AM', 'Pranayama & Meditation'],
+              ['09:00 AM', 'Breakfast'],
+              ['10:00 AM', 'Yoga  Philosophy'],
+              ['11.15 AM', 'Yoga Practicum'],
+              ['12.30 PM', 'Yoga Practicum'],
+              ['13:15 PM', 'Lunch'],
+              ['15.30PM', 'Yoga Anatomy'],
+              ['16:45 PM', 'Ashtanga Yoga'],
+              ['18:15 PM', 'Supper'],
             ].map(([time, activity], idx) => (
               <li key={idx} className="flex items-start">
                 <span className="font-semibold text-green-900 w-24 flex-shrink-0">{time}</span>

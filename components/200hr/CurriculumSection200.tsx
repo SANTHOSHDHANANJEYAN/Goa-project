@@ -60,7 +60,7 @@ const curriculum = [
       "Learn the science and techniques of breath control, prana flow, nostril activation, and various pranayama practices for physical, emotional, and mental purification.",
   },
   {
-    title: "Relaxation Techniques",
+    title: "Meditation Techniques",
     image: "/Curriculumimg/8.jpg",
     description:
       "Practice full-body, emotional, chakra, and deep causal relaxation methods including Yoga Nidra to promote restful sleep and mental calm.",

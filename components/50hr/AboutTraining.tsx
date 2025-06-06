@@ -39,7 +39,7 @@ export default function AboutTraining() {
     {
       Icon: GiMeditation,
       text: "7-Days / 6-Nights in a luxurious boutique resort in Goa",
-      size: 22,
+      size: 20,
     },
     {
       Icon: GiMeditation,
@@ -49,7 +49,7 @@ export default function AboutTraining() {
     {
       Icon: GiMeditation,
       text: "Teaching Methodology & Hands-on Teaching Practice",
-      size: 22,
+      size: 20,
     },
     {
       Icon: GiMeditation,
@@ -59,7 +59,7 @@ export default function AboutTraining() {
     {
       Icon: GiMeditation,
       text: "Small Group Size for personalized attention and guidance",
-      size: 22,
+      size: 20,
     },
     {
       Icon: GiMeditation,
@@ -69,7 +69,7 @@ export default function AboutTraining() {
     {
       Icon: GiMeditation,
       text: "Daily Asana Practice, Meditation & Pranayama Sessions",
-      size: 22,
+      size: 20,
     },
   ];
 
