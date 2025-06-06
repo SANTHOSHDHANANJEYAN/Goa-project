@@ -115,7 +115,7 @@ const CurriculumSection50: React.FC = () => {
             </div>
             {/* Centered text content */}
             <div className="text-center">
-              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-[#B5FCCD] transition">
+              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-[#9B7EBD] transition">
                 {item.title}
               </h3>
               <p className="text-sm text-black-600 leading-relaxed">{item.description}</p>
