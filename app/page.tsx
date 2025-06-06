@@ -60,15 +60,13 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        <Image
+          src="/Homebg.gif" // Replace this with a high-quality poster image or thumbnail
+          alt="Yoga background"
+          fill
+          className="absolute top-0 left-0 object-cover z-0 opacity-30"
+        />
 
-          <Image
-            src="/fallback.jpg"
-            alt="Yoga background"
-            fill
-            priority
-            className="object-cover z-0"
-          />
-          <div className="absolute inset-0 bg-black/30 z-0" />
         </section>
 
         {/* Accreditation */}
@@ -76,7 +74,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 text-center md:text-left">
             <div>
               <h2 className="text-4xl font-bold text-[#150e70] mb-4">
-                Join a Life-Changing Community of Over 15,000+ Students
+                Join a Life-Changing Community of Over 34,000 Students
               </h2>
               <p className="text-xl text-[#150e70] font-medium">
                 Become part of our family at one of the leading accredited schools in Goa!
@@ -103,7 +101,7 @@ export default function Home() {
                       width={70}
                       height={70}
                       className="mb-2"
-                      priority={index === 0} // Only first image is critical
+                      priority={index === 0}
                     />
                     <span className="font-semibold text-sm text-indigo-900">{item.label}</span>
                   </div>
@@ -113,7 +111,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Core Sections */}
         <CourseCard />
         <section className="py-10 bg-transparent text-center">
           <p className="text-3xl italic text-[#150e70] mb-2 animate-fade-in">“Empower – Evolve – Thrive.”</p>
@@ -121,7 +118,6 @@ export default function Home() {
         </section>
         <RetreatsCard />
 
-        {/* Mission */}
         <section className="relative py-20 text-center bg-transparent">
           <div className="max-w-5xl mx-auto px-6">
             <h1 className="text-4xl font-bold text-[#150e70] mb-4 animate-slide-up">
@@ -149,7 +145,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Parallax */}
         <section
           className="relative h-[800px] bg-fixed bg-center bg-cover flex items-center justify-center mt-20"
           style={{ backgroundImage: "url('/H1.png')" }}
@@ -166,14 +161,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Remaining Sections */}
         <BlogSection />
         <CodeOfConduct />
         <GalleryPage />
         <TeacherSlider />
         <Appform />
-                {/* Reviews Section */}
-        <section className="py-16 md:py-24 bg-transparent relative overflow-hidden">
+                <section className="py-16 md:py-24 bg-transparent relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#150e70] mb-8 text-center text-shadow-md">
               Yoga Alliance
