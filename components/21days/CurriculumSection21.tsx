@@ -103,7 +103,7 @@ const CurriculumSection50: React.FC = () => {
             className="bg-[#f9c9cd] shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group"
           >
             <div className="flex justify-center mb-4">
-              <div className="w-20 h-20 bg-[#fef3f7] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
+              <div className="w-20 h-20 bg-[#9B7EBD] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -115,10 +115,10 @@ const CurriculumSection50: React.FC = () => {
             </div>
             {/* Centered text content */}
             <div className="text-center">
-              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-[#9B7EBD] transition">
+              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition">
                 {item.title}
               </h3>
-              <p className="text-sm text-[#9B7EBD] leading-relaxed">{item.description}</p>
+              <p className="text-sm text-black-600 leading-relaxed">{item.description}</p>
             </div>
           </motion.div>
         ))}
