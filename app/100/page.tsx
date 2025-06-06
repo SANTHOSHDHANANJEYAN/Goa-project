@@ -177,7 +177,9 @@ const HundredHourTTPage = () => {
         <Image
          src="/Acc1.png" 
          alt="Waterfalls" 
-         className="w-8 h-8 mt-1" />
+        width={32} 
+        height={32} 
+        className="mt-1"/>
         <div>
           <p className="font-semibold">Discover Goa's cascade gems:</p>
           <p className="text-sm">
@@ -188,7 +190,11 @@ const HundredHourTTPage = () => {
 
       {/* Item 2 */}
       <div className="flex items-start gap-4">
-        <Image src="/Acc2.png" alt="Nature parks" className="w-8 h-8 mt-1" />
+        <Image src="/Acc2.png" 
+        alt="Nature parks" 
+        width={32} 
+        height={32} 
+        className="mt-1"/>
         <div>
           <p className="font-semibold">Exploring Goa’s natural beauty:</p>
           <p className="text-sm">
@@ -199,7 +205,11 @@ const HundredHourTTPage = () => {
 
       {/* Item 3 */}
       <div className="flex items-start gap-4">
-        <Image src="/Acc3.png" alt="Beaches" className="w-8 h-8 mt-1" />
+        <Image src="/Acc3.png" 
+        alt="Beaches" 
+        width={32} 
+        height={32} 
+        className="mt-1" />
         <div>
           <p className="font-semibold">
             Enjoy swimming, surfing and relaxation:
