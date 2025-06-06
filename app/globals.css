@@ -34,18 +34,35 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground bg-cover bg-center bg-no-repeat;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background-image: url('/NEW - GOA FXD BG.svg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: #f4f4f4;
   }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-medium tracking-tight;
   }
+
   .font-serif {
     font-family: var(--font-cormorant);
   }
+
   .font-sans {
     font-family: var(--font-inter);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body, html {
+    overflow-x: hidden;
   }
 }
 
@@ -53,24 +70,71 @@
   .animate-fade-in {
     animation: fadeIn 1.2s ease-out forwards;
   }
+
   .animate-slide-up {
     animation: slideUp 1s ease-out forwards;
   }
+
   .animate-slide-in-right {
     animation: slideInRight 1s ease-out forwards;
   }
+
   .animation-delay-300 {
     animation-delay: 300ms;
   }
+
   .animation-delay-600 {
     animation-delay: 600ms;
   }
+
   .animation-delay-900 {
     animation-delay: 900ms;
   }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-darkblue {
+    color: darkblue;
+  }
+
+  .custom-bg-white {
+    background-color: white;
+  }
+
+  .custom-section-bg {
+    background-color: #fffcfcbf;
+  }
+
+  .max-w-6xl {
+    max-width: 99rem;
+  }
+
+  .top-7 {
+    top: 2rem;
+  }
+
+  .py-20-override {
+    padding-top: 0 !important;
+  }
 }
 
-/* Keyframes for animation */
+/* Keyframes */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -101,63 +165,3 @@
     transform: translateX(0);
   }
 }
-
-/* Background image */
-body {
-  @apply bg-cover bg-center bg-no-repeat;
-  background-image: url('/NEW - GOA FXD BG.svg'); /* Ensure correct path and no backslashes */
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-color: #f4f4f4;
-}
-
-/* Utility overrides and layout helpers */
-.transition-colors {
-  background-color: white ;
-}
-
-.p-4 {
-  background-color: #fffcfcbf;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body, html {
-  overflow-x: hidden;
-}
-
-.p {
-  color: darkblue;
-}
-
-.max-w-6xl {
-  max-width: 99rem;
-}
-
-.py-20 {
-  padding-top: 0;
-}
-
-/* Hide scrollbars */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.top-7 {
-  top: 2rem;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari and Opera */
-}
-
