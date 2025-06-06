@@ -61,19 +61,13 @@ export default function Home() {
             </div>
           </div>
 
-          {/* <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-            poster="/fallback.jpg"
-            className="absolute inset-0 w-full h-full object-cover z-0"
-            aria-label="Background video showing yoga scenes"
-          >
-            <source src="/homepageclip.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> */}
+          <Image
+            src="/fallback.jpg"
+            alt="Yoga background"
+            fill
+            priority
+            className="object-cover z-0"
+          />
           <div className="absolute inset-0 bg-black/30 z-0" />
         </section>
 
