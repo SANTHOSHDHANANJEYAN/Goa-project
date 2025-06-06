@@ -100,7 +100,7 @@ const CurriculumSection50: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={cardVariants}
-            className="bg-[#9B7EBD] shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group"
+            className="bg-[#B5FCCD] shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group"
           >
             <div className="flex justify-center mb-4">
               <div className="w-20 h-20 bg-[#9B7EBD] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
@@ -115,7 +115,7 @@ const CurriculumSection50: React.FC = () => {
             </div>
             {/* Centered text content */}
             <div className="text-center">
-              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition">
+              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-[#B5FCCD] transition">
                 {item.title}
               </h3>
               <p className="text-sm text-black-600 leading-relaxed">{item.description}</p>
