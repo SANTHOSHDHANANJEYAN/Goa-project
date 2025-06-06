@@ -121,7 +121,7 @@ export default function DailySchedule21() {
             <div key={index} className="relative">
               <div className="absolute -left-6 top-1 w-5 h-5 rounded-full bg-white border-4 border-orange-500 flex items-center justify-center">
                 {index === 0 ? (
-                  <span className="text-orange-500">📍</span>
+                  <span className="w-2 h-2 bg-orange-500 rounded-full" />
                 ) : (
                   <span className="w-2 h-2 bg-orange-500 rounded-full" />
                 )}
