@@ -109,30 +109,30 @@ export default function AboutTraining() {
         </div>
 
         {/* Right Image Content */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 pb-[2rem]">
           <div className="col-span-2">
             <Image
-              src="/51.jpg"
+              src="/aboutpics/108.jpg"
               alt="Yoga Group"
-              className="rounded-xl object-cover w-full"
+              className="rounded-xl object-cover w-full h-[325px]"
               width={600}
               height={300}
             />
           </div>
           <div>
             <Image
-              src="/52.jpg"
+              src="/aboutpics/110.jpg"
               alt="Vegan Food"
-              className="rounded-xl object-cover w-full "
+              className="rounded-xl object-cover w-full h-[160px]"
               width={300}
               height={200}
             />
           </div>
           <div>
             <Image
-              src="/54.jpg"
+              src="/aboutpics/about3.HEIC"
               alt="Resort Room"
-              className="rounded-xl object-cover w-full h-[83%] "
+              className="rounded-xl object-cover w-full h-[160px]"
               width={300}
               height={200}
             />
