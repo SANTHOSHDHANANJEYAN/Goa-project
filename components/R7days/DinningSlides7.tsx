@@ -10,8 +10,6 @@ import Image from 'next/image';
 import { useRef } from 'react';
 
 const images = [
-  '/Food/Food 1.jpg',
-  '/Food/Food 2.jpg',
   '/Food/Food 3.jpg',
   '/Food/Food 4.jpg',
   '/Food/Food 5.jpg',

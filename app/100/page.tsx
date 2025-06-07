@@ -14,7 +14,6 @@ import ApplicationForm100 from "@/components/100hr/ApplicationForm100";
 import TeachersSection200 from "@/components/200hr/TeachersSection200";
 import Schedule100 from "@/components/100hr/Schedule100";
 import OurDinning7 from "@/components/R7days/OurDinning7";
-import AccommodationSlider from "@/components/AccommodationSlider";
 import DinningSlides7 from "@/components/R7days/DinningSlides7";
 import OurRooms7 from "@/components/R7days/OurRooms7";
 import RoomSlides7 from "@/components/R7days/RoomSlides7";
@@ -52,7 +51,7 @@ const HundredHourTTPage = () => {
   <p className="text-sm text-[#150e70]">Language-English</p>
   <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
   <p className="text-sm text-[#150e70]">Level: all level </p> 
-  <p className="text-sm text-[#150e70]">Certification: Yoga Alliance</p>
+  <p className="text-sm text-[#150e70]">Certification: YACEP</p>
 </div>
 
 
@@ -85,7 +84,7 @@ const HundredHourTTPage = () => {
       {/* About Section */}
   <Schedule100/>
 
-<section className="mt-20 px-4 sm:px-6 lg:px-8">
+ <section className="mt-20 px-4 sm:px-6 lg:px-8">
   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
     Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
   </h2>
@@ -94,36 +93,40 @@ const HundredHourTTPage = () => {
     Education experience covering all key aspects of the ancient practice and philosophy of yoga
   </h3>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-gray-700 max-w-6xl mx-auto">
     {/* Card 1 */}
-    <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-         <Image
-          src="/HVA/Hatha yoga 2.jpg"
-          alt="Image 1"
-          fill
-          className="object-cover"
-        />
-    </div>
+   <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+  <Image 
+    src="/HVA/hatha.png"  
+    alt="Image 1" 
+    fill
+    className="object-cover"
+    loading="lazy"
+  />   
+</div>
 
-    {/* Card 2 */}
-    <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-         <Image
-          src="/HVA/Vinyasa2.jpg"
-          alt="Image 1"
-          fill
-          className="object-cover"
-        />
-    </div>
+{/* Card 2 */}
+<div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+  <Image 
+    src="/HVA/vinyasa.png" 
+    alt="Image 2" 
+    fill 
+    className="object-cover"
+    loading="lazy" 
+  />
+</div>
 
-    {/* Card 3 */}
-    <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-[26px] shadow-lg">
-         <Image
-          src="/HVA/Ashtanga2.jpg"
-          alt="Image 1"
-          fill
-          className="object-cover"
-        />
-    </div>
+{/* Card 3 */}
+<div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+  <Image 
+    src="/HVA/ashtanga.png" 
+    alt="Image 3" 
+    fill 
+    className="object-cover"
+    loading="lazy" 
+  />
+</div>
+
   </div>
 </section>
     
@@ -152,79 +155,8 @@ const HundredHourTTPage = () => {
       <TeachersSection200/>
       {/* Training Schedule */}
       {/* Accommodation Section - Scenic */}
-<section
-  className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 px-4"
-  style={{
-    backgroundImage: "url('/Accomdation/Accom4.jpg')",
-  }}
->
-  {/* Dark overlay */}
-  <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-
-  <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center px-4">
-    <h2 className="text-lg uppercase tracking-wide text-gray-200 mb-2">
-      Rishikul Yogshala Goa
-    </h2>
-    <h1 className="text-4xl md:text-5xl font-bold mb-4">Accommodation</h1>
-    <p className="text-lg mb-10 max-w-xl">
-      Palm Paradise Resort amidst jungle paradise in Goa
-    </p>
-
-    {/* Features list */}
-    <div className="flex flex-col gap-6 w-full max-w-lg text-left pl-[4rem] pt-[2rem]">
-      {/* Item 1 */}
-      <div className="flex items-start gap-4">
-        <Image
-         src="/Acc1.png" 
-         alt="Waterfalls" 
-        width={32} 
-        height={32} 
-        className="mt-1"/>
-        <div>
-          <p className="font-semibold">Discover Goa's cascade gems:</p>
-          <p className="text-sm">
-            10+ Waterfalls nearby for weekend getaways
-          </p>
-        </div>
-      </div>
-
-      {/* Item 2 */}
-      <div className="flex items-start gap-4">
-        <Image src="/Acc2.png" 
-        alt="Nature parks" 
-        width={32} 
-        height={32} 
-        className="mt-1"/>
-        <div>
-          <p className="font-semibold">Exploring Goa’s natural beauty:</p>
-          <p className="text-sm">
-            3 Nature Parks just 20 minutes away
-          </p>
-        </div>
-      </div>
-
-      {/* Item 3 */}
-      <div className="flex items-start gap-4">
-        <Image src="/Acc3.png" 
-        alt="Beaches" 
-        width={32} 
-        height={32} 
-        className="mt-1" />
-        <div>
-          <p className="font-semibold">
-            Enjoy swimming, surfing and relaxation:
-          </p>
-          <p className="text-sm">
-            3 Beaches within 10 km – perfect for swimming & surfing
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
-<AccommodationSlider/>
   <OurDinning7/>
   <DinningSlides7/>
   <OurRooms7/>

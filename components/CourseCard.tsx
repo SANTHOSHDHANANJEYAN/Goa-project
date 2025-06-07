@@ -14,7 +14,7 @@ const services = [
   {
     id: 'meditation',
     title: '300 Hrs Multi-Style Yoga TTC',
-    image: '/r2.jpg',
+    image: '/300.png',
     link: '/300',
   },
   {

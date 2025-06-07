@@ -49,39 +49,40 @@ const features = [
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
     title: '100-Hour Multi-Style Yoga TTC',
-    description: 'Deepen your practice and understanding with a compact, immersive 100-hour course.',
+    description: 'Deepen your foundation with Hatha, Vinyasa, and Ashtanga styles. This compact 100-hour course enhances personal practice and clarity.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
     title: '200-Hour Multi-Style Yoga TTC',
-    description: 'Become a certified teacher through our comprehensive, Yoga Alliance-approved training.',
+    description: 'Become a certified yoga teacher with our Yoga Alliance-approved training. Master key techniques, philosophy, and teaching skills.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
     title: '300-Hour Multi-Style Yoga TTC',
-    description: 'Advance your skills and teaching with deeper knowledge in multi-style yoga.',
+    description: 'Advance your knowledge in multi-style yoga and refine your teaching. This course is ideal for deepening your expertise and confidence.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
     title: '21 Days Immersion Yoga',
-    description: 'Transform your life through 21 days of immersive yoga, healing, and self-growth.',
+    description: 'Immerse in 21 days of intense yoga, healing, and transformation. A complete journey for body, mind, and soul renewal.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
     title: '7 Days Yoga Retreat',
-    description: 'Rejuvenate your body and mind with a blissful 7-day yoga escape.',
+    description: 'Recharge with daily yoga, nature, and mindful activities. A perfect getaway to relax, unwind, and reconnect.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
     title: '14 Days Yoga Retreat',
-    description: 'Experience peace and wellness in this 14-day journey of yoga and relaxation.',
+    description: 'Enjoy deeper relaxation and self-care in this 2-week retreat. Balance your lifestyle with yoga, meditation, and wellness.',
   },
-    {
+  {
     icon: <FaUsers className="text-green-600 text-3xl" />,
     title: '21 Days Yoga Retreat',
-    description: 'Go deep within on a 21-day soulful retreat for complete mind-body renewal.',
+    description: 'Go inward with a soulful 3-week yoga journey of growth. Experience lasting peace, strength, and spiritual clarity.',
   },
 ];
+
 
 const CodeOfConduct = () => {
   return (
@@ -89,7 +90,7 @@ const CodeOfConduct = () => {
       <div className="max-w-7xl mx-auto space-y-16 pb-[3rem]">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-[#150e70] mb-4">
-            Empowering global yoga teachers through transformative courses and retreats
+            Empowering global yoga teachers through transformative courses & retreats
           </h1>
           <p className="text-lg text-[#150e70] max-w-2xl mx-auto">
             At Rishikul Yogshala Goa, we uphold a tradition of respect, responsibility, and discipline
@@ -103,29 +104,39 @@ const CodeOfConduct = () => {
         <div>
           <div className="flex items-center gap-2 text-green-700 font-semibold text-xl mb-[2rem]">
             <FaVideo className="text-green-600" />
-            <span>Yoga TTC Videos</span>
+            <span>Yogashala Videos</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-[3.5rem]">
             <VideoYoutubeCard
-              title="Rishikul Yogshala Goa"
+              title="Rishikul Yogshala Venue"
               embedId="wFNmPHrxVZo?si=as8F1q3BWOjweDmi"
-              thumbnailUrl="/Thumbnail/2.png"
+              thumbnailUrl="/Thumbnail/venue.png"
             />
             <VideoYoutubeCard
-              title="Guru Mantra – Yoga TTC"
+              title="Rishikul Yogshala Meals "
               embedId="ZefriV55M-A?si=UZ4PM3XbLCJKKzxR"
-              thumbnailUrl="/Thumbnail/3.png"
+              thumbnailUrl="/Thumbnail/food.png"
             />
             <VideoYoutubeCard
-              title="Student’s Review – Yoga TTC"
+              title="Rishikul Yogshala Opening Ceremony"
               embedId="1oxK0cYax9s?si=MMqH1kM2Kcp0_6_z"
-              thumbnailUrl="/Thumbnail/5.png"
+              thumbnailUrl="/Thumbnail/opening.png"
             />
             <VideoYoutubeCard
-              title="Additional Yoga Session"
+              title="Rishikul Yogshala Closing Ceremony"
               embedId="5o9pIWEC2eE?si=6TDXmlDFRE-WuojI"
-              thumbnailUrl="/Thumbnail/4.png"
+              thumbnailUrl="/Thumbnail/closing.png"
+            />
+            <VideoYoutubeCard
+              title="Rishikul Yogshala Review-1"
+              embedId="5o9pIWEC2eE?si=6TDXmlDFRE-WuojI"
+              thumbnailUrl="/Thumbnail/review1.png"
+            />
+            <VideoYoutubeCard
+              title="Rishikul Yogshala Review-2"
+              embedId="5o9pIWEC2eE?si=6TDXmlDFRE-WuojI"
+              thumbnailUrl="/Thumbnail/review2.png"
             />
           </div>
         </div>

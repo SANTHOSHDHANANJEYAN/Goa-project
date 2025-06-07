@@ -113,10 +113,7 @@ export default function About141() {
 
         {/* Right: Text Content */}
         <div className="pb-[1rem]">
-          <p className="uppercase text-indigo-900 font-medium tracking-wide flex items-center gap-2 mb-2 ">
-            <span className="w-3 h-3 bg-indigo-900 rounded-full inline-block" />
-            Why Choose Us
-          </p>
+
           <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6 leading-snug">
             Transform your practice <br />
             in an authentic, serene <br />

@@ -40,12 +40,7 @@ export default function Benefit21() {
         </div> */}
 
         {/* Trust Logos */}
-        <div className="flex flex-wrap items-center gap-4">
-          <Image src="/nw200.png" alt="Tripadvisor" width={95} height={50} />
-          <Image src="/nw300.png" alt="Google" width={100} height={50} />
-          <Image src="/nwrpys.png" alt="Yoga Alliance 1" width={100} height={50} />
-          <Image src="/nwyacep.png" alt="Yoga Alliance 2" width={95} height={50} />
-        </div>
+
       </div>
     </section>
   );
