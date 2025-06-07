@@ -9,39 +9,39 @@ interface Activity {
 
 const activities: Activity[] = [
  {
-  title: "Multi-Style Yoga Classes",
+  title: "Sunrise Beach Yoga",
   description:
-    "Daily sessions in Hatha, Vinyasa, and Ashtanga for all levels.",
+    "Begin your day with energizing yoga sessions by the rising sun over the sea.",
   image: "/Meditation.jpg",
 },
 {
-  title: "Meditation & Pranayama",
+  title: "Sound Healing & Meditation",
   description:
-    "Guided practices for mental clarity and inner peace.",
+    "Experience deep relaxation through guided sound healing and meditation.",
   image: "/Accommodation.jpg",
 },
 {
-  title: "Yoga Philosophy & Anatomy",
+  title: "Nature Walks & Beach View",
   description:
-    "Learn the foundations of yogic wisdom and body alignment.",
+    "Reconnect with nature through mindful walks along Goa’s lush trails.",
   image: "/Meals.jpg",
 },
 {
-  title: "Ayurvedic Meals & Cleansing",
+  title: "Kirtan & Bhajan Evenings",
   description:
-    "Sattvic food and detox practices like Shatkarma for overall wellness.",
+    "Soak in the bliss of devotional music and community singing under the stars.",
   image: "/Wellness.jpg",
 },
 {
-  title: "Mantra Chanting & Kirtan",
+  title: "Art & Expression Therapy",
   description:
-    "Uplifting group chanting for spiritual connection.",
+    "Channel creativity and inner clarity through guided art-based expression.",
   image: "/Cultural.jpg",
 },
 {
-  title: "Beachside Relaxation & Cultural Visits",
+  title: "Yoga Wellness Workshop",
   description:
-    "Free time to explore Goa’s beaches and local culture.",
+    "Learn foundational principles of self-care, mediation and relaxation",
   image: "/Cultural.jpg",
 },
 ];

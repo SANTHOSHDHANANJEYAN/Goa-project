@@ -4,28 +4,12 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const testimonials = [
-  {
-    id: 1,
-    image: "/excursion1.webp",
-    videoUrl: "#",
-  },
-  {
-    id: 2,
-    image: "/excursion2.jpg",
-    videoUrl: "#",
-  },
-  {
-    id: 3,
-    image: "/excursion3.avif",
-    videoUrl: "#",
-  },
-  {
-    id: 4,
-    image: "/excursion4.avif",
-    videoUrl: "#",
-  },
-];
+const testimonials = Array.from({ length: 21 }, (_, i) => i + 1)
+  .filter((num) => num !== 4 && num !== 5)
+  .map((num) => ({
+    id: num,
+    image: `/excursion/${num}.jpg`,
+  }));
 
 export default function OurExcursions7() {
   return (
@@ -57,27 +41,11 @@ export default function OurExcursions7() {
             <div className="relative rounded-3xl overflow-hidden group shadow-md">
               <Image
                 src={item.image}
-                alt={`Testimonial ${item.id}`}
+                alt={`Excursion ${item.id}`}
                 width={400}
                 height={300}
                 className="w-full h-auto object-cover"
               />
-              <a
-                href={item.videoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition"
-              >
-                <div className="bg-orange-400 p-4 rounded-full">
-                  <svg
-                    className="w-10 h-10 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </a>
             </div>
           </SwiperSlide>
         ))}

@@ -16,11 +16,7 @@ const trainingHighlights: string[] = [
   "Primary series taught with Sanskrit counting",
   "An intensive course hosted by an international team of yogis and yoga masters",
   "Practice yoga in the land of its origin and experience true Vedic culture",
-  "Learn the full primary series",
-  "Learn traditional pranayama and meditation techniques",
-  "Learn from authentic and experienced teachers",
-  "A well-balanced course designed for the Western mindset",
-  "An intensive and rigorous practice that will get you ready to start teaching",
+
 ];
 
 const YogaHighlights: React.FC = () => {
