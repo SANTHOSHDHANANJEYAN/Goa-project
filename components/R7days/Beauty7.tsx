@@ -25,7 +25,7 @@ const Beauty7: React.FC = () => {
         </h1>
         <div className="mb-6 border-l-4 border-purple-400 pl-5 pt-[2.5rem]">
             <p className="text-lg md:text-xl font-light italic">
-              “In the heart of Goa’s vibrant yet peaceful energy, Rishikul Yogshala stands as a gateway to deeper learning and healing. Our space offers the perfect blend of beachside calm and traditional teachings — making it a truly unique environment for your yoga journey.”
+              “In the heart of Goa’s vibrant yet peaceful energy, Rishikul Yogshala stands as a gateway to deeper learning and healing. Our space offers the perfect blend of beachside calm and traditional teachings - making it a truly unique environment for your yoga journey.”
             </p>
           </div>
 

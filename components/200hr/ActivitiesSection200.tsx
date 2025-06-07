@@ -7,44 +7,38 @@ interface Activity {
   image: string;
 }
 
-const activities: Activity[] = [
+const activities: Activity[] =[
   {
-    title: "Multi-Style Yoga Classes",
-    description:
-      "Daily sessions in Hatha, Vinyasa, and Ashtanga for all levels.",
+    title: "Temple Visit",
+    description: "Discover peace at Goa’s ancient temples.",
     image: "/Activity/Multi-Style Yoga Classes.png",
   },
   {
-    title: "Meditation & Pranayama",
-    description:
-      "Guided practices for mental clarity and inner peace.",
+    title: "Visit Arambol Beach",
+    description: "Relax and unwind at Arambol’s scenic shores.",
     image: "/Activity/Meditation & Pranayama.png",
   },
   {
-    title: "Yoga Philosophy & Anatomy",
-    description:
-      "Learn the foundations of yogic wisdom and body alignment.",
+    title: "Cultural Visit",
+    description: "Explore Goa’s vibrant traditions and art.",
     image: "/Activity/Yoga Philosophy & Anatomy.png",
   },
   {
-    title: "Ayurvedic Meals & Cleansing",
-    description:
-      " Sattvic food and detox practices like Shatkarma for overall wellness.",
+    title: "Boating",
+    description: "Enjoy a calm and scenic boat ride.",
     image: "/Activity/Ayurvedic Meals & Cleansing.png",
   },
   {
-    title: "Mantra Chanting & Kirtan",
-    description:
-      "Uplifting group chanting for spiritual connection.",
+    title: "Group Discussion",
+    description: "Share and learn through group talks.",
     image: "/Activity/Mantra Chanting & Kirtan.png",
   },
-    {
-    title: "Beachside Relaxation & Cultural Visits ",
-    description:
-      "Free time to explore Goa’s beaches and local culture.",
+  {
+    title: "Cooking Classes",
+    description: "Learn to cook simple sattvic meals.",
     image: "/Activity/Beachside Relaxation & Cultural Visits.png",
   },
-];
+]
 
 const ActivitiesSection: React.FC = () => {
   return (
