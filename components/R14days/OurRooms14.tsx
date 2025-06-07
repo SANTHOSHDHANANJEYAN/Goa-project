@@ -20,58 +20,9 @@ export default function OurRooms14() {
         </h2>
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Rooms</h1>
         <p className="text-lg mb-10">
-          Comfort and peace await you at Palm Paradise Resort, nestled in Goa’s lush jungle.
+          Our rooms at Rishikul Yogshala Goa are thoughtfully designed to offer a peaceful and comfortable space for rest, reflection, and rejuvenation. Surrounded by the calming energy of nature and just moments away from the beach, each room provides a serene escape from the outside world.
         </p>
 
-        <div className="flex flex-col text-left max-w-3xl mx-auto gap-12 items-center pt-[2rem]">
-          <div className="flex items-start space-x-4 gap-[1rem]">
-          <Image
-            src="/Accomdation/Ambience.png"
-            alt="Waterfalls"
-            width={80}
-            height={80}
-            className="mt-1"
-          />
-
-            <p>
-              <strong>Cozy Ambiance:</strong>
-              <br/>
-             Relax in spacious, well-appointed rooms designed<br/>for your restful stay.  
-            </p>
-          </div>
-
-          <div className="flex items-start space-x-4 gap-[1rem]">
-          <Image
-            src="/Accomdation/Modern Amenities.png"
-            alt="Nature parks"
-            width={32}
-            height={32}
-            className="mt-1"
-          />
-
-            <p>
-              <strong>Modern Amenities:</strong>
-              <br/>
-              Enjoy all the comforts you need, from cozy beds to<br/>clean bathrooms and Wi-Fi.
-            </p>
-          </div>
-
-          <div className="flex items-start space-x-4 pl-[3rem] gap-[1rem]">
-          <Image
-            src="/Accomdation/Scenic vews.png"
-            alt="Beaches"
-            width={32}
-            height={32}
-            className="mt-1"
-          />
-
-            <p>
-              <strong>Scenic Views:</strong>
-              <br/>
-              Wake up to the calming sights and sounds of nature right<br/>outside your window.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
