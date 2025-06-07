@@ -130,12 +130,12 @@ const CodeOfConduct = () => {
             />
             <VideoYoutubeCard
               title="Rishikul Yogshala Review-1"
-              embedId="5o9pIWEC2eE?si=6TDXmlDFRE-WuojI"
+              embedId="1oxK0cYax9s?si=VdURMf5zk-gvMX9-"
               thumbnailUrl="/Thumbnail/review1.png"
             />
             <VideoYoutubeCard
               title="Rishikul Yogshala Review-2"
-              embedId="5o9pIWEC2eE?si=6TDXmlDFRE-WuojI"
+              embedId="1oxK0cYax9s?si=VdURMf5zk-gvMX9-"
               thumbnailUrl="/Thumbnail/review2.png"
             />
           </div>

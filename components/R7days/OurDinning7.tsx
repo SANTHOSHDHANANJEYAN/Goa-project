@@ -20,55 +20,9 @@ export default function OurDinning7() {
         </h2>
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Dinning</h1>
         <p className="text-lg mb-10">
-          Savor delicious meals in a warm, welcoming atmosphere at Palm Paradise Resort.
+         At Rishikul Yogshala Goa, food is more than fuel - it’s a part of your healing journey. Our dining experience is rooted in the principles of sattvic living, offering freshly prepared vegetarian meals that nourish the body, calm the mind, and uplift the spirit.
         </p>
 
-        <div className="flex flex-col text-left max-w-3xl mx-auto gap-12 items-center pt-[2rem]">
-          <div className="flex items-start space-x-4 gap-[1rem]">
-            <Image
-              src="/Accomdation/Fresh healthy logo 1.png"
-              alt="Waterfalls"
-              width={80}
-              height={80}
-              className="w-[5rem] h-[5rem] mt-1"
-            />
-            <p>
-              <strong>Fresh & Healthy:</strong>
-              <br />
-              Enjoy wholesome dishes made from fresh, local ingredients<br/>to nourish your body.
-            </p>
-          </div>
-
-          <div className="flex items-start space-x-4 gap-[1rem]">
-            <Image
-              src="/Accomdation/Variety of flavours.png"
-              alt="Nature parks"
-              width={80}
-              height={80}
-              className="w-[5rem] h-[5rem] mt-1"
-            />
-            <p>
-              <strong>Variety of Flavors:</strong>
-              <br />
-              Taste a mix of traditional Goan specialties and international<br/>cuisine.
-            </p>
-          </div>
-
-          <div className="flex items-start space-x-4 pl-[3rem] gap-[1rem] ">
-            <Image
-              src="/Accomdation/Relaxed Setting 1.png"
-              alt="Beaches"
-              width={80}
-              height={80}
-              className="w-[5rem] h-[5rem] mt-1"
-            />
-            <p>
-              <strong>Relaxed Setting:</strong>
-              <br />
-              Dine indoors or outdoors while soaking in the peaceful of jungle<br/>surroundings
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
