@@ -79,7 +79,7 @@ export default function AboutTraining() {
           </div>
           <div>
             <Image
-              src="/aboutpics/about3.HEIC"
+              src="/aboutpics/about3.png"
               alt="Resort Room"
               className="rounded-xl object-cover w-full h-[160px]"
               width={300}

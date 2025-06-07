@@ -11,32 +11,32 @@ const activities: Activity[] =[
   {
     title: "Temple Visit",
     description: "Discover peace at Goa’s ancient temples.",
-    image: "/Activity/Multi-Style Yoga Classes.png",
+    image: "/Activity/temple.png",
   },
   {
     title: "Visit Arambol Beach",
     description: "Relax and unwind at Arambol’s scenic shores.",
-    image: "/Activity/Meditation & Pranayama.png",
+    image: "/Activity/beach.jpg",
   },
   {
     title: "Cultural Visit",
     description: "Explore Goa’s vibrant traditions and art.",
-    image: "/Activity/Yoga Philosophy & Anatomy.png",
+    image: "/Activity/cultural.png",
   },
-  {
-    title: "Boating",
-    description: "Enjoy a calm and scenic boat ride.",
-    image: "/Activity/Ayurvedic Meals & Cleansing.png",
-  },
+{
+  title: "Satsang",
+  description: "Join soulful gatherings with music, wisdom, and spiritual dialogue.",
+  image: "/Activity/satsang.png",
+},
   {
     title: "Group Discussion",
     description: "Share and learn through group talks.",
-    image: "/Activity/Mantra Chanting & Kirtan.png",
+    image: "/Activity/group.png",
   },
   {
     title: "Cooking Classes",
     description: "Learn to cook simple sattvic meals.",
-    image: "/Activity/Beachside Relaxation & Cultural Visits.png",
+    image: "/Activity/cooking.png",
   },
 ]
 
