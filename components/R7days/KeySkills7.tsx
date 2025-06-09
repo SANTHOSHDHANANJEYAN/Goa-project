@@ -16,35 +16,32 @@ const skills: string[] = [
 
 const KeySkills7: React.FC = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-20">
-      <h2 className="text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-[1rem]">
-        Why Choose Rishikul Yogshala’s 7-Day Yoga Retreat in Goa?
+    <section className="bg-white py-12 px-4 sm:px-6 md:px-10 lg:px-20">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-10">
+        Why Choose Rishikul Yogshala’s 7-Day Yoga Retreat in Goa?
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[12rem] items-center ">
-
-         {/* Right: Image */}
-        <div className="relative rounded-xl overflow-hidden min-h-[500px] w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
+        {/* Image - Right on desktop, below on mobile */}
+        <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] rounded-xl overflow-hidden">
           <Image
-            src="/Activity/keyskill.gif" // Replace this with your actual image path
+            src="/Activity/keyskill.gif"
             alt="Yoga training skills"
             fill
             className="object-cover"
             priority
           />
         </div>
-        
-        {/* Left: Skills List */}
-        <ul className="space-y-5">
+
+        {/* Skills List */}
+        <ul className="space-y-4">
           {skills.map((skill, idx) => (
-            <li key={idx} className="flex items-start gap-3 text-[#150e70] text-lg">
-              <FaCheckCircle className="text-green-600 mt-1" />
+            <li key={idx} className="flex items-start gap-3 text-[#150e70] text-base sm:text-lg">
+              <FaCheckCircle className="text-green-600 mt-1 flex-shrink-0" />
               <span>{skill}</span>
             </li>
           ))}
         </ul>
-
-       
       </div>
     </section>
   );
