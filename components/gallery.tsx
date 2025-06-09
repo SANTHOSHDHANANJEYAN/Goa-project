@@ -134,6 +134,17 @@ export default function GalleryPage() {
           </motion.div>
         )}
       </AnimatePresence>
+       <div className="text-center mt-12">
+            <a
+              href="/gallery"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-[#150e70] text-white rounded-full hover:bg-yellow-500 transition"
+              aria-label="More reviews on Yoga Alliance"
+            >
+              SHOW MORE
+            </a>
+          </div>
     </div>
   );
 }

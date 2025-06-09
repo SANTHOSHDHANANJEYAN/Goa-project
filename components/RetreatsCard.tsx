@@ -7,22 +7,19 @@ import { Card } from '@/components/ui/card';
 const services = [
   {
     id: 'yoga',
-    title: '7 Days Yoga Holiday Retreat - Path to Serenity',
-    subtitle: 'Explore holistic sessions',
+    title: '7-Days Yoga Holiday Retreat - Path to Serenity',
     image: '/IMAGE - GOA -.svg',
     link: '/retreats',
   },
   {
     id: 'meditation',
-    title: '14 Days Yoga Detox Retreat-Balance Body & Mind',
-    subtitle: 'Find your inner peace',
+    title: '14-Days Yoga Detox Retreat-Balance Body & Mind',
     image: '/2nd images.svg',
     link: '/retreats2',
   },
   {
     id: 'sound-healing',
-    title: '21 Days Yoga Wellness Retreat- A Journey to Self Discovery',
-    subtitle: 'Heal through vibrations',
+    title: '21-Days Yoga Wellness Retreat - A Journey to Self Discovery',
     image: '/3rd goa image - homwe page.svg',
     link: '/retreats3',
   },
@@ -30,7 +27,7 @@ const services = [
 
 export default function RetreatsCard() {
   return (
-    <section className="py-20 bg-transparent">
+    <section className="pb-[5rem] bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
@@ -47,10 +44,10 @@ export default function RetreatsCard() {
                 />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-2xl font-semibold text-[#150e70]">
+                <h3 className="text-[20px] font-semibold text-[#150e70]">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm mt-2">{service.subtitle}</p>
+                
                 <Link href={service.link}>
                   <span className="inline-block mt-4 bg-[#150e70] text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-[#0f0a5c] transition">
                     Know more

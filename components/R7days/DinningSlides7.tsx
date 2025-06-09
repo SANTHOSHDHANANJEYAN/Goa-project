@@ -8,10 +8,18 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const testimonials = [
-  { id: 1, image: '/excursion/7.jpg' },
-  { id: 2, image: '/excursion/6.jpg' },
-  { id: 3, image: '/excursion/3.jpg' },
-  { id: 4, image: '/excursion/3.jpg' },
+  { id: 1, image: '/Food/1.jpg' },
+  { id: 2, image: '/Food/2.jpg' },
+  { id: 3, image: '/Food/3.jpg' },
+  { id: 4, image: '/Food/5.jpg' },
+  { id: 5, image: '/Food/6.jpg' },
+  { id: 6, image: '/Food/7.jpg' },
+  { id: 7, image: '/Food/8.jpg' },
+  { id: 8, image: '/Food/9.jpg' },
+  { id: 9, image: '/Food/10.JPG' },
+  { id: 10, image: '/Food/11.jpg' },
+  { id: 11, image: '/Food/12.jpg' },
+  { id: 12, image: '/Food/13.jpg' },
 ];
 
 export default function DinningSlides7() {
@@ -24,14 +32,12 @@ export default function DinningSlides7() {
 
   return (
     <section className="bg-transparent py-20 px-4 text-center">
-
-
       {isClient && (
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
           loop={true}
-          speed={2000} // slower slide transition speed
+          speed={2000}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           breakpoints={{
@@ -53,7 +59,7 @@ export default function DinningSlides7() {
                   alt={`Testimonial ${id}`}
                   width={400}
                   height={300}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
             </SwiperSlide>
@@ -76,7 +82,7 @@ export default function DinningSlides7() {
               alt="Preview"
               width={1000}
               height={600}
-              className="rounded-xl object-contain w-full h-auto"
+              className="rounded-xl object-contain w-full max-h-[80vh]"
             />
             <button
               onClick={() => setPreviewImage(null)}

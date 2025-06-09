@@ -153,7 +153,7 @@ export default function Home() {
         </section>
 
         <section
-          className="relative h-[800px] bg-fixed bg-center bg-cover flex items-center justify-center mt-20"
+          className="relative h-[800px] bg-fixed bg-center bg-cover flex items-center justify-center"
           style={{ backgroundImage: "url('/H1.png')" }}
           aria-label="Yoga inspiration parallax background"
         >
