@@ -6,20 +6,21 @@ import { motion } from 'framer-motion';
 
 const images = [
   { src: '/gallery/1.WEBP', title: 'Accomdation', href: '/AccomdationGallery' }, 
-  { src: '/gallery/2.WEBP', title: 'Excursion', href: '/excursion-gallery' },
-  { src: '/gallery/3.WEBP', title: 'Food and Dishes', href: '/food-gallery' },
-  { src: '/gallery/4.WEBP', title: 'Yoga & Certification', href: '/yoga-gallery' },
+  { src: '/gallery/2.WEBP', title: 'Excursion', href: '/ExcursionGallery' },
+  { src: '/gallery/3.WEBP', title: 'Food and Dishes', href: '/FoodGallery' },
+  { src: '/gallery/4.WEBP', title: 'Yoga & Certification', href: '/YCGallery' },
 ];
 
 export default function GalleryPage() {
   return (
     <div className="relative min-h-screen pt-[7rem] px-4 sm:px-6 lg:px-16 pb-20 overflow-hidden">
       {/* 🔽 Background image */}
-      <img
-        src="/gallerybg.png"
-        alt="Gallery Background"
-        className="absolute inset-0 w-full h-full object-cover -z-10"
-      />
+        <Image
+          src="/gallerybg.png"
+          alt="Gallery Background"
+          fill
+          className="object-cover -z-10"
+        />
 
       {/* Content container */}
       <div className="relative z-10">

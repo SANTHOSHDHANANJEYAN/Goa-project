@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function OurRooms21() {
   return (
     <section
-      className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[750px]"
+      className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[560px]"
       style={{
         backgroundImage: "url('/room.jpg')",
       }}
