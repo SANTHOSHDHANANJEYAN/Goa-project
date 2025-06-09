@@ -1,79 +1,93 @@
 'use client';
 
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Autoplay, Pagination } from 'swiper/modules';
 import Image from 'next/image';
-import { useRef } from 'react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
-const images = [
-  '/Food/Food 3.jpg',
-  '/Food/Food 4.jpg',
-  '/Food/Food 5.jpg',
-  '/Food/Food 6.jpg',
+const testimonials = [
+  { id: 1, image: '/excursion/7.jpg' },
+  { id: 2, image: '/excursion/6.jpg' },
+  { id: 3, image: '/excursion/3.jpg' },
+  { id: 4, image: '/excursion/3.jpg' },
 ];
 
 export default function DinningSlides7() {
-  const prevRef = useRef<HTMLButtonElement | null>(null);
-  const nextRef = useRef<HTMLButtonElement | null>(null);
+  const [isClient, setIsClient] = useState(false);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto py-12 px-4">
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        slidesPerView={1.4}
-        loop={true}
-        pagination={{ clickable: true }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        onInit={(swiper) => {
-          // @ts-ignore
-          swiper.params.navigation.prevEl = prevRef.current;
-          // @ts-ignore
-          swiper.params.navigation.nextEl = nextRef.current;
-          swiper.navigation.init();
-          swiper.navigation.update();
-        }}
-        modules={[Navigation, Pagination, Autoplay]}
-      >
-        {images.map((src, idx) => (
-          <SwiperSlide key={idx}>
-            <div className="transition-all duration-500 ease-in-out overflow-hidden rounded-3xl shadow-xl">
-              <Image
-                src={src}
-                alt={`Slide ${idx}`}
-                width={1200}
-                height={600}
-                className="w-full h-[500px] object-cover"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <section className="bg-transparent py-20 px-4 text-center">
 
-      {/* Navigation Arrows */}
-      <button
-        ref={prevRef}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/70 hover:bg-white text-black rounded-full p-2 shadow-lg"
-      >
-        <ChevronLeft size={24} />
-      </button>
-      <button
-        ref={nextRef}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/70 hover:bg-white text-black rounded-full p-2 shadow-lg"
-      >
-        <ChevronRight size={24} />
-      </button>
-    </div>
+
+      {isClient && (
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
+          speed={2000} // slower slide transition speed
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          modules={[Autoplay, Pagination]}
+          className="max-w-6xl mx-auto"
+        >
+          {testimonials.map(({ id, image }) => (
+            <SwiperSlide key={id}>
+              <div
+                className="relative rounded-3xl overflow-hidden group shadow-md cursor-pointer"
+                onClick={() => setPreviewImage(image)}
+              >
+                <Image
+                  src={image}
+                  alt={`Testimonial ${id}`}
+                  width={400}
+                  height={300}
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
+
+      {/* Modal Preview */}
+      {isClient && previewImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          onClick={() => setPreviewImage(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={previewImage}
+              alt="Preview"
+              width={1000}
+              height={600}
+              className="rounded-xl object-contain w-full h-auto"
+            />
+            <button
+              onClick={() => setPreviewImage(null)}
+              className="absolute top-2 right-2 text-white text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition"
+              aria-label="Close preview"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+    </section>
   );
 }

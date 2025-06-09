@@ -1,35 +1,44 @@
-'use client'; // 👈 REQUIRED to make Swiper work in Next.js
+'use client';
 
+import { useEffect, useState, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const testimonials = [
-  {
-    id: 1,
-    image: "/excursion1.webp",
-    videoUrl: "#",
-  },
-  {
-    id: 2,
-    image: "/excursion2.jpg",
-    videoUrl: "#",
-  },
-  {
-    id: 3,
-    image: "/excursion3.avif",
-    videoUrl: "#",
-  },
-  {
-    id: 4,
-    image: "/excursion4.avif",
-    videoUrl: "#",
-  },
+const excursions = [
+  { id: 1, image: "/excursion1.webp" },
+  { id: 2, image: "/excursion2.jpg" },
+  { id: 3, image: "/excursion3.avif" },
+  { id: 4, image: "/excursion4.avif" },
 ];
 
 export default function OurExcursions14() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Close modal on Escape key press
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape" && selectedImage) {
+        setSelectedImage(null);
+      }
+    },
+    [selectedImage]
+  );
+
+  useEffect(() => {
+    if (selectedImage) {
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    }
+  }, [selectedImage, handleKeyDown]);
+
   return (
     <section className="bg-[#fff8f5] py-20 px-4 text-center">
       <h2 className="text-4xl md:text-5xl font-semibold text-[#4c2a65] mb-4">
@@ -40,50 +49,85 @@ export default function OurExcursions14() {
         moving. See how yoga has helped them heal, grow, and reconnect with themselves.
       </p>
 
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{ delay: 2000 }}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        modules={[Autoplay, Pagination]}
-        className="max-w-6xl mx-auto"
-      >
-        {testimonials.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div className="relative rounded-3xl overflow-hidden group shadow-md">
-              <Image
-                src={item.image}
-                alt={`Testimonial ${item.id}`}
-                width={400}
-                height={300}
-                className="w-full h-auto object-cover"
-              />
-              <a
-                href={item.videoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition"
+      {isClient && (
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
+          speed={2000}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          modules={[Autoplay, Pagination]}
+          className="max-w-6xl mx-auto"
+        >
+          {excursions.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div
+                onClick={() => setSelectedImage(item.image)}
+                className="relative rounded-3xl overflow-hidden shadow-md group cursor-pointer"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    setSelectedImage(item.image);
+                  }
+                }}
+                aria-label={`View larger image of Excursion ${item.id}`}
               >
-                <div className="bg-orange-400 p-4 rounded-full">
-                  <svg
-                    className="w-10 h-10 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+                <Image
+                  src={item.image}
+                  alt={`Excursion ${item.id}`}
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  priority={false}
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
+
+      {/* Modal */}
+      {isClient && selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 transition-opacity duration-300"
+          onClick={() => setSelectedImage(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+        >
+          <div
+            className="relative max-w-4xl w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedImage}
+              alt="Preview"
+              width={1000}
+              height={600}
+              className="rounded-xl object-contain w-full h-auto"
+              priority
+              style={{ width: "100%", height: "auto" }}
+            />
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-2 right-2 text-white text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
+              aria-label="Close preview"
+              title="Close preview"
+              type="button"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

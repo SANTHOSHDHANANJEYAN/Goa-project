@@ -1,35 +1,22 @@
 'use client';
 
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const testimonials = [
-  {
-    id: 1,
-    image: "/excursion1.webp",
-    videoUrl: "#",
-  },
-  {
-    id: 2,
-    image: "/excursion2.jpg",
-    videoUrl: "#",
-  },
-  {
-    id: 3,
-    image: "/excursion3.avif",
-    videoUrl: "#",
-  },
-  {
-    id: 4,
-    image: "/excursion4.avif",
-    videoUrl: "#",
-  },
+const excursions = [
+  { id: 1, image: "/excursion1.webp" },
+  { id: 2, image: "/excursion2.jpg" },
+  { id: 3, image: "/excursion3.avif" },
+  { id: 4, image: "/excursion4.avif" },
 ];
 
-export default function OurExcursions21() {
+export default function OurExcursions() {
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+
   return (
     <section className="bg-[#fff8f5] py-20 px-4 text-center">
       <h2 className="text-4xl md:text-5xl font-semibold text-[#4c2a65] mb-4">
@@ -44,7 +31,7 @@ export default function OurExcursions21() {
         spaceBetween={30}
         slidesPerView={1}
         loop={true}
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         breakpoints={{
           640: { slidesPerView: 1 },
@@ -54,36 +41,52 @@ export default function OurExcursions21() {
         modules={[Autoplay, Pagination]}
         className="max-w-6xl mx-auto"
       >
-        {testimonials.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div className="relative rounded-3xl overflow-hidden group shadow-md">
+        {excursions.map(({ id, image }) => (
+          <SwiperSlide key={id}>
+            <div
+              onClick={() => setPreviewImage(image)}
+              className="relative rounded-3xl overflow-hidden group shadow-md cursor-pointer"
+            >
               <Image
-                src={item.image}
-                alt={`Testimonial ${item.id}`}
+                src={image}
+                alt={`Excursion ${id}`}
                 width={400}
                 height={300}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <a
-                href={item.videoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition"
-              >
-                <div className="bg-orange-400 p-4 rounded-full">
-                  <svg
-                    className="w-10 h-10 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </a>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Modal */}
+      {previewImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={() => setPreviewImage(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={previewImage}
+              alt="Excursion preview"
+              width={1000}
+              height={600}
+              className="rounded-xl object-contain w-full h-auto"
+              priority
+            />
+            <button
+              onClick={() => setPreviewImage(null)}
+              aria-label="Close preview"
+              className="absolute top-2 right-2 text-white text-3xl bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75 transition"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
