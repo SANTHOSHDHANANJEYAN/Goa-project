@@ -8,7 +8,7 @@ import CodeOfConduct from '@/components/CodeOfConduct';
 import Appform from '@/components/Appform';
 import BlogSection from '@/components/BlogSection';
 import CourseCard from '@/components/CourseCard';
-import RetreatsCard from '@/components/RetreatsCard';
+
 
 export default function Home() {
   return (
