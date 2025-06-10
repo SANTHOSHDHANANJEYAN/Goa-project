@@ -67,7 +67,7 @@ const TwoHundredHourTTPage = () => {
      <div className="flex justify-center items-center bg-transparent">
   <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
     <Image
-      src="/course2.jpg"
+      src="/gallery/3.jpg"
       alt="Yoga retreat in Bali"
       width={1200}
       height={900}
@@ -77,13 +77,7 @@ const TwoHundredHourTTPage = () => {
   </div>
 </div>
 
-      {/* Certificate Info */}
-    
-
-
 <AboutTraining200/>
-      {/* About Section */}
-  {/* <AnimateButton200/> */}
   <Schedule200/>
 
  <section className="mt-20 px-4 sm:px-6 lg:px-8">
@@ -99,55 +93,43 @@ const TwoHundredHourTTPage = () => {
     {/* Card 1 */}
    <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
-    src="/HVA/hatha.png"  
-    alt="Image 1" 
-    fill
-    className="object-cover"
-    loading="lazy"
-  />   
-</div>
-
-{/* Card 2 */}
-<div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-  <Image 
     src="/HVA/vinyasa yoga.jpg" 
     alt="Image 2" 
     fill 
     className="object-cover"
     loading="lazy" 
   />
+   
 </div>
 
-{/* Card 3 */}
+{/* Card 2 */}
 <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
     src="/HVA/ashtanga.jpg" 
     alt="Image 3" 
     fill 
     className="object-cover"
-    loading="lazy" 
-  />
+    loading="lazy" 
+  />
+
+</div>
+
+{/* Card 3 */}
+<div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+   <Image 
+    src="/HVA/hatha.png"  
+    alt="Image 1" 
+    fill
+    className="object-cover"
+    loading="lazy"
+  />  
 </div>
 
   </div>
 </section>
 
-
-
-      {/* Curriculum */}
       <CurriculumSection200/>
-
-      {/* Instructor Info */}
-
-
       <TeachersSection200/>
-
-      {/* Training Schedule */}
- 
-
-      {/* Accommodation Section - Scenic */}
-
-
       <OurDinning7/>
       <DinningSlides7/>
       <OurRooms7/>

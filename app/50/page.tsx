@@ -72,7 +72,7 @@ const FiftyHourTTPage = () => {
     <div className="flex justify-center items-center bg-transparent px-4 sm:px-6 lg:px-0">
   <div className="rounded-2xl overflow-hidden shadow-lg mb-16 max-w-full w-full sm:w-[600px] md:w-[700px] lg:w-[800px]">
     <Image
-      src="/course2.jpg"
+      src="/gallery/1.jpg"
       alt="Yoga retreat in Bali"
       width={1200}
       height={900}
@@ -82,12 +82,8 @@ const FiftyHourTTPage = () => {
   </div>
 </div>
 
-
-      {/* Certificate Info */}
-
   <AboutTraining/>
-      {/* About Section */}
-  {/* <AnimateButton/> */}
+
   <Schedule/>
 
  <section className="mt-20 px-4 sm:px-6 lg:px-8">
@@ -136,44 +132,8 @@ const FiftyHourTTPage = () => {
   </div>
 </section>
 
-
-
-
-      {/* Curriculum */}
       <CurriculumSection/>
-
-      {/* Instructor Info */}
-      {/* <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-6 text-[#150e70]">Meet Your Instructors</h2>
-        <p className="text-center text-[#150e70] max-w-3xl mx-auto mb-6 ">
-          Our experienced team brings decades of collective practice from multiple yoga disciplines.
-          They’re dedicated to helping you grow — physically, mentally, and spiritually — in a supportive, inclusive environment.
-        </p>
-        <div className="w-full h-[42rem] relative rounded-xl overflow-hidden shadow">
-          <Image
-            src="/goa4111.jpg"
-            alt="House of Om instructors"
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
-      </section> */}
-      
-
-      {/* Training Schedule */}
-
-        
-
 <TeachersSection/>
-
-      {/* Accommodation Section - Scenic */}
-{/* Training Schedule Section */}
-
-
-{/* Accommodation Section */}
-{/* Accommodation Section - Stacked Column */}
-
-
   <OurDinning7/>
   <DinningSlides7/>
   <OurRooms7/>

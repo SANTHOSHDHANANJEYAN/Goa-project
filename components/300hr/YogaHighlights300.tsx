@@ -47,7 +47,7 @@ const YogaHighlights: React.FC = () => {
           <ul className="space-y-4">
             {trainingHighlights.map((point, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <FaStar className="text-[#150e70] mt-1" />
+                <FaStar className="text-[#150e70] mt-1 " />
                 <span className="text-[#150e70]">{point}</span>
               </li>
             ))}

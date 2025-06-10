@@ -24,7 +24,7 @@ const TwentyOneTTPage = () => {
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
-         21-Days Yoga Teacher Training
+         21 days Yoga Immersion Course
         </h2>
         <p className="text-[1.5rem] text-[#150e70]">In Goa</p>
       </div>
@@ -48,7 +48,7 @@ const TwentyOneTTPage = () => {
       <p className="text-sm text-[#150e70]">Duration-21-Days</p>
       <p className="text-sm text-[#150e70]">Language-English</p>
       <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
-      <p className="text-sm text-[#150e70]">Level: all level </p> 
+      <p className="text-sm text-[#150e70]">Level: Practice </p> 
       <p className="text-sm text-[#150e70]">Certification: YACEP</p>
 </div>
 
@@ -67,7 +67,7 @@ const TwentyOneTTPage = () => {
      <div className="flex justify-center items-center bg-transparent">
   <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
     <Image
-      src="/course2.jpg"
+      src="/gallery/5.jpg"
       alt="Yoga retreat in Bali"
       width={1200}
       height={900}
@@ -96,34 +96,35 @@ const TwentyOneTTPage = () => {
     {/* Card 1 */}
    <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
-    src="/HVA/hatha.png"  
-    alt="Image 1" 
-    fill
+    src="/HVA/ashtanga.jpg" 
+    alt="Image 3" 
+    fill 
     className="object-cover"
-    loading="lazy"
-  />   
+    loading="lazy" 
+  />
+
 </div>
 
 {/* Card 2 */}
 <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
-    src="/HVA/vinyasa.png" 
-    alt="Image 2" 
-    fill 
+    src="/HVA/hatha.png"  
+    alt="Image 1" 
+    fill
     className="object-cover"
-    loading="lazy" 
-  />
+    loading="lazy"
+  /> 
 </div>
 
 {/* Card 3 */}
 <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
-    src="/HVA/ashtanga.png" 
-    alt="Image 3" 
-    fill 
+    src="/HVA/hatha.png"  
+    alt="Image 1" 
+    fill
     className="object-cover"
-    loading="lazy" 
-  />
+    loading="lazy"
+  /> 
 </div>
 
   </div>

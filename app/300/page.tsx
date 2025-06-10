@@ -70,7 +70,7 @@ const ThreeHundredHourTTPage = () => {
      <div className="flex justify-center items-center bg-transparent">
   <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
     <Image
-      src="/course2.jpg"
+      src="/gallery/4.jpg"
       alt="Yoga retreat in Bali"
       width={1200}
       height={900}
@@ -79,14 +79,8 @@ const ThreeHundredHourTTPage = () => {
     />
   </div>
 </div>
-
-      {/* Certificate Info */}
-    
-
-
+   
 <AboutTraining300/>
-      {/* About Section */}
-  {/* <AnimateButton300/> */}
   <Schedule300/>
 
  <section className="mt-20 px-4 sm:px-6 lg:px-8">
@@ -135,29 +129,17 @@ const ThreeHundredHourTTPage = () => {
   </div>
 </section>
 
-
-      {/* Curriculum */}
       <CurriculumSection300/>
-
-      {/* Instructor Info */}
-
-
-
       <TeachersSection300/>
-
-      {/* Training Schedule */}
-
-      {/* Accommodation Section - Scenic */}
-
       <OurDinning7/>
       <DinningSlides7/>
       <OurRooms7/>
       <RoomSlides7/> 
       <ActivitiesSection300/>
-       {/* Course Details Section */}
+
       <BatchScheduleTable300/>
 <TestimonialSection300/>
-      {/* Testimonials */}
+
 <TestimonialCarousel
         testimonials={[
           {

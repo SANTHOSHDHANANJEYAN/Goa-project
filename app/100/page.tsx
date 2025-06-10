@@ -66,7 +66,7 @@ const HundredHourTTPage = () => {
      <div className="flex justify-center items-center bg-transparent">
   <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
     <Image
-      src="/course2.jpg"
+      src="/gallery/2.jpg"
       alt="Yoga retreat in Bali"
       width={1200}
       height={900}
@@ -92,15 +92,27 @@ const HundredHourTTPage = () => {
     {/* Card 1 */}
    <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
+    src="/HVA/ashtanga.jpg" 
+    alt="Image 3" 
+    fill 
+    className="object-cover"
+    loading="lazy" 
+  />
+ 
+</div>
+
+{/* Card 2 */}
+<div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+  <Image 
     src="/HVA/hatha.png"  
     alt="Image 1" 
     fill
     className="object-cover"
     loading="lazy"
-  />   
+  />  
 </div>
 
-{/* Card 2 */}
+{/* Card 3 */}
 <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
     src="/HVA/vinyasa yoga.jpg" 
@@ -109,58 +121,22 @@ const HundredHourTTPage = () => {
     className="object-cover"
     loading="lazy" 
   />
-</div>
 
-{/* Card 3 */}
-<div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-  <Image 
-    src="/HVA/ashtanga.jpg" 
-    alt="Image 3" 
-    fill 
-    className="object-cover"
-    loading="lazy" 
-  />
 </div>
 
   </div>
 </section>
     
-
-
-
-      {/* Curriculum */}
       <CurriculumSection100/>
-
-      {/* Instructor Info */}
-      {/* <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-6 text-[#150e70]">Meet Your Instructors</h2>
-        <p className="text-center text-[#150e70] max-w-3xl mx-auto mb-6 ">
-          Our experienced team brings decades of collective practice from multiple yoga disciplines.
-          They’re dedicated to helping you grow — physically, mentally, and spiritually — in a supportive, inclusive environment.
-        </p>
-        <div className="w-full h-[42rem] relative rounded-xl overflow-hidden shadow">
-          <Image
-            src="/goa4111.jpg"
-            alt="House of Om instructors"
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
-      </section> */}
       <TeachersSection200/>
-      {/* Training Schedule */}
-      {/* Accommodation Section - Scenic */}
-
-
   <OurDinning7/>
   <DinningSlides7/>
   <OurRooms7/>
   <RoomSlides7/> 
       <ActivitiesSection100/>
-       {/* Course Details Section */}
       <BatchScheduleTable100/>
 <TestimonialSection100/>
-      {/* Testimonials */}
+
 <TestimonialCarousel
         testimonials={[
           {

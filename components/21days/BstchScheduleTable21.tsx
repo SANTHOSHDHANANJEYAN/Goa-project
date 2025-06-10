@@ -34,11 +34,11 @@ const CourseSchedule = () => {
           <div className="space-y-6">
             <div>
               <p className="text-sm text-gray-600 font-medium uppercase">Course Duration:</p>
-              <h2 className="text-2xl font-bold">7 Days</h2>
+              <h2 className="text-2xl font-bold">21 Days</h2>
             </div>
 
             <div>
-              <p className="text-sm text-gray-600 font-medium uppercase">200 Hour Yoga TTC Fees:</p>
+              <p className="text-sm text-gray-600 font-medium uppercase">21-Days Practice Fees:</p>
               <div className="flex flex-col sm:flex-row sm:gap-10 mt-2 text-xl font-bold">
                 <div>
                   USD 800
