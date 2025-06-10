@@ -49,7 +49,7 @@ export default function Schedule100() {
               ) : (
                 <>
                   <Image
-                    src="/Thumbnail/Yogacourse 4.jpg"
+                    src="/Thumbnail/Yogacourses 4.jpg"
                     alt="Video Thumbnail"
                     fill
                     style={{ objectFit: 'cover' }}
