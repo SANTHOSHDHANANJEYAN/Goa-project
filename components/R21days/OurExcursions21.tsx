@@ -63,7 +63,7 @@ export default function OurExcursions() {
                 alt={`Excursion ${id}`}
                 width={400}
                 height={300}
-                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
           </SwiperSlide>

@@ -95,7 +95,7 @@ export default function OurExcursions14() {
                   alt={`Excursion ${item.id}`}
                   width={400}
                   height={300}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   priority={false}
                   style={{ width: "100%", height: "auto" }}
                 />
