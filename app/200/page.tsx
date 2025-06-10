@@ -24,7 +24,7 @@ const TwoHundredHourTTPage = () => {
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
-         200-Hours Accredited Yoga Teacher Training
+         200-Hrs Accredited Yoga Teacher Training
         </h2>
         <p className="text-[1.5rem] font-semibold text-[#150e70]">In Goa</p>
       </div>
@@ -48,11 +48,11 @@ const TwoHundredHourTTPage = () => {
   </div>
 </div>
    <div className="flex justify-center gap-6 mb-6">
-      <p className="text-sm text-[#150e70]">Duration-200 Hrs</p>
+      <p className="text-sm text-[#150e70]">Duration-200Hrs-24Days</p>
       <p className="text-sm text-[#150e70]">Language-English</p>
       <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
-      <p className="text-sm text-[#150e70]">Level: all level </p> 
-      <p className="text-sm text-[#150e70]">Certification: Yoga Alliance</p>
+      <p className="text-sm text-[#150e70]">Level:  </p> 
+      <p className="text-sm text-[#150e70]">Certification: RYS 200</p>
 </div>
 
 
@@ -110,7 +110,7 @@ const TwoHundredHourTTPage = () => {
 {/* Card 2 */}
 <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
-    src="/HVA/vinyasa.png" 
+    src="/HVA/vinyasa yoga.jpg" 
     alt="Image 2" 
     fill 
     className="object-cover"
@@ -121,7 +121,7 @@ const TwoHundredHourTTPage = () => {
 {/* Card 3 */}
 <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
-    src="/HVA/ashtanga.png" 
+    src="/HVA/ashtanga.jpg" 
     alt="Image 3" 
     fill 
     className="object-cover"
@@ -155,21 +155,19 @@ const TwoHundredHourTTPage = () => {
       <ActivitiesSection200/>
        {/* Course Details Section */}
       <BatchScheduleTable200/>
-<TestimonialSection200/>
-      {/* Testimonials */}
-      <TestimonialCarousel
+<TestimonialCarousel
         testimonials={[
           {
-            quote: "This training completely transformed my approach to yoga and teaching. I gained confidence, knowledge, and a supportive community.",
-            author: "Sarah M., Graduate",
+            quote: "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional each one brings deep knowledge, passion, and a truly supportive presence to the training. I also really appreciated the flexibility in their approach, allowing space for different styles of yoga teaching and encouraging us to find our own unique voice as instructors. A warm, inspiring environment to grow in.",
+            author: " Charmaine Wardenberg ",
           },
           {
-            quote: "The depth of knowledge shared by the instructors is incredible. This program offers much more than just teacher certification—it's a life-changing experience.",
-            author: "Michael T., Graduate",
+            quote: "Rishikul Yogshala was absolutely amazing. I am very fortunate that I did my 200 hours there. I gained much more than just asana training. The yogic philosophy taught by Krishna is part of my daily life now. Every class and every teacher is extremely knowledgeable and always available to help and answer questions. Highly recommend!",
+            author: "Dimple Malkan ",
           },
           {
-            quote: "I came for the certification but left with a whole new perspective on yoga and myself.",
-            author: "Priya K., Graduate",
+            quote: "Very good school! They have provided detailed training. Teachers and instructor are well trained and knowledgeable.",
+            author: "Varsha Ambardekar",
           },
         ]}
       />
@@ -222,10 +220,8 @@ const TwoHundredHourTTPage = () => {
         ]}
       />
 
-
-
-      {/* Application Form */}
       <ApplicationForm200/>
+      
 <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
   <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
     After Completing the Course...

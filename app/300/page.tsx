@@ -158,19 +158,19 @@ const ThreeHundredHourTTPage = () => {
       <BatchScheduleTable300/>
 <TestimonialSection300/>
       {/* Testimonials */}
-      <TestimonialCarousel
+<TestimonialCarousel
         testimonials={[
           {
-            quote: "This training completely transformed my approach to yoga and teaching. I gained confidence, knowledge, and a supportive community.",
-            author: "Sarah M., Graduate",
+            quote: "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional each one brings deep knowledge, passion, and a truly supportive presence to the training. I also really appreciated the flexibility in their approach, allowing space for different styles of yoga teaching and encouraging us to find our own unique voice as instructors. A warm, inspiring environment to grow in.",
+            author: " Charmaine Wardenberg ",
           },
           {
-            quote: "The depth of knowledge shared by the instructors is incredible. This program offers much more than just teacher certification—it's a life-changing experience.",
-            author: "Michael T., Graduate",
+            quote: "Rishikul Yogshala was absolutely amazing. I am very fortunate that I did my 200 hours there. I gained much more than just asana training. The yogic philosophy taught by Krishna is part of my daily life now. Every class and every teacher is extremely knowledgeable and always available to help and answer questions. Highly recommend!",
+            author: "Dimple Malkan ",
           },
           {
-            quote: "I came for the certification but left with a whole new perspective on yoga and myself.",
-            author: "Priya K., Graduate",
+            quote: "Very good school! They have provided detailed training. Teachers and instructor are well trained and knowledgeable.",
+            author: "Varsha Ambardekar",
           },
         ]}
       />
