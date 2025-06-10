@@ -27,7 +27,7 @@ const FiftyHourTTPage = () => {
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
-         50-Hours Mulit-Style Yoga Teacher Training
+         50-Hrs Mulit-Style Yoga Teacher Training
         </h2>
         <p className="text-[1.5rem] font-semibold text-[#150e70]">In Goa</p>
       </div>
@@ -51,7 +51,7 @@ const FiftyHourTTPage = () => {
       </div>
     </div>
       <div className="flex justify-center gap-6 mb-6">
-      <p className="text-sm text-[#150e70]">Duration-50Hrs</p>
+      <p className="text-sm text-[#150e70]">Duration-50Hrs - 7Days</p>
       <p className="text-sm text-[#150e70]">Language-English</p>
       <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
       <p className="text-sm text-[#150e70]">Level: Very Beginner </p> 
