@@ -11,7 +11,7 @@ const FreeManualSignup: React.FC = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <h2 className="text-2xl sm:text-4xl font-bold text-[#150e70] mb-4 leading-snug">
-          Get your FREE <br className="sm:hidden" /> 50-hour study manual
+          Get your FREE <br className="sm:hidden" /> 50-Hrs study manual
         </h2>
 
         <p className="text-[#150e70] max-w-xl mb-8 text-sm sm:text-base">
