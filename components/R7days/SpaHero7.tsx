@@ -7,7 +7,7 @@ const SpaHero7: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/7home.jpg')",
+          backgroundImage: "url('/RetreatBG/2.png')",
         }}
       >
         <div className="absolute inset-0 bg-black opacity-40"></div>
