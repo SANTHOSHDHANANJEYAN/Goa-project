@@ -7,6 +7,7 @@ const idealFor: string[] = [
   "If you’re considering becoming a certified yoga instructor, but want to ease into the training with a shorter course.",
   "If you’re a practicing instructor seeking ways to refine your teaching techniques, refresh knowledge, or explore a new yoga style.",
   "If you’re looking for personal growth and an immersive yoga experience in a supportive community.",
+  "This 300-hour course is for those who have completed a 200-hour beginner or intermediate yoga teacher training. It’s ideal for deepening practice and advancing teaching skills",
 ];
 
 const trainingHighlights: string[] = [
@@ -16,6 +17,7 @@ const trainingHighlights: string[] = [
   "Primary series taught with Sanskrit counting",
   "An intensive course hosted by an international team of yogis and yoga masters",
   "Practice yoga in the land of its origin and experience true Vedic culture",
+  "Personalized guidance with small batch sizes, ensuring individual attention and mentorship throughout the course",
 ];
 
 const YogaHighlights: React.FC = () => {

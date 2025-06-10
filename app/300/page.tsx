@@ -24,7 +24,7 @@ const ThreeHundredHourTTPage = () => {
       {/* Header Info */}
       <div className="text-center mb-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
-         300-Hours Accredited Yoga Teacher Training
+         300-Hrs Accredited Yoga Teacher Training
         </h2>
         <p className="text-[1.5rem] text-[#150e70] font-semibold">In Goa</p>
       </div>
@@ -48,11 +48,11 @@ const ThreeHundredHourTTPage = () => {
   </div>
 </div>
    <div className="flex justify-center gap-6 mb-6">
-      <p className="text-sm text-[#150e70]">Duration-50 Hrs</p>
+      <p className="text-sm text-[#150e70]">Duration-50Hrs - 27Days</p>
       <p className="text-sm text-[#150e70]">Language-English</p>
       <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
-      <p className="text-sm text-[#150e70]">Level: all level </p> 
-      <p className="text-sm text-[#150e70]">Certification: YACEP</p>
+      <p className="text-sm text-[#150e70]">Level: Advance </p> 
+      <p className="text-sm text-[#150e70]">Certification: RYS 300</p>
 </div>
 
 
@@ -113,7 +113,7 @@ const ThreeHundredHourTTPage = () => {
 {/* Card 2 */}
 <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
-    src="/HVA/vinyasa.png" 
+    src="/HVA/vinyasa yoga.jpg" 
     alt="Image 2" 
     fill 
     className="object-cover"
@@ -124,7 +124,7 @@ const ThreeHundredHourTTPage = () => {
 {/* Card 3 */}
 <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
-    src="/HVA/ashtanga.png" 
+    src="/HVA/ashtanga.jpg" 
     alt="Image 3" 
     fill 
     className="object-cover"

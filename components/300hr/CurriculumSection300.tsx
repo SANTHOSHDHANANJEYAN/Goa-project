@@ -24,7 +24,7 @@ const curriculum = [
       "Focus on advanced pose study, building flexibility and strength, maintaining hydration, and mastering systematic sequences including the Ashtanga Vinyasa Intermediate Series.",
   },
   {
-    title: "Ashtanga Vinyasa",
+    title: "Ashtanga",
     image: "/Curriculumimg/2.jpg",
     description:
       "Advanced Ashtanga Vinyasa postures focusing on strength, flexibility, balance, and breath control through a diverse range of seated, backbends, arm balances, and twists.",
