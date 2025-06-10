@@ -86,7 +86,7 @@ export default function AboutTraining() {
             About the Training
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
-            Join us for an <br />
+            Join us for  <br />
             50 Hrs Multi Style Yoga  <br />
             Teacher  Training
           </h2>
