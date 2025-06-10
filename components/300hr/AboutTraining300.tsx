@@ -59,7 +59,7 @@ export default function AboutTraining() {
         <div className="grid grid-cols-2 gap-4 pb-[2rem]">
           <div className="col-span-2">
             <Image
-              src="/aboutpics/108.jpg"
+              src="/Yoga/115.jpg"
               alt="Yoga Group"
               className="rounded-xl object-cover w-full h-[325px]"
               width={600}
@@ -68,7 +68,7 @@ export default function AboutTraining() {
           </div>
           <div>
             <Image
-              src="/aboutpics/110.jpg"
+              src="/Yoga/116.jpg"
               alt="Vegan Food"
               className="rounded-xl object-cover w-full h-[160px]"
               width={300}
@@ -77,7 +77,7 @@ export default function AboutTraining() {
           </div>
           <div>
             <Image
-              src="/aboutpics/about3.png"
+              src="/Yoga/117.jpg"
               alt="Resort Room"
               className="rounded-xl object-cover w-full h-[160px]"
               width={300}

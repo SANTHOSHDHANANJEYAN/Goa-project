@@ -59,33 +59,33 @@ export default function AboutTraining100() {
 
         {/* Right Image Content */}
               <div className="grid grid-cols-2 gap-4 pb-[2rem]">
-                <div className="col-span-2">
-                  <Image
-                    src="/aboutpics/108.jpg"
-                    alt="Yoga Group"
-                    className="rounded-xl object-cover w-full h-[325px]"
-                    width={600}
-                    height={300}
-                  />
-                </div>
-                <div>
-                  <Image
-                    src="/aboutpics/110.jpg"
-                    alt="Vegan Food"
-                    className="rounded-xl object-cover w-full h-[160px]"
-                    width={300}
-                    height={200}
-                  />
-                </div>
-                <div>
-                  <Image
-                    src="/aboutpics/about3.png"
-                    alt="Resort Room"
-                    className="rounded-xl object-cover w-full h-[160px]"
-                    width={300}
-                    height={200}
-                  />
-                </div>
+          <div className="col-span-2">
+            <Image
+              src="/Yoga/19.jpg"
+              alt="Yoga Group"
+              className="rounded-xl object-cover w-full h-[325px]"
+              width={600}
+              height={300}
+            />
+          </div>
+          <div>
+            <Image
+              src="/Yoga/109.jpg"
+              alt="Vegan Food"
+              className="rounded-xl object-cover w-full h-[160px]"
+              width={300}
+              height={200}
+            />
+          </div>
+          <div>
+            <Image
+              src="/Yoga/111.jpg"
+              alt="Resort Room"
+              className="rounded-xl object-cover w-full h-[160px]"
+              width={300}
+              height={200}
+            />
+          </div>
               </div>
       </div>
     </section>
