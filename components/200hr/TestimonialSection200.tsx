@@ -2,8 +2,8 @@ import React from 'react';
 const TestimonialSection: React.FC = () => {
   const videos = [
     'https://www.youtube.com/embed/1oxK0cYax9s?si=VdURMf5zk-gvMX9-', // Replace/add more IDs as needed
-    'https://www.youtube.com/embed/1oxK0cYax9s?si=VdURMf5zk-gvMX9-',
-    'https://www.youtube.com/embed/1oxK0cYax9s?si=VdURMf5zk-gvMX9-',
+    'https://youtu.be/0L8pv3fixrg?si=MWQREffMPV7ytasn',
+    'https://youtu.be/s6VazbcpPko?si=JLNiLNDr6CWHex1U',
   ];
 
   return (
