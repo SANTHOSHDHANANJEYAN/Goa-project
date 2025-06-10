@@ -42,6 +42,7 @@ export default function OurExcursions() {
         spaceBetween={30}
         slidesPerView={1}
         loop={true}
+        speed={2000}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         breakpoints={{
