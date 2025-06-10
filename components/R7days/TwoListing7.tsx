@@ -155,15 +155,6 @@ export default function TwoListing7() {
             {/* Pricing Cards */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-orange-50 p-5 rounded-xl text-center">
-                <h4 className="text-[#F97316] font-semibold mb-1">Sharing</h4>
-                <p className="text-2xl font-bold text-[#1C1C1C]">
-                  {getPrice(data.sharing)}{' '}
-                  <span className="text-gray-400 line-through text-base">
-                    {getPrice(data.sharingOld)}
-                  </span>
-                </p>
-              </div>
-              <div className="bg-orange-50 p-5 rounded-xl text-center">
                 <h4 className="text-[#F97316] font-semibold mb-1">Private</h4>
                 <p className="text-2xl font-bold text-[#1C1C1C]">
                   {getPrice(data.private)}{' '}
