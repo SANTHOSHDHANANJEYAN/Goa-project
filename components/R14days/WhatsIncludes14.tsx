@@ -8,42 +8,42 @@ interface Activity {
 }
 
 const activities: Activity[] = [
-  {
-    title: "Yoga and Meditation Sessions",
-    description:
-      "Experience daily guided yoga and meditation sessions designed to enhance flexibility, inner peace, and mindfulness.",
-    image: "/Meditation.jpg",
-  },
-  {
-    title: "Accommodation",
-    description:
-      "Stay in comfortable, peaceful rooms designed with natural materials and minimalist decor, offering rest and rejuvenation.",
-    image: "/Accommodation.jpg",
-  },
-  {
-    title: "Meals (Vegetarian & Vegan Options)",
-    description:
-      "Enjoy nourishing vegetarian and vegan meals made from fresh, locally sourced ingredients, supporting a healthy lifestyle.",
-    image: "/Meals.jpg",
-  },
-  {
-    title: "Wellness Treatments",
-    description:
-      "Indulge in holistic wellness treatments such as massages, herbal therapies, and detox practices for physical and mental balance.",
-    image: "/Wellness.jpg",
-  },
-  {
-    title: "Cultural Excursions",
-    description:
-      "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
-    image: "/Cultural.jpg",
-  },
-    {
-    title: "Cultural Excursions",
-    description:
-      "Explore local culture through guided tours, temple visits, traditional music, and dance performances enriching your retreat experience.",
-    image: "/Cultural.jpg",
-  },
+ {
+  title: "Sunrise Beach Yoga",
+  description:
+    "Begin your day with energizing yoga sessions by the rising sun over the sea.",
+  image: "/RetreatBG/Sunrise.jpeg.jpg",
+},
+{
+  title: "Sound Healing & Meditation",
+  description:
+    "Experience deep relaxation through guided sound healing and meditation.",
+  image: "/RetreatBG/Sound.jpeg.jpg",
+},
+{
+  title: "Nature Walks & Beach View",
+  description:
+    "Reconnect with nature through mindful walks along Goa’s lush trails.",
+  image: "/RetreatBG/naturalwalk.jpeg.jpg",
+},
+{
+  title: "Kirtan & Bhajan Evenings",
+  description:
+    "Soak in the bliss of devotional music and community singing under the stars.",
+  image: "/RetreatBG/Kirtans.jpeg.jpg",
+},
+{
+  title: "Art & Expression Therapy",
+  description:
+    "Channel creativity and inner clarity through guided art-based expression.",
+  image: "/RetreatBG/art.jpeg.jpg",
+},
+{
+  title: "Yoga Wellness Workshop",
+  description:
+    "Learn foundational principles of self-care, mediation and relaxation",
+  image: "/RetreatBG/yogawellness.jpeg.jpg",
+},
 ];
 
 const ActivitiesSection: React.FC = () => {
@@ -54,7 +54,7 @@ const ActivitiesSection: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-16 sm:mb-20">
-          Course Inclusions
+          Retreat Program Essentials
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 ">
           {activities.map((activity, index) => (

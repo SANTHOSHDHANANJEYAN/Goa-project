@@ -12,37 +12,37 @@ const activities: Activity[] = [
   title: "Sunrise Beach Yoga",
   description:
     "Begin your day with energizing yoga sessions by the rising sun over the sea.",
-  image: "/Meditation.jpg",
+  image: "/RetreatBG/Sunrise.jpeg.jpg",
 },
 {
   title: "Sound Healing & Meditation",
   description:
     "Experience deep relaxation through guided sound healing and meditation.",
-  image: "/Accommodation.jpg",
+  image: "/RetreatBG/Sound.jpeg.jpg",
 },
 {
   title: "Nature Walks & Beach View",
   description:
     "Reconnect with nature through mindful walks along Goa’s lush trails.",
-  image: "/Meals.jpg",
+  image: "/RetreatBG/naturalwalk.jpeg.jpg",
 },
 {
   title: "Kirtan & Bhajan Evenings",
   description:
     "Soak in the bliss of devotional music and community singing under the stars.",
-  image: "/Wellness.jpg",
+  image: "/RetreatBG/Kirtans.jpeg.jpg",
 },
 {
   title: "Art & Expression Therapy",
   description:
     "Channel creativity and inner clarity through guided art-based expression.",
-  image: "/Cultural.jpg",
+  image: "/RetreatBG/art.jpeg.jpg",
 },
 {
   title: "Yoga Wellness Workshop",
   description:
     "Learn foundational principles of self-care, mediation and relaxation",
-  image: "/Cultural.jpg",
+  image: "/RetreatBG/yogawellness.jpeg.jpg",
 },
 ];
 
