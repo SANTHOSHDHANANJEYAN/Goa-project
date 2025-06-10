@@ -18,7 +18,7 @@ const KeySkills21: React.FC = () => {
   return (
     <section className="bg-white py-12 px-4 sm:px-6 lg:px-20">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-10 leading-snug">
-        Key Skills You Will Gain
+        Why Choose Rishikul Yogshala’s 14-Days Yoga Retreat in Goa?
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
