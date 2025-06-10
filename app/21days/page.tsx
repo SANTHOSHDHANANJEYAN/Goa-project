@@ -119,7 +119,7 @@ const TwentyOneTTPage = () => {
 {/* Card 3 */}
 <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
   <Image 
-    src="/HVA/hatha.png"  
+    src="/HVA/vinyasa yoga.jpg"  
     alt="Image 1" 
     fill
     className="object-cover"
