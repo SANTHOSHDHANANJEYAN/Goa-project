@@ -18,7 +18,6 @@ const testimonials = [
   { id: 8, image: '/Food/9.jpg' },
   { id: 9, image: '/Food/10.JPG' },
   { id: 10, image: '/Food/11.jpg' },
-  { id: 11, image: '/Food/12.jpg' },
   { id: 12, image: '/Food/13.jpg' },
 ];
 

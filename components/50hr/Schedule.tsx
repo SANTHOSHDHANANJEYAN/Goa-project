@@ -1,13 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Schedule100() {
-  const videoUrl = '';
-
-  const handlePlayClick = () => {
-    window.open(videoUrl, '_blank', 'noopener,noreferrer');
-  };
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoUrl = '/aboutpics/YogIntro.mov'; // Replace with your actual local or remote video URL
 
   return (
     <section className="w-full bg-green-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -41,27 +39,38 @@ export default function Schedule100() {
         <div className="md:w-1/2">
           <div className="rounded-xl overflow-hidden shadow-md bg-white max-w-full">
             <div className="relative aspect-video w-full">
-              <Image
-                src="/Thumbnail/Yogacourse 1.jpg"
-                alt="Video Thumbnail"
-                fill
-                style={{ objectFit: 'cover' }}
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <button
-                aria-label="Play Video"
-                className="absolute inset-0 flex items-center justify-center"
-                onClick={handlePlayClick}
-              >
-                <svg
-                  className="h-16 w-16 text-white opacity-80 hover:opacity-100 transition"
-                  fill="currentColor"
-                  viewBox="0 0 84 84"
-                >
-                  <circle cx="42" cy="42" r="42" fill="#000" opacity="0.6" />
-                  <polygon points="33,26 60,42 33,58" fill="white" />
-                </svg>
-              </button>
+              {isPlaying ? (
+                <video
+                  src={videoUrl}
+                  controls
+                  autoPlay
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <>
+                  <Image
+                    src="/Thumbnail/Yogacourse 1.jpg"
+                    alt="Video Thumbnail"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <button
+                    aria-label="Play Video"
+                    className="absolute inset-0 flex items-center justify-center"
+                    onClick={() => setIsPlaying(true)}
+                  >
+                    <svg
+                      className="h-16 w-16 text-white opacity-80 hover:opacity-100 transition"
+                      fill="currentColor"
+                      viewBox="0 0 84 84"
+                    >
+                      <circle cx="42" cy="42" r="42" fill="#000" opacity="0.6" />
+                      <polygon points="33,26 60,42 33,58" fill="white" />
+                    </svg>
+                  </button>
+                </>
+              )}
             </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold text-gray-900">Yoga Course Introduction</h3>

@@ -86,9 +86,9 @@ export default function AboutTraining() {
             About the Training
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6">
-            Join us for an immersive <br />
-            50-Hours Yoga Immersion <br />
-            Certified Teacher training
+            Join us for an <br />
+            50 Hrs Multi Style Yoga  <br />
+            Teacher  Training
           </h2>
 
           <ul className="space-y-4 text-[#150e70]">
