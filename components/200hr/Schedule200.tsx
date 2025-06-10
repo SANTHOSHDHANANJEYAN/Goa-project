@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Schedule100() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoUrl = '/aboutpics/YogIntro.mov'; // Replace with your actual local or remote video URL
+  const videoUrl = '/Videos/24daysvideo.mov'; // Replace with your actual local or remote video URL
 
   return (
     <section className="w-full bg-green-50 py-12 px-4 sm:px-6 lg:px-8">

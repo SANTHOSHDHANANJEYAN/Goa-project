@@ -51,7 +51,7 @@ const TwoHundredHourTTPage = () => {
       <p className="text-sm text-[#150e70]">Duration-200Hrs-24Days</p>
       <p className="text-sm text-[#150e70]">Language-English</p>
       <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
-      <p className="text-sm text-[#150e70]">Level: Advance </p> 
+      <p className="text-sm text-[#150e70]">Level: Intermediate </p> 
       <p className="text-sm text-[#150e70]">Certification: RYS 200</p>
 </div>
 
