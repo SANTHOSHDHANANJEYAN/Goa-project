@@ -51,7 +51,7 @@ const FiftyHourTTPage = () => {
       </div>
     </div>
       <div className="flex justify-center gap-6 mb-6">
-      <p className="text-sm text-[#150e70]">Duration-7 Days</p>
+      <p className="text-sm text-[#150e70]">Duration-50Hrs</p>
       <p className="text-sm text-[#150e70]">Language-English</p>
       <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
       <p className="text-sm text-[#150e70]">Level: Very Beginner </p> 
