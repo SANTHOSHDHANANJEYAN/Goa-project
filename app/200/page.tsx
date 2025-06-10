@@ -135,7 +135,7 @@ const TwoHundredHourTTPage = () => {
       <OurRooms7/>
       <RoomSlides7/> 
       <ActivitiesSection200/>
-       {/* Course Details Section */}
+<TestimonialSection200/>
       <BatchScheduleTable200/>
 <TestimonialCarousel
         testimonials={[
