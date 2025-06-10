@@ -8,10 +8,21 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const excursions = [
-  { id: 1, image: "/excursion1.webp" },
-  { id: 2, image: "/excursion2.jpg" },
-  { id: 3, image: "/excursion3.avif" },
-  { id: 4, image: "/excursion4.avif" },
+  { id: 1, image: "/excursion/7.jpg" },
+  { id: 2, image: "/excursion/6.jpg" },
+  { id: 3, image: "/excursion/3.jpg" },
+  { id: 4, image: "/excursion/1.jpg" },
+  { id: 5, image: "/excursion/10.jpg" },
+  { id: 6, image: "/excursion/11.jpg" },
+  { id: 7, image: "/excursion/11.jpg" },
+  { id: 8, image: "/excursion/12.jpg" },
+  { id: 9, image: "/excursion/13.jpg" },
+  { id: 10, image: "/excursion/1.jpg" },
+  { id: 11, image: "/excursion/15.jpg" },
+  { id: 12, image: "/excursion/16.jpg" },
+  { id: 13, image: "/excursion/17.jpg" },
+  { id: 14, image: "/excursion/18.jpg" },
+  { id: 15, image: "/excursion/19.jpg" },
 ];
 
 export default function OurExcursions() {
