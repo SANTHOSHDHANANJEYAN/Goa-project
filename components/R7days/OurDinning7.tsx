@@ -22,7 +22,6 @@ export default function OurDinning7() {
         <p className="text-lg mb-10">
          At Rishikul Yogshala Goa, food is more than fuel - it’s a part of your healing journey. Our dining experience is rooted in the principles of sattvic living, offering freshly prepared vegetarian meals that nourish the body, calm the mind, and uplift the spirit.
         </p>
-
       </div>
     </section>
   );
