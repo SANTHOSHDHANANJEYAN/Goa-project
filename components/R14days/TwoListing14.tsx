@@ -59,7 +59,7 @@ export default function TwoListing7() {
       description: 'We organise retreats in small groups of 3–10 people to ensure meaningful connection and personal attention.'
     },
     {
-      title: 'Confirm Your Spot with ₹5,000',
+      title: 'Confirm Your Spot ',
       description: 'Pay a small deposit to block your seat. Remaining amount can be paid on arrival.'
     },
     {
@@ -156,12 +156,12 @@ export default function TwoListing7() {
 
             {/* Inclusions List */}
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-800">
-              <li>✔️ {selected} Stay in Rishikesh</li>
+              <li>✔️ {selected} Stay in Goa</li>
               <li>✔️ Yoga Equipment</li>
               <li>✔️ Nutritional Guidance</li>
               <li>✔️ Meditation & Silence Walks</li>
               <li>✔️ Personal Mentoring</li>
-              <li>✔️ Study Material & Certificate</li>
+             
             </ul>
           </div>
         </div>
