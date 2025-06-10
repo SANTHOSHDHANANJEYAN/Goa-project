@@ -33,7 +33,7 @@ const HundredHourTTPage = () => {
 </h1>
 
       <p className="text-lg text-center text-[#150e70] mb-6">
-        Join an exciting and life-changing 14-Days journey in Goa
+        Join an exciting and life-changing 12-Days journey in Goa
       </p>
 
      <div className="flex justify-center items-end text-center gap-8 mb-4">

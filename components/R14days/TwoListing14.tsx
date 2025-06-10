@@ -6,28 +6,20 @@ type Duration = '7 Days' | '14 Days' | '21 Days';
 type Currency = 'INR' | 'USD' | 'EUR';
 
 const pricing: Record<Duration, {
-  sharing: number;
-  sharingOld: number;
+
+
   private: number;
-  privateOld: number;
+
 }> = {
   '7 Days': {
-    sharing: 40000,
-    sharingOld: 55000,
-    private: 50000,
-    privateOld: 65000
+    private: 66560,
   },
   '14 Days': {
-    sharing: 70000,
-    sharingOld: 90000,
-    private: 85000,
-    privateOld: 105000
+    private: 124800,
+
   },
   '21 Days': {
-    sharing: 95000,
-    sharingOld: 120000,
-    private: 115000,
-    privateOld: 140000
+    private: 183040,
   }
 };
 
@@ -77,7 +69,7 @@ export default function TwoListing7() {
   ];
 
   return (
-    <section className="bg-[#FFF7F3] px-4 md:px-16 py-20 text-[#262626] font-sans">
+    <section className="bg-[#FFF7F3] px-4 md:px-16  text-[#262626] font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Headings */}
         <div className="mb-10">
@@ -158,9 +150,6 @@ export default function TwoListing7() {
                 <h4 className="text-[#F97316] font-semibold mb-1">Private</h4>
                 <p className="text-2xl font-bold text-[#1C1C1C]">
                   {getPrice(data.private)}{' '}
-                  <span className="text-gray-400 line-through text-base">
-                    {getPrice(data.privateOld)}
-                  </span>
                 </p>
               </div>
             </div>

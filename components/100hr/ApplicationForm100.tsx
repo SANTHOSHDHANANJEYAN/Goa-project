@@ -40,11 +40,15 @@ const FreeManualSignup: React.FC = () => {
         </form>
 
         <div className="mt-10">
+        <div className="relative w-40 sm:w-56 h-40 sm:h-56 mx-auto shadow-lg">
           <Image
             src="/yg_logo-removebg-preview.png"
             alt="200 hrs Yoga Teacher Training Manual"
-            className="w-40 sm:w-56 mx-auto shadow-lg"
+            fill
+            className="object-contain"
           />
+        </div>
+
         </div>
       </div>
     </section>

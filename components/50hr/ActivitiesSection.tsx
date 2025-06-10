@@ -36,7 +36,7 @@ const activities: Activity[] =[
   {
     title: "Cooking Classes",
     description: "Learn to cook simple sattvic meals.",
-    image: "/Activity/cooking.png",
+    image: "/Activity/cooking.jpg",
   },
 ]
 

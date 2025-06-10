@@ -16,7 +16,7 @@ export default function GalleryPage() {
     <div className="relative min-h-screen pt-[7rem] px-4 sm:px-6 lg:px-16 pb-20 overflow-hidden">
       {/* 🔽 Background image */}
         <Image
-          src="/gallerybg.png"
+          src="/gallery/bagal.jpg"
           alt="Gallery Background"
           fill
           className="object-cover -z-10"

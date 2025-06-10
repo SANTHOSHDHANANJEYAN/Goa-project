@@ -36,13 +36,13 @@ const activities: Activity[] =[
   {
     title: "Cooking Classes",
     description: "Learn to cook simple sattvic meals.",
-    image: "/Activity/cooking.png",
+    image: "/Activity/cooking.jpg",
   },
 ]
 
 const ActivitiesSection: React.FC = () => {
   return (
-    <section className="bg-transparent py-12 sm:py-16 text-center relative overflow-hidden">
+    <section className="bg-transparent  text-center relative overflow-hidden">
       {/* Optional radial background decoration */}
       <div className="absolute inset-0 opacity-10 z-0 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
 
@@ -57,13 +57,14 @@ const ActivitiesSection: React.FC = () => {
               className="bg-amber-50 p-6 rounded-xl shadow hover:shadow-lg transition relative flex flex-col items-center"
             >
               <div className="-mt-16 mb-6">
-                <Image
-                  src={activity.image}
-                  alt={activity.title}
-                  width={96} // 24px * 4 = 96px
-                  height={96}
-                  className="rounded-full border-4 border-white shadow object-cover"
-                />
+            <Image
+              src={activity.image}
+              alt={activity.title}
+              width={96}  // w-24 = 96px
+              height={96} // h-24 = 96px
+              className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow object-cover"
+            />
+
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-[#150e70] text-center">
                 {activity.title}

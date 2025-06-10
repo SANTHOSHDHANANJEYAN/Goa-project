@@ -30,8 +30,8 @@ const TwentyOneTTPage = () => {
       </div>
 
      <h1 className="text-lg md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
-  Become a Certified Yoga Teacher by Yoga Alliance
-</h1>
+      Become a Certified Yoga Teacher by Yoga Alliance
+    </h1>
 
       <p className="text-lg text-center text-[#150e70] mb-6">
         Join an exciting and life-changing 21-Days journey in Goa
