@@ -84,7 +84,7 @@ export default function About141() {
         <div className="grid grid-cols-2 gap-4 ">
           <div className="col-span-2">
             <Image
-              src="/aboutpics/115.jpg"
+              src="/aboutpics/777.jpg"
               alt="Yoga Group"
               className="rounded-xl object-cover w-full h-[325px]"
               width={600}

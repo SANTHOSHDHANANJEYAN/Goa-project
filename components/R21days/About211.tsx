@@ -84,7 +84,7 @@ export default function About211() {
         <div className="grid grid-cols-2 gap-4 ">
           <div className="col-span-2">
             <Image
-              src="/aboutpics/118.jpg"
+              src="/aboutpics/2422.jpg"
               alt="Yoga Group"
               className="rounded-xl object-cover w-full h-[325px]"
               width={600}
@@ -93,7 +93,7 @@ export default function About211() {
           </div>
           <div>
             <Image
-              src="/aboutpics/119.jpg"
+              src="/aboutpics/524.jpg"
               alt="Vegan Food"
               className="rounded-xl object-cover w-full h-[160px]"
               width={300}
