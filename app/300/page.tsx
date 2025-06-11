@@ -55,7 +55,6 @@ const ThreeHundredHourTTPage = () => {
       <p className="text-sm text-[#150e70]">Certification: RYS 300</p>
 </div>
 
-
       <div className="text-center mb-6">
         <a href="#application">
           <button className="bg-[#150e70] hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
@@ -63,8 +62,6 @@ const ThreeHundredHourTTPage = () => {
           </button>
         </a>
       </div>
-
-      
 
       {/* Hero Image */}
      <div className="flex justify-center items-center bg-transparent">
@@ -79,13 +76,13 @@ const ThreeHundredHourTTPage = () => {
     />
   </div>
 </div>
-   
+
 <AboutTraining300/>
-  <Schedule300/>
+<Schedule300/>
 
  <section className="mt-20 px-4 sm:px-6 lg:px-8">
   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
-    Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
+    Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning\u00a0experience.
   </h2>
 
   <h3 className="text-xs sm:text-sm md:text-base font-semibold text-center mb-8 text-[#150e70] max-w-3xl mx-auto">
@@ -143,15 +140,15 @@ const ThreeHundredHourTTPage = () => {
 <TestimonialCarousel
         testimonials={[
           {
-            quote: "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional each one brings deep knowledge, passion, and a truly supportive presence to the training. I also really appreciated the flexibility in their approach, allowing space for different styles of yoga teaching and encouraging us to find our own unique voice as instructors. A warm, inspiring environment to grow in.",
+            quote: "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional each one brings deep knowledge, passion, and a truly supportive presence to the training. I also really appreciated the flexibility in their approach, allowing space for different styles of yoga teaching and encouraging us to find our own unique voice as instructors. A warm, inspiring environment\u00a0to\u00a0grow\u00a0in.",
             author: " Charmaine Wardenberg ",
           },
           {
-            quote: "Rishikul Yogshala was absolutely amazing. I am very fortunate that I did my 200 hours there. I gained much more than just asana training. The yogic philosophy taught by Krishna is part of my daily life now. Every class and every teacher is extremely knowledgeable and always available to help and answer questions. Highly recommend!",
+            quote: "Rishikul Yogshala was absolutely amazing. I am very fortunate that I did my 200 hours there. I gained much more than just asana training. The yogic philosophy taught by Krishna is part of my daily life now. Every class and every teacher is extremely knowledgeable and always available to help and answer questions. Highly\u00a0recommend!",
             author: "Dimple Malkan ",
           },
           {
-            quote: "Very good school! They have provided detailed training. Teachers and instructor are well trained and knowledgeable.",
+            quote: "Very good school! They have provided detailed training. Teachers and instructor are well trained and\u00a0knowledgeable.",
             author: "Varsha Ambardekar",
           },
         ]}
@@ -164,48 +161,46 @@ const ThreeHundredHourTTPage = () => {
           {
             question: "1. Where is your yoga teacher training course located?",
             answer:
-              "Our course is located in Goa, the Pearl of the Orient, offering a serene environment amidst its beautiful coastal landscapes.",
+              "Our course is located in Goa, the Pearl of the Orient, offering a serene environment amidst its beautiful coastal\u00a0landscapes.",
           },
           {
             question: "2. What style of yoga do you teach in the training course?",
             answer:
-              "We specialize in Hatha Vinyasa yoga, blending traditional Hatha principles with dynamic Vinyasa flow.",
+              "We specialize in Hatha Vinyasa yoga, blending traditional Hatha principles with dynamic\u00a0Vinyasa\u00a0flow.",
           },
           {
             question: "3. What is the duration of the training program?",
             answer:
-              "The program typically spans 27 days for the 300-hr course.",
+              "The program typically spans 27 days for the\u00a0300-hr\u00a0course.",
           },
           {
             question: "4. What does a typical day look like during the training?",
             answer:
-              "Participants are encouraged to have a basic understanding and regular practice of yoga before joining.",
+              "Participants are encouraged to have a basic understanding and regular practice of yoga\u00a0before\u00a0joining.",
           },
           {
             question: "5. What does a typical day look like during the training?",
             answer:
-              "Each day includes yoga practice, meditation, theory classes, workshops, and dedicated time for self-study.",
+              "Each day includes yoga practice, meditation, theory classes, workshops, and dedicated time\u00a0for\u00a0self-study.",
           },
           {
             question: "6. Is the program conducted in English?",
             answer:
-              "Yes, the entire course is conducted in English to cater to international participants.",
+              "Yes, the entire course is conducted in English to cater to international\u00a0participants.",
           },
           {
             question: "7. Who are the instructors leading the training?",
             answer:
-              "Our instructors are professionals certified in Hatha Vinyasa yoga, ensuring top-notch teaching and guidance.",
+              "Our instructors are professionals certified in Hatha Vinyasa yoga, ensuring top-notch teaching\u00a0and\u00a0guidance.",
           },
           {
             question: "8. What certification will I receive upon completing the course?",
             answer:
-              "Upon successful completion, you will receive a Yoga Alliance accredited certification, recognized globally for teaching yoga.",
+              "Upon successful completion, you will receive a Yoga Alliance accredited certification, recognized globally for\u00a0teaching\u00a0yoga.",
           },
           
         ]}
       />
-
-
 
       {/* Application Form */}
       <ApplicationForm300/>
