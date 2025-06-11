@@ -102,7 +102,7 @@ export default function About141() {
           </div>
           <div>
             <Image
-              src="/aboutpics/117.jpg"
+              src="/aboutpics/333.jpg"
               alt="Resort Room"
               className="rounded-xl object-cover w-full h-[160px]"
               width={300}
