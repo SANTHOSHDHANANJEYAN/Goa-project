@@ -6,7 +6,7 @@ export default function Benefit21() {
       {/* Left image */}
       <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
         <Image
-          src="/benefits.webp"
+          src="/Imp&bene/bene - Copy.jpg"
           alt="Yoga Retreat"
           width={800}
           height={600}
@@ -16,32 +16,22 @@ export default function Benefit21() {
 
       {/* Right content */}
       <div className="w-full lg:w-1/2 lg:pl-12">
-        <p className="text-orange-500 font-medium tracking-wide uppercase mb-2">Transform Lives</p>
-        <h1 className="text-4xl lg:text-5xl font-semibold text-[#150e70] mb-4">
+        <p className="text-orange-500 font-medium tracking-wide uppercase mb-2 text-sm sm:text-base">
+          Transform Lives
+        </p>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#150e70] mb-4 leading-tight">
           Benefits of our retreats 
         </h1>
-        <p className="text-gray-800 font-semibold mb-4">
+        <p className="text-gray-800 font-semibold mb-4 text-base sm:text-lg">
           Recenter Your Mind, Rejuvenate Your Body, and Return Refreshed
         </p>
-        <p className="text-gray-600 mb-6">
-          Step away from the noise of daily life and immerse yourself in yoga retreat in the heart
-          of Rishikesh. Practice authentic Himalayan yoga, enjoy sattvic meals, connect with
-          yourself—and leave lighter, clearer, and deeply restored.
+        <p className="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
+          Escape the noise and chaos of daily life and step into a sanctuary of peace in the heart of Rishikesh. Surrounded by the sacred Himalayas and the flowing Ganga, our retreat offers a chance to reconnect with your true self.
+          Experience the healing power of authentic Himalayan yoga, guided meditation, and mindful breathwork. Nourish your body with pure sattvic meals and embrace a slower, more intentional rhythm.
+          Leave behind stress and stagnation and return home feeling lighter, clearer, and deeply rejuvenated in body, mind, and soul.
         </p>
-
-        {/* Buttons */}
-        {/* <div className="flex flex-wrap gap-4 mb-6">
-          <button className="bg-[#150e70] hover:bg-orange-600 text-white font-bold py-3 px-6 rounded shadow-md">
-            Reserve Your Spot
-          </button>
-          <button className="flex items-center gap-2 border-2 border-[#150e70] text-[#150e70] hover:bg-purple-50 font-semibold py-3 px-6 rounded shadow-sm">
-            📅 View Full Schedule
-          </button>
-        </div> */}
-
-        {/* Trust Logos */}
-
       </div>
+
     </section>
   );
 }
