@@ -10,7 +10,7 @@ export default function Benefit7() {
           alt="Yoga Retreat"
           width={800}
           height={600}
-          className="rounded-xl shadow-lg w-full max-w-full object-cover"
+          className="rounded-xl shadow-lg h-[22rem] w-full max-w-full object-cover"
           style={{ height: "auto" }}
           priority
         />

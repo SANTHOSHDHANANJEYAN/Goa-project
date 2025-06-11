@@ -24,8 +24,8 @@ export default function Importance14() {
           src="/Imp&bene/imp1 - Copy.JPG"
           alt="Yoga Retreat"
           width={800}
-          height={600}
-          className="rounded-xl shadow-lg w-full object-cover"
+          height={400}
+          className="rounded-xl shadow-lg h-[20rem] w-full object-cover"
         />
       </div>
     </section>

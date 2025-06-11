@@ -25,9 +25,10 @@ export default function Importance7() {
           alt="Yoga Retreat"
           width={800}
           height={400}
-          className="rounded-xl shadow-lg w-full object-cover"
+          className="rounded-xl shadow-lg h-[20rem] w-full object-cover"
         />
       </div>
+
     </section>
   );
 }
