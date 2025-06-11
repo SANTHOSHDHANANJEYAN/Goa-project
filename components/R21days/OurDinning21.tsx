@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function OurDinning21() {
   return (
     <section
-      className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[560px]"
+      className="relative bg-cover bg-fixed bg-center bg-no-repeat text-white py-24 mb-20 h-[450px]"
       style={{
         backgroundImage: "url('/dinning.jpg')",
       }}
