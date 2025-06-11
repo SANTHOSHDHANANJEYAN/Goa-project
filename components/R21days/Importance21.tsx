@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Importance21() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-white">
+    <section className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-white gap-[2rem]">
       {/* Left content */}
       <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
         <p className="text-orange-500 font-medium tracking-wide uppercase mb-2">Transform Lives</p>
@@ -13,20 +13,16 @@ export default function Importance21() {
           Recenter Your Mind, Rejuvenate Your Body, and Return Refreshed
         </p>
         <p className="text-gray-600 mb-6">
-          Step away from the noise of daily life and immerse yourself in yoga retreat in the heart
-          of Rishikesh. Practice authentic Himalayan yoga, enjoy sattvic meals, connect with
-          yourself—and leave lighter, clearer, and deeply restored.
+            Step away from the constant noise and distractions of everyday life.
+            Immerse yourself in a transformative yoga retreat in the heart of Rishikesh.
+            Surrounded by the serene Himalayan foothills and sacred Ganga river,
+            You’ll experience the depth of traditional Himalayan yoga practices.
+            Nourish your body with wholesome, sattvic vegetarian meals each day.
+            Connect deeply with your inner self through meditation and mindful silence.
+            Rediscover balance, clarity, and a sense of calm in a sacred space.
+            Leave feeling lighter, clearer, and profoundly rejuvenated.
         </p>
 
-        {/* Buttons
-        <div className="flex flex-wrap gap-4 mb-6">
-          <button className="bg-[#150e70] hover:bg-orange-600 text-white font-bold py-3 px-6 rounded shadow-md">
-            Reserve Your Spot
-          </button>
-          <button className="flex items-center gap-2 border-2 border-[#150e70] text-[#150e70] hover:bg-purple-50 font-semibold py-3 px-6 rounded shadow-sm">
-            📅 View Full Schedule
-          </button>
-        </div> */}
 
 
       </div>

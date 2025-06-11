@@ -68,7 +68,7 @@ export default function DailySchedule7() {
       <div className="w-full lg:w-1/3 h-full">
         <div className="relative w-full h-full min-h-[784px]">
           <Image
-            src="/gallery/12.WEBP"
+            src="/aboutpics/524.jpg"
             alt="Retreat"
             fill
             className="rounded-lg shadow-lg object-cover"

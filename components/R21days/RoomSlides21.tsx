@@ -8,17 +8,17 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const testimonials = [
-  { id: 1, image: '/public/Accomdation/1.jpg' },
-  { id: 2, image: '/public/Accomdation/3.webp' },
-  { id: 3, image: '/public/Accomdation/6.jpg' },
-  { id: 4, image: '/public/Accomdation/7.jpg' },
-  { id: 5, image: '/public/Accomdation/8.avif' },
-  { id: 6, image: '/public/Accomdation/9.jpg' },
-  { id: 7, image: '/public/Accomdation/10.jpg' },
-  { id: 8, image: '/public/Accomdation/11.avif' },
-  { id: 9, image: '/public/Accomdation/15.avif' },
-  { id: 10, image: '/public/Accomdation/18.jpg' },
-  { id: 11, image: '/public/Accomdation/19.avif' },
+  { id: 1, image: '/Accomdation/1.jpg' },
+  { id: 2, image: '/Accomdation/3.webp' },
+  { id: 3, image: '/Accomdation/6.jpg' },
+  { id: 4, image: '/Accomdation/7.jpg' },
+  { id: 5, image: '/Accomdation/8.avif' },
+  { id: 6, image: '/Accomdation/9.jpg' },
+  { id: 7, image: '/Accomdation/10.jpg' },
+  { id: 8, image: '/Accomdation/11.avif' },
+  { id: 9, image: '/Accomdation/15.avif' },
+  { id: 10, image: '/Accomdation/18.jpg' },
+  { id: 11, image: '/Accomdation/19.avif' },
 ];
 
 export default function RoomSlides21() {

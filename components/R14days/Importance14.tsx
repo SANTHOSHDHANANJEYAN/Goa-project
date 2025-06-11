@@ -13,9 +13,14 @@ export default function Importance14() {
           Recenter Your Mind, Rejuvenate Your Body, and Return Refreshed
         </p>
         <p className="text-gray-600 mb-6">
-          Step away from the noise of daily life and immerse yourself in yoga retreat in the heart
-          of Rishikesh. Practice authentic Himalayan yoga, enjoy sattvic meals, connect with
-          yourself—and leave lighter, clearer, and deeply restored.
+          Step away from the constant noise and distractions of everyday life.
+          Immerse yourself in a transformative yoga retreat in the heart of Rishikesh.
+          Surrounded by the serene Himalayan foothills and sacred Ganga river,
+          You’ll experience the depth of traditional Himalayan yoga practices.
+          Nourish your body with wholesome, sattvic vegetarian meals each day.
+          Connect deeply with your inner self through meditation and mindful silence.
+          Rediscover balance, clarity, and a sense of calm in a sacred space.
+          Leave feeling lighter, clearer, and profoundly rejuvenated.
         </p>
 
         {/* Buttons */}
