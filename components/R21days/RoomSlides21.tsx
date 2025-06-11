@@ -30,7 +30,7 @@ export default function RoomSlides21() {
   }, []);
 
   return (
-    <section className="bg-transparent py-20 px-4 text-center">
+    <section className="bg-transparent pb-[5rem] px-4 text-center">
 
 
       {isClient && (

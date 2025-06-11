@@ -29,7 +29,7 @@ export default function OurExcursions() {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   return (
-    <section className="bg-[#fff8f5] py-20 px-4 text-center">
+    <section className="bg-[#fff8f5] pb-[5rem] px-4 text-center">
       <h2 className="text-4xl md:text-5xl font-semibold text-[#4c2a65] mb-4">
         Our Excursions
       </h2>
