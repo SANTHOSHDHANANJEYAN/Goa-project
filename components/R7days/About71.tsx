@@ -101,7 +101,7 @@ export default function About71() {
             <Image
               src="/aboutpics/116.jpg"
               alt="Resort Room"
-              className="rounded-xl object-cover w-full h-[170px]"
+              className="rounded-xl w-full h-[170px]"
               width={300}
               height={200}
             />
