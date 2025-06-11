@@ -201,7 +201,7 @@ const CodeOfConduct = () => {
             />
             <YouTubeCard
               title="Rishikul Yogshala Review-2"
-              youtubeId="9bZkp7q19f0"
+              youtubeId="s6VazbcpPko?si=_Uily9ytRxbwB9k9"
               thumbnailUrl="/Thumbnail/review2.png"
             />
           </div>
