@@ -1,7 +1,16 @@
 'use client';
 
-import { FaSpa, FaGlobeAsia, FaSeedling, FaHeart } from "react-icons/fa";
-import { GiMeditation, GiIndiaGate, GiLotus } from "react-icons/gi";
+import {
+  FaSpa,
+  FaGlobeAsia,
+  FaSeedling,
+  FaHeart,
+} from "react-icons/fa";
+import {
+  GiMeditation,
+  GiIndiaGate,
+  GiLotus,
+} from "react-icons/gi";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { TbYoga } from "react-icons/tb";
 import Image from "next/image";
@@ -14,9 +23,7 @@ export default function About71() {
   const [sectionRef, inView] = useInView({ threshold: 0.2 });
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
+    if (inView) controls.start("visible");
   }, [controls, inView]);
 
   const itemVariants = {
@@ -33,42 +40,15 @@ export default function About71() {
   };
 
   const iconList = [
-    {
-      Icon: FaSpa,
-      text: "Affordable Yoga Retreats in Goa",
-    },
-    {
-      Icon: MdOutlineCalendarMonth,
-      text: "Flexible Stay Duration",
-    },
-    {
-      Icon: GiIndiaGate,
-      text: "Ideal Location for Relaxation",
-    },
-    {
-      Icon: TbYoga,
-      text: "Daily Yoga & Meditation Practice",
-    },
-    {
-      Icon: FaGlobeAsia,
-      text: "Optional Excursions",
-    },
-    {
-  Icon: GiMeditation,
-  text: "Personalized Yoga Schedule",
-},
-    {
-      Icon: FaSeedling,
-      text: "Holistic Mind-Body-Spirit Experience",
-    },
-    {
-      Icon: FaHeart,
-      text: "Cultivate Inner Peace",
-    },
-    {
-      Icon: GiLotus,
-      text: "Rejuvenate Through Yoga",
-    },
+    { Icon: FaSpa, text: "Affordable Yoga Retreats in Goa" },
+    { Icon: MdOutlineCalendarMonth, text: "Flexible Stay Duration" },
+    { Icon: GiIndiaGate, text: "Ideal Location for Relaxation" },
+    { Icon: TbYoga, text: "Daily Yoga & Meditation Practice" },
+    { Icon: FaGlobeAsia, text: "Optional Excursions" },
+    { Icon: GiMeditation, text: "Personalized Yoga Schedule" },
+    { Icon: FaSeedling, text: "Holistic Mind-Body-Spirit Experience" },
+    { Icon: FaHeart, text: "Cultivate Inner Peace" },
+    { Icon: GiLotus, text: "Rejuvenate Through Yoga" },
   ];
 
   return (
@@ -77,7 +57,7 @@ export default function About71() {
         ref={sectionRef}
         className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-[7rem] items-center"
       >
-        {/* Left: Image Grid */}
+        {/* Image Section */}
         <div className="grid grid-cols-2 gap-4">
           <div className="col-span-2">
             <Image
@@ -85,30 +65,26 @@ export default function About71() {
               alt="Yoga Group"
               className="rounded-xl object-cover w-full h-[355px]"
               width={600}
-              height={300}
+              height={355}
             />
           </div>
-          <div>
-            <Image
-              src="/aboutpics/113.jpg"
-              alt="Vegan Food"
-              className="rounded-xl object-cover w-full h-[170px]"
-              width={300}
-              height={200}
-            />
-          </div>
-          <div>
-            <Image
-              src="/aboutpics/116.jpg"
-              alt="Resort Room"
-              className="rounded-xl w-full h-[170px]"
-              width={300}
-              height={200}
-            />
-          </div>
+          <Image
+            src="/aboutpics/113.jpg"
+            alt="Vegan Food"
+            className="rounded-xl object-cover w-full h-[170px]"
+            width={300}
+            height={170}
+          />
+          <Image
+            src="/aboutpics/116.jpg"
+            alt="Resort Room"
+            className="rounded-xl object-cover w-full h-[170px]"
+            width={300}
+            height={170}
+          />
         </div>
 
-        {/* Right: Text Content */}
+        {/* Text Content */}
         <div className="pb-14 md:pb-0">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#150e70] mb-6 leading-snug">
             Transform your practice <br />
