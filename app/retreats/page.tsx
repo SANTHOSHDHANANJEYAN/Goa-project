@@ -1,6 +1,5 @@
-// app/retreats/page.tsx
-"use client"
 
+"use client"
 
 import SpaHero7 from "@/components/R7days/SpaHero7";
 import OurExcursions7 from "@/components/R7days/OurExcursions7";
@@ -18,8 +17,6 @@ import DinningSlides7 from "@/components/R7days/DinningSlides7";
 import RoomSlides7 from "@/components/R7days/RoomSlides7";
 import Faqs7 from "@/components/R7days/Faqs7";
 import About71 from "@/components/R7days/About71";
-
-
 
 export default function Page() {
 
