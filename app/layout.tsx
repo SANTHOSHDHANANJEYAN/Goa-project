@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Inter, Cormorant_Garamond } from 'next/font/google';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import Head from 'next/head';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -30,6 +29,10 @@ export const metadata: Metadata = {
     'Wellness Retreat',
     'Beach Yoga'
   ],
+  // Add Google site verification meta tag here as fallback (optional if you're serving the HTML file)
+  other: {
+    'google-site-verification': 'hOYvN1XlKBpsse_YAD-ymspC8VnZ85bXGeLFwCPgYBM',
+  },
 };
 
 export default function RootLayout({
@@ -39,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
+      <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="google-site-verification"
@@ -50,7 +53,7 @@ export default function RootLayout({
           content="Yoga in Goa, Rishikul Yogshala, Yoga Teacher Training Goa, 200 Hour YTT Goa, Yoga Retreat India, Meditation Retreat Goa, Wellness Retreat, Beach Yoga"
         />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </head>
       <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased bg-image-[url('/backgd.jpg')]`}>
         <Header />
         <main className="min-h-screen">{children}</main>
