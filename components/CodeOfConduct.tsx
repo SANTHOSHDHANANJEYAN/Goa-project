@@ -176,7 +176,7 @@ const CodeOfConduct = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <VideoCard
               title="Rishikul Yogshala Venue"
-              videoUrl="/videos/venue.mp4"
+              videoUrl="/Videos/Venue.mov"
               thumbnailUrl="/Thumbnail/venue.png"
             />
             <VideoCard
