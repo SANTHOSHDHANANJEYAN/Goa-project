@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Inter, Cormorant_Garamond } from 'next/font/google';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import Head from 'next/head'; // ✅ Added for meta tag support
+import Head from 'next/head';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -18,7 +18,18 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: 'Rishikulyogshalagoa',
-  description: 'Find peace, balance and spiritual growth at Rishikul Yogshala Goa. Join our classes, retreats and wellness programs.',
+  description:
+    'Find peace, balance and spiritual growth at Rishikul Yogshala Goa. Join our classes, retreats and wellness programs.',
+  keywords: [
+    'Yoga in Goa',
+    'Rishikul Yogshala',
+    'Yoga Teacher Training Goa',
+    '200 Hour YTT Goa',
+    'Yoga Retreat India',
+    'Meditation Retreat Goa',
+    'Wellness Retreat',
+    'Beach Yoga'
+  ],
 };
 
 export default function RootLayout({
@@ -29,11 +40,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <Head>
-        {/* ✅ Google site verification meta tag */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="google-site-verification"
           content="hOYvN1XlKBpsse_YAD-ymspC8VnZ85bXGeLFwCPgYBM"
         />
+        <meta
+          name="keywords"
+          content="Yoga in Goa, Rishikul Yogshala, Yoga Teacher Training Goa, 200 Hour YTT Goa, Yoga Retreat India, Meditation Retreat Goa, Wellness Retreat, Beach Yoga"
+        />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased bg-image-[url('/backgd.jpg')]`}>
         <Header />
