@@ -178,7 +178,8 @@ const HundredHourTTPage = () => {
           },
         ]}
       />
-
+      {/* Application Form */}
+      <ApplicationForm100 />
       {/* Certification Section */}
       <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
         <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
@@ -214,8 +215,7 @@ const HundredHourTTPage = () => {
         </p>
       </section>
 
-      {/* Application Form */}
-      <ApplicationForm100 />
+
     </div>
   );
 };
