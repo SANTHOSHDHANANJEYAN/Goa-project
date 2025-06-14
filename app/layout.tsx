@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     'Wellness Retreat',
     'Beach Yoga'
   ],
-  // Add Google site verification meta tag here as fallback (optional if you're serving the HTML file)
   other: {
     'google-site-verification': 'hOYvN1XlKBpsse_YAD-ymspC8VnZ85bXGeLFwCPgYBM',
+    'google-site-verification-2': '9PVyCKWm5kSFl1C3Dv4h7Ri8VH4QbtTqep1Uwg5K_yU', // custom label to avoid key conflict
   },
 };
 
@@ -47,6 +47,10 @@ export default function RootLayout({
         <meta
           name="google-site-verification"
           content="hOYvN1XlKBpsse_YAD-ymspC8VnZ85bXGeLFwCPgYBM"
+        />
+        <meta
+          name="google-site-verification"
+          content="9PVyCKWm5kSFl1C3Dv4h7Ri8VH4QbtTqep1Uwg5K_yU"
         />
         <meta
           name="keywords"
