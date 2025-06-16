@@ -9,19 +9,19 @@ const services = [
     id: 'yoga',
     title: '7-Days Yoga Holiday Retreat - Path to Serenity',
     image: '/IMAGE - GOA -.svg',
-    link: '/retreats',
+    link: '/7_days_retreat',
   },
   {
     id: 'meditation',
     title: '14-Days Yoga Detox Retreat-Balance Body & Mind',
     image: '/2nd images.svg',
-    link: '/retreats2',
+    link: '/14_days_retreat',
   },
   {
     id: 'sound-healing',
     title: '21-Days Yoga Wellness Retreat - A Journey to Self Discovery',
     image: '/3rd goa image - homwe page.svg',
-    link: '/retreats3',
+    link: '/21_days_retreat',
   },
 ];
 

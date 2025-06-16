@@ -7,21 +7,21 @@ import { Card } from '@/components/ui/card';
 const services = [
   {
     id: 'yoga',
-    title: '200 Hrs Multi-Style Yoga TTC',
+    title: '100 Hrs Multi-Style Yoga TTC',
     image: '/r1.jpg',
-    link: '/200',
+    link: '/100_hrs_yoga_ttc',
   },
   {
     id: 'meditation',
-    title: '300 Hrs Multi-Style Yoga TTC',
+    title: '200 Hrs Multi-Style Yoga TTC',
     image: '/300.png',
-    link: '/300',
+    link: '/200_hrs_yoga_ttc',
   },
   {
     id: 'sound-healing',
-    title: '⁠21 Days Yoga Immersion Course',
+    title: '300 Hrs Multi-Style Yoga TTC',
     image: '/r3.jpg',
-    link: '/21days',
+    link: '/300_hrs_yoga_ttc',
   },
 ];
 
