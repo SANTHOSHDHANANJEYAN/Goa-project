@@ -36,7 +36,7 @@ const leftNavigation = [
 ];
 
 const rightNavigation = [
-  { name: "About Us", href: "/Aboutyog" },
+  { name: "About Us", href: "/Aboutyogshala" },
   { name: "Contact Us", href: "/contact" },
   { name: "Payment", href: "/contact" }
 ];
