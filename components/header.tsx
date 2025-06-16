@@ -14,11 +14,11 @@ const leftNavigation = [
   {
     name: "Courses",
     dropdown: [
-      { name: "50 Hr Multi-Style-Yoga TTC", href: "/50" },
-      { name: "100 Hr Multi-Style-Yoga TTC", href: "/100" },
-      { name: "200 Hr Multi-Style-Yoga TTC", href: "/200" },
-      { name: "300 Hr Multi-Style-Yoga TTC", href: "/300" },
-      { name: "21 Days Yoga Immersion Course", href: "/21days" }
+      { name: "50 Hr Multi-Style-Yoga TTC", href: "/50_hrs_yoga_ttc" },
+      { name: "100 Hr Multi-Style-Yoga TTC", href: "/100_hrs_yoga_ttc" },
+      { name: "200 Hr Multi-Style-Yoga TTC", href: "/200_hrs_yoga_ttc" },
+      { name: "300 Hr Multi-Style-Yoga TTC", href: "/300_hrs_yoga_ttc" },
+      { name: "21 Days Yoga Immersion Course", href: "/21_days_courses" }
     ]
   },
   {
