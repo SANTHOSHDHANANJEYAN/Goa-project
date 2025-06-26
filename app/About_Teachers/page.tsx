@@ -90,23 +90,15 @@
       </h3>
 
       <p className="text-lg text-gray-800 mt-6 leading-relaxed">
-      Meet Abin, whose fascination with yoga’s spiritual aspects and metaphysics began in his early years. 
-      His spiritual journey led him to initiation into the Mantra marga of the Kaula tradition and later into Kriya Yoga of Sri Shyama Charan Lahiri’s lineage.
-      As you walk the path with Abin Ji, immerse yourself in the wisdom of his teachings. 
-      With his profound grasp of yoga philosophy and practice, discover new dimensions of inner peace and self-awareness. 
-      Allow Abin Ji’s guidance to illuminate your journey toward harmony, balance, and spiritual growth. 
-      Every moment spent in his presence offers a chance for personal transformation and enlightenment. 
-      Surrender to the wisdom he imparts and embrace the journey of self-realization with open arms
+      Meet Abin, whose fascination with yoga’s spiritual aspects and metaphysics began in his early years. His spiritual journey led him to initiation into the Mantra marga of the Kaula tradition and later into Kriya Yoga of Sri Shyama Charan Lahiri’s lineage.As you walk the path with Abin Ji, immerse yourself in the wisdom of his teachings. With his profound grasp of yoga philosophy and practice, discover new dimensions of inner peace and self-awareness. Allow Abin Ji’s guidance to illuminate your journey toward harmony, balance, and spiritual growth. Every moment spent in his presence offers a chance for personal transformation and enlightenment. Surrender to the wisdom he imparts and embrace the journey of self-realization with open arms
       </p>
 
       <p className="text-lg text-gray-800 mt-4 leading-relaxed">
-      Abin’s career took interesting turns, from teaching math for GRE/GMAT exams to working in Process Excellence and Analytics before transitioning to full-time yoga teaching. 
-      He completed Yoga Alliance accredited 200 Hour and 300 Hour courses.
+      Abin’s career took interesting turns, from teaching math for GRE/GMAT exams to working in Process Excellence and Analytics before transitioning to full-time yoga teaching. He completed Yoga Alliance accredited 200 Hour and 300 Hour courses.
       </p>
 
       <p className="text-lg text-gray-800 mt-4 leading-relaxed">
-      In his classes, Abin covers philosophy, asanas, pranayama, meditation, yoga nidra, and mantra chanting. 
-      His philosophy classes delve into Vedanta, Samkhya, Yoga Sutra, and Tantra, while his teaching style is influenced by Ashtanga Vinyasa, Bihar School of Yoga, and the Ghosh School.
+      In his classes, Abin covers philosophy, asanas, pranayama, meditation, yoga nidra, and mantra chanting. His philosophy classes delve into Vedanta, Samkhya, Yoga Sutra, and Tantra, while his teaching style is influenced by Ashtanga Vinyasa, Bihar School of Yoga, and the Ghosh School.
       </p><br />
       <p>Abin skillfully combines spirituality and practicality, creating holistic yoga experiences for his students.</p>
     </div>
@@ -138,25 +130,15 @@
       </h3>
 
       <p className="text-lg text-gray-800 mt-6 leading-relaxed">
-      He is a guide, a mentor, and a beacon of light for those seeking a deeper connection with themselves and the universe.
-      With roots deeply embedded in the wisdom of the Himalayan traditions, he brings a unique blend of ancient practices and modern understanding to his teaching. 
-      His approach to yoga is more than physical postures; it is an invitation to explore the boundless possibilities of the mind, body, and spirit.
-      Inspired by his studies under various Himalayan teachers, his classes are a journey into the heart of yoga. 
-      He expertly weaves together the rich tapestry of Pranayama and Teaching Methodology, creating a holistic experience that resonates on every level of being. 
-      His sessions are crafted to help students tap into their inner reservoirs of strength and clarity, fostering a deep sense of peace and fulfillment.
+      He is a guide, a mentor, and a beacon of light for those seeking a deeper connection with themselves and the universe.With roots deeply embedded in the wisdom of the Himalayan traditions, he brings a unique blend of ancient practices and modern understanding to his teaching. His approach to yoga is more than physical postures; it is an invitation to explore the boundless possibilities of the mind, body, and spirit.Inspired by his studies under various Himalayan teachers, his classes are a journey into the heart of yoga. He expertly weaves together the rich tapestry of Pranayama and Teaching Methodology, creating a holistic experience that resonates on every level of being. His sessions are crafted to help students tap into their inner reservoirs of strength and clarity, fostering a deep sense of peace and fulfillment.
       </p>
 
       <p className="text-lg text-gray-800 mt-4 leading-relaxed">
-      What sets him apart is his ability to make yoga accessible and meaningful for everyone. 
-      Whether you are a seasoned practitioner or stepping onto the mat for the first time, Arshdeep’s warm and inclusive teaching style welcomes you to explore and expand your practice. 
-      He believes in the transformative power of yoga to heal, empower, and awaken, guiding each student with compassion and insight on their personal journey.
+      What sets him apart is his ability to make yoga accessible and meaningful for everyone. Whether you are a seasoned practitioner or stepping onto the mat for the first time, Arshdeep’s warm and inclusive teaching style welcomes you to explore and expand your practice. He believes in the transformative power of yoga to heal, empower, and awaken, guiding each student with compassion and insight on their personal journey.
       </p>
 
       <p className="text-lg text-gray-800 mt-4 leading-relaxed">
-      Join Arshdeep to experience yoga that goes beyond the ordinary. 
-      His teachings offer a sanctuary where you can release stress, cultivate mindfulness, and connect with your true self. 
-      With Arshdeep, yoga becomes a journey of transformation, self-discovery, and profound inner peace, illuminating the path to a balanced and harmonious life. 
-      Embrace the opportunity to learn from a teacher who embodies the essence of yoga and inspires you to reach your highest potential.
+      Join Arshdeep to experience yoga that goes beyond the ordinary. His teachings offer a sanctuary where you can release stress, cultivate mindfulness, and connect with your true self. With Arshdeep, yoga becomes a journey of transformation, self-discovery, and profound inner peace, illuminating the path to a balanced and harmonious life. Embrace the opportunity to learn from a teacher who embodies the essence of yoga and inspires you to reach your highest potential.
       </p>
     </div>
   </div>
@@ -187,18 +169,11 @@
       </h3>
 
       <p className="text-lg text-gray-800 mt-6 leading-relaxed">
-      Meet Bipin Singh Pharswan, a certified yoga teacher at Rishikul Yogshala. 
-      Bipin holds 200-hour Vinyasa and advanced 300-hour Ashtanga Vinyasa Teacher certifications, showcasing his dedication to yoga. 
-      With experience from esteemed institutions like the Himalayan Yoga Association and AYM Yoga School, he’s honed his skills.
+      Meet Bipin Singh Pharswan, a certified yoga teacher at Rishikul Yogshala. Bipin holds 200-hour Vinyasa and advanced 300-hour Ashtanga Vinyasa Teacher certifications, showcasing his dedication to yoga. With experience from esteemed institutions like the Himalayan Yoga Association and AYM Yoga School, he’s honed his skills.
       </p>
 
       <p className="text-lg text-gray-800 mt-4 leading-relaxed">
-      Bipin excels in Hatha Yoga and Ashtanga Vinyasa Yoga, blending tradition with modern techniques. 
-      His expertise in Yoga Alignment ensures students benefit fully from each posture without risking injury. 
-      Beyond physical practice, Bipin also understands yoga anatomy deeply.
-      Join Bipin’s classes for authentic yoga guidance. 
-      His passion for yoga and commitment to his students’ journey are unparalleled. 
-      Explore yoga with Bipin Singh Pharswan at Rishikul Yogshala as your trusted guide.
+      Bipin excels in Hatha Yoga and Ashtanga Vinyasa Yoga, blending tradition with modern techniques. His expertise in Yoga Alignment ensures students benefit fully from each posture without risking injury. Beyond physical practice, Bipin also understands yoga anatomy deeply.Join Bipin’s classes for authentic yoga guidance. His passion for yoga and commitment to his students’ journey are unparalleled. Explore yoga with Bipin Singh Pharswan at Rishikul Yogshala as your trusted guide.
       </p>
 
       <p className="text-lg text-gray-800 mt-4 leading-relaxed">
@@ -376,7 +351,7 @@
       </h3>
 
       <p className="text-lg text-gray-800 mt-6 leading-relaxed">
-      I'm Rahul Negi, a 23-year-old enthusiastic yoga teacher with over 6 years of experience. I graduated in yoga and gained in-depth knowledge of postures, breathing techniques, and the spiritual aspects of yoga.
+      I&apos;m Rahul Negi, a 23-year-old enthusiastic yoga teacher with over 6 years of experience. I graduated in yoga and gained in-depth knowledge of postures, breathing techniques, and the spiritual aspects of yoga.
       </p>
 
       <p className="text-lg text-gray-800 mt-4 leading-relaxed">
@@ -454,23 +429,17 @@
       </h3>
 
       <p className="text-lg text-gray-800 mt-6 leading-relaxed">
-      Welcome to the serene world of Yogi Sukra Chaitanya, hailing from the charming villages of West Odisha, India.
-      He immersed himself in the study of human nature and the environment, mastering educational psychology and environmental sciences at Sambalpur University.
-      Seeking deeper wisdom, he ventured into the spiritual realm, diving into Yoga Sciences and Indian Philosophy at Dev Sanskriti Haridwar University.
+      Welcome to the serene world of Yogi Sukra Chaitanya, hailing from the charming villages of West Odisha, India.He immersed himself in the study of human nature and the environment, mastering educational psychology and environmental sciences at Sambalpur University.Seeking deeper wisdom, he ventured into the spiritual realm, diving into Yoga Sciences and Indian Philosophy at Dev Sanskriti Haridwar University.
       </p>
 
       <p className="text-lg text-gray-800 mt-4 leading-relaxed">
-      Under the guidance of renowned masters like Swami Veda Bharati from the Himalayan Tradition, Yogi Sukra Chaitanya embarked on a journey to greater heights.
-      He further honed his skills in traditional Kriya yoga under the wise mentorship of Swami Sankaranand Giri and Swami Nityanandaji of the Yoga Satsang Society, India.
+      Under the guidance of renowned masters like Swami Veda Bharati from the Himalayan Tradition, Yogi Sukra Chaitanya embarked on a journey to greater heights.He further honed his skills in traditional Kriya yoga under the wise mentorship of Swami Sankaranand Giri and Swami Nityanandaji of the Yoga Satsang Society, India.
       </p>
 
       <p className="text-lg text-gray-800 mt-4 leading-relaxed">
-      Yogi Sukra Chaitanya’s teachings resonate like a beautiful symphony, bringing harmony to the mind, body, and soul, attracting seekers from around the world.
-      With each breath, his students uncover the profound treasures within themselves, guided by the wisdom of a true master.
+      Yogi Sukra Chaitanya’s teachings resonate like a beautiful symphony, bringing harmony to the mind, body, and soul, attracting seekers from around the world.With each breath, his students uncover the profound treasures within themselves, guided by the wisdom of a true master.
       </p><br />
-      <p>In his classes, Yogi Sukra Chaitanya infuses ancient wisdom with modern insights, creating a harmonious blend of tradition and innovation.
-        Through his innovative approach, he inspires students to explore the depths of their being, unlocking their innate potential for growth and transformation.
-        With compassion and guidance, Yogi Sukra Chaitanya leads his students on a transformative journey towards self-discovery, inner peace, and enlightenment.</p>
+      <p>In his classes, Yogi Sukra Chaitanya infuses ancient wisdom with modern insights, creating a harmonious blend of tradition and innovation.Through his innovative approach, he inspires students to explore the depths of their being, unlocking their innate potential for growth and transformation.With compassion and guidance, Yogi Sukra Chaitanya leads his students on a transformative journey towards self-discovery, inner peace, and enlightenment.</p>
     </div>
   </div>
 </section>
@@ -500,17 +469,11 @@
       </h3>
 
       <p className="text-lg text-gray-800 mt-6 leading-relaxed">
-      Meet Yogesh from Nepal, a passionate yoga professional with qualifications in meditation, Reiki healing, singing bowl therapy, yoga therapy, and classical music.
-      His inspiring dedication and friendly demeanor make him approachable to all, with a great sense of humor.
+      Meet Yogesh from Nepal, a passionate yoga professional with qualifications in meditation, Reiki healing, singing bowl therapy, yoga therapy, and classical music.His inspiring dedication and friendly demeanor make him approachable to all, with a great sense of humor.
       </p>
 
       <p className="text-lg text-gray-800 mt-4 leading-relaxed">
-      journey alongside Yogesh Ji, immerse yourself in the transformative power of his teachings. 
-      With his wealth of knowledge in yoga, meditation, and holistic healing practices, discover new depths of inner peace and well-being. 
-      Allow Yogesh Ji’s gentle guidance to lead you towards a life filled with balance, serenity, and spiritual growth. 
-      Surrender to the wisdom he shares, embracing each moment as an opportunity for personal transformation. 
-      Let Yogesh Ji be your trusted companion on this sacred journey of self-discovery and enlightenment. 
-      Together, explore the boundless potential of mind, body, and spirit, as you awaken to your true essence.
+      Journey alongside Yogesh Ji, immerse yourself in the transformative power of his teachings. With his wealth of knowledge in yoga, meditation, and holistic healing practices, discover new depths of inner peace and well-being. Allow Yogesh Ji’s gentle guidance to lead you towards a life filled with balance, serenity, and spiritual growth. Surrender to the wisdom he shares, embracing each moment as an opportunity for personal transformation. Let Yogesh Ji be your trusted companion on this sacred journey of self-discovery and enlightenment. Together, explore the boundless potential of mind, body, and spirit, as you awaken to your true essence.
       </p>
     </div>
   </div>
@@ -521,7 +484,7 @@
         <section className="py-16 md:py-24 bg-transparent relative overflow-hidden">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center text-shadow-md">
-      Our Customer's Reviews
+      Our Customer&apos;s Reviews
     </h2>
 
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -546,7 +509,7 @@
           </div>
         </div>
         <p className="text-13 text-gray-800 leading-relaxed">
-        “It was for sure an incredible journey to have had the course with Rishikul Yogshala, I’ve learnt for life! I’m confident to say it as I’ve been practicing at home ever since I concluded the course and honestly I’ve never felt so natural and inspired during my own practice.!! I can easily incorporate the teaching guidance, the flow, the pace, the minor details on explaining the asanas.the relaxation and even pranayama. I was amazed to feel so comfortable in teaching myself and others after such a quick course but for sure a strong, traditional, grounded, reliable and unforgiven training. I could only classify it as ‘WONDERFUL’ ..!!Specially being in Pohkara, Goa – a magical destination!"
+        “It was for sure an incredible journey to have had the course with Rishikul Yogshala, I’ve learnt for life! I’m confident to say it as I’ve been practicing at home ever since I concluded the course and honestly I’ve never felt so natural and inspired during my own practice.!! I can easily incorporate the teaching guidance, the flow, the pace, the minor details on explaining the asanas.the relaxation and even pranayama. I was amazed to feel so comfortable in teaching myself and others after such a quick course but for sure a strong, traditional, grounded, reliable and unforgiven training. I could only classify it as ‘WONDERFUL’ ..!!Specially being in Pohkara, Goa – a magical destination!&quot;
         </p>
       </div>
 
@@ -569,7 +532,7 @@
           </div>
         </div>
         <p className="text-15 text-gray-800 leading-relaxed">
-        We visited Rishikul Yogshala for the second time this February, the first was in July 2013. That visit changed my life so completely and in such a fulfilling way – I just felt drawn back to this school and their teachers. I am so happy I did return. Being around such inspiring, energetic and wise people, I feel truly blessed and moreover,It was for sure an incredible journey to have had the course.with Rishikul Yogshala,I’ve learnt for life! I’m confident to say it as I’ve been practicing at home ever since I concluded the course and honestly I’ve never felt so natural and inspired during my own practice.!! I can easily incorporate the teaching guidance, the flow, the pace, the minor details on explaining the asanas."
+        We visited Rishikul Yogshala for the second time this February, the first was in July 2013. That visit changed my life so completely and in such a fulfilling way – I just felt drawn back to this school and their teachers. I am so happy I did return. Being around such inspiring, energetic and wise people, I feel truly blessed and moreover,It was for sure an incredible journey to have had the course.with Rishikul Yogshala,I’ve learnt for life! I’m confident to say it as I’ve been practicing at home ever since I concluded the course and honestly I’ve never felt so natural and inspired during my own practice.!! I can easily incorporate the teaching guidance, the flow, the pace, the minor details on explaining the asanas.&quot;
         </p>
       </div>
     </div>
@@ -594,7 +557,7 @@
           </div>
         </div>
         <p className="text-15 text-gray-800 leading-relaxed">
-        “It’s hard to review a program that spans a month, but overall I would describe the Rishikul 200hr program in Goa as challenging, life changing, and inspiring. The days were really long, but packed with so much new information that I was never bored. I really connected with each of the six instructors. It was for sure an incredible journey to have had the course with Rishikul Yogshala, I’ve learnt for life! I’m confident to say it as I’ve been practicing at home ever since I concluded the course and honestly I’ve never felt so natural and inspired during my own practice.!! I can easily incorporate the teaching guidance, the flow, the pace, the minor details on explaining the asanas, and cannot thank them enough for the impact they had and will continue to have in my life."
+        “It’s hard to review a program that spans a month, but overall I would describe the Rishikul 200hr program in Goa as challenging, life changing, and inspiring. The days were really long, but packed with so much new information that I was never bored. I really connected with each of the six instructors. It was for sure an incredible journey to have had the course with Rishikul Yogshala, I’ve learnt for life! I’m confident to say it as I’ve been practicing at home ever since I concluded the course and honestly I’ve never felt so natural and inspired during my own practice.!! I can easily incorporate the teaching guidance, the flow, the pace, the minor details on explaining the asanas, and cannot thank them enough for the impact they had and will continue to have in my life.&quot;
         </p>
       </div>
 
@@ -617,7 +580,7 @@
           </div>
         </div>
         <p className="text-15 text-gray-800 leading-relaxed">
-        "There’s one thing for certain, I’m not the same person I was 28 days ago before starting this yoga teacher training program. My life has been changed in the most beautiful and positive sense of the word. There really are not enough thank you’s in the It was for sure an incredible journey to have had the course with Rishikul Yogshala, I’ve learnt for life! I’m confident to say it as I’ve been practicing at home ever since I concluded the course and honestly I’ve never felt so natural and inspired during my own practice.!! I can easily incorporate the teaching guidance, the flow, the pace, the minor details on explaining the asanas, world to fully express the extreme gratitude I feel towards Rishikul Yogashala and its teachers for providing me with this opportunity."
+        &quot;There’s one thing for certain, I’m not the same person I was 28 days ago before starting this yoga teacher training program. My life has been changed in the most beautiful and positive sense of the word. There really are not enough thank you’s in the It was for sure an incredible journey to have had the course with Rishikul Yogshala, I’ve learnt for life! I’m confident to say it as I’ve been practicing at home ever since I concluded the course and honestly I’ve never felt so natural and inspired during my own practice.!! I can easily incorporate the teaching guidance, the flow, the pace, the minor details on explaining the asanas, world to fully express the extreme gratitude I feel towards Rishikul Yogashala and its teachers for providing me with this opportunity.&quot;
         </p>
       </div>
     </div>
