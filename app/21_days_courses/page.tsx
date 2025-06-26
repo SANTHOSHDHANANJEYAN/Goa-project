@@ -51,7 +51,7 @@ const TwentyOneTTPage = () => {
       </div>
 
       <div className="text-center mb-6">
-        <a href="#application">
+        <a href="/contact#InGoa">
           <button className="bg-[#150e70] hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
             Book Your Spot
           </button>
