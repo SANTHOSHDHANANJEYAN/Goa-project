@@ -1,52 +1,52 @@
-"use client";
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
 
-import dynamic from "next/dynamic";
-import { Suspense } from "react";
-
-// Critical fold-first content — loaded immediately
-import SpaHero7 from "@/components/R7days/SpaHero7";
-import About71 from "@/components/R7days/About71";
-import KeySkills7 from "@/components/R7days/KeySkills7";
-import TwoListing7 from "@/components/R7days/TwoListing7";
-
-// Lazy-load below-the-fold components (with no SSR where safe)
-const WhatsIncludes7 = dynamic(() => import("@/components/R7days/WhatsIncludes7"), { ssr: false });
-const OurExcursions7 = dynamic(() => import("@/components/R7days/OurExcursions7"), { ssr: false });
-const OurRooms7 = dynamic(() => import("@/components/R7days/OurRooms7"));
-const RoomSlides7 = dynamic(() => import("@/components/R7days/RoomSlides7"), { ssr: false });
-const OurDinning7 = dynamic(() => import("@/components/R7days/OurDinning7"));
-const DinningSlides7 = dynamic(() => import("@/components/R7days/DinningSlides7"), { ssr: false });
-const DailySchedule7 = dynamic(() => import("@/components/R7days/DailySchedule7"));
-const Importance7 = dynamic(() => import("@/components/R7days/Importance7"));
-const Benefit7 = dynamic(() => import("@/components/R7days/Benefit7"));
-const NearestAirport7 = dynamic(() => import("@/components/R7days/NearestAirport7"));
-const Beauty7 = dynamic(() => import("@/components/R7days/Beauty7"));
-const Faqs7 = dynamic(() => import("@/components/R7days/Faqs7"), { ssr: false });
+// Dynamically import heavy components to lazy-load them
+const SpaHero14 = dynamic(() => import('@/components/R14days/SpaHero14'));
+const About141 = dynamic(() => import('@/components/R14days/About141'));
+const KeySkills14 = dynamic(() => import('@/components/R14days/KeySkills14'));
+const TwoListing14 = dynamic(() => import('@/components/R14days/TwoListing14'));
+const WhatsIncludes14 = dynamic(() => import('@/components/R14days/WhatsIncludes14'));
+const OurExcursions14 = dynamic(() => import('@/components/R14days/OurExcursions14'));
+const OurRooms14 = dynamic(() => import('@/components/R14days/OurRooms14'));
+const RoomSlides14 = dynamic(() => import('@/components/R14days/RoomSlides14'));
+const OurDinning14 = dynamic(() => import('@/components/R14days/OurDinning14'));
+const DinningSlides14 = dynamic(() => import('@/components/R14days/DinningSlides14'));
+const DailySchedule14 = dynamic(() => import('@/components/R14days/DailySchedule14'));
+const Importance14 = dynamic(() => import('@/components/R14days/Importance14'));
+const Benefit14 = dynamic(() => import('@/components/R14days/Benefit14'));
+const NearestAirport14 = dynamic(() => import('@/components/R14days/NearestAirport14'));
+const Beauty14 = dynamic(() => import('@/components/R14days/Beauty14'));
+const Faqs14 = dynamic(() => import('@/components/R14days/Faqs14'));
 
 export default function Page() {
   return (
     <>
-      {/* Top of the page - load immediately */}
-      <SpaHero7 />
-      <About71 />
-      <KeySkills7 />
-      <TwoListing7 />
+      <Head>
+        <title>14-Day Yoga Retreat in Goa | Rishikul Yogshala</title>
+        <meta
+          name="description"
+          content="Experience a transformative 14-day yoga retreat in Goa with Rishikul Yogshala. Daily yoga, organic meals, beachside relaxation, and guided excursions."
+        />
+        <link rel="preload" as="image" href="/your-lcp-image.webp" />
+      </Head>
 
-      {/* Lazy-loaded content */}
-      <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
-        <WhatsIncludes7 />
-        <OurExcursions7 />
-        <OurRooms7 />
-        <RoomSlides7 />
-        <OurDinning7 />
-        <DinningSlides7 />
-        <DailySchedule7 />
-        <Importance7 />
-        <Benefit7 />
-        <NearestAirport7 />
-        <Beauty7 />
-        <Faqs7 />
-      </Suspense>
+      <SpaHero14 />
+      <About141 />
+      <KeySkills14 />
+      <TwoListing14 />
+      <WhatsIncludes14 />
+      <OurExcursions14 />
+      <OurRooms14 />
+      <RoomSlides14 />
+      <OurDinning14 />
+      <DinningSlides14 />
+      <DailySchedule14 />
+      <Importance14 />
+      <Benefit14 />
+      <NearestAirport14 />
+      <Beauty14 />
+      <Faqs14 />
     </>
   );
 }
