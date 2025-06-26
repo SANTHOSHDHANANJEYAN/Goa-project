@@ -4,7 +4,12 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true },
+  optimizeFonts: true,
+  compress: true,
+  images: {
+    loader: 'akamai',
+    path: '/', // Required for static export
+  },
 };
 
 module.exports = nextConfig;
