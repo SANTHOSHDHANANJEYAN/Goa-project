@@ -123,7 +123,7 @@ export default function Home() {
         </section>
         <RetreatsCard />
 
-        <section className="relative py-20 text-center bg-transparent">
+        <section className="relative pb-[4rem] text-center bg-transparent">
           <div className="max-w-5xl mx-auto px-6">
             <h1 className="text-4xl font-bold text-[#150e70] mb-4 animate-slide-up">
               Rishikul Yogshala Goa – Your transformation starts here.
@@ -171,7 +171,7 @@ export default function Home() {
         <GalleryPage />
         <TeacherSlider />
         <Appform />
-                <section className="py-16 md:py-24 bg-transparent relative overflow-hidden">
+                <section className="pt-[2rem] pb-[4rem] bg-transparent relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#150e70] mb-8 text-center text-shadow-md">
               Yoga Alliance

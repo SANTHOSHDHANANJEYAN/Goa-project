@@ -62,7 +62,7 @@ export default function TeacherSlider() {
 
   return (
     <section
-      className="relative overflow-hidden py-20 px-4 sm:px-8 bg-gradient-to-b from-white via-indigo-50 to-indigo-100 "
+      className="relative overflow-hidden pt-[2rem] pb-[5rem] px-4 sm:px-8 bg-gradient-to-b from-white via-indigo-50 to-indigo-100 "
       onMouseEnter={stopAutoSlide}
       onMouseLeave={startAutoSlide}
     >

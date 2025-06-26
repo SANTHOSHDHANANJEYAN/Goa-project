@@ -169,8 +169,7 @@ const CodeOfConduct = () => {
         {/* Left Side: Video Cards */}
         <div>
           <div className="flex items-center gap-2 text-green-700 font-semibold text-xl mb-8">
-            <FaVideo className="text-green-600" />
-            <span>Yogashala Videos</span>
+
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
