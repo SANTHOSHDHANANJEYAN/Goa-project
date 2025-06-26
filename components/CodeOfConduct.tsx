@@ -1,6 +1,7 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
+'use client';
+
+import Image from 'next/image';
+import { useState, memo } from 'react';
 import {
   FaCertificate,
   FaClock,
@@ -9,7 +10,7 @@ import {
   FaBroadcastTower,
   FaUsers,
   FaPlayCircle,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
 type VideoCardProps = {
   title: string;
@@ -17,7 +18,7 @@ type VideoCardProps = {
   thumbnailUrl: string;
 };
 
-const VideoCard = ({ title, videoUrl, thumbnailUrl }: VideoCardProps) => {
+const VideoCard = memo(({ title, videoUrl, thumbnailUrl }: VideoCardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
@@ -27,8 +28,9 @@ const VideoCard = ({ title, videoUrl, thumbnailUrl }: VideoCardProps) => {
         onClick={() => setIsPlaying(!isPlaying)}
         role="button"
         tabIndex={0}
+        aria-label={`Play video: ${title}`}
         onKeyDown={(e) => {
-          if (e.key === "Enter") setIsPlaying(!isPlaying);
+          if (e.key === 'Enter') setIsPlaying(!isPlaying);
         }}
       >
         {!isPlaying ? (
@@ -38,7 +40,9 @@ const VideoCard = ({ title, videoUrl, thumbnailUrl }: VideoCardProps) => {
               alt={title}
               width={400}
               height={192}
-              className="object-cover group-hover:brightness-90 transition"
+              loading="lazy"
+              className="object-cover w-full group-hover:brightness-90 transition"
+              sizes="(max-width: 768px) 100vw, 400px"
             />
             <FaPlayCircle className="absolute top-1/2 left-1/2 text-white text-6xl opacity-80 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
           </>
@@ -47,6 +51,7 @@ const VideoCard = ({ title, videoUrl, thumbnailUrl }: VideoCardProps) => {
             src={videoUrl}
             controls
             autoPlay
+            playsInline
             className="w-full h-auto rounded-lg"
             onEnded={() => setIsPlaying(false)}
           />
@@ -55,7 +60,8 @@ const VideoCard = ({ title, videoUrl, thumbnailUrl }: VideoCardProps) => {
       <h3 className="mt-2 text-gray-900 font-semibold text-lg line-clamp-2">{title}</h3>
     </div>
   );
-};
+});
+VideoCard.displayName = 'VideoCard';
 
 type YouTubeCardProps = {
   title: string;
@@ -63,7 +69,7 @@ type YouTubeCardProps = {
   thumbnailUrl: string;
 };
 
-const YouTubeCard = ({ title, youtubeId, thumbnailUrl }: YouTubeCardProps) => {
+const YouTubeCard = memo(({ title, youtubeId, thumbnailUrl }: YouTubeCardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
@@ -73,8 +79,9 @@ const YouTubeCard = ({ title, youtubeId, thumbnailUrl }: YouTubeCardProps) => {
         onClick={() => setIsPlaying(true)}
         role="button"
         tabIndex={0}
+        aria-label={`Play YouTube video: ${title}`}
         onKeyDown={(e) => {
-          if (e.key === "Enter") setIsPlaying(true);
+          if (e.key === 'Enter') setIsPlaying(true);
         }}
       >
         {!isPlaying ? (
@@ -84,7 +91,9 @@ const YouTubeCard = ({ title, youtubeId, thumbnailUrl }: YouTubeCardProps) => {
               alt={title}
               width={400}
               height={192}
-              className="object-cover group-hover:brightness-90 transition"
+              loading="lazy"
+              className="object-cover w-full group-hover:brightness-90 transition"
+              sizes="(max-width: 768px) 100vw, 400px"
             />
             <FaPlayCircle className="absolute top-1/2 left-1/2 text-white text-6xl opacity-80 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
           </>
@@ -103,50 +112,51 @@ const YouTubeCard = ({ title, youtubeId, thumbnailUrl }: YouTubeCardProps) => {
       <h3 className="mt-2 text-gray-900 font-semibold text-lg line-clamp-2">{title}</h3>
     </div>
   );
-};
+});
+YouTubeCard.displayName = 'YouTubeCard';
 
 const features = [
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
-    title: "100-Hour Multi-Style Yoga TTC",
+    title: '100-Hour Multi-Style Yoga TTC',
     description:
-      "Deepen your foundation with Hatha, Vinyasa, and Ashtanga styles. This compact 100-hour course enhances personal practice and clarity.",
+      'Deepen your foundation with Hatha, Vinyasa, and Ashtanga styles. This compact 100-hour course enhances personal practice and clarity.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
-    title: "200-Hour Multi-Style Yoga TTC",
+    title: '200-Hour Multi-Style Yoga TTC',
     description:
-      "Become a certified yoga teacher with our Yoga Alliance-approved training. Master key techniques, philosophy, and teaching skills.",
+      'Become a certified yoga teacher with our Yoga Alliance-approved training. Master key techniques, philosophy, and teaching skills.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
-    title: "300-Hour Multi-Style Yoga TTC",
+    title: '300-Hour Multi-Style Yoga TTC',
     description:
-      "Advance your knowledge in multi-style yoga and refine your teaching. This course is ideal for deepening your expertise and confidence.",
+      'Advance your knowledge in multi-style yoga and refine your teaching. This course is ideal for deepening your expertise and confidence.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
-    title: "21 Days Immersion Yoga",
+    title: '21 Days Immersion Yoga',
     description:
-      "Immerse in 21 days of intense yoga, healing, and transformation. A complete journey for body, mind, and soul renewal.",
+      'Immerse in 21 days of intense yoga, healing, and transformation. A complete journey for body, mind, and soul renewal.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
-    title: "7 Days Yoga Retreat",
+    title: '7 Days Yoga Retreat',
     description:
-      "Recharge with daily yoga, nature, and mindful activities. A perfect getaway to relax, unwind, and reconnect.",
+      'Recharge with daily yoga, nature, and mindful activities. A perfect getaway to relax, unwind, and reconnect.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
-    title: "14 Days Yoga Retreat",
+    title: '14 Days Yoga Retreat',
     description:
-      "Enjoy deeper relaxation and self-care in this 2-week retreat. Balance your lifestyle with yoga, meditation, and wellness.",
+      'Enjoy deeper relaxation and self-care in this 2-week retreat. Balance your lifestyle with yoga, meditation, and wellness.',
   },
   {
     icon: <FaUsers className="text-green-600 text-3xl" />,
-    title: "21 Days Yoga Retreat",
+    title: '21 Days Yoga Retreat',
     description:
-      "Go inward with a soulful 3-week yoga journey of growth. Experience lasting peace, strength, and spiritual clarity.",
+      'Go inward with a soulful 3-week yoga journey of growth. Experience lasting peace, strength, and spiritual clarity.',
   },
 ];
 
@@ -166,47 +176,41 @@ const CodeOfConduct = () => {
       </div>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-start">
-        {/* Left Side: Video Cards */}
-        <div>
-          <div className="flex items-center gap-2 text-green-700 font-semibold text-xl mb-8">
-
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <VideoCard
-              title="Rishikul Yogshala Venue"
-              videoUrl="/Videos/Venue.mov"
-              thumbnailUrl="/Thumbnail/venue.png"
-            />
-            <VideoCard
-              title="Rishikul Yogshala Meals"
-              videoUrl="/gallery/MEALS.mp4"
-              thumbnailUrl="/Thumbnail/food.png"
-            />
-            <VideoCard
-              title="Rishikul Yogshala Opening Ceremony"
-              videoUrl="/gallery/OPENING CEREMONY.mp4"
-              thumbnailUrl="/Thumbnail/Opening ceremony .png"
-            />
-            <VideoCard
-              title="Rishikul Yogshala Closing Ceremony"
-              videoUrl="/gallery/CLOSING CEREMONY.mp4"
-              thumbnailUrl="/Thumbnail/Closing  .png"
-            />
-            <YouTubeCard
-              title="Rishikul Yogshala Review-1"
-              youtubeId="1oxK0cYax9s" // ✅ Cleaned YouTube ID
-              thumbnailUrl="/Thumbnail/review1.png"
-            />
-            <YouTubeCard
-              title="Rishikul Yogshala Review-2"
-              youtubeId="s6VazbcpPko?si=_Uily9ytRxbwB9k9"
-              thumbnailUrl="/Thumbnail/review2.png"
-            />
-          </div>
+        {/* Left: Videos */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <VideoCard
+            title="Rishikul Yogshala Venue"
+            videoUrl="/Videos/Venue.mov"
+            thumbnailUrl="/Thumbnail/venue.png"
+          />
+          <VideoCard
+            title="Rishikul Yogshala Meals"
+            videoUrl="/gallery/MEALS.mp4"
+            thumbnailUrl="/Thumbnail/food.png"
+          />
+          <VideoCard
+            title="Rishikul Yogshala Opening Ceremony"
+            videoUrl="/gallery/OPENING CEREMONY.mp4"
+            thumbnailUrl="/Thumbnail/Opening ceremony .png"
+          />
+          <VideoCard
+            title="Rishikul Yogshala Closing Ceremony"
+            videoUrl="/gallery/CLOSING CEREMONY.mp4"
+            thumbnailUrl="/Thumbnail/Closing  .png"
+          />
+          <YouTubeCard
+            title="Rishikul Yogshala Review-1"
+            youtubeId="1oxK0cYax9s"
+            thumbnailUrl="/Thumbnail/review1.png"
+          />
+          <YouTubeCard
+            title="Rishikul Yogshala Review-2"
+            youtubeId="s6VazbcpPko"
+            thumbnailUrl="/Thumbnail/review2.png"
+          />
         </div>
 
-        {/* Right Side: Feature List */}
+        {/* Right: Features */}
         <div className="space-y-10 mt-4">
           {features.map((item, index) => (
             <div key={index} className="flex items-start gap-4">
