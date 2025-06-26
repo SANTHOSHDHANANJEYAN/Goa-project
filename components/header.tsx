@@ -14,31 +14,31 @@ const leftNavigation = [
   {
     name: "Courses",
     dropdown: [
-      { name: "50 Hr Multi-Style-Yoga TTC", href: "/50_hrs_yoga_ttc" },
-      { name: "100 Hr Multi-Style-Yoga TTC", href: "/100_hrs_yoga_ttc" },
-      { name: "200 Hr Multi-Style-Yoga TTC", href: "/200_hrs_yoga_ttc" },
-      { name: "300 Hr Multi-Style-Yoga TTC", href: "/300_hrs_yoga_ttc" },
-      { name: "21 Days Yoga Immersion Course", href: "/21_days_courses" }
+      { name: "50 Hr Multi-Style-Yoga TTC", href: "/50_hrs_yoga_ttc#InGoa" },
+      { name: "100 Hr Multi-Style-Yoga TTC", href: "/100_hrs_yoga_ttc#InGoa" },
+      { name: "200 Hr Multi-Style-Yoga TTC", href: "/200_hrs_yoga_ttc#InGoa" },
+      { name: "300 Hr Multi-Style-Yoga TTC", href: "/300_hrs_yoga_ttc#InGoa" },
+      { name: "21 Days Yoga Immersion Course", href: "/21_days_courses#InGoa" }
     ]
   },
   {
     name: "Retreats",
     dropdown: [
-      { name: "7 Days Yoga Holiday Retreat", href: "/7_days_retreat#" },
-      { name: "14 Days Yoga Detox Retreat", href: "/14_days_retreat" },
-      { name: "21 Days Yoga Wellness Retreat", href: "/21_days_retreat" }
+      { name: "7 Days Yoga Holiday Retreat", href: "/7_days_retreat#InGoa" },
+      { name: "14 Days Yoga Detox Retreat", href: "/14_days_retreat#InGoa" },
+      { name: "21 Days Yoga Wellness Retreat", href: "/21_days_retreat#InGoa" }
     ]
   },
-  { name: "Our Teachers", href: "/About_Teachers" },
-  { name: "Our Reviews", href: "/about#team" },
-  { name: "Blogs", href: "/Blog" },
-  { name: "Gallery", href: "/gallery" }
+  { name: "Our Teachers", href: "/About_Teachers#InGoa" },
+  { name: "Our Reviews", href: "/about#InGoa" },
+  { name: "Blogs", href: "/Blog#InGoa" },
+  { name: "Gallery", href: "/gallery#InGoa" }
 ];
 
 const rightNavigation = [
-  { name: "About Us", href: "/Aboutyogshala" },
-  { name: "Contact Us", href: "/contact" },
-  { name: "Payment", href: "/contact" }
+  { name: "About Us", href: "/Aboutyogshala#InGoa" },
+  { name: "Contact Us", href: "/contact#InGoa" },
+  { name: "Payment", href: "/contact#InGoa" }
 ];
 
 export default function Header() {
