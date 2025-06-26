@@ -186,12 +186,12 @@ const CodeOfConduct = () => {
             <VideoCard
               title="Rishikul Yogshala Opening Ceremony"
               videoUrl="/gallery/OPENING CEREMONY.mp4"
-              thumbnailUrl="/Thumbnail/opening.png"
+              thumbnailUrl="/Thumbnail/Opening ceremony .png"
             />
             <VideoCard
               title="Rishikul Yogshala Closing Ceremony"
               videoUrl="/gallery/CLOSING CEREMONY.mp4"
-              thumbnailUrl="/Thumbnail/closing.png"
+              thumbnailUrl="/Thumbnail/Closing  .png"
             />
             <YouTubeCard
               title="Rishikul Yogshala Review-1"

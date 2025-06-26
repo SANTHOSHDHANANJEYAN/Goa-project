@@ -134,9 +134,11 @@ export default function Home() {
             <p className="text-lg text-gray-900 dark:text-gray-400 mb-10 animate-slide-up animation-delay-400">
               Whether you’re just beginning or have walked this path for years, you belong.
             </p>
-            <button className="bg-[#150e70] hover:bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-md transition">
-              YOUR STORIES
-            </button>
+            <Link href="/Aboutyogshala">
+              <button className="bg-[#150e70] hover:bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-md transition">
+                YOUR STORIES
+              </button>
+            </Link>
             <div className="mt-10 rounded-[3rem] overflow-hidden shadow-xl">
               <Image
                 src="/H2.jpg"
