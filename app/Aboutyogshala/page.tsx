@@ -48,7 +48,7 @@ export default function AboutPage() {
       </section>
 
       {/* Rishikul Yogshala Section */}
-      <section className="bg-transparent px-6 py-16 lg:px-24 max-w-7xl mx-auto">
+      <section className="bg-transparent px-6 pb-[4rem] lg:px-24 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold text-[#3E7079] mb-6">
@@ -74,7 +74,7 @@ export default function AboutPage() {
       </section>
 
       {/* Yoga Alliance Certification Section */}
-      <section className="bg-[#f7f9f8] pb-[5rem ] px-6 lg:px-24">
+      <section className="bg-[#f7f9f8] py-20 px-6 lg:px-24">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
