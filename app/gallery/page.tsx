@@ -42,7 +42,7 @@ export default function GalleryPage() {
                   height={400}
                   className="w-full h-[29rem] object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 backdrop-blur-sm">
+                <div className="absolute inset-x-0 bottom-0 p-4 backdrop-blur-sm">
                   <h2 className="text-white text-lg font-semibold drop-shadow-sm">{title}</h2>
                 </div>
               </motion.div>
