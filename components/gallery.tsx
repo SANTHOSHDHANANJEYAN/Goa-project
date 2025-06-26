@@ -56,7 +56,7 @@ export default function GalleryPage() {
 
   return (
     <div className="bg-transparent px-4 py-10 sm:px-6 lg:px-16">
-      <h1 className="text-4xl sm:text-4xl md:text-4xl font-extrabold text-center text-indigo-800 tracking-wider drop-shadow mb-10">
+      <h1 className="text-4xl font-extrabold text-center text-indigo-800 tracking-wider drop-shadow mb-10">
         Gallery
       </h1>
 
@@ -75,10 +75,12 @@ export default function GalleryPage() {
             <Image
               src={src}
               alt={`Gallery image ${i + 1}`}
-              fill
-              className="object-cover object-center rounded-xl cursor-pointer"
+              width={320}
+              height={400}
+              className="object-cover object-center w-full h-full rounded-xl cursor-pointer"
               sizes="(max-width: 480px) 85vw, (max-width: 768px) 45vw, 320px"
-              priority={i < 6}
+              priority={i === 0}
+              {...(i !== 0 && { loading: 'lazy' })}
             />
           </motion.div>
         ))}
@@ -106,6 +108,7 @@ export default function GalleryPage() {
                 alt="Selected"
                 width={1200}
                 height={800}
+                loading="lazy"
                 className="rounded-2xl object-contain w-full max-h-[75vh]"
               />
 
@@ -134,17 +137,18 @@ export default function GalleryPage() {
           </motion.div>
         )}
       </AnimatePresence>
-       <div className="text-center mt-12">
-            <a
-              href="/gallery"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-[#150e70] text-white rounded-full hover:bg-yellow-500 transition"
-              aria-label="More reviews on Yoga Alliance"
-            >
-              SHOW MORE
-            </a>
-          </div>
+
+      <div className="text-center mt-12">
+        <a
+          href="/gallery"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-[#150e70] text-white rounded-full hover:bg-yellow-500 transition"
+          aria-label="More reviews on Yoga Alliance"
+        >
+          SHOW MORE
+        </a>
+      </div>
     </div>
   );
 }

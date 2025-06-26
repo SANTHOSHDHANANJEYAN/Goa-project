@@ -2,27 +2,30 @@
 
 import React from "react";
 import Image from "next/image";
-import TestimonialCarousel from "@/components/testimonials-section";
-import FAQSection from "@/components/FAQSection";
-import AboutTraining21 from "@/components/21days/AboutTraining21";
-import CurriculumSection21 from "@/components/21days/CurriculumSection21";
-import ActivitiesSection21 from "@/components/21days/ActivitiesSection21";
-import BstchScheduleTable21 from "@/components/21days/BstchScheduleTable21";
-import TestimonialSection21 from "@/components/21days/TestimonialSection21";
-import YogaHighlights21 from "@/components/21days/YogaHighlights21";
-import ApplicationForm21 from "@/components/21days/ApplicationForm21";
-import TeachersSection21 from "@/components/21days/TeachersSection21";
-import Schedule21 from "@/components/21days/Schedule21";
-import OurDinning7 from "@/components/R7days/OurDinning7";
-import DinningSlides7 from "@/components/R7days/DinningSlides7";
-import RoomSlides7 from "@/components/R7days/RoomSlides7";
-import OurRooms7 from "@/components/R7days/OurRooms7";
+import dynamic from "next/dynamic";
+
+// Lazy load heavy components
+const TestimonialCarousel = dynamic(() => import("@/components/testimonials-section"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
+const AboutTraining21 = dynamic(() => import("@/components/21days/AboutTraining21"));
+const CurriculumSection21 = dynamic(() => import("@/components/21days/CurriculumSection21"));
+const ActivitiesSection21 = dynamic(() => import("@/components/21days/ActivitiesSection21"));
+const BstchScheduleTable21 = dynamic(() => import("@/components/21days/BstchScheduleTable21"));
+const TestimonialSection21 = dynamic(() => import("@/components/21days/TestimonialSection21"));
+const YogaHighlights21 = dynamic(() => import("@/components/21days/YogaHighlights21"));
+const ApplicationForm21 = dynamic(() => import("@/components/21days/ApplicationForm21"));
+const TeachersSection21 = dynamic(() => import("@/components/21days/TeachersSection21"));
+const Schedule21 = dynamic(() => import("@/components/21days/Schedule21"));
+const OurDinning7 = dynamic(() => import("@/components/R7days/OurDinning7"));
+const DinningSlides7 = dynamic(() => import("@/components/R7days/DinningSlides7"));
+const RoomSlides7 = dynamic(() => import("@/components/R7days/RoomSlides7"));
+const OurRooms7 = dynamic(() => import("@/components/R7days/OurRooms7"));
 
 const TwentyOneTTPage = () => {
   return (
     <div className="mt-24 max-w-6xl mx-auto text-gray-800">
       <div className="text-center mb-6">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#150e70]">
           21 days Yoga Immersion Course
         </h2>
         <p className="text-[1.5rem] text-[#150e70]">In Goa</p>
@@ -42,12 +45,12 @@ const TwentyOneTTPage = () => {
         </div>
       </div>
 
-      <div className="flex justify-center gap-6 mb-6">
-        <p className="text-sm text-[#150e70]">Duration-21-Days</p>
-        <p className="text-sm text-[#150e70]">Language-English</p>
-        <p className="text-sm text-[#150e70]">Module: Residential with Meals</p>
-        <p className="text-sm text-[#150e70]">Level: Practice</p>
-        <p className="text-sm text-[#150e70]">Certification: YACEP</p>
+      <div className="flex justify-center gap-6 mb-6 text-sm text-[#150e70] flex-wrap">
+        <p>Duration-21-Days</p>
+        <p>Language-English</p>
+        <p>Module: Residential with Meals</p>
+        <p>Level: Practice</p>
+        <p>Certification: YACEP</p>
       </div>
 
       <div className="text-center mb-6">
@@ -58,14 +61,14 @@ const TwentyOneTTPage = () => {
         </a>
       </div>
 
-      <div className="flex justify-center items-center bg-transparent">
-        <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-[800px]">
+      <div className="flex justify-center">
+        <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-full max-w-[800px]">
           <Image
             src="/gallery/5.jpg"
             alt="Yoga retreat in Bali"
             width={1200}
             height={900}
-            className="object-cover max-h-[500px]"
+            className="object-cover max-h-[500px] w-full"
             priority
           />
         </div>
@@ -76,7 +79,7 @@ const TwentyOneTTPage = () => {
 
       <section className="mt-20 px-4 sm:px-6 lg:px-8">
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
-          Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
+          Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
         </h2>
         <h3 className="text-xs sm:text-sm md:text-base font-semibold text-center mb-8 text-[#150e70] max-w-3xl mx-auto">
           Education experience covering all key aspects of the ancient practice and philosophy of yoga
@@ -99,20 +102,24 @@ const TwentyOneTTPage = () => {
       <ActivitiesSection21 />
       <BstchScheduleTable21 />
       <TestimonialSection21 />
-      <TestimonialCarousel testimonials={[
-        {
-          quote: "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional...",
-          author: "Charmaine Wardenberg",
-        },
-        {
-          quote: "Rishikul Yogshala was absolutely amazing...",
-          author: "Dimple Malkan",
-        },
-        {
-          quote: "Very good school! They have provided detailed training...",
-          author: "Varsha Ambardekar",
-        },
-      ]} />
+
+      <TestimonialCarousel
+        testimonials={[
+          {
+            quote: "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional...",
+            author: "Charmaine Wardenberg",
+          },
+          {
+            quote: "Rishikul Yogshala was absolutely amazing...",
+            author: "Dimple Malkan",
+          },
+          {
+            quote: "Very good school! They have provided detailed training...",
+            author: "Varsha Ambardekar",
+          },
+        ]}
+      />
+
       <YogaHighlights21 />
 
       <FAQSection
@@ -140,16 +147,21 @@ const TwentyOneTTPage = () => {
             <Image
               src="/YAlogo-removebg-preview.png"
               alt="Yoga Visual Icon"
-              layout="fill"
-              objectFit="contain"
+              width={80}
+              height={80}
+              className="object-contain"
             />
           </div>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10 max-w-lg mx-auto sm:mx-0">
             {["/nw200.png", "/nw300.png", "/nwrpys.png", "/nwyacep.png"].map((src, i) => (
               <div key={i} className="flex flex-col items-center w-[4rem] h-[6rem] sm:w-[5rem] sm:h-[8rem]">
-                <div className="relative w-full h-full mb-2">
-                  <Image src={src} alt={`Badge ${i}`} layout="fill" objectFit="contain" />
-                </div>
+                <Image
+                  src={src}
+                  alt={`Badge ${i}`}
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
               </div>
             ))}
           </div>

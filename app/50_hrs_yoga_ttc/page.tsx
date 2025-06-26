@@ -1,22 +1,24 @@
 "use client";
 
-import React from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import TestimonialCarousel from "@/components/testimonials-section";
-import FAQSection from "@/components/FAQSection";
-import ApplicationForm from "@/components/50hr/ApplicationForm";
-import CurriculumSection from "@/components/50hr/CurriculumSection";
-import ActivitiesSection from "@/components/50hr/ActivitiesSection";
-import BatchScheduleTable from "@/components/50hr/BatchScheduleTable";
-import TestimonialSection from "@/components/50hr/TestimonialSection";
-import AboutTraining from "@/components/50hr/AboutTraining";
-import YogaHighlights from "@/components/50hr/YogaHighlights";
-import TeachersSection from "@/components/50hr/TeachersSection";
-import Schedule from "@/components/50hr/Schedule";
-import OurDinning7 from "@/components/R7days/OurDinning7";
-import OurRooms7 from "@/components/R7days/OurRooms7";
-import DinningSlides7 from "@/components/R7days/DinningSlides7";
-import RoomSlides7 from "@/components/R7days/RoomSlides7";
+
+// Dynamically import non-critical components
+const TestimonialCarousel = dynamic(() => import("@/components/testimonials-section"), { ssr: false });
+const FAQSection = dynamic(() => import("@/components/FAQSection"), { ssr: false });
+const ApplicationForm = dynamic(() => import("@/components/50hr/ApplicationForm"), { ssr: false });
+const CurriculumSection = dynamic(() => import("@/components/50hr/CurriculumSection"), { ssr: false });
+const ActivitiesSection = dynamic(() => import("@/components/50hr/ActivitiesSection"), { ssr: false });
+const BatchScheduleTable = dynamic(() => import("@/components/50hr/BatchScheduleTable"), { ssr: false });
+const TestimonialSection = dynamic(() => import("@/components/50hr/TestimonialSection"), { ssr: false });
+const AboutTraining = dynamic(() => import("@/components/50hr/AboutTraining"), { ssr: false });
+const YogaHighlights = dynamic(() => import("@/components/50hr/YogaHighlights"), { ssr: false });
+const TeachersSection = dynamic(() => import("@/components/50hr/TeachersSection"), { ssr: false });
+const Schedule = dynamic(() => import("@/components/50hr/Schedule"), { ssr: false });
+const OurDinning7 = dynamic(() => import("@/components/R7days/OurDinning7"), { ssr: false });
+const OurRooms7 = dynamic(() => import("@/components/R7days/OurRooms7"), { ssr: false });
+const DinningSlides7 = dynamic(() => import("@/components/R7days/DinningSlides7"), { ssr: false });
+const RoomSlides7 = dynamic(() => import("@/components/R7days/RoomSlides7"), { ssr: false });
 
 const FiftyHourTTPage = () => {
   return (
@@ -90,7 +92,7 @@ const FiftyHourTTPage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {["hatha.png", "vinyasa yoga.jpg", "ashtanga.jpg"].map((src, idx) => (
             <div key={idx} className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-              <Image src={`/HVA/${src}`} alt={`Yoga ${idx + 1}`} fill className="object-cover" loading="lazy" />
+              <Image src={`/HVA/${src}`} alt={`Yoga ${idx + 1}`} fill className="object-cover w-full h-full" loading="lazy" />
             </div>
           ))}
         </div>
@@ -109,13 +111,11 @@ const FiftyHourTTPage = () => {
       <TestimonialCarousel
         testimonials={[
           {
-            quote:
-              "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional...",
+            quote: "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional...",
             author: "Charmaine Wardenberg",
           },
           {
-            quote:
-              "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training...",
+            quote: "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training...",
             author: "Dimple Malkan",
           },
           {
@@ -130,38 +130,14 @@ const FiftyHourTTPage = () => {
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
-          {
-            question: "1. Where is your yoga teacher training course located?",
-            answer: "Our course is located in Goa...",
-          },
-          {
-            question: "2. What style of yoga do you teach?",
-            answer: "We specialize in Hatha Vinyasa yoga...",
-          },
-          {
-            question: "3. What is the duration?",
-            answer: "Typically spans 12 days for the 100-hr course.",
-          },
-          {
-            question: "4. Prerequisites?",
-            answer: "Basic understanding and regular practice of yoga.",
-          },
-          {
-            question: "5. What does a typical day look like?",
-            answer: "Includes yoga, meditation, theory classes, and more.",
-          },
-          {
-            question: "6. Is it conducted in English?",
-            answer: "Yes, to cater to international students.",
-          },
-          {
-            question: "7. Who are the instructors?",
-            answer: "Professionals certified in Hatha Vinyasa yoga.",
-          },
-          {
-            question: "8. Certification?",
-            answer: "Yoga Alliance accredited certification.",
-          },
+          { question: "1. Where is your yoga teacher training course located?", answer: "Our course is located in Goa..." },
+          { question: "2. What style of yoga do you teach?", answer: "We specialize in Hatha Vinyasa yoga..." },
+          { question: "3. What is the duration?", answer: "Typically spans 12 days for the 100-hr course." },
+          { question: "4. Prerequisites?", answer: "Basic understanding and regular practice of yoga." },
+          { question: "5. What does a typical day look like?", answer: "Includes yoga, meditation, theory classes, and more." },
+          { question: "6. Is it conducted in English?", answer: "Yes, to cater to international students." },
+          { question: "7. Who are the instructors?", answer: "Professionals certified in Hatha Vinyasa yoga." },
+          { question: "8. Certification?", answer: "Yoga Alliance accredited certification." },
         ]}
       />
 
@@ -176,8 +152,9 @@ const FiftyHourTTPage = () => {
             <Image
               src="/YAlogo-removebg-preview.png"
               alt="Yoga Visual Icon"
-              layout="fill"
-              objectFit="contain"
+              width={80}
+              height={120}
+              className="object-contain w-full h-full"
             />
           </div>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10 max-w-lg mx-auto sm:mx-0">
@@ -187,8 +164,9 @@ const FiftyHourTTPage = () => {
                   <Image
                     src={`/nw${level.toLowerCase()}.png`}
                     alt={`RYS ${level} Badge`}
-                    layout="fill"
-                    objectFit="contain"
+                    width={80}
+                    height={120}
+                    className="object-contain w-full h-full"
                   />
                 </div>
               </div>
