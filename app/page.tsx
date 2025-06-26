@@ -50,7 +50,7 @@ export default function Home() {
       Awaken your spirit and embrace peace by the ocean breeze.
     </p>
     <div className="flex justify-center gap-4 animate-fade-in animation-delay-600">
-      <Link href="/about" passHref>
+      <Link href="/Aboutyogshala" passHref>
         <Button
           size="lg"
           className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2"
@@ -64,7 +64,7 @@ export default function Home() {
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <path d="/Aboutyogshala#InGoa" />
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
           Learn More
         </Button>
