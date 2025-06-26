@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 md:py-20 bg-muted">
+      <section className="py-20 mt-[5.5rem] bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
@@ -37,7 +37,7 @@ export default function AboutPage() {
           </div>
           <div className="flex justify-center">
             <Image
-              src="/boat.png"
+              src="/aboutpics/about1.png"
               alt="Goa Houseboat"
               width={600}
               height={400}
@@ -63,7 +63,7 @@ export default function AboutPage() {
           </div>
           <div className="flex justify-center">
             <Image
-              src="/e0ae025d-8191-46ca-8905-a0a419f4090d.png"
+              src="/aboutpics/about2.png"
               alt="Rishikul Yogshala Group"
               width={600}
               height={400}
@@ -74,7 +74,7 @@ export default function AboutPage() {
       </section>
 
       {/* Yoga Alliance Certification Section */}
-      <section className="bg-[#f7f9f8] py-20 px-6 lg:px-24">
+      <section className="bg-[#f7f9f8] pb-[5rem ] px-6 lg:px-24">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
