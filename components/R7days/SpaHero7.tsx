@@ -27,7 +27,7 @@ const SpaHero7: React.FC = () => {
             Explore Program
           </a>
           <a
-            href="#contact"
+            href="/contact#InGoa"
             className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-medium px-8 py-3 rounded-full duration-300"
           >
             Book Now
