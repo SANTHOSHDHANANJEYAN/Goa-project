@@ -45,7 +45,7 @@ export default function ContactPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6">GET IN TOUCH</h1>
             <p className="text-lg text-gray-600">
-              We're here to answer your questions and welcome you to Rishikul Yogshala Goa portal.
+              We&apos;re here to answer your questions and welcome you to Rishikul Yogshala Goa portal.
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function ContactPage() {
             <div>
               <h2 className="font-serif text-3xl mb-6">Contact Information</h2>
               <p className="text-lg text-gray-600 mb-8">
-                Have questions about our classes, workshops, or how to get started? Reach out to us and we'll be happy to help.
+                Have questions about our classes, workshops, or how to get started? Reach out to us and we&apos;ll be happy to help.
               </p>
               <div className="space-y-6 mb-10">
                 <div className="flex items-start">
