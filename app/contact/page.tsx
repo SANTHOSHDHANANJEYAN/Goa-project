@@ -29,7 +29,8 @@ const formSchema = z.object({
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  
+  const [error, setError] = useState('');
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,33 +42,37 @@ export default function ContactPage() {
     },
   });
 
-async function onSubmit(data: z.infer<typeof formSchema>) {
-  setIsSubmitting(true);
+  async function onSubmit(data: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    setError('');
 
-  try {
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const response = await fetch('https://formsubmit.io/send/YOUR_EMAIL@DOMAIN.COM', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          ...data,
+          _template: 'table',
+          _autoresponse: 'Thank you for contacting us. We will get back to you soon!',
+        }),
+      });
 
-    if (!res.ok) {
-      throw new Error('Failed to send email');
+      if (response.ok) {
+        setIsSuccess(true);
+        form.reset();
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        setError('Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setError('Failed to send. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setIsSuccess(true);
-    form.reset();
-    setTimeout(() => setIsSuccess(false), 5000);
-  } catch (err) {
-    console.error(err);
-    alert('Something went wrong. Please try again later.');
-  } finally {
-    setIsSubmitting(false);
   }
-}
-
 
   return (
     <div className="bg-white text-gray-800 mt-[3rem]">
@@ -85,6 +90,7 @@ async function onSubmit(data: z.infer<typeof formSchema>) {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Contact Info */}
             <div>
               <h2 className="font-serif text-3xl mb-6">Contact Information</h2>
               <p className="text-lg text-gray-600 mb-8">
@@ -133,6 +139,7 @@ async function onSubmit(data: z.infer<typeof formSchema>) {
               </div>
             </div>
 
+            {/* Form Section */}
             <div className="rounded-lg p-8 bg-gray-50 shadow">
               <h2 className="font-serif text-2xl mb-6">Send Us a Message</h2>
 
@@ -140,6 +147,11 @@ async function onSubmit(data: z.infer<typeof formSchema>) {
                 <div className="bg-green-100 border border-green-300 text-green-700 rounded-lg p-4 mb-6">
                   <p className="font-medium">Your message has been sent!</p>
                   <p className="text-sm mt-1">We&apos;ll get back to you as soon as possible.</p>
+                </div>
+              )}
+              {error && (
+                <div className="bg-red-100 border border-red-300 text-red-700 rounded-lg p-4 mb-6">
+                  <p>{error}</p>
                 </div>
               )}
 
@@ -221,7 +233,11 @@ async function onSubmit(data: z.infer<typeof formSchema>) {
                     )}
                   />
 
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white" disabled={isSubmitting}>
+                  <Button
+                    type="submit"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                    disabled={isSubmitting}
+                  >
                     {isSubmitting ? (
                       <span className="flex items-center">
                         <span className="animate-spin mr-2">⟳</span> Sending...
