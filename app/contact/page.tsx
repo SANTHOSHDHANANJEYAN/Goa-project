@@ -53,7 +53,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 mt-[3rem]">
       <section className="pt-[4rem]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
