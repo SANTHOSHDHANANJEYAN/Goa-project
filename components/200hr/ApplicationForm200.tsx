@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const FreeManualSignup: React.FC = () => {
   return (
-    <section className="relative bg-transparent py-20 text-center overflow-hidden">
+    <section className="relative bg-transparent pb-[4rem] text-center overflow-hidden">
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
       <div className="relative z-10 max-w-4xl mx-auto px-4 flex flex-col items-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] mb-4">

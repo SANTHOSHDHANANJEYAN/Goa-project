@@ -22,7 +22,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ testimonials 
   }, [testimonials.length]);
 
   return (
-    <section className="py-16 bg-purple-50">
+    <section className="pb-[4rem] bg-[transparent]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#150e70]">
           What Our Graduates Say

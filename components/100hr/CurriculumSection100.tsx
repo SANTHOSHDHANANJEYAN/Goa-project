@@ -69,7 +69,7 @@ const curriculum = [
 
 const CurriculumSection100: React.FC = () => {
   return (
-    <section className="relative py-28 px-4 sm:px-10 bg-transparent overflow-hidden">
+    <section className="relative pt-[4rem] px-4 sm:px-10 bg-transparent overflow-hidden">
       {/* Floating Sparkle */}
       <div className="absolute top-10 left-10 z-0 opacity-10">
         <Sparkles size={180} strokeWidth={0.8} />

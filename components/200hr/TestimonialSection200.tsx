@@ -22,7 +22,7 @@ const TestimonialSection: React.FC = () => {
   const [playing, setPlaying] = useState<number | null>(null);
 
   return (
-    <section className="relative text-center py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative text-center py-12  px-4 sm:px-6 lg:px-8">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-[#150e70]">
         Testimonials
       </h2>

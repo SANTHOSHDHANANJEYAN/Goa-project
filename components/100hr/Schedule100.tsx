@@ -8,7 +8,7 @@ export default function Schedule100() {
   const videoUrl = '/Videos/12daysvideo.mov'; // Replace with your actual local or remote video URL
 
   return (
-    <section className="w-full bg-green-50 py-12 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-[transparent]  px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row gap-12 max-w-7xl mx-auto">
         {/* Left Side: Daily Schedule */}
         <div className="md:w-1/2">

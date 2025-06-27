@@ -22,7 +22,7 @@ const OurRooms7 = dynamic(() => import("@/components/R7days/OurRooms7"));
 const RoomSlides7 = dynamic(() => import("@/components/R7days/RoomSlides7"));
 
 const TwoHundredHourTTPage = () => (
-  <div className="mt-24 max-w-7xl mx-auto text-gray-800">
+  <div className="mt-24 max-w-6xl text-gray-800">
     {/* Header */}
     <div className="text-center mb-6">
       <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mb-4">
@@ -177,37 +177,41 @@ const TwoHundredHourTTPage = () => (
     <ApplicationForm200 />
 
     {/* Certificate Section */}
-    <section className="text-center mb-8 relative">
-      <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
-        After Completing the Course...
-      </h3>
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 pb-4">
-        <Image
-          src="/YAlogo-removebg-preview.png"
-          alt="Yoga Alliance Logo"
-          width={80}
-          height={80}
-          className="object-contain"
-        />
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-10 max-w-lg">
-          {["200", "300", "RPYS", "YACEP"].map((level) => (
+      <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
+        <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
+          After Completing the Course...
+        </h3>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 pb-4">
+          <div className="relative w-[4rem] h-[6rem] sm:w-[5rem] sm:h-[8rem] mx-auto sm:mx-0">
             <Image
-              key={level}
-              src={`/nw${level.toLowerCase()}.png`}
-              alt={`RYS ${level} Badge`}
+              src="/YAlogo-removebg-preview.png"
+              alt="Yoga Visual Icon"
               width={80}
-              height={80}
-              className="object-contain"
-              loading="lazy"
+              height={120}
+              className="object-contain w-full h-full"
             />
-          ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 max-w-lg mx-auto sm:mx-0">
+            {["200", "300", "RPYS", "YACEP"].map((level, i) => (
+              <div key={i} className="flex flex-col items-center w-[4rem] h-[6rem] sm:w-[5rem] sm:h-[8rem]">
+                <div className="relative w-full h-full mb-2">
+                  <Image
+                    src={`/nw${level.toLowerCase()}.png`}
+                    alt={`RYS ${level} Badge`}
+                    width={80}
+                    height={120}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      <p className="text-sm sm:text-base text-[#150e70] max-w-md mx-auto leading-relaxed">
-        You’ll receive a Yoga Alliance certificate —<br />
-        internationally recognized and accepted.
-      </p>
-    </section>
+        <p className="text-medium text-[#150e70] max-w-md mx-auto leading-relaxed">
+          You’ll receive a Yoga Alliance certificate —<br />
+          internationally recognized and accepted.
+        </p>
+      </section>
   </div>
 );
 
