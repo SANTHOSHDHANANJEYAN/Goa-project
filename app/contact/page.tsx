@@ -1,14 +1,14 @@
 'use client';
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
+import { useState } from "react";
+import Image from "next/image";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import {
   Form,
   FormControl,
@@ -16,39 +16,46 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
+} from "@/components/ui/form";
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters' }),
-  email: z.string().email({ message: 'Please enter a valid email address' }),
+  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
+  email: z.string().email({ message: "Please enter a valid email address" }),
   phone: z.string().optional(),
-  subject: z.string().min(2, { message: 'Subject must be at least 2 characters' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters' }),
+  subject: z.string().min(2, { message: "Subject must be at least 2 characters" }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
 });
 
 export default function ContactPage() {
-  const [sent, setSent] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
     },
   });
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    const message = `Hello! I am ${data.name}%0A
-Email: ${data.email}%0A
-Phone: ${data.phone || 'N/A'}%0A
-Subject: ${data.subject}%0A
-Message: ${data.message}`;
+    const to = "santhoshd318@gmail.com"; // Replace with your email
+    const subject = encodeURIComponent(data.subject);
+    const body = encodeURIComponent(
+      `Hi,\n\nYou have a new message from your website contact form:\n\n` +
+      `Name: ${data.name}\n` +
+      `Email: ${data.email}\n` +
+      `Phone: ${data.phone || 'N/A'}\n\n` +
+      `Message:\n${data.message}\n\n` +
+      `Regards,\n${data.name}`
+    );
 
-    const whatsappURL = `https://wa.me/919360270318?text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL, '_blank');
-    setSent(true);
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+    window.open(gmailURL, '_blank');
+
+    setSubmitted(true);
     form.reset();
   };
 
@@ -121,9 +128,9 @@ Message: ${data.message}`;
             <div className="rounded-lg p-8 bg-gray-50 shadow">
               <h2 className="font-serif text-2xl mb-6">Send Us a Message</h2>
 
-              {sent && (
+              {submitted && (
                 <p className="text-green-600 font-medium text-center mb-6">
-                  ✅ WhatsApp opened! You can now send us your message.
+                  ✅ Gmail opened with your message. Send it from your email client.
                 </p>
               )}
 
@@ -205,9 +212,9 @@ Message: ${data.message}`;
                     )}
                   />
 
-                  <Button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white">
+                  <Button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white">
                     <span className="flex items-center">
-                      <Send size={16} className="mr-2" /> Send via WhatsApp
+                      <Send size={16} className="mr-2" /> Send via Gmail
                     </span>
                   </Button>
                 </form>
