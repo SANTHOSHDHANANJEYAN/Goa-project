@@ -41,16 +41,33 @@ export default function ContactPage() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-    setTimeout(() => {
-      console.log(data);
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      form.reset();
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+async function onSubmit(data: z.infer<typeof formSchema>) {
+  setIsSubmitting(true);
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) {
+      throw new Error('Failed to send email');
+    }
+
+    setIsSuccess(true);
+    form.reset();
+    setTimeout(() => setIsSuccess(false), 5000);
+  } catch (err) {
+    console.error(err);
+    alert('Something went wrong. Please try again later.');
+  } finally {
+    setIsSubmitting(false);
   }
+}
+
 
   return (
     <div className="bg-white text-gray-800 mt-[3rem]">
@@ -59,7 +76,7 @@ export default function ContactPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">GET IN TOUCH</h1>
             <p className="text-lg text-gray-600 animate-fade-in animation-delay-300">
-              We're here to answer your questions and welcome you to Rishikul Yogshala Goa portal.
+              We&apos;re here to answer your questions and welcome you to Rishikul Yogshala Goa portal.
             </p>
           </div>
         </div>
@@ -71,7 +88,7 @@ export default function ContactPage() {
             <div>
               <h2 className="font-serif text-3xl mb-6">Contact Information</h2>
               <p className="text-lg text-gray-600 mb-8">
-                Have questions about our classes, workshops, or how to get started? Reach out to us and we'll be happy to help.
+                Have questions about our classes, workshops, or how to get started? Reach out to us and we&apos;ll be happy to help.
               </p>
               <div className="space-y-6 mb-10">
                 <div className="flex items-start">
@@ -122,7 +139,7 @@ export default function ContactPage() {
               {isSuccess && (
                 <div className="bg-green-100 border border-green-300 text-green-700 rounded-lg p-4 mb-6">
                   <p className="font-medium">Your message has been sent!</p>
-                  <p className="text-sm mt-1">We'll get back to you as soon as possible.</p>
+                  <p className="text-sm mt-1">We&apos;ll get back to you as soon as possible.</p>
                 </div>
               )}
 
