@@ -46,7 +46,7 @@ Phone: ${data.phone || 'N/A'}%0A
 Subject: ${data.subject}%0A
 Message: ${data.message}`;
 
-    const whatsappURL = `https://wa.me/919999999999?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/919360270318?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
     setSent(true);
     form.reset();
