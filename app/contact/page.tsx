@@ -118,7 +118,7 @@ export default function ContactPage() {
                   <input type="hidden" name="_autoresponse" value="🙏 Thank you for contacting Rishikul Yogshala Goa. We’ll respond shortly." />
                   <input type="hidden" name="_subject" value="New Contact Message from Website" />
                   <input type="hidden" name="_honeypot" value="" />
-                  <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you" />
+                  <input type="hidden" name="_redirect" value="https://www.rishikulyogshalagoa.com/thank-you" />
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
