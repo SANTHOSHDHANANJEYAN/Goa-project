@@ -56,7 +56,10 @@ export default function ContactPage() {
         body: JSON.stringify({
           ...data,
           _template: 'table',
-          _autoresponse: 'Thank you for contacting us. We will get back to you soon!',
+          _autoresponse: '🙏 Thank you for reaching out to Rishikul Yogshala Goa! We’ll respond shortly.',
+          _subject: `New Contact Message from ${data.name}`,
+          _honeypot: '',
+          _redirect: 'https://yourdomain.com/thank-you', // 🔁 optional: update to your thank-you page
         }),
       });
 
