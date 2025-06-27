@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     service: 'gmail', // change this if you're using something else like Zoho, Outlook, etc.
     auth: {
       user: process.env.EMAIL_USER,      // your Gmail address
-      pass: process.env.EMAIL_PASS,      // your Gmail app password
+           // your Gmail app password
     },
   });
 
