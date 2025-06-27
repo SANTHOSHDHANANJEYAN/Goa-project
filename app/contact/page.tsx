@@ -27,10 +27,6 @@ const formSchema = z.object({
 });
 
 export default function ContactPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [error, setError] = useState('');
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,49 +38,14 @@ export default function ContactPage() {
     },
   });
 
-  async function onSubmit(data: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-    setError('');
-
-    try {
-      const response = await fetch('https://formsubmit.io/send/santhoshd318@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          ...data,
-          _template: 'table',
-          _autoresponse: '🙏 Thank you for reaching out to Rishikul Yogshala Goa! We’ll respond shortly.',
-          _subject: `New Contact Message from ${data.name}`,
-          _honeypot: '',
-          _redirect: 'https://yourdomain.com/thank-you', // 🔁 optional: update to your thank-you page
-        }),
-      });
-
-      if (response.ok) {
-        setIsSuccess(true);
-        form.reset();
-        setTimeout(() => setIsSuccess(false), 5000);
-      } else {
-        setError('Something went wrong. Please try again.');
-      }
-    } catch (err) {
-      setError('Failed to send. Please try again later.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
-
   return (
     <div className="bg-white text-gray-800 mt-[3rem]">
       <section className="pt-[4rem]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">GET IN TOUCH</h1>
-            <p className="text-lg text-gray-600 animate-fade-in animation-delay-300">
-              We&apos;re here to answer your questions and welcome you to Rishikul Yogshala Goa portal.
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6">GET IN TOUCH</h1>
+            <p className="text-lg text-gray-600">
+              We're here to answer your questions and welcome you to Rishikul Yogshala Goa portal.
             </p>
           </div>
         </div>
@@ -97,37 +58,37 @@ export default function ContactPage() {
             <div>
               <h2 className="font-serif text-3xl mb-6">Contact Information</h2>
               <p className="text-lg text-gray-600 mb-8">
-                Have questions about our classes, workshops, or how to get started? Reach out to us and we&apos;ll be happy to help.
+                Have questions about our classes, workshops, or how to get started? Reach out to us and we'll be happy to help.
               </p>
               <div className="space-y-6 mb-10">
                 <div className="flex items-start">
-                  <MapPin size={24} className="mr-4 text-blue-600 flex-shrink-0" />
+                  <MapPin size={24} className="mr-4 text-blue-600" />
                   <div>
                     <h3 className="font-medium mb-1">Visit Us</h3>
                     <p className="text-gray-600">123 Serenity Lane,<br />Mindful Valley, CA 94123</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Phone size={24} className="mr-4 text-blue-600 flex-shrink-0" />
+                  <Phone size={24} className="mr-4 text-blue-600" />
                   <div>
                     <h3 className="font-medium mb-1">Call Us</h3>
                     <p className="text-gray-600">(555) 123-4567</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Mail size={24} className="mr-4 text-blue-600 flex-shrink-0" />
+                  <Mail size={24} className="mr-4 text-blue-600" />
                   <div>
                     <h3 className="font-medium mb-1">Email Us</h3>
                     <p className="text-gray-600">info@houseofom.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Clock size={24} className="mr-4 text-blue-600 flex-shrink-0" />
+                  <Clock size={24} className="mr-4 text-blue-600" />
                   <div>
                     <h3 className="font-medium mb-1">Hours</h3>
                     <p className="text-gray-600">
-                      Monday - Friday: 6:00 AM - 9:00 PM<br />
-                      Saturday - Sunday: 8:00 AM - 7:00 PM
+                      Mon–Fri: 6:00 AM - 9:00 PM<br />
+                      Sat–Sun: 8:00 AM - 7:00 PM
                     </p>
                   </div>
                 </div>
@@ -135,31 +96,30 @@ export default function ContactPage() {
               <div className="rounded-lg overflow-hidden h-64 relative mt-[3rem]">
                 <Image
                   src="/Contact_us2.png"
-                  alt="House of Om studio exterior"
+                  alt="Studio exterior"
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
 
-            {/* Form Section */}
+            {/* Contact Form */}
             <div className="rounded-lg p-8 bg-gray-50 shadow">
               <h2 className="font-serif text-2xl mb-6">Send Us a Message</h2>
 
-              {isSuccess && (
-                <div className="bg-green-100 border border-green-300 text-green-700 rounded-lg p-4 mb-6">
-                  <p className="font-medium">Your message has been sent!</p>
-                  <p className="text-sm mt-1">We&apos;ll get back to you as soon as possible.</p>
-                </div>
-              )}
-              {error && (
-                <div className="bg-red-100 border border-red-300 text-red-700 rounded-lg p-4 mb-6">
-                  <p>{error}</p>
-                </div>
-              )}
-
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form
+                  action="https://formsubmit.io/send/santhoshd318@gmail.com"
+                  method="POST"
+                  className="space-y-6"
+                >
+                  {/* Hidden config for FormSubmit */}
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_autoresponse" value="🙏 Thank you for contacting Rishikul Yogshala Goa. We’ll respond shortly." />
+                  <input type="hidden" name="_subject" value="New Contact Message from Website" />
+                  <input type="hidden" name="_honeypot" value="" />
+                  <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you" />
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
@@ -168,7 +128,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="Your name" {...field} />
+                            <Input placeholder="Your name" {...field} name="name" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -181,7 +141,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="your@email.com" {...field} />
+                            <Input placeholder="your@email.com" {...field} name="email" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -197,7 +157,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Phone (Optional)</FormLabel>
                           <FormControl>
-                            <Input placeholder="(555) 123-4567" {...field} />
+                            <Input placeholder="(555) 123-4567" {...field} name="phone" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -210,7 +170,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Subject</FormLabel>
                           <FormControl>
-                            <Input placeholder="What's this about?" {...field} />
+                            <Input placeholder="What's this about?" {...field} name="subject" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -229,6 +189,7 @@ export default function ContactPage() {
                             placeholder="How can we help you?"
                             className="min-h-32"
                             {...field}
+                            name="message"
                           />
                         </FormControl>
                         <FormMessage />
@@ -236,20 +197,10 @@ export default function ContactPage() {
                     )}
                   />
 
-                  <Button
-                    type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      <span className="flex items-center">
-                        <span className="animate-spin mr-2">⟳</span> Sending...
-                      </span>
-                    ) : (
-                      <span className="flex items-center">
-                        <Send size={16} className="mr-2" /> Send Message
-                      </span>
-                    )}
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                    <span className="flex items-center">
+                      <Send size={16} className="mr-2" /> Send Message
+                    </span>
                   </Button>
                 </form>
               </Form>
