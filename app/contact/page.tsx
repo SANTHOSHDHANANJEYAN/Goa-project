@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
+import { useState, useRef } from "react";
+import Image from "next/image";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import {
   Form,
   FormControl,
@@ -16,27 +16,35 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
+} from "@/components/ui/form";
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters' }),
-  email: z.string().email({ message: 'Please enter a valid email address' }),
+  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
+  email: z.string().email({ message: "Please enter a valid email address" }),
   phone: z.string().optional(),
-  subject: z.string().min(2, { message: 'Subject must be at least 2 characters' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters' }),
+  subject: z.string().min(2, { message: "Subject must be at least 2 characters" }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
 });
 
 export default function ContactPage() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
     },
   });
+
+  const [submitted, setSubmitted] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  const handleIframeLoad = () => {
+    setSubmitted(true);
+    form.reset();
+  };
 
   return (
     <div className="bg-white text-gray-800 mt-[3rem]">
@@ -45,7 +53,7 @@ export default function ContactPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6">GET IN TOUCH</h1>
             <p className="text-lg text-gray-600">
-              We&apos;re here to answer your questions and welcome you to Rishikul Yogshala Goa portal.
+              We're here to answer your questions and welcome you to Rishikul Yogshala Goa portal.
             </p>
           </div>
         </div>
@@ -58,7 +66,7 @@ export default function ContactPage() {
             <div>
               <h2 className="font-serif text-3xl mb-6">Contact Information</h2>
               <p className="text-lg text-gray-600 mb-8">
-                Have questions about our classes, workshops, or how to get started? Reach out to us and we&apos;ll be happy to help.
+                Have questions about our classes, workshops, or how to get started? Reach out to us and we'll be happy to help.
               </p>
               <div className="space-y-6 mb-10">
                 <div className="flex items-start">
@@ -107,18 +115,32 @@ export default function ContactPage() {
             <div className="rounded-lg p-8 bg-gray-50 shadow">
               <h2 className="font-serif text-2xl mb-6">Send Us a Message</h2>
 
+              {submitted && (
+                <p className="text-green-600 font-medium text-center mb-6">
+                  ✅ Thank you! Your message has been sent.
+                </p>
+              )}
+
               <Form {...form}>
                 <form
-                  action="https://formsubmit.io/send/santhoshd318@gmail.com"
+                  action="https://formsubmit.co/ajax/santhoshd318@gmail.com"
                   method="POST"
+                  target="hidden_iframe"
+                  onSubmit={form.handleSubmit(() => {
+                    setSubmitted(false); // Reset before sending
+                    setTimeout(() => {
+                      if (iframeRef.current) {
+                        iframeRef.current.onload = handleIframeLoad;
+                      }
+                    }, 1000);
+                  })}
                   className="space-y-6"
                 >
-                  {/* Hidden config for FormSubmit */}
                   <input type="hidden" name="_template" value="table" />
                   <input type="hidden" name="_autoresponse" value="🙏 Thank you for contacting Rishikul Yogshala Goa. We’ll respond shortly." />
                   <input type="hidden" name="_subject" value="New Contact Message from Website" />
-                  <input type="hidden" name="_honeypot" value="" />
-                  <input type="hidden" name="_redirect" value="https://www.rishikulyogshalagoa.com/thank-you" />
+                  <input type="hidden" name="_honeypot" />
+                  <input type="hidden" name="_redirect" value="https://rishikulyogshalagoa.com/thank-you" />
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
@@ -128,7 +150,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="Your name" {...field} name="name" />
+                            <Input placeholder="Your name" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -141,7 +163,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="your@email.com" {...field} name="email" />
+                            <Input placeholder="your@email.com" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -157,7 +179,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Phone (Optional)</FormLabel>
                           <FormControl>
-                            <Input placeholder="(555) 123-4567" {...field} name="phone" />
+                            <Input placeholder="(555) 123-4567" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -170,7 +192,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Subject</FormLabel>
                           <FormControl>
-                            <Input placeholder="What's this about?" {...field} name="subject" />
+                            <Input placeholder="What's this about?" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -185,12 +207,7 @@ export default function ContactPage() {
                       <FormItem>
                         <FormLabel>Message</FormLabel>
                         <FormControl>
-                          <Textarea
-                            placeholder="How can we help you?"
-                            className="min-h-32"
-                            {...field}
-                            name="message"
-                          />
+                          <Textarea placeholder="How can we help you?" className="min-h-32" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -204,6 +221,9 @@ export default function ContactPage() {
                   </Button>
                 </form>
               </Form>
+
+              {/* Hidden iframe for FormSubmit */}
+              <iframe name="hidden_iframe" style={{ display: "none" }} ref={iframeRef} />
             </div>
           </div>
         </div>
