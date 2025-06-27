@@ -42,7 +42,7 @@ export default function ContactPage() {
 
   const handleSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
-      const response = await fetch('https://formsubmit.co/ajax/santhoshd318@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/kumarsanthosh2743@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
