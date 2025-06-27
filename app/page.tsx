@@ -115,7 +115,7 @@ export default function Home() {
           <CourseCard />
         </Suspense>
 
-        <section className="py-10 bg-transparent text-center">
+        <section className="pb-[2.5rem] bg-transparent text-center">
           <p className="text-3xl italic text-[#150e70] mb-2 animate-fade-in">“Empower – Evolve – Thrive.”</p>
           <p className="text-2xl italic text-[#150e70] animate-fade-in">- By Our Yoga Retreats</p>
         </section>
@@ -124,7 +124,7 @@ export default function Home() {
           <RetreatsCard />
         </Suspense>
 
-        <section className="relative pb-[4rem] text-center bg-transparent">
+        <section className="relative  text-center bg-transparent">
           <div className="max-w-5xl mx-auto px-6">
             <h1 className="text-4xl font-bold text-[#150e70] mb-4 animate-slide-up">
               Rishikul Yogshala Goa – Your transformation starts here.
@@ -297,3 +297,4 @@ export default function Home() {
     </>
   );
 }
+

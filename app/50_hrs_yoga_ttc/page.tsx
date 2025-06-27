@@ -22,7 +22,7 @@ const RoomSlides7 = dynamic(() => import("@/components/R7days/RoomSlides7"), { s
 
 const FiftyHourTTPage = () => {
   return (
-    <div className="mt-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-gray-800">
+    <div className="mt-24 sm:px-6 lg:px-8 max-w-6xl mx-auto text-gray-800">
       <div className="text-center mb-6">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#150e70] mb-4">
           50-Hrs Multi-Style Yoga Teacher Training

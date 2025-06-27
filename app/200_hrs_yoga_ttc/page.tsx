@@ -22,7 +22,7 @@ const OurRooms7 = dynamic(() => import("@/components/R7days/OurRooms7"));
 const RoomSlides7 = dynamic(() => import("@/components/R7days/RoomSlides7"));
 
 const TwoHundredHourTTPage = () => (
-  <div className="mt-24 max-w-7xl mx-auto px-4 text-gray-800">
+  <div className="mt-24 max-w-7xl mx-auto text-gray-800">
     {/* Header */}
     <div className="text-center mb-6">
       <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mb-4">
