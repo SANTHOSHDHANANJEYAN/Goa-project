@@ -37,11 +37,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `,
   };
 
-  try {
-    await transporter.sendMail(mailOptions);
-    return res.status(200).json({ message: 'Email sent successfully' });
-  } catch (err: any) {
-    console.error(err);
-    return res.status(500).json({ message: 'Failed to send email' });
-  }
+// Inside /pages/api/contact.ts
+try {
+  await transporter.sendMail(mailOptions);
+  return res.status(200).json({ message: 'Email sent successfully' });
+} catch (err: any) {
+  console.error('Email error:', err); // <--- Add this line
+  return res.status(500).json({ message: 'Failed to send email' });
+}
+
 }
