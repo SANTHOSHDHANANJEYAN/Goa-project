@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const FreeManualSignup: React.FC = () => {
   return (
-    <section className="relative bg-transparent py-16 sm:py-20 text-center overflow-hidden">
+    <section className="relative bg-transparent pb-[4rem]  text-center overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
 

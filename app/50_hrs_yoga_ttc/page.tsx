@@ -22,7 +22,7 @@ const RoomSlides7 = dynamic(() => import("@/components/R7days/RoomSlides7"), { s
 
 const FiftyHourTTPage = () => {
   return (
-    <div className="mt-24 sm:px-6 lg:px-8 max-w-6xl mx-auto text-gray-800">
+    <div className="mt-24 max-w-6xl mx-auto text-gray-800">
       <div className="text-center mb-6">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#150e70] mb-4">
           50-Hrs Multi-Style Yoga Teacher Training
@@ -83,7 +83,7 @@ const FiftyHourTTPage = () => {
 
       <section className="mt-20">
         <h2 className="text-base sm:text-lg md:text-xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
-          Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
+          Transformative Hatha, Vinyasa & Ashtanga Yoga for deep, immersive learning.
         </h2>
         <h3 className="text-xs sm:text-sm md:text-base font-semibold text-center mb-8 text-[#150e70] max-w-3xl mx-auto">
           Education experience covering all key aspects of the ancient practice and philosophy of yoga
@@ -143,7 +143,7 @@ const FiftyHourTTPage = () => {
 
       <ApplicationForm />
 
-      <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
+      <section className="text-center mb-8 relative ">
         <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
           After Completing the Course...
         </h3>

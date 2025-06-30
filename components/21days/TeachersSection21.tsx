@@ -62,7 +62,7 @@ export default function TeachersSectio21() {
 
   return (
     <section
-      className="relative overflow-hidden py-20 px-4 sm:px-8 bg-transparent"
+      className="relative overflow-hidden pb-[5rem] px-4 sm:px-8 bg-transparent"
       onMouseEnter={stopAutoSlide}
       onMouseLeave={startAutoSlide}
     >

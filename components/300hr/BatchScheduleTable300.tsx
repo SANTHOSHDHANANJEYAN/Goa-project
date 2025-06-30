@@ -18,7 +18,7 @@ const CourseSchedule = () => {
         <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4">
           {courseDates.map((item, index) => (
             <div key={index} className="flex items-start space-x-3 border-b pb-3 border-gray-200">
-              <FaCalendarAlt className="text-[#d9442e] text-xl mt-1 shrink-0" />
+              <FaCalendarAlt className="text-[#150e70] text-xl mt-1 shrink-0" />
               <div>
                 <p className="text-sm sm:text-base font-semibold text-gray-800">{item.date}</p>
                
@@ -51,7 +51,7 @@ const CourseSchedule = () => {
 
 
             <div className="pt-2">
-              <button className="bg-[#d9442e] hover:bg-[#150e70] transition text-white px-8 py-3 rounded shadow text-sm sm:text-base w-full sm:w-auto">
+              <button className="bg-[#150e70] hover:bg-[#d9442e] transition text-white px-8 py-3 rounded shadow text-sm sm:text-base w-full sm:w-auto">
                 BOOK NOW
               </button>
             </div>

@@ -79,7 +79,7 @@ const TwentyOneTTPage = () => {
 
       <section className="mt-20 px-4 sm:px-6 lg:px-8">
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
-          Transformational teachings of Hatha, Vinyasa, and Ashtanga Yoga for a comprehensive and immersive learning experience.
+          Transformative Hatha, Vinyasa & Ashtanga Yoga for deep, immersive learning.
         </h2>
         <h3 className="text-xs sm:text-sm md:text-base font-semibold text-center mb-8 text-[#150e70] max-w-3xl mx-auto">
           Education experience covering all key aspects of the ancient practice and philosophy of yoga

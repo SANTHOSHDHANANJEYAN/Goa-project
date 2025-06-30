@@ -12,7 +12,7 @@ export default function Schedule100() {
       <div className="flex flex-col md:flex-row gap-12 max-w-7xl mx-auto">
         {/* Left Side: Daily Schedule */}
         <div className="md:w-1/2">
-          <h2 className="text-2xl sm:text-3xl font-bold text-green-900 mb-6">Daily Schedule</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#150e70] mb-6">Daily Schedule</h2>
           <ul className="space-y-4 text-sm sm:text-base">
             {[
               ['05:00 AM', ' Morning Tea'],
@@ -28,7 +28,7 @@ export default function Schedule100() {
               ['18:15 PM', 'Supper'],
             ].map(([time, activity], idx) => (
               <li key={idx} className="flex items-start">
-                <span className="font-semibold text-green-900 w-24 flex-shrink-0">{time}</span>
+                <span className="font-semibold text-[#150e70] w-24 flex-shrink-0">{time}</span>
                 <span className="text-gray-800">{activity}</span>
               </li>
             ))}
