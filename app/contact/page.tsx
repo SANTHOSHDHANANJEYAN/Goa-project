@@ -103,16 +103,7 @@ export default function ContactPage() {
                     <p className="text-gray-600">info@houseofom.com</p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <Clock size={24} className="mr-4 text-blue-600" />
-                  <div>
-                    <h3 className="font-medium mb-1">Hours</h3>
-                    <p className="text-gray-600">
-                      Mon–Fri: 6:00 AM - 9:00 PM<br />
-                      Sat–Sun: 8:00 AM - 7:00 PM
-                    </p>
-                  </div>
-                </div>
+                
               </div>
               <div className="rounded-lg overflow-hidden h-64 relative mt-[3rem]">
                 <Image
