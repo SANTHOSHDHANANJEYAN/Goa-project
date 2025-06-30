@@ -41,7 +41,7 @@ export default function ContactPage() {
   });
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    const to = "santhoshd318@gmail.com"; // Replace with your email
+    const to = "rishikulyogshalagoa@gmail.com"; // Replace with your email
     const subject = encodeURIComponent(data.subject);
     const body = encodeURIComponent(
       `Hi,\n\nYou have a new message from your website contact form:\n\n` +
@@ -86,21 +86,21 @@ export default function ContactPage() {
                   <MapPin size={24} className="mr-4 text-blue-600" />
                   <div>
                     <h3 className="font-medium mb-1">Visit Us</h3>
-                    <p className="text-gray-600">123 Serenity Lane,<br />Mindful Valley, CA 94123</p>
+                    <p className="text-gray-600">128, Thorlebag, Querim,<br/> Arambol, Goa 403524</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Phone size={24} className="mr-4 text-blue-600" />
                   <div>
                     <h3 className="font-medium mb-1">Call Us</h3>
-                    <p className="text-gray-600">(555) 123-4567</p>
+                    <p className="text-gray-600">+91 80899 92515</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Mail size={24} className="mr-4 text-blue-600" />
                   <div>
                     <h3 className="font-medium mb-1">Email Us</h3>
-                    <p className="text-gray-600">info@houseofom.com</p>
+                    <p className="text-gray-600">rishikulyogshalagoa@gmail.com</p>
                   </div>
                 </div>
                 
