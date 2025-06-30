@@ -180,22 +180,22 @@ const CodeOfConduct = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <VideoCard
             title="Rishikul Yogshala Venue"
-            videoUrl="/public/Videos/venuevc.mov"
+            videoUrl="/Videos/venuevc.mov"
             thumbnailUrl="/Thumbnail/venue.png"
           />
           <VideoCard
             title="Rishikul Yogshala Meals"
-            videoUrl="/public/Videos/foodvc.mp4"
+            videoUrl="/Videos/foodvc.mp4"
             thumbnailUrl="/Thumbnail/food.png"
           />
           <VideoCard
             title="Rishikul Yogshala Opening Ceremony"
-            videoUrl="/public/Videos/openingvc.mp4"
+            videoUrl="/Videos/openingvc.mp4"
             thumbnailUrl="/Thumbnail/Opening ceremony .png"
           />
           <VideoCard
             title="Rishikul Yogshala Closing Ceremony"
-            videoUrl="/public/Videos/closingvc.mp4"
+            videoUrl="/Videos/closingvc.mp4"
             thumbnailUrl="/Thumbnail/Closing  .png"
           />
           <YouTubeCard
