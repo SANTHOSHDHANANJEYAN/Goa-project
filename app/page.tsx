@@ -102,7 +102,6 @@ export default function Home() {
                       width={70}
                       height={70}
                       className="mb-2"
-                      loading="lazy"
                     />
                     <span className="font-semibold text-sm text-indigo-900">
                       {src.includes("200") ? "RYS 200" : src.includes("300") ? "RYS 300" : src.includes("rpys") ? "RPYS" : "YACEP"}
@@ -114,18 +113,17 @@ export default function Home() {
           </div>
         </section>
 
-        <Suspense fallback={<div className="text-center py-10">Loading Courses...</div>}>
+
           <CourseCard />
-        </Suspense>
+
 
         <section className="pb-[2.5rem] bg-transparent text-center">
           <p className="text-3xl italic text-[#150e70] mb-2 animate-fade-in">“Empower – Evolve – Thrive.”</p>
           <p className="text-2xl italic text-[#150e70] animate-fade-in">- By Our Yoga Retreats</p>
         </section>
 
-        <Suspense fallback={<div className="text-center py-10">Loading Retreats...</div>}>
+
           <RetreatsCard />
-        </Suspense>
 
         <section className="relative  text-center bg-transparent">
           <div className="max-w-5xl mx-auto px-6">
@@ -156,13 +154,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+
           <BlogSection />
           <CodeOfConduct />
           <GalleryPage />
           <TeacherSlider />
           <Appform />
-        </Suspense>
+
 
 <section className="pt-[2rem] pb-[4rem] bg-transparent relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
