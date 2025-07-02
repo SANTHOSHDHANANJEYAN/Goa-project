@@ -6,15 +6,15 @@ import Image from 'next/image';
 const TestimonialSection: React.FC = () => {
   const videos = [
     {
-      url: 'https://www.youtube.com/embed/1oxK0cYax9s?si=VdURMf5zk-gvMX9-',
+      url: 'https://www.youtube.com/embed/1oxK0cYax9s?autoplay=1&rel=0',
       thumbnail: '/Thumbnail/Student Testimonials1.png',
     },
     {
-      url: 'https://www.youtube.com/embed/0L8pv3fixrg?si=o8XLKPDYeVAwpqS6',
+      url: 'https://www.youtube.com/embed/0L8pv3fixrg?autoplay=1&rel=0',
       thumbnail: '/Thumbnail/Student Testimonials2.png',
     },
     {
-      url: 'https://www.youtube.com/embed/s6VazbcpPko?si=mzBD6_zomcq5UJ2t',
+      url: 'https://www.youtube.com/embed/s6VazbcpPko?autoplay=1&rel=0',
       thumbnail: '/Thumbnail/Student Testimonials3.png',
     },
   ];
@@ -22,7 +22,7 @@ const TestimonialSection: React.FC = () => {
   const [playing, setPlaying] = useState<number | null>(null);
 
   return (
-    <section className="relative text-center py-12  px-4 sm:px-6 lg:px-8">
+    <section className="relative text-center py-12 px-4 sm:px-6 lg:px-8">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-[#150e70]">
         Testimonials
       </h2>
@@ -34,29 +34,33 @@ const TestimonialSection: React.FC = () => {
         {videos.map((video, idx) => (
           <div
             key={idx}
-            className="aspect-video rounded-xl border-4 overflow-hidden shadow-lg relative cursor-pointer"
+            role="button"
+            tabIndex={0}
+            aria-label={`Play testimonial video ${idx + 1}`}
             onClick={() => setPlaying(idx)}
+            onKeyDown={(e) => e.key === 'Enter' && setPlaying(idx)}
+            className="aspect-video rounded-xl border-4 overflow-hidden shadow-lg relative cursor-pointer group transition hover:shadow-2xl"
           >
             {playing === idx ? (
               <iframe
                 className="w-full h-full"
                 src={video.url}
                 title={`Testimonial Video ${idx + 1}`}
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe>
+              />
             ) : (
               <div className="relative w-full h-full">
                 <Image
                   src={video.thumbnail}
-                  alt={`Thumbnail ${idx + 1}`}
+                  alt={`Student Testimonial ${idx + 1}`}
                   fill
                   className="object-cover"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0  bg-opacity-40 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition group-hover:bg-black/50">
                   <svg
-                    className="h-16 w-16 text-white opacity-80 hover:opacity-100 transition"
+                    className="h-16 w-16 text-white opacity-80 group-hover:opacity-100 transition"
                     fill="currentColor"
                     viewBox="0 0 84 84"
                   >

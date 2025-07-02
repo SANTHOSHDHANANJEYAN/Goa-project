@@ -6,15 +6,15 @@ import Image from 'next/image';
 const TestimonialSection: React.FC = () => {
   const videos = [
     {
-      url: 'https://www.youtube.com/embed/1oxK0cYax9s?si=VdURMf5zk-gvMX9-',
+      url: 'https://www.youtube.com/embed/1oxK0cYax9s?autoplay=1&rel=0',
       thumbnail: '/Thumbnail/Student Testimonials1.png',
     },
     {
-      url: 'https://www.youtube.com/embed/0L8pv3fixrg?si=o8XLKPDYeVAwpqS6',
+      url: 'https://www.youtube.com/embed/0L8pv3fixrg?autoplay=1&rel=0',
       thumbnail: '/Thumbnail/Student Testimonials2.png',
     },
     {
-      url: 'https://www.youtube.com/embed/s6VazbcpPko?si=mzBD6_zomcq5UJ2t',
+      url: 'https://www.youtube.com/embed/s6VazbcpPko?autoplay=1&rel=0',
       thumbnail: '/Thumbnail/Student Testimonials3.png',
     },
   ];
@@ -34,8 +34,12 @@ const TestimonialSection: React.FC = () => {
         {videos.map((video, idx) => (
           <div
             key={idx}
-            className="aspect-video rounded-xl border-4 overflow-hidden shadow-lg relative cursor-pointer"
+            className="aspect-video rounded-xl border-4 overflow-hidden shadow-lg relative cursor-pointer group"
             onClick={() => setPlaying(idx)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === 'Enter' && setPlaying(idx)}
+            aria-label={`Play video testimonial ${idx + 1}`}
           >
             {playing === idx ? (
               <iframe
@@ -45,18 +49,19 @@ const TestimonialSection: React.FC = () => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe>
+              />
             ) : (
               <div className="relative w-full h-full">
                 <Image
                   src={video.thumbnail}
-                  alt={`Thumbnail ${idx + 1}`}
+                  alt={`Student Testimonial ${idx + 1}`}
                   fill
-                  className="object-cover"
+                  className="object-cover transition group-hover:brightness-90"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0  bg-opacity-40 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <svg
-                    className="h-16 w-16 text-white opacity-80 hover:opacity-100 transition"
+                    className="h-16 w-16 text-white opacity-80 group-hover:opacity-100 transition"
                     fill="currentColor"
                     viewBox="0 0 84 84"
                   >
