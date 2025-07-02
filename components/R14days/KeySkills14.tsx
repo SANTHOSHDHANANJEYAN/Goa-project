@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import Image from 'next/image';
@@ -22,18 +23,19 @@ const KeySkills7: React.FC = () => {
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        {/* Image Section */}
+        {/* Optimized GIF rendering */}
         <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] rounded-xl overflow-hidden">
           <Image
             src="/Activity/keyskill.gif"
             alt="Animated yoga skills showcase"
             fill
+            loading="lazy"
             className="object-cover"
-            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 
-        {/* Skills List */}
+        {/* Key Skills List */}
         <ul className="space-y-5">
           {skills.map((skill, idx) => (
             <li

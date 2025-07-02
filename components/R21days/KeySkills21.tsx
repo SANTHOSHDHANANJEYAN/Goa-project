@@ -4,21 +4,21 @@ import { FaCheckCircle } from 'react-icons/fa';
 import Image from 'next/image';
 
 const skills: string[] = [
-  "Deep understanding of yoga philosophy and history",
-  "Correct alignment and adjustment techniques",
-  "Effective cueing and voice modulation for classes",
-  "Hands-on experience with pranayama and meditation",
-  "Anatomy knowledge relevant to yoga practice",
-  "Confidence in leading group and private sessions",
-  "Developing personalized yoga sequences",
-  "Time management and class planning",
+  'Deep understanding of yoga philosophy and history',
+  'Correct alignment and adjustment techniques',
+  'Effective cueing and voice modulation for classes',
+  'Hands-on experience with pranayama and meditation',
+  'Anatomy knowledge relevant to yoga practice',
+  'Confidence in leading group and private sessions',
+  'Developing personalized yoga sequences',
+  'Time management and class planning',
 ];
 
 const KeySkills21: React.FC = () => {
   return (
     <section className="bg-white py-14 px-4 sm:px-6 md:px-10 lg:px-20">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-12">
-        Why Choose Rishikul Yogshala’s 7-Day Yoga Retreat in Goa?
+        Why Choose Rishikul Yogshala’s 21-Day Yoga Retreat in Goa?
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -29,7 +29,8 @@ const KeySkills21: React.FC = () => {
             alt="Animated yoga skills showcase"
             fill
             className="object-cover"
-            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            loading="lazy"
           />
         </div>
 
