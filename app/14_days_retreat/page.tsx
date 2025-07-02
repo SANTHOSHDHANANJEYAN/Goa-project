@@ -1,3 +1,4 @@
+"use client";
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
@@ -9,9 +10,9 @@ const TwoListing14 = dynamic(() => import('@/components/R14days/TwoListing14'));
 const WhatsIncludes14 = dynamic(() => import('@/components/R14days/WhatsIncludes14'));
 const OurExcursions14 = dynamic(() => import('@/components/R14days/OurExcursions14'));
 const OurRooms14 = dynamic(() => import('@/components/R14days/OurRooms14'));
-const RoomSlides14 = dynamic(() => import('@/components/R14days/RoomSlides14'));
+const RoomSlides7 = dynamic(() => import('@/components/R14days/RoomSlides14'));
 const OurDinning14 = dynamic(() => import('@/components/R14days/OurDinning14'));
-const DinningSlides14 = dynamic(() => import('@/components/R14days/DinningSlides14'));
+const DinningSlides7 = dynamic(() => import('@/components/R14days/DinningSlides14'));
 const DailySchedule14 = dynamic(() => import('@/components/R14days/DailySchedule14'));
 const Importance14 = dynamic(() => import('@/components/R14days/Importance14'));
 const Benefit14 = dynamic(() => import('@/components/R14days/Benefit14'));
@@ -38,9 +39,9 @@ export default function Page() {
       <WhatsIncludes14 />
       <OurExcursions14 />
       <OurRooms14 />
-      <RoomSlides14 />
+      <RoomSlides7/>
       <OurDinning14 />
-      <DinningSlides14 />
+      <DinningSlides7/>
       <DailySchedule14 />
       <Importance14 />
       <Benefit14 />
