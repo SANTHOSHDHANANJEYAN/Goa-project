@@ -17,8 +17,7 @@ const SpaHero7: React.FC = () => {
         className="object-cover object-center z-0 opacity-30"
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
+
 
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
