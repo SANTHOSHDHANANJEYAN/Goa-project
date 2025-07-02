@@ -3,11 +3,6 @@
 import Image from 'next/image';
 import { useState, memo } from 'react';
 import {
-  FaCertificate,
-  FaClock,
-  FaVideo,
-  FaChalkboardTeacher,
-  FaBroadcastTower,
   FaUsers,
   FaPlayCircle,
 } from 'react-icons/fa';
@@ -41,8 +36,8 @@ const VideoCard = memo(({ title, videoUrl, thumbnailUrl }: VideoCardProps) => {
               width={400}
               height={192}
               loading="lazy"
-              className="object-cover w-full group-hover:brightness-90 transition"
               sizes="(max-width: 768px) 100vw, 400px"
+              className="object-cover w-full group-hover:brightness-90 transition"
             />
             <FaPlayCircle className="absolute top-1/2 left-1/2 text-white text-6xl opacity-80 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
           </>
@@ -53,6 +48,7 @@ const VideoCard = memo(({ title, videoUrl, thumbnailUrl }: VideoCardProps) => {
             autoPlay
             playsInline
             className="w-full h-auto rounded-lg"
+            poster={thumbnailUrl}
             onEnded={() => setIsPlaying(false)}
           />
         )}
@@ -92,8 +88,8 @@ const YouTubeCard = memo(({ title, youtubeId, thumbnailUrl }: YouTubeCardProps) 
               width={400}
               height={192}
               loading="lazy"
-              className="object-cover w-full group-hover:brightness-90 transition"
               sizes="(max-width: 768px) 100vw, 400px"
+              className="object-cover w-full group-hover:brightness-90 transition"
             />
             <FaPlayCircle className="absolute top-1/2 left-1/2 text-white text-6xl opacity-80 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
           </>
@@ -106,6 +102,7 @@ const YouTubeCard = memo(({ title, youtubeId, thumbnailUrl }: YouTubeCardProps) 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="rounded-lg w-full h-[200px]"
+            loading="lazy"
           />
         )}
       </div>
@@ -189,22 +186,22 @@ const CodeOfConduct = () => {
             thumbnailUrl="/Thumbnail/food.png"
           />
           <VideoCard
-            title="Rishikul Yogshala Opening Ceremony"
+            title="Opening Ceremony"
             videoUrl="/Videos/openingvc.mp4"
             thumbnailUrl="/Thumbnail/Opening ceremony .png"
           />
           <VideoCard
-            title="Rishikul Yogshala Closing Ceremony"
+            title="Closing Ceremony"
             videoUrl="/Videos/closingvc.mp4"
             thumbnailUrl="/Thumbnail/Closing  .png"
           />
           <YouTubeCard
-            title="Rishikul Yogshala Review-1"
+            title="Review - Fabi Porta"
             youtubeId="1oxK0cYax9s"
             thumbnailUrl="/Thumbnail/review1.png"
           />
           <YouTubeCard
-            title="Rishikul Yogshala Review-2"
+            title="Review - Maithe Vl"
             youtubeId="s6VazbcpPko"
             thumbnailUrl="/Thumbnail/review2.png"
           />
