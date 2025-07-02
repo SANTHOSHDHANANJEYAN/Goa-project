@@ -34,10 +34,13 @@ export default function Home() {
             muted
             loop
             playsInline
+            preload="none"
+            poster="/poster.webp"
             className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-30"
           >
             <source src="/homepageclip.mp4" type="video/mp4" />
           </video>
+
 
           <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
             <h1 className="text-white text-4xl md:text-6xl font-bold leading-snug mb-6 animate-fade-in glow-text floating">
@@ -141,14 +144,15 @@ export default function Home() {
               </button>
             </Link>
             <div className="mt-10 rounded-[3rem] overflow-hidden shadow-xl">
-              <Image
-                src="/H2.jpg"
-                alt="Scenic Goa"
-                width={1920}
-                height={700}
-                className="w-full h-auto rounded-[3rem]"
-                priority
-              />
+            <Image
+              src="/H2.jpg"
+              alt="Scenic Goa"
+              width={1920}
+              height={700}
+              className="w-full h-auto rounded-[3rem]"
+              priority // only here!
+            />
+
             </div>
           </div>
         </section>

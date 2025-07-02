@@ -25,9 +25,8 @@ export default function GalleryPage() {
     const cardWidth = 320;
     const interval = setInterval(() => {
       scrollAmount += cardWidth;
-      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
+      if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
         scrollAmount = 0;
-        scrollContainer.scrollLeft = 0;
       }
       scrollContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
     }, 3000);
@@ -65,7 +64,7 @@ export default function GalleryPage() {
         ref={scrollRef}
         className="flex overflow-x-auto space-x-4 scroll-smooth snap-x snap-mandatory pb-6 scrollbar-hide"
       >
-        {[...images, ...images].map((src, i) => (
+        {images.map((src, i) => (
           <motion.div
             key={i}
             whileHover={{ scale: 1.03 }}
@@ -79,8 +78,8 @@ export default function GalleryPage() {
               height={400}
               className="object-cover object-center w-full h-full rounded-xl cursor-pointer"
               sizes="(max-width: 480px) 85vw, (max-width: 768px) 45vw, 320px"
+              loading={i === 0 ? 'eager' : 'lazy'}
               priority={i === 0}
-              {...(i !== 0 && { loading: 'lazy' })}
             />
           </motion.div>
         ))}
@@ -110,6 +109,7 @@ export default function GalleryPage() {
                 height={800}
                 loading="lazy"
                 className="rounded-2xl object-contain w-full max-h-[75vh]"
+                sizes="(max-width: 768px) 100vw, 1200px"
               />
 
               {/* Close Button */}
@@ -138,13 +138,13 @@ export default function GalleryPage() {
         )}
       </AnimatePresence>
 
+      {/* Show More Button */}
       <div className="text-center mt-12">
         <a
           href="/gallery"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 bg-[#150e70] text-white rounded-full hover:bg-yellow-500 transition"
-          aria-label="More reviews on Yoga Alliance"
         >
           SHOW MORE
         </a>
