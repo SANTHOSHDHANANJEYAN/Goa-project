@@ -9,19 +9,19 @@ const services = [
     id: 'yoga',
     title: '100 Hrs Multi-Style Yoga TTC',
     image: '/r1.jpg',
-    link: '/100_hrs_yoga_ttc',
+    link: '/100hrsyogattc',
   },
   {
     id: 'meditation',
     title: '200 Hrs Multi-Style Yoga TTC',
     image: '/300.png',
-    link: '/200_hrs_yoga_ttc',
+    link: '/200hrsyogattc',
   },
   {
     id: 'sound-healing',
     title: '300 Hrs Multi-Style Yoga TTC',
     image: '/r3.jpg',
-    link: '/300_hrs_yoga_ttc',
+    link: '/300hrsyogattc',
   },
 ];
 
