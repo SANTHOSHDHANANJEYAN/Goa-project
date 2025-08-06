@@ -14,19 +14,19 @@ const leftNavigation = [
   {
     name: "Courses",
     dropdown: [
-      { name: "50 Hr Multi-Style-Yoga TTC", href: "/50_hrs_yoga_ttc#InGoa" },
-      { name: "100 Hr Multi-Style-Yoga TTC", href: "/100_hrs_yoga_ttc#InGoa" },
-      { name: "200 Hr Multi-Style-Yoga TTC", href: "/200_hrs_yoga_ttc#InGoa" },
-      { name: "300 Hr Multi-Style-Yoga TTC", href: "/300_hrs_yoga_ttc#InGoa" },
-      { name: "21 Days Yoga Immersion Course", href: "/21_days_courses#InGoa" }
+      { name: "50 Hr Multi-Style-Yoga TTC", href: "/50hrsyogattc#InIndia" },
+      { name: "100 Hr Multi-Style-Yoga TTC", href: "/100hrsyogattc#InIndia" },
+      { name: "200 Hr Multi-Style-Yoga TTC", href: "/200hrsyogattc#InIndia" },
+      { name: "300 Hr Multi-Style-Yoga TTC", href: "/300hrsyogattc#InIndia" },
+      { name: "21 Days Yoga Immersion Course", href: "/21dayscourses#InIndia" }
     ]
   },
   {
     name: "Retreats",
     dropdown: [
-      { name: "7 Days Yoga Holiday Retreat", href: "/7_days_retreat#InGoa" },
-      { name: "14 Days Yoga Detox Retreat", href: "/14_days_retreat#InGoa" },
-      { name: "21 Days Yoga Wellness Retreat", href: "/21_days_retreat#InGoa" }
+      { name: "7 Days Yoga Holiday Retreat", href: "/app/7daysretreat#ImIndia" },
+      { name: "14 Days Yoga Detox Retreat", href: "/app/14daysretreat#InIndia" },
+      { name: "21 Days Yoga Wellness Retreat", href: "/app/21dayscourses#InIndia" }
     ]
   },
   { name: "Our Teachers", href: "/About_Teachers#InGoa" },

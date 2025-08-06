@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { Button } from '@/components/ui/button';
+import HeroSection from '@/components/ui/HeroSection';
 
 const GalleryPage = dynamic(() => import('@/components/gallery'));
 const TeacherSlider = dynamic(() => import('@/components/TeacherSlider'));
@@ -27,53 +28,7 @@ export default function Home() {
 
       <div className="flex flex-col min-h-screen bg-[url('/bodybg.jpg')] font-['Helvetica Neue',sans-serif] bg-cover bg-no-repeat bg-center">
 
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-            poster="/poster.webp"
-            className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-30"
-          >
-            <source src="/homepageclip.mp4" type="video/mp4" />
-          </video>
-
-
-          <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h1 className="text-white text-4xl md:text-6xl font-bold leading-snug mb-6 animate-fade-in glow-text floating">
-              Flow, Relax, and Renew
-              <br className="hidden md:inline" />
-              <span className="text-yellow-300"> – Carnival Capital Goa</span>
-            </h1>
-            <p className="text-lg md:text-2xl text-white/90 mb-8 animate-fade-in animation-delay-300">
-              Awaken your spirit and embrace peace by the ocean breeze.
-            </p>
-            <div className="flex justify-center gap-4 animate-fade-in animation-delay-600">
-              <Link href="/Aboutyogshala" passHref>
-                <Button
-                  size="lg"
-                  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2"
-                >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                  Learn More
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
+<HeroSection/>
 
         {/* Accreditation Section */}
         <section className="py-16 bg-transparent">
