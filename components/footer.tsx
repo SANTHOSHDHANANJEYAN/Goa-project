@@ -28,11 +28,11 @@ export default function Footer() {
             <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">Programs</h3>
             <ul className="space-y-2 pt-4 font-semibold">
               
-              <li><Link href="/50">50 Hr Multi-Style-Yoga TTC</Link></li>
-              <li><Link href="/100">100 Hr Multi-Style-Yoga TTC</Link></li>
-              <li><Link href="/200">200 Hr Multi-Style-Yoga TTC</Link></li>
-              <li><Link href="/300">300 Hr Multi-Style-Yoga TTC</Link></li>
-              <li><Link href="/21days">21 Days Yoga Immersion Course</Link></li>
+              <li><Link href="/50hrsyogattc">50 Hr Multi-Style-Yoga TTC</Link></li>
+              <li><Link href="/100hrsyogattc">100 Hr Multi-Style-Yoga TTC</Link></li>
+              <li><Link href="/200hrsyogattc">200 Hr Multi-Style-Yoga TTC</Link></li>
+              <li><Link href="/300hrsyogattc">300 Hr Multi-Style-Yoga TTC</Link></li>
+              <li><Link href="/21dayscourses">21 Days Yoga Immersion Course</Link></li>
 
             </ul>
           </div>
@@ -40,9 +40,9 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">Retreats</h3>
             <ul className="pt-4 space-y-2 font-semibold">
-              <li><Link href="/retreats">7 Days Yoga Holiday Retreat</Link></li>
-              <li><Link href="/retreats2">14 Days Yoga Detox Retreat</Link></li>
-              <li><Link href="/retreats3">21 Days Yoga Wellness Retreat</Link></li>
+              <li><Link href="/7daysretreat">7 Days Yoga Holiday Retreat</Link></li>
+              <li><Link href="/14daysretreat">14 Days Yoga Detox Retreat</Link></li>
+              <li><Link href="/21daysretreat">21 Days Yoga Wellness Retreat</Link></li>
             </ul>
           </div>
         </div>
