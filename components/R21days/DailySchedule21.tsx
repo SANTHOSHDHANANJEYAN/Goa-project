@@ -110,78 +110,39 @@ export default function DailySchedule21() {
   ];
 
   return (
-    <section className="flex flex-col lg:flex-row px-4 sm:px-8 md:px-16 lg:px-20 py-10 gap-10 items-stretch">
+    <section className="flex flex-col lg:flex-row px-4 sm:px-8 md:px-16 lg:px-20 py-10 gap-10 items-stretch bg-white">
       {/* Left - Timeline */}
       <div className="w-full lg:w-2/3">
-        <h2 className="text-2xl sm:text-3xl text-center lg:text-left font-semibold text-[#0C1B4D] mb-6">
+        <h2 className="text-2xl sm:text-3xl text-center lg:text-left font-semibold text-[#150E70] mb-6">
           Our Sample Schedule: Table of Time and Program
         </h2>
-        <div className="border-l-2 border-dotted border-orange-500 ml-4 pl-6 space-y-8 relative">
+        <div className="border-l-2 border-dotted border-[#150E70] ml-4 pl-6 space-y-8 relative">
           {itinerary.map((item, index) => (
             <div key={index} className="relative">
-              <div className="absolute -left-6 top-1 w-5 h-5 rounded-full bg-white border-4 border-orange-500 flex items-center justify-center">
-                {index === 0 ? (
-                  <span className="w-2 h-2 bg-orange-500 rounded-full" />
-                ) : (
-                  <span className="w-2 h-2 bg-orange-500 rounded-full" />
-                )}
+              <div className="absolute -left-6 top-1 w-5 h-5 rounded-full bg-white border-4 border-[#150E70] flex items-center justify-center">
+                <span className="w-2 h-2 bg-[#150E70] rounded-full" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold">{item.day}</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-[#150E70]">{item.day}</h3>
               <p className="text-gray-700 text-sm sm:text-base">{item.description}</p>
             </div>
           ))}
         </div>
       </div>
 
-     {/* Right - Two stacked images */}
-<div className="w-full lg:w-1/3 flex flex-col gap-[2.5rem]">
-  <div className="relative w-full h-[400px]">
-    <Image
-      src="/Curriculumimg/8.jpg"
-      alt="Retreat Top"
-      fill
-      className="rounded-lg shadow-lg object-cover"
-      sizes="(max-width: 768px) 100vw, 33vw"
-    />
-  </div>
-  <div className="relative w-full h-[400px]">
-    <Image
-      src="/Curriculumimg/5.jpg"
-      alt="Retreat Bottom"
-      fill
-      className="rounded-lg shadow-lg object-cover"
-      sizes="(max-width: 768px) 100vw, 33vw"
-    />
-  </div>
-   <div className="relative w-full h-[400px]">
-    <Image
-      src="/Curriculumimg/4.jpg"
-      alt="Retreat Bottom"
-      fill
-      className="rounded-lg shadow-lg object-cover"
-      sizes="(max-width: 768px) 100vw, 33vw"
-    />
-  </div>
-   <div className="relative w-full h-[400px]">
-    <Image
-      src="/Curriculumimg/2.jpg"
-      alt="Retreat Bottom"
-      fill
-      className="rounded-lg shadow-lg object-cover"
-      sizes="(max-width: 768px) 100vw, 33vw"
-    />
-  </div>
-   <div className="relative w-full h-[400px]">
-    <Image
-      src="/Curriculumimg/1.jpg"
-      alt="Retreat Bottom"
-      fill
-      className="rounded-lg shadow-lg object-cover"
-      sizes="(max-width: 768px) 100vw, 33vw"
-    />
-  </div>
-</div>
-
+      {/* Right - Image Stack */}
+      <div className="w-full lg:w-1/3 flex flex-col gap-[2.5rem]">
+        {['/Curriculumimg/8.jpg', '/Curriculumimg/5.jpg', '/Curriculumimg/4.jpg', '/Curriculumimg/2.jpg', '/Curriculumimg/1.jpg'].map((src, idx) => (
+          <div key={idx} className="relative w-full h-[400px]">
+            <Image
+              src={src}
+              alt={`Retreat ${idx}`}
+              fill
+              className="rounded-lg shadow-lg object-cover"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

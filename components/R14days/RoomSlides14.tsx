@@ -21,7 +21,7 @@ const testimonials = [
   { id: 11, image: '/Accomdation/19.avif' },
 ];
 
-export default function RoomSlides14() {
+export default function RoomSlides7() {
   const [isClient, setIsClient] = useState(false);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
@@ -30,10 +30,10 @@ export default function RoomSlides14() {
   }, []);
 
   return (
-    <section className="bg-transparent pb-[5rem] px-4 text-center">
+    <section className="bg-transparent pb-20 px-4 text-center">
       {isClient && (
         <Swiper
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={1}
           loop={true}
           speed={2000}
@@ -50,15 +50,15 @@ export default function RoomSlides14() {
           {testimonials.map(({ id, image }) => (
             <SwiperSlide key={id}>
               <div
-                className="relative rounded-3xl overflow-hidden group shadow-md cursor-pointer"
+                className="relative rounded-2xl overflow-hidden group shadow-lg cursor-pointer"
                 onClick={() => setPreviewImage(image)}
               >
                 <Image
                   src={image}
-                  alt={`Testimonial ${id}`}
+                  alt={`Room ${id}`}
                   width={400}
                   height={300}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
             </SwiperSlide>
@@ -69,11 +69,11 @@ export default function RoomSlides14() {
       {/* Modal Preview */}
       {isClient && previewImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4"
           onClick={() => setPreviewImage(null)}
         >
           <div
-            className="relative max-w-4xl w-full mx-4"
+            className="relative w-full max-w-5xl max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -81,7 +81,7 @@ export default function RoomSlides14() {
               alt="Preview"
               width={1000}
               height={600}
-              className="rounded-xl object-contain w-full h-auto"
+              className="rounded-xl object-contain w-full h-auto max-h-[80vh]"
             />
             <button
               onClick={() => setPreviewImage(null)}

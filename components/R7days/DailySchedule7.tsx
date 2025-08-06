@@ -40,20 +40,20 @@ export default function DailySchedule7() {
   ];
 
   return (
-    <section className="flex flex-col lg:flex-row px-4 sm:px-6 md:px-10 lg:px-20 py-10 gap-10">
+    <section className="bg-white text-[#150e70] flex flex-col lg:flex-row px-4 sm:px-6 md:px-10 lg:px-20 py-10 gap-10">
       {/* Left - Timeline */}
       <div className="w-full lg:w-2/3">
-        <h2 className="text-xl sm:text-2xl md:text-3xl text-center lg:text-left font-semibold text-[#0C1B4D] mb-6">
+        <h2 className="text-xl sm:text-2xl md:text-3xl text-center lg:text-left font-semibold mb-6">
           Our Sample Schedule: Table of Time and Program
         </h2>
-        <div className="border-l-2 border-dotted border-orange-500 ml-4 sm:ml-6 pl-4 sm:pl-6 space-y-8 relative">
+        <div className="border-l-2 border-dotted border-[#150e70] ml-4 sm:ml-6 pl-4 sm:pl-6 space-y-8 relative">
           {itinerary.map((item, index) => (
             <div key={index} className="relative">
-              <div className="absolute -left-6 top-1 w-5 h-5 rounded-full bg-white border-4 border-orange-500 flex items-center justify-center">
-                <span className="w-2 h-2 bg-orange-500 rounded-full" />
+              <div className="absolute -left-6 top-1 w-5 h-5 rounded-full bg-white border-4 border-[#150e70] flex items-center justify-center">
+                <span className="w-2 h-2 bg-[#150e70] rounded-full" />
               </div>
               <h3 className="text-base sm:text-lg md:text-xl font-bold">{item.day}</h3>
-              <p className="text-gray-700 text-sm sm:text-base">{item.description}</p>
+              <p className="text-gray-800 text-sm sm:text-base">{item.description}</p>
             </div>
           ))}
         </div>

@@ -38,7 +38,7 @@ export default function Faqs14() {
   };
 
   return (
-    <section className="bg-green-50 min-h-screen py-16 px-4">
+    <section className="bg-transparent min-h-screen py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-green-900 mb-10">Frequently Asked Questions</h1>
         <div className="space-y-4">

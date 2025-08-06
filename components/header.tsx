@@ -26,7 +26,7 @@ const leftNavigation = [
     dropdown: [
       { name: "7 Days Yoga Holiday Retreat", href: "/7daysretreat#ImIndia" },
       { name: "14 Days Yoga Detox Retreat", href: "/14daysretreat#InIndia" },
-      { name: "21 Days Yoga Wellness Retreat", href: "/21dayscourses#InIndia" }
+      { name: "21 Days Yoga Wellness Retreat", href: "/21daysretreat#InIndia" }
     ]
   },
   { name: "Our Teachers", href: "/About_Teachers#InGoa" },

@@ -34,7 +34,7 @@ export default function OurExcursions7() {
   }, []);
 
   return (
-    <section className="bg-[#fff8f5] pb-20 px-4 text-center">
+    <section className="bg-transparent pb-20 px-4 text-center">
       <h2 className="text-4xl md:text-5xl font-semibold text-[#4c2a65] mb-4">
         Our Excursions
       </h2>
