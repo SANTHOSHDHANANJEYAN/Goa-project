@@ -14,31 +14,31 @@ const leftNavigation = [
   {
     name: "Courses",
     dropdown: [
-      { name: "50 Hr Multi-Style-Yoga TTC", href: "/50hrsyogattc#InIndia" },
-      { name: "100 Hr Multi-Style-Yoga TTC", href: "/100hrsyogattc#InIndia" },
-      { name: "200 Hr Multi-Style-Yoga TTC", href: "/200hrsyogattc#InIndia" },
-      { name: "300 Hr Multi-Style-Yoga TTC", href: "/300hrsyogattc#InIndia" },
-      { name: "21 Days Yoga Immersion Course", href: "/21dayscourses#InIndia" }
+      { name: "50 Hr Multi-Style-Yoga TTC", href: "/50hrsyogattc" },
+      { name: "100 Hr Multi-Style-Yoga TTC", href: "/100hrsyogattc" },
+      { name: "200 Hr Multi-Style-Yoga TTC", href: "/200hrsyogattc" },
+      { name: "300 Hr Multi-Style-Yoga TTC", href: "/300hrsyogattc" },
+      { name: "21 Days Yoga Immersion Course", href: "/21dayscourses" }
     ]
   },
   {
     name: "Retreats",
     dropdown: [
-      { name: "7 Days Yoga Holiday Retreat", href: "/7daysretreat#InIndia" },
-      { name: "14 Days Yoga Detox Retreat", href: "/14daysretreat#InIndia" },
-      { name: "21 Days Yoga Wellness Retreat", href: "/21daysretreat#InIndia" }
+      { name: "7 Days Yoga Holiday Retreat", href: "/7daysretreat" },
+      { name: "14 Days Yoga Detox Retreat", href: "/14daysretreat" },
+      { name: "21 Days Yoga Wellness Retreat", href: "/21daysretreat" }
     ]
   },
-  { name: "Our Teachers", href: "/About_Teachers#InGoa" },
-  { name: "Our Reviews", href: "/about#InGoa" },
-  { name: "Blogs", href: "/Blog#InGoa" },
-  { name: "Gallery", href: "/gallery#InGoa" }
+  { name: "Our Teachers", href: "/About_Teachers" },
+  { name: "Our Reviews", href: "/about" },
+  { name: "Blogs", href: "/Blog" },
+  { name: "Gallery", href: "/gallery" }
 ];
 
 const rightNavigation = [
-  { name: "About Us", href: "/Aboutyogshala#InGoa" },
-  { name: "Contact Us", href: "/contact#InGoa" },
-  { name: "Payment", href: "/contact#InGoa" }
+  { name: "About Us", href: "/Aboutyogshala" },
+  { name: "Contact Us", href: "/contact" },
+  { name: "Payment", href: "/contact" }
 ];
 
 export default function Header() {
