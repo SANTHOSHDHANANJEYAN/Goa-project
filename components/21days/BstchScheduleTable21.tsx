@@ -3,34 +3,35 @@
 import { FaCalendarAlt } from 'react-icons/fa';
 
 const courseDates = [
-  { date: ' October 2025'},
-  { date: ' November 2025'},
-  { date: ' December 2025'},
-  { date: ' January 2026'},
-  { date: ' February 2026'},
- 
+  { date: 'October 2025' },
+  { date: 'November 2025' },
+  { date: 'December 2025' },
+  { date: 'January 2026' },
+  { date: 'February 2026' },
 ];
 
 const CourseSchedule = () => {
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-20 bg-[#f9f8f6]">
-      <div className="max-w-7xl mx-auto bg-white rounded-md shadow-md p-6 sm:p-8 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <section className="py-12 px-4 sm:px-6 lg:px-20 bg-white">
+      <div className="max-w-7xl mx-auto bg-white rounded-md shadow-md p-6 sm:p-8 grid grid-cols-1 md:grid-cols-3 gap-10 text-black">
         
         {/* Left: Course Dates */}
         <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4">
           {courseDates.map((item, index) => (
-            <div key={index} className="flex items-start space-x-3 border-b pb-3 border-gray-200">
-              <FaCalendarAlt className="text-[#d9442e] text-xl mt-1 shrink-0" />
+            <div 
+              key={index} 
+              className="flex items-start space-x-3 border-b pb-3 border-gray-200"
+            >
+              <FaCalendarAlt className="text-[#150e70] text-xl mt-1 shrink-0" />
               <div>
-                <p className="text-sm sm:text-base font-semibold text-gray-800">{item.date}</p>
-                
+                <p className="text-sm sm:text-base font-semibold">{item.date}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Right: Fee Info */}
-        <div className="flex flex-col justify-start text-[#8c794f]">
+        <div className="flex flex-col justify-start">
           <div className="space-y-6">
             <div>
               <p className="text-sm text-gray-600 font-medium uppercase">Course Duration:</p>
@@ -44,13 +45,11 @@ const CourseSchedule = () => {
                   USD 800
                   <p className="text-sm font-normal text-gray-600">Rooms</p>
                 </div>
-               
               </div>
             </div>
 
-
             <div className="pt-2">
-              <button className="bg-[#d9442e] hover:bg-[#150e70] transition text-white px-8 py-3 rounded shadow text-sm sm:text-base w-full sm:w-auto">
+              <button className="bg-[#150e70] hover:bg-black transition text-white px-8 py-3 rounded shadow text-sm sm:text-base w-full sm:w-auto">
                 BOOK NOW
               </button>
             </div>
