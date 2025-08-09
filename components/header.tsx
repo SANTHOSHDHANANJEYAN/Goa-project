@@ -29,7 +29,7 @@ const leftNavigation = [
       { name: "21 Days Yoga Wellness Retreat", href: "/21daysretreat" }
     ]
   },
-  { name: "Our Teachers", href: "/About_Teachers" },
+  { name: "Our Teachers", href: "/AboutTeachers" },
   { name: "Our Reviews", href: "/about" },
   { name: "Blogs", href: "/Blog" },
   { name: "Gallery", href: "/gallery" }
