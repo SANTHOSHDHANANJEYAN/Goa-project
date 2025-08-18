@@ -100,7 +100,7 @@ export default function Home() {
             </Link>
             <div className="mt-10 rounded-[3rem] overflow-hidden shadow-xl">
             <Image
-              src="/H2.jpg"
+              src="/stories.png"
               alt="Scenic Goa"
               width={1920}
               height={700}
