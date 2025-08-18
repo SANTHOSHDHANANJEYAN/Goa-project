@@ -95,7 +95,7 @@ export default function Home() {
             </p>
             <Link href="/Aboutyogshala">
               <button className="bg-[#150e70] hover:bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-md transition">
-                YOUR STORIES
+                OUR STORIES
               </button>
             </Link>
             <div className="mt-10 rounded-[3rem] overflow-hidden shadow-xl">
