@@ -79,20 +79,24 @@ export default function TeachersSection() {
         </div>
       </div>
       {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
-        aria-label="Previous"
-      >
-        <ChevronLeft size={28} />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
-        aria-label="Next"
-      >
-        <ChevronRight size={28} />
-      </button>
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-between z-10">
+        <button
+          onClick={prevSlide}
+          className="pointer-events-auto bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full transition"
+          aria-label="Previous"
+          style={{ top: '50%', transform: 'translateY(-50%)', left: '1rem', position: 'absolute' }}
+        >
+          <ChevronLeft size={28} />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="pointer-events-auto bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full transition"
+          aria-label="Next"
+          style={{ top: '50%', transform: 'translateY(-50%)', right: '1rem', position: 'absolute' }}
+        >
+          <ChevronRight size={28} />
+        </button>
+      </div>
       {/* Teacher Cards */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 transition duration-500 ease-in-out">
         <AnimatePresence mode="wait">
@@ -103,7 +107,7 @@ export default function TeachersSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 30 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-white backdrop-blur-md border border-indigo-100 rounded-3xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center px-6 py-8"
+              className="group relative bg-white backdrop-blur-md border border-indigo-100 rounded-3xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center"
             >
               <Link href="/about" passHref>
                 <div className="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-indigo-200 shadow-md mb-4 cursor-pointer transition group-hover:scale-105">
