@@ -34,7 +34,7 @@ export default function ContactForm() {
 
           <div className="rounded-lg overflow-hidden h-64 relative mt-[3rem] ">
                           <Image
-                            src="/Contact_9-removebg-preview (1).png"
+                            src="/Contact_us2.png"
                             alt="House of Om studio exterior"
                             fill
                             
