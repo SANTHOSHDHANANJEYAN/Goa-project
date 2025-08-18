@@ -72,18 +72,6 @@ const BlogSection: React.FC = () => {
                   {post.title}
                 </h3>
                 <p className="text-gray-600 mt-2">{post.excerpt}</p>
-                {post.link ? (
-                  <Link
-                    href={post.link}
-                    className="inline-block mt-4 text-[#150e70] hover:underline font-medium"
-                  >
-                    Read More »
-                  </Link>
-                ) : (
-                  <span className="inline-block mt-4 text-gray-400 cursor-not-allowed">
-                    Coming Soon
-                  </span>
-                )}
               </div>
             </div>
           ))}
