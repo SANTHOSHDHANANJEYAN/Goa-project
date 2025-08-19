@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { FaMoneyBillWave, FaCheckCircle } from "react-icons/fa";
 import Link from "next/link";
 
@@ -29,7 +29,7 @@ export default function PaymentSection() {
   const [selectedAccommodation, setSelectedAccommodation] = useState(accommodations[0]);
 
   // Shuffle accommodations when a new course is selected
-  const handleCourseSelect = (course) => {
+  const handleCourseSelect = (course: SetStateAction<{ name: string; advance: number; }>) => {
     setSelectedCourse(course);
     const randomAcc = accommodations[Math.floor(Math.random() * accommodations.length)];
     setSelectedAccommodation(randomAcc);
