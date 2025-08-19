@@ -56,7 +56,14 @@ export default function RootLayout({
           name="keywords"
           content="Yoga in Goa, Rishikul Yogshala, Yoga Teacher Training Goa, 200 Hour YTT Goa, Yoga Retreat India, Meditation Retreat Goa, Wellness Retreat, Beach Yoga"
         />
-        <link rel="icon" href="/favicon.ico" />
+
+        {/* ✅ Favicon & PWA Icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/svg+xml" href="/icon/icongoa.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased bg-image-[url('/backgd.jpg')]`}>
         <Header />

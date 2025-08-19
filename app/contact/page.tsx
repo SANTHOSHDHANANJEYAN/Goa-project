@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -18,11 +18,15 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
+// ✅ Schema with all fields
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
   email: z.string().email({ message: "Please enter a valid email address" }),
+  countryCode: z.string().optional(),
   phone: z.string().optional(),
   subject: z.string().min(2, { message: "Subject must be at least 2 characters" }),
+  preferredMonth: z.string().optional(),
+  course: z.string().optional(),
   message: z.string().min(10, { message: "Message must be at least 10 characters" }),
 });
 
@@ -34,20 +38,28 @@ export default function ContactPage() {
     defaultValues: {
       name: "",
       email: "",
+      countryCode: "",
       phone: "",
       subject: "",
+      preferredMonth: "",
+      course: "",
       message: "",
     },
   });
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    const to = "rishikulyogshalagoa@gmail.com"; // Replace with your email
+    const to = "rishikulyogshalagoa@gmail.com"; 
     const subject = encodeURIComponent(data.subject);
+
+    // ✅ Gmail body with all fields
     const body = encodeURIComponent(
       `Hi,\n\nYou have a new message from your website contact form:\n\n` +
       `Name: ${data.name}\n` +
       `Email: ${data.email}\n` +
-      `Phone: ${data.phone || 'N/A'}\n\n` +
+      `Country Code: ${data.countryCode || 'N/A'}\n` +
+      `Phone: ${data.phone || 'N/A'}\n` +
+      `Preferred Month: ${data.preferredMonth || 'N/A'}\n` +
+      `Selected Course: ${data.course || 'N/A'}\n\n` +
       `Message:\n${data.message}\n\n` +
       `Regards,\n${data.name}`
     );
@@ -75,6 +87,7 @@ export default function ContactPage() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
             {/* Contact Info */}
             <div>
               <h2 className="font-serif text-3xl mb-6">Contact Information</h2>
@@ -103,7 +116,6 @@ export default function ContactPage() {
                     <p className="text-gray-600">rishikulyogshalagoa@gmail.com</p>
                   </div>
                 </div>
-                
               </div>
               <div className="rounded-lg overflow-hidden h-64 relative mt-[3rem]">
                 <Image
@@ -127,6 +139,8 @@ export default function ContactPage() {
 
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+
+                  {/* Name & Email */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
@@ -156,7 +170,33 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {/* Phone with Country Code */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="countryCode"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Country Code</FormLabel>
+                          <FormControl>
+                            <select className="w-full border rounded p-2" {...field}>
+                              <option value="">Select Country Code</option>
+                              <option value="+1">🇺🇸 USA (+1)</option>
+                              <option value="+91">🇮🇳 India (+91)</option>
+                              <option value="+44">🇬🇧 UK (+44)</option>
+                              <option value="+61">🇦🇺 Australia (+61)</option>
+                              <option value="+81">🇯🇵 Japan (+81)</option>
+                              <option value="+971">🇦🇪 UAE (+971)</option>
+                              <option value="+49">🇩🇪 Germany (+49)</option>
+                              <option value="+33">🇫🇷 France (+33)</option>
+                              <option value="+39">🇮🇹 Italy (+39)</option>
+                              <option value="+34">🇪🇸 Spain (+34)</option>
+                            </select>
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                     <FormField
                       control={form.control}
                       name="phone"
@@ -170,6 +210,10 @@ export default function ContactPage() {
                         </FormItem>
                       )}
                     />
+                  </div>
+
+                  {/* Subject & Preferred Month */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
                       name="subject"
@@ -183,8 +227,58 @@ export default function ContactPage() {
                         </FormItem>
                       )}
                     />
+                    <FormField
+                      control={form.control}
+                      name="preferredMonth"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Preferred Month</FormLabel>
+                          <FormControl>
+                            <select className="w-full border rounded p-2" {...field}>
+                              <option value="">Select Month</option>
+                              <option value="January">January</option>
+                              <option value="February">February</option>
+                              <option value="March">March</option>
+                              <option value="April">April</option>
+                              <option value="May">May</option>
+                              <option value="June">June</option>
+                              <option value="July">July</option>
+                              <option value="August">August</option>
+                              <option value="September">September</option>
+                              <option value="October">October</option>
+                              <option value="November">November</option>
+                              <option value="December">December</option>
+                            </select>
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                   </div>
 
+                  {/* Select Course */}
+                  <FormField
+                    control={form.control}
+                    name="course"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Select Course</FormLabel>
+                        <FormControl>
+                          <select className="w-full border rounded p-2" {...field}>
+                            <option value="">Choose a course</option>
+                            <option value="200-Hour YTTC">200-Hour YTTC</option>
+                            <option value="300-Hour YTTC">300-Hour YTTC</option>
+                            <option value="500-Hour YTTC">500-Hour YTTC</option>
+                            <option value="Yoga Retreat">Yoga Retreat</option>
+                            <option value="Meditation Course">Meditation Course</option>
+                          </select>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {/* Message */}
                   <FormField
                     control={form.control}
                     name="message"
@@ -192,17 +286,14 @@ export default function ContactPage() {
                       <FormItem>
                         <FormLabel>Message</FormLabel>
                         <FormControl>
-                          <Textarea
-                            placeholder="How can we help you?"
-                            className="min-h-32"
-                            {...field}
-                          />
+                          <Textarea placeholder="How can we help you?" className="min-h-32" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
 
+                  {/* Submit */}
                   <Button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white">
                     <span className="flex items-center">
                       <Send size={16} className="mr-2" /> Send via Gmail
@@ -211,6 +302,7 @@ export default function ContactPage() {
                 </form>
               </Form>
             </div>
+
           </div>
         </div>
       </section>
