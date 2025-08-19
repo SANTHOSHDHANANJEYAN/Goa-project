@@ -15,10 +15,25 @@ const courses = [
   { name: "21 Days Yoga Wellness Retreat", advance: 80 },
 ];
 
+// Accommodation slots
+const accommodations = [
+  { type: "Shared Room", extra: 200 },
+  { type: "Private Room", extra: 400 },
+  { type: "Deluxe Room", extra: 600 },
+];
+
 const benefits = ["Lifetime Access", "Certified Completion", "24x7 Instructor Support"];
 
 export default function PaymentSection() {
   const [selectedCourse, setSelectedCourse] = useState(courses[0]);
+  const [selectedAccommodation, setSelectedAccommodation] = useState(accommodations[0]);
+
+  // Shuffle accommodations when a new course is selected
+  const handleCourseSelect = (course) => {
+    setSelectedCourse(course);
+    const randomAcc = accommodations[Math.floor(Math.random() * accommodations.length)];
+    setSelectedAccommodation(randomAcc);
+  };
 
   return (
     <section className="max-w-5xl mx-auto py-12 px-4 mt-16">
@@ -32,7 +47,7 @@ export default function PaymentSection() {
         {courses.map((course) => (
           <button
             key={course.name}
-            onClick={() => setSelectedCourse(course)}
+            onClick={() => handleCourseSelect(course)}
             className={`px-4 py-2 rounded-xl text-sm font-medium border shadow transition ${
               selectedCourse.name === course.name
                 ? "bg-[#150e70] text-white border-[#150e70]"
@@ -44,14 +59,35 @@ export default function PaymentSection() {
         ))}
       </div>
 
-      {/* Advance Payment (Only This Box) */}
+      {/* Accommodation Selector */}
+      <div className="flex flex-wrap justify-center gap-3 mb-8">
+        {accommodations.map((acc) => (
+          <button
+            key={acc.type}
+            onClick={() => setSelectedAccommodation(acc)}
+            className={`px-4 py-2 rounded-xl text-sm font-medium border shadow transition ${
+              selectedAccommodation.type === acc.type
+                ? "bg-[#150e70] text-white border-[#150e70]"
+                : "bg-white text-black border-gray-400 hover:bg-gray-100"
+            }`}
+          >
+            {acc.type} (+${acc.extra})
+          </button>
+        ))}
+      </div>
+
+      {/* Advance + Accommodation Box */}
       <div className="relative group p-6 rounded-xl border border-[#150e70] bg-gradient-to-br from-[#e9e9f6] via-white to-[#e9e9f6] shadow-md hover:shadow-xl transition-transform hover:-translate-y-1 mb-12 max-w-md mx-auto">
         <div className="absolute -inset-0.5 bg-gradient-to-r from-[#150e70] via-black to-[#150e70] rounded-xl blur opacity-20 group-hover:opacity-40 transition"></div>
         <div className="relative z-10">
           <h3 className="text-xl font-semibold text-[#150e70] mb-2">Advance Payment</h3>
           <p className="text-sm text-black mb-3">Reserve your spot today.</p>
           <p className="text-3xl md:text-4xl font-bold text-[#150e70] mb-4">
-            ${selectedCourse.advance}.00
+            ${selectedCourse.advance + selectedAccommodation.extra}.00
+          </p>
+          <p className="text-sm text-gray-600 mb-3">
+            Includes course <span className="font-semibold">{selectedCourse.name}</span> + 
+            accommodation <span className="font-semibold">{selectedAccommodation.type}</span>
           </p>
           <ul className="space-y-1 text-black text-sm">
             {benefits.map((b) => (
