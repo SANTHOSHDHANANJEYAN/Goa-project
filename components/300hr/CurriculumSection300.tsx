@@ -21,49 +21,49 @@ const curriculum = [
     title: "Asana",
     image: "/Curriculumimg/1.jpg",
     description:
-      "Focus on advanced pose study, building flexibility and strength, maintaining hydration, and mastering systematic sequences including the Ashtanga Vinyasa Intermediate Series.",
+      "Focus on advanced pose study, building flexibility and strength, maintaining hydration, and mastering systematic sequences including the Ashtanga Vinyasa Intermediate Series.",
   },
   {
     title: "Ashtanga",
     image: "/Curriculumimg/2.jpg",
     description:
-      "Advanced Ashtanga Vinyasa postures focusing on strength, flexibility, balance, and breath control through a diverse range of seated, backbends, arm balances, and twists.",
+      "Advanced Ashtanga Vinyasa postures focusing on strength, flexibility, balance, and breath control through a diverse range of seated, backbends, arm balances, and twists.",
   },
   {
     title: "Relaxation Techniques",
     image: "/Curriculumimg/3.jpg",
     description:
-      "Explore Yoga Nidra’s role in intuition development, mind-heart connection, lucid and intuitive dreams, and traditional Himalayan practices.",
+      "Explore Yoga Nidra’s role in intuition development, mind-heart connection, lucid and intuitive dreams, and traditional Himalayan practices.",
   },
   {
     title: "Pranayama",
     image: "/Curriculumimg/4.jpg",
     description:
-      "Study breath retention (Kumbhaka), awakening Sushumna energy, balancing Nadis through Nadi Shodhanam, and understanding the five vital forces and the functions of Ida, Pingala, and Sushumna.",
+      "Study breath retention (Kumbhaka), awakening Sushumna energy, balancing Nadis through Nadi Shodhanam, and understanding the five vital forces and the functions of Ida, Pingala, and Sushumna.",
   },
   {
     title: "Yoga Anatomy ",
     image: "/Curriculumimg/5.jpg",
     description:
-      "Explore the impact of asanas on muscles, glandular anatomy linked to chakras, major body systems, and the effects of pranayama on cardiovascular and nervous systems.",
+      "Explore the impact of asanas on muscles, glandular anatomy linked to chakras, major body systems, and the effects of pranayama on cardiovascular and nervous systems.",
   },
   {
     title: "Yoga Philosophy ",
     image: "/Curriculumimg/6.jpg",
     description:
-      "Explore meditation, spiritual heart, karma, yogic obstacles, kundalini, chakras, various yoga paths, consciousness levels, samadhi, and reincarnation in yogic science.",
+      "Explore meditation, spiritual heart, karma, yogic obstacles, kundalini, chakras, various yoga paths, consciousness levels, samadhi, and reincarnation in yogic science.",
   },
   {
     title: "Meditation and Concentration",
     image: "/Curriculumimg/7.jpg",
     description:
-      "Learn diverse meditation techniques including mantra, chakra, third eye, yantra, and non-duality practices, while understanding and overcoming common obstacles.",
+      "Learn diverse meditation techniques including mantra, chakra, third eye, yantra, and non-duality practices, while understanding and overcoming common obstacles.",
   },
   {
     title: "Mantra Yoga and Its Importance",
     image: "/Curriculumimg/8.jpg",
     description:
-      "Study key mantras like So-HUM and invocation chants for wisdom, fearlessness, completeness, and the sacred bond between teacher and student.",
+      "Study key mantras like So-HUM and invocation chants for wisdom, fearlessness, completeness, and the sacred bond between teacher and student.",
   },
 ];
 
@@ -100,7 +100,7 @@ const CurriculumSection300: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={cardVariants}
-            className="bg-[#FFEEA9] shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group text-center"
+            className="bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group text-center"
           >
             <div className="flex justify-center mb-4">
               <div className="w-20 h-20 bg-[#fef3f7] rounded-full overflow-hidden flex items-center justify-center shadow-inner">

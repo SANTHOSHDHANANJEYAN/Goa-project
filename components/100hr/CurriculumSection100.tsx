@@ -21,49 +21,49 @@ const curriculum = [
     title: "Foundations of Yoga & Teaching",
     image: "/Curriculumimg/1.jpg",
     description:
-      "Explore the origins, philosophies, diverse styles of yoga, and the essential role of a yoga teacher.",
+      "Explore the origins, philosophies, diverse styles of yoga, and the essential role of a yoga teacher.",
   },
   {
     title: "Asana Mastery & Alignment Techniques",
     image: "/Curriculumimg/2.jpg",
     description:
-      "Learn key yoga poses with proper alignment, modifications, hands-on adjustments, and guided practice to ensure safety, strength, and mindfulness.",
+      "Learn key yoga poses with proper alignment, modifications, hands-on adjustments, and guided practice to ensure safety, strength, and mindfulness.",
   },
   {
     title: "Pranayama & Energetic Awareness",
     image: "/Curriculumimg/3.jpg",
     description:
-      "Discover powerful breathwork techniques, their benefits, and how to harness breath and energy flow through pranayama, chakra awareness, and mindful movement.",
+      "Discover powerful breathwork techniques, their benefits, and how to harness breath and energy flow through pranayama, chakra awareness, and mindful movement.",
   },
   {
     title: "Yoga Anatomy & Safe Movement",
     image: "/Curriculumimg/4.jpg",
     description:
-      "Understand the body’s structure, key muscle groups, breath mechanics, and injury prevention to support safe, effective, and informed yoga practice.",
+      "Understand the body’s structure, key muscle groups, breath mechanics, and injury prevention to support safe, effective, and informed yoga practice.",
   },
   {
     title: "Teaching Methodology & Class Leadership",
     image: "/Curriculumimg/5.jpg",
     description:
-      "Learn to communicate effectively, structure balanced classes, apply teaching techniques, and embody the ethics and responsibilities of a yoga teacher.",
+      "Learn to communicate effectively, structure balanced classes, apply teaching techniques, and embody the ethics and responsibilities of a yoga teacher.",
   },
   {
     title: "Sequencing & Intentional Class Design",
     image: "/Curriculumimg/6.jpg",
     description:
-      "Master the art of creating balanced, level-appropriate class sequences with purposeful themes, effective timing, and engaging flow from start to finish.",
+      "Master the art of creating balanced, level-appropriate class sequences with purposeful themes, effective timing, and engaging flow from start to finish.",
   },
   {
     title: "Teaching Practicum & Constructive Feedback",
     image: "/Curriculumimg/7.jpg",
     description:
-      "Gain real-world teaching experience through guided practice sessions, peer reviews, and expert feedback to refine your skills and build confidence as a yoga teacher.",
+      "Gain real-world teaching experience through guided practice sessions, peer reviews, and expert feedback to refine your skills and build confidence as a yoga teacher.",
   },
   {
     title: "Personal Growth & Wellness for Yoga Teachers",
     image: "/Curriculumimg/8.jpg",
     description:
-      "Cultivating mindful self-reflection, journaling insights, and sustainable self-care to manage stress and prevent burnout.",
+      "Cultivating mindful self-reflection, journaling insights, and sustainable self-care to manage stress and prevent burnout.",
   },
 ];
 
@@ -100,10 +100,10 @@ const CurriculumSection100: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={cardVariants}
-            className="bg-[#ead5e6] shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group text-center"
+            className="bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group text-center"
           >
             <div className="flex justify-center mb-4">
-              <div className="w-20 h-20 bg-[#fef3f7] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
+              <div className="w-20 h-20 bg-white rounded-full overflow-hidden flex items-center justify-center shadow-inner">
                 <Image
                   src={item.image}
                   alt={item.title}

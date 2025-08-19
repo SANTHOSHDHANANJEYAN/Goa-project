@@ -36,7 +36,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ testimonials 
                 current === index ? "opacity-100 z-10" : "opacity-0 z-0"
               }`}
             >
-              <div className="bg-[#fcdede] p-8 rounded-lg shadow-lg max-w-2xl mx-auto text-center">
+              <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto text-center">
                 <svg
                   className="w-12 h-12 text-purple-300 mx-auto mb-4"
                   fill="currentColor"

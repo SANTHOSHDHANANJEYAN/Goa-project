@@ -43,7 +43,7 @@ const activities: Activity[] = [
   {
     title: 'Yoga Wellness Workshop',
     description:
-      'Learn foundational principles of self-care, mediation and relaxation',
+      'Learn foundational principles of self-care, mediation and relaxation',
     image: '/RetreatBG/yogawellness.jpeg.jpg',
   },
 ];
@@ -62,7 +62,7 @@ const ActivitiesSection: React.FC = () => {
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="bg-amber-50 p-6 rounded-xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 duration-300 flex flex-col items-center"
+              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 duration-300 flex flex-col items-center"
             >
               <div className="-mt-16 mb-6">
                 <Image

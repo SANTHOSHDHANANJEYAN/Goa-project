@@ -61,7 +61,7 @@ const TestimonialSection: React.FC = () => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div className="absolute inset-0  flex items-center justify-center">
                   <svg
                     className="h-16 w-16 text-white opacity-80 hover:opacity-100 transition"
                     fill="currentColor"

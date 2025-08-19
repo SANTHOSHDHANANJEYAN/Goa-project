@@ -1,10 +1,14 @@
-"use client"
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 export default function ContactForm() {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
+  const [date, setDate] = useState("");
 
   return (
     <section className="relative bg-gradient-to-br from-[#f9fafb] to-[#eef2f5] py-16 px-6 md:px-20 overflow-hidden mb-[2rem]">
@@ -14,7 +18,7 @@ export default function ContactForm() {
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3840.7496538103755!2d73.7032!3d15.711433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfef00335f248f%3A0xa96dc6480dde342e!2sRishikul%20Yogshala!5e0!3m2!1sen!2sin!4v1746891791703!5m2!1sen!2sin"
           width="100%"
           height="450"
-          style={{ border: '0' }}
+          style={{ border: "0" }}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           className="w-full h-[300px] md:h-[450px]"
@@ -29,21 +33,21 @@ export default function ContactForm() {
             <span className="underline decoration-yellow-400">Yoga</span> Trainer !!
           </h2>
           <p className="text-[#150e70] text-base">
-            Our team is here to assist you. Simply fill out the form below, and we’ll get back to you as soon as possible!
+            Our team is here to assist you. Simply fill out the form below, and
+            we’ll get back to you as soon as possible!
           </p>
 
           <div className="rounded-lg overflow-hidden h-64 relative mt-[3rem] ">
-                          <Image
-                            src="/Contact_us2.png"
-                            alt="House of Om studio exterior"
-                            fill
-                            
-                          />
+            <Image
+              src="/Contact_us2.png"
+              alt="House of Om studio exterior"
+              fill
+            />
           </div>
         </div>
 
         {/* Right Section - Form */}
-        <div className="md:w-1/2 w-full  rounded-xl p-8">
+        <div className="md:w-1/2 w-full rounded-xl p-8">
           <form className="flex flex-col gap-4">
             <input
               type="text"
@@ -55,11 +59,23 @@ export default function ContactForm() {
               placeholder="Email"
               className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-white"
             />
+
+            {/* Phone with all country codes */}
+            <PhoneInput
+              country={"in"}
+              value={phone}
+              onChange={(phone) => setPhone(phone)}
+              inputClass="!w-full !p-3 !border !border-gray-300 !rounded-md !focus:outline-none !focus:ring-2 !focus:ring-yellow-300 !bg-white"
+            />
+
+            {/* Booking Date */}
             <input
-              type="tel"
-              placeholder="Contact"
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
               className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-white"
             />
+
             <select className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-white">
               <option>Select Course</option>
               <option>50 Hr Multi-Style-Yoga TTC</option>
@@ -69,8 +85,10 @@ export default function ContactForm() {
               <option>21 Days Yoga Immersion Course</option>
               <option>7 Days Yoga Holiday Retreat</option>
               <option>14 Days Yoga Detox Retreat</option>
-              <option>21 Days Yoga Wellness Retreat</option>  
+              <option>21 Days Yoga Wellness Retreat</option>
             </select>
+
+            {/* Message */}
             <div className="relative">
               <textarea
                 maxLength={180}
@@ -84,6 +102,7 @@ export default function ContactForm() {
                 {message.length} / 180
               </span>
             </div>
+
             <button
               type="submit"
               className="bg-green-700 text-white py-2 px-6 rounded-md hover:bg-green-800 self-start"

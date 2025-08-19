@@ -21,49 +21,49 @@ const curriculum = [
     title: "Daily Asana Practice",
     image: "/Curriculumimg/1.jpg",
     description:
-      "Learn and practice Hatha, Vinyasa, and Restorative yoga to improve strength, flexibility, and posture.Each session is designed to deepen body awareness and energize your day.",
+      "Learn and practice Hatha, Vinyasa, and Restorative yoga to improve strength, flexibility, and posture. Each session is designed to deepen body awareness and energize your day.",
   },
   {
     title: "Pranayama & Breath Control ",
     image: "/Curriculumimg/2.jpg",
     description:
-      "Explore powerful breathing techniques to calm the mind and balance emotions.Build a daily routine that supports clarity, energy, and relaxation.",
+      "Explore powerful breathing techniques to calm the mind and balance emotions. Build a daily routine that supports clarity, energy, and relaxation.",
   },
   {
     title: "Meditation & Mindfulness",
     image: "/Curriculumimg/3.jpg",
     description:
-      "Practice guided meditation, mantra, and silent sitting to develop inner stillness.Cultivate focus, peace, and a deeper connection to yourself.",
+      "Practice guided meditation, mantra, and silent sitting to develop inner stillness. Cultivate focus, peace, and a deeper connection to yourself.",
   },
   {
     title: "Yoga Philosophy & Lifestyle",
     image: "/Curriculumimg/4.jpg",
     description:
-      "Understand the core teachings of yoga beyond the mat, including Yamas & Niyamas.Learn how to live with awareness, balance, and purpose.",
+      "Understand the core teachings of yoga beyond the mat, including Yamas & Niyamas. Learn how to live with awareness, balance, and purpose.",
   },
   {
     title: "Anatomy & Body Awareness",
     image: "/Curriculumimg/5.jpg",
     description:
-      "Discover how your body works during yoga with simple, practical anatomy lessons.Improve alignment, prevent injury, and support safe practice.",
+      "Discover how your body works during yoga with simple, practical anatomy lessons. Improve alignment, prevent injury, and support safe practice.",
   },
   {
     title: "Ayurveda & Yogic Nutrition ",
     image: "/Curriculumimg/6.jpg",
     description:
-      "Learn basic Ayurveda principles for healthy living and natural detox.Explore diet, routines, and herbs to support your yoga journey.",
+      "Learn basic Ayurveda principles for healthy living and natural detox. Explore diet, routines, and herbs to support your yoga journey.",
   },
   {
     title: "Chakra & Energy Work",
     image: "/Curriculumimg/7.jpg",
     description:
-      "Understand the body’s energy centers and how yoga affects your inner flow.Balance your chakras through breath, sound, and movement.",
+      "Understand the body’s energy centers and how yoga affects your inner flow. Balance your chakras through breath, sound, and movement.",
   },
   {
     title: "Nature Excursions & Healing Activities",
     image: "/Curriculumimg/8.jpg",
     description:
-      "Enjoy time in nature with beach yoga, forest walks, and waterfall visits.Let nature recharge your spirit and deepen your retreat experience.",
+      "Enjoy time in nature with beach yoga, forest walks, and waterfall visits. Let nature recharge your spirit and deepen your retreat experience.",
   },
 ];
 
@@ -100,7 +100,7 @@ const CurriculumSection50: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={cardVariants}
-            className="bg-[#B5FCCD] shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group"
+            className="bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group"
           >
             <div className="flex justify-center mb-4">
               <div className="w-20 h-20 bg-[#9B7EBD] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
@@ -115,10 +115,10 @@ const CurriculumSection50: React.FC = () => {
             </div>
             {/* Centered text content */}
             <div className="text-center">
-              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-[#B5FCCD] transition">
+              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-[#9B7EBD] transition">
                 {item.title}
               </h3>
-              <p className="text-sm text-black-600 leading-relaxed">{item.description}</p>
+              <p className="text-sm text-gray-700 leading-relaxed">{item.description}</p>
             </div>
           </motion.div>
         ))}

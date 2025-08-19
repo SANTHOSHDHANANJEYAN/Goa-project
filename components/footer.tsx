@@ -71,7 +71,7 @@ export default function Footer() {
             <li><MapPin className="inline-block w-4 h-4 mr-2" /> 128, Thorlebag, Querim, Arambol, Goa 403524</li>
           </ul>
           <div>
-            <Link href="/privacy" className="underline hover:text-purple-700">
+            <Link href="/privacypolicy" className="underline hover:text-purple-700">
               Privacy Policy
             </Link>
           </div>
