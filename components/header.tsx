@@ -38,7 +38,7 @@ const leftNavigation = [
 const rightNavigation = [
   { name: "About Us", href: "/Aboutyogshala" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Payment", href: "/contact" }
+  { name: "Payment", href: "/payment" }
 ];
 
 export default function Header() {
