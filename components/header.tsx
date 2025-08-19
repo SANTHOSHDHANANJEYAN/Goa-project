@@ -30,7 +30,7 @@ const leftNavigation = [
     ]
   },
   { name: "Our Teachers", href: "/AboutTeachers" },
-  { name: "Our Reviews", href: "/about" },
+  { name: "Our Reviews", href: "/Reviews" },
   { name: "Blogs", href: "/Blog" },
   { name: "Gallery", href: "/gallery" }
 ];
