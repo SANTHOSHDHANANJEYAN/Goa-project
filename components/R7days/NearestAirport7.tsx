@@ -1,20 +1,74 @@
 export default function NearestAirport7() {
   return (
-    <section className="bg-white pb-[3rem]  px-4 sm:px-6 md:px-10 lg:px-20 text-center">
-      <div className="max-w-4xl mx-auto mb-8 sm:mb-10">
+    <section className="bg-white pb-[3rem] px-4 sm:px-6 md:px-10 lg:px-20">
+      <div className="max-w-6xl mx-auto mb-8 sm:mb-12 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#150e70]">
-          Nearest Airport
+          Rishikul Yogshala Location
         </h2>
       </div>
 
-      <div className="w-full rounded-xl overflow-hidden shadow-lg aspect-[16/5]">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3840.7496538103755!2d73.7032!3d15.711433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfef00335f248f%3A0xa96dc6480dde342e!2sRishikul%20Yogshala!5e0!3m2!1sen!2sin!4v1746891791703!5m2!1sen!2sin"
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="w-full h-full border-0"
-        ></iframe>
+      {/* Two-column layout */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        {/* Left Side - How to Reach */}
+        <div className="text-left flex flex-col justify-center">
+          <h3 className="text-xl sm:text-2xl font-semibold text-[#150e70] mb-5">
+            How to Reach Us
+          </h3>
+          <p className="text-gray-700 mb-5 leading-relaxed">
+            The nearest airport to <span className="font-semibold">Rishikul Yogshala</span> is
+            <span className="font-semibold"> Goa International Airport (Dabolim)</span>, located
+            approximately <span className="font-semibold">54 km</span> away.
+            From the airport, you can choose any of the following options:
+          </p>
+
+          <ul className="space-y-4 text-gray-700">
+            <li className="flex items-start gap-2">
+              <span className="text-xl">🚕</span>
+              <p>
+                <span className="font-semibold text-[#150e70]">By Taxi:</span>  
+                Taxis are available at the airport 24/7. It takes around
+                <span className="font-semibold"> 1.5 hours</span> to reach the retreat.
+              </p>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-xl">🛵</span>
+              <p>
+                <span className="font-semibold text-[#150e70]">By Rental Scooter/Car:</span>  
+                You can easily rent a scooter or car at the airport. This option
+                gives you flexibility to explore Goa.
+              </p>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-xl">🚌</span>
+              <p>
+                <span className="font-semibold text-[#150e70]">By Bus:</span>  
+                Public buses are available, but they may take longer and require
+                multiple changes. Suitable if you’re on a budget.
+              </p>
+            </li>
+          </ul>
+
+          <p className="text-gray-700 mt-6">
+            For assistance with airport transfers, feel free to{" "}
+            <a
+              href="#contact"
+              className="text-[#150e70] font-semibold underline hover:text-[#0d0a52] transition"
+            >
+              contact us
+            </a>.
+          </p>
+        </div>
+
+        {/* Right Side - Google Map */}
+        <div className="w-full rounded-xl overflow-hidden shadow-lg h-[350px] sm:h-[400px] lg:h-[450px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3840.7496538103755!2d73.7032!3d15.711433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfef00335f248f%3A0xa96dc6480dde342e!2sRishikul%20Yogshala!5e0!3m2!1sen!2sin!4v1746891791703!5m2!1sen!2sin"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full border-0"
+          ></iframe>
+        </div>
       </div>
     </section>
   );
