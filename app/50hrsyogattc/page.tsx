@@ -49,13 +49,37 @@ const FiftyHourTTPage = () => {
         </div>
       </div>
 
-      <div className="flex justify-center gap-6 mb-6 text-sm text-[#150e70] flex-wrap">
-        <p className="text-[#150e70]">Duration-50Hrs - 7Days</p>
-        <p className="text-[#150e70]">Language-English</p>
-        <p className="text-[#150e70]">Module: Residential with Meals</p>
-        <p className="text-[#150e70]">Level: Very Beginner</p>
-        <p className="text-[#150e70]">Certification: YACEP</p>
-      </div>
+<div className="max-w-3xl mx-auto p-6">
+  <h2 className="text-center text-2xl sm:text-3xl font-bold text-[#150e70] mb-6">
+    Course Highlights
+  </h2>
+
+  <table className="w-full border border-gray-200 rounded-lg overflow-hidden">
+    <tbody>
+      <tr className="border-b border-gray-200">
+        <td className="px-5 py-3 font-medium text-[#150e70]">Duration</td>
+        <td className="px-5 py-3 text-gray-700">50 Hrs - 7 Days</td>
+      </tr>
+      <tr className="border-b border-gray-200">
+        <td className="px-5 py-3 font-medium text-[#150e70]">Language</td>
+        <td className="px-5 py-3 text-gray-700">English</td>
+      </tr>
+      <tr className="border-b border-gray-200">
+        <td className="px-5 py-3 font-medium text-[#150e70]">Module</td>
+        <td className="px-5 py-3 text-gray-700">Residential with Meals</td>
+      </tr>
+      <tr className="border-b border-gray-200">
+        <td className="px-5 py-3 font-medium text-[#150e70]">Level</td>
+        <td className="px-5 py-3 text-gray-700">Very Beginner</td>
+      </tr>
+      <tr>
+        <td className="px-5 py-3 font-medium text-[#150e70]">Certification</td>
+        <td className="px-5 py-3 text-gray-700">YACEP</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
       <div className="text-center mb-6">
         <a href="/contact#InGoa">
