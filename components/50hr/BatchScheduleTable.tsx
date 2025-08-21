@@ -1,6 +1,7 @@
 'use client';
 
 import { FaCalendarAlt } from 'react-icons/fa';
+import Link from "next/link";
 
 const courseDates = [
   { date: '7 Sept - 14 Sepr 2025'},
@@ -52,13 +53,13 @@ const CourseSchedule = () => {
                 </div>
               </div>
             </div>
-
-
-            <div className="pt-2">
-              <button className="bg-[#150e70] hover:bg-[#d9442e] transition text-white px-8 py-3 rounded shadow text-sm sm:text-base w-full sm:w-auto">
-                BOOK NOW
-              </button>
-            </div>
+              <div className="pt-2">
+                <Link href="/contact">
+                  <button className="bg-[#150e70] hover:bg-[#d9442e] transition text-white px-8 py-3 rounded shadow text-sm sm:text-base w-full sm:w-auto">
+                    BOOK NOW
+                  </button>
+                </Link>
+              </div>
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { FaCalendarAlt } from 'react-icons/fa';
+import Link from 'next/link';
 
 const courseDates = [
   { date: 'October 2025' },
@@ -18,8 +19,8 @@ const CourseSchedule = () => {
         {/* Left: Course Dates */}
         <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
           {courseDates.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="flex items-start space-x-2 border-b pb-2 border-gray-200"
             >
               <FaCalendarAlt className="text-[#150e70] text-lg mt-1 shrink-0" />
@@ -32,24 +33,32 @@ const CourseSchedule = () => {
         <div className="flex flex-col justify-start">
           <div className="space-y-4">
             <div>
-              <p className="text-xs text-gray-600 font-medium uppercase">Course Duration:</p>
+              <p className="text-xs text-gray-600 font-medium uppercase">
+                Course Duration:
+              </p>
               <h2 className="text-xl text-[#150e70] font-bold">21 Days</h2>
             </div>
 
             <div>
-              <p className="text-xs text-gray-600 font-medium uppercase">21-Days Practice Fees:</p>
+              <p className="text-xs text-gray-600 font-medium uppercase">
+                21-Days Practice Fees:
+              </p>
               <div className="flex flex-col sm:flex-row sm:gap-6 mt-1 text-lg font-bold">
-                <div className='text-[#150e70]'>
+                <div className="text-[#150e70]">
                   USD 800
                   <p className="text-xs font-normal text-gray-600">Rooms</p>
                 </div>
               </div>
             </div>
 
+            {/* BOOK NOW Button */}
             <div>
-              <button className="bg-[#150e70] hover:bg-black transition text-white px-6 py-2.5 rounded shadow text-sm sm:text-base w-full sm:w-auto">
+              <Link
+                href="/contact"
+                className="bg-[#150e70] hover:bg-black transition text-white px-6 py-2.5 rounded shadow text-sm sm:text-base w-full sm:w-auto inline-block text-center"
+              >
                 BOOK NOW
-              </button>
+              </Link>
             </div>
           </div>
         </div>

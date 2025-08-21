@@ -1,6 +1,7 @@
 'use client';
 
 import { FaCalendarAlt } from 'react-icons/fa';
+import Link from 'next/link';
 
 const courseDates = [
   { date: '7 Nov - 3 Dec 2025' },
@@ -32,28 +33,36 @@ const CourseSchedule = () => {
         <div className="flex flex-col justify-start text-[#8c794f]">
           <div className="space-y-4">
             <div>
-              <p className="text-xs text-gray-600 font-medium uppercase">Course Duration:</p>
+              <p className="text-xs text-gray-600 font-medium uppercase">
+                Course Duration:
+              </p>
               <h2 className="text-xl text-[#150e70] font-bold">27 Days</h2>
             </div>
 
             <div>
-              <p className="text-xs text-gray-600 font-medium uppercase">300 Hrs Yoga TTC Fee:</p>
+              <p className="text-xs text-gray-600 font-medium uppercase">
+                300 Hrs Yoga TTC Fee:
+              </p>
               <div className="flex flex-col sm:flex-row sm:gap-6 mt-1 text-lg font-bold">
-                <div className='text-[#150e70]'>
+                <div className="text-[#150e70]">
                   USD 1700
                   <p className="text-xs font-normal text-gray-600">Private Room</p>
                 </div>
-                <div className='text-[#150e70]'>
+                <div className="text-[#150e70]">
                   USD 1400
                   <p className="text-xs font-normal text-gray-600">Shared Room</p>
                 </div>
               </div>
             </div>
 
+            {/* BOOK NOW Button */}
             <div>
-              <button className="bg-[#150e70] hover:bg-[#d9442e] transition text-white px-6 py-2 rounded shadow text-sm sm:text-base w-full sm:w-auto">
+              <Link
+                href="/contact"
+                className="bg-[#150e70] hover:bg-[#d9442e] transition text-white px-6 py-2 rounded shadow text-sm sm:text-base w-full sm:w-auto inline-block text-center"
+              >
                 BOOK NOW
-              </button>
+              </Link>
             </div>
           </div>
         </div>
