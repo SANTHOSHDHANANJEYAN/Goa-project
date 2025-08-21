@@ -1,12 +1,10 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 interface BlogPost {
   title: string;
   excerpt: string;
   image: string;
   date: string;
-  link?: string;
 }
 
 const posts: BlogPost[] = [
@@ -16,7 +14,6 @@ const posts: BlogPost[] = [
       "Goa, known for its stunning beaches, vibrant culture, and laid-back vibe, is also a haven for those looking to deepen their yoga journey.",
     image: "/b2.jpg",
     date: "December 10, 2024",
-    link: "/blogs/C2",
   },
   {
     title: "11 Reasons Why You Should Start Fasting",
@@ -24,7 +21,6 @@ const posts: BlogPost[] = [
       "When we wake up, we step into a new chance to live healthy. Learn how fasting transforms your mind and body.",
     image: "/b1.jpg",
     date: "December 10, 2024",
-    link: "/blogs/C3",
   },
   {
     title: "Healing Through Sound: A Beginner’s Guide",
@@ -32,13 +28,12 @@ const posts: BlogPost[] = [
       "Sound therapy uses vibrations to heal the mind and body. Discover how it can create harmony within.",
     image: "/b3.jpg",
     date: "December 10, 2024",
-    link: "/blogs/CD",
   },
 ];
 
 const BlogSection: React.FC = () => {
   return (
-    <section className="pt-[3rem] pb-[3rem] bg-transparent ">
+    <section className="pt-[3rem] pb-[3rem] bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl font-bold text-[#150e70] mb-4">
@@ -72,18 +67,6 @@ const BlogSection: React.FC = () => {
                   {post.title}
                 </h3>
                 <p className="text-gray-600 mt-2">{post.excerpt}</p>
-                {post.link ? (
-                  <Link
-                    href={post.link}
-                    className="inline-block mt-4 text-[#150e70] hover:underline font-medium"
-                  >
-                    Read More »
-                  </Link>
-                ) : (
-                  <span className="inline-block mt-4 text-gray-400 cursor-not-allowed">
-                    Coming Soon
-                  </span>
-                )}
               </div>
             </div>
           ))}
