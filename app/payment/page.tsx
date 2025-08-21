@@ -113,7 +113,7 @@ const courses: Course[] = [
   
         {/* Advance + Remaining Box */}
         <div className="relative group p-6 rounded-xl border border-[#150e70] bg-gradient-to-br from-[#e9e9f6] via-white to-[#e9e9f6] shadow-md hover:shadow-xl transition-transform hover:-translate-y-1 mb-12 max-w-md mx-auto">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#150e70] via-black to-[#150e70] rounded-xl blur opacity-20 group-hover:opacity-40 transition"></div>
+         
           <div className="relative z-10">
             <h3 className="text-xl font-semibold text-[#150e70] mb-2">
               Payment Breakdown

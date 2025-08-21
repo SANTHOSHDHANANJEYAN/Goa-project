@@ -54,7 +54,7 @@ const FiftyHourTTPage = () => {
             Course Highlights
           </h2>
 
-          <table className="w-full border border-gray-200 rounded-lg overflow-hidden">
+          <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
             <tbody>
               <tr className="border-b border-gray-200">
                 <td className="px-5 py-3 font-medium text-[#150e70]">Duration</td>
@@ -83,7 +83,7 @@ const FiftyHourTTPage = () => {
 
       <div className="text-center mb-6">
         <a href="/contact#InGoa">
-          <button className="bg-[#150e70] hover:bg-indigo-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-full transition duration-300 shadow-md">
+          <button className="bg-[#150e70] hover:bg-green-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-full transition duration-300 shadow-md">
             Book Your Spot
           </button>
         </a>

@@ -99,7 +99,7 @@ const CourseSchedule = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.97 }}
-                  className="bg-gradient-to-r from-[#150e70] to-[#1f2d98] hover:from-[#d9442e] hover:to-[#f05b45] transition text-white px-10 py-3 rounded-full shadow-lg text-sm sm:text-base font-semibold w-full sm:w-auto"
+                  className="bg-gradient-to-r from-[#150e70] to-[#1f2d98] hover:bg-green-700 transition text-white px-10 py-3 rounded-full shadow-lg text-sm sm:text-base font-semibold w-full sm:w-auto"
                 >
                   BOOK NOW
                 </motion.button>

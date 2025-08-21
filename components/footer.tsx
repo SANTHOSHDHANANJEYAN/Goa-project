@@ -3,8 +3,6 @@ import Link from "next/link";
 import { Instagram, Facebook, Mail, Phone, MapPin, Youtube } from "lucide-react";
 import Image from "next/image";
 
-
-
 export default function Footer() {
   return (
     <footer className="relative text-[#15005c] px-6 py-12 text-sm overflow-hidden">
@@ -19,8 +17,10 @@ export default function Footer() {
         <source src="/ftvbg2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
       {/* Optional semi-transparent overlay */}
       <div className="absolute inset-0 bg-white bg-opacity-70" />
+
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
         {/* Left Column */}
@@ -28,13 +28,11 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">Programs</h3>
             <ul className="space-y-2 pt-4 font-semibold">
-              
               <li><Link href="/50hrsyogattc">50 Hr Multi-Style-Yoga TTC</Link></li>
               <li><Link href="/100hrsyogattc">100 Hr Multi-Style-Yoga TTC</Link></li>
               <li><Link href="/200hrsyogattc">200 Hr Multi-Style-Yoga TTC</Link></li>
               <li><Link href="/300hrsyogattc">300 Hr Multi-Style-Yoga TTC</Link></li>
               <li><Link href="/21dayscourses">21 Days Yoga Immersion Course</Link></li>
-
             </ul>
           </div>
 
@@ -50,14 +48,15 @@ export default function Footer() {
 
         {/* Center Column: Logo */}
         <div className="flex justify-center md:justify-center items-center">
-        <Image
-          src="/logo30-removebg-preview.png"
-          alt="Rishikul Yogshala Logo"
-          width={280}      // use max width or actual image width
-          height={100}     // approximate height or actual image height
-          className="mx-auto"
-        />
-
+          <Link href="/" aria-label="Go to Home">
+            <Image
+              src="/logo30-removebg-preview.png"
+              alt="Rishikul Yogshala Logo"
+              width={280}
+              height={100}
+              className="mx-auto cursor-pointer transition-transform duration-300 hover:scale-105"
+            />
+          </Link>
         </div>
 
         {/* Right Column: Contact Info */}
@@ -78,23 +77,20 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       {/* Footer Social Icons */}
       <div className="relative z-10 mt-10 flex justify-center space-x-6">
-        <Link
-  href="#"
-  className="text-[#15005c] hover:text-purple-700 pb-[0.5rem]"
-  aria-label="YouTube"
->
-  <Youtube className="w-8 h-6" />
-</Link>
-
-        <Link href="#" className="text-[#15005c] hover:text-purple-700" >
+        <Link href="#" className="text-[#15005c] hover:text-purple-700 pb-[0.5rem]" aria-label="YouTube">
+          <Youtube className="w-8 h-6" />
+        </Link>
+        <Link href="#" className="text-[#15005c] hover:text-purple-700">
           <Instagram className="w-6 h-6" />
         </Link>
-        <Link href="#" className="text-[#15005c] hover:text-purple-700" >
+        <Link href="#" className="text-[#15005c] hover:text-purple-700">
           <Facebook className="w-6 h-6" />
         </Link>
       </div>
+
       {/* Copyright */}
       <div className="relative z-10 mt-6 text-center text-xs text-[#15005c]">
         &copy; {new Date().getFullYear()} Rishikul Yogshala Goa. All rights reserved.
@@ -102,4 +98,3 @@ export default function Footer() {
     </footer>
   );
 }
-

@@ -26,12 +26,7 @@ export default function OurRooms21() {
         </p>
 
         {/* Optional CTA */}
-        <a
-          href="/book"
-          className="inline-block mt-4 px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:bg-orange-600 transition"
-        >
-          Book a Room
-        </a>
+
       </div>
     </section>
   );
