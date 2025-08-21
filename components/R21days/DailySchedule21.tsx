@@ -35,12 +35,13 @@ export default function DailySchedule21() {
 
   return (
     <section className="flex flex-col lg:flex-row px-4 sm:px-8 md:px-16 lg:px-20 py-10 gap-10 items-stretch bg-white">
+      
       {/* Left - Timeline */}
-      <div className="w-full lg:w-2/3">
+      <div className="w-full lg:w-1/2 flex flex-col">
         <h2 className="text-2xl sm:text-3xl lg:text-left text-center font-semibold text-[#150E70] mb-8">
           Our Sample Schedule: Table of Time and Program
         </h2>
-        <div className="border-l-2 border-dotted border-[#150E70] ml-4 pl-6 space-y-10 relative">
+        <div className="border-l-2 border-dotted border-[#150E70] ml-4 pl-6 space-y-8 relative flex-1">
           {itinerary.map((item, idx) => (
             <article key={idx} className="relative">
               <div className="absolute -left-6 top-1 w-6 h-6 rounded-full bg-white border-4 border-[#150E70] flex items-center justify-center">
@@ -54,15 +55,15 @@ export default function DailySchedule21() {
       </div>
 
       {/* Right - Image Stack */}
-      <div className="w-full lg:w-1/3 flex flex-col gap-6">
+      <div className="w-full lg:w-1/2 flex flex-col gap-6">
         {images.map((src, idx) => (
-          <div key={idx} className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+          <div key={idx} className="relative w-full flex-1 rounded-lg overflow-hidden shadow-lg min-h-[200px]">
             <Image
               src={src}
               alt={`Retreat ${idx + 1}`}
               fill
               className="object-cover w-full h-full"
-              sizes="(max-width: 768px) 100vw, 33vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         ))}
