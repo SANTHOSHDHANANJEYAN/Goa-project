@@ -28,14 +28,14 @@ const SpaHero7: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href="#program"
+            href="/about"
             aria-label="Explore Program"
             className="bg-[#150e70] hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full transition duration-300"
           >
             Explore Program
           </a>
           <a
-            href="/contact#InGoa"
+            href="/contact"
             aria-label="Book Now"
             className="border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-semibold px-8 py-3 rounded-full transition duration-300"
           >

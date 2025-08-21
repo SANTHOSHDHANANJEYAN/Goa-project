@@ -31,14 +31,14 @@ const SpaHero14: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href="#program"
+            href="/about"
             className="bg-[#150e70] hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-full transition duration-300"
             aria-label="Explore the program"
           >
             Explore Program
           </a>
           <a
-            href="#contact"
+            href="/contact"
             className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-medium px-8 py-3 rounded-full transition duration-300"
             aria-label="Book the retreat now"
           >
