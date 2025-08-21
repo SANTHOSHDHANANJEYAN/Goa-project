@@ -209,8 +209,7 @@ export default function PrivacyPolicyPage() {
               <div className="flex items-start gap-4 p-5 bg-white shadow rounded-2xl border border-gray-200">
                 <MapPin className="text-green-600 w-6 h-6 mt-1" />
                 <p>
-                  South Cliff Beach Resort, South Cliff, Near Cafe Sarwaa,
-                  Thiruvananthapuram, Varkala, Kerala 695141
+                  128, Thorlebag, Querim, Arambol, Goa 403524
                 </p>
               </div>
 
@@ -220,7 +219,7 @@ export default function PrivacyPolicyPage() {
                   href="mailto:contact@rishikulyogshala.org"
                   className="text-[#150e70] hover:underline"
                 >
-                  contact@rishikulyogshala.org
+                  rishikulyogshalagoa@gmail.com
                 </Link>
               </div>
 
@@ -230,7 +229,7 @@ export default function PrivacyPolicyPage() {
                   href="tel:+919258611240"
                   className="text-[#150e70] hover:underline"
                 >
-                  +91-9258611240
+                  +91 80899 92515
                 </Link>
               </div>
 

@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import { Instagram, Facebook, Mail, Phone, MapPin, Youtube } from "lucide-react";
 import Image from "next/image";
