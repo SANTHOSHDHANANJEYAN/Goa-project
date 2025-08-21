@@ -20,6 +20,14 @@ const faqs = [
     question: 'Are meals and accommodation included?',
     answer: 'Yes, all packages include 3 nourishing vegetarian meals per day and shared or private accommodations.',
   },
+    {
+    question: 'Are meals and accommodation included?',
+    answer: 'Yes, all packages include 3 nourishing vegetarian meals per day and shared or private accommodations.',
+  },
+    {
+    question: 'Are meals and accommodation included?',
+    answer: 'Yes, all packages include 3 nourishing vegetarian meals per day and shared or private accommodations.',
+  },
 ];
 
 export default function Faqs21() {
@@ -32,20 +40,16 @@ export default function Faqs21() {
   return (
     <section className="bg-transparent min-h-screen py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-green-900 mb-10">
-          Frequently Asked Questions
-        </h1>
+        <h1 className="text-4xl font-bold text-center text-green-900 mb-10">Frequently Asked Questions</h1>
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="bg-white border border-green-200 rounded-xl shadow-sm overflow-hidden"
+              className="bg-white border border-green-200 rounded-xl shadow-sm transition-all"
             >
               <button
                 onClick={() => toggle(idx)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left"
-                aria-expanded={activeIndex === idx}
-                aria-controls={`faq-${idx}`}
               >
                 <span className="text-lg font-medium text-green-900">{faq.question}</span>
                 <ChevronDownIcon
@@ -55,9 +59,8 @@ export default function Faqs21() {
                 />
               </button>
               <div
-                id={`faq-${idx}`}
-                className={`px-6 pb-5 text-gray-700 text-sm transition-all duration-500 ease-in-out ${
-                  activeIndex === idx ? 'max-h-96 pt-2' : 'max-h-0 overflow-hidden'
+                className={`px-6 pb-5 text-gray-700 text-sm transition-all duration-300 ease-in-out ${
+                  activeIndex === idx ? 'block' : 'hidden'
                 }`}
               >
                 {faq.answer}
