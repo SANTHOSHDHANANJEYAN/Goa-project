@@ -266,11 +266,14 @@ export default function ContactPage() {
                         <FormControl>
                           <select className="w-full border rounded p-2" {...field}>
                             <option value="">Choose a course</option>
-                            <option value="200-Hour YTTC">200-Hour YTTC</option>
-                            <option value="300-Hour YTTC">300-Hour YTTC</option>
-                            <option value="500-Hour YTTC">500-Hour YTTC</option>
-                            <option value="Yoga Retreat">Yoga Retreat</option>
-                            <option value="Meditation Course">Meditation Course</option>
+                            <option>50 Hr Multi-Style-Yoga TTC</option>
+                            <option>100 Hr Multi-Style-Yoga TTC</option>
+                            <option>200 Hr Multi-Style-Yoga TTC</option>
+                            <option>300 Hr Multi-Style-Yoga TTC</option>
+                            <option>21 Days Yoga Immersion Course</option>
+                            <option>7 Days Yoga Holiday Retreat</option>
+                            <option>14 Days Yoga Detox Retreat</option>
+                            <option>21 Days Yoga Wellness Retreat</option>
                           </select>
                         </FormControl>
                         <FormMessage />
