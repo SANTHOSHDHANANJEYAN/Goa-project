@@ -18,7 +18,7 @@ const SpaHero14: React.FC = () => {
           placeholder="blur"
           blurDataURL="/RetreatBG/3-blur.png" // optional low-res placeholder
         />
-        <div className="absolute inset-0 bg-black opacity-40" />
+        
       </div>
 
       {/* Hero Content */}

@@ -5,7 +5,7 @@ import React from 'react';
 
 const SpaHero7: React.FC = () => {
   return (
-    <div className="relative h-[100dvh] flex items-center justify-center overflow-hidden bg-black">
+    <div className="relative h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
         src="/RetreatBG/2.png"
@@ -14,7 +14,7 @@ const SpaHero7: React.FC = () => {
         priority
         quality={75}
         sizes="100vw"
-        className="object-cover object-center z-0 opacity-30"
+        className="object-cover object-center z-0 "
       />
 
       {/* Hero Content */}

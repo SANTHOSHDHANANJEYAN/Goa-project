@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const SpaHero21: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20 bg-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20">
       {/* Background image */}
       <Image
         src="/RetreatBG/4.png"
@@ -15,7 +15,7 @@ const SpaHero21: React.FC = () => {
         priority
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-black opacity-40" />
+     
 
       {/* Hero Content */}
       <div className="container mx-auto px-4 relative z-10 text-center text-white">
