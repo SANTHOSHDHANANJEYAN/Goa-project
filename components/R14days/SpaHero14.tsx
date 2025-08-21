@@ -31,7 +31,7 @@ const SpaHero14: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href="/about"
+            href="/Aboutyogshala"
             className="bg-[#150e70] hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-full transition duration-300"
             aria-label="Explore the program"
           >

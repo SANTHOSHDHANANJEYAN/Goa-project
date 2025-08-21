@@ -28,7 +28,7 @@ const SpaHero7: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href="/about"
+            href="/Aboutyogshala"
             aria-label="Explore Program"
             className="bg-[#150e70] hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full transition duration-300"
           >
