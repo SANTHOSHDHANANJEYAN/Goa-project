@@ -29,16 +29,11 @@ export default function OurExcursions14() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  useEffect(() => setIsClient(true), []);
 
-  // Close modal on Escape key press
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === "Escape" && selectedImage) {
-        setSelectedImage(null);
-      }
+      if (e.key === "Escape" && selectedImage) setSelectedImage(null);
     },
     [selectedImage]
   );
@@ -51,22 +46,22 @@ export default function OurExcursions14() {
   }, [selectedImage, handleKeyDown]);
 
   return (
-    <section className="bg-transparent pb-[5rem] px-4 text-center">
+    <section className="bg-transparent pb-20 px-4 text-center">
       <h2 className="text-4xl md:text-5xl font-semibold text-[#4c2a65] mb-4">
         Our Excursions
       </h2>
       <p className="text-lg text-[#3d3d3d] max-w-2xl mx-auto mb-12">
-        These are real stories from our Yoga Teacher Training students — raw, honest, and deeply
-        moving. See how yoga has helped them heal, grow, and reconnect with themselves.
+        These are real stories from our Yoga Teacher Training students — raw, honest, and deeply moving.
+        See how yoga has helped them heal, grow, and reconnect with themselves.
       </p>
 
       {isClient && (
         <Swiper
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={1}
-          loop={true}
-          speed={2000}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop
+          speed={1800}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           breakpoints={{
             640: { slidesPerView: 1 },
@@ -76,28 +71,23 @@ export default function OurExcursions14() {
           modules={[Autoplay, Pagination]}
           className="max-w-6xl mx-auto"
         >
-          {excursions.map((item) => (
-            <SwiperSlide key={item.id}>
+          {excursions.map(({ id, image }) => (
+            <SwiperSlide key={id}>
               <div
-                onClick={() => setSelectedImage(item.image)}
+                onClick={() => setSelectedImage(image)}
                 className="relative rounded-3xl overflow-hidden shadow-md group cursor-pointer"
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    setSelectedImage(item.image);
-                  }
-                }}
-                aria-label={`View larger image of Excursion ${item.id}`}
+                onKeyDown={(e) => (e.key === "Enter" || e.key === " " ? setSelectedImage(image) : null)}
+                aria-label={`View larger image of Excursion ${id}`}
               >
                 <Image
-                  src={item.image}
-                  alt={`Excursion ${item.id}`}
+                  src={image}
+                  alt={`Excursion ${id}`}
                   width={400}
                   height={300}
                   className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  priority={false}
-                  style={{ width: "100%", height: "auto" }}
+                  loading="lazy"
                 />
               </div>
             </SwiperSlide>
@@ -105,14 +95,12 @@ export default function OurExcursions14() {
         </Swiper>
       )}
 
-      {/* Modal */}
       {isClient && selectedImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 transition-opacity duration-300"
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
           onClick={() => setSelectedImage(null)}
           role="dialog"
           aria-modal="true"
-          aria-labelledby="modal-title"
         >
           <div
             className="relative max-w-4xl w-full mx-4"
@@ -124,15 +112,13 @@ export default function OurExcursions14() {
               width={1000}
               height={600}
               className="rounded-xl object-contain w-full h-auto"
-              priority
-              style={{ width: "100%", height: "auto" }}
+              loading="lazy"
             />
             <button
               onClick={() => setSelectedImage(null)}
               className="absolute top-2 right-2 text-white text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
               aria-label="Close preview"
               title="Close preview"
-              type="button"
             >
               ✕
             </button>

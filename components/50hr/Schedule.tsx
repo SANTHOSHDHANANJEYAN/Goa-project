@@ -5,28 +5,32 @@ import Image from 'next/image';
 
 export default function Schedule100() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoUrl = '/aboutpics/YogIntro.mov'; // Replace with your actual local or remote video URL
+  const videoUrl = '/aboutpics/YogIntro.mov';
+
+  const schedule = [
+    ['05:00 AM', 'Morning Tea'],
+    ['05:30 AM', 'Hatha- Vinayasa- Flow Yoga'],
+    ['07:30 AM', 'Pranayama & Meditation'],
+    ['09:00 AM', 'Breakfast'],
+    ['10:00 AM', 'Yoga Philosophy'],
+    ['11:15 AM', 'Yoga Practicum'],
+    ['12:30 PM', 'Yoga Practicum'],
+    ['13:15 PM', 'Lunch'],
+    ['15:30 PM', 'Yoga Anatomy'],
+    ['16:45 PM', 'Ashtanga Yoga'],
+    ['18:15 PM', 'Supper'],
+  ];
 
   return (
-    <section className="w-full bg-[tranparent]  px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col md:flex-row gap-12 max-w-7xl mx-auto">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-10">
+      <div className="flex flex-col md:flex-row gap-8 max-w-7xl mx-auto items-stretch">
         {/* Left Side: Daily Schedule */}
-        <div className="md:w-1/2">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#150e70] mb-6">Daily Schedule</h2>
-          <ul className="space-y-4 text-sm sm:text-base">
-            {[
-              ['05:00 AM', ' Morning Tea'],
-              ['05:30 AM', 'Hatha- Vinayasa- Flow  Yoga'],
-              ['07:30 AM', 'Pranayama & Meditation'],
-              ['09:00 AM', 'Breakfast'],
-              ['10:00 AM', 'Yoga  Philosophy'],
-              ['11.15 AM', 'Yoga Practicum'],
-              ['12.30 PM', 'Yoga Practicum'],
-              ['13:15 PM', 'Lunch'],
-              ['15.30PM', 'Yoga Anatomy'],
-              ['16:45 PM', 'Ashtanga Yoga'],
-              ['18:15 PM', 'Supper'],
-            ].map(([time, activity], idx) => (
+        <div className="md:w-1/2 bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#150e70] mb-6 text-center sm:text-left">
+            Daily Schedule
+          </h2>
+          <ul className="space-y-3 text-sm sm:text-base">
+            {schedule.map(([time, activity], idx) => (
               <li key={idx} className="flex items-start">
                 <span className="font-semibold text-[#150e70] w-24 flex-shrink-0">{time}</span>
                 <span className="text-gray-800">{activity}</span>
@@ -36,8 +40,8 @@ export default function Schedule100() {
         </div>
 
         {/* Right Side: Video Card */}
-        <div className="md:w-1/2">
-          <div className="rounded-xl overflow-hidden shadow-md bg-white max-w-full">
+        <div className="md:w-1/2 flex flex-col">
+          <div className="rounded-xl overflow-hidden shadow bg-white/60 flex-1">
             <div className="relative aspect-video w-full">
               {isPlaying ? (
                 <video
@@ -51,9 +55,10 @@ export default function Schedule100() {
                   <Image
                     src="/Thumbnail/Yogacourse 1.jpg"
                     alt="Video Thumbnail"
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    width={640}
+                    height={360}
+                    className="object-cover w-full h-full"
+                    loading="lazy"
                   />
                   <button
                     aria-label="Play Video"

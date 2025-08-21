@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 
 export default function Importance7() {
@@ -14,7 +16,7 @@ export default function Importance7() {
         <p className="text-gray-800 font-semibold mb-4 text-base sm:text-lg">
           Recenter Your Mind, Rejuvenate Your Body, and Return Renewed
         </p>
-        <p className="text-gray-600 text-sm sm:text-base">
+        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
           Step into a serene retreat in Rishikesh, where the Himalayas and Ganga river create the perfect space for healing.
           Reconnect with yourself through traditional yoga, meditation, and breathwork. Nourish your body with sattvic meals
           and embrace mindful silence. Leave feeling lighter, clearer, and truly transformed — inside and out.
@@ -23,12 +25,13 @@ export default function Importance7() {
 
       {/* Right image */}
       <div className="w-full lg:w-1/2">
-        <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] relative">
+        <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] relative rounded-xl overflow-hidden shadow-lg">
           <Image
             src="/Imp&bene/imp1 - Copy.JPG"
             alt="Yoga Retreat"
             fill
-            className="rounded-xl shadow-lg object-cover"
+            loading="lazy"
+            className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
           />
         </div>

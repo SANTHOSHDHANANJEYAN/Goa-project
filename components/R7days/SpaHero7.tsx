@@ -5,19 +5,17 @@ import React from 'react';
 
 const SpaHero7: React.FC = () => {
   return (
-    <div className="relative h-[100dvh] flex items-center justify-center overflow-hidden mt-[5rem] bg-black">
+    <div className="relative h-[100dvh] flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image */}
       <Image
         src="/RetreatBG/2.png"
-        alt="Retreat Background"
+        alt="Yoga retreat background in Goa"
         fill
         priority
         quality={75}
         sizes="100vw"
         className="object-cover object-center z-0 opacity-30"
       />
-
-
 
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
@@ -31,12 +29,14 @@ const SpaHero7: React.FC = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="#program"
+            aria-label="Explore Program"
             className="bg-[#150e70] hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full transition duration-300"
           >
             Explore Program
           </a>
           <a
             href="/contact#InGoa"
+            aria-label="Book Now"
             className="border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-semibold px-8 py-3 rounded-full transition duration-300"
           >
             Book Now
@@ -45,7 +45,7 @@ const SpaHero7: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10" aria-hidden="true">
         <svg
           className="w-6 h-6 text-white"
           fill="none"

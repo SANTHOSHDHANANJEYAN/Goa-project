@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface Activity {
   title: string;
@@ -8,60 +11,50 @@ interface Activity {
 }
 
 const activities: Activity[] = [
-  {
-    title: "Temple Visit",
-    description: "Discover peace at Goa’s ancient temples.",
-    image: "/Activity/temple.png",
-  },
-  {
-    title: "Visit Arambol Beach",
-    description: "Relax and unwind at Arambol’s scenic shores.",
-    image: "/Activity/beach.jpg",
-  },
-  {
-    title: "Cultural Visit",
-    description: "Explore Goa’s vibrant traditions and art.",
-    image: "/Activity/cultural.png",
-  },
-  {
-    title: "Satsang",
-    description: "Join soulful gatherings with music, wisdom, and spiritual dialogue.",
-    image: "/Activity/satsang.png",
-  },
-  {
-    title: "Group Discussion",
-    description: "Share and learn through group talks.",
-    image: "/Activity/group.png",
-  },
-  {
-    title: "Cooking Classes",
-    description: "Learn to cook simple sattvic meals.",
-    image: "/Activity/cooking.jpg",
-  },
+  { title: "Temple Visit", description: "Discover peace at Goa’s ancient temples.", image: "/Activity/temple.png" },
+  { title: "Visit Arambol Beach", description: "Relax and unwind at Arambol’s scenic shores.", image: "/Activity/beach.jpg" },
+  { title: "Cultural Visit", description: "Explore Goa’s vibrant traditions and art.", image: "/Activity/cultural.png" },
+  { title: "Satsang", description: "Join soulful gatherings with music, wisdom, and spiritual dialogue.", image: "/Activity/satsang.png" },
+  { title: "Group Discussion", description: "Share and learn through group talks.", image: "/Activity/group.png" },
+  { title: "Cooking Classes", description: "Learn to cook simple sattvic meals.", image: "/Activity/cooking.jpg" },
 ];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.6, ease: 'easeOut' },
+  }),
+};
 
 const ActivitiesSection: React.FC = () => {
   return (
-    <section className="bg-transparent text-center relative overflow-hidden">
-      {/* Optional radial background decoration */}
+    <section className="bg-transparent text-center relative overflow-hidden py-16">
       <div className="absolute inset-0 opacity-10 z-0 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-16 sm:mb-20">
           Activities included in the course
         </h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
           {activities.map((activity, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition relative flex flex-col items-center"
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={cardVariants}
+              className="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:scale-105 transition-transform duration-300 flex flex-col items-center relative"
             >
               <div className="-mt-16 mb-6">
                 <Image
                   src={activity.image}
                   alt={activity.title}
-                  width={96}  // w-24 = 96px
-                  height={96} // h-24 = 96px
+                  width={96}
+                  height={96}
                   className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow object-cover"
                 />
               </div>
@@ -71,7 +64,7 @@ const ActivitiesSection: React.FC = () => {
               <p className="text-sm sm:text-base text-[#150e70] mt-3 text-center">
                 {activity.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

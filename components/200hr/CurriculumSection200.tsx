@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
@@ -18,7 +20,7 @@ const cardVariants = {
 
 const curriculum = [
   {
-    title: "Hatha Yoga ",
+    title: "Hatha Yoga",
     image: "/Curriculumimg/1.jpg",
     description:
       "This Hatha Yoga course covers classical asanas, breath awareness, alignment, posture sequencing, and therapeutic benefits for holistic body-mind balance.",
@@ -49,7 +51,7 @@ const curriculum = [
   },
   {
     title: "Build Teaching Skills",
-    image: "/Curriculumimg/6.jpgP",
+    image: "/Curriculumimg/6.jpg",
     description:
       "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
   },
@@ -69,7 +71,7 @@ const curriculum = [
 
 const CurriculumSection200: React.FC = () => {
   return (
-    <section className="relative pt-[4rem] pb-[3rem] px-4 sm:px-10 bg-transparent overflow-hidden">
+    <section className="relative pt-16 pb-12 px-4 sm:px-10 bg-transparent overflow-hidden">
       {/* Floating Sparkle */}
       <div className="absolute top-10 left-10 z-0 opacity-10">
         <Sparkles size={180} strokeWidth={0.8} />
@@ -91,7 +93,7 @@ const CurriculumSection200: React.FC = () => {
       </div>
 
       {/* Cards */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto mt-16">
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 max-w-7xl mx-auto mt-16">
         {curriculum.map((item, i) => (
           <motion.div
             key={item.title + i}
@@ -100,9 +102,13 @@ const CurriculumSection200: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={cardVariants}
-            className="bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group text-center"
+            className="relative bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group text-center"
+            role="group"
           >
-            <div className="flex justify-center mb-4">
+            {/* Glow effect on hover */}
+            <div className="absolute inset-0 rounded-3xl bg-pink-100 opacity-0 group-hover:opacity-20 transition duration-300 pointer-events-none"></div>
+
+            <div className="flex justify-center mb-4 relative z-10">
               <div className="w-20 h-20 bg-[#fef3f7] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
                 <Image
                   src={item.image}
@@ -110,13 +116,14 @@ const CurriculumSection200: React.FC = () => {
                   width={80}
                   height={80}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
-            <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition">
+            <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition relative z-10">
               {item.title}
             </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+            <p className="text-sm text-gray-600 leading-relaxed relative z-10">{item.description}</p>
           </motion.div>
         ))}
       </div>

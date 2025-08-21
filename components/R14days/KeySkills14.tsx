@@ -23,8 +23,8 @@ const KeySkills7: React.FC = () => {
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        {/* Optimized GIF rendering */}
-        <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] rounded-xl overflow-hidden">
+        {/* Animated GIF */}
+        <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
           <Image
             src="/Activity/keyskill.gif"
             alt="Animated yoga skills showcase"
@@ -41,7 +41,6 @@ const KeySkills7: React.FC = () => {
             <li
               key={idx}
               className="flex items-start gap-3 text-[#150e70] text-base sm:text-lg"
-              aria-label={`Key skill ${idx + 1}`}
             >
               <FaCheckCircle className="text-green-600 mt-1 shrink-0" />
               <span>{skill}</span>

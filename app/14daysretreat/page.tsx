@@ -1,24 +1,33 @@
 "use client";
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
+import { useInView } from 'react-intersection-observer';
 
-// Dynamically import heavy components to lazy-load them
-const SpaHero14 = dynamic(() => import('@/components/R14days/SpaHero14'));
-const About141 = dynamic(() => import('@/components/R14days/About141'));
-const KeySkills14 = dynamic(() => import('@/components/R14days/KeySkills14'));
-const TwoListing14 = dynamic(() => import('@/components/R14days/TwoListing14'));
-const WhatsIncludes14 = dynamic(() => import('@/components/R14days/WhatsIncludes14'));
-const OurExcursions14 = dynamic(() => import('@/components/R14days/OurExcursions14'));
-const OurRooms14 = dynamic(() => import('@/components/R14days/OurRooms14'));
-const RoomSlides7 = dynamic(() => import('@/components/R14days/RoomSlides14'));
-const OurDinning14 = dynamic(() => import('@/components/R14days/OurDinning14'));
-const DinningSlides7 = dynamic(() => import('@/components/R14days/DinningSlides14'));
-const DailySchedule14 = dynamic(() => import('@/components/R14days/DailySchedule14'));
-const Importance14 = dynamic(() => import('@/components/R14days/Importance14'));
-const Benefit14 = dynamic(() => import('@/components/R14days/Benefit14'));
-const NearestAirport14 = dynamic(() => import('@/components/R14days/NearestAirport14'));
-const Beauty14 = dynamic(() => import('@/components/R14days/Beauty14'));
-const Faqs14 = dynamic(() => import('@/components/R14days/Faqs14'));
+// Helper component for lazy-loading sections
+const LazySection = ({ Component }: { Component: React.ElementType }) => {
+  const { ref, inView } = useInView({ triggerOnce: true, rootMargin: '200px' });
+  return <div ref={ref}>{inView && <Component />}</div>;
+};
+
+// Above-the-fold content (static or light)
+const SpaHero14 = dynamic(() => import('@/components/R14days/SpaHero14'), { ssr: false });
+const About141 = dynamic(() => import('@/components/R14days/About141'), { ssr: false });
+const KeySkills14 = dynamic(() => import('@/components/R14days/KeySkills14'), { ssr: false });
+const TwoListing14 = dynamic(() => import('@/components/R14days/TwoListing14'), { ssr: false });
+
+// Heavy / below-the-fold components
+const WhatsIncludes14 = dynamic(() => import('@/components/R14days/WhatsIncludes14'), { ssr: false });
+const OurExcursions14 = dynamic(() => import('@/components/R14days/OurExcursions14'), { ssr: false });
+const OurRooms14 = dynamic(() => import('@/components/R14days/OurRooms14'), { ssr: false });
+const RoomSlides14 = dynamic(() => import('@/components/R14days/RoomSlides14'), { ssr: false });
+const OurDinning14 = dynamic(() => import('@/components/R14days/OurDinning14'), { ssr: false });
+const DinningSlides14 = dynamic(() => import('@/components/R14days/DinningSlides14'), { ssr: false });
+const DailySchedule14 = dynamic(() => import('@/components/R14days/DailySchedule14'), { ssr: false });
+const Importance14 = dynamic(() => import('@/components/R14days/Importance14'), { ssr: false });
+const Benefit14 = dynamic(() => import('@/components/R14days/Benefit14'), { ssr: false });
+const NearestAirport14 = dynamic(() => import('@/components/R14days/NearestAirport14'), { ssr: false });
+const Beauty14 = dynamic(() => import('@/components/R14days/Beauty14'), { ssr: false });
+const Faqs14 = dynamic(() => import('@/components/R14days/Faqs14'), { ssr: false });
 
 export default function Page() {
   return (
@@ -36,18 +45,19 @@ export default function Page() {
       <About141 />
       <KeySkills14 />
       <TwoListing14 />
-      <WhatsIncludes14 />
-      <OurExcursions14 />
-      <OurRooms14 />
-      <RoomSlides7/>
-      <OurDinning14 />
-      <DinningSlides7/>
-      <DailySchedule14 />
-      <Importance14 />
-      <Benefit14 />
-      <NearestAirport14 />
-      <Beauty14 />
-      <Faqs14 />
+
+      <LazySection Component={WhatsIncludes14} />
+      <LazySection Component={OurExcursions14} />
+      <LazySection Component={OurRooms14} />
+      <LazySection Component={RoomSlides14} />
+      <LazySection Component={OurDinning14} />
+      <LazySection Component={DinningSlides14} />
+      <LazySection Component={DailySchedule14} />
+      <LazySection Component={Importance14} />
+      <LazySection Component={Benefit14} />
+      <LazySection Component={NearestAirport14} />
+      <LazySection Component={Beauty14} />
+      <LazySection Component={Faqs14} />
     </>
   );
 }

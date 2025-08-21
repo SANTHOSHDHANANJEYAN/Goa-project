@@ -38,7 +38,7 @@ export default function Faqs7() {
   };
 
   return (
-    <section className="bg-white min-h-screen py-16 px-4 sm:px-6 md:px-12 lg:px-20">
+    <section className="bg-white py-16 px-4 sm:px-6 md:px-12 lg:px-20">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold text-center text-green-900 mb-10">
           Frequently Asked Questions
@@ -47,7 +47,7 @@ export default function Faqs7() {
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="bg-green-50 border border-green-200 rounded-xl shadow-sm transition-all"
+              className="bg-green-50 border border-green-200 rounded-xl shadow-sm overflow-hidden"
             >
               <button
                 onClick={() => toggle(idx)}
@@ -63,9 +63,9 @@ export default function Faqs7() {
                 />
               </button>
               <div
-                className={`px-5 sm:px-6 pb-4 sm:pb-5 text-gray-700 text-sm sm:text-base transition-all duration-300 ease-in-out ${
-                  activeIndex === idx ? 'block' : 'hidden'
-                }`}
+                className={`px-5 sm:px-6 text-gray-700 text-sm sm:text-base transition-all duration-300 ease-in-out ${
+                  activeIndex === idx ? 'max-h-96 py-4 sm:py-5' : 'max-h-0 py-0'
+                } overflow-hidden`}
               >
                 {faq.answer}
               </div>

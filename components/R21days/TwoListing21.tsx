@@ -28,41 +28,35 @@ export default function TwoListing7() {
   const [selected, setSelected] = useState<Duration>('7 Days');
   const [currency, setCurrency] = useState<Currency>('INR');
 
-  const getPrice = (baseINR: number): string => {
+  const getPrice = (baseINR: number) => {
     const converted = baseINR * exchangeRates[currency];
-    return currency === 'INR'
-      ? `${symbols[currency]}${Math.round(converted).toLocaleString()}`
-      : `${symbols[currency]}${converted.toFixed(0)}`;
+    return `${symbols[currency]}${currency === 'INR' ? Math.round(converted).toLocaleString() : converted.toFixed(0)}`;
   };
 
   const steps = [
     {
       title: 'Submit Your Interest',
-      description:
-        'Tell us your preferred dates — we’ll match you with an upcoming group.',
+      description: 'Tell us your preferred dates — we’ll match you with an upcoming group.',
     },
     {
       title: 'Join a Small Group Retreat',
-      description:
-        'We organise retreats in small groups of 3–10 people to ensure meaningful connection and personal attention.',
+      description: 'We organise retreats in small groups of 3–10 people for personal attention.',
     },
     {
       title: 'Confirm Your Spot',
-      description:
-        'Pay a small deposit to block your seat. Remaining amount can be paid on arrival.',
+      description: 'Pay a small deposit to block your seat. Remaining amount on arrival.',
     },
     {
       title: 'Prepare for Your Journey',
-      description:
-        'We’ll send you a checklist to get ready for your yoga retreat experience.',
+      description: 'Receive a checklist to get ready for your yoga retreat experience.',
     },
   ];
 
   return (
-    <section className="bg-white px-4 md:px-16 text-[#262626] font-sans">
+    <section className="bg-white px-4 md:px-16 text-[#262626] font-sans py-16">
       <div className="max-w-7xl mx-auto">
         {/* Headings */}
-        <div className="mb-8">
+        <div className="mb-12 text-center md:text-left">
           <h4 className="text-[#150e70] font-semibold tracking-widest uppercase text-xs">
             Application Process
           </h4>
@@ -70,25 +64,21 @@ export default function TwoListing7() {
             Book Your Yoga Retreat in 4 Easy Steps
           </h2>
           <p className="text-gray-700 max-w-2xl text-base md:text-lg mt-3">
-            Embarking on your yoga retreat journey is simple and stress-free.
-            Just follow these steps to reserve your spot and prepare for a
-            peaceful escape into nature, self-care, and inner stillness.
+            Embarking on your yoga retreat journey is simple. Follow these steps to reserve your spot for a peaceful escape into nature, self-care, and inner stillness.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Left - Steps */}
           <div className="relative pl-10">
-            <div className="absolute left-8 top-4 bottom-[5rem] w-1 bg-[#150e70]" />
-            {steps.map((step, index) => (
-              <div key={index} className="relative pl-10 mb-6 group">
-                <div className="absolute left-[-22px] top-4 w-8 h-8 rounded-full bg-[#150e70] text-white flex items-center justify-center font-bold shadow-md group-hover:scale-105 transition-transform duration-200 ease-in-out">
-                  {index + 1}
+            <div className="absolute left-8 top-4 bottom-4 w-1 bg-[#150e70]" />
+            {steps.map((step, idx) => (
+              <div key={idx} className="relative pl-10 mb-6 group">
+                <div className="absolute left-[-22px] top-4 w-8 h-8 rounded-full bg-[#150e70] text-white flex items-center justify-center font-bold shadow-md group-hover:scale-105 transition-transform duration-200">
+                  {idx + 1}
                 </div>
                 <div className="bg-white border border-[#d1d5db] rounded-xl p-4 shadow-sm group-hover:shadow-md transition duration-300">
-                  <h4 className="text-base md:text-lg font-semibold text-[#1C1C1C] mb-1">
-                    {step.title}
-                  </h4>
+                  <h4 className="text-base md:text-lg font-semibold text-[#1C1C1C] mb-1">{step.title}</h4>
                   <p className="text-sm text-gray-600">{step.description}</p>
                 </div>
               </div>
@@ -97,9 +87,7 @@ export default function TwoListing7() {
 
           {/* Right - Pricing */}
           <div className="bg-white border border-[#150e70] rounded-2xl p-6 shadow-md hover:shadow-lg transition">
-            <h3 className="text-xl md:text-2xl font-bold text-[#1C1C1C] mb-3">
-              {selected} Yoga Retreat
-            </h3>
+            <h3 className="text-xl md:text-2xl font-bold text-[#1C1C1C] mb-3">{selected} Yoga Retreat</h3>
 
             {/* Duration Buttons */}
             <div className="flex flex-wrap gap-2 mb-3">
@@ -145,9 +133,7 @@ export default function TwoListing7() {
             {/* Pricing */}
             <div className="bg-[#f3f4f6] p-5 rounded-xl text-center mb-4">
               <h4 className="text-[#150e70] font-semibold mb-1">Private</h4>
-              <p className="text-2xl font-bold text-[#1C1C1C]">
-                {getPrice(pricing[selected].private)}
-              </p>
+              <p className="text-2xl font-bold text-[#1C1C1C]">{getPrice(pricing[selected].private)}</p>
             </div>
 
             {/* Inclusions */}

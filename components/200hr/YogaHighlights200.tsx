@@ -16,7 +16,6 @@ const trainingHighlights: string[] = [
   "Primary series taught with Sanskrit counting",
   "An intensive course hosted by an international team of yogis and yoga masters",
   "Practice yoga in the land of its origin and experience true Vedic culture",
-
 ];
 
 const YogaHighlights: React.FC = () => {
@@ -28,12 +27,15 @@ const YogaHighlights: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left: Ideal For */}
-        <div className="bg-white shadow-lg rounded-xl p-8 border-l-4 border-[#150e70]">
+        <div
+          className="bg-white shadow-lg rounded-xl p-8 border-l-4 border-[#150e70]"
+          aria-label="Ideal For Course"
+        >
           <h3 className="text-2xl font-semibold text-[#150e70] mb-6">Who Is This Course For?</h3>
           <ul className="space-y-4">
             {idealFor.map((point, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <FaLeaf className="text-[#150e70] mt-1" />
+                <FaLeaf className="text-[#150e70] mt-1 flex-shrink-0 hover:text-green-600 transition" />
                 <span className="text-[#150e70]">{point}</span>
               </li>
             ))}
@@ -41,12 +43,15 @@ const YogaHighlights: React.FC = () => {
         </div>
 
         {/* Right: Training Highlights */}
-        <div className="bg-white shadow-lg rounded-xl p-8 border-l-4 border-[#150e70]">
+        <div
+          className="bg-white shadow-lg rounded-xl p-8 border-l-4 border-[#150e70]"
+          aria-label="Training Highlights"
+        >
           <h3 className="text-2xl font-semibold text-[#150e70] mb-6">Training Highlights</h3>
           <ul className="space-y-4">
             {trainingHighlights.map((point, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <FaStar className="text-[#150e70] mt-1" />
+                <FaStar className="text-[#150e70] mt-1 flex-shrink-0 hover:text-yellow-500 transition" />
                 <span className="text-[#150e70]">{point}</span>
               </li>
             ))}

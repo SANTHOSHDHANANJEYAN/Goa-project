@@ -8,17 +8,17 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const testimonials = [
-  { id: 1, image: '/Food/1.jpg' },
-  { id: 2, image: '/Food/2.jpg' },
-  { id: 3, image: '/Food/3.jpg' },
-  { id: 4, image: '/Food/5.jpg' },
-  { id: 5, image: '/Food/6.jpg' },
-  { id: 6, image: '/Food/7.jpg' },
-  { id: 7, image: '/Food/8.jpg' },
-  { id: 8, image: '/Food/9.jpg' },
-  { id: 9, image: '/Food/10.JPG' },
-  { id: 10, image: '/Food/11.jpg' },
-  { id: 12, image: '/Food/13.jpg' },
+  { id: 1, image: '/Food/1.jpg', alt: 'Delicious vegan meal 1' },
+  { id: 2, image: '/Food/2.jpg', alt: 'Healthy breakfast 2' },
+  { id: 3, image: '/Food/3.jpg', alt: 'Nutritious lunch 3' },
+  { id: 4, image: '/Food/5.jpg', alt: 'Refreshing smoothie 4' },
+  { id: 5, image: '/Food/6.jpg', alt: 'Plant-based dessert 5' },
+  { id: 6, image: '/Food/7.jpg', alt: 'Organic salad 6' },
+  { id: 7, image: '/Food/8.jpg', alt: 'Detox juice 7' },
+  { id: 8, image: '/Food/9.jpg', alt: 'Evening tea 8' },
+  { id: 9, image: '/Food/10.JPG', alt: 'Yogic meal 9' },
+  { id: 10, image: '/Food/11.jpg', alt: 'Vegan dinner 10' },
+  { id: 12, image: '/Food/13.jpg', alt: 'Fruit platter 12' },
 ];
 
 export default function DinningSlides7() {
@@ -27,15 +27,26 @@ export default function DinningSlides7() {
 
   useEffect(() => {
     setIsClient(true);
+
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setPreviewImage(null);
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
   }, []);
 
+  // Prevent background scroll when modal is open
+  useEffect(() => {
+    document.body.style.overflow = previewImage ? 'hidden' : 'auto';
+  }, [previewImage]);
+
   return (
-    <section className="bg-transparent pb-[5rem] px-4 text-center">
+    <section className="bg-transparent pb-20 px-4 text-center">
       {isClient && (
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
-          loop={true}
+          loop
           speed={2000}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
@@ -47,7 +58,7 @@ export default function DinningSlides7() {
           modules={[Autoplay, Pagination]}
           className="max-w-6xl mx-auto"
         >
-          {testimonials.map(({ id, image }) => (
+          {testimonials.map(({ id, image, alt }) => (
             <SwiperSlide key={id}>
               <div
                 className="relative rounded-3xl overflow-hidden group shadow-md cursor-pointer"
@@ -55,10 +66,11 @@ export default function DinningSlides7() {
               >
                 <Image
                   src={image}
-                  alt={`Testimonial ${id}`}
+                  alt={alt}
                   width={400}
                   height={300}
                   className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
                 />
               </div>
             </SwiperSlide>
@@ -69,7 +81,7 @@ export default function DinningSlides7() {
       {/* Modal Preview */}
       {isClient && previewImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 animate-fadeIn"
           onClick={() => setPreviewImage(null)}
         >
           <div

@@ -20,51 +20,34 @@ const faqs = [
     question: 'Are meals and accommodation included?',
     answer: 'Yes, all packages include 3 nourishing vegetarian meals per day and shared or private accommodations.',
   },
-    {
-    question: 'Are meals and accommodation included?',
-    answer: 'Yes, all packages include 3 nourishing vegetarian meals per day and shared or private accommodations.',
-  },
-    {
-    question: 'Are meals and accommodation included?',
-    answer: 'Yes, all packages include 3 nourishing vegetarian meals per day and shared or private accommodations.',
-  },
 ];
 
 export default function Faqs14() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggle = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
-    <section className="bg-transparent min-h-screen py-16 px-4">
+    <section className="bg-transparent py-16 px-4 min-h-screen">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-green-900 mb-10">Frequently Asked Questions</h1>
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
-            <div
-              key={idx}
-              className="bg-white border border-green-200 rounded-xl shadow-sm transition-all"
-            >
+            <div key={idx} className="bg-white border border-green-200 rounded-xl shadow-sm">
               <button
-                onClick={() => toggle(idx)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left"
+                onClick={() => setActiveIndex(activeIndex === idx ? null : idx)}
+                className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
               >
                 <span className="text-lg font-medium text-green-900">{faq.question}</span>
                 <ChevronDownIcon
-                  className={`w-5 h-5 text-green-600 transform transition-transform duration-300 ${
+                  className={`w-5 h-5 text-green-600 transform transition-transform duration-200 ${
                     activeIndex === idx ? 'rotate-180' : ''
                   }`}
                 />
               </button>
-              <div
-                className={`px-6 pb-5 text-gray-700 text-sm transition-all duration-300 ease-in-out ${
-                  activeIndex === idx ? 'block' : 'hidden'
-                }`}
-              >
-                {faq.answer}
-              </div>
+              {activeIndex === idx && (
+                <div className="px-6 pb-5 text-gray-700 text-sm">
+                  {faq.answer}
+                </div>
+              )}
             </div>
           ))}
         </div>

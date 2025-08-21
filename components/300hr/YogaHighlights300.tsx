@@ -29,30 +29,30 @@ const YogaHighlights: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left: Ideal For */}
-        <div className="bg-white shadow-lg rounded-xl p-8 border-l-4 border-[#150e70]">
-          <h3 className="text-2xl font-semibold text-[#150e70] mb-6">Who Is This Course For?</h3>
+        <article className="bg-white shadow-lg rounded-xl p-8 border-l-4 border-[#150e70] hover:scale-[1.02] transition-transform duration-300">
+          <h3 className="text-2xl md:text-3xl font-semibold text-[#150e70] mb-6">Who Is This Course For?</h3>
           <ul className="space-y-4">
             {idealFor.map((point, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <FaLeaf className="text-[#150e70] mt-1" />
-                <span className="text-[#150e70]">{point}</span>
+                <FaLeaf className="text-[#150e70] mt-1 flex-shrink-0" aria-hidden="true" />
+                <span className="text-[#150e70] text-sm md:text-base">{point}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </article>
 
         {/* Right: Training Highlights */}
-        <div className="bg-white shadow-lg rounded-xl p-8 border-l-4 border-[#150e70]">
-          <h3 className="text-2xl font-semibold text-[#150e70] mb-6">Training Highlights</h3>
+        <article className="bg-white shadow-lg rounded-xl p-8 border-l-4 border-[#150e70] hover:scale-[1.02] transition-transform duration-300">
+          <h3 className="text-2xl md:text-3xl font-semibold text-[#150e70] mb-6">Training Highlights</h3>
           <ul className="space-y-4">
             {trainingHighlights.map((point, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <FaStar className="text-[#150e70] mt-1 " />
-                <span className="text-[#150e70]">{point}</span>
+                <FaStar className="text-[#150e70] mt-1 flex-shrink-0" aria-hidden="true" />
+                <span className="text-[#150e70] text-sm md:text-base">{point}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </article>
       </div>
     </section>
   );

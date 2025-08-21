@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import Image from 'next/image';
@@ -35,9 +35,9 @@ export default function RoomSlides7() {
         <Swiper
           spaceBetween={20}
           slidesPerView={1}
-          loop={true}
-          speed={2000}
-          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          loop
+          speed={1800}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           breakpoints={{
             640: { slidesPerView: 1 },
@@ -59,6 +59,7 @@ export default function RoomSlides7() {
                   width={400}
                   height={300}
                   className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
                 />
               </div>
             </SwiperSlide>
@@ -66,8 +67,7 @@ export default function RoomSlides7() {
         </Swiper>
       )}
 
-      {/* Modal Preview */}
-      {isClient && previewImage && (
+      {previewImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4"
           onClick={() => setPreviewImage(null)}
@@ -82,6 +82,7 @@ export default function RoomSlides7() {
               width={1000}
               height={600}
               className="rounded-xl object-contain w-full h-auto max-h-[80vh]"
+              loading="eager"
             />
             <button
               onClick={() => setPreviewImage(null)}

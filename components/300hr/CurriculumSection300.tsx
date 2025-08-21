@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
@@ -9,7 +11,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.2,
+      delay: i * 0.15,
       duration: 0.6,
       ease: "easeOut",
     },
@@ -42,13 +44,13 @@ const curriculum = [
       "Study breath retention (Kumbhaka), awakening Sushumna energy, balancing Nadis through Nadi Shodhanam, and understanding the five vital forces and the functions of Ida, Pingala, and Sushumna.",
   },
   {
-    title: "Yoga Anatomy ",
+    title: "Yoga Anatomy",
     image: "/Curriculumimg/5.jpg",
     description:
       "Explore the impact of asanas on muscles, glandular anatomy linked to chakras, major body systems, and the effects of pranayama on cardiovascular and nervous systems.",
   },
   {
-    title: "Yoga Philosophy ",
+    title: "Yoga Philosophy",
     image: "/Curriculumimg/6.jpg",
     description:
       "Explore meditation, spiritual heart, karma, yogic obstacles, kundalini, chakras, various yoga paths, consciousness levels, samadhi, and reincarnation in yogic science.",
@@ -71,7 +73,7 @@ const CurriculumSection300: React.FC = () => {
   return (
     <section className="relative py-28 px-4 sm:px-10 bg-transparent overflow-hidden">
       {/* Floating Sparkle */}
-      <div className="absolute top-10 left-10 z-0 opacity-10">
+      <div className="absolute top-10 left-10 z-0 opacity-10 pointer-events-none">
         <Sparkles size={180} strokeWidth={0.8} />
       </div>
 
@@ -94,7 +96,7 @@ const CurriculumSection300: React.FC = () => {
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto mt-16">
         {curriculum.map((item, i) => (
           <motion.div
-            key={item.title + i}
+            key={item.title}
             custom={i}
             initial="hidden"
             whileInView="visible"
@@ -103,20 +105,21 @@ const CurriculumSection300: React.FC = () => {
             className="bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group text-center"
           >
             <div className="flex justify-center mb-4">
-              <div className="w-20 h-20 bg-[#fef3f7] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[#fef3f7] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={80}
-                  height={80}
-                  className="w-full h-full object-cover"
+                  width={96}
+                  height={96}
+                  className="object-cover w-full h-full"
+                  loading="lazy"
                 />
               </div>
             </div>
-            <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition">
+            <h3 className="text-lg sm:text-xl font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition">
               {item.title}
             </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{item.description}</p>
           </motion.div>
         ))}
       </div>

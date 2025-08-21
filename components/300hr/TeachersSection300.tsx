@@ -25,11 +25,15 @@ export default function TeachersSection300() {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const visibleCount = 4;
 
+  // Auto-slide
+  useEffect(() => {
+    startAutoSlide();
+    return () => stopAutoSlide();
+  }, []);
+
   const startAutoSlide = () => {
     stopAutoSlide();
-    intervalRef.current = setInterval(() => {
-      nextSlide();
-    }, 5000);
+    intervalRef.current = setInterval(() => nextSlide(), 5000);
   };
 
   const stopAutoSlide = () => {
@@ -39,36 +43,22 @@ export default function TeachersSection300() {
     }
   };
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % teachers.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + teachers.length) % teachers.length);
-  };
-
-  useEffect(() => {
-    startAutoSlide();
-    return () => stopAutoSlide();
-  }, []);
+  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % teachers.length);
+  const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + teachers.length) % teachers.length);
 
   const getVisibleTeachers = () => {
-    const visible = [];
-    for (let i = 0; i < visibleCount; i++) {
-      visible.push(teachers[(currentIndex + i) % teachers.length]);
-    }
-    return visible;
+    return Array.from({ length: visibleCount }, (_, i) => teachers[(currentIndex + i) % teachers.length]);
   };
 
   return (
     <section
-      className="relative overflow-hidden pb-[5rem] px-4 sm:px-8 bg-transparent"
+      className="relative overflow-hidden pb-20 px-4 sm:px-8 bg-transparent"
       onMouseEnter={stopAutoSlide}
       onMouseLeave={startAutoSlide}
     >
       {/* Heading */}
       <div className="text-center mb-14">
-        <h2 className="text-4xl sm:text-4xl md:text-4xl font-extrabold text-indigo-800">Our Beloved Teachers</h2>
+        <h2 className="text-4xl font-extrabold text-indigo-800">Our Beloved Teachers</h2>
         <p className="text-lg text-indigo-600 mt-2 max-w-xl mx-auto">
           Meet the guiding lights of your yogic journey
         </p>
@@ -78,30 +68,32 @@ export default function TeachersSection300() {
           <span className="w-10 h-1 bg-purple-500 rounded-full" />
         </div>
       </div>
+
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
         aria-label="Previous"
       >
         <ChevronLeft size={28} />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
         aria-label="Next"
       >
         <ChevronRight size={28} />
       </button>
+
       {/* Teacher Cards */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 transition duration-500 ease-in-out">
-        <AnimatePresence mode="wait">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <AnimatePresence mode="popLayout">
           {getVisibleTeachers().map((teacher, index) => (
             <motion.div
               key={teacher.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 30 }}
+              exit={{ opacity: 0, y: 40 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative bg-white backdrop-blur-md border border-indigo-100 rounded-3xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center px-6 py-8"
             >

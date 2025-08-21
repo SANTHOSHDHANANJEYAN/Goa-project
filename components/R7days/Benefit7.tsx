@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 
 export default function Benefit7() {
@@ -5,14 +7,14 @@ export default function Benefit7() {
     <section className="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 md:px-16 lg:px-20 py-12 sm:py-16 bg-white gap-10">
       {/* Left image */}
       <div className="w-full lg:w-1/2">
-        <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[22rem]">
+        <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[22rem] rounded-xl overflow-hidden shadow-lg">
           <Image
             src="/Imp&bene/bene - Copy.jpg"
             alt="Yoga Retreat"
             fill
-            priority
-            className="rounded-xl shadow-lg object-cover"
+            className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
+            priority
           />
         </div>
       </div>

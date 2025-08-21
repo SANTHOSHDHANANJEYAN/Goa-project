@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -14,22 +13,24 @@ const excursions = [
   { id: 4, image: "/excursion/1.jpg" },
   { id: 5, image: "/excursion/10.jpg" },
   { id: 6, image: "/excursion/11.jpg" },
-  { id: 7, image: "/excursion/11.jpg" },
-  { id: 8, image: "/excursion/12.jpg" },
-  { id: 9, image: "/excursion/13.jpg" },
-  { id: 10, image: "/excursion/1.jpg" },
-  { id: 11, image: "/excursion/15.jpg" },
-  { id: 12, image: "/excursion/16.jpg" },
-  { id: 13, image: "/excursion/17.jpg" },
-  { id: 14, image: "/excursion/18.jpg" },
-  { id: 15, image: "/excursion/19.jpg" },
+  { id: 7, image: "/excursion/12.jpg" },
+  { id: 8, image: "/excursion/13.jpg" },
+  { id: 9, image: "/excursion/15.jpg" },
+  { id: 10, image: "/excursion/16.jpg" },
+  { id: 11, image: "/excursion/17.jpg" },
+  { id: 12, image: "/excursion/18.jpg" },
+  { id: 13, image: "/excursion/19.jpg" },
 ];
 
 export default function OurExcursions() {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   return (
-    <section className="bg-transparent pb-[5rem] px-4 text-center">
+    <section
+      className="bg-transparent pb-[5rem] px-4 text-center"
+      role="region"
+      aria-label="Yoga Retreat Excursions"
+    >
       <h2 className="text-4xl md:text-5xl font-semibold text-[#4c2a65] mb-4">
         Our Excursions
       </h2>
@@ -41,7 +42,7 @@ export default function OurExcursions() {
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
-        loop={true}
+        loop
         speed={2000}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         pagination={{ clickable: true }}
@@ -61,24 +62,24 @@ export default function OurExcursions() {
             >
               <Image
                 src={image}
-                alt={`Excursion ${id}`}
+                alt={`Yoga excursion ${id}`}
                 width={400}
                 height={300}
                 className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
               />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* Modal */}
       {previewImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
           onClick={() => setPreviewImage(null)}
         >
           <div
-            className="relative max-w-4xl w-full mx-4"
+            className="relative max-w-4xl w-full mx-4 max-h-[80vh]"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -86,7 +87,7 @@ export default function OurExcursions() {
               alt="Excursion preview"
               width={1000}
               height={600}
-              className="rounded-xl object-contain w-full h-auto"
+              className="rounded-xl object-contain w-full h-full"
               priority
             />
             <button

@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+
+import React from "react";
 import Image from "next/image";
 
 interface Activity {
@@ -25,7 +27,8 @@ const activities: Activity[] = [
   },
   {
     title: "Satsang",
-    description: "Join soulful gatherings with music, wisdom, and spiritual dialogue.",
+    description:
+      "Join soulful gatherings with music, wisdom, and spiritual dialogue.",
     image: "/Activity/satsang.png",
   },
   {
@@ -42,33 +45,35 @@ const activities: Activity[] = [
 
 const ActivitiesSection: React.FC = () => {
   return (
-    <section className="bg-transparent text-center relative overflow-hidden">
+    <section className="bg-transparent text-center relative overflow-hidden py-12 sm:py-16 lg:py-20">
       {/* Optional radial background decoration */}
       <div className="absolute inset-0 opacity-10 z-0 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-16 sm:mb-20">
-          Activities included in the course
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-12 sm:mb-16">
+          Activities Included in the Course
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-16">
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition relative flex flex-col items-center"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex flex-col items-center"
             >
-              <div className="-mt-16 mb-6">
+              <div className="-mt-12 mb-4">
                 <Image
                   src={activity.image}
                   alt={activity.title}
-                  width={96}  // w-24 = 96px
-                  height={96} // h-24 = 96px
-                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow object-cover"
+                  width={96}
+                  height={96}
+                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow-md object-cover"
+                  loading="lazy"
                 />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-[#150e70] text-center">
+              <h3 className="text-lg sm:text-xl font-semibold text-[#150e70]">
                 {activity.title}
               </h3>
-              <p className="text-sm sm:text-base text-gray-600 mt-3 text-center">
+              <p className="text-sm sm:text-base text-gray-600 mt-2">
                 {activity.description}
               </p>
             </div>

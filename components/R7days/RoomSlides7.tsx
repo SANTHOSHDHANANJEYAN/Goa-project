@@ -7,18 +7,18 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-const testimonials = [
-  { id: 1, image: '/Accomdation/1.jpg' },
-  { id: 2, image: '/Accomdation/3.webp' },
-  { id: 3, image: '/Accomdation/6.jpg' },
-  { id: 4, image: '/Accomdation/7.jpg' },
-  { id: 5, image: '/Accomdation/8.avif' },
-  { id: 6, image: '/Accomdation/9.jpg' },
-  { id: 7, image: '/Accomdation/10.jpg' },
-  { id: 8, image: '/Accomdation/11.avif' },
-  { id: 9, image: '/Accomdation/15.avif' },
-  { id: 10, image: '/Accomdation/18.jpg' },
-  { id: 11, image: '/Accomdation/19.avif' },
+const roomImages = [
+  '/Accomdation/1.jpg',
+  '/Accomdation/3.webp',
+  '/Accomdation/6.jpg',
+  '/Accomdation/7.jpg',
+  '/Accomdation/8.avif',
+  '/Accomdation/9.jpg',
+  '/Accomdation/10.jpg',
+  '/Accomdation/11.avif',
+  '/Accomdation/15.avif',
+  '/Accomdation/18.jpg',
+  '/Accomdation/19.avif',
 ];
 
 export default function RoomSlides7() {
@@ -35,7 +35,7 @@ export default function RoomSlides7() {
         <Swiper
           spaceBetween={20}
           slidesPerView={1}
-          loop={true}
+          loop
           speed={2000}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
@@ -47,15 +47,15 @@ export default function RoomSlides7() {
           modules={[Autoplay, Pagination]}
           className="max-w-6xl mx-auto"
         >
-          {testimonials.map(({ id, image }) => (
-            <SwiperSlide key={id}>
+          {roomImages.map((image, index) => (
+            <SwiperSlide key={index}>
               <div
                 className="relative rounded-2xl overflow-hidden group shadow-lg cursor-pointer"
                 onClick={() => setPreviewImage(image)}
               >
                 <Image
                   src={image}
-                  alt={`Room ${id}`}
+                  alt={`Room ${index + 1}`}
                   width={400}
                   height={300}
                   className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -66,7 +66,6 @@ export default function RoomSlides7() {
         </Swiper>
       )}
 
-      {/* Modal Preview */}
       {isClient && previewImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4"

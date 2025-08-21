@@ -29,9 +29,9 @@ const KeySkills7: React.FC = () => {
             src="/Activity/keyskill.gif"
             alt="Animated yoga skills showcase"
             fill
+            loading="lazy"
             className="object-cover object-center rounded-xl"
             sizes="(max-width: 768px) 100vw, 50vw"
-            priority={false}
           />
         </div>
 

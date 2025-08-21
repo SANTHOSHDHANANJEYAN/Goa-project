@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import Image from "next/image";
@@ -8,120 +10,74 @@ const cardVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.6,
-      ease: "easeOut",
-    },
+    transition: { delay: i * 0.15, duration: 0.5, ease: "easeOut" },
   }),
 };
 
 const curriculum = [
-  {
-    title: "Foundations of Yoga & Teaching",
-    image: "/Curriculumimg/1.jpg",
-    description:
-      "Explore the origins, philosophies, diverse styles of yoga, and the essential role of a yoga teacher.",
-  },
-  {
-    title: "Asana Mastery & Alignment Techniques",
-    image: "/Curriculumimg/2.jpg",
-    description:
-      "Learn key yoga poses with proper alignment, modifications, hands-on adjustments, and guided practice to ensure safety, strength, and mindfulness.",
-  },
-  {
-    title: "Pranayama & Energetic Awareness",
-    image: "/Curriculumimg/3.jpg",
-    description:
-      "Discover powerful breathwork techniques, their benefits, and how to harness breath and energy flow through pranayama, chakra awareness, and mindful movement.",
-  },
-  {
-    title: "Yoga Anatomy & Safe Movement",
-    image: "/Curriculumimg/4.jpg",
-    description:
-      "Understand the body’s structure, key muscle groups, breath mechanics, and injury prevention to support safe, effective, and informed yoga practice.",
-  },
-  {
-    title: "Teaching Methodology & Class Leadership",
-    image: "/Curriculumimg/5.jpg",
-    description:
-      "Learn to communicate effectively, structure balanced classes, apply teaching techniques, and embody the ethics and responsibilities of a yoga teacher.",
-  },
-  {
-    title: "Sequencing & Intentional Class Design",
-    image: "/Curriculumimg/6.jpg",
-    description:
-      "Master the art of creating balanced, level-appropriate class sequences with purposeful themes, effective timing, and engaging flow from start to finish.",
-  },
-  {
-    title: "Teaching Practicum & Constructive Feedback",
-    image: "/Curriculumimg/7.jpg",
-    description:
-      "Gain real-world teaching experience through guided practice sessions, peer reviews, and expert feedback to refine your skills and build confidence as a yoga teacher.",
-  },
-  {
-    title: "Personal Growth & Wellness for Yoga Teachers",
-    image: "/Curriculumimg/8.jpg",
-    description:
-      "Cultivating mindful self-reflection, journaling insights, and sustainable self-care to manage stress and prevent burnout.",
-  },
+  { title: "Foundations of Yoga & Teaching", image: "/Curriculumimg/1.jpg", description: "Explore the origins, philosophies, diverse styles of yoga, and the essential role of a yoga teacher." },
+  { title: "Asana Mastery & Alignment Techniques", image: "/Curriculumimg/2.jpg", description: "Learn key yoga poses with proper alignment, modifications, hands-on adjustments, and guided practice to ensure safety, strength, and mindfulness." },
+  { title: "Pranayama & Energetic Awareness", image: "/Curriculumimg/3.jpg", description: "Discover powerful breathwork techniques, their benefits, and how to harness breath and energy flow through pranayama, chakra awareness, and mindful movement." },
+  { title: "Yoga Anatomy & Safe Movement", image: "/Curriculumimg/4.jpg", description: "Understand the body’s structure, key muscle groups, breath mechanics, and injury prevention to support safe, effective, and informed yoga practice." },
+  { title: "Teaching Methodology & Class Leadership", image: "/Curriculumimg/5.jpg", description: "Learn to communicate effectively, structure balanced classes, apply teaching techniques, and embody the ethics and responsibilities of a yoga teacher." },
+  { title: "Sequencing & Intentional Class Design", image: "/Curriculumimg/6.jpg", description: "Master the art of creating balanced, level-appropriate class sequences with purposeful themes, effective timing, and engaging flow from start to finish." },
+  { title: "Teaching Practicum & Constructive Feedback", image: "/Curriculumimg/7.jpg", description: "Gain real-world teaching experience through guided practice sessions, peer reviews, and expert feedback to refine your skills and build confidence as a yoga teacher." },
+  { title: "Personal Growth & Wellness for Yoga Teachers", image: "/Curriculumimg/8.jpg", description: "Cultivating mindful self-reflection, journaling insights, and sustainable self-care to manage stress and prevent burnout." },
 ];
 
-const CurriculumSection100: React.FC = () => {
-  return (
-    <section className="relative pt-[4rem] px-4 sm:px-10 bg-transparent overflow-hidden">
-      {/* Floating Sparkle */}
-      <div className="absolute top-10 left-10 z-0 opacity-10">
-        <Sparkles size={180} strokeWidth={0.8} />
-      </div>
+const CurriculumSection100: React.FC = () => (
+  <section className="relative pt-16 px-4 sm:px-10 bg-transparent overflow-hidden">
+    {/* Floating Sparkle */}
+    <div className="absolute top-10 left-10 z-0 opacity-10 pointer-events-none">
+      <Sparkles size={180} strokeWidth={0.8} />
+    </div>
 
-      {/* Header */}
-      <div className="relative z-10 text-center max-w-3xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-5xl font-bold tracking-tight text-[#150e70] drop-shadow-sm"
+    {/* Header */}
+    <div className="relative z-10 text-center max-w-3xl mx-auto">
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl sm:text-5xl font-bold tracking-tight text-[#150e70] drop-shadow-sm"
+      >
+        CURRICULUM
+      </motion.h2>
+      <p className="mt-4 text-lg text-gray-600">
+        A transformational journey packed with practical wisdom and modern tools to elevate your practice.
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mt-16">
+      {curriculum.map((item, i) => (
+        <motion.div
+          key={i}
+          custom={i}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={cardVariants}
+          className="bg-white shadow-lg rounded-2xl p-6 border border-gray-100 hover:scale-105 transition-transform duration-300 text-center"
         >
-          CURRICULUM
-        </motion.h2>
-        <p className="mt-4 text-lg text-gray-600">
-          A transformational journey packed with practical wisdom and modern tools to elevate your practice.
-        </p>
-      </div>
-
-      {/* Cards */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto mt-16">
-        {curriculum.map((item, i) => (
-          <motion.div
-            key={item.title + i}
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={cardVariants}
-            className="bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group text-center"
-          >
-            <div className="flex justify-center mb-4">
-              <div className="w-20 h-20 bg-white rounded-full overflow-hidden flex items-center justify-center shadow-inner">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={80}
-                  height={80}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+          <div className="flex justify-center mb-4">
+            <div className="w-20 h-20 rounded-full overflow-hidden shadow-inner">
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={80}
+                height={80}
+                className="object-cover w-full h-full"
+              />
             </div>
-            <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition">
-              {item.title}
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
-};
+          </div>
+          <h3 className="text-lg font-bold text-[#2b0a72] mb-2 hover:text-pink-500 transition-colors">
+            {item.title}
+          </h3>
+          <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+        </motion.div>
+      ))}
+    </div>
+  </section>
+);
 
-export default CurriculumSection100;
+export default memo(CurriculumSection100);

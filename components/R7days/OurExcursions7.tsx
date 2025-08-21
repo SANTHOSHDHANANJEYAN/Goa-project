@@ -1,37 +1,22 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-const testimonials = [
-  { id: 1, image: '/excursion/7.jpg' },
-  { id: 2, image: '/excursion/6.jpg' },
-  { id: 3, image: '/excursion/3.jpg' },
-  { id: 4, image: '/excursion/1.jpg' },
-  { id: 5, image: '/excursion/10.jpg' },
-  { id: 6, image: '/excursion/11.jpg' },
-  { id: 7, image: '/excursion/11.jpg' },
-  { id: 8, image: '/excursion/12.jpg' },
-  { id: 9, image: '/excursion/13.jpg' },
-  { id: 10, image: '/excursion/1.jpg' },
-  { id: 11, image: '/excursion/15.jpg' },
-  { id: 12, image: '/excursion/16.jpg' },
-  { id: 13, image: '/excursion/17.jpg' },
-  { id: 14, image: '/excursion/18.jpg' },
-  { id: 15, image: '/excursion/19.jpg' },
+const excursions = [
+  '/excursion/7.jpg','/excursion/6.jpg','/excursion/3.jpg','/excursion/1.jpg',
+  '/excursion/10.jpg','/excursion/11.jpg','/excursion/11.jpg','/excursion/12.jpg',
+  '/excursion/13.jpg','/excursion/1.jpg','/excursion/15.jpg','/excursion/16.jpg',
+  '/excursion/17.jpg','/excursion/18.jpg','/excursion/19.jpg'
 ];
 
 export default function OurExcursions7() {
-  const [isClient, setIsClient] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const isClient = typeof window !== 'undefined';
 
   return (
     <section className="bg-transparent pb-20 px-4 text-center">
@@ -39,8 +24,7 @@ export default function OurExcursions7() {
         Our Excursions
       </h2>
       <p className="text-lg text-[#3d3d3d] max-w-2xl mx-auto mb-12">
-        These are real stories from our Yoga Teacher Training students — raw, honest, and deeply
-        moving. See how yoga has helped them heal, grow, and reconnect with themselves.
+        Explore real moments from our Yoga Teacher Training students — raw, honest, and deeply moving.
       </p>
 
       {isClient && (
@@ -59,20 +43,21 @@ export default function OurExcursions7() {
           modules={[Autoplay, Pagination]}
           className="max-w-6xl mx-auto"
         >
-          {testimonials.map((item) => (
-            <SwiperSlide key={item.id}>
+          {excursions.map((src, idx) => (
+            <SwiperSlide key={idx}>
               <div
                 className="relative rounded-3xl overflow-hidden group shadow-md cursor-pointer"
-                onClick={() => setSelectedImage(item.image)}
+                onClick={() => setSelectedImage(src)}
                 role="button"
-                aria-label="Open excursion image"
+                aria-label={`Open excursion image ${idx + 1}`}
               >
                 <Image
-                  src={item.image}
-                  alt={`Excursion ${item.id}`}
+                  src={src}
+                  alt={`Excursion ${idx + 1}`}
                   width={400}
                   height={300}
                   className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
                 />
               </div>
             </SwiperSlide>
@@ -83,7 +68,7 @@ export default function OurExcursions7() {
       {/* Modal */}
       {isClient && selectedImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 animate-fadeIn"
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
           onClick={() => setSelectedImage(null)}
         >
           <div

@@ -20,7 +20,7 @@ const trainingHighlights: string[] = [
 
 const YogaHighlights: React.FC = () => {
   return (
-    <section className="bg-gradient-to-br from-white to-[#4377B2]/10 py-16 px-6 md:px-20">
+    <section className="bg-gradient-to-br from-white to-blue-100/20 py-16 px-6 md:px-20">
       <h2 className="text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-14">
         Discover What Makes Our 12-Days YTTC Special
       </h2>
@@ -33,7 +33,7 @@ const YogaHighlights: React.FC = () => {
             {idealFor.map((point, idx) => (
               <li key={idx} className="flex items-start gap-3">
                 <FaLeaf className="text-[#150e70] mt-1" />
-                <span className="text-[#150e70]">{point}</span>
+                <span>{point}</span>
               </li>
             ))}
           </ul>
@@ -46,7 +46,7 @@ const YogaHighlights: React.FC = () => {
             {trainingHighlights.map((point, idx) => (
               <li key={idx} className="flex items-start gap-3">
                 <FaStar className="text-[#150e70] mt-1" />
-                <span className="text-[#150e70]">{point}</span>
+                <span>{point}</span>
               </li>
             ))}
           </ul>

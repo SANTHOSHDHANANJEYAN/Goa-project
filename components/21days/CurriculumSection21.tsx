@@ -1,4 +1,6 @@
-import React from "react";
+'use client';
+
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import Image from "next/image";
@@ -9,8 +11,8 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.2,
-      duration: 0.6,
+      delay: i * 0.15,
+      duration: 0.5,
       ease: "easeOut",
     },
   }),
@@ -24,7 +26,7 @@ const curriculum = [
       "Learn and practice Hatha, Vinyasa, and Restorative yoga to improve strength, flexibility, and posture. Each session is designed to deepen body awareness and energize your day.",
   },
   {
-    title: "Pranayama & Breath Control ",
+    title: "Pranayama & Breath Control",
     image: "/Curriculumimg/2.jpg",
     description:
       "Explore powerful breathing techniques to calm the mind and balance emotions. Build a daily routine that supports clarity, energy, and relaxation.",
@@ -48,7 +50,7 @@ const curriculum = [
       "Discover how your body works during yoga with simple, practical anatomy lessons. Improve alignment, prevent injury, and support safe practice.",
   },
   {
-    title: "Ayurveda & Yogic Nutrition ",
+    title: "Ayurveda & Yogic Nutrition",
     image: "/Curriculumimg/6.jpg",
     description:
       "Learn basic Ayurveda principles for healthy living and natural detox. Explore diet, routines, and herbs to support your yoga journey.",
@@ -69,9 +71,12 @@ const curriculum = [
 
 const CurriculumSection50: React.FC = () => {
   return (
-    <section className="relative py-28 px-4 sm:px-10 bg-transparent overflow-hidden">
-      {/* Floating Sparkle */}
-      <div className="absolute top-10 left-10 z-0 opacity-10">
+    <section
+      className="relative py-24 px-4 sm:px-10 bg-transparent overflow-hidden"
+      aria-label="Yoga Teacher Training Curriculum"
+    >
+      {/* Decorative Sparkle */}
+      <div className="absolute top-10 left-10 z-0 opacity-10 pointer-events-none">
         <Sparkles size={180} strokeWidth={0.8} />
       </div>
 
@@ -80,45 +85,50 @@ const CurriculumSection50: React.FC = () => {
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-5xl font-bold tracking-tight text-[#150e70] drop-shadow-sm"
+          className="text-4xl sm:text-5xl font-bold tracking-tight text-[#150e70] drop-shadow-sm"
         >
           CURRICULUM
         </motion.h2>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 text-base sm:text-lg text-gray-600">
           A transformational journey packed with practical wisdom and modern tools to elevate your practice.
         </p>
       </div>
 
-      {/* Cards */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto mt-16">
+      {/* Curriculum Cards */}
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 max-w-7xl mx-auto mt-16">
         {curriculum.map((item, i) => (
           <motion.div
-            key={item.title + i}
+            key={item.title}
             custom={i}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={cardVariants}
-            className="bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group"
+            className="bg-white shadow-xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition-transform duration-300 group"
           >
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center mb-5">
               <div className="w-20 h-20 bg-[#9B7EBD] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={`Illustration for ${item.title}`}
                   width={80}
                   height={80}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
-            {/* Centered text content */}
+
+            {/* Text content */}
             <div className="text-center">
-              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-[#9B7EBD] transition">
+              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-[#9B7EBD] transition-colors">
                 {item.title}
               </h3>
-              <p className="text-sm text-gray-700 leading-relaxed">{item.description}</p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                {item.description}
+              </p>
             </div>
           </motion.div>
         ))}
@@ -127,4 +137,4 @@ const CurriculumSection50: React.FC = () => {
   );
 };
 
-export default CurriculumSection50;
+export default memo(CurriculumSection50);

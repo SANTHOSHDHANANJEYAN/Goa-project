@@ -14,31 +14,9 @@ import {
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { TbYoga } from "react-icons/tb";
 import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export default function About71() {
-  const controls = useAnimation();
-  const [sectionRef, inView] = useInView({ threshold: 0.2 });
-
-  useEffect(() => {
-    if (inView) controls.start("visible");
-  }, [controls, inView]);
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.2,
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    }),
-  };
-
   const iconList = [
     { Icon: FaSpa, text: "Affordable Yoga Retreats in Goa" },
     { Icon: MdOutlineCalendarMonth, text: "Flexible Stay Duration" },
@@ -51,21 +29,29 @@ export default function About71() {
     { Icon: GiLotus, text: "Rejuvenate Through Yoga" },
   ];
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.15, duration: 0.5, ease: 'easeOut' },
+    }),
+  };
+
   return (
     <section className="relative bg-white px-6 sm:px-10 lg:px-20 py-12">
-      <div
-        ref={sectionRef}
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-[7rem] items-center"
-      >
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-[7rem] items-center">
+        
         {/* Image Section */}
         <div className="grid grid-cols-2 gap-4">
           <div className="col-span-2">
             <Image
               src="/aboutpics/000.jpg"
               alt="Yoga Group"
-              className="rounded-xl object-cover w-full h-[355px]"
+              className="rounded-xl object-cover w-full h-[355px] sm:h-[300px] md:h-[355px]"
               width={600}
               height={355}
+              priority
             />
           </div>
           <Image
@@ -74,6 +60,7 @@ export default function About71() {
             className="rounded-xl object-cover w-full h-[170px]"
             width={300}
             height={170}
+            loading="lazy"
           />
           <Image
             src="/aboutpics/116.jpg"
@@ -81,6 +68,7 @@ export default function About71() {
             className="rounded-xl object-cover w-full h-[170px]"
             width={300}
             height={170}
+            loading="lazy"
           />
         </div>
 
@@ -99,7 +87,8 @@ export default function About71() {
                 className="flex items-start gap-3"
                 custom={i}
                 initial="hidden"
-                animate={controls}
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
                 variants={itemVariants}
               >
                 <Icon className="text-[#150e70] mt-1 shrink-0" size={20} />

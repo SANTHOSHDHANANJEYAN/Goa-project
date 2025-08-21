@@ -1,26 +1,28 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
+import React from 'react';
 
 const SpaHero14: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/RetreatBG/3.png"
           alt="Retreat background"
           fill
-          priority
           className="object-cover object-center w-full h-full"
+          priority
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL="/RetreatBG/3-blur.png" // optional low-res placeholder
         />
         <div className="absolute inset-0 bg-black opacity-40" />
       </div>
 
       {/* Hero Content */}
-      <div className="container mx-auto px-4 relative z-10 text-center">
+      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
           14 Days Yoga Detox Retreat – Balance Body & Mind
         </h1>
@@ -59,7 +61,7 @@ const SpaHero14: React.FC = () => {
           <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </div>
-    </div>
+    </section>
   );
 };
 

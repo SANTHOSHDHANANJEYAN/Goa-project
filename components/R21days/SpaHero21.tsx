@@ -1,22 +1,21 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 
 const SpaHero21: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden mt-[5rem] bg-black">
-      {/* Background image with optimized layout */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/RetreatBG/4.png"
-          alt="21 Days Yoga Wellness Retreat Background"
-          fill
-          priority={false}
-          loading="eager"
-          className="object-cover w-full h-full"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black opacity-40" />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20 bg-black">
+      {/* Background image */}
+      <Image
+        src="/RetreatBG/4.png"
+        alt="21 Days Yoga Wellness Retreat Background"
+        fill
+        className="object-cover w-full h-full"
+        priority
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-black opacity-40" />
 
       {/* Hero Content */}
       <div className="container mx-auto px-4 relative z-10 text-center text-white">
@@ -44,7 +43,7 @@ const SpaHero21: React.FC = () => {
 
       {/* Scroll Indicator */}
       <div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
         aria-hidden="true"
       >
         <svg
@@ -59,7 +58,7 @@ const SpaHero21: React.FC = () => {
           <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </div>
-    </div>
+    </section>
   );
 };
 

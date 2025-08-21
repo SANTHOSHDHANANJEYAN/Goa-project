@@ -39,13 +39,9 @@ export default function TeachersSection300() {
     }
   };
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % teachers.length);
-  };
-
-  const prevSlide = () => {
+  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % teachers.length);
+  const prevSlide = () =>
     setCurrentIndex((prev) => (prev - 1 + teachers.length) % teachers.length);
-  };
 
   useEffect(() => {
     startAutoSlide();
@@ -53,11 +49,7 @@ export default function TeachersSection300() {
   }, []);
 
   const getVisibleTeachers = () => {
-    const visible = [];
-    for (let i = 0; i < visibleCount; i++) {
-      visible.push(teachers[(currentIndex + i) % teachers.length]);
-    }
-    return visible;
+    return Array.from({ length: visibleCount }, (_, i) => teachers[(currentIndex + i) % teachers.length]);
   };
 
   return (
@@ -68,7 +60,7 @@ export default function TeachersSection300() {
     >
       {/* Heading */}
       <div className="text-center mb-14">
-        <h2 className="text-4xl sm:text-4xl md:text-4xl font-extrabold text-indigo-800">Our Beloved Teachers</h2>
+        <h2 className="text-4xl font-extrabold text-indigo-800">Our Beloved Teachers</h2>
         <p className="text-lg text-indigo-600 mt-2 max-w-xl mx-auto">
           Meet the guiding lights of your yogic journey
         </p>
@@ -78,6 +70,7 @@ export default function TeachersSection300() {
           <span className="w-10 h-1 bg-purple-500 rounded-full" />
         </div>
       </div>
+
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
@@ -93,12 +86,13 @@ export default function TeachersSection300() {
       >
         <ChevronRight size={28} />
       </button>
+
       {/* Teacher Cards */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 transition duration-500 ease-in-out">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         <AnimatePresence mode="wait">
           {getVisibleTeachers().map((teacher, index) => (
             <motion.div
-              key={teacher.name}
+              key={teacher.name + index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 30 }}
@@ -117,7 +111,9 @@ export default function TeachersSection300() {
                 </div>
               </Link>
               <h3 className="text-lg font-semibold text-indigo-900">{teacher.name}</h3>
-              <p className="text-sm text-indigo-500 mt-1">{teacher.handle.replaceAll('_', ' ')}</p>
+              <p className="text-sm text-indigo-500 mt-1">
+                {teacher.handle.replaceAll('_', ' ')}
+              </p>
             </motion.div>
           ))}
         </AnimatePresence>

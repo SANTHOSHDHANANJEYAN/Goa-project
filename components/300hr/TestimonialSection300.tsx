@@ -34,7 +34,7 @@ const TestimonialSection: React.FC = () => {
         {videos.map((video, idx) => (
           <div
             key={idx}
-            className="aspect-video rounded-xl border-4 overflow-hidden shadow-lg relative cursor-pointer group"
+            className="aspect-video rounded-xl border-4 overflow-hidden shadow-lg relative cursor-pointer group focus:outline-none focus:ring-2 focus:ring-indigo-500"
             onClick={() => setPlaying(idx)}
             role="button"
             tabIndex={0}
@@ -58,6 +58,7 @@ const TestimonialSection: React.FC = () => {
                   fill
                   className="object-cover transition group-hover:brightness-90"
                   loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <svg

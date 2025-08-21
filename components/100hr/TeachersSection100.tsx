@@ -1,32 +1,32 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 const teachers = [
   {
-    name: 'Gangesha Chaitanya',
-    title: 'Lead teacher',
-    image: '/gangesh sir.jpg',
-    bio: `He is a seasoned Yoga Teacher in Rishikesh with 6+ years' experience. Specializing in Hatha, Ashtanga, Vinyasa, Pranayama, and Meditation, he prioritizes safe and effective poses through precise alignment.`,
+    name: "Gangesha Chaitanya",
+    title: "Lead teacher",
+    image: "/gangesh sir.jpg",
+    bio: "He is a seasoned Yoga Teacher in Rishikesh with 6+ years' experience. Specializing in Hatha, Ashtanga, Vinyasa, Pranayama, and Meditation, he prioritizes safe and effective poses through precise alignment.",
   },
   {
-    name: 'Pooja Ji',
-    title: 'PhD Yoga and Life Sciences',
-    image: '/pooja ji.jpg',
-    bio: `She has spent years researching yoga and health sciences, including teaching MSc and PhD students on the effectiveness of yoga in the medical field.`,
+    name: "Pooja Ji",
+    title: "PhD Yoga and Life Sciences",
+    image: "/pooja ji.jpg",
+    bio: "She has spent years researching yoga and health sciences, including teaching MSc and PhD students on the effectiveness of yoga in the medical field.",
   },
   {
-    name: 'Purnima Ji',
-    title: 'Lead teacher',
-    image: '/Purnima hi.jpg',
-    bio: `She has a deep passion for yoga that has led to years of studying the topics of Sanskrit and Yoga studies. She loves to empower her students to find the same sense of passion.`,
+    name: "Purnima Ji",
+    title: "Lead teacher",
+    image: "/Purnima hi.jpg",
+    bio: "She has a deep passion for yoga that has led to years of studying Sanskrit and Yoga studies. She loves to empower her students to find the same sense of passion.",
   },
 ];
 
 export default function TeachersSection() {
   return (
     <section className="relative py-20 bg-transparent">
-      {/* Optional Lotus Background */}
+      {/* Lotus Background */}
       <div className="absolute inset-0 bg-[url('/lotus-bg.png')] bg-center bg-no-repeat bg-contain opacity-10 pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 lg:px-16 text-center">
@@ -48,11 +48,10 @@ export default function TeachersSection() {
                   width={160}
                   height={160}
                   className="object-cover w-full h-full"
+                  priority={index === 0} // first teacher loads faster for LCP
                 />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-indigo-900">
-                {teacher.name}
-              </h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-indigo-900">{teacher.name}</h3>
               <p className="text-sm text-gray-500 mb-2">{teacher.title}</p>
               <p className="text-sm text-gray-700">{teacher.bio}</p>
             </div>

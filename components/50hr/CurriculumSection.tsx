@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
@@ -9,7 +11,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.2,
+      delay: i * 0.15,
       duration: 0.6,
       ease: "easeOut",
     },
@@ -24,7 +26,7 @@ const curriculum = [
       "Explore the origins, philosophies, diverse styles of yoga, and the essential role of a yoga teacher.",
   },
   {
-    title: "Asana Mastery & Alignment Techniques ",
+    title: "Asana Mastery & Alignment Techniques",
     image: "/Curriculumimg/2.jpg",
     description:
       "Learn key yoga poses with proper alignment, modifications, hands-on adjustments, and guided practice to ensure safety, strength, and mindfulness.",
@@ -48,22 +50,22 @@ const curriculum = [
       "Learn to communicate effectively, structure balanced classes, apply teaching techniques, and embody the ethics and responsibilities of a yoga teacher.",
   },
   {
-    title: "Sequencing & Intentional Class Design ",
+    title: "Sequencing & Intentional Class Design",
     image: "/Curriculumimg/6.jpg",
     description:
-      " Master the art of creating balanced, level-appropriate class sequences with purposeful themes, effective timing, and engaging flow from start to finish.",
+      "Master the art of creating balanced, level-appropriate class sequences with purposeful themes, effective timing, and engaging flow from start to finish.",
   },
   {
-    title: "Teaching Practicum & Constructive Feedback ",
+    title: "Teaching Practicum & Feedback",
     image: "/Curriculumimg/7.jpg",
     description:
-      "Gain real-world teaching experience through guided practice sessions, peer reviews, and expert feedback to refine your skills and build confidence as a yoga teacher.",
+      "Gain real-world teaching experience through guided practice sessions, peer reviews, and expert feedback to refine your skills and build confidence.",
   },
   {
-    title: "Personal Growth & Wellness for Yoga Teachers",
+    title: "Personal Growth & Wellness",
     image: "/Curriculumimg/8.jpg",
     description:
-      "Cultivating mindful self-reflection, journaling insights, and sustainable self-care to manage stress and prevent burnout.",
+      "Cultivate mindful self-reflection, journaling insights, and sustainable self-care practices to manage stress and prevent burnout.",
   },
 ];
 
@@ -71,9 +73,13 @@ const CurriculumSection50: React.FC = () => {
   return (
     <section className="relative pt-[4rem] px-4 sm:px-10 bg-transparent overflow-hidden">
       {/* Floating Sparkle */}
-      <div className="absolute top-10 left-10 z-0 opacity-10">
+      <motion.div
+        animate={{ y: [0, -10, 0] }}
+        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+        className="absolute top-10 left-10 z-0 opacity-10"
+      >
         <Sparkles size={180} strokeWidth={0.8} />
-      </div>
+      </motion.div>
 
       {/* Header */}
       <div className="relative z-10 text-center max-w-3xl mx-auto">
@@ -81,13 +87,18 @@ const CurriculumSection50: React.FC = () => {
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-5xl font-bold tracking-tight text-[#150e70] drop-shadow-sm"
+          className="text-5xl font-extrabold tracking-tight text-[#150e70] drop-shadow-md"
         >
           CURRICULUM
         </motion.h2>
-        <p className="mt-4 text-lg text-gray-600">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-4 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto"
+        >
           A transformational journey packed with practical wisdom and modern tools to elevate your practice.
-        </p>
+        </motion.p>
       </div>
 
       {/* Cards */}
@@ -100,10 +111,12 @@ const CurriculumSection50: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={cardVariants}
-            className="bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group"
+            whileHover={{ scale: 1.05, boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.15)" }}
+            className="bg-white/70 shadow-xl rounded-3xl p-6 backdrop-blur-lg border border-gray-100 transition duration-300 group"
           >
-            <div className="flex justify-center mb-4">
-              <div className="w-20 h-20 bg-white rounded-full overflow-hidden flex items-center justify-center shadow-inner">
+            {/* Image */}
+            <div className="flex justify-center mb-5">
+              <div className="w-20 h-20 bg-white rounded-full overflow-hidden flex items-center justify-center shadow-lg ring-2 ring-indigo-100">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -113,12 +126,15 @@ const CurriculumSection50: React.FC = () => {
                 />
               </div>
             </div>
-            {/* Centered text content */}
+
+            {/* Text */}
             <div className="text-center">
-              <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition">
+              <h3 className="text-lg sm:text-xl font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition-colors">
                 {item.title}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                {item.description}
+              </p>
             </div>
           </motion.div>
         ))}

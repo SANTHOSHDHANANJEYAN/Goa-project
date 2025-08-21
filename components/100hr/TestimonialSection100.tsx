@@ -1,24 +1,24 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import Image from "next/image";
 
-const TestimonialSection: React.FC = () => {
-  const videos = [
-    {
-      url: 'https://www.youtube.com/embed/1oxK0cYax9s?autoplay=1&rel=0',
-      thumbnail: '/Thumbnail/Student Testimonials1.png',
-    },
-    {
-      url: 'https://www.youtube.com/embed/0L8pv3fixrg?autoplay=1&rel=0',
-      thumbnail: '/Thumbnail/Student Testimonials2.png',
-    },
-    {
-      url: 'https://www.youtube.com/embed/s6VazbcpPko?autoplay=1&rel=0',
-      thumbnail: '/Thumbnail/Student Testimonials3.png',
-    },
-  ];
+const videos = [
+  {
+    url: "https://www.youtube.com/embed/1oxK0cYax9s?autoplay=1&rel=0",
+    thumbnail: "/Thumbnail/Student Testimonials1.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/0L8pv3fixrg?autoplay=1&rel=0",
+    thumbnail: "/Thumbnail/Student Testimonials2.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/s6VazbcpPko?autoplay=1&rel=0",
+    thumbnail: "/Thumbnail/Student Testimonials3.png",
+  },
+];
 
+export default function TestimonialSection() {
   const [playing, setPlaying] = useState<number | null>(null);
 
   return (
@@ -30,7 +30,7 @@ const TestimonialSection: React.FC = () => {
         View the self-transformation stories of our students
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {videos.map((video, idx) => (
           <div
             key={idx}
@@ -38,7 +38,7 @@ const TestimonialSection: React.FC = () => {
             tabIndex={0}
             aria-label={`Play testimonial video ${idx + 1}`}
             onClick={() => setPlaying(idx)}
-            onKeyDown={(e) => e.key === 'Enter' && setPlaying(idx)}
+            onKeyDown={(e) => e.key === "Enter" && setPlaying(idx)}
             className="aspect-video rounded-xl border-4 overflow-hidden shadow-lg relative cursor-pointer transition hover:shadow-2xl"
           >
             {playing === idx ? (
@@ -50,7 +50,7 @@ const TestimonialSection: React.FC = () => {
                 allowFullScreen
               />
             ) : (
-              <div className="relative w-full h-full">
+              <>
                 <Image
                   src={video.thumbnail}
                   alt={`Student Testimonial ${idx + 1}`}
@@ -69,13 +69,11 @@ const TestimonialSection: React.FC = () => {
                     <polygon points="33,26 60,42 33,58" fill="white" />
                   </svg>
                 </div>
-              </div>
+              </>
             )}
           </div>
         ))}
       </div>
     </section>
   );
-};
-
-export default TestimonialSection;
+}

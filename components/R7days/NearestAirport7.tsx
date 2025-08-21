@@ -1,13 +1,14 @@
+'use client';
+
 export default function NearestAirport7() {
   return (
-    <section className="bg-white pb-[3rem] px-4 sm:px-6 md:px-10 lg:px-20">
+    <section className="bg-white pb-12 px-4 sm:px-6 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto mb-8 sm:mb-12 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#150e70]">
           Rishikul Yogshala Location
         </h2>
       </div>
 
-      {/* Two-column layout */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left Side - How to Reach */}
         <div className="text-left flex flex-col justify-center">
@@ -16,9 +17,8 @@ export default function NearestAirport7() {
           </h3>
           <p className="text-gray-700 mb-5 leading-relaxed">
             The nearest airport to <span className="font-semibold">Rishikul Yogshala</span> is
-            <span className="font-semibold"> Goa International Airport (Dabolim)</span>, located
-            approximately <span className="font-semibold">54 km</span> away.
-            From the airport, you can choose any of the following options:
+            <span className="font-semibold"> Goa International Airport (Dabolim)</span>, approximately
+            <span className="font-semibold"> 54 km</span> away. You can reach us via:
           </p>
 
           <ul className="space-y-4 text-gray-700">
@@ -26,30 +26,27 @@ export default function NearestAirport7() {
               <span className="text-xl">🚕</span>
               <p>
                 <span className="font-semibold text-[#150e70]">By Taxi:</span>  
-                Taxis are available at the airport 24/7. It takes around
-                <span className="font-semibold"> 1.5 hours</span> to reach the retreat.
+                Available 24/7 at the airport, approx <span className="font-semibold">1.5 hours</span>.
               </p>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-xl">🛵</span>
               <p>
-                <span className="font-semibold text-[#150e70]">By Rental Scooter/Car:</span>  
-                You can easily rent a scooter or car at the airport. This option
-                gives you flexibility to explore Goa.
+                <span className="font-semibold text-[#150e70]">Rental Scooter/Car:</span>  
+                Flexible option to explore Goa.
               </p>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-xl">🚌</span>
               <p>
                 <span className="font-semibold text-[#150e70]">By Bus:</span>  
-                Public buses are available, but they may take longer and require
-                multiple changes. Suitable if you’re on a budget.
+                Budget-friendly, but may take longer with multiple changes.
               </p>
             </li>
           </ul>
 
           <p className="text-gray-700 mt-6">
-            For assistance with airport transfers, feel free to{" "}
+            For airport transfer assistance,{" "}
             <a
               href="#contact"
               className="text-[#150e70] font-semibold underline hover:text-[#0d0a52] transition"
@@ -67,6 +64,7 @@ export default function NearestAirport7() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="w-full h-full border-0"
+            title="Rishikul Yogshala Location"
           ></iframe>
         </div>
       </div>
