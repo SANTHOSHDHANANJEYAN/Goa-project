@@ -1,10 +1,8 @@
-// app/layout.tsx
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Cormorant_Garamond } from 'next/font/google';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -33,11 +31,15 @@ export const metadata: Metadata = {
   ],
   other: {
     'google-site-verification': 'hOYvN1XlKBpsse_YAD-ymspC8VnZ85bXGeLFwCPgYBM',
-    'google-site-verification-2': '9PVyCKWm5kSFl1C3Dv4h7Ri8VH4QbtTqep1Uwg5K_yU',
+    'google-site-verification-2': '9PVyCKWm5kSFl1C3Dv4h7Ri8VH4QbtTqep1Uwg5K_yU', // custom label to avoid key conflict
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -55,19 +57,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           content="Yoga in Goa, Rishikul Yogshala, Yoga Teacher Training Goa, 200 Hour YTT Goa, Yoga Retreat India, Meditation Retreat Goa, Wellness Retreat, Beach Yoga"
         />
 
+        {/* ✅ Favicon & PWA Icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/icon/icongoa.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased bg-image-[url('/backgd.jpg')]`}>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
-
-        {/* Speed Insights Script */}
-        <SpeedInsights />
       </body>
     </html>
   );
