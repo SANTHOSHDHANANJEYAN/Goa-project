@@ -10,7 +10,7 @@ export default function Benefit7() {
         <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[22rem] rounded-xl overflow-hidden shadow-lg">
           <Image
             src="/Imp&bene/bene - Copy.jpg"
-            alt="Yoga Retreat"
+            alt="Goa Yoga Retreat"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
@@ -22,20 +22,20 @@ export default function Benefit7() {
       {/* Right content */}
       <div className="w-full lg:w-1/2">
         <p className="text-orange-500 font-medium tracking-wide uppercase mb-2 text-sm sm:text-base">
-          Transform Lives
+          Awaken Your Inner Bliss
         </p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#150e70] mb-4 leading-tight">
-          Benefits of our retreats
+          Benefits of Our Goa Retreats
         </h1>
         <p className="text-gray-800 font-semibold mb-4 text-base sm:text-lg">
-          Recenter Your Mind, Rejuvenate Your Body, and Return Refreshed
+          Rejuvenate by the Waves, Recharge Your Spirit & Refresh Your Soul
         </p>
         <p className="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
-          Escape the noise and chaos of daily life and step into a sanctuary of peace in the heart of Rishikesh.
-          Surrounded by the sacred Himalayas and the flowing Ganga, our retreat offers a chance to reconnect with your true self.
-          Experience the healing power of authentic Himalayan yoga, guided meditation, and mindful breathwork.
-          Nourish your body with pure sattvic meals and embrace a slower, more intentional rhythm.
-          Leave behind stress and stagnation and return home feeling lighter, clearer, and deeply rejuvenated in body, mind, and soul.
+          Escape the hustle of daily life and immerse yourself in the tranquil beauty of Goa’s golden beaches.
+          Our retreat offers a unique blend of traditional yoga, meditation, and mindful practices right by the Arabian Sea.
+          Experience soulful sunrise yoga sessions, guided breathwork, and deep relaxation under swaying palms.
+          Relish nourishing sattvic meals while embracing the peaceful rhythm of coastal living.
+          Leave behind stress and chaos, returning home fully recharged — with a renewed sense of balance, clarity, and inner harmony.
         </p>
       </div>
     </section>

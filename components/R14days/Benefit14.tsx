@@ -9,7 +9,7 @@ export default function Benefit14() {
       <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
         <Image
           src="/Imp&bene/bene - Copy.jpg"
-          alt="Yoga Retreat"
+          alt="Goa Yoga Retreat"
           width={800}
           height={600}
           className="rounded-xl shadow-lg h-[22rem] w-full object-cover"
@@ -19,21 +19,23 @@ export default function Benefit14() {
       {/* Right Content */}
       <div className="w-full lg:w-1/2 lg:pl-12">
         <p className="text-orange-500 font-medium tracking-wide uppercase mb-2 text-sm sm:text-base">
-          Transform Lives
+          Awaken Your Inner Bliss
         </p>
 
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#150e70] mb-4 leading-tight">
-          Benefits of Our Retreats
+          Benefits of Our Goa Retreats
         </h1>
 
         <p className="text-gray-800 font-semibold mb-4 text-base sm:text-lg">
-          Recenter Your Mind, Rejuvenate Your Body, and Return Refreshed
+          Refresh Your Mind, Rejuvenate Your Body & Rediscover Your Soul
         </p>
 
         <p className="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
-          Escape the noise and chaos of daily life and step into a sanctuary of peace in the heart of Rishikesh. Surrounded by the sacred Himalayas and the flowing Ganga, our retreat offers a chance to reconnect with your true self. 
-          Experience the healing power of authentic Himalayan yoga, guided meditation, and mindful breathwork. Nourish your body with pure sattvic meals and embrace a slower, more intentional rhythm. 
-          Leave behind stress and stagnation and return home feeling lighter, clearer, and deeply rejuvenated in body, mind, and soul.
+          Escape the hustle and chaos of everyday life and immerse yourself in the serene beauty of Goa’s golden beaches.
+          Let the soothing sound of waves and swaying palms guide you into a deeper connection with your inner self.
+          Experience soulful sunrise yoga sessions, guided meditation, and rejuvenating breathwork right by the Arabian Sea.
+          Savor nourishing sattvic meals while embracing a slower, more mindful coastal lifestyle.
+          Return home feeling lighter, more balanced, and completely refreshed in body, mind, and spirit.
         </p>
       </div>
     </section>
