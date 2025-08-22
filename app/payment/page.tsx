@@ -37,7 +37,7 @@ export default function PaymentSelection() {
   };
 
   return (
-    <section className="w-full flex flex-col items-center pt-[12rem] pb-16 bg-transparent">
+    <section className="w-full flex flex-col items-center pt-[10rem] pb-16 bg-transparent">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
