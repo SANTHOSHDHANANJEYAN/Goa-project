@@ -1,167 +1,139 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
-type Duration = '50Hrs YTTC' | '100Hrs YTTC' | '200Hrs YTTC' | '300Hrs YTTC' | '21Days Yoga Immersion Course';
-type Currency = 'INR' | 'USD' | 'EUR';
+const paymentMethods = [
+  {
+    id: 'course',
+    title: 'Course Payment',
+    subtitle: 'Yoga Teacher Training Fees',
+    image: '/icon/coursepay-min.jpg',
+    link: '/coursepayemnt',
+  },
+  {
+    id: 'retreat',
+    title: 'Retreat Payment',
+    subtitle: 'Book Your Yoga Retreat',
+    image: '/icon/Retreatpay.png',
+    link: '/Retreatpayment',
+  },
+];
 
-const exchangeRates = { INR: 1, USD: 1 / 83.5, EUR: 1 / 90 };
-const symbols = { INR: '₹', USD: '$', EUR: '€' };
+export default function PaymentSelection() {
+  const [selected, setSelected] = useState<string | null>(null);
+  const router = useRouter();
 
-// Pricing with advance payment included
-const pricing: Record<Duration, { total: number; advance: number }> = {
-  '50Hrs YTTC': { total: 66560, advance: 10000 },
-  '100Hrs YTTC': { total: 124800, advance: 15000 },
-  '200Hrs YTTC': { total: 183040, advance: 20000 },
-  '300Hrs YTTC': { total: 239900, advance: 25000 },
-  '21Days Yoga Immersion Course': { total: 298500, advance: 30000 },
-};
-
-export default function TwoListing7() {
-  const durations: Duration[] = [
-    '50Hrs YTTC',
-    '100Hrs YTTC',
-    '200Hrs YTTC',
-    '300Hrs YTTC',
-    '21Days Yoga Immersion Course',
-  ];
-  const [selected, setSelected] = useState<Duration>('50Hrs YTTC');
-  const [currency, setCurrency] = useState<Currency>('INR');
-
-  // Format prices based on selected currency
-  const getFormattedPrice = (amount: number): string => {
-    const converted = amount * exchangeRates[currency];
-    return currency === 'INR'
-      ? `${symbols[currency]}${Math.round(converted).toLocaleString()}`
-      : `${symbols[currency]}${converted.toFixed(0)}`;
+  const handleClick = (methodId: string) => {
+    setSelected(methodId);
+    const selectedMethod = paymentMethods.find((m) => m.id === methodId);
+    if (selectedMethod?.link) {
+      setTimeout(() => {
+        router.push(selectedMethod.link);
+      }, 400);
+    }
   };
 
-  const formattedAdvance = useMemo(
-    () => getFormattedPrice(pricing[selected].advance),
-    [selected, currency]
-  );
-
-  const formattedTotal = useMemo(
-    () => getFormattedPrice(pricing[selected].total),
-    [selected, currency]
-  );
-
-  const formattedRemaining = useMemo(
-    () => getFormattedPrice(pricing[selected].total - pricing[selected].advance),
-    [selected, currency]
-  );
-
-  const steps = [
-    { title: 'Submit Your Interest', description: 'Choose your retreat duration and fill out the booking form.' },
-    { title: 'Confirm Your Booking', description: 'Pay a small advance to reserve your spot instantly.' },
-    { title: 'Pay the Remaining Balance', description: 'The remaining amount can be paid on arrival.' },
-    { title: 'Prepare for Your Journey', description: 'We’ll send you a complete checklist to get ready.' },
-  ];
-
   return (
-    <section className="bg-white px-4 md:px-16 text-[#262626] font-sans">
-      <div className="max-w-7xl mx-auto">
-        {/* Heading */}
-        <div className="mb-8 text-center md:text-left">
-          <h4 className="text-[#150e70] font-semibold tracking-widest uppercase text-xs">
-            Application Process
-          </h4>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mt-2 leading-snug">
-            Book Your Yoga Retreat in 4 Easy Steps
-          </h2>
-          <p className="text-gray-700 max-w-2xl text-base md:text-lg mt-3">
-            Secure your spot with a small advance payment, and pay the balance when you arrive.
-          </p>
-        </div>
+    <section className="w-full flex flex-col items-center pt-[12rem] pb-16 bg-transparent">
+      {/* Heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-extrabold mb-2 tracking-wide"
+        style={{ color: '#150e70' }}
+      >
+        BOOK YOUR SLOTS
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="mb-10 text-center max-w-xl text-lg"
+        style={{ color: '#000' }}
+      >
+        Please choose whether you're paying for a Yoga Teacher Training course or a Yoga Retreat.
+      </motion.p>
 
-        {/* Main Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Left - Steps */}
-          <div className="relative pl-10">
-            {steps.map((step, index) => (
-              <div key={index} className="relative pl-10 mb-6 group">
-                <div className="absolute left-[-22px] top-4 w-8 h-8 rounded-full bg-[#150e70] text-white flex items-center justify-center font-bold shadow-md group-hover:scale-105 transition-transform duration-200 ease-in-out">
-                  {index + 1}
-                </div>
-                <div className="bg-white border border-[#d1d5db] rounded-xl p-4 shadow-sm group-hover:shadow-md transition duration-300">
-                  <h4 className="text-base md:text-lg font-semibold text-[#1C1C1C] mb-1">
-                    {step.title}
-                  </h4>
-                  <p className="text-sm text-gray-600">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Right - Pricing */}
-          <div className="bg-white border border-[#150e70] rounded-2xl p-6 shadow-md hover:shadow-lg transition">
-            <h3 className="text-xl md:text-2xl font-bold text-[#1C1C1C] mb-3">
-              {selected} Yoga Retreat
-            </h3>
-
-            {/* Duration Buttons */}
-            <div className="flex flex-wrap gap-2 mb-3">
-              {durations.map((day) => (
-                <button
-                  key={day}
-                  onClick={() => setSelected(day)}
-                  aria-label={`Select ${day}`}
-                  aria-pressed={selected === day}
-                  className={`px-4 py-2 rounded-full text-sm font-medium border transition duration-200 ${
-                    selected === day
-                      ? 'bg-[#150e70] text-white'
-                      : 'text-[#150e70] border-[#150e70] bg-white hover:bg-[#e0e7ff]'
-                  }`}
-                >
-                  {day}
-                </button>
-              ))}
+      {/* Payment Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full max-w-4xl px-6">
+        {paymentMethods.map((method) => (
+          <motion.div
+            key={method.id}
+            onClick={() => handleClick(method.id)}
+            whileHover={{
+              scale: 1.07,
+              boxShadow: '0px 12px 30px rgba(0, 0, 0, 0.3)',
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 150, damping: 12 }}
+            className={`relative cursor-pointer rounded-3xl overflow-hidden border transition-all duration-500 bg-white shadow-xl ${
+              selected === method.id
+                ? 'border-black ring-4 ring-black/20 scale-105'
+                : 'border-gray-300'
+            }`}
+          >
+            <div className="relative w-full h-56">
+              <Image
+                src={method.image}
+                alt={method.title}
+                fill
+                className="object-cover transition-transform duration-500 hover:scale-105"
+              />
             </div>
-
-            {/* Currency Buttons */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {(['INR', 'USD', 'EUR'] as Currency[]).map((cur) => (
-                <button
-                  key={cur}
-                  onClick={() => setCurrency(cur)}
-                  aria-label={`Select ${cur}`}
-                  aria-pressed={currency === cur}
-                  className={`px-3 py-1 rounded-full text-xs font-medium border transition duration-200 ${
-                    currency === cur
-                      ? 'bg-[#150e70] text-white'
-                      : 'text-[#150e70] border-[#150e70] bg-white hover:bg-[#e0e7ff]'
-                  }`}
-                >
-                  {cur}
-                </button>
-              ))}
+            <div className="p-6 flex flex-col items-center text-center bg-white">
+              <h3 className="text-2xl font-bold" style={{ color: '#150e70' }}>
+                {method.title}
+              </h3>
+              <p className="text-sm mt-2" style={{ color: '#000' }}>
+                {method.subtitle}
+              </p>
             </div>
-
-            {/* Payment Breakdown */}
-            <div className="bg-[#f3f4f6] p-5 rounded-xl text-center mb-4">
-              <h4 className="text-[#150e70] font-semibold mb-1">Total Price</h4>
-              <p className="text-2xl font-bold text-[#1C1C1C]">{formattedTotal}</p>
-              <div className="mt-3 space-y-1">
-                <p className="text-sm text-gray-700">
-                  <span className="font-semibold">Advance:</span> {formattedAdvance}
-                </p>
-                <p className="text-sm text-gray-700">
-                  <span className="font-semibold">Remaining:</span> {formattedRemaining}
-                </p>
-              </div>
-            </div>
-
-            {/* Inclusions */}
-            <ul role="list" className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-800">
-              <li role="listitem">✔️ {selected} Stay in Goa</li>
-              <li role="listitem">✔️ Yoga Equipment</li>
-              <li role="listitem">✔️ Healthy Meals</li>
-              <li role="listitem">✔️ Meditation & Silence Walks</li>
-              <li role="listitem">✔️ Personal Mentoring</li>
-            </ul>
-          </div>
-        </div>
+          </motion.div>
+        ))}
       </div>
+
+      {/* Proceed Button */}
+      {selected && (
+        <motion.button
+          onClick={() => {
+            const selectedMethod = paymentMethods.find((m) => m.id === selected);
+            if (selectedMethod?.link) {
+              router.push(selectedMethod.link);
+            }
+          }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          whileHover={{
+            scale: 1.07,
+            backgroundColor: '#150e70',
+            color: '#fff',
+            boxShadow: '0px 10px 25px rgba(21, 14, 112, 0.4)',
+          }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-12 px-10 py-4 text-lg rounded-2xl shadow-lg font-semibold tracking-wide transition-all duration-300 bg-black text-white"
+        >
+          Proceed with {paymentMethods.find((m) => m.id === selected)?.title}
+        </motion.button>
+      )}
+              {/* Payment Guidelines Section */}
+        <div className="mt-12 bg-[#f3f4f6] border-l-4 border-[#150e70] rounded-xl p-6 shadow-sm">
+          <h3 className="text-xl md:text-2xl font-bold text-[#150e70] mb-3">Payment Guidelines</h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-base">
+            <li>Advance payment is required to confirm your booking. Remaining balance is payable upon arrival.</li>
+            <li>We accept online payments via Razorpay (INR) and PayPal (International).</li>
+            <li>Please carry a valid ID proof at check-in.</li>
+            <li>Advance payments are non-refundable but transferable to a future retreat within 12 months.</li>
+            <li>Contact our support team for any payment-related queries.</li>
+          </ul>
+        </div>
     </section>
+    
   );
+  
+
 }
