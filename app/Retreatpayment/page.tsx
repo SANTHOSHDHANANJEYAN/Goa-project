@@ -6,7 +6,8 @@ import Link from 'next/link';
 type Duration = '7 Days' | '14 Days' | '21 Days';
 type Currency = 'INR' | 'USD' | 'EUR';
 
-const exchangeRates = { INR: 1, USD: 1 / 83.5, EUR: 1 / 90 };
+// Updated exchangeRates to use whole INR-based rates
+const exchangeRates = { INR: 1, USD: 87.51, EUR: 101.50 };
 const symbols = { INR: '₹', USD: '$', EUR: '€' };
 
 const pricing: Record<Duration, { private: number; advancePercent: number }> = {
@@ -22,8 +23,9 @@ export default function TwoListing7() {
   const [customAdvancePercent, setCustomAdvancePercent] = useState<number | null>(null);
 
   const getPrice = (baseINR: number): string => {
-    const converted = baseINR * exchangeRates[currency];
-    return `${symbols[currency]}${currency === 'INR' ? Math.round(converted).toLocaleString() : converted.toFixed(0)}`;
+    const converted =
+      currency === 'INR' ? baseINR : baseINR / exchangeRates[currency];
+    return `${symbols[currency]}${Math.round(converted).toLocaleString()}`;
   };
 
   const totalPrice = pricing[selected].private;
@@ -40,14 +42,6 @@ export default function TwoListing7() {
     { title: 'Confirm Your Spot', description: 'Pay a small deposit; remaining amount can be paid on arrival.' },
     { title: 'Prepare for Your Journey', description: 'Receive a checklist to get ready for your yoga retreat experience.' },
   ];
-
-  const handleRazorpayPayment = () => {
-    alert(`Redirecting to Razorpay for ${formattedAdvance} advance payment`);
-  };
-
-  const handlePaypalPayment = () => {
-    alert(`Redirecting to PayPal for ${formattedAdvance} advance payment`);
-  };
 
   return (
     <section className="bg-white pt-[7rem] pb-[4rem] text-[#262626] font-sans">
@@ -150,18 +144,18 @@ export default function TwoListing7() {
               </div>
             </div>
 
-    <div className="flex flex-col sm:flex-row gap-3">
-      <Link href="https://razorpay.me/@Rishikul" className="flex-1">
-        <button className="w-full px-5 py-3 bg-[#150e70] text-white rounded-xl text-sm font-medium shadow hover:bg-[#0f0b50] transition">
-          Pay with Razorpay
-        </button>
-      </Link>
-      <Link href="https://www.paypal.me/rishikulyogshala" className="flex-1">
-        <button className="w-full px-5 py-3 bg-[#2563eb] text-white rounded-xl text-sm font-medium shadow hover:bg-[#0f4c8c] transition">
-          Pay with PayPal
-        </button>
-      </Link>
-    </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="https://razorpay.me/@Rishikul" className="flex-1">
+                <button className="w-full px-5 py-3 bg-[#150e70] text-white rounded-xl text-sm font-medium shadow hover:bg-[#0f0b50] transition">
+                  Pay with Razorpay
+                </button>
+              </Link>
+              <Link href="https://www.paypal.me/rishikulyogshala" className="flex-1">
+                <button className="w-full px-5 py-3 bg-[#2563eb] text-white rounded-xl text-sm font-medium shadow hover:bg-[#0f4c8c] transition">
+                  Pay with PayPal
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
 
