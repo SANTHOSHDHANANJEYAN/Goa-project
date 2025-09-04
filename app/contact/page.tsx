@@ -95,13 +95,35 @@ export default function ContactPage() {
                 Have questions about our classes, workshops, or how to get started? Reach out to us and we'll be happy to help.
               </p>
               <div className="space-y-6 mb-10">
+                
+                {/* Goa Address */}
                 <div className="flex items-start">
                   <MapPin size={24} className="mr-4 text-blue-600" />
                   <div>
-                    <h3 className="font-medium mb-1">Visit Us</h3>
-                    <p className="text-gray-600">128, Thorlebag, Querim,<br/> Arambol, Goa 403524</p>
+                    <h3 className="font-medium mb-1">Visit Us (Goa)</h3>
+                    <p className="text-gray-600">
+                      128, Thorlebag, Querim,<br /> Arambol, Goa 403524
+                    </p>
                   </div>
                 </div>
+
+                {/* Tehran Address */}
+                <div className="flex items-start">
+                  <MapPin size={24} className="mr-4 text-blue-600" />
+                  <div>
+                    <h3 className="font-medium mb-1">Visit Us (Tehran)</h3>
+                    <p className="text-gray-600">
+                      Unit H2, Level +5, Ava Platt Commercial Complex,<br />
+                      Moheddanesh St., Aghdasiyeh St.,<br />
+                      Tehran, Iran
+                    </p>
+                    <p className="text-gray-600 mt-1">
+                      Tel: <a href="tel:+989380704308" className="text-blue-600 hover:underline">+98 93807 04308</a>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Phone */}
                 <div className="flex items-start">
                   <Phone size={24} className="mr-4 text-blue-600" />
                   <div>
@@ -109,6 +131,8 @@ export default function ContactPage() {
                     <p className="text-gray-600">+91 80899 92515</p>
                   </div>
                 </div>
+
+                {/* Email */}
                 <div className="flex items-start">
                   <Mail size={24} className="mr-4 text-blue-600" />
                   <div>
@@ -117,6 +141,7 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
+
               <div className="rounded-lg overflow-hidden h-64 relative mt-[3rem]">
                 <Image
                   src="/Contact_us2.png"
