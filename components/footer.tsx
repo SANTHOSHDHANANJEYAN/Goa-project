@@ -72,22 +72,20 @@ export default function Footer() {
           </ul>
 
           {/* Iran Contact Section */}
-          <div className="flex items-center gap-3 pt-4">
+          <div className="flex flex-col items-center text-center pt-6">
             <Image
               src="/iranlogo.png"
               alt="Iran Branch"
-              width={50}
-              height={50}
-              className="rounded-md shadow-md"
+              width={70}
+              height={70}
+              className="rounded-lg shadow-lg mb-2"
             />
-            <div>
-              <p className="font-semibold text-sm">Iran Branch</p>
-              <p className="text-xs">Tehran, No. 24, Vali Asr Street, Iran</p>
-              <p className="text-xs">Phone: +98 912 345 6789</p>
-            </div>
+            <p className="font-bold text-base">Iran Branch</p>
+            <p className="text-sm">Tehran, No. 24, Vali Asr Street, Iran</p>
+            <p className="text-sm">Phone: +98 912 345 6789</p>
           </div>
 
-          <div>
+          <div className="pt-2">
             <Link href="/privacypolicy" className="underline hover:text-purple-700">
               Privacy Policy
             </Link>
@@ -114,4 +112,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+      }
