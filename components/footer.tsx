@@ -70,6 +70,23 @@ export default function Footer() {
             <li><Phone className="inline-block w-4 h-4 mr-2" /> +91 80899 92515</li>
             <li><MapPin className="inline-block w-4 h-4 mr-2" /> 128, Thorlebag, Querim, Arambol, Goa 403524</li>
           </ul>
+
+          {/* Iran Contact Section */}
+          <div className="flex items-center gap-3 pt-4">
+            <Image
+              src="/iranlogo.png"
+              alt="Iran Branch"
+              width={50}
+              height={50}
+              className="rounded-md shadow-md"
+            />
+            <div>
+              <p className="font-semibold text-sm">Iran Branch</p>
+              <p className="text-xs">Tehran, No. 24, Vali Asr Street, Iran</p>
+              <p className="text-xs">Phone: +98 912 345 6789</p>
+            </div>
+          </div>
+
           <div>
             <Link href="/privacypolicy" className="underline hover:text-purple-700">
               Privacy Policy
