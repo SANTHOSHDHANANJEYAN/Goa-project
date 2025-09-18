@@ -26,22 +26,42 @@ export default function Footer() {
         {/* Left Column */}
         <div className="space-y-10">
           <div>
-            <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">Programs</h3>
+            <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">
+              Programs
+            </h3>
             <ul className="space-y-2 pt-4 font-semibold">
-              <li><Link href="/50hrsyogattc">50 Hr Multi-Style-Yoga TTC</Link></li>
-              <li><Link href="/100hrsyogattc">100 Hr Multi-Style-Yoga TTC</Link></li>
-              <li><Link href="/200hrsyogattc">200 Hr Multi-Style-Yoga TTC</Link></li>
-              <li><Link href="/300hrsyogattc">300 Hr Multi-Style-Yoga TTC</Link></li>
-              <li><Link href="/21dayscourses">21 Days Yoga Immersion Course</Link></li>
+              <li>
+                <Link href="/50hrsyogattc">50 Hr Multi-Style-Yoga TTC</Link>
+              </li>
+              <li>
+                <Link href="/100hrsyogattc">100 Hr Multi-Style-Yoga TTC</Link>
+              </li>
+              <li>
+                <Link href="/200hrsyogattc">200 Hr Multi-Style-Yoga TTC</Link>
+              </li>
+              <li>
+                <Link href="/300hrsyogattc">300 Hr Multi-Style-Yoga TTC</Link>
+              </li>
+              <li>
+                <Link href="/21dayscourses">21 Days Yoga Immersion Course</Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">Retreats</h3>
+            <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">
+              Retreats
+            </h3>
             <ul className="pt-4 space-y-2 font-semibold">
-              <li><Link href="/7daysretreat">7 Days Yoga Holiday Retreat</Link></li>
-              <li><Link href="/14daysretreat">14 Days Yoga Detox Retreat</Link></li>
-              <li><Link href="/21daysretreat">21 Days Yoga Wellness Retreat</Link></li>
+              <li>
+                <Link href="/7daysretreat">7 Days Yoga Holiday Retreat</Link>
+              </li>
+              <li>
+                <Link href="/14daysretreat">14 Days Yoga Detox Retreat</Link>
+              </li>
+              <li>
+                <Link href="/21daysretreat">21 Days Yoga Wellness Retreat</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -62,13 +82,23 @@ export default function Footer() {
         {/* Right Column: Contact Info */}
         <div className="space-y-6">
           <div>
-            <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">About Us</h3>
+            <h3 className="text-2xl font-bold border-b-4 border-[#15005c] inline-block pb-1">
+              About Us
+            </h3>
             <p className="mt-4 font-semibold">Contacts</p>
           </div>
           <ul className="space-y-2 text-sm leading-relaxed font-semibold">
-            <li><Mail className="inline-block w-4 h-4 mr-2" /> rishikulyogshalagoa@gmail.com</li>
-            <li><Phone className="inline-block w-4 h-4 mr-2" /> +91 80899 92515</li>
-            <li><MapPin className="inline-block w-4 h-4 mr-2" /> 128, Thorlebag, Querim, Arambol, Goa 403524</li>
+            <li>
+              <Mail className="inline-block w-4 h-4 mr-2" />{" "}
+              rishikulyogshalagoa@gmail.com
+            </li>
+            <li>
+              <Phone className="inline-block w-4 h-4 mr-2" /> +91 80899 92515
+            </li>
+            <li>
+              <MapPin className="inline-block w-4 h-4 mr-2" /> 128, Thorlebag,
+              Querim, Arambol, Goa 403524
+            </li>
           </ul>
 
           {/* Iran Contact Section */}
@@ -81,8 +111,12 @@ export default function Footer() {
               className="rounded-lg shadow-lg mb-2"
             />
             <p className="font-bold text-base">Iran Branch</p>
-            <p className="text-sm">Tehran, No. 24, Vali Asr Street, Iran</p>
-            <p className="text-sm">Phone: +98 912 345 6789</p>
+            <p className="text-sm">
+              Unit H2, Level +5, Ava Platt Commercial Complex
+            </p>
+            <p className="text-sm">Moheddanesh St., Aghdasiyeh St.</p>
+            <p className="text-sm">Tehran, Iran</p>
+            <p className="text-sm">Tel: +98 938 070 4308</p>
           </div>
 
           <div className="pt-2">
@@ -95,7 +129,11 @@ export default function Footer() {
 
       {/* Footer Social Icons */}
       <div className="relative z-10 mt-10 flex justify-center space-x-6">
-        <Link href="#" className="text-[#15005c] hover:text-purple-700 pb-[0.5rem]" aria-label="YouTube">
+        <Link
+          href="#"
+          className="text-[#15005c] hover:text-purple-700 pb-[0.5rem]"
+          aria-label="YouTube"
+        >
           <Youtube className="w-8 h-6" />
         </Link>
         <Link href="#" className="text-[#15005c] hover:text-purple-700">
@@ -108,8 +146,9 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="relative z-10 mt-6 text-center text-xs text-[#15005c]">
-        &copy; {new Date().getFullYear()} Rishikul Yogshala Goa. All rights reserved.
+        &copy; {new Date().getFullYear()} Rishikul Yogshala Goa. All rights
+        reserved.
       </div>
     </footer>
   );
-      }
+}
