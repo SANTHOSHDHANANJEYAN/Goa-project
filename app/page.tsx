@@ -11,7 +11,7 @@ import CommunitySection from '@/components/CommunitySection';
 
 const GalleryPage = dynamic(() => import('@/components/gallery'));
 const TeacherSlider = dynamic(() => import('@/components/TeacherSlider'));
-const CodeOfConduct = dynamic(() => import('@/components/CodeOfConduct'));
+// const CodeOfConduct = dynamic(() => import('@/components/CodeOfConduct'));
 const Appform = dynamic(() => import('@/components/Appform'));
 const BlogSection = dynamic(() => import('@/components/BlogSection'));
 const CourseCard = dynamic(() => import('@/components/CourseCard'));
@@ -52,7 +52,7 @@ export default function Home() {
         <StoriesSection />
         <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
           <BlogSection />
-          <CodeOfConduct />
+          {/* <CodeOfConduct /> */}
           <GalleryPage />
           <TeacherSlider />
           <Appform />
