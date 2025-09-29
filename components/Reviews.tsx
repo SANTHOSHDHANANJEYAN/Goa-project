@@ -8,7 +8,7 @@ const Reviews: React.FC = () => {
     <section className="pt-12 pb-16 bg-transparent relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#150e70] mb-12 text-center">
-          Yoga Alliance
+          Our Yoga Alliance’s Review
         </h2>
 
         {/* Top Reviews */}
