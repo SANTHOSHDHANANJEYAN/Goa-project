@@ -1,22 +1,9 @@
 'use client';
 
-import React from "react";
-import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sparkles, ChevronDown } from "lucide-react";
 import Image from "next/image";
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  }),
-};
 
 const curriculum = [
   {
@@ -70,6 +57,12 @@ const curriculum = [
 ];
 
 const CurriculumSection200: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleDropdown = (i: number) => {
+    setOpenIndex(openIndex === i ? null : i);
+  };
+
   return (
     <section className="relative pt-16 pb-12 px-4 sm:px-10 bg-transparent overflow-hidden">
       {/* Floating Sparkle */}
@@ -92,39 +85,55 @@ const CurriculumSection200: React.FC = () => {
         </p>
       </div>
 
-      {/* Cards */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 max-w-7xl mx-auto mt-16">
+      {/* Accordion Cards */}
+      <div className="relative z-10 max-w-4xl mx-auto mt-16 space-y-4">
         {curriculum.map((item, i) => (
-          <motion.div
-            key={item.title + i}
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={cardVariants}
-            className="relative bg-white shadow-2xl rounded-3xl p-6 backdrop-blur-md border border-gray-100 hover:scale-[1.03] transition transform duration-300 group text-center"
-            role="group"
+          <div
+            key={i}
+            className="bg-white shadow-xl rounded-3xl border border-gray-100 overflow-hidden"
           >
-            {/* Glow effect on hover */}
-            <div className="absolute inset-0 rounded-3xl bg-pink-100 opacity-0 group-hover:opacity-20 transition duration-300 pointer-events-none"></div>
-
-            <div className="flex justify-center mb-4 relative z-10">
-              <div className="w-20 h-20 bg-[#fef3f7] rounded-full overflow-hidden flex items-center justify-center shadow-inner">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={80}
-                  height={80}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+            {/* Card Header */}
+            <button
+              onClick={() => toggleDropdown(i)}
+              className="flex items-center justify-between w-full px-6 py-4 text-left cursor-pointer"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-full overflow-hidden shadow-inner ring-2 ring-[#9B7EBD]/20">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={64}
+                    height={64}
+                    className="object-cover w-full h-full"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-[#2b0a72]">{item.title}</h3>
               </div>
-            </div>
-            <h3 className="text-lg font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition relative z-10">
-              {item.title}
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed relative z-10">{item.description}</p>
-          </motion.div>
+              <motion.div
+                animate={{ rotate: openIndex === i ? 180 : 0 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <ChevronDown size={20} />
+              </motion.div>
+            </button>
+
+            {/* Dropdown Content */}
+            <AnimatePresence initial={false}>
+              {openIndex === i && (
+                <motion.div
+                  key="content"
+                  initial={{ height: 0, opacity: 0, paddingTop: 0, paddingBottom: 0 }}
+                  animate={{ height: "auto", opacity: 1, paddingTop: 16, paddingBottom: 16 }}
+                  exit={{ height: 0, opacity: 0, paddingTop: 0, paddingBottom: 0 }}
+                  transition={{ type: "spring", stiffness: 250, damping: 30 }}
+                  className="px-6 text-gray-600 text-sm leading-relaxed"
+                >
+                  {item.description}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         ))}
       </div>
     </section>

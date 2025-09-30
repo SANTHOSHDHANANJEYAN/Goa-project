@@ -1,22 +1,9 @@
-'use client';
+"use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import React, { useState, memo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sparkles, ChevronDown } from "lucide-react";
 import Image from "next/image";
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.15,
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  }),
-};
 
 const curriculum = [
   {
@@ -69,7 +56,13 @@ const curriculum = [
   },
 ];
 
-const CurriculumSection50: React.FC = () => {
+const CurriculumSectionDropdown: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleDropdown = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section className="relative pt-[4rem] px-4 sm:px-10 bg-transparent overflow-hidden">
       {/* Floating Sparkle */}
@@ -101,46 +94,62 @@ const CurriculumSection50: React.FC = () => {
         </motion.p>
       </div>
 
-      {/* Cards */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto mt-16">
+      {/* Dropdown List */}
+      <div className="max-w-3xl mx-auto mt-12 space-y-4 relative z-10">
         {curriculum.map((item, i) => (
-          <motion.div
+          <div
             key={item.title + i}
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={cardVariants}
-            whileHover={{ scale: 1.05, boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.15)" }}
-            className="bg-white/70 shadow-xl rounded-3xl p-6 backdrop-blur-lg border border-gray-100 transition duration-300 group"
+            className="bg-white/80 border border-gray-200 shadow-md rounded-2xl overflow-hidden backdrop-blur-md"
           >
-            {/* Image */}
-            <div className="flex justify-center mb-5">
-              <div className="w-20 h-20 bg-white rounded-full overflow-hidden flex items-center justify-center shadow-lg ring-2 ring-indigo-100">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={80}
-                  height={80}
-                  className="w-full h-full object-cover"
-                />
+            {/* Button Header */}
+            <button
+              onClick={() => toggleDropdown(i)}
+              className="w-full flex items-center justify-between p-5 text-left"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-indigo-100 shadow">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={56}
+                    height={56}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-[#2b0a72]">
+                  {item.title}
+                </h3>
               </div>
-            </div>
+              <motion.div
+                animate={{ rotate: openIndex === i ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ChevronDown size={22} />
+              </motion.div>
+            </button>
 
-            {/* Text */}
-            <div className="text-center">
-              <h3 className="text-lg sm:text-xl font-bold text-[#2b0a72] mb-2 group-hover:text-pink-500 transition-colors">
-                {item.title}
-              </h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          </motion.div>
+            {/* Dropdown Content */}
+            <AnimatePresence initial={false}>
+              {openIndex === i && (
+                <motion.div
+                  key="content"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-5 pb-5 text-gray-700 text-sm sm:text-base leading-relaxed">
+                    {item.description}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         ))}
       </div>
     </section>
   );
 };
 
-export default CurriculumSection50;
+export default memo(CurriculumSectionDropdown);
