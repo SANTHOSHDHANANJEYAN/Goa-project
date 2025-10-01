@@ -31,6 +31,7 @@ export default function DinningSlides7() {
 
   return (
     <section className="bg-transparent pb-20 px-4 text-center">
+      {/* Swiper Carousel */}
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
@@ -93,6 +94,26 @@ export default function DinningSlides7() {
           </div>
         </div>
       )}
+
+      {/* Yogic Food Section */}
+      <div className="mt-16 max-w-5xl mx-auto text-left bg-white shadow-lg rounded-2xl p-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Yogic Food</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Simple Yogic and Nutritious food is part of the yogic culture at Rishikul Yogshala Goa. 
+          In <strong>200 Hours Yoga Teacher Training In Goa</strong>, healthy and delicious vegetarian meals made 
+          from local seasonal vegetables will be served to you. The food prepared will fill your Indian 
+          taste buds and also keep you fully energized, yet feeling light and grounded in your inner experience.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          We serve <strong>three tasty meals a day</strong> which adhere to the required energy during the course environment. 
+          From morning’s fruits and herbal teas to healthy lunches and comforting dinners — these not only fuel 
+          your body and mind, but also support your spiritual growth and nourishment.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          The <em>sattvic</em> (pure and balanced) diet at our Goa yoga center helps in improving digestion, 
+          retaining concentration, and providing an experience of calmness as you move deeper into your yogic practice.
+        </p>
+      </div>
     </section>
   );
 }
