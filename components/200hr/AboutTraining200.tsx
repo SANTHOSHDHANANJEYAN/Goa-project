@@ -3,7 +3,12 @@
 import { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
-const curriculumData = [
+interface CurriculumItem {
+  title: string;
+  content: string[];
+}
+
+const curriculumData: CurriculumItem[] = [
   {
     title: "Hatha Yoga – Primary series",
     content: [
@@ -146,9 +151,9 @@ const curriculumData = [
 ];
 
 export default function AboutTraining() {
-  const [openDropdowns, setOpenDropdowns] = useState({});
+  const [openDropdowns, setOpenDropdowns] = useState<{ [key: number]: boolean }>({});
 
-  const toggleDropdown = (index) => {
+  const toggleDropdown = (index: number) => {
     setOpenDropdowns(prev => ({
       ...prev,
       [index]: !prev[index]
