@@ -236,8 +236,8 @@ const TwoHundredHourTTPage = () => (
           You’ll receive a Yoga Alliance certificate —<br />
           internationally recognized and accepted.
         </p>
-      </section>
+      </section>*/}
   </div>
-); */}
+); 
 
 export default TwoHundredHourTTPage;
