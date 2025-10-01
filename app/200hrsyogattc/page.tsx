@@ -141,7 +141,7 @@ const TwoHundredHourTTPage = () => (
     <TestimonialSection200 />
 
     {/* Testimonials */}
-    <TestimonialCarousel
+    {/* <TestimonialCarousel
       testimonials={[
         {
           quote: "Absolutely loved my experience at this yoga training school...",
@@ -156,12 +156,12 @@ const TwoHundredHourTTPage = () => (
           author: "Varsha Ambardekar",
         },
       ]}
-    />
+    /> */}
 
     <YogaHighlights200 />
 
     {/* FAQs */}
-    <FAQSection
+    {/* <FAQSection
       title="Frequently Asked Questions"
       faqs={[
         {
@@ -199,10 +199,10 @@ const TwoHundredHourTTPage = () => (
       ]}
     />
 
-    <ApplicationForm200 />
+    <ApplicationForm200 /> */}
 
     {/* Certificate Section */}
-      <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
+      {/* <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
         <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
           After Completing the Course...
         </h3>
@@ -238,6 +238,6 @@ const TwoHundredHourTTPage = () => (
         </p>
       </section>
   </div>
-);
+); */}
 
 export default TwoHundredHourTTPage;
