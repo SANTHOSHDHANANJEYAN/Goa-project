@@ -108,7 +108,7 @@ const TwoHundredHourTTPage = () => (
     <Schedule200 />
 
     {/* Yoga Styles */}
-    <section className="mt-20">
+    {/* <section className="mt-20">
       <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-4 text-[#150e70]">
         Transformative Hatha, Vinyasa & Ashtanga Yoga for deep, immersive learning.
       </h2>
@@ -126,18 +126,18 @@ const TwoHundredHourTTPage = () => (
           </div>
         ))}
       </div>
-    </section>
+    </section> */}
 
     {/* Core Sections */}
-    <CurriculumSection200 />
-    <TeachersSection200 />
-    <OurDinning7 />
-    <DinningSlides7 />
+    {/* <CurriculumSection200 /> */}
+    {/* <TeachersSection200 /> */}
+    <BatchScheduleTable200 />
     <OurRooms7 />
     <RoomSlides7 />
+    <OurDinning7 />
+    <DinningSlides7 />
     <ActivitiesSection200 />
     <TestimonialSection200 />
-    <BatchScheduleTable200 />
 
     {/* Testimonials */}
     <TestimonialCarousel
