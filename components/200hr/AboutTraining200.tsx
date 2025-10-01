@@ -122,31 +122,115 @@ const curriculumData: CurriculumItem[] = [
   },
   {
     title: "Anatomy and physiology of Yogic practices",
-    content: []
+    content: [ "What is Yogic Anatomy and physiology?",
+      "Understanding Anatomy in respect to Yoga",
+      "Introduction of 10 major System in the Human Body",
+      "Introduction to Skeletal System and its Significance",
+      "Bones & Remodeling of Bones in Human Body",
+      "How the Yogic Practices can help to improve the bone health",
+      "Anatomy of Joint",
+      "Types of Joints",
+      "Cartilage, Ligaments & Tendons",
+      "How to Protect the Joint while doing Practices",
+      "Yogic Practices that improves Joint Health",
+      "Introduction to Muscular System and its Significance",
+      "Anatomy & Physiology of Muscles",
+      "How the Muscles are build and Yogic view point",
+      "Types of Muscles",
+      "Movements of Muscles",
+      "Muscle Contractions",
+      "Muscle Movements",
+      "Muscle Respiration & Muscle Fatigue",
+      "Introduction of the Respiratory System and yogic breathing",
+      "Anatomy & Physiology of Respiratory System",
+      "Types of Breathing and its Importance",
+      "Composition of Breath and its importance",
+      "TLC and how its in actual scenario",
+      "Gas Exchange Process and factor which impacts it",
+      "Respiratory Diseases and Yogic Applications to help in improve the condition",
+      "General FAQ for Students understanding"]
   },
   {
     title: "Concentration and Meditation practices",
-    content: []
+    content: ["What is Meditation?",
+      "What is the difference between Dharana and Dhyana?",
+      "What are types of Meditation",
+      "Breath Awareness Meditation",
+      "Mantra Awareness Meditation",
+      "Candle and Inner Light Meditation",
+      "Full moon Meditation"]
   },
   {
     title: "Yoga Nidra (Conscious Yogic sleep)",
-    content: []
+    content: ["What is Yoga Nidra?",
+      "What is sleep?",
+      "Four states of consciousness",
+      "Benefits of deep sleep",
+      "Yoga Nidra practices from Satyananda tradition",
+      "How Yoga Nidra practices cure insomnia problems?",
+      "Adjusting in Shavansana"]
   },
   {
     title: "Principle of teaching Asana (Adjustment and Alignment)",
-    content: []
+    content: ["Six steps of doing Asana correctly",
+      "The fundamentals of practicing side extension, forward extension, backward extension and revolving action",
+      "1. Side Extension",
+      "Open pelvic",
+      "Trikonasana",
+      "Utthita parsvakonasana",
+      "Close pelvic",
+      "Parivritta trikonasana",
+      "Virbhadrasana A",
+      "2. Forward Bending",
+      "Padangusthasana",
+      "Paschimotanasana",
+      "Janu Sirsasana",
+      "Adho Mukha Swanasna",
+      "3. Backward Bending",
+      "Chakrasana",
+      "Dhanurasana",
+      "Urdhva Mukha Swanasna",
+      "4. Revolving",
+      "Twisting",
+      "Ardha Matsyendrasana",
+      "Vakrasana",
+      "Marichyasana C",
+      "5. Inversions",
+      "Salamba Sarvangasana",
+      "Shirshasana",
+      "Viparita Karani",
+      "Halasana",
+      "6. Centering Posture",
+      "Tadasana",
+      "Dandasana",
+      "How to correct postures verbally and by hands on adjustments",
+      "Modifying the asana",
+      "Various limitation, contra-indications and benefits of yoga asana"]
   },
   {
     title: "Shat karma philosophy and practice",
-    content: []
+    content: ["Introduction of Shat Kriya according to Hatha Yoga",
+      "Practicum of Jal Neti and Sutra Neti (Cleansing Mucus or blockages from nasal passages and sinus)"]
   },
   {
     title: "Mantra Yoga",
-    content: []
+    content: ["Introduction of Mantra yoga",
+      "Significance of (OM)-AUM",
+      "Mantra for Meal Purification",
+      "Mantra for Obstacles",
+      "Mantra for universal masters to bless",
+      "Mantra for Realization",
+      "Mantra for well being"]
   },
   {
     title: "Teaching Methodology",
-    content: []
+    content: ["Disciplines of yoga teachers and students in yoga ashrams",
+      "The scope of listening, presence, directive and non-directive dialogue",
+      "How important is demonstration?",
+      "What are the preparations for classroom?",
+      "How to sequence the class?",
+      "How to describe the practice, techniques, and delivery in teaching a class?",
+      "Discussion on different types of lesson planning"]
   }
 ];
 
