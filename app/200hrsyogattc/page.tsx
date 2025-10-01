@@ -130,13 +130,14 @@ const TwoHundredHourTTPage = () => (
 
     {/* Core Sections */}
     {/* <CurriculumSection200 /> */}
-    {/* <TeachersSection200 /> */}
+     
     <BatchScheduleTable200 />
     <OurRooms7 />
     <RoomSlides7 />
     <OurDinning7 />
     <DinningSlides7 />
     <ActivitiesSection200 />
+    <TeachersSection200 />
     <TestimonialSection200 />
 
     {/* Testimonials */}
