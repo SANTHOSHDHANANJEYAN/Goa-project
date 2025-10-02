@@ -249,6 +249,13 @@ const TwoHundredHourTTPage = () => (
   </div>
 );
 
+export default TwoHundredHourTTPage;ate —<br />
+        internationally recognized and accepted.
+      </p>
+    </section> */}
+  </div>
+);
+
 export default TwoHundredHourTTPage; and accepted.
         </p>
       </section>*/}
