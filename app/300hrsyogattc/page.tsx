@@ -3,27 +3,80 @@
 import React from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-const AboutTraining300 = dynamic(() => import("@/components/300hr/AboutTraining300"));
-const CurriculumSection300 = dynamic(() => import("@/components/300hr/CurriculumSection300"));
-const ActivitiesSection300 = dynamic(() => import("@/components/300hr/ActivitiesSection300"));
-const BatchScheduleTable300 = dynamic(() => import("@/components/300hr/BatchScheduleTable300"));
-const TestimonialSection300 = dynamic(() => import("@/components/300hr/TestimonialSection300"));
-const YogaHighlights300 = dynamic(() => import("@/components/300hr/YogaHighlights300"));
-const ApplicationForm300 = dynamic(() => import("@/components/300hr/ApplicationForm300"));
-const TeachersSection300 = dynamic(() => import("@/components/300hr/TeachersSection300"));
-const Schedule300 = dynamic(() => import("@/components/300hr/Schedule300"));
+
+// Lazy imports
+const TestimonialCarousel = dynamic(() => import("@/components/testimonials-section"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
+const AboutTraining200 = dynamic(() => import("@/components/300hr/AboutTraining200"));
+const CurriculumSection200 = dynamic(() => import("@/components/300hr/CurriculumSection200"));
+const ActivitiesSection200 = dynamic(() => import("@/components/300hr/ActivitiesSection200"));
+const BatchScheduleTable200 = dynamic(() => import("@/components/300hr/BatchScheduleTable200"));
+const TestimonialSection200 = dynamic(() => import("@/components/300hr/TestimonialSection200"));
+const YogaHighlights200 = dynamic(() => import("@/components/300hr/YogaHighlights200"));
+const ApplicationForm200 = dynamic(() => import("@/components/300hr/ApplicationForm200"));
+const TeachersSection200 = dynamic(() => import("@/components/300hr/TeachersSection200"));
+const Schedule200 = dynamic(() => import("@/components/300hr/Schedule200"));
 const OurDinning7 = dynamic(() => import("@/components/R7days/OurDinning7"));
 const DinningSlides7 = dynamic(() => import("@/components/R7days/DinningSlides7"));
 const OurRooms7 = dynamic(() => import("@/components/R7days/OurRooms7"));
 const RoomSlides7 = dynamic(() => import("@/components/R7days/RoomSlides7"));
-const TestimonialCarousel = dynamic(() => import("@/components/testimonials-section"));
-const FAQSection = dynamic(() => import("@/components/FAQSection"));
 
-const ThreeHundredHourTTPage = () => {
-  return (
-    <div className="mt-24 max-w-6xl text-gray-800">
-      {/* Header Info */}
-      <div className="text-center mb-6">
+const TwoHundredHourTTPage = () => (
+  <div className="mt-24 max-w-6xl text-gray-800">
+    {/* Header */}
+
+    {/* Hero Image with Overlay Text */}
+    <div className="flex justify-center">
+      <div className="relative rounded-2xl overflow-hidden shadow-lg mb-16 w-full max-w-5xl">
+        <Image
+          src="/gallery/3.jpg"
+          alt="Yoga retreat"
+          width={1200}
+          height={900}
+          className="object-cover w-full h-auto max-h-[500px]"
+          priority
+        />
+        {/* Overlay with text */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-center justify-center">
+          <div className="text-center px-4">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+              200-Hrs Accredited Yoga Teacher Training
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-medium drop-shadow-md">
+              Join an exciting and life-changing 24-Days journey in Goa
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <AboutTraining200 />
+    <Schedule200 />
+
+    {/* Yoga Styles */}
+    {/* <section className="mt-20">
+      <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-4 text-[#150e70]">
+        Transformative Hatha, Vinyasa & Ashtanga Yoga for deep, immersive learning.
+      </h2>
+      <h3 className="text-sm md:text-base font-semibold text-center mb-8 text-[#150e70] max-w-3xl mx-auto">
+        Education experience covering all key aspects of the ancient practice and philosophy of yoga
+      </h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {[
+          { src: "/HVA/vinyasa yoga.jpg", alt: "Vinyasa Yoga" },
+          { src: "/HVA/ashtanga.jpg", alt: "Ashtanga Yoga" },
+          { src: "/HVA/hatha.png", alt: "Hatha Yoga" },
+        ].map(({ src, alt }, index) => (
+          <div key={index} className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
+            <Image src={src} alt={alt} fill className="object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </section> */}
+
+    {/* Core Sections */}
+    {/* <CurriculumSection200 /> */}
+     <div className="text-center mb-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
           300-Hrs Accredited Yoga Teacher Training
         </h2>
@@ -88,116 +141,78 @@ const ThreeHundredHourTTPage = () => {
           </button>
         </a>
       </div>
+    <BatchScheduleTable200 />
+    <OurRooms7 />
+    <RoomSlides7 />
+    <OurDinning7 />
+    <DinningSlides7 />
+    <ActivitiesSection200 />
+    <TeachersSection200 />
+    <TestimonialSection200 />
 
-      {/* Hero Image */}
-      <div className="flex justify-center items-center bg-transparent">
-        <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-full max-w-4xl">
-          <Image
-            src="/gallery/4.jpg"
-            alt="Yoga retreat in Goa"
-            width={1200}
-            height={900}
-            className="object-cover max-h-[500px] w-full"
-            priority
-          />
-        </div>
-      </div>
+    {/* Testimonials */}
+    {/* <TestimonialCarousel
+      testimonials={[
+        {
+          quote: "Absolutely loved my experience at this yoga training school...",
+          author: "Charmaine Wardenberg",
+        },
+        {
+          quote: "Rishikul Yogshala was absolutely amazing...",
+          author: "Dimple Malkan",
+        },
+        {
+          quote: "Very good school! They provided detailed training...",
+          author: "Varsha Ambardekar",
+        },
+      ]}
+    /> */}
 
-      <AboutTraining300 />
-      <Schedule300 />
+    <YogaHighlights200 />
 
-      <section className="mt-20 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[22px] font-bold text-center mb-4 text-[#150e70]">
-          Transformative Hatha, Vinyasa & Ashtanga Yoga for deep, immersive learning.
-        </h2>
+    {/* FAQs */}
+    {/* <FAQSection
+      title="Frequently Asked Questions"
+      faqs={[
+        {
+          question: "1. Who can join the 200-hour YTTC?",
+          answer: "The course is open to yoga practitioners of all levels.",
+        },
+        {
+          question: "2. Is the certification internationally recognized?",
+          answer: "Yes, this training is Yoga Alliance certified.",
+        },
+        {
+          question: "3. What are the benefits of completing the 200-hour YTTC?",
+          answer: "You'll deepen your practice and gain teaching credentials.",
+        },
+        {
+          question: "4. What styles are covered?",
+          answer: "The course includes Hatha, Ashtanga, Vinyasa, meditation, and more.",
+        },
+        {
+          question: "5. Can I take the course online?",
+          answer: "Yes, online formats are available.",
+        },
+        {
+          question: "6. How long does it take?",
+          answer: "Typically 4–8 weeks depending on the format.",
+        },
+        {
+          question: "7. Will I be able to teach after?",
+          answer: "Yes, you'll be certified to teach professionally.",
+        },
+        {
+          question: "8. What if I miss a class?",
+          answer: "Make-up classes or recordings are provided.",
+        },
+      ]}
+    />
 
-        <h3 className="text-xs sm:text-sm md:text-base font-semibold text-center mb-8 text-[#150e70] max-w-3xl mx-auto">
-          Education experience covering all key aspects of the ancient practice and philosophy of yoga
-        </h3>
+    <ApplicationForm200 /> */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-gray-700 max-w-6xl mx-auto">
-          {["/HVA/hatha.png", "/HVA/vinyasa yoga.jpg", "/HVA/ashtanga.jpg"].map((src, i) => (
-            <div key={i} className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden rounded-3xl shadow">
-              <Image src={src} alt={`Yoga Style ${i + 1}`} fill className="object-cover" loading="lazy" />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <CurriculumSection300 />
-      <TeachersSection300 />
-      <OurDinning7 />
-      <DinningSlides7 />
-      <OurRooms7 />
-      <RoomSlides7 />
-      <ActivitiesSection300 />
-      <BatchScheduleTable300 />
-      <TestimonialSection300 />
-
-      <TestimonialCarousel
-        testimonials={[
-          {
-            quote:
-              "Absolutely loved my experience at this yoga training school...",
-            author: "Charmaine Wardenberg",
-          },
-          {
-            quote:
-              "Rishikul Yogshala was absolutely amazing. I am very fortunate...",
-            author: "Dimple Malkan",
-          },
-          {
-            quote:
-              "Very good school! They have provided detailed training...",
-            author: "Varsha Ambardekar",
-          },
-        ]}
-      />
-
-      <YogaHighlights300 />
-
-      <FAQSection
-        title="Frequently Asked Questions"
-        faqs={[
-          {
-            question: "1. Where is your yoga teacher training course located?",
-            answer:
-              "Our course is located in Goa, offering a serene environment...",
-          },
-          {
-            question: "2. What style of yoga do you teach in the training course?",
-            answer: "We specialize in Hatha Vinyasa yoga...",
-          },
-          {
-            question: "3. What is the duration of the training program?",
-            answer: "The program typically spans 27 days...",
-          },
-          {
-            question: "4. What does a typical day look like during the training?",
-            answer:
-              "Each day includes yoga practice, meditation, theory, and self-study.",
-          },
-          {
-            question: "5. Is the program conducted in English?",
-            answer:
-              "Yes, the entire course is conducted in English...",
-          },
-          {
-            question: "6. Who are the instructors leading the training?",
-            answer:
-              "Our instructors are certified in Hatha Vinyasa yoga...",
-          },
-          {
-            question: "7. What certification will I receive upon completing the course?",
-            answer:
-              "You will receive a Yoga Alliance accredited certificate...",
-          },
-        ]}
-      />
-
-      <ApplicationForm300 />
-
-      <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
+    {/* Certificate Section */}
+      {/* <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
         <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
           After Completing the Course...
         </h3>
@@ -228,12 +243,11 @@ const ThreeHundredHourTTPage = () => {
           </div>
         </div>
         <p className="text-medium text-[#150e70] max-w-md mx-auto leading-relaxed">
-          You’ll receive a Yoga Alliance certificate —<br />
+          You'll receive a Yoga Alliance certificate —<br />
           internationally recognized and accepted.
         </p>
-      </section>
-    </div>
-  );
-};
+      </section>*/}
+  </div>
+); 
 
-export default ThreeHundredHourTTPage;
+export default TwoHundredHourTTPage;
