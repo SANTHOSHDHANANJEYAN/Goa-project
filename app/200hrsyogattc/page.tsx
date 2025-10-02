@@ -76,70 +76,72 @@ const TwoHundredHourTTPage = () => (
 
     {/* Core Sections */}
     {/* <CurriculumSection200 /> */}
-    <div className="text-center mb-6">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#150e70]">
-        300-Hrs Accredited Yoga Teacher Training
-      </h2>
-      <p className="text-[1.5rem] text-[#150e70] font-semibold">In Goa</p>
+<div className="text-center mb-6">
+  <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mb-4">
+    200-Hrs Accredited Yoga Teacher Training
+  </h2>
+  <p className="text-xl font-semibold text-[#150e70]">In Goa</p>
+</div>
+
+<h1 className="text-base md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
+  Become a Certified Yoga Teacher by Yoga Alliance
+</h1>
+
+<p className="text-lg text-center text-[#150e70] mb-6">
+  Join an exciting and life-changing 24-Days journey in Goa
+</p>
+
+{/* Price Info */}
+<div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-4 text-center">
+  {[
+    { price: "USD 1600", label: "Private Room" },
+    { price: "USD 1300", label: "Shared Room" },
+  ].map(({ price, label }) => (
+    <div key={label}>
+      <span className="text-3xl md:text-4xl font-bold text-green-600 block">{price}</span>
+      <span className="text-sm text-[#150e70]">{label}</span>
     </div>
+  ))}
+</div>
 
-    <h1 className="text-lg md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
-      Become a Certified Yoga Teacher by Yoga Alliance
-    </h1>
+<div className="max-w-3xl mx-auto p-6">
+  <h2 className="text-center text-2xl sm:text-3xl font-bold text-[#150e70] mb-6">
+    Course Highlights
+  </h2>
 
-    <p className="text-lg text-center text-[#150e70] mb-6">
-      Join an exciting and life-changing 27-Days journey in Goa
-    </p>
+  <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden text-sm sm:text-base">
+    <tbody>
+      <tr className="border-b border-gray-200">
+        <td className="px-5 py-3 font-medium text-[#150e70]">Duration</td>
+        <td className="px-5 py-3 text-gray-700">200 Hrs / 24 Days</td>
+      </tr>
+      <tr className="border-b border-gray-200">
+        <td className="px-5 py-3 font-medium text-[#150e70]">Language</td>
+        <td className="px-5 py-3 text-gray-700">English</td>
+      </tr>
+      <tr className="border-b border-gray-200">
+        <td className="px-5 py-3 font-medium text-[#150e70]">Module</td>
+        <td className="px-5 py-3 text-gray-700">Residential with Meals</td>
+      </tr>
+      <tr className="border-b border-gray-200">
+        <td className="px-5 py-3 font-medium text-[#150e70]">Level</td>
+        <td className="px-5 py-3 text-gray-700">Intermediate</td>
+      </tr>
+      <tr>
+        <td className="px-5 py-3 font-medium text-[#150e70]">Certification</td>
+        <td className="px-5 py-3 text-gray-700">RYS 200</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    <div className="flex justify-center items-end text-center gap-8 mb-4">
-      <div>
-        <span className="text-4xl font-bold text-green-600 block">USD 1700</span>
-        <span className="text-sm text-[#150e70]">Private Room</span>
-      </div>
-      <div>
-        <span className="text-4xl font-bold text-green-600 block">USD 1400</span>
-        <span className="text-sm text-[#150e70]">Shared Room</span>
-      </div>
-    </div>
-
-    <div className="max-w-3xl mx-auto p-6">
-      <h2 className="text-center text-2xl sm:text-3xl font-bold text-[#150e70] mb-6">
-        Course Highlights
-      </h2>
-
-      <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden text-sm sm:text-base">
-        <tbody>
-          <tr className="border-b border-gray-200">
-            <td className="px-5 py-3 font-medium text-[#150e70]">Duration</td>
-            <td className="px-5 py-3 text-gray-700">300 Hrs - 27 Days</td>
-          </tr>
-          <tr className="border-b border-gray-200">
-            <td className="px-5 py-3 font-medium text-[#150e70]">Language</td>
-            <td className="px-5 py-3 text-gray-700">English</td>
-          </tr>
-          <tr className="border-b border-gray-200">
-            <td className="px-5 py-3 font-medium text-[#150e70]">Module</td>
-            <td className="px-5 py-3 text-gray-700">Residential with Meals</td>
-          </tr>
-          <tr className="border-b border-gray-200">
-            <td className="px-5 py-3 font-medium text-[#150e70]">Level</td>
-            <td className="px-5 py-3 text-gray-700">Advance</td>
-          </tr>
-          <tr>
-            <td className="px-5 py-3 font-medium text-[#150e70]">Certification</td>
-            <td className="px-5 py-3 text-gray-700">RYS 300</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div className="text-center mb-6">
-      <a href="/contact#InGoa">
-        <button className="bg-[#150e70] hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
-          Book Your Spot
-        </button>
-      </a>
-    </div>
+<div className="text-center mb-6">
+  <a href="/contact#InGoa">
+    <button className="bg-[#150e70] hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+      Book Your Spot
+    </button>
+  </a>
+</div>
 
     <BatchScheduleTable200 />
     <OurRooms7 />
