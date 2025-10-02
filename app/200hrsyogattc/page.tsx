@@ -24,71 +24,6 @@ const RoomSlides7 = dynamic(() => import("@/components/R7days/RoomSlides7"));
 const TwoHundredHourTTPage = () => (
   <div className="mt-24 max-w-6xl text-gray-800">
     {/* Header */}
-    <div className="text-center mb-6">
-      <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mb-4">
-        200-Hrs Accredited Yoga Teacher Training
-      </h2>
-      <p className="text-xl font-semibold text-[#150e70]">In Goa</p>
-    </div>
-    <h1 className="text-base md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
-      Become a Certified Yoga Teacher by Yoga Alliance
-    </h1>
-    <p className="text-lg text-center text-[#150e70] mb-6">
-      Join an exciting and life-changing 24-Days journey in Goa
-    </p>
-
-    {/* Price Info */}
-    <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-4 text-center">
-      {[
-        { price: "USD 1600", label: "Private Room" },
-        { price: "USD 1300", label: "Shared Room" },
-      ].map(({ price, label }) => (
-        <div key={label}>
-          <span className="text-3xl md:text-4xl font-bold text-green-600 block">{price}</span>
-          <span className="text-sm text-[#150e70]">{label}</span>
-        </div>
-      ))}
-    </div>
-
-<div className="max-w-3xl mx-auto p-6">
-  <h2 className="text-center text-2xl sm:text-3xl font-bold text-[#150e70] mb-6">
-    Course Highlights
-  </h2>
-
-  <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden text-sm sm:text-base">
-    <tbody>
-      <tr className="border-b border-gray-200">
-        <td className="px-5 py-3 font-medium text-[#150e70]">Duration</td>
-        <td className="px-5 py-3 text-gray-700">200 Hrs / 24 Days</td>
-      </tr>
-      <tr className="border-b border-gray-200">
-        <td className="px-5 py-3 font-medium text-[#150e70]">Language</td>
-        <td className="px-5 py-3 text-gray-700">English</td>
-      </tr>
-      <tr className="border-b border-gray-200">
-        <td className="px-5 py-3 font-medium text-[#150e70]">Module</td>
-        <td className="px-5 py-3 text-gray-700">Residential with Meals</td>
-      </tr>
-      <tr className="border-b border-gray-200">
-        <td className="px-5 py-3 font-medium text-[#150e70]">Level</td>
-        <td className="px-5 py-3 text-gray-700">Intermediate</td>
-      </tr>
-      <tr>
-        <td className="px-5 py-3 font-medium text-[#150e70]">Certification</td>
-        <td className="px-5 py-3 text-gray-700">RYS 200</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-
-    <div className="text-center mb-6">
-      <a href="/contact#InGoa">
-        <button className="bg-[#150e70] hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
-          Book Your Spot
-        </button>
-      </a>
-    </div>
 
     {/* Hero Image with Overlay Text */}
     <div className="flex justify-center">
@@ -105,10 +40,10 @@ const TwoHundredHourTTPage = () => (
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-center justify-center">
           <div className="text-center px-4">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-              200-HRS YOGA TEACHER TRAINING
+              200-Hrs Accredited Yoga Teacher Training
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-medium drop-shadow-md">
-              Join an exciting and life-changing journey
+              Join an exciting and life-changing 24-Days journey in Goa
             </p>
           </div>
         </div>
