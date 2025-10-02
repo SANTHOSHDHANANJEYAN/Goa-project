@@ -141,6 +141,7 @@ const TwoHundredHourTTPage = () => (
         </button>
       </a>
     </div>
+</div>
     <BatchScheduleTable200 />
     <OurRooms7 />
     <RoomSlides7 />
