@@ -76,7 +76,7 @@ const TwoHundredHourTTPage = () => (
 
     {/* Core Sections */}
     {/* <CurriculumSection200 /> */}
-<div className="text-center mb-6">
+    <div className="text-center mb-6">
       <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mb-4">
         200-Hrs Accredited Yoga Teacher Training
       </h2>
@@ -102,37 +102,36 @@ const TwoHundredHourTTPage = () => (
       ))}
     </div>
 
-<div className="max-w-3xl mx-auto p-6">
-  <h2 className="text-center text-2xl sm:text-3xl font-bold text-[#150e70] mb-6">
-    Course Highlights
-  </h2>
+    <div className="max-w-3xl mx-auto p-6">
+      <h2 className="text-center text-2xl sm:text-3xl font-bold text-[#150e70] mb-6">
+        Course Highlights
+      </h2>
 
-  <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden text-sm sm:text-base">
-    <tbody>
-      <tr className="border-b border-gray-200">
-        <td className="px-5 py-3 font-medium text-[#150e70]">Duration</td>
-        <td className="px-5 py-3 text-gray-700">200 Hrs / 24 Days</td>
-      </tr>
-      <tr className="border-b border-gray-200">
-        <td className="px-5 py-3 font-medium text-[#150e70]">Language</td>
-        <td className="px-5 py-3 text-gray-700">English</td>
-      </tr>
-      <tr className="border-b border-gray-200">
-        <td className="px-5 py-3 font-medium text-[#150e70]">Module</td>
-        <td className="px-5 py-3 text-gray-700">Residential with Meals</td>
-      </tr>
-      <tr className="border-b border-gray-200">
-        <td className="px-5 py-3 font-medium text-[#150e70]">Level</td>
-        <td className="px-5 py-3 text-gray-700">Intermediate</td>
-      </tr>
-      <tr>
-        <td className="px-5 py-3 font-medium text-[#150e70]">Certification</td>
-        <td className="px-5 py-3 text-gray-700">RYS 200</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+      <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden text-sm sm:text-base">
+        <tbody>
+          <tr className="border-b border-gray-200">
+            <td className="px-5 py-3 font-medium text-[#150e70]">Duration</td>
+            <td className="px-5 py-3 text-gray-700">200 Hrs / 24 Days</td>
+          </tr>
+          <tr className="border-b border-gray-200">
+            <td className="px-5 py-3 font-medium text-[#150e70]">Language</td>
+            <td className="px-5 py-3 text-gray-700">English</td>
+          </tr>
+          <tr className="border-b border-gray-200">
+            <td className="px-5 py-3 font-medium text-[#150e70]">Module</td>
+            <td className="px-5 py-3 text-gray-700">Residential with Meals</td>
+          </tr>
+          <tr className="border-b border-gray-200">
+            <td className="px-5 py-3 font-medium text-[#150e70]">Level</td>
+            <td className="px-5 py-3 text-gray-700">Intermediate</td>
+          </tr>
+          <tr>
+            <td className="px-5 py-3 font-medium text-[#150e70]">Certification</td>
+            <td className="px-5 py-3 text-gray-700">RYS 200</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div className="text-center mb-6">
       <a href="/contact#InGoa">
@@ -141,7 +140,6 @@ const TwoHundredHourTTPage = () => (
         </button>
       </a>
     </div>
-</div>
     <BatchScheduleTable200 />
     <OurRooms7 />
     <RoomSlides7 />
@@ -213,39 +211,45 @@ const TwoHundredHourTTPage = () => (
     <ApplicationForm200 /> */}
 
     {/* Certificate Section */}
-      {/* <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
-        <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
-          After Completing the Course...
-        </h3>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 pb-4">
-          <div className="relative w-[4rem] h-[6rem] sm:w-[5rem] sm:h-[8rem] mx-auto sm:mx-0">
-            <Image
-              src="/YAlogo-removebg-preview.png"
-              alt="Yoga Visual Icon"
-              width={80}
-              height={120}
-              className="object-contain w-full h-full"
-            />
-          </div>
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 max-w-lg mx-auto sm:mx-0">
-            {["200", "300", "RPYS", "YACEP"].map((level, i) => (
-              <div key={i} className="flex flex-col items-center w-[4rem] h-[6rem] sm:w-[5rem] sm:h-[8rem]">
-                <div className="relative w-full h-full mb-2">
-                  <Image
-                    src={`/nw${level.toLowerCase()}.png`}
-                    alt={`RYS ${level} Badge`}
-                    width={80}
-                    height={120}
-                    className="object-contain w-full h-full"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+    {/* <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
+      <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
+        After Completing the Course...
+      </h3>
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 pb-4">
+        <div className="relative w-[4rem] h-[6rem] sm:w-[5rem] sm:h-[8rem] mx-auto sm:mx-0">
+          <Image
+            src="/YAlogo-removebg-preview.png"
+            alt="Yoga Visual Icon"
+            width={80}
+            height={120}
+            className="object-contain w-full h-full"
+          />
         </div>
-        <p className="text-medium text-[#150e70] max-w-md mx-auto leading-relaxed">
-          You'll receive a Yoga Alliance certificate —<br />
-          internationally recognized and accepted.
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-10 max-w-lg mx-auto sm:mx-0">
+          {["200", "300", "RPYS", "YACEP"].map((level, i) => (
+            <div key={i} className="flex flex-col items-center w-[4rem] h-[6rem] sm:w-[5rem] sm:h-[8rem]">
+              <div className="relative w-full h-full mb-2">
+                <Image
+                  src={`/nw${level.toLowerCase()}.png`}
+                  alt={`RYS ${level} Badge`}
+                  width={80}
+                  height={120}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <p className="text-medium text-[#150e70] max-w-md mx-auto leading-relaxed">
+        You'll receive a Yoga Alliance certificate —<br />
+        internationally recognized and accepted.
+      </p>
+    </section> */}
+  </div>
+);
+
+export default TwoHundredHourTTPage; and accepted.
         </p>
       </section>*/}
   </div>
