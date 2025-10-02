@@ -90,9 +90,9 @@ const TwoHundredHourTTPage = () => (
       </a>
     </div>
 
-    {/* Hero Image */}
+    {/* Hero Image with Overlay Text */}
     <div className="flex justify-center">
-      <div className="rounded-2xl overflow-hidden shadow-lg mb-16 w-full max-w-5xl">
+      <div className="relative rounded-2xl overflow-hidden shadow-lg mb-16 w-full max-w-5xl">
         <Image
           src="/gallery/3.jpg"
           alt="Yoga retreat"
@@ -101,6 +101,17 @@ const TwoHundredHourTTPage = () => (
           className="object-cover w-full h-auto max-h-[500px]"
           priority
         />
+        {/* Overlay with text */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-center justify-center">
+          <div className="text-center px-4">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+              200-HRS YOGA TEACHER TRAINING
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-medium drop-shadow-md">
+              Join an exciting and life-changing journey
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -190,7 +201,7 @@ const TwoHundredHourTTPage = () => (
         },
         {
           question: "7. Will I be able to teach after?",
-          answer: "Yes, you’ll be certified to teach professionally.",
+          answer: "Yes, you'll be certified to teach professionally.",
         },
         {
           question: "8. What if I miss a class?",
@@ -233,7 +244,7 @@ const TwoHundredHourTTPage = () => (
           </div>
         </div>
         <p className="text-medium text-[#150e70] max-w-md mx-auto leading-relaxed">
-          You’ll receive a Yoga Alliance certificate —<br />
+          You'll receive a Yoga Alliance certificate —<br />
           internationally recognized and accepted.
         </p>
       </section>*/}
