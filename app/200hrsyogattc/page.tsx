@@ -142,7 +142,7 @@ const TwoHundredHourTTPage = () => (
 </section>
 
 
-    <CurriculumSection200 />
+    
     <BatchScheduleTable200 />
     <OurRooms7 />
     <RoomSlides7 />

@@ -346,52 +346,80 @@ export default function AboutTraining() {
 
 
 
-      {/* Section 2 - Curriculum */}
-      <section className="py-16 px-6 md:px-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-8 text-center">
-            200 Hour Yoga Teacher Training Curriculum
-          </h2>
-          
-          <div className="space-y-4">
-            {curriculumData.map((item, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
-                <button
-                  onClick={() => toggleDropdown(index)}
-                  className="w-full px-6 py-4 bg-white hover:bg-gray-50 transition-colors duration-200 
-                           flex justify-between items-center text-left"
-                >
-                  <span className="text-lg font-medium text-[#150e70]">{item.title}</span>
-                  {openDropdowns[index] ? (
-                    <FaChevronUp className="text-[#150e70] flex-shrink-0" />
-                  ) : (
-                    <FaChevronDown className="text-[#150e70] flex-shrink-0" />
-                  )}
-                </button>
-                
-                {openDropdowns[index] && item.content.length > 0 && (
-                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <ul className="space-y-2">
-                      {item.content.map((contentItem, contentIndex) => (
-                        <li key={contentIndex} className="text-gray-700 flex items-start">
-                          <span className="text-indigo-500 mr-2 mt-1">•</span>
-                          <span>{contentItem}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                
-                {openDropdowns[index] && item.content.length === 0 && (
-                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-500 italic">Content coming soon...</p>
-                  </div>
-                )}
+{/* Section 2 - Curriculum */}
+<section
+  className="relative bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: "url('/aboutpics/333.jpg')", // Replace with your actual image path
+  }}
+>
+  
+
+  <div className="relative max-w-5xl mx-auto py-24 px-6 md:px-16 text-center">
+    <div className="bg-white/80 rounded-xl shadow-lg p-10 md:p-16 backdrop-blur-md">
+      <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6 tracking-wide uppercase">
+        200 Hour Yoga Teacher Training Curriculum
+      </h2>
+
+      <p className="text-gray-700 leading-relaxed mb-10">
+        Explore our in-depth yoga curriculum designed to enhance your practice,
+        teaching methodology, and spiritual journey.
+      </p>
+
+      <div className="space-y-4 text-left">
+        {curriculumData.map((item, index) => (
+          <div
+            key={index}
+            className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
+          >
+            <button
+              onClick={() => toggleDropdown(index)}
+              className="w-full px-6 py-4 bg-white hover:bg-gray-50 transition-colors duration-200 
+                         flex justify-between items-center text-left"
+            >
+              <span className="text-lg font-medium text-gray-800">
+                {item.title}
+              </span>
+              {openDropdowns[index] ? (
+                <FaChevronUp className="text-gray-600 flex-shrink-0" />
+              ) : (
+                <FaChevronDown className="text-gray-600 flex-shrink-0" />
+              )}
+            </button>
+
+            {openDropdowns[index] && item.content.length > 0 && (
+              <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                <ul className="space-y-2">
+                  {item.content.map((contentItem, contentIndex) => (
+                    <li
+                      key={contentIndex}
+                      className="text-gray-700 flex items-start"
+                    >
+                      <span className="text-indigo-500 mr-2 mt-1">•</span>
+                      <span>{contentItem}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
+            )}
+
+            {openDropdowns[index] && item.content.length === 0 && (
+              <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                <p className="text-gray-500 italic">Content coming soon...</p>
+              </div>
+            )}
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+
+      <div className="mt-12">
+        <button className="px-8 py-3 bg-[#150e70] text-white font-medium rounded-md shadow-md hover:bg-[#0f0a55] transition-all duration-300">
+          Start Your Journey
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
     </>
   );
 }

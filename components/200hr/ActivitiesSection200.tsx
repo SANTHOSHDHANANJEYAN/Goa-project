@@ -55,7 +55,7 @@ const EligibilitySection: React.FC = () => {
             className="flex-shrink-0 w-full md:w-1/3 h-64 md:h-80"
           >
             <img
-              src="/aboutpics/333.jpg" // Replace with your actual image path
+              src="/aboutpics/333.jpg " // Replace with your actual image path
               alt="Yoga practice"
               className="rounded-lg object-cover w-full h-full"
             />
