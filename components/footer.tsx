@@ -5,9 +5,24 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative text-[#15005c] px-4 py-8 text-sm bg-white">
+    <footer className="relative text-[#15005c] px-4 py-8 text-sm overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/ftvbg2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white bg-opacity-70" />
+
       {/* Content */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
         {/* Left Column */}
         <div className="space-y-6">
           <div>
@@ -86,7 +101,7 @@ export default function Footer() {
       </div>
 
       {/* Social Icons */}
-      <div className="mt-6 flex justify-center space-x-5">
+      <div className="relative z-10 mt-6 flex justify-center space-x-5">
         <Link href="#" className="text-[#15005c] hover:text-purple-700">
           <Youtube className="w-6 h-6" />
         </Link>
@@ -99,7 +114,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="mt-4 text-center text-xs text-[#15005c]">
+      <div className="relative z-10 mt-4 text-center text-xs text-[#15005c]">
         &copy; {new Date().getFullYear()} Rishikul Yogshala Goa. All rights reserved.
       </div>
     </footer>
