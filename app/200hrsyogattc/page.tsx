@@ -26,29 +26,37 @@ const TwoHundredHourTTPage = () => (
     {/* Header */}
 
     {/* Hero Image with Overlay Text */}
-    <div className="flex justify-center">
-      <div className="relative rounded-2xl overflow-hidden shadow-lg mb-16 w-full max-w-5xl">
-        <Image
-          src="/gallery/3.jpg"
-          alt="Yoga retreat"
-          width={1200}
-          height={900}
-          className="object-cover w-full h-auto max-h-[500px]"
-          priority
-        />
-        {/* Overlay with text */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-center justify-center">
-          <div className="text-center px-4">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-              200-Hrs Accredited Yoga Teacher Training
-            </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-medium drop-shadow-md">
-              Join an exciting and life-changing 24-Days journey in Goa
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+<div className="relative w-full h-[90vh] flex items-center justify-center">
+  {/* Background Image */}
+  <Image
+    src="/gallery/3.jpg"
+    alt="Yoga Teacher Training"
+    fill
+    className="object-cover brightness-95"
+    priority
+  />
+
+  {/* Overlay for better text readability */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/20 to-transparent"></div>
+
+  {/* Centered Text Content */}
+  <div className="absolute top-[25%] w-full text-center px-4">
+    <h1 className="text-white text-3xl md:text-5xl font-semibold leading-snug drop-shadow-lg uppercase">
+      200-Hrs Accredited Yoga Teacher Training
+    </h1>
+    <p className="text-white text-lg md:text-2xl font-medium mt-4 drop-shadow-md">
+      Join an exciting and life-changing 24-Days journey in Goa
+    </p>
+  </div>
+
+  {/* Enquire Now Tab */}
+  <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
+    <button className="bg-[#7b2629] text-white text-sm font-semibold py-3 px-4 rounded-l-md rotate-90 origin-bottom-right tracking-widest uppercase shadow-lg hover:bg-[#5e1d1f] transition-all">
+      Enquire Now
+    </button>
+  </div>
+</div>
+
 
     <AboutTraining200 />
     <Schedule200 />
