@@ -46,6 +46,7 @@ export default function TeachersSection() {
   useEffect(() => {
     startAutoSlide();
     return () => stopAutoSlide();
+    // eslint-disable-next-line
   }, []);
 
   const getVisibleTeachers = () => {
@@ -62,24 +63,25 @@ export default function TeachersSection() {
   return (
     <section className="relative overflow-hidden py-20 bg-gradient-to-b from-white to-indigo-50">
       {/* Section 2 Header */}
-      <div className="text-center mb-12 px-4">
+      <div className="text-center mb-12 px-4 pl-12">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4"
         >
-           Learn from Experienced Yoga Teachers from India
+          Learn from Experienced Yoga Teachers from India
         </motion.h2>
         <div className="w-24 h-1 bg-indigo-500 mx-auto mb-8"></div>
-        
-        {/* Section Content */}
-        <div className="max-w-5xl mx-auto mb-16">
+
+        {/* Flex container for text and image */}
+        <div className="max-w-6xl mx-auto mb-16 flex flex-col md:flex-row md:items-center gap-10">
+          {/* Text Content */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6 text-left"
+            className="space-y-6 text-left md:w-1/2"
           >
             <p className="text-gray-700 text-lg leading-relaxed">
               Rishikul Yogshala Goa has have the best in-house best yoga teachers. This ensures 
@@ -87,7 +89,6 @@ export default function TeachersSection() {
               students can benefit and absorb the yogic techniques from these experienced teachers 
               in the most simple and effective way as possible.
             </p>
-            
             <p className="text-gray-700 text-lg leading-relaxed">
               Empowering aspiring students to explore their latent potential be it in theory or 
               practice is the purpose of our very core mission. This also underlines why we offer 
@@ -95,29 +96,45 @@ export default function TeachersSection() {
               (YTTC). This group offers an all-inclusive and integrated yogic foundation to students, 
               through which the students adapt, learn and soak in the yogic experience.
             </p>
-            
             <p className="text-gray-700 text-lg leading-relaxed">
               In addition to this, there also exists In-house Lead Trainer who is an E-RYT and 
               possesses about a few thousand hours of on-ground experience themselves. Their 
               presence also lends to an overall memorable yogic experience to the students.
             </p>
           </motion.div>
-
-          {/* Highlights Grid */}
-          <motion.div 
+          {/* Image on Right */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10"
+            className="md:w-1/2 flex justify-center items-center"
           >
-            {teacherHighlights.map((highlight, index) => (
-              <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <div className="text-indigo-600">{highlight.icon}</div>
-                <span className="text-gray-700">{highlight.text}</span>
-              </div>
-            ))}
+            <div className="rounded-lg overflow-hidden shadow-lgmax-w-sm mx-auto md:mx-0">
+              <Image
+                src="/aboutpics/242.jpg"
+                alt="Yoga Teachers"
+                width={600}
+                height={400}
+                className="object-cover "
+              />
+            </div>
           </motion.div>
         </div>
+
+        {/* Highlights Grid */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 max-w-6xl mx-auto"
+        >
+          {teacherHighlights.map((highlight, index) => (
+            <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
+              <div className="text-indigo-600">{highlight.icon}</div>
+              <span className="text-gray-700">{highlight.text}</span>
+            </div>
+          ))}
+        </motion.div>
       </div>
 
       {/* Teachers Slider Section */}

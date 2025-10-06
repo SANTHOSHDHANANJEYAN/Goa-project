@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from "framer-motion";
-import { Users, Heart, Globe, Book } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -13,93 +13,82 @@ const fadeInUp = {
   }
 };
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
 const EligibilitySection: React.FC = () => {
   const eligibilityCriteria = [
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Age",
-      description: "Participants between the age group of 18 years to 65 years"
-    },
-    {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Health and Fitness",
-      description: "It is necessary to have a reasonable level of physical fitness and good health to participate at Rishikul Yogshala. Individuals suffering from health problems such as mild asthma, controlled hypertension, and minor musculoskeletal problems can apply."
-    },
-    {
-      icon: <Book className="w-6 h-6" />,
-      title: "Yoga Experience",
-      description: "While it is not necessary to have prior yoga experience, it helps to have some experience of yoga practice and fundamental postures knowledge"
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Language Proficiency",
-      description: "Simple Spoken English would be the means of communication."
-    }
+    { title: "Age", description: "Aspirants should be at least 18 years old and up to 70 years old." },
+    { title: "Language", description: "Most sessions are in English; basic understanding is recommended." },
+    { title: "Skill Level", description: "No prior experience needed, but familiarity with yoga is helpful." },
+    { title: "Commitment", description: "A genuine intention to learn and grow is required, not just earning a certificate." }
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-white to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-[#fffaf5]">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center mb-12"
+          className="mb-10 text-center md:text-left"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-           200 Hour Yoga Teacher Training Course
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Eligibility Criteria For Joining The 200 Hour Yoga Teacher Training Course
           </h2>
-          <h3 className="text-2xl md:text-3xl font-semibold text-blue-600 mb-4">
-            Enrolment Eligibility Criteria
-          </h3>
-          <div className="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
-          <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-            The 200 Hour Yoga Teacher Training Goa typically has the following eligibility requirements:
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Aspirants who are ready to deepen their yoga practice are always welcome in the{" "}
+            <span className="text-orange-600 font-semibold">
+              200 Hour Yoga Teacher Training in India
+            </span>
+            . Some eligibility criteria include:
           </p>
         </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
-        >
-          {eligibilityCriteria.map((criteria, index) => (
-            <motion.div
-              key={index}
-              variants={fadeInUp}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                    {criteria.icon}
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                    {criteria.title}
-                  </h4>
-                  <p className="text-gray-600 leading-relaxed">
+        {/* Flex container for image and eligibility list */}
+        <div className="bg-white rounded-xl shadow-sm border border-orange-100 p-8 md:p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
+          
+          {/* Left image section */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex-shrink-0 w-full md:w-1/3 h-64 md:h-80"
+          >
+            <img
+              src="/aboutpics/333.jpg" // Replace with your actual image path
+              alt="Yoga practice"
+              className="rounded-lg object-cover w-full h-full"
+            />
+          </motion.div>
+
+          {/* Right eligibility list */}
+          <motion.ul
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+            className="space-y-6 w-full md:w-2/3"
+          >
+            {eligibilityCriteria.map((criteria, index) => (
+              <motion.li
+                key={index}
+                variants={fadeInUp}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle2 className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-800 text-lg font-semibold mb-1">
+                    {criteria.title}:
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
                     {criteria.description}
                   </p>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+              </motion.li>
+            ))}
+          </motion.ul>
+
+        </div>
       </div>
     </section>
   );

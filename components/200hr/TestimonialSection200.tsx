@@ -71,7 +71,7 @@ const InclusionsExclusionsSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white border border-gray-300 rounded-3xl shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -94,12 +94,12 @@ const InclusionsExclusionsSection: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className="bg-white rounded-2xl shadow-xl overflow-hidden"
+            className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-green-400"
           >
-            <div className="bg-gradient-to-r from-green-500 to-green-600 p-6">
+            <div className="bg-white p-6">
               <div className="flex items-center justify-center">
-                <CheckCircle className="w-8 h-8 text-white mr-3" />
-                <h3 className="text-2xl md:text-3xl font-bold text-white">Inclusions</h3>
+                <CheckCircle className="w-8 h-8 text-green-500 mr-3" />
+                <h3 className="text-2xl md:text-3xl font-bold text-black">Inclusions</h3>
               </div>
             </div>
             
@@ -114,7 +114,7 @@ const InclusionsExclusionsSection: React.FC = () => {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-green-50 transition-colors duration-200"
+                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-green-50 transition-colors duration-200 border border-green-200"
                 >
                   <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 mt-0.5">
                     {item.icon}
@@ -133,12 +133,12 @@ const InclusionsExclusionsSection: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className="bg-white rounded-2xl shadow-xl overflow-hidden"
+            className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-red-400"
           >
-            <div className="bg-gradient-to-r from-red-500 to-red-600 p-6">
+            <div className="bg-white p-6">
               <div className="flex items-center justify-center">
-                <XCircle className="w-8 h-8 text-white mr-3" />
-                <h3 className="text-2xl md:text-3xl font-bold text-white">Exclusions</h3>
+                <XCircle className="w-8 h-8 text-red-600 mr-3" />
+                <h3 className="text-2xl md:text-3xl font-bold text-black">Exclusions</h3>
               </div>
             </div>
             
@@ -153,7 +153,7 @@ const InclusionsExclusionsSection: React.FC = () => {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-red-50 transition-colors duration-200"
+                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-red-50 transition-colors duration-200 border border-red-200"
                 >
                   <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mt-0.5">
                     {item.icon}
