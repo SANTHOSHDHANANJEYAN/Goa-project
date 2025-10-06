@@ -134,7 +134,7 @@ const CourseSchedule = () => {
             {/* Group Photo */}
             <div className="flex justify-center md:justify-end">
               <Image
-                src="/images/group-goa.jpg" // replace with your group photo
+                src="/gallery/3.jpg" // replace with your group photo
                 alt="Yoga TTC Graduates"
                 width={700}
                 height={400}
