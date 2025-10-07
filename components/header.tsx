@@ -175,7 +175,7 @@ export default function Header() {
                 aria-label="Call us"
               >
                 <Phone size={16} />
-                <span className="hidden sm:inline">+91-8433225327</span>
+                <span className="hidden sm:inline">+91-9520024333‬</span>
               </a>
 
               <div className="hidden sm:block h-4 w-px bg-black/30" />
@@ -186,7 +186,7 @@ export default function Header() {
                 aria-label="Email us"
               >
                 <Mail size={16} />
-                <span className="hidden sm:inline">contact@rishikulyogshalarishikesh.com</span>
+                <span className="hidden sm:inline">rishikulyogshalagoa@gmail.com</span>
               </a>
             </div>
 
