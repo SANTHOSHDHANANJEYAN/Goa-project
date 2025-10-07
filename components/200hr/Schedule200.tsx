@@ -18,43 +18,48 @@ export default function Schedule100() {
     ['01:15 PM – 02:15 PM', 'Lunch'],
     ['04:00 PM – 04:15 PM', 'Drink Break'],
     ['04:15 PM – 05:45 PM', 'Hatha Yoga'],
-    ['06:00 PM – 07:00 PM', 'Meditation/Yoga Nidra'],
+    ['06:00 PM – 07:00 PM', 'Meditation / Yoga Nidra'],
     ['07:00 PM – 08:00 PM', 'Dinner'],
     ['08:00 PM – 09:00 PM', 'Self Study'],
     ['10:00 PM', 'Lights Off'],
   ];
 
   return (
-    <section className="w-full bg-white py-16 px-4 sm:px-6 lg:px-12">
+    <section className="w-full bg-gradient-to-b from-[#fffdfa] to-[#f9f6ff] py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-10">
 
         {/* LEFT: Daily Schedule */}
-        <div className="md:w-1/2 p-8 flex flex-col justify-center">
+        <div className="md:w-1/2 p-8 bg-white rounded-2xl shadow-lg border border-gray-200">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] mb-8 text-center md:text-left">
             Daily Schedule
           </h2>
 
-          <ul className="space-y-4 text-base sm:text-lg">
+          <ul className="divide-y divide-gray-200">
             {schedule.map(([time, activity], idx) => (
-              <li key={idx} className="flex items-start sm:items-center">
-                <span className="font-semibold text-[#150e70] w-40 flex-shrink-0 text-sm sm:text-base">
+              <li
+                key={idx}
+                className="flex justify-between items-center py-3 px-2 hover:bg-[#f5f3ff] transition-colors rounded-lg"
+              >
+                <span className="font-semibold text-[#150e70] text-sm sm:text-base w-40 flex-shrink-0 text-right pr-3">
                   {time}
                 </span>
-                <span className="text-gray-700">{activity}</span>
+                <span className="text-gray-700 text-base sm:text-lg font-medium flex-1 pl-3 border-l border-gray-300">
+                  {activity}
+                </span>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* RIGHT: Video */}
+        {/* RIGHT: Video Section */}
         <div className="md:w-1/2 flex items-center justify-center">
-          <div className="relative w-full max-w-xl aspect-video overflow-hidden">
+          <div className="relative w-full max-w-xl aspect-video overflow-hidden rounded-2xl shadow-lg">
             {isPlaying ? (
               <video
                 src={videoUrl}
                 controls
                 autoPlay
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-2xl"
               />
             ) : (
               <>
@@ -63,7 +68,7 @@ export default function Schedule100() {
                   alt="Video Thumbnail"
                   width={640}
                   height={360}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full rounded-2xl"
                   loading="lazy"
                 />
                 <button
@@ -72,7 +77,7 @@ export default function Schedule100() {
                   onClick={() => setIsPlaying(true)}
                 >
                   <svg
-                    className="h-16 w-16 sm:h-20 sm:w-20 text-white opacity-90 hover:scale-105 transition-transform"
+                    className="h-16 w-16 sm:h-20 sm:w-20 text-white opacity-90 hover:scale-110 transition-transform"
                     fill="currentColor"
                     viewBox="0 0 84 84"
                   >
