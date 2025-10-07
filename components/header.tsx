@@ -16,7 +16,6 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-
 // Brand colors
 const BRAND_GOLD = "#E0B973";
 const BRAND_GREEN = "#16A34A";
