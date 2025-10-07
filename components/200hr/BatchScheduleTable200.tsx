@@ -5,6 +5,9 @@ import { motion } from 'framer-motion';
 import { FaCalendarAlt } from 'react-icons/fa';
 import Link from 'next/link';
 
+export default function CourseSchedule() {
+  return (
+    <>
       {/* NEW SECTION — YTTC Certification (Goa) */}
       <section className="bg-gradient-to-b from-[#fff8e1] to-[#fffef8] py-16 px-6 md:px-20">
         <div className="max-w-7xl mx-auto">
@@ -13,7 +16,7 @@ import Link from 'next/link';
             <h2 className="text-4xl font-extrabold text-gray-900">
               YTTC Certification
             </h2>
-            <p className="text-green-700 italic font-semibold mt-2 text-lg">
+            <p className="text-[#2317bc] italic font-semibold mt-2 text-lg">
               200 hour Yoga TTC certification in Goa
             </p>
             <p className="text-gray-700 mt-4 max-w-3xl">
@@ -50,6 +53,4 @@ import Link from 'next/link';
       </section>
     </>
   );
-};
-
-export default CourseSchedule;
+}
