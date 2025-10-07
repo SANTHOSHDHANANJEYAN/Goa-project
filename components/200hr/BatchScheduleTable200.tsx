@@ -123,7 +123,7 @@ const CourseSchedule = () => {
             {/* Certificate Image */}
             <div className="flex justify-center md:justify-start">
               <Image
-                src="/certificate.jpg" // replace with your certificate image
+                src="/certificates.jpg" // replace with your certificate image
                 alt="YTTC Certificate"
                 width={600}
                 height={400}
