@@ -64,7 +64,7 @@ export default function Schedule100() {
             ) : (
               <>
                 <Image
-                  src="/Thumbnail/Yogacourses 3.jpg"
+                  src="/Thumbnail/thumbnail-1.jpg"
                   alt="Video Thumbnail"
                   width={640}
                   height={360}
