@@ -38,12 +38,12 @@ export default function Schedule100() {
             {schedule.map(([time, activity], idx) => (
               <li
                 key={idx}
-                className="flex justify-between items-center py-3 px-2 hover:bg-[#f5f3ff] transition-colors rounded-lg"
+                className="grid grid-cols-[180px_1fr] sm:grid-cols-[200px_1fr] items-center py-3 px-2 hover:bg-[#f5f3ff] transition-colors rounded-lg"
               >
-                <span className="font-semibold text-[#150e70] text-sm sm:text-base w-40 flex-shrink-0 text-right pr-3">
+                <span className="font-semibold text-[#150e70] text-sm sm:text-base text-left">
                   {time}
                 </span>
-                <span className="text-gray-700 text-base sm:text-lg font-medium flex-1 pl-3 border-l border-gray-300">
+                <span className="text-gray-700 text-base sm:text-lg font-medium pl-4 border-l border-gray-300">
                   {activity}
                 </span>
               </li>
