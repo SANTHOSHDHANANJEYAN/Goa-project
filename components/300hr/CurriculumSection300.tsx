@@ -145,4 +145,4 @@ const CurriculumSection200: React.FC = () => {
   );
 };
 
-export default CurriculumSection300;
+export default CurriculumSection200;
