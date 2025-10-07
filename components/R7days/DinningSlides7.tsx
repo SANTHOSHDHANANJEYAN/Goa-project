@@ -100,7 +100,7 @@ export default function DinningSlides7() {
     {/* Left Image */}
     <div className="relative w-full h-full flex justify-center items-center">
       <Image
-        src="/images/yogic-food.jpg" // 🖼️ Replace with your actual image path
+        src="/Food/7.jpg" // 🖼️ Replace with your actual image path
         alt="Yogic Food at Rishikul Yogshala Goa"
         width={600}
         height={400}
