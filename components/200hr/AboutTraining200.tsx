@@ -292,7 +292,7 @@ export default function AboutTraining() {
 <div className="relative w-full max-w-md lg:max-w-lg overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
   {/* Thumbnail Image */}
   <img
-    src="/Thumbnail/Yogacourse 1.jpg"
+    src="/Thumbnail/thumbnail-2.jpg"
     alt="200 Hour Yoga Teacher Training in Goa"
     className="w-full aspect-video object-cover rounded-2xl cursor-pointer transition-transform duration-500 hover:scale-105"
     onClick={() => {
