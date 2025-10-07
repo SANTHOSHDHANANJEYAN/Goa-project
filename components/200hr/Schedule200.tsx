@@ -8,17 +8,20 @@ export default function Schedule100() {
   const videoUrl = '/Videos/24daysvideo.mov';
 
   const schedule = [
-    ['05:00 AM', 'Morning Tea'],
-    ['05:30 AM', 'Hatha- Vinyasa- Flow Yoga'],
-    ['07:30 AM', 'Pranayama & Meditation'],
-    ['09:00 AM', 'Breakfast'],
-    ['10:00 AM', 'Yoga Philosophy'],
-    ['11:15 AM', 'Yoga Practicum'],
-    ['12:30 PM', 'Yoga Practicum'],
-    ['01:15 PM', 'Lunch'],
-    ['03:30 PM', 'Yoga Anatomy'],
-    ['04:45 PM', 'Ashtanga Yoga'],
-    ['06:15 PM', 'Supper'],
+    ['05:00 AM – 05:30 AM', 'Herbal Tea'],
+    ['05:30 AM – 07:00 AM', 'Ashtanga Yoga'],
+    ['07:15 AM – 08:15 AM', 'Pranayama'],
+    ['08:15 AM – 09:15 AM', 'Breakfast'],
+    ['09:45 AM – 10:45 AM', 'Yoga Philosophy'],
+    ['11:00 AM – 12:00 PM', 'Mantra'],
+    ['12:15 PM – 01:15 PM', 'Adjustment & Alignment'],
+    ['01:15 PM – 02:15 PM', 'Lunch'],
+    ['04:00 PM – 04:15 PM', 'Drink Break'],
+    ['04:15 PM – 05:45 PM', 'Hatha Yoga'],
+    ['06:00 PM – 07:00 PM', 'Meditation/Yoga Nidra'],
+    ['07:00 PM – 08:00 PM', 'Dinner'],
+    ['08:00 PM – 09:00 PM', 'Self Study'],
+    ['10:00 PM', 'Lights Off'],
   ];
 
   return (
@@ -26,7 +29,7 @@ export default function Schedule100() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-10">
 
         {/* LEFT: Daily Schedule */}
-        <div className="md:w-1/2  p-8 flex flex-col justify-center">
+        <div className="md:w-1/2 p-8 flex flex-col justify-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] mb-8 text-center md:text-left">
             Daily Schedule
           </h2>
@@ -34,7 +37,7 @@ export default function Schedule100() {
           <ul className="space-y-4 text-base sm:text-lg">
             {schedule.map(([time, activity], idx) => (
               <li key={idx} className="flex items-start sm:items-center">
-                <span className="font-semibold text-[#150e70] w-28 flex-shrink-0 text-sm sm:text-base">
+                <span className="font-semibold text-[#150e70] w-40 flex-shrink-0 text-sm sm:text-base">
                   {time}
                 </span>
                 <span className="text-gray-700">{activity}</span>
@@ -65,7 +68,7 @@ export default function Schedule100() {
                 />
                 <button
                   aria-label="Play Video"
-                  className="absolute inset-0 flex items-center justify-center "
+                  className="absolute inset-0 flex items-center justify-center"
                   onClick={() => setIsPlaying(true)}
                 >
                   <svg
