@@ -1,84 +1,97 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import { CheckCircle2 } from 'lucide-react';
 
-interface Activity {
-  title: string;
-  description: string;
-  image: string;
-}
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut' }
+  }
+};
 
-const activities: Activity[] = [
-  {
-    title: "Temple Visit",
-    description: "Discover peace at Goa’s ancient temples.",
-    image: "/Activity/temple.png",
-  },
-  {
-    title: "Visit Arambol Beach",
-    description: "Relax and unwind at Arambol’s scenic shores.",
-    image: "/Activity/beach.jpg",
-  },
-  {
-    title: "Cultural Visit",
-    description: "Explore Goa’s vibrant traditions and art.",
-    image: "/Activity/cultural.png",
-  },
-  {
-    title: "Satsang",
-    description: "Join soulful gatherings with music, wisdom, and spiritual dialogue.",
-    image: "/Activity/satsang.png",
-  },
-  {
-    title: "Group Discussion",
-    description: "Share and learn through group talks.",
-    image: "/Activity/group.png",
-  },
-  {
-    title: "Cooking Classes",
-    description: "Learn to cook simple sattvic meals.",
-    image: "/Activity/cooking.jpg",
-  },
-];
+const EligibilitySection: React.FC = () => {
+  const eligibilityCriteria = [
+    { title: "Age", description: "Aspirants should be at least 18 years old and up to 70 years old." },
+    { title: "Language", description: "Most sessions are in English; basic understanding is recommended." },
+    { title: "Skill Level", description: "No prior experience needed, but familiarity with yoga is helpful." },
+    { title: "Commitment", description: "A genuine intention to learn and grow is required, not just earning a certificate." }
+  ];
 
-const ActivitiesSection: React.FC = () => {
   return (
-    <section className="bg-transparent text-center relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
-      {/* Optional radial background decoration */}
-      <div className="absolute inset-0 opacity-10 z-0 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
+    <section className="py-20 bg-[#fffaf5]">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="mb-10 text-center md:text-left"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Eligibility Criteria For Joining The 300 Hour Yoga Teacher Training Course
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Aspirants who are ready to deepen their yoga practice are always welcome in the{" "}
+            <span className="text-orange-600 font-semibold">
+              300 Hour Yoga Teacher Training in India
+            </span>
+            . Some eligibility criteria include:
+          </p>
+        </motion.div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-16 sm:mb-20">
-          Activities included in the course
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-16">
-          {activities.map((activity, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition-transform transform hover:-translate-y-2 flex flex-col items-center relative"
-            >
-              <div className="-mt-16 mb-6 transition-transform transform hover:scale-105">
-                <Image
-                  src={activity.image}
-                  alt={activity.title}
-                  width={96}
-                  height={96}
-                  className="w-24 h-24 rounded-full border-4 border-white shadow object-cover"
-                />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-[#150e70] text-center">
-                {activity.title}
-              </h3>
-              <p className="text-sm sm:text-base text-[#150e70] mt-3 text-center">
-                {activity.description}
-              </p>
-            </div>
-          ))}
+        {/* Flex container for image and eligibility list */}
+        <div className="bg-white rounded-xl shadow-sm border border-orange-100 p-8 md:p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
+          
+          {/* Left image section */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex-shrink-0 w-full md:w-1/3 h-64 md:h-80"
+          >
+            <img
+              src="/aboutpics/333.jpg " // Replace with your actual image path
+              alt="Yoga practice"
+              className="rounded-lg object-cover w-full h-full"
+            />
+          </motion.div>
+
+          {/* Right eligibility list */}
+          <motion.ul
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+            className="space-y-6 w-full md:w-2/3"
+          >
+            {eligibilityCriteria.map((criteria, index) => (
+              <motion.li
+                key={index}
+                variants={fadeInUp}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle2 className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-800 text-lg font-semibold mb-1">
+                    {criteria.title}:
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    {criteria.description}
+                  </p>
+                </div>
+              </motion.li>
+            ))}
+          </motion.ul>
+
         </div>
       </div>
     </section>
   );
 };
 
-export default ActivitiesSection;
+export default EligibilitySection;
