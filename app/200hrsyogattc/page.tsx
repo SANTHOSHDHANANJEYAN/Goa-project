@@ -66,39 +66,39 @@ const TwoHundredHourTTPage = () => (
 
 <section className="bg-white p-8 min-h-screen flex flex-col items-center">
   <div className="text-center mb-6">
-  <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mb-4">
-    200-Hrs Accredited Yoga Teacher Training
-  </h2>
-  <p className="text-xl font-semibold text-[#150e70]">In Goa</p>
-</div>
+    <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mb-4">
+      200-Hrs Accredited Yoga Teacher Training
+    </h2>
+    <p className="text-3xl md:text-4xl font-bold text-[#2317bc]">In Goa</p>
+  </div>
 
-<h1 className="text-base md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
-  Become a Certified Yoga Teacher by Yoga Alliance
-</h1>
+  <h1 className="text-base md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
+    Become a Certified Yoga Teacher by Yoga Alliance
+  </h1>
 
-<p className="text-lg text-center text-[#150e70] mb-6">
-  Join an exciting and life-changing 24-Days journey in Goa
-</p>
-  <h2 className="text-3xl md:text-4xl font-bold text-[#150e70] text-center mb-2">
-    Fee For 200 Hour Yoga TTC In Rishikesh (2025–26)
-  </h2>
+  <p className="text-lg text-center text-[#150e70] mb-6">
+    Join an exciting and life-changing 24-Days journey in Goa
+  </p>
+
   <div className="flex justify-center mb-10">
     <span className="text-2xl text-gray-400">✦⸻⸻⸻⸻✦</span>
   </div>
+
   <div className="flex flex-col md:flex-row gap-10 w-full max-w-5xl">
     {/* Info Card */}
     <div className="flex-1 bg-white rounded-2xl shadow-xl px-8 py-10 flex flex-col gap-8">
       <div className="flex items-center gap-5">
-        <span className="bg-green-600 rounded-full p-4 text-white text-2xl">
+        <span className="bg-[#2317bc] rounded-full p-4 text-white text-2xl">
           <i className="fas fa-calendar-alt"></i>
         </span>
         <div>
           <div className="font-bold text-lg">Available batches:</div>
-          <div className="text-gray-500">September 2025 – December 2026</div>
+          <div className="text-gray-500">September 2025 – April 2026</div>
         </div>
       </div>
+
       <div className="flex items-center gap-5">
-        <span className="bg-green-600 rounded-full p-4 text-white text-2xl">
+        <span className="bg-[#2317bc] rounded-full p-4 text-white text-2xl">
           <i className="fas fa-play-circle"></i>
         </span>
         <div>
@@ -106,8 +106,9 @@ const TwoHundredHourTTPage = () => (
           <div className="text-gray-500">7th of every month</div>
         </div>
       </div>
+
       <div className="flex items-center gap-5">
-        <span className="bg-green-600 rounded-full p-4 text-white text-2xl">
+        <span className="bg-[#2317bc] rounded-full p-4 text-white text-2xl">
           <i className="fas fa-clock"></i>
         </span>
         <div>
@@ -116,38 +117,35 @@ const TwoHundredHourTTPage = () => (
         </div>
       </div>
     </div>
+
     {/* Price Card */}
     <div className="flex-1 bg-white rounded-2xl shadow-xl px-8 py-10 flex flex-col gap-6 items-center">
-      <div className="self-end text-gray-600 flex items-center gap-1 mb-2">
-        <i className="fas fa-language"></i><span>English</span>
-      </div>
       <table className="w-full text-base text-center border-separate border-spacing-y-1">
         <thead>
           <tr>
-            <th className="bg-green-700 text-white py-2 rounded-l-md">Room Type</th>
-            <th className="bg-green-700 text-white py-2">International</th>
-            <th className="bg-green-700 text-white py-2 rounded-r-md">Indian</th>
+            <th className="bg-[#2317bc] text-white py-2 rounded-l-md">Room Type</th>
+            <th className="bg-[#2317bc] text-white py-2">USD</th>
           </tr>
         </thead>
         <tbody>
           <tr className="bg-gray-50">
-            <td className="py-3">Single Room</td>
-            <td className="py-3">$ 1,250</td>
-            <td className="py-3">₹ 55,000</td>
+            <td className="py-3">Private Room</td>
+            <td className="py-3">$ 1600</td>
           </tr>
           <tr className="bg-white">
             <td className="py-3">Shared Room</td>
-            <td className="py-3">$ 1,150</td>
-            <td className="py-3">₹ 50,000</td>
+            <td className="py-3">$ 1300</td>
           </tr>
         </tbody>
       </table>
+
       <button className="bg-gradient-to-r from-yellow-200 to-yellow-400 rounded-full px-10 py-3 text-lg font-semibold shadow hover:from-yellow-300 hover:to-yellow-500 transition">
-        RESERVE
+        Book Now
       </button>
     </div>
   </div>
 </section>
+
 
 
     
