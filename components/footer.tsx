@@ -102,13 +102,31 @@ export default function Footer() {
 
       {/* Social Icons */}
       <div className="relative z-10 mt-6 flex justify-center space-x-5">
-        <Link href="#" className="text-[#15005c] hover:text-purple-700">
+        <Link 
+          href="https://youtube.com/@rishikulyogshalagoa?si=gXYn1x60tu2cRbKc" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#15005c] hover:text-purple-700 transition-colors duration-300"
+          aria-label="Visit our YouTube channel"
+        >
           <Youtube className="w-6 h-6" />
         </Link>
-        <Link href="#" className="text-[#15005c] hover:text-purple-700">
+        <Link 
+          href="https://www.instagram.com/rishikulyogshalagoa?igsh=MXJtNW0wYmFkZ3MwbA==" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#15005c] hover:text-purple-700 transition-colors duration-300"
+          aria-label="Visit our Instagram page"
+        >
           <Instagram className="w-5 h-5" />
         </Link>
-        <Link href="#" className="text-[#15005c] hover:text-purple-700">
+        <Link 
+          href="https://www.facebook.com/share/1Cjee3xdbp/" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#15005c] hover:text-purple-700 transition-colors duration-300"
+          aria-label="Visit our Facebook page"
+        >
           <Facebook className="w-5 h-5" />
         </Link>
       </div>
