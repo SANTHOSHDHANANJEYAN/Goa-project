@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
@@ -10,11 +10,7 @@ import Image from "next/image";
 import {
   FaFacebookF,
   FaInstagram,
-  FaTwitter,
-  FaLinkedinIn,
   FaYoutube,
-  FaPinterestP,
-  FaTumblr,
 } from "react-icons/fa";
 
 const yellowItems = [
@@ -64,7 +60,18 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null);
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleDropdown = (name: string) => {
     setExpandedDropdown((prev) => (prev === name ? null : name));
@@ -86,7 +93,7 @@ export default function Header() {
             <Link
               href={item.href!}
               className={cn(
-                "block text-base font-medium py-2 text-[#1F2937]",
+                "block text-base font-medium py-2 text-[#1F2937] hover:text-[#3E8E7E] transition-colors",
                 isYellow && "text-[#1F2937]"
               )}
               onClick={() => setMobileMenuOpen(false)}
@@ -100,7 +107,7 @@ export default function Header() {
             <>
               <button
                 className={cn(
-                  "w-full flex justify-between items-center text-base font-medium py-2 text-[#1F2937] hover:text-[#3E8E7E]",
+                  "w-full flex justify-between items-center text-base font-medium py-2 text-[#1F2937] hover:text-[#3E8E7E] transition-colors",
                   isYellow && "text-[#1F2937]"
                 )}
                 onClick={() => toggleDropdown(item.name)}
@@ -123,7 +130,7 @@ export default function Header() {
                     <div key={subItem.name}>
                       <Link
                         href={subItem.href}
-                        className="block text-sm py-1 text-[#1F2937] hover:text-[#3E8E7E]"
+                        className="block text-sm py-1 text-[#1F2937] hover:text-[#3E8E7E] transition-colors"
                         onClick={() => setMobileMenuOpen(false)}
                         style={{
                           fontFamily:
@@ -150,60 +157,95 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F9FAF8] shadow-sm">
-      {/* Top Yellow Bar */}
-      <div className="w-full bg-[#E0B973] text-[#1F2937] text-sm py-2 px-4 flex flex-wrap justify-between items-center">
-        <div className="flex flex-wrap items-center gap-3 md:gap-6">
-          <div className="flex items-center gap-1">
-            <Phone size={14} />
-            <span>+91-8433225327</span>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F9FAF8] shadow-sm transition-all duration-300">
+      {/* Top Yellow Bar - Hidden when scrolled */}
+      <div 
+        className={cn(
+          "w-full bg-[#f9f7f4] text-[#1F2937] text-xs sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 transition-all duration-300 overflow-hidden",
+          scrolled ? "max-h-0 py-0" : "max-h-20"
+        )}
+      >
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 md:gap-6 justify-center sm:justify-start">
+            <a 
+              href="tel:+919520024333" 
+              className="flex items-center gap-1 hover:text-[#3E8E7E] transition-colors"
+            >
+              <Phone size={12} className="sm:w-3 sm:h-3" />
+              <span className="text-xs sm:text-sm">+91-9520024333</span>
+            </a>
+            <a 
+              href="mailto:rishikulyogshalagoa@gmail.com" 
+              className="flex items-center gap-1 hover:text-[#3E8E7E] transition-colors"
+            >
+              <Mail size={12} className="sm:w-3 sm:h-3" />
+              <span className="hidden md:inline text-xs sm:text-sm">rishikulyogshalagoa@gmail.com</span>
+              <span className="md:hidden text-xs">Email Us</span>
+            </a>
           </div>
-          <div className="flex items-center gap-1">
-            <Mail size={14} />
-            <span>contact@rishikulyogshalarishikesh.com</span>
-          </div>
-        </div>
 
-        <div className="flex items-center gap-3 md:gap-6 mt-2 md:mt-0">
-          <div className="flex items-center gap-2">
-            <Image src="/reviewicon.png" alt="Review" width={20} height={20} />
-            <span>Our Review</span>
-          </div>
-          <div className="flex items-center gap-3 text-[#1F2937]">
-            <FaFacebookF />
-            <FaInstagram />
-            <FaTwitter />
-            <FaLinkedinIn />
-            <FaYoutube />
-            <FaPinterestP />
-            <FaTumblr />
+          <div className="flex items-center gap-3 md:gap-4">
+            <div className="flex items-center gap-3 text-[#1F2937]">
+              <a
+                href="https://www.facebook.com/share/1Cjee3xdbp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#3E8E7E] transition-colors"
+                aria-label="Facebook"
+              >
+                <FaFacebookF className="w-3 h-3 sm:w-4 sm:h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/rishikulyogshalagoa/?igsh=MXJtNW0wYmFkZ3MwbA%3D%3D#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#3E8E7E] transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-3 h-3 sm:w-4 sm:h-4" />
+              </a>
+              <a
+                href="https://www.youtube.com/@rishikulyogshalagoa?si=gXYn1x60tu2cRbKc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#3E8E7E] transition-colors"
+                aria-label="YouTube"
+              >
+                <FaYoutube className="w-3 h-3 sm:w-4 sm:h-4" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Main White Navigation */}
-      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center h-20">
+      {/* Main Navigation */}
+      <div 
+        className={cn(
+          "mx-auto max-w-[90rem] px-2 sm:px-4 lg:px-8 transition-all duration-300",
+          scrolled ? "py-2" : "py-0"
+        )}
+      >
+        <div className="grid grid-cols-3 items-center h-16 sm:h-20">
           {/* Left Side Menu */}
-          <div className="flex items-center gap-[3rem] ">
+          <div className="flex items-center gap-2 sm:gap-4 lg:gap-12">
             <Button
               variant="ghost"
               size="icon"
-              className="hover:bg-transparent focus:bg-transparent active:bg-transparent"
+              className="hover:bg-transparent focus:bg-transparent active:bg-transparent p-1 sm:p-2"
               onClick={() => setMobileMenuOpen(true)}
             >
-              <Menu size={24} />
+              <Menu size={20} className="sm:w-6 sm:h-6" />
             </Button>
 
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-[#1F2937]">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm font-medium text-[#1F2937]">
               <div className="relative">
                 <button
                   onClick={() => toggleDesktopDropdown("Program")}
-                  className="flex items-center gap-1 hover:text-[#E0B973]"
+                  className="flex items-center gap-1 hover:text-[#E0B973] transition-colors py-2"
                 >
                   COURSES
                   <ChevronDown
-                    size={16}
+                    size={14}
                     className={cn(
                       "transition-transform",
                       desktopDropdown === "Program" && "rotate-180"
@@ -211,13 +253,13 @@ export default function Header() {
                   />
                 </button>
                 {desktopDropdown === "Program" && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-[#E0B973] rounded-md shadow-lg z-50">
+                  <div className="absolute top-full left-0 mt-1 w-56 xl:w-64 bg-white border border-gray-200 border-b-4 border-[#E0B973] rounded-md shadow-lg z-50">
                     <ul className="py-2">
                       {leftNavigation[0]?.dropdown?.map((item) => (
                         <li key={item.name}>
                           <Link
                             href={item.href}
-                            className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            className="block px-3 xl:px-4 py-2 text-xs xl:text-sm hover:bg-gray-100 transition-colors"
                             onClick={() => setDesktopDropdown(null)}
                           >
                             {item.name}
@@ -232,11 +274,11 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={() => toggleDesktopDropdown("Retreat")}
-                  className="flex items-center gap-1 hover:text-[#E0B973]"
+                  className="flex items-center gap-1 hover:text-[#E0B973] transition-colors py-2"
                 >
                   RETREATS
                   <ChevronDown
-                    size={16}
+                    size={14}
                     className={cn(
                       "transition-transform",
                       desktopDropdown === "Retreat" && "rotate-180"
@@ -244,13 +286,13 @@ export default function Header() {
                   />
                 </button>
                 {desktopDropdown === "Retreat" && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-[#E0B973] rounded-md shadow-lg z-50">
+                  <div className="absolute top-full left-0 mt-1 w-56 xl:w-64 bg-white border border-gray-200 border-b-4 border-[#E0B973] rounded-md shadow-lg z-50">
                     <ul className="py-2">
                       {leftNavigation[1]?.dropdown?.map((item) => (
                         <li key={item.name}>
                           <Link
                             href={item.href}
-                            className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            className="block px-3 xl:px-4 py-2 text-xs xl:text-sm hover:bg-gray-100 transition-colors"
                             onClick={() => setDesktopDropdown(null)}
                           >
                             {item.name}
@@ -270,23 +312,23 @@ export default function Header() {
               <Image
                 src="/logo30-removebg-preview.png"
                 alt="Rishikul"
-                width={120}
-                height={60}
-                className="object-contain"
+                width={scrolled ? 100 : 120}
+                height={scrolled ? 50 : 60}
+                className="object-contain transition-all duration-300 w-[80px] sm:w-[100px] lg:w-[120px]"
               />
             </Link>
           </div>
 
           {/* Right Side */}
-          <div className="flex justify-end items-center gap-4">
-            <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-[#1F2937]">
+          <div className="flex justify-end items-center">
+            <div className="hidden sm:flex">
               <Link href="/" className="flex-shrink-0">
                 <Image
                   src="/yg_logo-removebg-preview.png"
                   alt="Yoga Alliance"
-                  width={100}
-                  height={100}
-                  className="object-contain"
+                  width={scrolled ? 80 : 100}
+                  height={scrolled ? 80 : 100}
+                  className="object-contain transition-all duration-300 w-[60px] sm:w-[80px] lg:w-[100px]"
                 />
               </Link>
             </div>
@@ -304,20 +346,20 @@ export default function Header() {
       >
         <div
           className={cn(
-            "fixed top-0 right-0 w-72 h-screen overflow-y-auto bg-white shadow-lg transform transition-transform duration-300 rounded-tl-[25px] rounded-bl-[25px] border-l-4 border-[#3E8E7E]",
+            "fixed top-0 right-0 w-64 sm:w-72 h-screen overflow-y-auto bg-white shadow-lg transform transition-transform duration-300 rounded-tl-[25px] rounded-bl-[25px] border-l-4 border-[#3E8E7E]",
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="p-4 h-full flex flex-col">
-            <div className="flex justify-between items-center mb-[0.5rem] ml-[1rem]">
+            <div className="flex justify-between items-center mb-4">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                 <Image
                   src="/logo30-removebg-preview.png"
                   alt="Rishikul"
-                  width={120}
+                  width={100}
                   height={30}
-                  className="ml-[2.5rem]"
+                  className="ml-4 sm:ml-8"
                 />
               </Link>
               <Button
@@ -330,18 +372,52 @@ export default function Header() {
               </Button>
             </div>
 
-            <nav className="text-[#1F2937] pl-[0.5rem] mt-0">
+            <nav className="text-[#1F2937] pl-2 mt-0 flex-1 overflow-y-auto">
               {renderDrawerNav()}
             </nav>
 
-            <div className="mt-auto mb-8 pt-4">
-              <div className="relative w-full h-[90px] rounded-lg overflow-hidden">
+            {/* Social Media Links in Drawer */}
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <p className="text-sm font-medium text-[#1F2937] mb-3">Follow Us</p>
+              <div className="flex items-center gap-4 justify-center">
+                <a
+                  href="https://www.facebook.com/share/1Cjee3xdbp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1F2937] hover:text-[#3E8E7E] transition-colors"
+                  aria-label="Facebook"
+                >
+                  <FaFacebookF className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/rishikulyogshalagoa/?igsh=MXJtNW0wYmFkZ3MwbA%3D%3D#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1F2937] hover:text-[#3E8E7E] transition-colors"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@rishikulyogshalagoa?si=gXYn1x60tu2cRbKc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1F2937] hover:text-[#3E8E7E] transition-colors"
+                  aria-label="YouTube"
+                >
+                  <FaYoutube className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-4 mb-4">
+              <div className="relative w-full h-[80px] rounded-lg overflow-hidden">
                 <Image
                   src="/yg_logo-removebg-preview.png"
-                  alt="Yoga image"
-                  width={120}
+                  alt="Yoga Alliance"
+                  width={100}
                   height={50}
-                  className="object-cover ml-[3rem]"
+                  className="object-cover mx-auto"
                 />
               </div>
             </div>
