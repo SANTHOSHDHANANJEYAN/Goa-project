@@ -77,9 +77,9 @@ const mainNav = [
 
 // Topbar social links (replace href with your profiles)
 const socialLinks = [
-  { name: "Facebook", href: "https://facebook.com/", Icon: Facebook },
-  { name: "Instagram", href: "https://instagram.com/", Icon: Instagram },
-  { name: "YouTube", href: "https://youtube.com/", Icon: Youtube }
+  { name: "Facebook", href: "https://www.facebook.com/share/1Cjee3xdbp/", Icon: Facebook },
+  { name: "Instagram", href: "https://www.instagram.com/rishikulyogshalagoa/?igsh=MXJtNW0wYmFkZ3MwbA%3D%3D#", Icon: Instagram },
+  { name: "YouTube", href: "https://www.youtube.com/@rishikulyogshalagoa?si=gXYn1x60tu2cRbKc", Icon: Youtube }
 ];
 
 export default function Header() {
@@ -192,15 +192,6 @@ export default function Header() {
 
             {/* Right: Our Review + Socials */}
             <div className="flex items-center gap-4">
-              <Link
-                href="/Reviews"
-                className="inline-flex items-center gap-2 hover:opacity-90"
-                aria-label="Our Review"
-              >
-                <Star size={16} />
-                <span className="hidden sm:inline">Our Review</span>
-              </Link>
-
               <div className="hidden sm:flex items-center gap-3">
                 {socialLinks.map(({ name, href, Icon }) => (
                   <a
@@ -317,13 +308,6 @@ export default function Header() {
             {/* Right: CTAs */}
             <div className="hidden md:flex items-center gap-3">
               <Link
-                href="/payment"
-                className="inline-flex items-center rounded-full px-4 py-2 text-white shadow-sm hover:opacity-90"
-                style={{ backgroundColor: BRAND_GREEN }}
-              >
-                Pay Online
-              </Link>
-              <Link
                 href={{ pathname: "/contact", query: { enquiry: "1" } }}
                 className="inline-flex items-center rounded-full px-4 py-2 text-black shadow-sm hover:opacity-90"
                 style={{ backgroundColor: BRAND_GOLD }}
@@ -391,7 +375,7 @@ export default function Header() {
             <div className="mt-2 mb-4 flex items-center gap-4 text-sm" style={{ color: TEXT }}>
               <a href="tel:+918433225327" className="inline-flex items-center gap-2">
                 <Phone size={16} />
-                <span>+91-8433225327</span>
+                <span>+91-9520024333‬</span>
               </a>
               <a href="mailto:contact@rishikulyogshalarishikesh.com" className="inline-flex items-center gap-2">
                 <Mail size={16} />
@@ -404,14 +388,6 @@ export default function Header() {
 
             {/* CTAs */}
             <div className="mt-6 flex gap-3">
-              <Link
-                href="/payment"
-                className="flex-1 inline-flex items-center justify-center rounded-full px-4 py-2 text-white shadow-sm"
-                style={{ backgroundColor: BRAND_GREEN }}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Pay Online
-              </Link>
               <Link
                 href={{ pathname: "/contact", query: { enquiry: "1" } }}
                 className="flex-1 inline-flex items-center justify-center rounded-full px-4 py-2 text-black shadow-sm"
