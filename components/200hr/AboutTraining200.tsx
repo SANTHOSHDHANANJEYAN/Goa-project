@@ -236,6 +236,7 @@ const curriculumData: CurriculumItem[] = [
 
 export default function AboutTraining() {
   const [openDropdowns, setOpenDropdowns] = useState<{ [key: number]: boolean }>({});
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const toggleDropdown = (index: number) => {
     setOpenDropdowns(prev => ({
@@ -244,182 +245,172 @@ export default function AboutTraining() {
     }));
   };
 
+  const handlePlayVideo = () => {
+    setIsVideoPlaying(true);
+  };
+
   return (
     <>
       {/* Section 1 - Best 200 Hour Yoga Teacher Training */}
-<section className="py-16 px-6 md:px-20 bg-white">
-  <div className="max-w-7xl mx-auto">
-    {/* Section Heading */}
-    <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-12 text-center">
-      Best 200 Hour Yoga Teacher Training in Goa
-    </h2>
+      <section className="py-16 px-6 md:px-20 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Heading */}
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-12 text-center">
+            Best 200 Hour Yoga Teacher Training in Goa
+          </h2>
 
-    {/* Content Grid */}
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      {/* Left Text Content */}
-      <div className="space-y-6 text-gray-700 leading-relaxed md:pr-8">
-        <p>
-          Our 200 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners. 
-          We at Rishikul Yogshala offer a comprehensive 200 Hour Yoga Teacher Training Course in Goa for students who 
-          want to begin their Yogic Journey. The 200 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted 
-          one combining the Classical Hatha Yoga to Dynamic Ashtanga Vinyasa Yoga as primary fields.
-        </p>
+          {/* Content Grid */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Text Content */}
+            <div className="space-y-6 text-gray-700 leading-relaxed md:pr-8">
+              <p>
+                Our 200 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners. 
+                We at Rishikul Yogshala offer a comprehensive 200 Hour Yoga Teacher Training Course in Goa for students who 
+                want to begin their Yogic Journey. The 200 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted 
+                one combining the Classical Hatha Yoga to Dynamic Ashtanga Vinyasa Yoga as primary fields.
+              </p>
 
-        <p>
-          Our yoga school offers holistic yoga program under the guidance of competent teachers who have International 
-          teaching experience and value personal attention to students for better learning. The Yoga Philosophy taught 
-          brings in different dimensions of Yoga into understanding and the Teaching Methodology sessions will equip 
-          the students with technique, alignment, and modifications suited to be qualified and a good practitioner.
-        </p>
+              <p>
+                Our yoga school offers holistic yoga program under the guidance of competent teachers who have International 
+                teaching experience and value personal attention to students for better learning. The Yoga Philosophy taught 
+                brings in different dimensions of Yoga into understanding and the Teaching Methodology sessions will equip 
+                the students with technique, alignment, and modifications suited to be qualified and a good practitioner.
+              </p>
 
-        <p>
-          Though participants who arrive at the course, belong to various physical and mental capabilities; nevertheless, 
-          our 200 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others 
-          and become the best platform for the beginners and the intermediate practitioners.
-        </p>
+              <p>
+                Though participants who arrive at the course, belong to various physical and mental capabilities; nevertheless, 
+                our 200 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others 
+                and become the best platform for the beginners and the intermediate practitioners.
+              </p>
 
-        <p>
-          While you dedicate your valuable time in 200 Hour Yoga Teacher Training Course, it becomes our responsibility 
-          to meet your needs with the best learning environment be it with facilities or staff too. If you seek the Best 
-          Yoga School in Goa, your search ends at Rishikul Yogshala. We offer you an intensive curriculum, exposure to 
-          yogic culture, picturesque landscape, and yogic food, which form your one-stop solution for classical learning 
-          and discovery of yogic dimension within you.
-        </p>
-      </div>
+              <p>
+                While you dedicate your valuable time in 200 Hour Yoga Teacher Training Course, it becomes our responsibility 
+                to meet your needs with the best learning environment be it with facilities or staff too. If you seek the Best 
+                Yoga School in Goa, your search ends at Rishikul Yogshala. We offer you an intensive curriculum, exposure to 
+                yogic culture, picturesque landscape, and yogic food, which form your one-stop solution for classical learning 
+                and discovery of yogic dimension within you.
+              </p>
+            </div>
 
-      {/* Right Video / Image Section */}
-      <div className="flex justify-center md:justify-end">
-<div className="relative w-full max-w-md lg:max-w-lg overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
-  {/* Thumbnail Image */}
-  <img
-    src="/Thumbnail/thumbnail-2.jpg"
-    alt="200 Hour Yoga Teacher Training in Goa"
-    className="w-full aspect-video object-cover rounded-2xl cursor-pointer transition-transform duration-500 hover:scale-105"
-    onClick={() => {
-      const iframe = document.getElementById('yogaVideo') as HTMLIFrameElement | null;
-      if (iframe) {
-        iframe.style.display = 'block';
-        iframe.src += '?autoplay=1';
-      }
-    }}
-  />
+            {/* Right Video Section */}
+            <div className="flex justify-center md:justify-end">
+              <div className="relative w-full max-w-md lg:max-w-lg overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
+                {!isVideoPlaying ? (
+                  <>
+                    {/* Thumbnail Image */}
+                    <img
+                      src="/Thumbnail/thumbnail-2.jpg"
+                      alt="200 Hour Yoga Teacher Training in Goa"
+                      className="w-full aspect-video object-cover rounded-2xl cursor-pointer transition-transform duration-500 hover:scale-105"
+                      onClick={handlePlayVideo}
+                    />
 
-  {/* Centered Professional Play Button */}
-  <button
-    onClick={() => {
-      const iframe = document.getElementById('yogaVideo') as HTMLIFrameElement | null;
-      if (iframe) {
-        iframe.style.display = 'block';
-        iframe.src += '?autoplay=1';
-      }
-    }}
-    className="absolute inset-0 flex items-center justify-center"
-  >
-    <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors duration-300">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="#627d6a"
-        viewBox="0 0 24 24"
-        width="28"
-        height="28"
-      >
-        <path d="M8 5v14l11-7z" />
-      </svg>
-    </div>
-  </button>
-
-  {/* Hidden YouTube iframe */}
-  <iframe
-    id="yogaVideo"
-    className="w-full aspect-video hidden absolute inset-0 rounded-2xl"
-    src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-    title="200 Hour Yoga Teacher Training in Goa"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  ></iframe>
-</div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-{/* Section 2 - Curriculum */}
-<section
-  className="relative bg-cover bg-center bg-no-repeat"
-  style={{
-    backgroundImage: "url('/aboutpics/333.jpg')", // Replace with your actual image path
-  }}
->
-  
-
-  <div className="relative max-w-5xl mx-auto py-24 px-6 md:px-16 text-center">
-    <div className="bg-white/80 rounded-xl shadow-lg p-10 md:p-16 backdrop-blur-md">
-      <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6 tracking-wide uppercase">
-        200 Hour Yoga Teacher Training Curriculum
-      </h2>
-
-      <p className="text-gray-700 leading-relaxed mb-10">
-        Explore our in-depth yoga curriculum designed to enhance your practice,
-        teaching methodology, and spiritual journey.
-      </p>
-
-      <div className="space-y-4 text-left">
-        {curriculumData.map((item, index) => (
-          <div
-            key={index}
-            className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
-          >
-            <button
-              onClick={() => toggleDropdown(index)}
-              className="w-full px-6 py-4 bg-white hover:bg-gray-50 transition-colors duration-200 
-                         flex justify-between items-center text-left"
-            >
-              <span className="text-lg font-medium text-gray-800">
-                {item.title}
-              </span>
-              {openDropdowns[index] ? (
-                <FaChevronUp className="text-gray-600 flex-shrink-0" />
-              ) : (
-                <FaChevronDown className="text-gray-600 flex-shrink-0" />
-              )}
-            </button>
-
-            {openDropdowns[index] && item.content.length > 0 && (
-              <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                <ul className="space-y-2">
-                  {item.content.map((contentItem, contentIndex) => (
-                    <li
-                      key={contentIndex}
-                      className="text-gray-700 flex items-start"
+                    {/* Centered Professional Play Button */}
+                    <button
+                      onClick={handlePlayVideo}
+                      className="absolute inset-0 flex items-center justify-center"
                     >
-                      <span className="text-indigo-500 mr-2 mt-1">•</span>
-                      <span>{contentItem}</span>
-                    </li>
-                  ))}
-                </ul>
+                      <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors duration-300">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="#627d6a"
+                          viewBox="0 0 24 24"
+                          width="28"
+                          height="28"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </button>
+                  </>
+                ) : (
+                  /* YouTube iframe */
+                  <iframe
+                    className="w-full aspect-video rounded-2xl"
+                    src="https://www.youtube.com/embed/8AveOsMT7-A?autoplay=1"
+                    title="200 Hour Yoga Teacher Training in Goa"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                )}
               </div>
-            )}
-
-            {openDropdowns[index] && item.content.length === 0 && (
-              <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                <p className="text-gray-500 italic">Content coming soon...</p>
-              </div>
-            )}
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
 
-      <div className="mt-12">
-        <button className="px-8 py-3 bg-[#150e70] text-white font-medium rounded-md shadow-md hover:bg-[#0f0a55] transition-all duration-300">
-          Start Your Journey
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
+      {/* Section 2 - Curriculum */}
+      <section
+        className="relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/aboutpics/333.jpg')",
+        }}
+      >
+        <div className="relative max-w-5xl mx-auto py-24 px-6 md:px-16 text-center">
+          <div className="bg-white/80 rounded-xl shadow-lg p-10 md:p-16 backdrop-blur-md">
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6 tracking-wide uppercase">
+              200 Hour Yoga Teacher Training Curriculum
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed mb-10">
+              Explore our in-depth yoga curriculum designed to enhance your practice,
+              teaching methodology, and spiritual journey.
+            </p>
+
+            <div className="space-y-4 text-left">
+              {curriculumData.map((item, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <button
+                    onClick={() => toggleDropdown(index)}
+                    className="w-full px-6 py-4 bg-white hover:bg-gray-50 transition-colors duration-200 
+                               flex justify-between items-center text-left"
+                  >
+                    <span className="text-lg font-medium text-gray-800">
+                      {item.title}
+                    </span>
+                    {openDropdowns[index] ? (
+                      <FaChevronUp className="text-gray-600 flex-shrink-0" />
+                    ) : (
+                      <FaChevronDown className="text-gray-600 flex-shrink-0" />
+                    )}
+                  </button>
+
+                  {openDropdowns[index] && item.content.length > 0 && (
+                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                      <ul className="space-y-2">
+                        {item.content.map((contentItem, contentIndex) => (
+                          <li
+                            key={contentIndex}
+                            className="text-gray-700 flex items-start"
+                          >
+                            <span className="text-indigo-500 mr-2 mt-1">•</span>
+                            <span>{contentItem}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {openDropdowns[index] && item.content.length === 0 && (
+                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                      <p className="text-gray-500 italic">Content coming soon...</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12">
+              <button className="px-8 py-3 bg-[#150e70] text-white font-medium rounded-md shadow-md hover:bg-[#0f0a55] transition-all duration-300">
+                Start Your Journey
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
