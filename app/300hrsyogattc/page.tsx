@@ -21,7 +21,7 @@ const DinningSlides7 = dynamic(() => import("@/components/R7days/DinningSlides7"
 const OurRooms7 = dynamic(() => import("@/components/R7days/OurRooms7"));
 const RoomSlides7 = dynamic(() => import("@/components/R7days/RoomSlides7"));
 
-const TwoHundredHourTTPage = () => (
+const ThreeHundredHourTTPage = () => (
   <div className="mt-24 max-w-6xl text-gray-800">
     {/* Header */}
 
