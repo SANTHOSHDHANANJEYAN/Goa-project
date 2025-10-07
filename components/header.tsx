@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -12,14 +12,13 @@ import {
   Facebook,
   Instagram,
   Youtube,
-  Star
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+
 // Brand colors
 const BRAND_GOLD = "#E0B973";
-const BRAND_GREEN = "#16A34A";
 const TEXT = "#1F2937";
 
 // Existing content (kept)
@@ -75,7 +74,7 @@ const mainNav = [
   { name: "Contact Us", href: "/contact" },
 ];
 
-// Topbar social links (replace href with your profiles)
+// Topbar social links
 const socialLinks = [
   { name: "Facebook", href: "https://www.facebook.com/share/1Cjee3xdbp/", Icon: Facebook },
   { name: "Instagram", href: "https://www.instagram.com/rishikulyogshalagoa/?igsh=MXJtNW0wYmFkZ3MwbA%3D%3D#", Icon: Instagram },
@@ -86,7 +85,42 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null); // mobile drawer
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null); // desktop navbar
+  const [hideHeader, setHideHeader] = useState(false); // hide-on-scroll
   const pathname = usePathname();
+
+  // Hide on scroll (all devices)
+  useEffect(() => {
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    const update = () => {
+      const y = window.scrollY;
+      const delta = y - lastY;
+
+      if (y <= 10) {
+        setHideHeader(false);
+      } else if (delta > 5 && y > 80) {
+        // scrolling down
+        setHideHeader(true);
+      } else if (delta < -5) {
+        // scrolling up
+        setHideHeader(false);
+      }
+
+      lastY = y;
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const toggleDropdown = (name: string) => {
     setExpandedDropdown((prev) => (prev === name ? null : name));
@@ -99,7 +133,6 @@ export default function Header() {
   const isActive = (href?: string) => (href ? pathname === href : false);
 
   const renderDrawerNav = () => {
-    // Build a combined mobile structure similar to the mainNav
     const drawerItems = mainNav.concat([{ name: "Payment", href: "/payment" }]);
     return drawerItems.map((item, index) => {
       const hasDropdown = "dropdown" in item && Array.isArray((item as any).dropdown);
@@ -161,181 +194,192 @@ export default function Header() {
     });
   };
 
+  // Keep header visible when the mobile drawer is open
+  const shouldHideHeader = hideHeader && !mobileMenuOpen;
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      {/* Top Gold Contact/Social Bar */}
-      <div className="w-full" style={{ backgroundColor: BRAND_GOLD }}>
-        <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
-          <div className="flex h-10 items-center justify-between text-sm" style={{ color: TEXT }}>
-            {/* Left: phone + email */}
-            <div className="flex items-center gap-4">
-              <a
-                href="tel:+918433225327"
-                className="inline-flex items-center gap-2 hover:opacity-90"
-                aria-label="Call us"
-              >
-                <Phone size={16} />
-                <span className="hidden sm:inline">+91-9520024333‬</span>
-              </a>
+      {/* The bar wrapper that hides on scroll */}
+      <div
+        className={cn(
+          "transition-transform duration-300 ease-out will-change-transform",
+          shouldHideHeader ? "-translate-y-full" : "translate-y-0"
+        )}
+      >
+        {/* Top Gold Contact/Social Bar */}
+        <div className="w-full" style={{ backgroundColor: BRAND_GOLD }}>
+          <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
+            <div className="flex h-10 items-center justify-between text-sm" style={{ color: TEXT }}>
+              {/* Left: phone + email */}
+              <div className="flex items-center gap-4">
+                <a
+                  href="tel:+918433225327"
+                  className="inline-flex items-center gap-2 hover:opacity-90"
+                  aria-label="Call us"
+                >
+                  <Phone size={16} />
+                  <span className="hidden sm:inline">+91-9520024333‬</span>
+                </a>
 
-              <div className="hidden sm:block h-4 w-px bg-black/30" />
+                <div className="hidden sm:block h-4 w-px bg-black/30" />
 
-              <a
-                href="mailto:contact@rishikulyogshalarishikesh.com"
-                className="inline-flex items-center gap-2 hover:opacity-90"
-                aria-label="Email us"
-              >
-                <Mail size={16} />
-                <span className="hidden sm:inline">rishikulyogshalagoa@gmail.com</span>
-              </a>
+                <a
+                  href="mailto:contact@rishikulyogshalarishikesh.com"
+                  className="inline-flex items-center gap-2 hover:opacity-90"
+                  aria-label="Email us"
+                >
+                  <Mail size={16} />
+                  <span className="hidden sm:inline">rishikulyogshalagoa@gmail.com</span>
+                </a>
+              </div>
+
+              {/* Right: Socials */}
+              <div className="flex items-center gap-4">
+                <div className="hidden sm:flex items-center gap-3">
+                  {socialLinks.map(({ name, href, Icon }) => (
+                    <a
+                      key={name}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={name}
+                      className="hover:opacity-90"
+                    >
+                      <Icon size={18} />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
 
-            {/* Right: Our Review + Socials */}
-            <div className="flex items-center gap-4">
-              <div className="hidden sm:flex items-center gap-3">
-                {socialLinks.map(({ name, href, Icon }) => (
-                  <a
-                    key={name}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={name}
-                    className="hover:opacity-90"
-                  >
-                    <Icon size={18} />
-                  </a>
-                ))}
+        {/* Main Navbar */}
+        <div className="w-full bg-white shadow-sm">
+          <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
+              {/* Left: Burger (mobile) + Logo */}
+              <div className="flex items-center gap-3">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="md:hidden hover:bg-transparent focus:bg-transparent active:bg-transparent"
+                  onClick={() => setMobileMenuOpen(true)}
+                  aria-label="Open menu"
+                >
+                  <Menu size={24} />
+                </Button>
+
+                <Link href="/" className="flex-shrink-0" aria-label="Home">
+                  <Image
+                    src="/logo30-removebg-preview.png"
+                    alt="Rishikul"
+                    width={140}
+                    height={70}
+                    className="object-contain"
+                    priority
+                  />
+                </Link>
+              </div>
+
+              {/* Center: Nav (desktop) */}
+              <nav
+                className="hidden md:flex items-center gap-6 text-sm font-medium"
+                style={{ color: TEXT }}
+              >
+                {mainNav.map((item) => {
+                  const hasDropdown = "dropdown" in item && Array.isArray((item as any).dropdown);
+
+                  if (!hasDropdown) {
+                    return (
+                      <Link
+                        key={item.name}
+                        href={(item as any).href!}
+                        className={cn(
+                          "px-1 py-2 hover:text-black",
+                          isActive((item as any).href) && "font-semibold text-black"
+                        )}
+                      >
+                        {item.name}
+                      </Link>
+                    );
+                  }
+
+                  return (
+                    <div key={item.name} className="relative">
+                      <button
+                        onClick={() => toggleDesktopDropdown(item.name)}
+                        className="flex items-center gap-1 px-1 py-2 hover:text-black"
+                        aria-haspopup="menu"
+                        aria-expanded={desktopDropdown === item.name}
+                      >
+                        {item.name}
+                        <ChevronDown
+                          size={16}
+                          className={cn(
+                            "transition-transform",
+                            desktopDropdown === item.name && "rotate-180"
+                          )}
+                        />
+                      </button>
+                      {desktopDropdown === item.name && (
+                        <div
+                          className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 rounded-md shadow-lg z-50"
+                          style={{ borderBottomColor: BRAND_GOLD }}
+                          onMouseLeave={() => setDesktopDropdown(null)}
+                        >
+                          <ul className="py-2">
+                            {(item as any).dropdown?.map((sub: any) => (
+                              <li key={sub.name}>
+                                <Link
+                                  href={sub.href}
+                                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                                  onClick={() => setDesktopDropdown(null)}
+                                >
+                                  {sub.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </nav>
+
+              {/* Right: CTA */}
+              <div className="hidden md:flex items-center gap-3">
+                <Link
+                  href={{ pathname: "/contact", query: { enquiry: "1" } }}
+                  className="inline-flex items-center rounded-full px-4 py-2 text-black shadow-sm hover:opacity-90"
+                  style={{ backgroundColor: BRAND_GOLD }}
+                >
+                  Send Enquiry
+                </Link>
+              </div>
+
+              {/* Right (mobile): Yoga Alliance badge or placeholders */}
+              <div className="md:hidden">
+                <Link href="/" className="flex-shrink-0" aria-label="Yoga Alliance">
+                  <Image
+                    src="/yg_logo-removebg-preview.png"
+                    alt="Yoga Alliance"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Main Navbar */}
-      <div className="w-full bg-white shadow-sm">
-        <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Left: Burger (mobile) + Logo */}
-            <div className="flex items-center gap-3">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="md:hidden hover:bg-transparent focus:bg-transparent active:bg-transparent"
-                onClick={() => setMobileMenuOpen(true)}
-                aria-label="Open menu"
-              >
-                <Menu size={24} />
-              </Button>
-
-              <Link href="/" className="flex-shrink-0" aria-label="Home">
-                <Image
-                  src="/logo30-removebg-preview.png"
-                  alt="Rishikul"
-                  width={140}
-                  height={70}
-                  className="object-contain"
-                  priority
-                />
-              </Link>
-            </div>
-
-            {/* Center: Nav (desktop) */}
-            <nav
-              className="hidden md:flex items-center gap-6 text-sm font-medium"
-              style={{ color: TEXT }}
-            >
-              {mainNav.map((item) => {
-                const hasDropdown = "dropdown" in item && Array.isArray((item as any).dropdown);
-
-                if (!hasDropdown) {
-                  return (
-                    <Link
-                      key={item.name}
-                      href={(item as any).href!}
-                      className={cn(
-                        "px-1 py-2 hover:text-black",
-                        isActive((item as any).href) && "font-semibold text-black"
-                      )}
-                    >
-                      {item.name}
-                    </Link>
-                  );
-                }
-
-                return (
-                  <div key={item.name} className="relative">
-                    <button
-                      onClick={() => toggleDesktopDropdown(item.name)}
-                      className="flex items-center gap-1 px-1 py-2 hover:text-black"
-                      aria-haspopup="menu"
-                      aria-expanded={desktopDropdown === item.name}
-                    >
-                      {item.name}
-                      <ChevronDown
-                        size={16}
-                        className={cn(
-                          "transition-transform",
-                          desktopDropdown === item.name && "rotate-180"
-                        )}
-                      />
-                    </button>
-                    {desktopDropdown === item.name && (
-                      <div
-                        className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 rounded-md shadow-lg z-50"
-                        style={{ borderBottomColor: BRAND_GOLD }}
-                        onMouseLeave={() => setDesktopDropdown(null)}
-                      >
-                        <ul className="py-2">
-                          {(item as any).dropdown?.map((sub: any) => (
-                            <li key={sub.name}>
-                              <Link
-                                href={sub.href}
-                                className="block px-4 py-2 text-sm hover:bg-gray-100"
-                                onClick={() => setDesktopDropdown(null)}
-                              >
-                                {sub.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </nav>
-
-            {/* Right: CTAs */}
-            <div className="hidden md:flex items-center gap-3">
-              <Link
-                href={{ pathname: "/contact", query: { enquiry: "1" } }}
-                className="inline-flex items-center rounded-full px-4 py-2 text-black shadow-sm hover:opacity-90"
-                style={{ backgroundColor: BRAND_GOLD }}
-              >
-                Send Enquiry
-              </Link>
-            </div>
-
-            {/* Right (mobile): Yoga Alliance badge or placeholders */}
-            <div className="md:hidden">
-              <Link href="/" className="flex-shrink-0" aria-label="Yoga Alliance">
-                <Image
-                  src="/yg_logo-removebg-preview.png"
-                  alt="Yoga Alliance"
-                  width={40}
-                  height={40}
-                  className="object-contain"
-                />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer + Overlay (above everything) */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300",
+          "fixed inset-0 z-[60] bg-black bg-opacity-50 transition-opacity duration-300",
           mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
         onClick={() => setMobileMenuOpen(false)}
