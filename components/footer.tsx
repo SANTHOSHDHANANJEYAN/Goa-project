@@ -9,7 +9,7 @@ export default function Footer() {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/ftvbg2.jpg" // replace with your background image path
+          src="/ftvbg2.jpg"
           alt="Footer background"
           fill
           sizes="100vw"
@@ -115,7 +115,7 @@ export default function Footer() {
           {/* Right: Follow Us + Iran Branch */}
           <div>
             <h3 className="text-lg font-bold text-[#E0B973]">Follow Us On</h3>
-            <div className="mt-3 flex items-center justify-center md:justify-start gap-4">
+            <div className="mt-3 flex items-center justify-center md:justify-start gap-4 flex-wrap">
               <Link
                 href="https://youtube.com/@rishikulyogshalagoa?si=gXYn1x60tu2cRbKc"
                 target="_blank"
@@ -165,14 +165,12 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 mt-8" />
 
-        {/* Bottom Row: Privacy + Copyright */}
-        <div className="mt-4 flex flex-col md:flex-row items-center justify-between">
-          <div className="text-center md:text-left">
-            <Link href="/privacypolicy" className="underline hover:text-[#E0B973]">
-              Privacy Policy
-            </Link>
-          </div>
-          <div className="text-xs mt-2 md:mt-0">
+        {/* Bottom: Centered Privacy + Copyright */}
+        <div className="mt-4 flex flex-col items-center justify-center text-center gap-2">
+          <Link href="/privacypolicy" className="underline hover:text-[#E0B973]">
+            Privacy Policy
+          </Link>
+          <div className="text-xs">
             &copy; {new Date().getFullYear()} Rishikul Yogshala Goa. All rights reserved.
           </div>
         </div>
