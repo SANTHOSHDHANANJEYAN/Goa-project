@@ -1,30 +1,32 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Phone,
+  Mail,
+  Facebook,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Youtube,
+  Pinterest,
+  Star,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
 
-const yellowItems = [
-  "About Us",
-  "Program",
-  "Retreat",
-  "Our Teachers",
-  "Our Reviews",
-  "Blogs",
-  "Gallery",
-  "Contact Us",
-  "Payment",
-];
+// Brand colors
+const BRAND_GOLD = "#E0B973";
+const BRAND_GREEN = "#16A34A";
+const TEXT = "#1F2937";
 
+// Existing content (kept)
 const leftNavigation = [
   {
     name: "Courses",
@@ -33,45 +35,65 @@ const leftNavigation = [
       { name: "100 Hr Multi-Style-Yoga TTC", href: "/100hrsyogattc" },
       { name: "200 Hr Multi-Style-Yoga TTC", href: "/200hrsyogattc" },
       { name: "300 Hr Multi-Style-Yoga TTC", href: "/300hrsyogattc" },
-      { name: "21 Days Yoga Immersion Course", href: "/21dayscourses" },
-    ],
+      { name: "21 Days Yoga Immersion Course", href: "/21dayscourses" }
+    ]
   },
   {
     name: "Retreats",
     dropdown: [
       { name: "7 Days Yoga Holiday Retreat", href: "/7daysretreat" },
       { name: "14 Days Yoga Detox Retreat", href: "/14daysretreat" },
-      { name: "21 Days Yoga Wellness Retreat", href: "/21daysretreat" },
-    ],
+      { name: "21 Days Yoga Wellness Retreat", href: "/21daysretreat" }
+    ]
   },
   { name: "Our Teachers", href: "/AboutTeachers" },
   { name: "Our Reviews", href: "/Reviews" },
   { name: "Blogs", href: "/Blog" },
-  { name: "Gallery", href: "/gallery" },
+  { name: "Gallery", href: "/gallery" }
 ];
 
 const rightNavigation = [
   { name: "About Us", href: "/Aboutyogshala" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Payment", href: "/payment" },
+  { name: "Payment", href: "/payment" }
+];
+
+// Build nav to match screenshot layout
+const aboutDropdown = [
+  { name: "About Us", href: "/Aboutyogshala" },
+  { name: "Our Teachers", href: "/AboutTeachers" },
+  { name: "Our Reviews", href: "/Reviews" },
+];
+
+const coursesDropdown = leftNavigation[0]?.dropdown ?? [];
+const retreatsDropdown = leftNavigation[1]?.dropdown ?? [];
+
+const mainNav = [
+  { name: "Home", href: "/" },
+  { name: "About", dropdown: aboutDropdown },
+  { name: "Yoga Courses", dropdown: coursesDropdown },
+  { name: "Yoga Retreat", dropdown: retreatsDropdown },
+  { name: "Gallery", href: "/gallery" },
+  { name: "FAQ", href: "/faq" },
+  { name: "Blog", href: "/Blog" },
+  { name: "Contact Us", href: "/contact" },
+];
+
+// Topbar social links (replace href with your profiles)
+const socialLinks = [
+  { name: "Facebook", href: "https://facebook.com/", Icon: Facebook },
+  { name: "Instagram", href: "https://instagram.com/", Icon: Instagram },
+  { name: "Twitter", href: "https://twitter.com/", Icon: Twitter },
+  { name: "LinkedIn", href: "https://linkedin.com/", Icon: Linkedin },
+  { name: "YouTube", href: "https://youtube.com/", Icon: Youtube },
+  { name: "Pinterest", href: "https://pinterest.com/", Icon: Pinterest },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null);
-  const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
+  const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null); // mobile drawer
+  const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null); // desktop navbar
   const pathname = usePathname();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const toggleDropdown = (name: string) => {
     setExpandedDropdown((prev) => (prev === name ? null : name));
@@ -81,25 +103,25 @@ export default function Header() {
     setDesktopDropdown((prev) => (prev === name ? null : name));
   };
 
+  const isActive = (href?: string) => (href ? pathname === href : false);
+
   const renderDrawerNav = () => {
-    const allItems = [...leftNavigation, ...rightNavigation];
-    return allItems.map((item, index) => {
-      const isYellow = yellowItems.includes(item.name);
-      const hasDropdown = "dropdown" in item && Array.isArray(item.dropdown);
+    // Build a combined mobile structure similar to the mainNav
+    const drawerItems = mainNav.concat([{ name: "Payment", href: "/payment" }]);
+    return drawerItems.map((item, index) => {
+      const hasDropdown = "dropdown" in item && Array.isArray((item as any).dropdown);
 
       return (
         <div key={item.name}>
           {!hasDropdown ? (
             <Link
-              href={item.href!}
+              href={(item as any).href!}
               className={cn(
-                "block text-base font-medium py-2 text-[#1F2937] hover:text-[#3E8E7E] transition-colors",
-                isYellow && "text-[#1F2937]"
+                "block text-base font-medium py-2 text-[#1F2937]",
+                isActive((item as any).href) && "text-black font-semibold"
               )}
               onClick={() => setMobileMenuOpen(false)}
-              style={{
-                fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-              }}
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
             >
               {item.name}
             </Link>
@@ -107,39 +129,30 @@ export default function Header() {
             <>
               <button
                 className={cn(
-                  "w-full flex justify-between items-center text-base font-medium py-2 text-[#1F2937] hover:text-[#3E8E7E] transition-colors",
-                  isYellow && "text-[#1F2937]"
+                  "w-full flex justify-between items-center text-base font-medium py-2 text-[#1F2937] hover:text-black"
                 )}
                 onClick={() => toggleDropdown(item.name)}
-                style={{
-                  fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-                }}
+                style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
               >
                 <span>{item.name}</span>
                 <ChevronDown
                   size={16}
-                  className={cn(
-                    "transition-transform",
-                    expandedDropdown === item.name && "rotate-180"
-                  )}
+                  className={cn("transition-transform", expandedDropdown === item.name && "rotate-180")}
                 />
               </button>
               {expandedDropdown === item.name && (
                 <div className="ml-4 space-y-2">
-                  {item.dropdown?.map((subItem, idx) => (
+                  {(item as any).dropdown?.map((subItem: any, idx: number) => (
                     <div key={subItem.name}>
                       <Link
                         href={subItem.href}
-                        className="block text-sm py-1 text-[#1F2937] hover:text-[#3E8E7E] transition-colors"
+                        className="block text-sm py-1 text-[#1F2937] hover:text-black"
                         onClick={() => setMobileMenuOpen(false)}
-                        style={{
-                          fontFamily:
-                            '"Helvetica Neue", Helvetica, Arial, sans-serif',
-                        }}
+                        style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
                       >
                         {subItem.name}
                       </Link>
-                      {idx !== item.dropdown.length - 1 && (
+                      {idx !== (item as any).dropdown.length - 1 && (
                         <div className="border-t border-gray-200" />
                       )}
                     </div>
@@ -148,187 +161,193 @@ export default function Header() {
               )}
             </>
           )}
-          {index !== allItems.length - 1 && (
-            <div className="border-t border-gray-300 my-2" />
-          )}
+
+          {index !== drawerItems.length - 1 && <div className="border-t border-gray-300 my-2" />}
         </div>
       );
     });
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F9FAF8] shadow-sm transition-all duration-300">
-      {/* Top Yellow Bar - Hidden when scrolled */}
-      <div 
-        className={cn(
-          "w-full bg-[#f9f7f4] text-[#1F2937] text-xs sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 transition-all duration-300 overflow-hidden",
-          scrolled ? "max-h-0 py-0" : "max-h-20"
-        )}
-      >
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
-          <div className="flex flex-wrap items-center gap-2 sm:gap-4 md:gap-6 justify-center sm:justify-start">
-            <a 
-              href="tel:+919520024333" 
-              className="flex items-center gap-1 hover:text-[#3E8E7E] transition-colors"
-            >
-              <Phone size={12} className="sm:w-3 sm:h-3" />
-              <span className="text-xs sm:text-sm">+91-9520024333</span>
-            </a>
-            <a 
-              href="mailto:rishikulyogshalagoa@gmail.com" 
-              className="flex items-center gap-1 hover:text-[#3E8E7E] transition-colors"
-            >
-              <Mail size={12} className="sm:w-3 sm:h-3" />
-              <span className="hidden md:inline text-xs sm:text-sm">rishikulyogshalagoa@gmail.com</span>
-              <span className="md:hidden text-xs">Email Us</span>
-            </a>
-          </div>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+      {/* Top Gold Contact/Social Bar */}
+      <div className="w-full" style={{ backgroundColor: BRAND_GOLD }}>
+        <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
+          <div className="flex h-10 items-center justify-between text-sm" style={{ color: TEXT }}>
+            {/* Left: phone + email */}
+            <div className="flex items-center gap-4">
+              <a
+                href="tel:+918433225327"
+                className="inline-flex items-center gap-2 hover:opacity-90"
+                aria-label="Call us"
+              >
+                <Phone size={16} />
+                <span className="hidden sm:inline">+91-8433225327</span>
+              </a>
 
-          <div className="flex items-center gap-3 md:gap-4">
-            <div className="flex items-center gap-3 text-[#1F2937]">
+              <div className="hidden sm:block h-4 w-px bg-black/30" />
+
               <a
-                href="https://www.facebook.com/share/1Cjee3xdbp/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#3E8E7E] transition-colors"
-                aria-label="Facebook"
+                href="mailto:contact@rishikulyogshalarishikesh.com"
+                className="inline-flex items-center gap-2 hover:opacity-90"
+                aria-label="Email us"
               >
-                <FaFacebookF className="w-3 h-3 sm:w-4 sm:h-4" />
+                <Mail size={16} />
+                <span className="hidden sm:inline">contact@rishikulyogshalarishikesh.com</span>
               </a>
-              <a
-                href="https://www.instagram.com/rishikulyogshalagoa/?igsh=MXJtNW0wYmFkZ3MwbA%3D%3D#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#3E8E7E] transition-colors"
-                aria-label="Instagram"
+            </div>
+
+            {/* Right: Our Review + Socials */}
+            <div className="flex items-center gap-4">
+              <Link
+                href="/Reviews"
+                className="inline-flex items-center gap-2 hover:opacity-90"
+                aria-label="Our Review"
               >
-                <FaInstagram className="w-3 h-3 sm:w-4 sm:h-4" />
-              </a>
-              <a
-                href="https://www.youtube.com/@rishikulyogshalagoa?si=gXYn1x60tu2cRbKc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#3E8E7E] transition-colors"
-                aria-label="YouTube"
-              >
-                <FaYoutube className="w-3 h-3 sm:w-4 sm:h-4" />
-              </a>
+                <Star size={16} />
+                <span className="hidden sm:inline">Our Review</span>
+              </Link>
+
+              <div className="hidden sm:flex items-center gap-3">
+                {socialLinks.map(({ name, href, Icon }) => (
+                  <a
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={name}
+                    className="hover:opacity-90"
+                  >
+                    <Icon size={18} />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <div 
-        className={cn(
-          "mx-auto max-w-[90rem] px-2 sm:px-4 lg:px-8 transition-all duration-300",
-          scrolled ? "py-2" : "py-0"
-        )}
-      >
-        <div className="grid grid-cols-3 items-center h-16 sm:h-20">
-          {/* Left Side Menu */}
-          <div className="flex items-center gap-2 sm:gap-4 lg:gap-12">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="hover:bg-transparent focus:bg-transparent active:bg-transparent p-1 sm:p-2"
-              onClick={() => setMobileMenuOpen(true)}
+      {/* Main Navbar */}
+      <div className="w-full bg-white shadow-sm">
+        <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            {/* Left: Burger (mobile) + Logo */}
+            <div className="flex items-center gap-3">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="md:hidden hover:bg-transparent focus:bg-transparent active:bg-transparent"
+                onClick={() => setMobileMenuOpen(true)}
+                aria-label="Open menu"
+              >
+                <Menu size={24} />
+              </Button>
+
+              <Link href="/" className="flex-shrink-0" aria-label="Home">
+                <Image
+                  src="/logo30-removebg-preview.png"
+                  alt="Rishikul"
+                  width={140}
+                  height={70}
+                  className="object-contain"
+                  priority
+                />
+              </Link>
+            </div>
+
+            {/* Center: Nav (desktop) */}
+            <nav
+              className="hidden md:flex items-center gap-6 text-sm font-medium"
+              style={{ color: TEXT }}
             >
-              <Menu size={20} className="sm:w-6 sm:h-6" />
-            </Button>
+              {mainNav.map((item) => {
+                const hasDropdown = "dropdown" in item && Array.isArray((item as any).dropdown);
 
-            <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm font-medium text-[#1F2937]">
-              <div className="relative">
-                <button
-                  onClick={() => toggleDesktopDropdown("Program")}
-                  className="flex items-center gap-1 hover:text-[#E0B973] transition-colors py-2"
-                >
-                  COURSES
-                  <ChevronDown
-                    size={14}
-                    className={cn(
-                      "transition-transform",
-                      desktopDropdown === "Program" && "rotate-180"
-                    )}
-                  />
-                </button>
-                {desktopDropdown === "Program" && (
-                  <div className="absolute top-full left-0 mt-1 w-56 xl:w-64 bg-white border border-gray-200 border-b-4 border-[#E0B973] rounded-md shadow-lg z-50">
-                    <ul className="py-2">
-                      {leftNavigation[0]?.dropdown?.map((item) => (
-                        <li key={item.name}>
-                          <Link
-                            href={item.href}
-                            className="block px-3 xl:px-4 py-2 text-xs xl:text-sm hover:bg-gray-100 transition-colors"
-                            onClick={() => setDesktopDropdown(null)}
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
+                if (!hasDropdown) {
+                  return (
+                    <Link
+                      key={item.name}
+                      href={(item as any).href!}
+                      className={cn(
+                        "px-1 py-2 hover:text-black",
+                        isActive((item as any).href) && "font-semibold text-black"
+                      )}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                }
 
-              <div className="relative">
-                <button
-                  onClick={() => toggleDesktopDropdown("Retreat")}
-                  className="flex items-center gap-1 hover:text-[#E0B973] transition-colors py-2"
-                >
-                  RETREATS
-                  <ChevronDown
-                    size={14}
-                    className={cn(
-                      "transition-transform",
-                      desktopDropdown === "Retreat" && "rotate-180"
+                return (
+                  <div key={item.name} className="relative">
+                    <button
+                      onClick={() => toggleDesktopDropdown(item.name)}
+                      className="flex items-center gap-1 px-1 py-2 hover:text-black"
+                      aria-haspopup="menu"
+                      aria-expanded={desktopDropdown === item.name}
+                    >
+                      {item.name}
+                      <ChevronDown
+                        size={16}
+                        className={cn(
+                          "transition-transform",
+                          desktopDropdown === item.name && "rotate-180"
+                        )}
+                      />
+                    </button>
+                    {desktopDropdown === item.name && (
+                      <div
+                        className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 rounded-md shadow-lg z-50"
+                        style={{ borderBottomColor: BRAND_GOLD }}
+                        onMouseLeave={() => setDesktopDropdown(null)}
+                      >
+                        <ul className="py-2">
+                          {(item as any).dropdown?.map((sub: any) => (
+                            <li key={sub.name}>
+                              <Link
+                                href={sub.href}
+                                className="block px-4 py-2 text-sm hover:bg-gray-100"
+                                onClick={() => setDesktopDropdown(null)}
+                              >
+                                {sub.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     )}
-                  />
-                </button>
-                {desktopDropdown === "Retreat" && (
-                  <div className="absolute top-full left-0 mt-1 w-56 xl:w-64 bg-white border border-gray-200 border-b-4 border-[#E0B973] rounded-md shadow-lg z-50">
-                    <ul className="py-2">
-                      {leftNavigation[1]?.dropdown?.map((item) => (
-                        <li key={item.name}>
-                          <Link
-                            href={item.href}
-                            className="block px-3 xl:px-4 py-2 text-xs xl:text-sm hover:bg-gray-100 transition-colors"
-                            onClick={() => setDesktopDropdown(null)}
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
-                )}
-              </div>
+                );
+              })}
             </nav>
-          </div>
 
-          {/* Center Logo */}
-          <div className="flex justify-center">
-            <Link href="/" className="flex-shrink-0">
-              <Image
-                src="/logo30-removebg-preview.png"
-                alt="Rishikul"
-                width={scrolled ? 100 : 120}
-                height={scrolled ? 50 : 60}
-                className="object-contain transition-all duration-300 w-[80px] sm:w-[100px] lg:w-[120px]"
-              />
-            </Link>
-          </div>
+            {/* Right: CTAs */}
+            <div className="hidden md:flex items-center gap-3">
+              <Link
+                href="/payment"
+                className="inline-flex items-center rounded-full px-4 py-2 text-white shadow-sm hover:opacity-90"
+                style={{ backgroundColor: BRAND_GREEN }}
+              >
+                Pay Online
+              </Link>
+              <Link
+                href={{ pathname: "/contact", query: { enquiry: "1" } }}
+                className="inline-flex items-center rounded-full px-4 py-2 text-black shadow-sm hover:opacity-90"
+                style={{ backgroundColor: BRAND_GOLD }}
+              >
+                Send Enquiry
+              </Link>
+            </div>
 
-          {/* Right Side */}
-          <div className="flex justify-end items-center">
-            <div className="hidden sm:flex">
-              <Link href="/" className="flex-shrink-0">
+            {/* Right (mobile): Yoga Alliance badge or placeholders */}
+            <div className="md:hidden">
+              <Link href="/" className="flex-shrink-0" aria-label="Yoga Alliance">
                 <Image
                   src="/yg_logo-removebg-preview.png"
                   alt="Yoga Alliance"
-                  width={scrolled ? 80 : 100}
-                  height={scrolled ? 80 : 100}
-                  className="object-contain transition-all duration-300 w-[60px] sm:w-[80px] lg:w-[100px]"
+                  width={40}
+                  height={40}
+                  className="object-contain"
                 />
               </Link>
             </div>
@@ -346,20 +365,22 @@ export default function Header() {
       >
         <div
           className={cn(
-            "fixed top-0 right-0 w-64 sm:w-72 h-screen overflow-y-auto bg-white shadow-lg transform transition-transform duration-300 rounded-tl-[25px] rounded-bl-[25px] border-l-4 border-[#3E8E7E]",
+            "fixed top-0 right-0 w-80 max-w-[85vw] h-screen overflow-y-auto bg-white shadow-lg transform transition-transform duration-300 rounded-tl-[25px] rounded-bl-[25px] border-l-4",
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
+          style={{ borderLeftColor: BRAND_GOLD }}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="p-4 h-full flex flex-col">
-            <div className="flex justify-between items-center mb-4">
-              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+            {/* Drawer Header */}
+            <div className="flex justify-between items-center mb-2 ml-2">
+              <Link href="/" onClick={() => setMobileMenuOpen(false)} aria-label="Home">
                 <Image
                   src="/logo30-removebg-preview.png"
                   alt="Rishikul"
-                  width={100}
+                  width={120}
                   height={30}
-                  className="ml-4 sm:ml-8"
+                  className="ml-8"
                 />
               </Link>
               <Button
@@ -367,57 +388,56 @@ export default function Header() {
                 size="icon"
                 className="hover:bg-transparent focus:bg-transparent active:bg-transparent"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
               >
                 <X size={24} />
               </Button>
             </div>
 
-            <nav className="text-[#1F2937] pl-2 mt-0 flex-1 overflow-y-auto">
-              {renderDrawerNav()}
-            </nav>
-
-            {/* Social Media Links in Drawer */}
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <p className="text-sm font-medium text-[#1F2937] mb-3">Follow Us</p>
-              <div className="flex items-center gap-4 justify-center">
-                <a
-                  href="https://www.facebook.com/share/1Cjee3xdbp/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#1F2937] hover:text-[#3E8E7E] transition-colors"
-                  aria-label="Facebook"
-                >
-                  <FaFacebookF className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.instagram.com/rishikulyogshalagoa/?igsh=MXJtNW0wYmFkZ3MwbA%3D%3D#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#1F2937] hover:text-[#3E8E7E] transition-colors"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.youtube.com/@rishikulyogshalagoa?si=gXYn1x60tu2cRbKc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#1F2937] hover:text-[#3E8E7E] transition-colors"
-                  aria-label="YouTube"
-                >
-                  <FaYoutube className="w-5 h-5" />
-                </a>
-              </div>
+            {/* Contact quick links */}
+            <div className="mt-2 mb-4 flex items-center gap-4 text-sm" style={{ color: TEXT }}>
+              <a href="tel:+918433225327" className="inline-flex items-center gap-2">
+                <Phone size={16} />
+                <span>+91-8433225327</span>
+              </a>
+              <a href="mailto:contact@rishikulyogshalarishikesh.com" className="inline-flex items-center gap-2">
+                <Mail size={16} />
+                <span>Mail</span>
+              </a>
             </div>
 
-            <div className="mt-4 mb-4">
-              <div className="relative w-full h-[80px] rounded-lg overflow-hidden">
+            {/* Drawer Nav */}
+            <nav className="text-[#1F2937] pl-1 mt-0">{renderDrawerNav()}</nav>
+
+            {/* CTAs */}
+            <div className="mt-6 flex gap-3">
+              <Link
+                href="/payment"
+                className="flex-1 inline-flex items-center justify-center rounded-full px-4 py-2 text-white shadow-sm"
+                style={{ backgroundColor: BRAND_GREEN }}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pay Online
+              </Link>
+              <Link
+                href={{ pathname: "/contact", query: { enquiry: "1" } }}
+                className="flex-1 inline-flex items-center justify-center rounded-full px-4 py-2 text-black shadow-sm"
+                style={{ backgroundColor: BRAND_GOLD }}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Send Enquiry
+              </Link>
+            </div>
+
+            {/* Bottom Badge/Image */}
+            <div className="mt-auto mb-8 pt-4">
+              <div className="relative w-full h-[90px] rounded-lg overflow-hidden">
                 <Image
                   src="/yg_logo-removebg-preview.png"
                   alt="Yoga Alliance"
-                  width={100}
+                  width={120}
                   height={50}
-                  className="object-cover mx-auto"
+                  className="object-contain mx-auto"
                 />
               </div>
             </div>
