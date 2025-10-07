@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Schedule100() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoUrl = '/Videos/24daysvideo.mov';
+  const youtubeVideoId = 'DHbMWNWy7x4';
 
   const schedule = [
     ['05:00 AM – 05:30 AM', 'Herbal Tea'],
@@ -55,11 +55,12 @@ export default function Schedule100() {
         <div className="md:w-1/2 flex items-center justify-center">
           <div className="relative w-full max-w-xl aspect-video overflow-hidden rounded-2xl shadow-lg">
             {isPlaying ? (
-              <video
-                src={videoUrl}
-                controls
-                autoPlay
-                className="w-full h-full object-cover rounded-2xl"
+              <iframe
+                src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`}
+                title="Daily Schedule Video"
+                className="w-full h-full rounded-2xl"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
               />
             ) : (
               <>
