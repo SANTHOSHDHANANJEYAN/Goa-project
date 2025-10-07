@@ -3,12 +3,31 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+  FaYoutube,
+  FaPinterestP,
+  FaTumblr,
+} from "react-icons/fa";
 
-const yellowItems = ["About Us", "Program", "Retreat", "Our Teachers", "Our Reviews", "Blogs", "Gallery", "Contact Us", "Payment"];
+const yellowItems = [
+  "About Us",
+  "Program",
+  "Retreat",
+  "Our Teachers",
+  "Our Reviews",
+  "Blogs",
+  "Gallery",
+  "Contact Us",
+  "Payment",
+];
 
 const leftNavigation = [
   {
@@ -18,27 +37,27 @@ const leftNavigation = [
       { name: "100 Hr Multi-Style-Yoga TTC", href: "/100hrsyogattc" },
       { name: "200 Hr Multi-Style-Yoga TTC", href: "/200hrsyogattc" },
       { name: "300 Hr Multi-Style-Yoga TTC", href: "/300hrsyogattc" },
-      { name: "21 Days Yoga Immersion Course", href: "/21dayscourses" }
-    ]
+      { name: "21 Days Yoga Immersion Course", href: "/21dayscourses" },
+    ],
   },
   {
     name: "Retreats",
     dropdown: [
       { name: "7 Days Yoga Holiday Retreat", href: "/7daysretreat" },
       { name: "14 Days Yoga Detox Retreat", href: "/14daysretreat" },
-      { name: "21 Days Yoga Wellness Retreat", href: "/21daysretreat" }
-    ]
+      { name: "21 Days Yoga Wellness Retreat", href: "/21daysretreat" },
+    ],
   },
   { name: "Our Teachers", href: "/AboutTeachers" },
   { name: "Our Reviews", href: "/Reviews" },
   { name: "Blogs", href: "/Blog" },
-  { name: "Gallery", href: "/gallery" }
+  { name: "Gallery", href: "/gallery" },
 ];
 
 const rightNavigation = [
   { name: "About Us", href: "/Aboutyogshala" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Payment", href: "/payment" }
+  { name: "Payment", href: "/payment" },
 ];
 
 export default function Header() {
@@ -46,6 +65,7 @@ export default function Header() {
   const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null);
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+
   const toggleDropdown = (name: string) => {
     setExpandedDropdown((prev) => (prev === name ? null : name));
   };
@@ -65,9 +85,14 @@ export default function Header() {
           {!hasDropdown ? (
             <Link
               href={item.href!}
-              className={cn("block text-base font-medium py-2 text-[#1F2937]", isYellow && "text-[#1F2937]")}
+              className={cn(
+                "block text-base font-medium py-2 text-[#1F2937]",
+                isYellow && "text-[#1F2937]"
+              )}
               onClick={() => setMobileMenuOpen(false)}
-              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
+              style={{
+                fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+              }}
             >
               {item.name}
             </Link>
@@ -79,12 +104,17 @@ export default function Header() {
                   isYellow && "text-[#1F2937]"
                 )}
                 onClick={() => toggleDropdown(item.name)}
-                style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
+                style={{
+                  fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+                }}
               >
                 <span>{item.name}</span>
                 <ChevronDown
                   size={16}
-                  className={cn("transition-transform", expandedDropdown === item.name && "rotate-180")}
+                  className={cn(
+                    "transition-transform",
+                    expandedDropdown === item.name && "rotate-180"
+                  )}
                 />
               </button>
               {expandedDropdown === item.name && (
@@ -95,7 +125,10 @@ export default function Header() {
                         href={subItem.href}
                         className="block text-sm py-1 text-[#1F2937] hover:text-[#3E8E7E]"
                         onClick={() => setMobileMenuOpen(false)}
-                        style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
+                        style={{
+                          fontFamily:
+                            '"Helvetica Neue", Helvetica, Arial, sans-serif',
+                        }}
                       >
                         {subItem.name}
                       </Link>
@@ -108,19 +141,57 @@ export default function Header() {
               )}
             </>
           )}
-
-          {index !== allItems.length - 1 && <div className="border-t border-gray-300 my-2" />}
+          {index !== allItems.length - 1 && (
+            <div className="border-t border-gray-300 my-2" />
+          )}
         </div>
       );
     });
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F9FAF8] backdrop-blur-md shadow-sm py-3 transition-colors">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F9FAF8] shadow-sm">
+      {/* Top Yellow Bar */}
+      <div className="w-full bg-[#E0B973] text-[#1F2937] text-sm py-2 px-4 flex flex-wrap justify-between items-center">
+        <div className="flex flex-wrap items-center gap-3 md:gap-6">
+          <div className="flex items-center gap-1">
+            <Phone size={14} />
+            <span>+91-8433225327</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Mail size={14} />
+            <span>contact@rishikulyogshalarishikesh.com</span>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3 md:gap-6 mt-2 md:mt-0">
+          <div className="flex items-center gap-2">
+            <Image src="/reviewicon.png" alt="Review" width={20} height={20} />
+            <span>Our Review</span>
+          </div>
+          <div className="flex items-center gap-3 text-[#1F2937]">
+            <FaFacebookF />
+            <FaInstagram />
+            <FaTwitter />
+            <FaLinkedinIn />
+            <FaYoutube />
+            <FaPinterestP />
+            <FaTumblr />
+          </div>
+        </div>
+      </div>
+
+      {/* Main White Navigation */}
       <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center h-16">
+        <div className="grid grid-cols-3 items-center h-20">
+          {/* Left Side Menu */}
           <div className="flex items-center gap-[3rem] ">
-            <Button variant="ghost" size="icon" className="hover:bg-transparent focus:bg-transparent active:bg-transparent" onClick={() => setMobileMenuOpen(true)}>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:bg-transparent focus:bg-transparent active:bg-transparent"
+              onClick={() => setMobileMenuOpen(true)}
+            >
               <Menu size={24} />
             </Button>
 
@@ -131,7 +202,13 @@ export default function Header() {
                   className="flex items-center gap-1 hover:text-[#E0B973]"
                 >
                   COURSES
-                  <ChevronDown size={16} className={cn("transition-transform", desktopDropdown === "Program" && "rotate-180")} />
+                  <ChevronDown
+                    size={16}
+                    className={cn(
+                      "transition-transform",
+                      desktopDropdown === "Program" && "rotate-180"
+                    )}
+                  />
                 </button>
                 {desktopDropdown === "Program" && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-[#E0B973] rounded-md shadow-lg z-50">
@@ -158,7 +235,13 @@ export default function Header() {
                   className="flex items-center gap-1 hover:text-[#E0B973]"
                 >
                   RETREATS
-                  <ChevronDown size={16} className={cn("transition-transform", desktopDropdown === "Retreat" && "rotate-180")} />
+                  <ChevronDown
+                    size={16}
+                    className={cn(
+                      "transition-transform",
+                      desktopDropdown === "Retreat" && "rotate-180"
+                    )}
+                  />
                 </button>
                 {desktopDropdown === "Retreat" && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 border-b-4 border-[#E0B973] rounded-md shadow-lg z-50">
@@ -181,22 +264,37 @@ export default function Header() {
             </nav>
           </div>
 
+          {/* Center Logo */}
           <div className="flex justify-center">
             <Link href="/" className="flex-shrink-0">
-              <Image src="/logo30-removebg-preview.png" alt="Rishikul" width={120} height={60} className="object-contain" />
+              <Image
+                src="/logo30-removebg-preview.png"
+                alt="Rishikul"
+                width={120}
+                height={60}
+                className="object-contain"
+              />
             </Link>
           </div>
 
+          {/* Right Side */}
           <div className="flex justify-end items-center gap-4">
             <div className="hidden md:flex flex-col text-[13px] leading-tight text-right text-[#1F2937]">
               <Link href="/" className="flex-shrink-0">
-                <Image src="/yg_logo-removebg-preview.png" alt="Yoga Alliance" width={100} height={100} className="object-contain" />
+                <Image
+                  src="/yg_logo-removebg-preview.png"
+                  alt="Yoga Alliance"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
               </Link>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Mobile Drawer */}
       <div
         className={cn(
           "fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300",
@@ -214,9 +312,20 @@ export default function Header() {
           <div className="p-4 h-full flex flex-col">
             <div className="flex justify-between items-center mb-[0.5rem] ml-[1rem]">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                <Image src="/logo30-removebg-preview.png" alt="Rishikul" width={120} height={30} className="ml-[2.5rem]" />
+                <Image
+                  src="/logo30-removebg-preview.png"
+                  alt="Rishikul"
+                  width={120}
+                  height={30}
+                  className="ml-[2.5rem]"
+                />
               </Link>
-              <Button variant="ghost" size="icon" className="hover:bg-transparent focus:bg-transparent active:bg-transparent" onClick={() => setMobileMenuOpen(false)}>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-transparent focus:bg-transparent active:bg-transparent"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 <X size={24} />
               </Button>
             </div>
@@ -227,7 +336,13 @@ export default function Header() {
 
             <div className="mt-auto mb-8 pt-4">
               <div className="relative w-full h-[90px] rounded-lg overflow-hidden">
-                <Image src="/yg_logo-removebg-preview.png" alt="Yoga image" width={120} height={50} className="object-cover ml-[3rem]" />
+                <Image
+                  src="/yg_logo-removebg-preview.png"
+                  alt="Yoga image"
+                  width={120}
+                  height={50}
+                  className="object-cover ml-[3rem]"
+                />
               </div>
             </div>
           </div>
