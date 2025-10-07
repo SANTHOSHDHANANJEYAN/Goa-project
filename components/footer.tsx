@@ -103,7 +103,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center justify-center md:justify-start">
                 <Phone className="w-4 h-4 mr-2 flex-shrink-0 text-[#E0B973]" />
-                +91 80899 92515
+                +91-9520024333‬
               </li>
               <li className="flex items-center justify-center md:justify-start">
                 <Mail className="w-4 h-4 mr-2 flex-shrink-0 text-[#E0B973]" />
