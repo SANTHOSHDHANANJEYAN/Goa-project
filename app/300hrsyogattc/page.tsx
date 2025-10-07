@@ -8,7 +8,7 @@ import Link from "next/link";
 const TestimonialCarousel = dynamic(() => import("@/components/testimonials-section"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
 const AboutTraining200 = dynamic(() => import("@/components/300hr/AboutTraining300"));
-const CurriculumSection300 = dynamic(() => import("@/components/300hr/CurriculumSection300"));
+const CurriculumSection200 = dynamic(() => import("@/components/300hr/CurriculumSection300"));
 const ActivitiesSection200 = dynamic(() => import("@/components/300hr/ActivitiesSection300"));
 const BatchScheduleTable200 = dynamic(() => import("@/components/300hr/BatchScheduleTable300"));
 const TestimonialSection200 = dynamic(() => import("@/components/300hr/TestimonialSection300"));
