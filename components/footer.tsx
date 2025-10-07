@@ -56,8 +56,8 @@ export default function Footer() {
             <Image
               src="/logo30-removebg-preview.png"
               alt="Rishikul Yogshala Logo"
-              width={220}
-              height={80}
+              width={150}
+              height={70}
               className="mx-auto cursor-pointer transition-transform duration-300 hover:scale-105"
             />
           </Link>
