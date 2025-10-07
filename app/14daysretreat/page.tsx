@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useInView } from 'react-intersection-observer';
+import Link from "next/link";
 
 // Helper component for lazy-loading sections
 const LazySection = ({ Component }: { Component: React.ElementType }) => {
