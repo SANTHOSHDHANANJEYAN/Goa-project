@@ -11,11 +11,7 @@ import {
   Mail,
   Facebook,
   Instagram,
-  Twitter,
-  Linkedin,
   Youtube,
-  Pinterest,
-  Star,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -83,10 +79,7 @@ const mainNav = [
 const socialLinks = [
   { name: "Facebook", href: "https://facebook.com/", Icon: Facebook },
   { name: "Instagram", href: "https://instagram.com/", Icon: Instagram },
-  { name: "Twitter", href: "https://twitter.com/", Icon: Twitter },
-  { name: "LinkedIn", href: "https://linkedin.com/", Icon: Linkedin },
-  { name: "YouTube", href: "https://youtube.com/", Icon: Youtube },
-  { name: "Pinterest", href: "https://pinterest.com/", Icon: Pinterest },
+  { name: "YouTube", href: "https://youtube.com/", Icon: Youtube }
 ];
 
 export default function Header() {
