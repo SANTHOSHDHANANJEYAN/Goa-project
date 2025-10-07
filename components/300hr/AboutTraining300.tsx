@@ -122,8 +122,7 @@ const curriculumData: CurriculumItem[] = [
   },
   {
     title: "Anatomy and physiology of Yogic practices",
-    content: [
-      "What is Yogic Anatomy and physiology?",
+    content: [ "What is Yogic Anatomy and physiology?",
       "Understanding Anatomy in respect to Yoga",
       "Introduction of 10 major System in the Human Body",
       "Introduction to Skeletal System and its Significance",
@@ -149,37 +148,31 @@ const curriculumData: CurriculumItem[] = [
       "TLC and how its in actual scenario",
       "Gas Exchange Process and factor which impacts it",
       "Respiratory Diseases and Yogic Applications to help in improve the condition",
-      "General FAQ for Students understanding"
-    ]
+      "General FAQ for Students understanding"]
   },
   {
     title: "Concentration and Meditation practices",
-    content: [
-      "What is Meditation?",
+    content: ["What is Meditation?",
       "What is the difference between Dharana and Dhyana?",
       "What are types of Meditation",
       "Breath Awareness Meditation",
       "Mantra Awareness Meditation",
       "Candle and Inner Light Meditation",
-      "Full moon Meditation"
-    ]
+      "Full moon Meditation"]
   },
   {
     title: "Yoga Nidra (Conscious Yogic sleep)",
-    content: [
-      "What is Yoga Nidra?",
+    content: ["What is Yoga Nidra?",
       "What is sleep?",
       "Four states of consciousness",
       "Benefits of deep sleep",
       "Yoga Nidra practices from Satyananda tradition",
       "How Yoga Nidra practices cure insomnia problems?",
-      "Adjusting in Shavansana"
-    ]
+      "Adjusting in Shavansana"]
   },
   {
     title: "Principle of teaching Asana (Adjustment and Alignment)",
-    content: [
-      "Six steps of doing Asana correctly",
+    content: ["Six steps of doing Asana correctly",
       "The fundamentals of practicing side extension, forward extension, backward extension and revolving action",
       "1. Side Extension",
       "Open pelvic",
@@ -212,44 +205,38 @@ const curriculumData: CurriculumItem[] = [
       "Dandasana",
       "How to correct postures verbally and by hands on adjustments",
       "Modifying the asana",
-      "Various limitation, contra-indications and benefits of yoga asana"
-    ]
+      "Various limitation, contra-indications and benefits of yoga asana"]
   },
   {
     title: "Shat karma philosophy and practice",
-    content: [
-      "Introduction of Shat Kriya according to Hatha Yoga",
-      "Practicum of Jal Neti and Sutra Neti (Cleansing Mucus or blockages from nasal passages and sinus)"
-    ]
+    content: ["Introduction of Shat Kriya according to Hatha Yoga",
+      "Practicum of Jal Neti and Sutra Neti (Cleansing Mucus or blockages from nasal passages and sinus)"]
   },
   {
     title: "Mantra Yoga",
-    content: [
-      "Introduction of Mantra yoga",
+    content: ["Introduction of Mantra yoga",
       "Significance of (OM)-AUM",
       "Mantra for Meal Purification",
       "Mantra for Obstacles",
       "Mantra for universal masters to bless",
       "Mantra for Realization",
-      "Mantra for well being"
-    ]
+      "Mantra for well being"]
   },
   {
     title: "Teaching Methodology",
-    content: [
-      "Disciplines of yoga teachers and students in yoga ashrams",
+    content: ["Disciplines of yoga teachers and students in yoga ashrams",
       "The scope of listening, presence, directive and non-directive dialogue",
       "How important is demonstration?",
       "What are the preparations for classroom?",
       "How to sequence the class?",
       "How to describe the practice, techniques, and delivery in teaching a class?",
-      "Discussion on different types of lesson planning"
-    ]
+      "Discussion on different types of lesson planning"]
   }
 ];
 
 export default function AboutTraining() {
   const [openDropdowns, setOpenDropdowns] = useState<{ [key: number]: boolean }>({});
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const toggleDropdown = (index: number) => {
     setOpenDropdowns(prev => ({
@@ -258,88 +245,160 @@ export default function AboutTraining() {
     }));
   };
 
+  const handlePlayVideo = () => {
+    setIsVideoPlaying(true);
+  };
+
   return (
     <>
-      {/* Section 1 - Best 300 Hour Yoga Teacher Training */}
-      <section className="py-16 px-6 md:px-24 bg-white">
+      {/* Section 1 - Best 200 Hour Yoga Teacher Training */}
+      <section className="py-16 px-6 md:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-8 text-center">
-            Best 300 Hour Yoga Teacher Training in Goa
+          {/* Section Heading */}
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-12 text-center">
+            Best 200 Hour Yoga Teacher Training in Goa
           </h2>
 
-          <div className="space-y-6 text-gray-700 leading-relaxed">
-            <p>
-              Welcome to the Advanced Curriculum of Yoga. Once you have completed the foundational concepts of yoga from 
-              the 200 hours Yoga Teacher Training Program; you have indeed reached one step closer to pursuing your dreams 
-              to be one of the best yoga teachers out there by pursuing the 300 hours Yoga Teacher Training Program.
-            </p>
-            
-            <p>
-              Rishikul Yogshala offers the 300 Hour Yoga Teacher Training in Goa, India, to students who practice or teach 
-              yoga and desire to be master practitioners and career-oriented professional yoga teachers themselves. This is 
-              an intensive, 28-day program in which you'll be completely immersed in multi-style study and practice of yoga 
-              from different dimensions.
-            </p>
-            
-            <p>
-              Immerse yourself in intensive asana sessions, or advance breath awareness practices, intense meditative sessions, 
-              in depth alignment and anatomy physiology sessions and extensive teaching methodology sessions and many more.
-            </p>
-            
-            <p>
-              Apart from the above Rishikul Yogshala welcomes you to Goa's picturesque towns, where you can be in complete 
-              serenity and at peace of mind.
-            </p>
+          {/* Content Grid */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Text Content */}
+            <div className="space-y-6 text-gray-700 leading-relaxed md:pr-8">
+              <p>
+               Welcome to the Advanced Curriculum of Yoga. Once you have completed the foundational concepts of yoga from the 200 hours Yoga Teacher Training Program; you have indeed reached one step closer to pursuing your dreams to be one of the best yoga teachers out there by pursuing the 300 hours Yoga Teacher Training Program. 
+              </p>
+
+              <p>
+               Rishikul Yogshala offers the 300 Hour Yoga Teacher Training in Goa, India, to students who practice or teach yoga and desire to be master practitioners and career-oriented professional yoga teachers themselves. This is an intensive, 28-day program in which you'll be completely immersed in multi-style study and practice of yoga from different dimensions.
+              </p>
+
+              <p>
+               Immerse yourself in intensive asana sessions, or advance breath awareness practices, intense meditative sessions, in depth alignment and anatomy physiology sessions and extensive teaching methodology sessions and many more.
+              </p>
+
+              <p>
+              Apart from the above Rishikul Yogshala welcomes you to Goa's picturesque towns, where you can be in complete serenity and at peace of mind.
+              </p>
+            </div>
+
+            {/* Right Video Section */}
+            <div className="flex justify-center md:justify-end">
+              <div className="relative w-full max-w-md lg:max-w-lg overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
+                {!isVideoPlaying ? (
+                  <>
+                    {/* Thumbnail Image */}
+                    <img
+                      src="/Thumbnail/thumbnail-2.jpg"
+                      alt="200 Hour Yoga Teacher Training in Goa"
+                      className="w-full aspect-video object-cover rounded-2xl cursor-pointer transition-transform duration-500 hover:scale-105"
+                      onClick={handlePlayVideo}
+                    />
+
+                    {/* Centered Professional Play Button */}
+                    <button
+                      onClick={handlePlayVideo}
+                      className="absolute inset-0 flex items-center justify-center"
+                    >
+                      <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors duration-300">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="#627d6a"
+                          viewBox="0 0 24 24"
+                          width="28"
+                          height="28"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </button>
+                  </>
+                ) : (
+                  /* YouTube iframe */
+                  <iframe
+                    className="w-full aspect-video rounded-2xl"
+                    src="https://www.youtube.com/embed/8AveOsMT7-A?autoplay=1"
+                    title="200 Hour Yoga Teacher Training in Goa"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Section 2 - Curriculum */}
-      <section className="py-16 px-6 md:px-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-8 text-center">
-            300 Hour Yoga Teacher Training Curriculum
-          </h2>
-          
-          <div className="space-y-4">
-            {curriculumData.map((item, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
-                <button
-                  onClick={() => toggleDropdown(index)}
-                  className="w-full px-6 py-4 bg-white hover:bg-gray-50 transition-colors duration-200 
-                           flex justify-between items-center text-left"
+      <section
+        className="relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/aboutpics/333.jpg')",
+        }}
+      >
+        <div className="relative max-w-5xl mx-auto py-24 px-6 md:px-16 text-center">
+          <div className="bg-white/80 rounded-xl shadow-lg p-10 md:p-16 backdrop-blur-md">
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6 tracking-wide uppercase">
+              300 Hour Yoga Teacher Training Curriculum
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed mb-10">
+              Explore our in-depth yoga curriculum designed to enhance your practice,
+              teaching methodology, and spiritual journey.
+            </p>
+
+            <div className="space-y-4 text-left">
+              {curriculumData.map((item, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <span className="text-lg font-medium text-[#150e70]">{item.title}</span>
-                  {openDropdowns[index] ? (
-                    <FaChevronUp className="text-[#150e70] flex-shrink-0" />
-                  ) : (
-                    <FaChevronDown className="text-[#150e70] flex-shrink-0" />
+                  <button
+                    onClick={() => toggleDropdown(index)}
+                    className="w-full px-6 py-4 bg-white hover:bg-gray-50 transition-colors duration-200 
+                               flex justify-between items-center text-left"
+                  >
+                    <span className="text-lg font-medium text-gray-800">
+                      {item.title}
+                    </span>
+                    {openDropdowns[index] ? (
+                      <FaChevronUp className="text-gray-600 flex-shrink-0" />
+                    ) : (
+                      <FaChevronDown className="text-gray-600 flex-shrink-0" />
+                    )}
+                  </button>
+
+                  {openDropdowns[index] && item.content.length > 0 && (
+                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                      <ul className="space-y-2">
+                        {item.content.map((contentItem, contentIndex) => (
+                          <li
+                            key={contentIndex}
+                            className="text-gray-700 flex items-start"
+                          >
+                            <span className="text-indigo-500 mr-2 mt-1">•</span>
+                            <span>{contentItem}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   )}
-                </button>
-                
-                {openDropdowns[index] && item.content.length > 0 && (
-                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <ul className="space-y-2">
-                      {item.content.map((contentItem, contentIndex) => (
-                        <li key={contentIndex} className="text-gray-700 flex items-start">
-                          <span className="text-indigo-500 mr-2 mt-1">•</span>
-                          <span>{contentItem}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                
-                {openDropdowns[index] && item.content.length === 0 && (
-                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-500 italic">Content coming soon...</p>
-                  </div>
-                )}
-              </div>
-            ))}
+
+                  {openDropdowns[index] && item.content.length === 0 && (
+                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                      <p className="text-gray-500 italic">Content coming soon...</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12">
+              <button className="px-8 py-3 bg-[#150e70] text-white font-medium rounded-md shadow-md hover:bg-[#0f0a55] transition-all duration-300">
+                Start Your Journey
+              </button>
+            </div>
           </div>
         </div>
       </section>
     </>
   );
-      }
+}
