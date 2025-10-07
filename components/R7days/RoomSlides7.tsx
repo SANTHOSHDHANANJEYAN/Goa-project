@@ -91,7 +91,7 @@ export default function YogicAccommodationSection() {
       {/* Right Side Image */}
       <div className="relative w-full h-full flex justify-center items-center">
         <Image
-          src="/images/accommodation-right.jpg" // 🖼️ Replace with your image path
+          src="/Accomdation/11.avif" // 🖼️ Replace with your image path
           alt="Yoga Accommodation in Goa"
           width={600}
           height={400}
