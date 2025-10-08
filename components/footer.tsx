@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
 
         {/* Three Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-[2rem] text-center md:text-left pl-[3rem]">
           {/* Left: Important Links (Programs + Retreats) */}
           <div>
             <h3 className="text-lg font-bold text-[#E0B973]">Important Links</h3>
@@ -72,6 +72,13 @@ export default function Footer() {
                   21 Days Yoga Immersion Course
                 </Link>
               </li>
+
+            </ul>
+          </div>
+                    <div>
+            <h3 className="text-lg font-bold text-[#E0B973]">Important Links</h3>
+            <ul className="mt-3 space-y-2">
+
               <li>
                 <Link href="/7daysretreat" className="hover:text-[#E0B973] inline-flex items-start">
                   <span className="mr-2 text-[#E0B973]">›</span>

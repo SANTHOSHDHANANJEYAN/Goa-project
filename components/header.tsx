@@ -73,6 +73,7 @@ const mainNav = [
   { name: "FAQ", href: "/faq" },
   { name: "Blog", href: "/Blog" },
   { name: "Contact Us", href: "/contact" },
+  { name: "Payment", href: "/payment" },
 ];
 
 // Topbar social links
@@ -209,8 +210,8 @@ export default function Header() {
         style={{ backgroundColor: BRAND_GOLD }}
         aria-hidden={shouldHideTopbar}
       >
-        <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
-          <div className="flex h-10 items-center justify-between text-sm" style={{ color: TEXT }}>
+        <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8 ">
+          <div className="flex h-10 items-center justify-between text-sm pl-[7rem]" style={{ color: TEXT }}>
             {/* Left: phone + email */}
             <div className="flex items-center gap-4">
               <a
@@ -236,7 +237,7 @@ export default function Header() {
 
             {/* Right: Socials */}
             <div className="flex items-center gap-4">
-              <div className="hidden sm:flex items-center gap-3">
+              <div className="hidden sm:flex items-center gap-3 pr-[12rem]">
                 {socialLinks.map(({ name, href, Icon }) => (
                   <a
                     key={name}
@@ -273,10 +274,10 @@ export default function Header() {
 
               <Link href="/" className="flex-shrink-0" aria-label="Home">
                 <Image
-                  src="/logo30-removebg-preview.png"
+                  src="/goalogo.webp"
                   alt="Rishikul"
-                  width={140}
-                  height={70}
+                  width={130}
+                  height={60}
                   className="object-contain"
                   priority
                 />
