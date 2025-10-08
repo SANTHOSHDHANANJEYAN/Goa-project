@@ -4,6 +4,8 @@ import React from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Accommodation200 from "@/components/200hr/Accomodations200";
+import Food200 from "@/components/200hr/Food200";
 // Lazy imports
 const TestimonialCarousel = dynamic(() => import("@/components/testimonials-section"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
@@ -42,7 +44,7 @@ const TwoHundredHourTTPage = () => (
   {/* Centered Text Content */}
   <div className="absolute top-[25%] w-full text-center px-4">
     <h1 className="text-white text-3xl md:text-5xl font-semibold leading-snug drop-shadow-lg uppercase">
-      00-Hrs Accredited Yoga Teacher Training
+      200-Hrs Accredited Yoga Teacher Training
     </h1>
     <p className="text-white text-lg md:text-2xl font-medium mt-4 drop-shadow-md">
       Join an exciting and life-changing 24-Days journey in Goa
@@ -67,7 +69,7 @@ const TwoHundredHourTTPage = () => (
 <section className="bg-white p-8 min-h-screen flex flex-col items-center">
   <div className="text-center mb-6">
     <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mb-4">
-      300-Hrs Accredited Yoga Teacher Training
+      200-Hrs Accredited Yoga Teacher Training
     </h2>
     <p className="text-3xl md:text-4xl font-bold text-[#2317bc]">In Goa</p>
   </div>
@@ -77,7 +79,7 @@ const TwoHundredHourTTPage = () => (
   </h1>
 
   <p className="text-lg text-center text-[#150e70] mb-6">
-    Join an exciting and life-changing 27-Days journey in Goa
+    Join an exciting and life-changing 24-Days journey in Goa
   </p>
 
   <div className="flex justify-center mb-10">
@@ -151,9 +153,10 @@ const TwoHundredHourTTPage = () => (
     
     <BatchScheduleTable200 />
     <OurRooms7 />
-    <RoomSlides7 />
+    <Accommodation200/>   
     <OurDinning7 />
     <DinningSlides7 />
+    <Food200/>
     <ActivitiesSection200 />
     <TeachersSection200 />
     <TestimonialSection200 />

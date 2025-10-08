@@ -4,8 +4,6 @@ import React from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import Accommodations300 from "@/components/300hr/Accomodations300";
-import Food300 from "@/components/300hr/Food300";
 // Lazy imports
 const TestimonialCarousel = dynamic(() => import("@/components/testimonials-section"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
@@ -44,7 +42,7 @@ const ThreeHundredHourTTPage = () => (
   {/* Centered Text Content */}
   <div className="absolute top-[25%] w-full text-center px-4">
     <h1 className="text-white text-3xl md:text-5xl font-semibold leading-snug drop-shadow-lg uppercase">
-      300-Hrs Accredited Yoga Teacher Training
+      200-Hrs Accredited Yoga Teacher Training
     </h1>
     <p className="text-white text-lg md:text-2xl font-medium mt-4 drop-shadow-md">
       Join an exciting and life-changing 27-Days journey in Goa
@@ -153,10 +151,9 @@ const ThreeHundredHourTTPage = () => (
     
     <BatchScheduleTable200 />
     <OurRooms7 />
-    <Accommodations300/>
+    <RoomSlides7 />
     <OurDinning7 />
     <DinningSlides7 />
-     <Food300/>
     <ActivitiesSection200 />
     <TeachersSection200 />
     <TestimonialSection200 />

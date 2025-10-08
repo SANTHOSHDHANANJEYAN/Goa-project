@@ -52,7 +52,7 @@ export default function YogicAccommodationSection() {
       {/* Left Text Section */}
       <div>
         <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
-          Experience the best and most comfortable stay in your 200 Hour Yoga Teacher Training
+          Experience the best and most comfortable stay in your 500 Hour Yoga Teacher Training
           in Goa at Rishikul Yogshala. Located few minutes walking distance from Arambol scenic
           beach, our yoga centre provides just the best blend of Nature and therapeutic yoga
           practices to enhance your Yogic Experience. With an appealing smell of sea waves in

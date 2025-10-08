@@ -28,7 +28,7 @@ const accommodationFeatures = [
   'A Calm Serene peaceful space for contemplation'
 ];
 
-export default function YogicAccommodationSection() {
+export default function Accommodation200() {
   const [isClient, setIsClient] = useState(false);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
