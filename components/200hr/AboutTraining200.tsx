@@ -122,7 +122,8 @@ const curriculumData: CurriculumItem[] = [
   },
   {
     title: "Anatomy and physiology of Yogic practices",
-    content: [ "What is Yogic Anatomy and physiology?",
+    content: [
+      "What is Yogic Anatomy and physiology?",
       "Understanding Anatomy in respect to Yoga",
       "Introduction of 10 major System in the Human Body",
       "Introduction to Skeletal System and its Significance",
@@ -148,31 +149,37 @@ const curriculumData: CurriculumItem[] = [
       "TLC and how its in actual scenario",
       "Gas Exchange Process and factor which impacts it",
       "Respiratory Diseases and Yogic Applications to help in improve the condition",
-      "General FAQ for Students understanding"]
+      "General FAQ for Students understanding"
+    ]
   },
   {
     title: "Concentration and Meditation practices",
-    content: ["What is Meditation?",
+    content: [
+      "What is Meditation?",
       "What is the difference between Dharana and Dhyana?",
       "What are types of Meditation",
       "Breath Awareness Meditation",
       "Mantra Awareness Meditation",
       "Candle and Inner Light Meditation",
-      "Full moon Meditation"]
+      "Full moon Meditation"
+    ]
   },
   {
     title: "Yoga Nidra (Conscious Yogic sleep)",
-    content: ["What is Yoga Nidra?",
+    content: [
+      "What is Yoga Nidra?",
       "What is sleep?",
       "Four states of consciousness",
       "Benefits of deep sleep",
       "Yoga Nidra practices from Satyananda tradition",
       "How Yoga Nidra practices cure insomnia problems?",
-      "Adjusting in Shavansana"]
+      "Adjusting in Shavansana"
+    ]
   },
   {
     title: "Principle of teaching Asana (Adjustment and Alignment)",
-    content: ["Six steps of doing Asana correctly",
+    content: [
+      "Six steps of doing Asana correctly",
       "The fundamentals of practicing side extension, forward extension, backward extension and revolving action",
       "1. Side Extension",
       "Open pelvic",
@@ -205,38 +212,44 @@ const curriculumData: CurriculumItem[] = [
       "Dandasana",
       "How to correct postures verbally and by hands on adjustments",
       "Modifying the asana",
-      "Various limitation, contra-indications and benefits of yoga asana"]
+      "Various limitation, contra-indications and benefits of yoga asana"
+    ]
   },
   {
     title: "Shat karma philosophy and practice",
-    content: ["Introduction of Shat Kriya according to Hatha Yoga",
-      "Practicum of Jal Neti and Sutra Neti (Cleansing Mucus or blockages from nasal passages and sinus)"]
+    content: [
+      "Introduction of Shat Kriya according to Hatha Yoga",
+      "Practicum of Jal Neti and Sutra Neti (Cleansing Mucus or blockages from nasal passages and sinus)"
+    ]
   },
   {
     title: "Mantra Yoga",
-    content: ["Introduction of Mantra yoga",
+    content: [
+      "Introduction of Mantra yoga",
       "Significance of (OM)-AUM",
       "Mantra for Meal Purification",
       "Mantra for Obstacles",
       "Mantra for universal masters to bless",
       "Mantra for Realization",
-      "Mantra for well being"]
+      "Mantra for well being"
+    ]
   },
   {
     title: "Teaching Methodology",
-    content: ["Disciplines of yoga teachers and students in yoga ashrams",
+    content: [
+      "Disciplines of yoga teachers and students in yoga ashrams",
       "The scope of listening, presence, directive and non-directive dialogue",
       "How important is demonstration?",
       "What are the preparations for classroom?",
       "How to sequence the class?",
       "How to describe the practice, techniques, and delivery in teaching a class?",
-      "Discussion on different types of lesson planning"]
+      "Discussion on different types of lesson planning"
+    ]
   }
 ];
 
 export default function AboutTraining() {
   const [openDropdowns, setOpenDropdowns] = useState<{ [key: number]: boolean }>({});
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const toggleDropdown = (index: number) => {
     setOpenDropdowns(prev => ({
@@ -245,9 +258,7 @@ export default function AboutTraining() {
     }));
   };
 
-  const handlePlayVideo = () => {
-    setIsVideoPlaying(true);
-  };
+  const youtubeUrl = "https://www.youtube.com/watch?v=8AveOsMT7-A";
 
   return (
     <>
@@ -295,44 +306,36 @@ export default function AboutTraining() {
             {/* Right Video Section */}
             <div className="flex justify-center md:justify-end">
               <div className="relative w-full max-w-md lg:max-w-lg overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
-                {!isVideoPlaying ? (
-                  <>
-                    {/* Thumbnail Image */}
-                    <img
-                      src="/Thumbnail/thumbnail-2.jpg"
-                      alt="200 Hour Yoga Teacher Training in Goa"
-                      className="w-full aspect-video object-cover rounded-2xl cursor-pointer transition-transform duration-500 hover:scale-105"
-                      onClick={handlePlayVideo}
-                    />
+                <a
+                  href={youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block relative"
+                  aria-label="Watch the 200 Hour Yoga Teacher Training in Goa on YouTube (opens in new tab)"
+                >
+                  {/* Thumbnail Image */}
+                  <img
+                    src="/Thumbnail/thumbnail-2.jpg"
+                    alt="200 Hour Yoga Teacher Training in Goa"
+                    className="w-full aspect-video object-cover rounded-2xl cursor-pointer transition-transform duration-500 group-hover:scale-105"
+                  />
 
-                    {/* Centered Professional Play Button */}
-                    <button
-                      onClick={handlePlayVideo}
-                      className="absolute inset-0 flex items-center justify-center"
-                    >
-                      <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors duration-300">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="#627d6a"
-                          viewBox="0 0 24 24"
-                          width="28"
-                          height="28"
-                        >
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </button>
-                  </>
-                ) : (
-                  /* YouTube iframe */
-                  <iframe
-                    className="w-full aspect-video rounded-2xl"
-                    src="https://www.youtube.com/embed/8AveOsMT7-A?autoplay=1"
-                    title="200 Hour Yoga Teacher Training in Goa"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                )}
+                  {/* Centered Professional Play Button (decorative) */}
+                  <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition-colors duration-300 group-hover:bg-gray-100">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#627d6a"
+                        viewBox="0 0 24 24"
+                        width="28"
+                        height="28"
+                        aria-hidden="true"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </span>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
