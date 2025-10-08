@@ -1,11 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Schedule100() {
-  const [isPlaying, setIsPlaying] = useState(false);
   const youtubeVideoId = 'DHbMWNWy7x4';
+  const youtubeUrl = `https://www.youtube.com/watch?v=${youtubeVideoId}`;
 
   const schedule = [
     ['05:00 AM – 05:30 AM', 'Herbal Tea'],
@@ -53,42 +52,35 @@ export default function Schedule100() {
 
         {/* RIGHT: Video Section */}
         <div className="md:w-1/2 flex items-center justify-center">
-          <div className="relative w-full max-w-xl aspect-video overflow-hidden rounded-2xl shadow-lg">
-            {isPlaying ? (
-              <iframe
-                src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`}
-                title="Daily Schedule Video"
-                className="w-full h-full rounded-2xl"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            ) : (
-              <>
-                <Image
-                  src="/Thumbnail/thumbnail-1.jpg"
-                  alt="Video Thumbnail"
-                  width={640}
-                  height={360}
-                  className="object-cover w-full h-full rounded-2xl"
-                  loading="lazy"
-                />
-                <button
-                  aria-label="Play Video"
-                  className="absolute inset-0 flex items-center justify-center"
-                  onClick={() => setIsPlaying(true)}
-                >
-                  <svg
-                    className="h-16 w-16 sm:h-20 sm:w-20 text-white opacity-90 hover:scale-110 transition-transform"
-                    fill="currentColor"
-                    viewBox="0 0 84 84"
-                  >
-                    <circle cx="42" cy="42" r="42" fill="#000" opacity="0.4" />
-                    <polygon points="33,26 60,42 33,58" fill="white" />
-                  </svg>
-                </button>
-              </>
-            )}
-          </div>
+          <a
+            href={youtubeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch the daily schedule video on YouTube (opens in a new tab)"
+            className="relative group w-full max-w-xl aspect-video overflow-hidden rounded-2xl shadow-lg block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#150e70] focus-visible:ring-offset-2"
+          >
+            <Image
+              src="/Thumbnail/thumbnail-1.jpg"
+              alt="Daily Schedule Video Thumbnail"
+              width={640}
+              height={360}
+              className="object-cover w-full h-full rounded-2xl transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+
+            {/* Play button overlay (decorative) */}
+            <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <svg
+                className="h-16 w-16 sm:h-20 sm:w-20 text-white opacity-90 transition-transform group-hover:scale-110"
+                fill="currentColor"
+                viewBox="0 0 84 84"
+                aria-hidden="true"
+              >
+                <circle cx="42" cy="42" r="42" fill="#000" opacity="0.4" />
+                <polygon points="33,26 60,42 33,58" fill="white" />
+              </svg>
+            </span>
+          </a>
         </div>
 
       </div>
