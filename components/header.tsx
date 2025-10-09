@@ -12,6 +12,8 @@ import {
   Facebook,
   Instagram,
   Youtube,
+  Pinterest,
+  Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -70,6 +72,8 @@ const socialLinks = [
   { name: "Facebook", href: "https://www.facebook.com/share/1Cjee3xdbp/", Icon: Facebook },
   { name: "Instagram", href: "https://www.instagram.com/rishikulyogshalagoa/", Icon: Instagram },
   { name: "YouTube", href: "https://www.youtube.com/@rishikulyogshalagoa", Icon: Youtube },
+  { name: "Pinterest", href: "https://in.pinterest.com/Rishikulyogashala/", Icon: Pinterest },
+  { name: "Twitter", href: "https://x.com/yogattcgoa", Icon: Twitter },
 ];
 
 export default function Header() {
