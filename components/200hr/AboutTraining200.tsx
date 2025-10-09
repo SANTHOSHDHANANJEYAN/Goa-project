@@ -352,7 +352,7 @@ export default function AboutTraining() {
           >
             {/* Thumbnail (16:9) */}
             <img
-              src="/Thumbnail/instagram-reel-thumb.jpg"
+              src="/Thumbnail/thumbnail3.jpg"
               alt="Instagram Reel: 200 Hour Yoga Teacher Training in Goa"
               className="w-full aspect-video object-cover"
             />
