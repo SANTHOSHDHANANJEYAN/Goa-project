@@ -1,12 +1,24 @@
 'use client';
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Lock, MapPin, Users, Heart, Globe, CheckCircle, Info } from 'lucide-react';
+import {
+  Shield,
+  Lock,
+  MapPin,
+  Users,
+  Heart,
+  Globe,
+  CheckCircle,
+  Info,
+  ChevronLeft,
+  ChevronRight,
+  Download
+} from 'lucide-react';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { duration: 0.6, ease: 'easeOut' }
   }
@@ -30,6 +42,67 @@ const BeforeYouGoSection: React.FC = () => {
     { icon: <MapPin className="w-5 h-5" />, text: "A quiet and peaceful, beautiful place to relax and contemplate yogic dimensions" },
     { icon: <Globe className="w-5 h-5" />, text: "We also assist people to travel securely and safely to our centre from the airport by taxi drivers who personally know us and have been working with us for several years" }
   ];
+
+  // Book data for the slider
+  const books = [
+    {
+      title: 'Yoga Anatomy',
+      author: 'Leslie Kaminoff',
+      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Anatomy.pdf',
+      cover: '/books/yoga-anatomy.jpg'
+    },
+    {
+      title: 'Yoga Nidra',
+      author: 'Swami Satyananda Saraswati',
+      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Nidra.pdf',
+      cover: '/books/yoga-nidra.jpg'
+    },
+    {
+      title: 'Lights of Yoga',
+      author: '',
+      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/lights-of-yoga.pdf',
+      cover: '/books/lights-of-yoga.jpg'
+    },
+    {
+      title: 'Yoga Mala',
+      author: 'Sri K. Pattabhi Jois',
+      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Mala.pdf',
+      cover: '/books/yoga-mala.jpg'
+    },
+    {
+      title: 'Autobiography of a Yogi',
+      author: 'Paramahansa Yogananda',
+      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/autobiography-of-yogi.pdf',
+      cover: '/books/autobiography-of-a-yogi.jpg'
+    },
+    {
+      title: 'Ajna Chakra',
+      author: '',
+      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ajna-chakra.pdf',
+      cover: '/books/ajna-chakra.jpg'
+    },
+    {
+      title: 'Mudra Bandha',
+      author: 'Swami Satyananda Saraswati',
+      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Mudra-Bandha.pdf',
+      cover: '/books/mudra-bandha.jpg'
+    },
+    {
+      title: 'The Ayurveda',
+      author: '',
+      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-ayurveda.pdf',
+      cover: '/books/the-ayurveda.jpg'
+    }
+  ];
+
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const scrollByAmount = (direction: 'left' | 'right') => {
+    const el = sliderRef.current;
+    if (!el) return;
+    const amount = Math.round(el.clientWidth * 0.9);
+    el.scrollBy({ left: direction === 'left' ? -amount : amount, behavior: 'smooth' });
+  };
 
   return (
     <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-20">
@@ -159,6 +232,105 @@ const BeforeYouGoSection: React.FC = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Recommended Readings Slider - NEW SECTION */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+          className="mt-20"
+        >
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-8">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#150e70]">
+                Recommended Readings Before This Course
+              </h3>
+              <p className="mt-3 text-gray-600 max-w-3xl mx-auto">
+                All the books including other study materials will be sent after enrollment of the course,
+                and an online 50-hour preparatory course will be given freely.
+              </p>
+            </div>
+
+            {/* Slider */}
+            <div className="relative">
+              {/* Controls */}
+              <button
+                type="button"
+                onClick={() => scrollByAmount('left')}
+                className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2 z-10 h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg ring-1 ring-blue-200 hover:ring-blue-400 hover:bg-white transition"
+                aria-label="Previous"
+              >
+                <ChevronLeft className="h-6 w-6 text-blue-700" />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => scrollByAmount('right')}
+                className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg ring-1 ring-blue-200 hover:ring-blue-400 hover:bg-white transition"
+                aria-label="Next"
+              >
+                <ChevronRight className="h-6 w-6 text-blue-700" />
+              </button>
+
+              {/* Track */}
+              <div
+                ref={sliderRef}
+                className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 px-1"
+                style={{ scrollbarWidth: 'none' }}
+              >
+                {books.map((book, idx) => (
+                  <div
+                    key={idx}
+                    className="snap-start min-w-[240px] sm:min-w-[260px] md:min-w-[280px] lg:min-w-[300px]"
+                  >
+                    <div className="group h-full bg-white rounded-xl ring-1 ring-teal-300/60 hover:ring-teal-500/80 shadow-md hover:shadow-xl transition overflow-hidden flex flex-col">
+                      {/* Cover */}
+                      <div className="relative aspect-[3/4] bg-gradient-to-br from-blue-100 via-white to-teal-50">
+                        <img
+                          src={book.cover}
+                          alt={`${book.title} cover`}
+                          className="absolute inset-0 w-full h-full object-cover"
+                          onError={(e) => {
+                            // fallback to gradient if image not found
+                            (e.currentTarget as HTMLImageElement).style.display = 'none';
+                          }}
+                        />
+                        <div className="pointer-events-none absolute inset-0 ring-1 ring-black/5"></div>
+                      </div>
+
+                      {/* Meta */}
+                      <div className="flex-1 p-4">
+                        <h4 className="text-base md:text-lg font-semibold text-gray-800">
+                          {book.title}
+                        </h4>
+                        {book.author ? (
+                          <p className="mt-1 text-sm text-gray-600">By {book.author}</p>
+                        ) : null}
+                      </div>
+
+                      {/* Download */}
+                      <div className="p-4 pt-0">
+                        <a
+                          href={book.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          download
+                          className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-teal-600 text-white py-2.5 font-medium shadow hover:bg-teal-700 transition"
+                        >
+                          <Download className="h-5 w-5" />
+                          Download
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </motion.section>
       </div>
     </section>
   );
