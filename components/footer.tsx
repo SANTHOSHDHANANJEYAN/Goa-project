@@ -84,9 +84,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/21dayscourses" className="hover:text-[#E0B973] inline-flex items-start">
+                <Link href="/500hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start">
                   <span className="mr-2 text-[#E0B973]">›</span>
-                  21 Days Yoga Immersion Course
+                  500 Hr Multi-Style-Yoga TTC
                 </Link>
               </li>
             </ul>
