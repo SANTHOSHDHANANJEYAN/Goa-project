@@ -274,7 +274,7 @@ export default function AboutTraining() {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {/* Left Text Content */}
             <div className="flex flex-col h-full">
-              <div className="space-y-6 text-gray-700 leading-relaxed overflow-y-auto custom-scrollbar">
+              <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
                   Our 200 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners. 
                   We at Rishikul Yogshala offer a comprehensive 200 Hour Yoga Teacher Training Course in Goa for students who 
@@ -370,8 +370,7 @@ export default function AboutTraining() {
                 >
                   <button
                     onClick={() => toggleDropdown(index)}
-                    className="w-full px-6 py-4 bg-white hover:bg-gray-50 transition-colors duration-200 
-                               flex justify-between items-center text-left"
+                    className="w-full px-6 py-4 bg-white hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center text-left"
                   >
                     <span className="text-lg font-medium text-gray-800">
                       {item.title}
@@ -416,23 +415,6 @@ export default function AboutTraining() {
           </div>
         </div>
       </section>
-
-      <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: #f1f1f1;
-          border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #888;
-          border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #555;
-        }
-      `}</style>
     </>
   );
 }
