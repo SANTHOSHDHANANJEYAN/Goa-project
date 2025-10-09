@@ -70,7 +70,7 @@ const CurriculumSection200: React.FC = () => {
   return (
     <section
       className="relative py-20 px-4 sm:px-10 bg-cover bg-center bg-fixed overflow-hidden"
-      style={{ backgroundImage: "url('/aboutpics/113.jpg')" }}
+      style={{ backgroundImage: "url('/aboutpics/curriculambg.png')" }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
