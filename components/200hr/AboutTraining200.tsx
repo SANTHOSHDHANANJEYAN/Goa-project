@@ -263,87 +263,102 @@ export default function AboutTraining() {
   return (
     <>
       {/* Section 1 - Best 200 Hour Yoga Teacher Training */}
-      <section className="py-16 px-6 md:px-20 bg-white">
-        <div className="max-w-7xl mx-auto">
-          {/* Section Heading */}
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-12 text-center">
-            Best 200 Hour Yoga Teacher Training in Goa
-          </h2>
+   <section className="py-16 px-6 md:px-20 bg-white">
+  <div className="max-w-7xl mx-auto">
+    {/* Section Heading */}
+    <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-12 text-center">
+      Best 200 Hour Yoga Teacher Training in Goa
+    </h2>
 
-          {/* Content Grid */}
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {/* Left Text Content */}
-            <div className="flex flex-col h-full">
-              <div className="space-y-6 text-gray-700 leading-relaxed">
-                <p>
-                  Our 200 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners. 
-                  We at Rishikul Yogshala offer a comprehensive 200 Hour Yoga Teacher Training Course in Goa for students who 
-                  want to begin their Yogic Journey. The 200 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted 
-                  one combining the Classical Hatha Yoga to Dynamic Ashtanga Vinyasa Yoga as primary fields.
-                </p>
+    {/* Content Grid */}
+    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+      {/* Left Text Content */}
+      <div className="flex flex-col h-full">
+        <div className="space-y-6 text-gray-700 leading-relaxed">
+          <p>
+            Our 200 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners. 
+            We at Rishikul Yogshala offer a comprehensive 200 Hour Yoga Teacher Training Course in Goa for students who 
+            want to begin their Yogic Journey. The 200 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted 
+            one combining the Classical Hatha Yoga to Dynamic Ashtanga Vinyasa Yoga as primary fields.
+          </p>
 
-                <p>
-                  Our yoga school offers holistic yoga program under the guidance of competent teachers who have International 
-                  teaching experience and value personal attention to students for better learning. The Yoga Philosophy taught 
-                  brings in different dimensions of Yoga into understanding and the Teaching Methodology sessions will equip 
-                  the students with technique, alignment, and modifications suited to be qualified and a good practitioner.
-                </p>
+          <p>
+            Our yoga school offers holistic yoga program under the guidance of competent teachers who have International 
+            teaching experience and value personal attention to students for better learning. The Yoga Philosophy taught 
+            brings in different dimensions of Yoga into understanding and the Teaching Methodology sessions will equip 
+            the students with technique, alignment, and modifications suited to be qualified and a good practitioner.
+          </p>
 
-                <p>
-                  Though participants who arrive at the course, belong to various physical and mental capabilities; nevertheless, 
-                  our 200 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others 
-                  and become the best platform for the beginners and the intermediate practitioners.
-                </p>
+          <p>
+            Though participants who arrive at the course, belong to various physical and mental capabilities; nevertheless, 
+            our 200 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others 
+            and become the best platform for the beginners and the intermediate practitioners.
+          </p>
 
-                <p>
-                  While you dedicate your valuable time in 200 Hour Yoga Teacher Training Course, it becomes our responsibility 
-                  to meet your needs with the best learning environment be it with facilities or staff too. If you seek the Best 
-                  Yoga School in Goa, your search ends at Rishikul Yogshala. We offer you an intensive curriculum, exposure to 
-                  yogic culture, picturesque landscape, and yogic food, which form your one-stop solution for classical learning 
-                  and discovery of yogic dimension within you.
-                </p>
-              </div>
-            </div>
+          <p>
+            While you dedicate your valuable time in 200 Hour Yoga Teacher Training Course, it becomes our responsibility 
+            to meet your needs with the best learning environment be it with facilities or staff too. If you seek the Best 
+            Yoga School in Goa, your search ends at Rishikul Yogshala. We offer you an intensive curriculum, exposure to 
+            yogic culture, picturesque landscape, and yogic food, which form your one-stop solution for classical learning 
+            and discovery of yogic dimension within you.
+          </p>
+        </div>
+      </div>
 
-            {/* Right Video Section */}
-            <div className="flex items-center justify-center h-full">
-              <div className="relative w-full max-w-md lg:max-w-lg overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
-                <a
-                  href={youtubeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block relative"
-                  aria-label="Watch the 200 Hour Yoga Teacher Training in Goa on YouTube (opens in new tab)"
+      {/* Right Media Section */}
+      <div className="flex flex-col h-full gap-6">
+        {/* YouTube Thumbnail Card */}
+        <div className="relative w-full overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
+          <a
+            href={youtubeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative"
+            aria-label="Watch the 200 Hour Yoga Teacher Training in Goa on YouTube (opens in new tab)"
+          >
+            {/* Thumbnail Image */}
+            <img
+              src="/Thumbnail/thumbnail-2.jpg"
+              alt="200 Hour Yoga Teacher Training in Goa"
+              className="w-full aspect-video object-cover rounded-2xl cursor-pointer transition-transform duration-500 group-hover:scale-105"
+            />
+
+            {/* Centered Professional Play Button (decorative) */}
+            <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition-colors duration-300 group-hover:bg-gray-100">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#627d6a"
+                  viewBox="0 0 24 24"
+                  width="28"
+                  height="28"
+                  aria-hidden="true"
                 >
-                  {/* Thumbnail Image */}
-                  <img
-                    src="/Thumbnail/thumbnail-2.jpg"
-                    alt="200 Hour Yoga Teacher Training in Goa"
-                    className="w-full aspect-video object-cover rounded-2xl cursor-pointer transition-transform duration-500 group-hover:scale-105"
-                  />
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </span>
+          </a>
+        </div>
 
-                  {/* Centered Professional Play Button (decorative) */}
-                  <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition-colors duration-300 group-hover:bg-gray-100">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="#627d6a"
-                        viewBox="0 0 24 24"
-                        width="28"
-                        height="28"
-                        aria-hidden="true"
-                      >
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </span>
-                  </span>
-                </a>
-              </div>
-            </div>
+        {/* Instagram Reel (9:16 vertical) */}
+        <div className="relative w-full overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
+          <div className="aspect-[9/16] w-full">
+            <iframe
+              src="https://www.instagram.com/reel/DF5UVRfIkRy/embed"
+              title="Instagram Reel: 200 Hour Yoga Teacher Training in Goa"
+              className="w-full h-full"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
           </div>
         </div>
-      </section>
-
+      </div>
+    </div>
+  </div>
+</section>
       {/* Section 2 - Curriculum */}
       <section
         className="relative bg-cover bg-center bg-no-repeat"
