@@ -48,18 +48,18 @@ const StoriesSection: React.FC = () => {
       <section className="relative text-center bg-white py-12 shadow-md mt-10">
         <div className="max-w-6xl mx-auto px-6">
           {/* Secondary Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-[#150e70] mb-6 animate-slide-up animation-delay-600">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-6 animate-slide-up animation-delay-600">
             Why Choose Rishikul Yogshala Goa?
           </h2>
 
           {/* Tagline */}
-          <p className="text-xl text-[#150e70] font-semibold mb-6 animate-slide-up animation-delay-800">
+          <p className="text-xl text-gray-600 font-semibold mb-6 animate-slide-up animation-delay-800">
             If you are looking to Experience Authentic Yoga Teacher Training in India, 
             this would be Rishikul Yogshala Goa.
           </p>
 
           {/* Detailed Description */}
-          <div className="text-lg text-[#150e70] mb-8 animate-slide-up animation-delay-1000 max-w-5xl mx-auto space-y-6 leading-relaxed">
+          <div className="text-lg text-gray-600 mb-8 animate-slide-up animation-delay-1000 max-w-5xl mx-auto space-y-6 leading-relaxed">
             <p>
               Rishikul Yogshala Goa is a Yoga Alliance–Certified School in Goa dedicated to preserving 
               the true essence of yoga. Situated close to nature and guided by teachers of International 
@@ -89,7 +89,7 @@ const StoriesSection: React.FC = () => {
 
           {/* Button */}
           <Link href="/Aboutyogshala">
-            <button className="bg-[#150e70] hover:bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300">
+            <button className="bg-[#1fbe5a] hover:bg-[#e5a724] text-white px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300">
               LEARN MORE ABOUT US
             </button>
           </Link>
