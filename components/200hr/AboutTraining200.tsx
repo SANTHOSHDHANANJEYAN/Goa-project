@@ -346,7 +346,7 @@ export default function AboutTraining() {
       <section
         className="relative bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/aboutpics/333.jpg')",
+          backgroundImage: "url('/aboutpics/curriculambg.png')",
         }}
       >
         <div className="relative max-w-5xl mx-auto py-24 px-6 md:px-16 text-center">
