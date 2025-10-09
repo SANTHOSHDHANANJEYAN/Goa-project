@@ -263,7 +263,7 @@ export default function AboutTraining() {
   return (
     <>
       {/* Section 1 - Best 200 Hour Yoga Teacher Training */}
-   <section className="py-16 px-6 md:px-20 bg-white">
+  <section className="py-16 px-6 md:px-20 bg-white">
   <div className="max-w-7xl mx-auto">
     {/* Section Heading */}
     <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-12 text-center">
@@ -323,7 +323,7 @@ export default function AboutTraining() {
               className="w-full aspect-video object-cover rounded-2xl cursor-pointer transition-transform duration-500 group-hover:scale-105"
             />
 
-            {/* Centered Professional Play Button (decorative) */}
+            {/* Centered Play Button (decorative) */}
             <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition-colors duration-300 group-hover:bg-gray-100">
                 <svg
@@ -341,19 +341,40 @@ export default function AboutTraining() {
           </a>
         </div>
 
-        {/* Instagram Reel (9:16 vertical) */}
+        {/* Instagram Reel as landscape thumbnail (opens in new tab) */}
         <div className="relative w-full overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
-          <div className="aspect-[9/16] w-full">
-            <iframe
-              src="https://www.instagram.com/reel/DF5UVRfIkRy/embed"
-              title="Instagram Reel: 200 Hour Yoga Teacher Training in Goa"
-              className="w-full h-full"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          </div>
+          <a
+            href="https://www.instagram.com/reel/DF5UVRfIkRy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative"
+            aria-label="Open the Instagram Reel in a new tab"
+          >
+            {/* Thumbnail (16:9) */}
+            <div className="relative w-full aspect-video bg-gradient-to-br from-fuchsia-500 via-rose-500 to-amber-400">
+              <img
+                src="/Thumbnail/instagram-reel-thumb.jpg"
+                alt="Instagram Reel: 200 Hour Yoga Teacher Training in Goa"
+                className="absolute inset-0 w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+
+            {/* Centered Play Button (decorative) */}
+            <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition-colors duration-300 group-hover:bg-gray-100">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#E1306C"
+                  viewBox="0 0 24 24"
+                  width="28"
+                  height="28"
+                  aria-hidden="true"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </span>
+          </a>
         </div>
       </div>
     </div>
