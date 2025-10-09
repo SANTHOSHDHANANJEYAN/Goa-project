@@ -12,7 +12,6 @@ import {
   Facebook,
   Instagram,
   Youtube,
-  Pinterest,
   Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -21,6 +20,23 @@ import Image from "next/image";
 
 const BRAND_GOLD = "#E0B973";
 const TEXT = "#1F2937";
+
+// Simple custom Pinterest icon (SVG). No external package needed.
+type IconProps = React.ComponentProps<"svg"> & { size?: number };
+const PinterestIcon = ({ size = 18, className, ...rest }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    className={className}
+    fill="currentColor"
+    aria-hidden="true"
+    {...rest}
+  >
+    <path d="M12 2C6.48 2 2 6.26 2 11.64c0 3.92 2.52 7.26 6.03 8.45-.08-.72-.16-1.83.03-2.62.18-.76 1.17-4.86 1.17-4.86s-.3-.6-.3-1.49c0-1.4.81-2.45 1.82-2.45.86 0 1.28.65 1.28 1.43 0 .87-.56 2.18-.85 3.39-.24 1.01.51 1.84 1.52 1.84 1.82 0 3.22-1.92 3.22-4.69 0-2.45-1.76-4.17-4.27-4.17-2.91 0-4.63 2.18-4.63 4.44 0 .88.34 1.83.77 2.35.08.1.09.19.07.29-.08.32-.26 1.01-.3 1.16-.05.18-.15.22-.35.13-1.3-.6-2.11-2.49-2.11-4.01 0-3.27 2.38-6.27 6.87-6.27 3.61 0 6.41 2.57 6.41 6.01 0 3.58-2.26 6.46-5.4 6.46-1.05 0-2.03-.55-2.37-1.21l-.65 2.51c-.24.94-.89 2.11-1.33 2.83.99.31 2.03.48 3.12.48 5.52 0 10-4.26 10-9.64C22 6.26 17.52 2 12 2z" />
+  </svg>
+);
 
 const leftNavigation = [
   {
@@ -72,7 +88,7 @@ const socialLinks = [
   { name: "Facebook", href: "https://www.facebook.com/share/1Cjee3xdbp/", Icon: Facebook },
   { name: "Instagram", href: "https://www.instagram.com/rishikulyogshalagoa/", Icon: Instagram },
   { name: "YouTube", href: "https://www.youtube.com/@rishikulyogshalagoa", Icon: Youtube },
-  { name: "Pinterest", href: "https://in.pinterest.com/Rishikulyogashala/", Icon: Pinterest },
+  { name: "Pinterest", href: "https://in.pinterest.com/Rishikulyogashala/", Icon: PinterestIcon },
   { name: "Twitter", href: "https://x.com/yogattcgoa", Icon: Twitter },
 ];
 
@@ -149,7 +165,7 @@ export default function Header() {
               </button>
               {expandedDropdown === item.name && (
                 <div className="ml-4 space-y-2">
-                  {item.dropdown?.map((sub, idx) => (
+                  {item.dropdown?.map((sub) => (
                     <Link
                       key={sub.name}
                       href={sub.href}
