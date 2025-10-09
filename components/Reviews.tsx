@@ -7,7 +7,7 @@ const Reviews: React.FC = () => {
   return (
     <section className="pt-12 pb-16 bg-transparent relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#150e70] mb-12 text-center">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-black mb-12 text-center">
           Our Yoga Alliance’s Review
         </h2>
 
@@ -127,7 +127,7 @@ const Reviews: React.FC = () => {
             href="https://r.yogaalliance.org/SchoolProfileReviews?sid=3584"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3 bg-[#150e70] text-white rounded-full font-medium shadow-md hover:bg-yellow-500 hover:text-[#150e70] transition-all duration-300"
+            className="px-8 py-3 bg-[#1fbe5a] text-white rounded-full font-medium shadow-md hover:bg-[#e5a724] hover:text-[#150e70] transition-all duration-300"
           >
             More Reviews
           </a>

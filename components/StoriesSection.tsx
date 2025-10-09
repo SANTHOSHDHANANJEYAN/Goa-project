@@ -23,12 +23,12 @@ const StoriesSection: React.FC = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl font-bold text-[#150e70] mb-6 animate-slide-up">
+          <h1 className="text-4xl md:text-5xl font-bold text-black mb-6 animate-slide-up">
             Best Yoga Teacher Training School in Goa
           </h1>
 
           {/* Introduction Paragraph */}
-          <p className="text-lg text-[#150e70] mb-8 animate-slide-up animation-delay-200 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 mb-8 animate-slide-up animation-delay-200 max-w-5xl mx-auto leading-relaxed">
             Over the last 15 years, Rishikul Yogshala has been recognized as one of the Best Yoga Schools in Goa 
             dedicated to providing authentic, traditional and classical Yogic Education. 'Rishikul' is a Sanskrit 
             word which means a place where people arrive to Gain Knowledge, and 'Yogshala' is defined as a place 
@@ -36,7 +36,7 @@ const StoriesSection: React.FC = () => {
           </p>
 
           {/* Organization Info */}
-          <p className="text-lg text-[#150e70] mb-10 animate-slide-up animation-delay-400 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 mb-10 animate-slide-up animation-delay-400 max-w-5xl mx-auto leading-relaxed">
             Our organization is headquartered in India, with one of its branches in Goa and has been guiding 
             Students on the path of their Yogic Journey. We are a team of individuals from a Yogic and 
             Spiritual background and believe in disseminating the Classical Yogic Techniques with a Modern Viewpoint.

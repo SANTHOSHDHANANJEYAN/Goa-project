@@ -55,7 +55,7 @@ export default function GalleryPage() {
 
   return (
     <div className="bg-transparent px-4 py-10 sm:px-6 lg:px-16">
-      <h1 className="text-4xl font-extrabold text-center text-indigo-800 tracking-wider drop-shadow mb-10">
+      <h1 className="text-4xl font-extrabold text-center text-black tracking-wider drop-shadow mb-10">
         Gallery
       </h1>
 
@@ -144,7 +144,7 @@ export default function GalleryPage() {
           href="/gallery"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-6 py-3 bg-[#150e70] text-white rounded-full hover:bg-yellow-500 transition"
+          className="px-6 py-3 bg-[#1fbe5a] text-white rounded-full hover:bg-yellow-500 transition"
         >
           SHOW MORE
         </a>

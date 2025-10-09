@@ -62,21 +62,17 @@ export default function TeacherSlider() {
 
   return (
         <section
-          className="relative overflow-hidden pt-[2rem] pb-[5rem] px-4 sm:px-8 bg-gradient-to-b from-white via-indigo-50 to-indigo-100 "
+          className="relative overflow-hidden pt-[2rem] pb-[5rem] px-4 sm:px-8 bg-white "
           onMouseEnter={stopAutoSlide}
           onMouseLeave={startAutoSlide}
         >
           {/* Heading */}
           <div className="text-center mb-14">
-            <h2 className="text-4xl sm:text-4xl md:text-4xl font-extrabold text-indigo-800">Our Beloved Teachers</h2>
-            <p className="text-lg text-indigo-600 mt-2 max-w-xl mx-auto">
+            <h2 className="text-4xl sm:text-4xl md:text-4xl font-extrabold text-black">Our Beloved Teachers</h2>
+            <p className="text-lg text-gray-600 mt-2 max-w-xl mx-auto">
               Meet the guiding lights of your yogic journey
             </p>
-            <div className="mt-6 flex justify-center items-center gap-4">
-              <span className="w-10 h-1 bg-indigo-500 rounded-full" />
-              <span className="w-4 h-4 bg-indigo-300 rounded-full" />
-              <span className="w-10 h-1 bg-purple-500 rounded-full" />
-            </div>
+
           </div>
           {/* Navigation Arrows */}
           <button

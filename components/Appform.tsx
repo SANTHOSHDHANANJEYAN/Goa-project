@@ -16,7 +16,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start bg-white rounded-xl shadow-md p-6">
         {/* Left Side - How to Reach */}
         <div>
-          <h3 className="text-3xl font-extrabold text-[#150e70] mb-4">
+          <h3 className="text-3xl font-extrabold text-black mb-4">
             How to Reach Us
           </h3>
           <p className="text-gray-700 mb-6">
@@ -65,11 +65,11 @@ export default function ContactForm() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mt-14">
         {/* Left Section */}
         <div className="md:w-1/2 gap-[2rem]">
-          <h2 className="text-4xl md:text-4xl font-extrabold text-[#150e70] leading-tight">
+          <h2 className="text-4xl md:text-4xl font-extrabold text-black leading-tight">
             Ready to Become a Certified <br />
             <span className="underline decoration-yellow-400">Yoga</span> Trainer !!
           </h2>
-          <p className="text-[#150e70] text-base">
+          <p className="text-gray-600 text-base">
             Our team is here to assist you. Simply fill out the form below, and
             we’ll get back to you as soon as possible!
           </p>

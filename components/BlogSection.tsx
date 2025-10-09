@@ -36,10 +36,10 @@ const BlogSection: React.FC = () => {
     <section className="pt-[3rem] pb-[3rem] bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl font-bold text-[#150e70] mb-4">
+          <h2 className="font-serif text-4xl font-bold text-black mb-4">
             Our Journal
           </h2>
-          <p className="text-lg text-[#150e70] max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Insights, stories, and guidance from our community to inspire your yoga journey.
           </p>
         </div>
@@ -63,7 +63,7 @@ const BlogSection: React.FC = () => {
               </div>
               <div className="p-6">
                 <span className="text-sm text-gray-400">{post.date}</span>
-                <h3 className="mt-2 text-2xl font-semibold text-gray-800 group-hover:text-blue-700 transition">
+                <h3 className="mt-2 text-2xl font-semibold text-gray-800  transition">
                   {post.title}
                 </h3>
                 <p className="text-gray-600 mt-2">{post.excerpt}</p>

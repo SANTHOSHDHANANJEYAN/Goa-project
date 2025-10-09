@@ -41,8 +41,8 @@ export default function Home() {
         </Suspense>
 
         <section className="pb-[2.5rem] bg-transparent text-center">
-          <p className="text-3xl italic text-[#150e70] mb-2 animate-fade-in">"Empower – Evolve – Thrive."</p>
-          <p className="text-2xl italic text-[#150e70] animate-fade-in">- By Our Yoga Retreats</p>
+          <p className="text-3xl italic text-black mb-2 animate-fade-in">"Empower – Evolve – Thrive."</p>
+          <p className="text-2xl italic text-black animate-fade-in">- By Our Yoga Retreats</p>
         </section>
 
         <Suspense fallback={<div className="text-center py-10">Loading Retreats...</div>}>

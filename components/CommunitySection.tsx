@@ -16,17 +16,17 @@ const CommunitySection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 text-center md:text-left">
         {/* Left Content */}
         <div>
-          <h2 className="text-4xl font-bold text-[#150e70] mb-4">
+          <h2 className="text-4xl font-bold text-black mb-4">
             Join a Life-Changing Community of Over 34,000 Students
           </h2>
-          <p className="text-xl text-[#150e70] font-medium">
+          <p className="text-xl text-gray-600 font-medium">
             Become part of our family at one of the leading accredited schools in Goa!
           </p>
         </div>
 
         {/* Right Content */}
         <div>
-          <h3 className="text-2xl text-[#150e70] font-medium mb-6">
+          <h3 className="text-2xl text-gray-600 font-medium mb-6">
             Since 2009, students from around the world have been joining our programs
             and earning their Yoga Alliance accredited certifications.
           </h3>
