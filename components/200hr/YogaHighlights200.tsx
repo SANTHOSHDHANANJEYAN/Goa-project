@@ -8,7 +8,6 @@ import {
   Users,
   Heart,
   Globe,
-  CheckCircle,
   Info,
   ChevronLeft,
   ChevronRight,
@@ -28,307 +27,213 @@ const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
+    transition: { staggerChildren: 0.1 }
   }
 };
 
 const BeforeYouGoSection: React.FC = () => {
   const safetyFeatures = [
-    { icon: <Shield className="w-5 h-5" />, text: "24-Hour On-Site Security" },
-    { icon: <Users className="w-5 h-5" />, text: "Guest Pre-Registration For Any Non-Staff Member or Student" },
-    { icon: <Lock className="w-5 h-5" />, text: "Safe Lockers in Our Office for Any Valuables Students May Have" },
-    { icon: <MapPin className="w-5 h-5" />, text: "A quiet and peaceful, beautiful place to relax and contemplate yogic dimensions" },
-    { icon: <Globe className="w-5 h-5" />, text: "We also assist people to travel securely and safely to our centre from the airport by taxi drivers who personally know us and have been working with us for several years" }
+    { icon: <Shield className="w-5 h-5 md:w-6 md:h-6" />, text: "24-Hour On-Site Security" },
+    { icon: <Users className="w-5 h-5 md:w-6 md:h-6" />, text: "Guest Pre-Registration for Any Non-Staff Member or Student" },
+    { icon: <Lock className="w-5 h-5 md:w-6 md:h-6" />, text: "Safe Lockers in Our Office for Any Valuables Students May Have" },
+    { icon: <MapPin className="w-5 h-5 md:w-6 md:h-6" />, text: "A quiet and peaceful, beautiful place to relax and contemplate yogic dimensions" },
+    { icon: <Globe className="w-5 h-5 md:w-6 md:h-6" />, text: "Secure travel assistance from trusted taxi drivers with years of partnership" }
   ];
 
-  // Book data for the slider
   const books = [
-    {
-      title: 'Yoga Anatomy',
-      author: 'Leslie Kaminoff',
-      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Anatomy.pdf',
-      cover: '/books/yoga-anatomy.jpg'
-    },
-    {
-      title: 'Yoga Nidra',
-      author: 'Swami Satyananda Saraswati',
-      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Nidra.pdf',
-      cover: '/books/yoga-nidra.jpg'
-    },
-    {
-      title: 'Lights of Yoga',
-      author: '',
-      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/lights-of-yoga.pdf',
-      cover: '/books/lights-of-yoga.jpg'
-    },
-    {
-      title: 'Yoga Mala',
-      author: 'Sri K. Pattabhi Jois',
-      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Mala.pdf',
-      cover: '/books/yoga-mala.jpg'
-    },
-    {
-      title: 'Autobiography of a Yogi',
-      author: 'Paramahansa Yogananda',
-      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/autobiography-of-yogi.pdf',
-      cover: '/books/autobiography-of-a-yogi.jpg'
-    },
-    {
-      title: 'Ajna Chakra',
-      author: '',
-      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ajna-chakra.pdf',
-      cover: '/books/ajna-chakra.jpg'
-    },
-    {
-      title: 'Mudra Bandha',
-      author: 'Swami Satyananda Saraswati',
-      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Mudra-Bandha.pdf',
-      cover: '/books/mudra-bandha.jpg'
-    },
-    {
-      title: 'The Ayurveda',
-      author: '',
-      href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-ayurveda.pdf',
-      cover: '/books/the-ayurveda.jpg'
-    }
+    { title: 'Yoga Anatomy', author: 'Leslie Kaminoff', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Anatomy.pdf', cover: '/books/yoga-anatomy.jpg' },
+    { title: 'Yoga Nidra', author: 'Swami Satyananda Saraswati', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Nidra.pdf', cover: '/books/yoga-nidra.jpg' },
+    { title: 'Lights of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/lights-of-yoga.pdf', cover: '/books/lights-of-yoga.jpg' },
+    { title: 'Yoga Mala', author: 'Sri K. Pattabhi Jois', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Mala.pdf', cover: '/books/yoga-mala.jpg' },
+    { title: 'Autobiography of a Yogi', author: 'Paramahansa Yogananda', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/autobiography-of-yogi.pdf', cover: '/books/autobiography-of-a-yogi.jpg' },
+    { title: 'Ajna Chakra', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ajna-chakra.pdf', cover: '/books/ajna-chakra.jpg' },
+    { title: 'Mudra Bandha', author: 'Swami Satyananda Saraswati', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Mudra-Bandha.pdf', cover: '/books/mudra-bandha.jpg' },
+    { title: 'The Ayurveda', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-ayurveda.pdf', cover: '/books/the-ayurveda.jpg' }
   ];
 
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const scrollByAmount = (direction: 'left' | 'right') => {
-    const el = sliderRef.current;
-    if (!el) return;
-    const amount = Math.round(el.clientWidth * 0.9);
-    el.scrollBy({ left: direction === 'left' ? -amount : amount, behavior: 'smooth' });
+  const scrollByAmount = (dir: 'left' | 'right') => {
+    if (!sliderRef.current) return;
+    const amt = Math.round(sliderRef.current.clientWidth * 0.9);
+    sliderRef.current.scrollBy({ left: dir === 'left' ? -amt : amt, behavior: 'smooth' });
   };
 
   return (
-    <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+    <section className="relative bg-gradient-to-b from-blue-50 via-white to-purple-50 py-12 sm:py-16 md:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+
+        {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center mb-12"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-            200 Hour Yoga Teacher Training in Goa: 
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#150e70] leading-tight">
+            200 Hour Yoga Teacher Training in Goa
           </h2>
-          <h3 className="text-2xl md:text-3xl font-semibold text-blue-600 mb-6">
-            What to Know Before You Go?
+          <h3 className="text-lg sm:text-xl md:text-2xl mt-2 font-medium text-gray-700">
+            What to Know Before You Go
           </h3>
-          <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
+          <div className="mt-3 md:mt-5 w-20 h-1 bg-[#150e70] mx-auto rounded-full"></div>
         </motion.div>
 
-        {/* Main Content */}
-        <div className="max-w-5xl mx-auto">
-          {/* Introduction */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mb-10"
-          >
-            <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
-              <div className="flex items-start space-x-3 mb-4">
-                <Heart className="w-6 h-6 text-red-500 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                    Many of these students rejoice at getting to study at the birthplace of yoga, and rightly so! 
-                    India is an incredible location, and to have the ability to study under the classical teachers 
-                    of yoga from the land of Yoga is truly mystical. Whereas some first-time travellers to India 
-                    and Asia may be just slightly nervous at having to take an independent break to an international 
-                    location, it's good to keep in mind - that we are in a very safe safe, city where a lot of 
-                    international tourists do arrive - Goa.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Safety Information */}
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 md:p-8 mb-8">
-              <div className="flex items-center mb-4">
-                <Shield className="w-7 h-7 text-green-600 mr-3" />
-                <h4 className="text-2xl font-semibold text-gray-800">Safety & Security</h4>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                As a whole, India is a very safe travel destination, and as a state, Goa itself is absolutely 
-                safe to visit. The local community has been hosting international tourists for decades, and 
-                they have an honourable and non-aggressive attitude towards guests. The economy operates based 
-                on repeat business, and local citizens take extra precautions to have this repeat business 
-                protected through precaution and respect to those who visit.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                As a school, we have an impeccable students' safety record at Rishikul Yogshala and insist 
-                on maintaining it through:
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Safety Features Grid */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="space-y-4 mb-10"
-          >
-            {safetyFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                    {feature.icon}
-                  </div>
-                  <p className="text-gray-700 flex-1">{feature.text}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Support Information */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="bg-yellow-50 border-l-4 border-yellow-400 rounded-r-xl p-6 mb-8"
-          >
-            <div className="flex items-start space-x-3">
-              <Info className="w-6 h-6 text-yellow-600 mt-1 flex-shrink-0" />
-              <p className="text-gray-700 leading-relaxed">
-                We also understand it would be stressful to visit any place in this world under this 
-                prevailing state of climate and we would happily assist you from date of receipt of 
-                this application until you return home so you would be made to feel protected and also 
-                safe during your visit.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Closing Statement */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-8 shadow-lg">
-              <Globe className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-              <p className="text-gray-700 text-lg leading-relaxed">
-                The vast majority of travellers come to India and feel as much at home here as to not 
-                ever want to leave. It's a beautiful country, and all those sceneries, people, and 
-                civilizations are so kind and rich in experience, and it's beautiful to have an effort 
-                to assist support students to take that once-in-a-lifetime journey here.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Recommended Readings Slider - NEW SECTION */}
-        <motion.section
+        {/* Intro */}
+        <motion.div
+          variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={fadeInUp}
-          className="mt-20"
+          viewport={{ once: true }}
+          className="bg-white shadow-xl rounded-2xl p-5 sm:p-8 md:p-10 mb-10 md:mb-14 border border-gray-100 hover:shadow-2xl transition-all duration-300"
         >
-          <div className="max-w-7xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-8">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#150e70]">
-                Recommended Readings Before This Course
-              </h3>
-              <p className="mt-3 text-gray-600 max-w-3xl mx-auto">
-                All the books including other study materials will be sent after enrollment of the course,
-                and an online 50-hour preparatory course will be given freely.
-              </p>
-            </div>
+          <div className="flex flex-col sm:flex-row items-start gap-4">
+            <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-pink-500 mt-1" />
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+              Studying yoga in its birthplace—India—is a mystical and transformative experience. Goa, with its serene beaches and vibrant community, welcomes international students warmly. It’s one of the safest and most peaceful destinations for yoga learning.
+            </p>
+          </div>
+        </motion.div>
 
-            {/* Slider */}
-            <div className="relative">
-              {/* Controls */}
-              <button
-                type="button"
-                onClick={() => scrollByAmount('left')}
-                className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2 z-10 h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg ring-1 ring-blue-200 hover:ring-blue-400 hover:bg-white transition"
-                aria-label="Previous"
-              >
-                <ChevronLeft className="h-6 w-6 text-blue-700" />
-              </button>
+        {/* Safety */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-[#fff8ec] via-white to-[#e6edff] rounded-2xl p-6 sm:p-8 md:p-10 mb-10 md:mb-14 shadow-md"
+        >
+          <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
+            <Shield className="w-7 h-7 sm:w-8 sm:h-8 text-[#150e70] mr-0 sm:mr-3 mb-2 sm:mb-0" />
+            <h4 className="text-xl sm:text-2xl font-semibold text-[#150e70]">Safety & Security</h4>
+          </div>
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-2">
+            Goa is a welcoming, safe, and tourist-friendly region. The local community has decades of experience hosting international guests and treats them with kindness and respect.
+          </p>
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+            At Rishikul Yogshala, we maintain an impeccable safety record through these measures:
+          </p>
+        </motion.div>
 
-              <button
-                type="button"
-                onClick={() => scrollByAmount('right')}
-                className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg ring-1 ring-blue-200 hover:ring-blue-400 hover:bg-white transition"
-                aria-label="Next"
-              >
-                <ChevronRight className="h-6 w-6 text-blue-700" />
-              </button>
+        {/* Safety Features */}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 md:mb-16"
+        >
+          {safetyFeatures.map((feature, i) => (
+            <motion.div
+              key={i}
+              variants={fadeInUp}
+              className="bg-white/90 backdrop-blur-sm border border-gray-100 rounded-xl p-4 sm:p-5 shadow hover:shadow-lg hover:-translate-y-1 transition duration-300"
+            >
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-[#e8ebff] text-[#150e70] flex-shrink-0">
+                  {feature.icon}
+                </div>
+                <p className="text-gray-700 text-sm sm:text-base">{feature.text}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
-              {/* Track */}
-              <div
-                ref={sliderRef}
-                className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 px-1"
-                style={{ scrollbarWidth: 'none' }}
-              >
-                {books.map((book, idx) => (
-                  <div
-                    key={idx}
-                    className="snap-start min-w-[240px] sm:min-w-[260px] md:min-w-[280px] lg:min-w-[300px]"
-                  >
-                    <div className="group h-full bg-white rounded-xl ring-1 ring-teal-300/60 hover:ring-teal-500/80 shadow-md hover:shadow-xl transition overflow-hidden flex flex-col">
-                      {/* Cover */}
-                      <div className="relative aspect-[3/4] bg-gradient-to-br from-blue-100 via-white to-teal-50">
-                        <img
-                          src={book.cover}
-                          alt={`${book.title} cover`}
-                          className="absolute inset-0 w-full h-full object-cover"
-                          onError={(e) => {
-                            // fallback to gradient if image not found
-                            (e.currentTarget as HTMLImageElement).style.display = 'none';
-                          }}
-                        />
-                        <div className="pointer-events-none absolute inset-0 ring-1 ring-black/5"></div>
-                      </div>
+        {/* Info */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="bg-yellow-50 border-l-4 border-yellow-400 rounded-r-2xl p-4 sm:p-6 mb-10 md:mb-14 shadow-sm"
+        >
+          <div className="flex items-start gap-3">
+            <Info className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 mt-1" />
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+              We’re dedicated to ensuring every student feels safe and cared for from arrival to departure. Assistance is available at every step of your journey.
+            </p>
+          </div>
+        </motion.div>
 
-                      {/* Meta */}
-                      <div className="flex-1 p-4">
-                        <h4 className="text-base md:text-lg font-semibold text-gray-800">
-                          {book.title}
-                        </h4>
-                        {book.author ? (
-                          <p className="mt-1 text-sm text-gray-600">By {book.author}</p>
-                        ) : null}
-                      </div>
+        {/* Closing */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-[#fdf2ff] to-[#e7f1ff] rounded-2xl p-6 sm:p-8 md:p-10 text-center shadow-lg mb-14 md:mb-20"
+        >
+          <Globe className="w-10 h-10 sm:w-12 sm:h-12 text-[#150e70] mx-auto mb-3 sm:mb-4" />
+          <p className="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+            Most travellers fall in love with India’s spirit — the people, the traditions, and the energy. We invite you to embark on this life-changing yoga journey with confidence and an open heart.
+          </p>
+        </motion.div>
 
-                      {/* Download */}
-                      <div className="p-4 pt-0">
-                        <a
-                          href={book.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          download
-                          className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-teal-600 text-white py-2.5 font-medium shadow hover:bg-teal-700 transition"
-                        >
-                          <Download className="h-5 w-5" />
-                          Download
-                        </a>
-                      </div>
+        {/* Recommended Books */}
+        <motion.section
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70]">
+            Recommended Readings Before This Course
+          </h3>
+          <p className="mt-3 text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+            These books and resources will help you deepen your understanding before beginning your 200-hour journey.
+          </p>
+          <div className="mt-3 sm:mt-4 w-20 sm:w-24 h-1 bg-[#150e70] mx-auto rounded-full mb-6 sm:mb-10"></div>
+
+          <div className="relative">
+            <button
+              onClick={() => scrollByAmount('left')}
+              className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2 z-10 h-10 w-10 md:h-12 md:w-12 bg-white/90 hover:bg-white shadow-lg rounded-full justify-center items-center ring-1 ring-[#150e70]/20 hover:ring-[#150e70]/40 transition"
+            >
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-[#150e70]" />
+            </button>
+            <button
+              onClick={() => scrollByAmount('right')}
+              className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 h-10 w-10 md:h-12 md:w-12 bg-white/90 hover:bg-white shadow-lg rounded-full justify-center items-center ring-1 ring-[#150e70]/20 hover:ring-[#150e70]/40 transition"
+            >
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-[#150e70]" />
+            </button>
+
+            <div
+              ref={sliderRef}
+              className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 sm:pb-3 px-1 scrollbar-hide"
+            >
+              {books.map((book, idx) => (
+                <div key={idx} className="snap-start min-w-[180px] sm:min-w-[230px] md:min-w-[260px] lg:min-w-[300px]">
+                  <div className="group bg-white rounded-xl border border-gray-100 overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition duration-300 flex flex-col">
+                    <div className="relative aspect-[3/4] bg-gradient-to-br from-gray-100 via-white to-[#e6edff] overflow-hidden">
+                      <img
+                        src={book.cover}
+                        alt={book.title}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                      />
+                    </div>
+                    <div className="p-3 sm:p-4 flex-1 text-left">
+                      <h4 className="font-semibold text-base sm:text-lg text-gray-800">{book.title}</h4>
+                      {book.author && (
+                        <p className="text-xs sm:text-sm text-gray-600 mt-1">By {book.author}</p>
+                      )}
+                    </div>
+                    <div className="p-3 sm:p-4 pt-0">
+                      <a
+                        href={book.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-full bg-[#150e70] text-white py-2 sm:py-2.5 rounded-lg font-medium shadow hover:brightness-110 transition text-sm sm:text-base"
+                      >
+                        <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" /> Download
+                      </a>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-
           </div>
         </motion.section>
       </div>
