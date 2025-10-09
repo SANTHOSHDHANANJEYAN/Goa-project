@@ -1,6 +1,15 @@
 import React from "react";
 import Link from "next/link";
-import { Instagram, Facebook, Mail, Phone, MapPin, Youtube } from "lucide-react";
+import {
+  Instagram,
+  Facebook,
+  Mail,
+  Phone,
+  MapPin,
+  Youtube,
+  Pinterest,
+  Twitter,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
@@ -19,7 +28,7 @@ export default function Footer() {
       </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70 -z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70 z-0" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -37,7 +46,7 @@ export default function Footer() {
         </div>
 
         {/* Three Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-[2rem] text-center md:text-left pl-[3rem]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-[2rem] text-center md:text-left md:pl-[3rem] place-items-center md:place-items-start">
           {/* Left: Important Links (Programs + Retreats) */}
           <div>
             <h3 className="text-lg font-bold text-[#E0B973]">Important Links</h3>
@@ -72,13 +81,12 @@ export default function Footer() {
                   21 Days Yoga Immersion Course
                 </Link>
               </li>
-
             </ul>
           </div>
-                    <div>
+
+          <div>
             <h3 className="text-lg font-bold text-[#E0B973]">Important Links</h3>
             <ul className="mt-3 space-y-2">
-
               <li>
                 <Link href="/7daysretreat" className="hover:text-[#E0B973] inline-flex items-start">
                   <span className="mr-2 text-[#E0B973]">›</span>
@@ -139,7 +147,7 @@ export default function Footer() {
                 aria-label="Visit our Instagram page"
                 className="hover:opacity-90 transition-opacity"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-5 h-5" />
               </Link>
               <Link
                 href="https://www.facebook.com/share/1Cjee3xdbp/"
@@ -148,7 +156,25 @@ export default function Footer() {
                 aria-label="Visit our Facebook page"
                 className="hover:opacity-90 transition-opacity"
               >
-                <Facebook className="w-4 h-4" />
+                <Facebook className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://in.pinterest.com/Rishikulyogashala/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Pinterest page"
+                className="hover:opacity-90 transition-opacity"
+              >
+                <Pinterest className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://x.com/yogattcgoa"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Twitter (X) page"
+                className="hover:opacity-90 transition-opacity"
+              >
+                <Twitter className="w-5 h-5" />
               </Link>
             </div>
 
@@ -160,7 +186,7 @@ export default function Footer() {
                 height={40}
                 className="rounded-lg shadow"
               />
-              <div className="text-left">
+              <div className="text-center md:text-left">
                 <p className="font-bold text-xs">Iran Branch</p>
                 <p className="text-[10px] leading-tight">Ava Platt Complex, Tehran</p>
                 <p className="text-[10px] leading-tight">Tel: +98 938 070 4308</p>
