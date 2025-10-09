@@ -79,19 +79,18 @@ const books = [
   const sliderRef = useRef<HTMLDivElement>(null);
   const scrollByAmount = (dir: 'left' | 'right') => {
     if (!sliderRef.current) return;
-    const amt = Math.round(sliderRef.current.clientWidth * 0.9);
+    const amt = Math.round(sliderRef.current.clientWidth * 0.8);
     sliderRef.current.scrollBy({ left: dir === 'left' ? -amt : amt, behavior: 'smooth' });
   };
 
   return (
     <section className="relative bg-gradient-to-b from-blue-50 via-white to-purple-50 py-12 sm:py-16 md:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 
         {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
           variants={fadeInUp}
           className="text-center mb-10 md:mb-16"
         >
@@ -107,13 +106,10 @@ const books = [
         {/* Intro */}
         <motion.div
           variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="bg-white shadow-xl rounded-2xl p-5 sm:p-8 md:p-10 mb-10 md:mb-14 border border-gray-100"
+          className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 mb-10 md:mb-14 border border-gray-100"
         >
           <div className="flex flex-col sm:flex-row items-start gap-4">
-            <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-pink-500 mt-1" />
+            <Heart className="w-7 h-7 text-pink-500 mt-1" />
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
               Studying yoga in its birthplace—India—is a mystical and transformative experience. Goa, with its serene beaches and vibrant community, welcomes international students warmly.
             </p>
@@ -123,13 +119,10 @@ const books = [
         {/* Safety Section */}
         <motion.div
           variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-[#fff8ec] via-white to-[#e6edff] rounded-2xl p-6 sm:p-8 md:p-10 mb-10 md:mb-14 shadow-md"
+          className="bg-gradient-to-r from-[#fff8ec] via-white to-[#e6edff] rounded-2xl p-6 sm:p-8 mb-10 md:mb-14 shadow-md"
         >
-          <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
-            <Shield className="w-7 h-7 sm:w-8 sm:h-8 text-[#150e70] mr-0 sm:mr-3 mb-2 sm:mb-0" />
+          <div className="flex items-center mb-4">
+            <Shield className="w-7 h-7 text-[#150e70] mr-3" />
             <h4 className="text-xl sm:text-2xl font-semibold text-[#150e70]">Safety & Security</h4>
           </div>
           <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
@@ -140,63 +133,27 @@ const books = [
         {/* Equal Height Safety Cards */}
         <motion.div
           variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 md:mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12"
         >
           {safetyFeatures.map((feature, i) => (
             <motion.div
               key={i}
               variants={fadeInUp}
-              className="flex flex-col justify-center bg-white/90 backdrop-blur-sm border border-gray-100 rounded-xl p-5 sm:p-6 shadow hover:shadow-lg hover:-translate-y-1 transition duration-300 h-full min-h-[150px]"
+              className="flex flex-col justify-center bg-white border border-gray-100 rounded-xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition duration-300 min-h-[160px]"
             >
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#e8ebff] text-[#150e70] flex-shrink-0">
                   {feature.icon}
                 </div>
-                <p className="text-gray-700 text-base">{feature.text}</p>
+                <p className="text-gray-700 text-base leading-relaxed">{feature.text}</p>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Info Note */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="bg-yellow-50 border-l-4 border-yellow-400 rounded-r-2xl p-5 sm:p-6 mb-10 md:mb-14 shadow-sm"
-        >
-          <div className="flex items-start gap-3">
-            <Info className="w-6 h-6 text-yellow-500 mt-1" />
-            <p className="text-gray-700 text-base leading-relaxed">
-              We’re dedicated to ensuring every student feels safe and cared for from arrival to departure.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Closing */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-[#fdf2ff] to-[#e7f1ff] rounded-2xl p-8 text-center shadow-lg mb-16"
-        >
-          <Globe className="w-12 h-12 text-[#150e70] mx-auto mb-4" />
-          <p className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
-            Most travellers fall in love with India’s spirit — the people, the traditions, and the energy. We invite you to embark on this life-changing yoga journey.
-          </p>
-        </motion.div>
-
-        {/* Book Section */}
+        {/* Mobile + Desktop Book Slider */}
         <motion.section
           variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
           className="text-center"
         >
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70]">
@@ -204,19 +161,13 @@ const books = [
           </h3>
           <div className="mt-3 w-24 h-1 bg-[#150e70] mx-auto rounded-full mb-8"></div>
 
-          {/* Desktop slider */}
-          <div className="relative hidden md:block">
+          {/* Scrollable slider (all devices) */}
+          <div className="relative">
             <button
               onClick={() => scrollByAmount('left')}
-              className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 h-12 w-12 bg-white/90 hover:bg-white shadow-lg rounded-full justify-center items-center ring-1 ring-[#150e70]/20 hover:ring-[#150e70]/40 transition flex"
+              className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-10 h-10 w-10 sm:h-12 sm:w-12 bg-white/90 hover:bg-white shadow-lg rounded-full flex justify-center items-center ring-1 ring-[#150e70]/20 hover:ring-[#150e70]/40 transition"
             >
-              <ChevronLeft className="w-6 h-6 text-[#150e70]" />
-            </button>
-            <button
-              onClick={() => scrollByAmount('right')}
-              className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 h-12 w-12 bg-white/90 hover:bg-white shadow-lg rounded-full justify-center items-center ring-1 ring-[#150e70]/20 hover:ring-[#150e70]/40 transition flex"
-            >
-              <ChevronRight className="w-6 h-6 text-[#150e70]" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#150e70]" />
             </button>
 
             <div
@@ -224,7 +175,7 @@ const books = [
               className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-3 px-1 scrollbar-hide"
             >
               {books.map((book, idx) => (
-                <div key={idx} className="snap-start min-w-[280px] flex-shrink-0">
+                <div key={idx} className="snap-start min-w-[220px] sm:min-w-[260px] flex-shrink-0">
                   <div className="group bg-white rounded-xl border border-gray-100 overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition duration-300 flex flex-col h-full">
                     <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
                       <img
@@ -235,14 +186,14 @@ const books = [
                     </div>
                     <div className="flex flex-col justify-between flex-1 p-4">
                       <div>
-                        <h4 className="font-semibold text-lg text-gray-800">{book.title}</h4>
-                        {book.author && <p className="text-sm text-gray-600 mt-1">By {book.author}</p>}
+                        <h4 className="font-semibold text-base sm:text-lg text-gray-800">{book.title}</h4>
+                        {book.author && <p className="text-xs sm:text-sm text-gray-600 mt-1">By {book.author}</p>}
                       </div>
                       <a
                         href={book.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-full bg-[#150e70] text-white py-2.5 rounded-lg font-medium shadow hover:brightness-110 transition mt-4"
+                        className="inline-flex items-center justify-center w-full bg-[#150e70] text-white py-2 rounded-lg font-medium text-sm mt-3 hover:brightness-110 transition"
                       >
                         <Download className="w-4 h-4 mr-2" /> Download
                       </a>
@@ -251,35 +202,13 @@ const books = [
                 </div>
               ))}
             </div>
-          </div>
 
-          {/* Mobile grid layout */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:hidden">
-            {books.map((book, idx) => (
-              <div key={idx} className="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-md flex flex-col">
-                <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
-                  <img
-                    src={book.cover}
-                    alt={book.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-1 p-3">
-                  <div>
-                    <h4 className="font-semibold text-sm text-gray-800">{book.title}</h4>
-                    {book.author && <p className="text-xs text-gray-600 mt-1">By {book.author}</p>}
-                  </div>
-                  <a
-                    href={book.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full bg-[#150e70] text-white py-1.5 rounded-md text-xs font-medium mt-3"
-                  >
-                    <Download className="w-3 h-3 mr-1" /> Download
-                  </a>
-                </div>
-              </div>
-            ))}
+            <button
+              onClick={() => scrollByAmount('right')}
+              className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-10 h-10 w-10 sm:h-12 sm:w-12 bg-white/90 hover:bg-white shadow-lg rounded-full flex justify-center items-center ring-1 ring-[#150e70]/20 hover:ring-[#150e70]/40 transition"
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#150e70]" />
+            </button>
           </div>
         </motion.section>
       </div>
