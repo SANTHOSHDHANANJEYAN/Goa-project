@@ -271,40 +271,42 @@ export default function AboutTraining() {
           </h2>
 
           {/* Content Grid */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {/* Left Text Content */}
-            <div className="space-y-6 text-gray-700 leading-relaxed md:pr-8">
-              <p>
-                Our 200 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners. 
-                We at Rishikul Yogshala offer a comprehensive 200 Hour Yoga Teacher Training Course in Goa for students who 
-                want to begin their Yogic Journey. The 200 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted 
-                one combining the Classical Hatha Yoga to Dynamic Ashtanga Vinyasa Yoga as primary fields.
-              </p>
+            <div className="flex flex-col h-full">
+              <div className="space-y-6 text-gray-700 leading-relaxed overflow-y-auto custom-scrollbar">
+                <p>
+                  Our 200 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners. 
+                  We at Rishikul Yogshala offer a comprehensive 200 Hour Yoga Teacher Training Course in Goa for students who 
+                  want to begin their Yogic Journey. The 200 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted 
+                  one combining the Classical Hatha Yoga to Dynamic Ashtanga Vinyasa Yoga as primary fields.
+                </p>
 
-              <p>
-                Our yoga school offers holistic yoga program under the guidance of competent teachers who have International 
-                teaching experience and value personal attention to students for better learning. The Yoga Philosophy taught 
-                brings in different dimensions of Yoga into understanding and the Teaching Methodology sessions will equip 
-                the students with technique, alignment, and modifications suited to be qualified and a good practitioner.
-              </p>
+                <p>
+                  Our yoga school offers holistic yoga program under the guidance of competent teachers who have International 
+                  teaching experience and value personal attention to students for better learning. The Yoga Philosophy taught 
+                  brings in different dimensions of Yoga into understanding and the Teaching Methodology sessions will equip 
+                  the students with technique, alignment, and modifications suited to be qualified and a good practitioner.
+                </p>
 
-              <p>
-                Though participants who arrive at the course, belong to various physical and mental capabilities; nevertheless, 
-                our 200 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others 
-                and become the best platform for the beginners and the intermediate practitioners.
-              </p>
+                <p>
+                  Though participants who arrive at the course, belong to various physical and mental capabilities; nevertheless, 
+                  our 200 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others 
+                  and become the best platform for the beginners and the intermediate practitioners.
+                </p>
 
-              <p>
-                While you dedicate your valuable time in 200 Hour Yoga Teacher Training Course, it becomes our responsibility 
-                to meet your needs with the best learning environment be it with facilities or staff too. If you seek the Best 
-                Yoga School in Goa, your search ends at Rishikul Yogshala. We offer you an intensive curriculum, exposure to 
-                yogic culture, picturesque landscape, and yogic food, which form your one-stop solution for classical learning 
-                and discovery of yogic dimension within you.
-              </p>
+                <p>
+                  While you dedicate your valuable time in 200 Hour Yoga Teacher Training Course, it becomes our responsibility 
+                  to meet your needs with the best learning environment be it with facilities or staff too. If you seek the Best 
+                  Yoga School in Goa, your search ends at Rishikul Yogshala. We offer you an intensive curriculum, exposure to 
+                  yogic culture, picturesque landscape, and yogic food, which form your one-stop solution for classical learning 
+                  and discovery of yogic dimension within you.
+                </p>
+              </div>
             </div>
 
             {/* Right Video Section */}
-            <div className="flex justify-center md:justify-end">
+            <div className="flex items-center justify-center h-full">
               <div className="relative w-full max-w-md lg:max-w-lg overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
                 <a
                   href={youtubeUrl}
@@ -414,6 +416,23 @@ export default function AboutTraining() {
           </div>
         </div>
       </section>
+
+      <style jsx>{`
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+      `}</style>
     </>
   );
 }
