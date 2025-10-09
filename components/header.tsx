@@ -226,7 +226,7 @@ export default function Header() {
       {/* Main Navbar */}
       <div className="w-full bg-white shadow-sm">
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-[5rem]">
             {/* Left: Logo + Menu */}
             <div className="flex items-center gap-3">
               <Button
@@ -296,11 +296,11 @@ export default function Header() {
             <div className="hidden md:flex items-center gap-3">
               <Link
                 href={{ pathname: "/contact", query: { enquiry: "1" } }}
-                className="inline-flex items-center rounded-full px-4 py-2 text-black shadow-sm hover:opacity-90"
-                style={{ backgroundColor: BRAND_GOLD }}
+                className="inline-flex items-center rounded-full px-4 py-2 text-white shadow-sm bg-[#16a34a] hover:bg-[#e5a724] transition-colors duration-300"
               >
                 Send Enquiry
               </Link>
+
             </div>
 
             {/* Mobile Badge */}
@@ -358,12 +358,12 @@ export default function Header() {
             <div className="mt-6 flex gap-3">
               <Link
                 href={{ pathname: "/contact", query: { enquiry: "1" } }}
-                className="flex-1 inline-flex items-center justify-center rounded-full px-4 py-2 text-black shadow-sm hover:opacity-90"
-                style={{ backgroundColor: BRAND_GOLD }}
+                className="flex-1 inline-flex items-center justify-center rounded-full px-4 py-2 text-white shadow-sm bg-[#16a34a] hover:bg-[#e5a724] transition-colors duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Send Enquiry
               </Link>
+
             </div>
 
             <div className="mt-auto mb-8 pt-4">

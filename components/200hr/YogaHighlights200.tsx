@@ -84,7 +84,7 @@ const books = [
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-blue-50 via-white to-purple-50 py-12 sm:py-16 md:py-24 overflow-hidden">
+    <section className="relative bg-white py-12 sm:py-16 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 
         {/* Header */}
@@ -94,7 +94,7 @@ const books = [
           variants={fadeInUp}
           className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#150e70] leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-black leading-tight">
             200 Hour Yoga Teacher Training in Goa
           </h2>
           <h3 className="text-lg sm:text-xl md:text-2xl mt-2 font-medium text-gray-700">
@@ -156,7 +156,7 @@ const books = [
           variants={fadeInUp}
           className="text-center"
         >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70]">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
             Recommended Readings Before This Course
           </h3>
           <div className="mt-3 w-24 h-1 bg-[#150e70] mx-auto rounded-full mb-8"></div>
@@ -167,7 +167,7 @@ const books = [
               onClick={() => scrollByAmount('left')}
               className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-10 h-10 w-10 sm:h-12 sm:w-12 bg-white/90 hover:bg-white shadow-lg rounded-full flex justify-center items-center ring-1 ring-[#150e70]/20 hover:ring-[#150e70]/40 transition"
             >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#150e70]" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#16a34a]" />
             </button>
 
             <div
@@ -193,7 +193,7 @@ const books = [
                         href={book.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-full bg-[#150e70] text-white py-2 rounded-lg font-medium text-sm mt-3 hover:brightness-110 transition"
+                        className="inline-flex items-center justify-center w-full bg-[#16a34a] text-white py-2 rounded-lg font-medium text-sm mt-3 hover:bg-[#e6a823] transition duration-300"
                       >
                         <Download className="w-4 h-4 mr-2" /> Download
                       </a>
@@ -207,7 +207,7 @@ const books = [
               onClick={() => scrollByAmount('right')}
               className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-10 h-10 w-10 sm:h-12 sm:w-12 bg-white/90 hover:bg-white shadow-lg rounded-full flex justify-center items-center ring-1 ring-[#150e70]/20 hover:ring-[#150e70]/40 transition"
             >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#150e70]" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#16a34a]" />
             </button>
           </div>
         </motion.section>

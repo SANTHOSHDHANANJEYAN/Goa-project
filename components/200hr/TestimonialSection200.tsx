@@ -71,7 +71,7 @@ const InclusionsExclusionsSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white border border-gray-300 rounded-3xl shadow-lg">
+    <section className="py-16 md:py-20 bg-[#f4f5f3]  rounded-3xl shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div

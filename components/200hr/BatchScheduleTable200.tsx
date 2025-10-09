@@ -9,7 +9,7 @@ export default function CourseSchedule() {
   return (
     <>
       {/* NEW SECTION — YTTC Certification (Goa) */}
-      <section className="bg-gradient-to-b from-[#fff8e1] to-[#fffef8] py-16 px-6 md:px-20">
+      <section className="bg-[#f4f5f3] py-16 px-6 md:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="mb-10">

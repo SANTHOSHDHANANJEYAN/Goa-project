@@ -38,7 +38,7 @@
   body {
     @apply bg-background text-foreground bg-cover bg-center bg-no-repeat;
     font-feature-settings: "rlig" 1, "calt" 1;
-    background-image: url('/NEW - GOA FXD BG.svg');
+    /* background-image: url('/NEW - GOA FXD BG.svg'); */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;

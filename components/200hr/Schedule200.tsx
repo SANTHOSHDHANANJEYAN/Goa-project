@@ -24,12 +24,12 @@ export default function Schedule100() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-b from-[#fffdfa] to-[#f9f6ff] py-16 px-4 sm:px-6 lg:px-12">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-10">
+    <section className="w-full bg-[#f4f5f3] py-10 px-4 sm:px-6 lg:px-10">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
         {/* LEFT: Daily Schedule */}
-        <div className="md:w-1/2 p-8 bg-white rounded-2xl shadow-lg border border-gray-200">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] mb-8 text-center md:text-left">
+        <div className="md:w-[48%] p-6 bg-white rounded-xl shadow-md border border-gray-200">
+          <h2 className="text-xl sm:text-2xl font-bold text-black mb-6 text-center md:text-left">
             Daily Schedule
           </h2>
 
@@ -37,12 +37,12 @@ export default function Schedule100() {
             {schedule.map(([time, activity], idx) => (
               <li
                 key={idx}
-                className="grid grid-cols-[180px_1fr] sm:grid-cols-[200px_1fr] items-center py-3 px-2 hover:bg-[#f5f3ff] transition-colors rounded-lg"
+                className="grid grid-cols-[150px_1fr] sm:grid-cols-[180px_1fr] items-center py-2 px-2 hover:bg-[#f5f3ff] transition-colors rounded-md"
               >
                 <span className="font-semibold text-[#150e70] text-sm sm:text-base text-left">
                   {time}
                 </span>
-                <span className="text-gray-700 text-base sm:text-lg font-medium pl-4 border-l border-gray-300">
+                <span className="text-gray-700 text-sm sm:text-base font-medium pl-3 border-l border-gray-300">
                   {activity}
                 </span>
               </li>
@@ -50,31 +50,30 @@ export default function Schedule100() {
           </ul>
         </div>
 
-        {/* RIGHT: Video Section */}
-        <div className="md:w-1/2 flex items-center justify-center">
+        {/* RIGHT: Portrait Video Section (Wider) */}
+        <div className="md:w-[52%] flex items-center justify-center">
           <a
             href={youtubeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Watch the daily schedule video on YouTube (opens in a new tab)"
-            className="relative group w-full max-w-xl aspect-video overflow-hidden rounded-2xl shadow-lg block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#150e70] focus-visible:ring-offset-2"
+            aria-label="Watch the daily schedule video on YouTube"
+            className="relative group w-[640px] sm:w-[500px] md:w-[380px] aspect-[9/16] overflow-hidden shadow-xl block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#150e70]"
           >
             <Image
-              src="/Thumbnail/thumbnail-1.jpg"
+              src="/aboutpics/Rishikul Yogshala Goa 2.jpg"
               alt="Daily Schedule Video Thumbnail"
-              width={640}
-              height={360}
-              className="object-cover w-full h-full rounded-2xl transition-transform duration-500 group-hover:scale-105"
+              width={440}
+              height={680}
+              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
 
-            {/* Play button overlay (decorative) */}
-            <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            {/* Play button overlay */}
+            <span className="absolute inset-0 flex items-center justify-center">
               <svg
                 className="h-16 w-16 sm:h-20 sm:w-20 text-white opacity-90 transition-transform group-hover:scale-110"
                 fill="currentColor"
                 viewBox="0 0 84 84"
-                aria-hidden="true"
               >
                 <circle cx="42" cy="42" r="42" fill="#000" opacity="0.4" />
                 <polygon points="33,26 60,42 33,58" fill="white" />

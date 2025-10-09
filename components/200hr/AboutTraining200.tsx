@@ -263,10 +263,10 @@ export default function AboutTraining() {
   return (
     <>
       {/* Section 1 - Best 200 Hour Yoga Teacher Training */}
- <section className="py-16 px-6 md:px-20 bg-white">
+<section className="py-16 px-6 md:px-20 bg-white">
   <div className="max-w-7xl mx-auto">
     {/* Section Heading */}
-    <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-12 text-center">
+    <h2 className="text-3xl md:text-4xl font-semibold text-black mb-12 text-center">
       Best 200 Hour Yoga Teacher Training in Goa
     </h2>
 
@@ -306,60 +306,26 @@ export default function AboutTraining() {
       </div>
 
       {/* Right Media Section */}
-      <div className="flex flex-col h-full gap-8 md:gap-10">
-        {/* YouTube Thumbnail Card */}
-        <div className="relative w-full overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
-          <a
-            href={youtubeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block relative"
-            aria-label="Watch the 200 Hour Yoga Teacher Training in Goa on YouTube (opens in new tab)"
-          >
-            {/* Thumbnail Image */}
-            <img
-              src="/Thumbnail/thumbnail-2.jpg"
-              alt="200 Hour Yoga Teacher Training in Goa"
-              className="w-full aspect-video object-cover"
-            />
-
-            {/* Centered Play Button (decorative) */}
-            <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition-colors duration-300 group-hover:bg-gray-100">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#627d6a"
-                  viewBox="0 0 24 24"
-                  width="28"
-                  height="28"
-                  aria-hidden="true"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </span>
-            </span>
-          </a>
-        </div>
-
-        {/* Instagram Reel as landscape thumbnail (opens in new tab) */}
-        <div className="relative w-full overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
+      <div className="flex flex-col h-full gap-16 md:gap-10">
+        {/* Instagram Reel Portrait Frame */}
+        <div className="relative w-full flex justify-center">
           <a
             href="https://www.instagram.com/reel/DF5UVRfIkRy/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block relative"
+            className="group block relative w-[550px] h-[630px]  overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.1)] border border-gray-200 bg-black"
             aria-label="Open the Instagram Reel in a new tab"
           >
-            {/* Thumbnail (16:9) */}
+            {/* Portrait Thumbnail */}
             <img
-              src="/Thumbnail/thumbnail3.jpg"
+              src="/aboutpics/Rishikul Yogshala Goa 1.jpg"
               alt="Instagram Reel: 200 Hour Yoga Teacher Training in Goa"
-              className="w-full aspect-video object-cover"
+              className="w-full h-full object-cover  transition-transform duration-500 group-hover:scale-105"
             />
 
-            {/* Centered Play Button (decorative) */}
+            {/* Centered Play Button */}
             <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition-colors duration-300 group-hover:bg-gray-100">
+              <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition duration-300 group-hover:bg-gray-100">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#E1306C"
@@ -378,77 +344,81 @@ export default function AboutTraining() {
     </div>
   </div>
 </section>
+
       {/* Section 2 - Curriculum */}
-      <section
-        className="relative bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/aboutpics/curriculambg.png')",
-        }}
-      >
-        <div className="relative max-w-5xl mx-auto py-24 px-6 md:px-16 text-center">
-          <div className="bg-white/80 rounded-xl shadow-lg p-10 md:p-16 backdrop-blur-md">
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6 tracking-wide uppercase">
-              200 Hour Yoga Teacher Training Curriculum
-            </h2>
+<section
+  className="relative bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: "url('/aboutpics/curriculambg.png')",
+  }}
+>
+  <div className="relative max-w-4xl mx-auto py-16 px-4 md:px-10 text-center">
+    <div className="bg-white/50 rounded-lg shadow-md p-8 md:p-12 backdrop-blur-md">
+      <h2 className="text-xl md:text-2xl font-semibold text-black mb-4 tracking-wide uppercase">
+        200 Hour Yoga Teacher Training Curriculum
+      </h2>
 
-            <p className="text-gray-700 leading-relaxed mb-10">
-              Explore our in-depth yoga curriculum designed to enhance your practice,
-              teaching methodology, and spiritual journey.
-            </p>
+      <p className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base">
+        Explore our in-depth yoga curriculum designed to enhance your practice,
+        teaching methodology, and spiritual journey.
+      </p>
 
-            <div className="space-y-4 text-left">
-              {curriculumData.map((item, index) => (
-                <div
-                  key={index}
-                  className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <button
-                    onClick={() => toggleDropdown(index)}
-                    className="w-full px-6 py-4 bg-white hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center text-left"
-                  >
-                    <span className="text-lg font-medium text-gray-800">
-                      {item.title}
-                    </span>
-                    {openDropdowns[index] ? (
-                      <FaChevronUp className="text-gray-600 flex-shrink-0" />
-                    ) : (
-                      <FaChevronDown className="text-gray-600 flex-shrink-0" />
-                    )}
-                  </button>
+      <div className="space-y-3 text-left">
+        {curriculumData.map((item, index) => (
+          <div
+            key={index}
+            className="border border-gray-200 rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
+          >
+            <button
+              onClick={() => toggleDropdown(index)}
+              className="w-full px-5 py-3 bg-white hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center text-left"
+            >
+              <span className="text-base font-medium text-gray-800">
+                {item.title}
+              </span>
+              {openDropdowns[index] ? (
+                <FaChevronUp className="text-gray-600 flex-shrink-0" size={16} />
+              ) : (
+                <FaChevronDown className="text-gray-600 flex-shrink-0" size={16} />
+              )}
+            </button>
 
-                  {openDropdowns[index] && item.content.length > 0 && (
-                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                      <ul className="space-y-2">
-                        {item.content.map((contentItem, contentIndex) => (
-                          <li
-                            key={contentIndex}
-                            className="text-gray-700 flex items-start"
-                          >
-                            <span className="text-indigo-500 mr-2 mt-1">•</span>
-                            <span>{contentItem}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+            {openDropdowns[index] && item.content.length > 0 && (
+              <div className="px-5 py-3 bg-gray-50 border-t border-gray-200">
+                <ul className="space-y-1.5">
+                  {item.content.map((contentItem, contentIndex) => (
+                    <li
+                      key={contentIndex}
+                      className="text-gray-700 flex items-start text-sm"
+                    >
+                      <span className="text-indigo-500 mr-2 mt-0.5">•</span>
+                      <span>{contentItem}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-                  {openDropdowns[index] && item.content.length === 0 && (
-                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                      <p className="text-gray-500 italic">Content coming soon...</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-12">
-              <button className="px-8 py-3 bg-[#150e70] text-white font-medium rounded-md shadow-md hover:bg-[#0f0a55] transition-all duration-300">
-                Start Your Journey
-              </button>
-            </div>
+            {openDropdowns[index] && item.content.length === 0 && (
+              <div className="px-5 py-3 bg-gray-50 border-t border-gray-200">
+                <p className="text-gray-500 italic text-sm">
+                  Content coming soon...
+                </p>
+              </div>
+            )}
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+
+      <div className="mt-10">
+        <button className="px-6 py-2.5 bg-[#16a34a] text-white text-sm font-medium rounded-md shadow-md hover:bg-[#e6a823] transition-all duration-300">
+          Start Your Journey
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
     </>
   );
 }

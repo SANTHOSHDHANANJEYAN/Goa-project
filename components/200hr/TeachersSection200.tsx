@@ -61,7 +61,7 @@ export default function TeachersSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-20 bg-gradient-to-b from-white to-indigo-50">
+    <section className="relative overflow-hidden py-20 bg-white">
       {/* Section 2 Header */}
       <div className="text-center mb-12 px-4 pl-12">
         <motion.h2 
@@ -145,7 +145,7 @@ export default function TeachersSection() {
       >
         {/* Slider Heading */}
         <div className="text-center mb-14">
-          <h3 className="text-3xl font-extrabold text-indigo-800">Our Beloved Teachers</h3>
+          <h3 className="text-3xl font-extrabold text-black">Our Beloved Teachers</h3>
           <p className="text-lg text-indigo-600 mt-2 max-w-xl mx-auto">
             Meet the guiding lights of your yogic journey
           </p>

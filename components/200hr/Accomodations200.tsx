@@ -37,7 +37,7 @@ export default function Accommodation200() {
   }, []);
 
   return (
-<section className="bg-gradient-to-b from-white to-orange-50 py-16 md:py-20">
+<section className="bg-[#f4f5f3] py-16 md:py-20">
   {/* Section Header */}
   <div className="container mx-auto px-4 mb-12">
     <div className="text-center mb-12">

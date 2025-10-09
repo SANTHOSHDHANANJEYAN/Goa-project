@@ -68,17 +68,17 @@ const TwoHundredHourTTPage = () => (
 
 <section className="bg-white p-8 min-h-screen flex flex-col items-center">
   <div className="text-center mb-6">
-    <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mb-4">
+    <h2 className="text-xl md:text-2xl font-semibold text-black mb-4 tracking-wide uppercase">
       200-Hrs Accredited Yoga Teacher Training
     </h2>
-    <p className="text-3xl md:text-4xl font-bold text-[#2317bc]">In Goa</p>
+    <p className="text-3xl md:text-4xl font-bold text-black">In Goa</p>
   </div>
 
-  <h1 className="text-base md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
+  <h1 className="text-base md:text-xl font-semibold text-black uppercase tracking-wide text-center">
     Become a Certified Yoga Teacher by Yoga Alliance
   </h1>
 
-  <p className="text-lg text-center text-[#150e70] mb-6">
+  <p className="text-lg text-center text-black mb-6">
     Join an exciting and life-changing 24-Days journey in Goa
   </p>
 
@@ -90,7 +90,7 @@ const TwoHundredHourTTPage = () => (
     {/* Info Card */}
     <div className="flex-1 bg-white rounded-2xl shadow-xl px-8 py-10 flex flex-col gap-8">
       <div className="flex items-center gap-5">
-        <span className="bg-[#2317bc] rounded-full p-4 text-white text-2xl">
+        <span className="bg-[#e0b973] rounded-full p-4 text-white text-2xl">
           <i className="fas fa-calendar-alt"></i>
         </span>
         <div>
@@ -100,7 +100,7 @@ const TwoHundredHourTTPage = () => (
       </div>
 
       <div className="flex items-center gap-5">
-        <span className="bg-[#2317bc] rounded-full p-4 text-white text-2xl">
+        <span className="bg-[#e0b973] rounded-full p-4 text-white text-2xl">
           <i className="fas fa-play-circle"></i>
         </span>
         <div>
@@ -110,7 +110,7 @@ const TwoHundredHourTTPage = () => (
       </div>
 
       <div className="flex items-center gap-5">
-        <span className="bg-[#2317bc] rounded-full p-4 text-white text-2xl">
+        <span className="bg-[#e0b973] rounded-full p-4 text-white text-2xl">
           <i className="fas fa-clock"></i>
         </span>
         <div>
@@ -125,8 +125,8 @@ const TwoHundredHourTTPage = () => (
       <table className="w-full text-base text-center border-separate border-spacing-y-1">
         <thead>
           <tr>
-            <th className="bg-[#2317bc] text-white py-2 rounded-l-md">Room Type</th>
-            <th className="bg-[#2317bc] text-white py-2">USD</th>
+            <th className="bg-[#e0b973] text-white py-2 rounded-l-md">Room Type</th>
+            <th className="bg-[#e0b973] text-white py-2">USD</th>
           </tr>
         </thead>
         <tbody>
@@ -141,7 +141,7 @@ const TwoHundredHourTTPage = () => (
         </tbody>
       </table>
 
-      <button className="bg-gradient-to-r from-yellow-200 to-yellow-400 rounded-full px-10 py-3 text-lg font-semibold shadow hover:from-yellow-300 hover:to-yellow-500 transition">
+      <button className="bg-[#16a34a] text-white rounded-full px-10 py-3 text-lg font-semibold shadow hover:bg-[#e6a822] hover:to-yellow-500 transition">
         Book Now
       </button>
     </div>
