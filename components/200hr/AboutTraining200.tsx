@@ -263,7 +263,7 @@ export default function AboutTraining() {
   return (
     <>
       {/* Section 1 - Best 200 Hour Yoga Teacher Training */}
-  <section className="py-16 px-6 md:px-20 bg-white">
+ <section className="py-16 px-6 md:px-20 bg-white">
   <div className="max-w-7xl mx-auto">
     {/* Section Heading */}
     <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-12 text-center">
@@ -306,7 +306,7 @@ export default function AboutTraining() {
       </div>
 
       {/* Right Media Section */}
-      <div className="flex flex-col h-full gap-6">
+      <div className="flex flex-col h-full gap-8 md:gap-10">
         {/* YouTube Thumbnail Card */}
         <div className="relative w-full overflow-hidden shadow-xl border border-gray-100 rounded-2xl">
           <a
@@ -320,7 +320,7 @@ export default function AboutTraining() {
             <img
               src="/Thumbnail/thumbnail-2.jpg"
               alt="200 Hour Yoga Teacher Training in Goa"
-              className="w-full aspect-video object-cover rounded-2xl cursor-pointer transition-transform duration-500 group-hover:scale-105"
+              className="w-full aspect-video object-cover"
             />
 
             {/* Centered Play Button (decorative) */}
@@ -351,13 +351,11 @@ export default function AboutTraining() {
             aria-label="Open the Instagram Reel in a new tab"
           >
             {/* Thumbnail (16:9) */}
-            <div className="relative w-full aspect-video bg-gradient-to-br from-fuchsia-500 via-rose-500 to-amber-400">
-              <img
-                src="/Thumbnail/instagram-reel-thumb.jpg"
-                alt="Instagram Reel: 200 Hour Yoga Teacher Training in Goa"
-                className="absolute inset-0 w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
+            <img
+              src="/Thumbnail/instagram-reel-thumb.jpg"
+              alt="Instagram Reel: 200 Hour Yoga Teacher Training in Goa"
+              className="w-full aspect-video object-cover"
+            />
 
             {/* Centered Play Button (decorative) */}
             <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
