@@ -50,21 +50,21 @@ export default function Schedule100() {
           </ul>
         </div>
 
-        {/* RIGHT: Portrait Video Section (Wider) */}
+        {/* RIGHT: YouTube Thumbnail with Actual Image Size */}
         <div className="md:w-[52%] flex items-center justify-center">
           <a
             href={youtubeUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Watch the daily schedule video on YouTube"
-            className="relative group w-[640px] sm:w-[500px] md:w-[380px] aspect-[9/16] overflow-hidden shadow-xl block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#150e70]"
+            className="relative group block overflow-hidden shadow-xl rounded-xl border border-gray-200 bg-black"
           >
             <Image
               src="/aboutpics/Rishikul Yogshala Goa 2.jpg"
               alt="Daily Schedule Video Thumbnail"
-              width={440}
-              height={680}
-              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+              width={500} // Adjust width to image’s natural size
+              height={750} // Maintain natural proportion
+              className="object-contain w-auto h-auto max-w-full rounded-xl transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
 
