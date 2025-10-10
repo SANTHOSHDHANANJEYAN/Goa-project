@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -21,7 +21,7 @@ import Image from "next/image";
 const BRAND_GOLD = "#E0B973";
 const TEXT = "#1F2937";
 
-// Simple custom Pinterest icon (SVG). No external package needed.
+// Pinterest icon
 type IconProps = React.ComponentProps<"svg"> & { size?: number };
 const PinterestIcon = ({ size = 18, className, ...rest }: IconProps) => (
   <svg
@@ -96,7 +96,18 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null);
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  // Sticky header shadow effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) setIsScrolled(true);
+      else setIsScrolled(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleDropdown = (name: string) =>
     setExpandedDropdown((prev) => (prev === name ? null : name));
@@ -159,16 +170,24 @@ export default function Header() {
     });
 
   return (
-    <header className="relative z-50 w-full bg-transparent">
-      {/* Top Bar - sticky and always visible */}
-      <div
-        className="sticky top-0 z-50 w-full h-10"
-        style={{ backgroundColor: BRAND_GOLD }}
-      >
+    <header
+      className={cn(
+        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
+        isScrolled ? "shadow-md bg-white/95 backdrop-blur" : "bg-transparent"
+      )}
+    >
+      {/* Top Bar */}
+      <div className="w-full h-10" style={{ backgroundColor: BRAND_GOLD }}>
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
-          <div className="flex h-10 items-center justify-between text-sm pl-[7rem]" style={{ color: TEXT }}>
+          <div
+            className="flex h-10 items-center justify-between text-sm pl-[7rem]"
+            style={{ color: TEXT }}
+          >
             <div className="flex items-center gap-4">
-              <a href="tel:+919520024333" className="inline-flex items-center gap-2 hover:opacity-90">
+              <a
+                href="tel:+919520024333"
+                className="inline-flex items-center gap-2 hover:opacity-90"
+              >
                 <Phone size={16} />
                 <span className="hidden sm:inline">+91-9520024333</span>
               </a>
@@ -178,12 +197,20 @@ export default function Header() {
                 className="inline-flex items-center gap-2 hover:opacity-90"
               >
                 <Mail size={16} />
-                <span className="hidden sm:inline">rishikulyogshalagoa@gmail.com</span>
+                <span className="hidden sm:inline">
+                  rishikulyogshalagoa@gmail.com
+                </span>
               </a>
             </div>
             <div className="hidden sm:flex items-center gap-3 pr-[12rem]">
               {socialLinks.map(({ name, href, Icon }) => (
-                <a key={name} href={href} target="_blank" rel="noopener noreferrer" className="hover:opacity-90">
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-90"
+                >
                   <Icon size={18} />
                 </a>
               ))}
@@ -192,11 +219,10 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Navbar - sticky below the top bar */}
-      <div className="w-full bg-white shadow-sm sticky top-10 z-50">
+      {/* Main Navbar */}
+      <div className="w-full bg-white shadow-sm">
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[5rem]">
-            {/* Left: Logo + Menu */}
             <div className="flex items-center gap-3">
               <Button
                 variant="ghost"
@@ -207,19 +233,33 @@ export default function Header() {
                 <Menu size={24} />
               </Button>
               <Link href="/" className="flex-shrink-0">
-                <Image src="/goalogo.webp" alt="Rishikul" width={130} height={60} className="object-contain" priority />
+                <Image
+                  src="/goalogo.webp"
+                  alt="Rishikul"
+                  width={130}
+                  height={60}
+                  className="object-contain"
+                  priority
+                />
               </Link>
             </div>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium" style={{ color: TEXT }}>
+            <nav
+              className="hidden md:flex items-center gap-6 text-sm font-medium"
+              style={{ color: TEXT }}
+            >
               {mainNav.map((item) => {
-                const hasDropdown = "dropdown" in item && Array.isArray(item.dropdown);
+                const hasDropdown =
+                  "dropdown" in item && Array.isArray(item.dropdown);
                 return !hasDropdown ? (
                   <Link
                     key={item.name}
                     href={item.href!}
-                    className={cn("px-1 py-2 hover:text-black", isActive(item.href) && "font-semibold text-black")}
+                    className={cn(
+                      "px-1 py-2 hover:text-black",
+                      isActive(item.href) && "font-semibold text-black"
+                    )}
                   >
                     {item.name}
                   </Link>
@@ -232,7 +272,10 @@ export default function Header() {
                       {item.name}
                       <ChevronDown
                         size={16}
-                        className={cn("transition-transform", desktopDropdown === item.name && "rotate-180")}
+                        className={cn(
+                          "transition-transform",
+                          desktopDropdown === item.name && "rotate-180"
+                        )}
                       />
                     </button>
                     {desktopDropdown === item.name && (
@@ -273,7 +316,13 @@ export default function Header() {
 
             {/* Mobile Badge */}
             <div className="md:hidden">
-              <Image src="/yg_logo-removebg-preview.png" alt="Yoga Alliance" width={40} height={40} className="object-contain" />
+              <Image
+                src="/yg_logo-removebg-preview.png"
+                alt="Yoga Alliance"
+                width={40}
+                height={40}
+                className="object-contain"
+              />
             </div>
           </div>
         </div>
@@ -298,7 +347,13 @@ export default function Header() {
           <div className="p-4 h-full flex flex-col">
             <div className="flex justify-between items-center mb-2 ml-2">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                <Image src="/logo30-removebg-preview.png" alt="Rishikul" width={120} height={30} className="ml-8" />
+                <Image
+                  src="/logo30-removebg-preview.png"
+                  alt="Rishikul"
+                  width={120}
+                  height={30}
+                  className="ml-8"
+                />
               </Link>
               <Button
                 variant="ghost"
@@ -310,12 +365,18 @@ export default function Header() {
               </Button>
             </div>
 
-            <div className="mt-2 mb-4 flex items-center gap-4 text-sm" style={{ color: TEXT }}>
+            <div
+              className="mt-2 mb-4 flex items-center gap-4 text-sm"
+              style={{ color: TEXT }}
+            >
               <a href="tel:+919520024333" className="inline-flex items-center gap-2">
                 <Phone size={16} />
                 <span>+91-9520024333</span>
               </a>
-              <a href="mailto:rishikulyogshalagoa@gmail.com" className="inline-flex items-center gap-2">
+              <a
+                href="mailto:rishikulyogshalagoa@gmail.com"
+                className="inline-flex items-center gap-2"
+              >
                 <Mail size={16} />
                 <span>Mail</span>
               </a>
