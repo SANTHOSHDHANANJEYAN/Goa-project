@@ -16,7 +16,7 @@ export default function CourseSchedule() {
             <h2 className="text-4xl font-extrabold text-gray-900">
               YTTC Certification
             </h2>
-            <p className="text-[#2317bc] italic font-semibold mt-2 text-lg">
+            <p className="text-[#000000] italic font-semibold mt-2 text-lg">
               200 hour Yoga TTC certification in Goa
             </p>
             <p className="text-gray-700 mt-4 max-w-3xl">
