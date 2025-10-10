@@ -276,30 +276,30 @@ export default function AboutTraining() {
       <div className="flex flex-col h-full">
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
-            Our 200 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners. 
-            We at Rishikul Yogshala offer a comprehensive 200 Hour Yoga Teacher Training Course in Goa for students who 
-            want to begin their Yogic Journey. The 200 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted 
+            Our 200 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners.
+            We at Rishikul Yogshala offer a comprehensive 200 Hour Yoga Teacher Training Course in Goa for students who
+            want to begin their Yogic Journey. The 200 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted
             one combining the Classical Hatha Yoga to Dynamic Ashtanga Vinyasa Yoga as primary fields.
           </p>
 
           <p>
-            Our yoga school offers holistic yoga program under the guidance of competent teachers who have International 
-            teaching experience and value personal attention to students for better learning. The Yoga Philosophy taught 
-            brings in different dimensions of Yoga into understanding and the Teaching Methodology sessions will equip 
+            Our yoga school offers holistic yoga program under the guidance of competent teachers who have International
+            teaching experience and value personal attention to students for better learning. The Yoga Philosophy taught
+            brings in different dimensions of Yoga into understanding and the Teaching Methodology sessions will equip
             the students with technique, alignment, and modifications suited to be qualified and a good practitioner.
           </p>
 
           <p>
-            Though participants who arrive at the course, belong to various physical and mental capabilities; nevertheless, 
-            our 200 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others 
+            Though participants who arrive at the course, belong to various physical and mental capabilities; nevertheless,
+            our 200 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others
             and become the best platform for the beginners and the intermediate practitioners.
           </p>
 
           <p>
-            While you dedicate your valuable time in 200 Hour Yoga Teacher Training Course, it becomes our responsibility 
-            to meet your needs with the best learning environment be it with facilities or staff too. If you seek the Best 
-            Yoga School in Goa, your search ends at Rishikul Yogshala. We offer you an intensive curriculum, exposure to 
-            yogic culture, picturesque landscape, and yogic food, which form your one-stop solution for classical learning 
+            While you dedicate your valuable time in 200 Hour Yoga Teacher Training Course, it becomes our responsibility
+            to meet your needs with the best learning environment be it with facilities or staff too. If you seek the Best
+            Yoga School in Goa, your search ends at Rishikul Yogshala. We offer you an intensive curriculum, exposure to
+            yogic culture, picturesque landscape, and yogic food, which form your one-stop solution for classical learning
             and discovery of yogic dimension within you.
           </p>
         </div>
@@ -313,14 +313,14 @@ export default function AboutTraining() {
             href="https://www.instagram.com/reel/DF5UVRfIkRy/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block relative w-[550px] h-[630px]  overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.1)] border border-gray-200 bg-black"
+            className="group block relative overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.1)] border border-gray-200 bg-black rounded-xl"
             aria-label="Open the Instagram Reel in a new tab"
           >
-            {/* Portrait Thumbnail */}
+            {/* Portrait Thumbnail — show actual image size */}
             <img
               src="/aboutpics/Rishikul Yogshala Goa 1.jpg"
               alt="Instagram Reel: 200 Hour Yoga Teacher Training in Goa"
-              className="w-full h-full object-cover  transition-transform duration-500 group-hover:scale-105"
+              className="max-w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
             />
 
             {/* Centered Play Button */}
