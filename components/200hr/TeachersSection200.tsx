@@ -72,7 +72,7 @@ export default function TeachersSection() {
         >
           Learn from Experienced Yoga Teachers from India
         </motion.h2>
-        <div className="w-24 h-1 bg-indigo-500 mx-auto mb-8"></div>
+        <div className="w-24 h-1 bg-[#e0b973] mx-auto mb-8"></div>
 
         {/* Flex container for text and image */}
         <div className="max-w-6xl mx-auto mb-16 flex flex-col md:flex-row md:items-center gap-10">
@@ -130,8 +130,8 @@ export default function TeachersSection() {
         >
           {teacherHighlights.map((highlight, index) => (
             <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
-              <div className="text-indigo-600">{highlight.icon}</div>
-              <span className="text-gray-700">{highlight.text}</span>
+              <div className="bg-[#e0b973]">{highlight.icon}</div>
+              <span className="bg-[#e0b973]">{highlight.text}</span>
             </div>
           ))}
         </motion.div>
@@ -146,31 +146,35 @@ export default function TeachersSection() {
         {/* Slider Heading */}
         <div className="text-center mb-14">
           <h3 className="text-3xl font-extrabold text-black">Our Beloved Teachers</h3>
-          <p className="text-lg text-indigo-600 mt-2 max-w-xl mx-auto">
+          <p className="text-lg text-black mt-2 max-w-xl mx-auto">
             Meet the guiding lights of your yogic journey
           </p>
           <div className="mt-6 flex justify-center items-center gap-4">
-            <span className="w-10 h-1 bg-indigo-500 rounded-full" />
-            <span className="w-4 h-4 bg-indigo-300 rounded-full" />
-            <span className="w-10 h-1 bg-purple-500 rounded-full" />
+            <span className="w-10 h-1 bg-[#e0b973] rounded-full" />
+            <span className="w-4 h-4 bg-[#e0b973] rounded-full" />
+            <span className="w-10 h-1 bg-[#e0b973] rounded-full" />
           </div>
         </div>
 
         {/* Navigation Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
-          aria-label="Previous"
-        >
-          <ChevronLeft size={28} />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
-          aria-label="Next"
-        >
-          <ChevronRight size={28} />
-        </button>
+       <button
+  onClick={prevSlide}
+  className="absolute left-4 top-1/2 -translate-y-1/2 shadow-lg p-2 rounded-full z-10 transition"
+  style={{ backgroundColor: '#e0b973', color: '#ffffff' }}
+  aria-label="Previous"
+>
+  <ChevronLeft size={28} />
+</button>
+
+<button
+  onClick={nextSlide}
+  className="absolute right-4 top-1/2 -translate-y-1/2 shadow-lg p-2 rounded-full z-10 transition"
+  style={{ backgroundColor: '#e0b973', color: '#ffffff' }}
+  aria-label="Next"
+>
+  <ChevronRight size={28} />
+</button>
+
 
         {/* Teacher Cards */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -185,17 +189,18 @@ export default function TeachersSection() {
                 className="group relative bg-white backdrop-blur-md border border-indigo-100 rounded-3xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center px-6 py-8"
               >
                 <Link href="/about" passHref>
-                  <div className="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-indigo-200 shadow-md mb-4 cursor-pointer transition group-hover:scale-105">
-                    <Image
-                      src={teacher.image}
-                      alt={teacher.name}
-                      width={128}
-                      height={128}
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
+                 <div className="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 shadow-md mb-4 cursor-pointer transition group-hover:scale-105" style={{ borderColor: '#e0b973' }}>
+  <Image
+    src={teacher.image}
+    alt={teacher.name}
+    width={128}
+    height={128}
+    className="object-cover w-full h-full"
+  />
+</div>
+
                 </Link>
-                <h3 className="text-lg font-semibold text-indigo-900">{teacher.name}</h3>
+                <h3 className="text-lg font-semibold text-black">{teacher.name}</h3>
                 <p className="text-sm text-indigo-500 mt-1">
                   {teacher.handle.replaceAll('_', ' ')}
                 </p>
