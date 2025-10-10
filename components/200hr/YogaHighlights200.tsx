@@ -100,7 +100,7 @@ const books = [
           <h3 className="text-lg sm:text-xl md:text-2xl mt-2 font-medium text-gray-700">
             What to Know Before You Go
           </h3>
-          <div className="mt-3 md:mt-5 w-20 h-1 bg-[#150e70] mx-auto rounded-full"></div>
+          <div className="mt-3 md:mt-5 w-20 h-1 bg-[#e0b973] mx-auto rounded-full"></div>
         </motion.div>
 
         {/* Intro */}
