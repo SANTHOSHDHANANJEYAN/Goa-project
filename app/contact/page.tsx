@@ -128,7 +128,7 @@ export default function ContactPage() {
                   <Phone size={24} className="mr-4 text-blue-600" />
                   <div>
                     <h3 className="font-medium mb-1">Call Us</h3>
-                    <p className="text-gray-600">+91 80899 92515</p>
+                    <p className="text-gray-600">+91-9520024333</p>
                   </div>
                 </div>
 
