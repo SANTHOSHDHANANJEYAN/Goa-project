@@ -41,11 +41,11 @@ const BeforeYouGoSection: React.FC = () => {
   ];
 
 const books = [
-  { title: 'Yoga Anatomy', author: 'Leslie Kaminoff', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Anatomy.pdf', cover: '/yoga-anatomy.webp' },
-  { title: 'Yoga Nidra', author: 'Swami Satyananda Saraswati', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Nidra.pdf', cover: '/yoga-nidra.webp' },
-  { title: 'Lights of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/lights-of-yoga.pdf', cover: '/lights-of-yoga.webp' },
-  { title: 'Yoga Mala', author: 'Sri K. Pattabhi Jois', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Mala.pdf', cover: '/yoga-mala.webp' },
-  { title: 'Autobiography of a Yogi', author: 'Paramahansa Yogananda', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/autobiography-of-yogi.pdf', cover: '/autobiography-of-a-yogi.webp' },
+  { title: 'Yoga Anatomy', author: 'Leslie Kaminoff', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Anatomy.pdf', cover: '/book-anatomy.webp' },
+  { title: 'Yoga Nidra', author: 'Swami Satyananda Saraswati', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Nidra.pdf', cover: '/book-nidra.webp' },
+  { title: 'Lights of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/lights-of-yoga.pdf', cover: '/book-lights.webp' },
+  { title: 'Yoga Mala', author: 'Sri K. Pattabhi Jois', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Mala.pdf', cover: '/book-yoga-mala.webp' },
+  { title: 'Autobiography of a Yogi', author: 'Paramahansa Yogananda', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/autobiography-of-yogi.pdf', cover: '/book-autobiography.webp' },
   { title: 'Ajna Chakra', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ajna-chakra.pdf', cover: '/ajna-chakra.webp' },
   { title: 'Mudra Bandha', author: 'Swami Satyananda Saraswati', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Mudra-Bandha.pdf', cover: '/mudra-bandha.webp' },
   { title: 'The Ayurveda', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-ayurveda.pdf', cover: '/the-ayurveda.webp' },
@@ -59,21 +59,22 @@ const books = [
   { title: 'Tattwa Shuddhi', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/tattwa-shuddhi.pdf', cover: '/tattwa-shuddhi.webp' },
   { title: 'Prana and Pranayama', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/prana-and-pranayama.pdf', cover: '/prana-and-pranayama.webp' },
   { title: 'Scientific Keys Volume 1', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/scientific-keys-volume-01.pdf', cover: '/scientific-keys-volume-01.webp' },
+  { title: 'Scientific Keys Volume 2', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/scientific-keys-volume-02.pdf', cover: '/scientific-keys-volume-02.webp' },
   { title: 'Kundalini Tantra', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/kundalini-tantra.pdf', cover: '/kundalini-tantra.webp' },
-  { title: 'Hatha Yoga Illustrated', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/hatha-yoga-illustrated-by-martin-kirk.pdf', cover: '/hatha-yoga-illustrated-by-martin-kirk.webp' },
+  { title: 'Hatha Yoga Illustrated', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/hatha-yoga-illustrated-by-martin-kirk.pdf', cover: '/hatha-yoga-illustrated.webp' },
   { title: 'Ashtanga Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ashtanga-yoga.pdf', cover: '/ashtanga-yoga.webp' },
   { title: 'The Inner Tradition of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-inner-tradition-of-yoga.pdf', cover: '/the-inner-tradition-of-yoga.webp' },
   { title: 'The Art of Vinyasa', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-art-of-vinyasa.pdf', cover: '/the-art-of-vinyasa.webp' },
   { title: 'Teaching Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/teaching-yoga.pdf', cover: '/teaching-yoga.webp' },
   { title: 'Stretching Anatomy', author: '', href: 'http://rishikulyogshalarishikesh.com/ebooks/stretching-anatomy.pdf', cover: '/stretching-anatomy.webp' },
-  { title: 'Scientific Keys Volume 2', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/scientific-keys-volume-02.pdf', cover: '/scientific-keys-volume-02.webp' },
-  { title: 'The Seven Spiritual Laws of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-seven-spiritual-laws-of-yoga.pdf', cover: '/the-seven-spiritual-laws-of-yoga.webp' },
+  { title: 'The Seven Spiritual Laws of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-seven-spiritual-laws-of-yoga.pdf', cover: '/the-seven-spiritual-laws-of-yoga.jpg' },
   { title: 'Yoga Therapy', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yoga-therapy.pdf', cover: '/yoga-therapy.webp' },
   { title: 'Yoga of the Subtle Body', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yoga-of-the-subtle-body.pdf', cover: '/yoga-of-the-subtle-body.webp' },
   { title: 'Yin Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yin-yoga.pdf', cover: '/yin-yoga.webp' },
   { title: 'Vinyasa Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/vinyasa-yoga.pdf', cover: '/vinyasa-yoga.webp' },
   { title: 'The Power of Ashtanga Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-power-of-ashtanga-yoga.pdf', cover: '/the-power-of-ashtanga-yoga.webp' }
 ];
+
 
   const sliderRef = useRef<HTMLDivElement>(null);
   const scrollByAmount = (dir: 'left' | 'right') => {
