@@ -84,7 +84,7 @@ const InclusionsExclusionsSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
             What Is Included and Excluded?
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-red-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-[#e0b973] mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
