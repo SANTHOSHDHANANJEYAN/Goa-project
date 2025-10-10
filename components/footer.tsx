@@ -4,15 +4,15 @@ import { Instagram, Facebook, Mail, Phone, MapPin, Youtube, Twitter } from "luci
 import Image from "next/image";
 
 // Custom Pinterest icon (SVG)
-type IconProps = React.ComponentProps<"svg"> & { size?: number };
-const PinterestIcon = ({ size = 20, className, ...rest }: IconProps) => (
+type IconProps = React.ComponentProps<"svg"> & { size?: number; color?: string };
+const PinterestIcon = ({ size = 20, color = "#E60023", className, ...rest }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     viewBox="0 0 24 24"
     className={className}
-    fill="currentColor"
+    fill={color}
     aria-hidden="true"
     {...rest}
   >
@@ -53,7 +53,7 @@ export default function Footer() {
           </Link>
 
           {/* Added Text Below Logo */}
-          <p className="mt-4 text-center text-base sm:text-[20px] font-medium text-white italic tracking-wide">
+          <p className="mt-4 text-center text-base sm:text-[13px] font-medium text-white italic tracking-wide">
             Become the part of Rishikul Family<br className="hidden sm:block" />
             and Experience the Yoga with us!!!
           </p>
@@ -65,31 +65,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-[#E0B973]">Important Links</h3>
             <ul className="mt-3 space-y-2">
-              <li>
-                <Link href="/50hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start">
-                  <span className="mr-2 text-[#E0B973]">›</span>50 Hr Multi-Style-Yoga TTC
-                </Link>
-              </li>
-              <li>
-                <Link href="/100hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start">
-                  <span className="mr-2 text-[#E0B973]">›</span>100 Hr Multi-Style-Yoga TTC
-                </Link>
-              </li>
-              <li>
-                <Link href="/200hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start">
-                  <span className="mr-2 text-[#E0B973]">›</span>200 Hr Multi-Style-Yoga TTC
-                </Link>
-              </li>
-              <li>
-                <Link href="/300hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start">
-                  <span className="mr-2 text-[#E0B973]">›</span>300 Hr Multi-Style-Yoga TTC
-                </Link>
-              </li>
-              <li>
-                <Link href="/500hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start">
-                  <span className="mr-2 text-[#E0B973]">›</span>500 Hr Multi-Style-Yoga TTC
-                </Link>
-              </li>
+              <li><Link href="/50hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start"><span className="mr-2 text-[#E0B973]">›</span>50 Hr Multi-Style-Yoga TTC</Link></li>
+              <li><Link href="/100hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start"><span className="mr-2 text-[#E0B973]">›</span>100 Hr Multi-Style-Yoga TTC</Link></li>
+              <li><Link href="/200hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start"><span className="mr-2 text-[#E0B973]">›</span>200 Hr Multi-Style-Yoga TTC</Link></li>
+              <li><Link href="/300hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start"><span className="mr-2 text-[#E0B973]">›</span>300 Hr Multi-Style-Yoga TTC</Link></li>
+              <li><Link href="/500hrsyogattc" className="hover:text-[#E0B973] inline-flex items-start"><span className="mr-2 text-[#E0B973]">›</span>500 Hr Multi-Style-Yoga TTC</Link></li>
             </ul>
           </div>
 
@@ -97,21 +77,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-[#E0B973]">Important Links</h3>
             <ul className="mt-3 space-y-2">
-              <li>
-                <Link href="/7daysretreat" className="hover:text-[#E0B973] inline-flex items-start">
-                  <span className="mr-2 text-[#E0B973]">›</span>7 Days Yoga Holiday Retreat
-                </Link>
-              </li>
-              <li>
-                <Link href="/14daysretreat" className="hover:text-[#E0B973] inline-flex items-start">
-                  <span className="mr-2 text-[#E0B973]">›</span>14 Days Yoga Detox Retreat
-                </Link>
-              </li>
-              <li>
-                <Link href="/21daysretreat" className="hover:text-[#E0B973] inline-flex items-start">
-                  <span className="mr-2 text-[#E0B973]">›</span>21 Days Yoga Wellness Retreat
-                </Link>
-              </li>
+              <li><Link href="/7daysretreat" className="hover:text-[#E0B973] inline-flex items-start"><span className="mr-2 text-[#E0B973]">›</span>7 Days Yoga Holiday Retreat</Link></li>
+              <li><Link href="/14daysretreat" className="hover:text-[#E0B973] inline-flex items-start"><span className="mr-2 text-[#E0B973]">›</span>14 Days Yoga Detox Retreat</Link></li>
+              <li><Link href="/21daysretreat" className="hover:text-[#E0B973] inline-flex items-start"><span className="mr-2 text-[#E0B973]">›</span>21 Days Yoga Wellness Retreat</Link></li>
             </ul>
           </div>
 
@@ -138,20 +106,20 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-[#E0B973]">Follow Us On</h3>
             <div className="mt-3 flex items-center justify-center md:justify-start gap-4 flex-wrap">
-              <Link href="https://youtube.com/@rishikulyogshalagoa?si=gXYn1x60tu2cRbKc" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:opacity-90 transition-opacity">
-                <Youtube size={20} />
+              <Link href="https://youtube.com/@rishikulyogshalagoa?si=gXYn1x60tu2cRbKc" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <Youtube size={20} color="#FF0000" className="hover:opacity-90 transition-opacity" />
               </Link>
-              <Link href="https://www.instagram.com/rishikulyogshalagoa" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:opacity-90 transition-opacity">
-                <Instagram size={20} />
+              <Link href="https://www.instagram.com/rishikulyogshalagoa" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <Instagram size={20} color="#E4405F" className="hover:opacity-90 transition-opacity" />
               </Link>
-              <Link href="https://www.facebook.com/share/1Cjee3xdbp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:opacity-90 transition-opacity">
-                <Facebook size={20} />
+              <Link href="https://www.facebook.com/share/1Cjee3xdbp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <Facebook size={20} color="#1877F2" className="hover:opacity-90 transition-opacity" />
               </Link>
-              <Link href="https://in.pinterest.com/Rishikulyogashala/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="hover:opacity-90 transition-opacity">
-                <PinterestIcon size={20} />
+              <Link href="https://in.pinterest.com/Rishikulyogashala/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                <PinterestIcon size={20} color="#E60023" className="hover:opacity-90 transition-opacity" />
               </Link>
-              <Link href="https://x.com/yogattcgoa" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:opacity-90 transition-opacity">
-                <Twitter size={20} />
+              <Link href="https://x.com/yogattcgoa" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <Twitter size={20} color="#1DA1F2" className="hover:opacity-90 transition-opacity" />
               </Link>
             </div>
 
