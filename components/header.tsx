@@ -187,7 +187,7 @@ export default function Header() {
   const shouldHideTopbar = hideTopbar && !mobileMenuOpen;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header className="relative z-50 w-full bg-transparent">
       {/* Top Bar */}
       <div
         className={cn(
@@ -223,8 +223,8 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Navbar */}
-      <div className="w-full bg-white shadow-sm">
+      {/* Main Navbar - now sticky */}
+      <div className="w-full bg-white shadow-sm sticky top-0 z-50">
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[5rem]">
             {/* Left: Logo + Menu */}
@@ -300,7 +300,6 @@ export default function Header() {
               >
                 Send Enquiry
               </Link>
-
             </div>
 
             {/* Mobile Badge */}
@@ -363,7 +362,6 @@ export default function Header() {
               >
                 Send Enquiry
               </Link>
-
             </div>
 
             <div className="mt-auto mb-8 pt-4">
