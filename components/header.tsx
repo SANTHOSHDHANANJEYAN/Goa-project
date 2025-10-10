@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -96,33 +96,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null);
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
-  const [hideTopbar, setHideTopbar] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    let lastY = window.scrollY;
-    let ticking = false;
-
-    const update = () => {
-      const y = window.scrollY;
-      const delta = y - lastY;
-      if (y <= 10) setHideTopbar(false);
-      else if (delta > 5 && y > 80) setHideTopbar(true);
-      else if (delta < -5) setHideTopbar(false);
-      lastY = y;
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(update);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const toggleDropdown = (name: string) =>
     setExpandedDropdown((prev) => (prev === name ? null : name));
@@ -184,16 +158,11 @@ export default function Header() {
       );
     });
 
-  const shouldHideTopbar = hideTopbar && !mobileMenuOpen;
-
   return (
     <header className="relative z-50 w-full bg-transparent">
-      {/* Top Bar */}
+      {/* Top Bar - sticky and always visible */}
       <div
-        className={cn(
-          "w-full overflow-hidden transition-all duration-300 ease-out",
-          shouldHideTopbar ? "h-0 opacity-0" : "h-10 opacity-100"
-        )}
+        className="sticky top-0 z-50 w-full h-10"
         style={{ backgroundColor: BRAND_GOLD }}
       >
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
@@ -223,8 +192,8 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Navbar - now sticky */}
-      <div className="w-full bg-white shadow-sm sticky top-0 z-50">
+      {/* Main Navbar - sticky below the top bar */}
+      <div className="w-full bg-white shadow-sm sticky top-10 z-50">
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[5rem]">
             {/* Left: Logo + Menu */}
