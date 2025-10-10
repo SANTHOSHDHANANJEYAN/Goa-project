@@ -21,7 +21,7 @@ import Image from "next/image";
 const BRAND_GOLD = "#E0B973";
 const TEXT = "#1F2937";
 
-// Pinterest icon
+// Pinterest Icon (custom)
 type IconProps = React.ComponentProps<"svg"> & { size?: number };
 const PinterestIcon = ({ size = 18, className, ...rest }: IconProps) => (
   <svg
@@ -38,9 +38,18 @@ const PinterestIcon = ({ size = 18, className, ...rest }: IconProps) => (
   </svg>
 );
 
-const leftNavigation = [
+const mainNav = [
+  { name: "Home", href: "/" },
   {
-    name: "Courses",
+    name: "About",
+    dropdown: [
+      { name: "About Us", href: "/Aboutyogshala" },
+      { name: "Our Teachers", href: "/AboutTeachers" },
+      { name: "Our Reviews", href: "/Reviews" },
+    ],
+  },
+  {
+    name: "Yoga Courses",
     dropdown: [
       { name: "50 Hr Multi-Style-Yoga TTC", href: "/50hrsyogattc" },
       { name: "100 Hr Multi-Style-Yoga TTC", href: "/100hrsyogattc" },
@@ -50,33 +59,13 @@ const leftNavigation = [
     ],
   },
   {
-    name: "Retreats",
+    name: "Yoga Retreat",
     dropdown: [
       { name: "7 Days Yoga Holiday Retreat", href: "/7daysretreat" },
       { name: "14 Days Yoga Detox Retreat", href: "/14daysretreat" },
       { name: "21 Days Yoga Wellness Retreat", href: "/21daysretreat" },
     ],
   },
-  { name: "Our Teachers", href: "/AboutTeachers" },
-  { name: "Our Reviews", href: "/Reviews" },
-  { name: "Blogs", href: "/Blog" },
-  { name: "Gallery", href: "/gallery" },
-];
-
-const aboutDropdown = [
-  { name: "About Us", href: "/Aboutyogshala" },
-  { name: "Our Teachers", href: "/AboutTeachers" },
-  { name: "Our Reviews", href: "/Reviews" },
-];
-
-const coursesDropdown = leftNavigation[0].dropdown;
-const retreatsDropdown = leftNavigation[1].dropdown;
-
-const mainNav = [
-  { name: "Home", href: "/" },
-  { name: "About", dropdown: aboutDropdown },
-  { name: "Yoga Courses", dropdown: coursesDropdown },
-  { name: "Yoga Retreat", dropdown: retreatsDropdown },
   { name: "Gallery", href: "/gallery" },
   { name: "FAQ", href: "/faq" },
   { name: "Blog", href: "/Blog" },
@@ -85,29 +74,18 @@ const mainNav = [
 ];
 
 const socialLinks = [
-  { name: "Facebook", href: "https://www.facebook.com/share/1Cjee3xdbp/", Icon: Facebook },
-  { name: "Instagram", href: "https://www.instagram.com/rishikulyogshalagoa/", Icon: Instagram },
-  { name: "YouTube", href: "https://www.youtube.com/@rishikulyogshalagoa", Icon: Youtube },
-  { name: "Pinterest", href: "https://in.pinterest.com/Rishikulyogashala/", Icon: PinterestIcon },
-  { name: "Twitter", href: "https://x.com/yogattcgoa", Icon: Twitter },
+  { name: "Facebook", href: "https://www.facebook.com/share/1Cjee3xdbp/", Icon: Facebook, color: "#1877F2" },
+  { name: "Instagram", href: "https://www.instagram.com/rishikulyogshalagoa/", Icon: Instagram, color: "#E4405F" },
+  { name: "YouTube", href: "https://www.youtube.com/@rishikulyogshalagoa", Icon: Youtube, color: "#FF0000" },
+  { name: "Pinterest", href: "https://in.pinterest.com/Rishikulyogashala/", Icon: PinterestIcon, color: "#E60023" },
+  { name: "Twitter", href: "https://x.com/yogattcgoa", Icon: Twitter, color: "#1DA1F2" },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null);
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-
-  // Sticky header shadow effect
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) setIsScrolled(true);
-      else setIsScrolled(false);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const toggleDropdown = (name: string) =>
     setExpandedDropdown((prev) => (prev === name ? null : name));
@@ -117,65 +95,8 @@ export default function Header() {
 
   const isActive = (href?: string) => href && pathname === href;
 
-  const renderDrawerNav = () =>
-    mainNav.map((item, index) => {
-      const hasDropdown = "dropdown" in item && Array.isArray(item.dropdown);
-      return (
-        <div key={item.name}>
-          {!hasDropdown ? (
-            <Link
-              href={item.href!}
-              className={cn(
-                "block text-base font-medium py-2 text-[#1F2937]",
-                isActive(item.href) && "text-black font-semibold"
-              )}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ) : (
-            <>
-              <button
-                className="w-full flex justify-between items-center text-base font-medium py-2 text-[#1F2937] hover:text-black"
-                onClick={() => toggleDropdown(item.name)}
-              >
-                <span>{item.name}</span>
-                <ChevronDown
-                  size={16}
-                  className={cn(
-                    "transition-transform",
-                    expandedDropdown === item.name && "rotate-180"
-                  )}
-                />
-              </button>
-              {expandedDropdown === item.name && (
-                <div className="ml-4 space-y-2">
-                  {item.dropdown?.map((sub) => (
-                    <Link
-                      key={sub.name}
-                      href={sub.href}
-                      className="block text-sm py-1 text-[#1F2937] hover:text-black"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </>
-          )}
-          {index !== mainNav.length - 1 && <div className="border-t border-gray-200 my-2" />}
-        </div>
-      );
-    });
-
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "shadow-md bg-white/95 backdrop-blur" : "bg-transparent"
-      )}
-    >
+    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       {/* Top Bar */}
       <div className="w-full h-10" style={{ backgroundColor: BRAND_GOLD }}>
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
@@ -203,13 +124,14 @@ export default function Header() {
               </a>
             </div>
             <div className="hidden sm:flex items-center gap-3 pr-[12rem]">
-              {socialLinks.map(({ name, href, Icon }) => (
+              {socialLinks.map(({ name, href, Icon, color }) => (
                 <a
                   key={name}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:opacity-90"
+                  className="hover:opacity-80 transition"
+                  style={{ color }}
                 >
                   <Icon size={18} />
                 </a>
@@ -220,7 +142,7 @@ export default function Header() {
       </div>
 
       {/* Main Navbar */}
-      <div className="w-full bg-white shadow-sm">
+      <div className="w-full bg-white">
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[5rem]">
             <div className="flex items-center gap-3">
@@ -382,7 +304,55 @@ export default function Header() {
               </a>
             </div>
 
-            <nav className="text-[#1F2937] pl-1 mt-0">{renderDrawerNav()}</nav>
+            <nav className="text-[#1F2937] pl-1 mt-0">
+              {mainNav.map((item) => {
+                const hasDropdown = "dropdown" in item && Array.isArray(item.dropdown);
+                return (
+                  <div key={item.name}>
+                    {!hasDropdown ? (
+                      <Link
+                        href={item.href!}
+                        className="block text-base font-medium py-2 text-[#1F2937]"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <>
+                        <button
+                          className="w-full flex justify-between items-center text-base font-medium py-2 text-[#1F2937]"
+                          onClick={() => toggleDropdown(item.name)}
+                        >
+                          <span>{item.name}</span>
+                          <ChevronDown
+                            size={16}
+                            className={cn(
+                              "transition-transform",
+                              expandedDropdown === item.name && "rotate-180"
+                            )}
+                          />
+                        </button>
+                        {expandedDropdown === item.name && (
+                          <div className="ml-4 space-y-2">
+                            {item.dropdown?.map((sub) => (
+                              <Link
+                                key={sub.name}
+                                href={sub.href}
+                                className="block text-sm py-1 text-[#1F2937]"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {sub.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </>
+                    )}
+                    <div className="border-t border-gray-200 my-2" />
+                  </div>
+                );
+              })}
+            </nav>
 
             <div className="mt-6 flex gap-3">
               <Link
