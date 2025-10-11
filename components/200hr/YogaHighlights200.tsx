@@ -145,7 +145,7 @@ const BeforeYouGoSection: React.FC = () => {
             className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
             aria-label="Previous"
           >
-            <ChevronLeft size={28} />
+            <ChevronLeft size={26} />
           </button>
 
           <button
@@ -153,7 +153,7 @@ const BeforeYouGoSection: React.FC = () => {
             className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
             aria-label="Next"
           >
-            <ChevronRight size={28} />
+            <ChevronRight size={26} />
           </button>
 
           {/* Horizontal scroll area */}
@@ -164,10 +164,11 @@ const BeforeYouGoSection: React.FC = () => {
             {books.map((book, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-40 sm:w-48 md:w-56 border border-[#16a34a] rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md transition"
+                className="flex-shrink-0 w-32 sm:w-40 md:w-48 border border-[#16a34a] rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md transition"
               >
                 <a href={book.href} target="_blank" rel="noopener noreferrer">
-                  <div className="aspect-[2/3]">
+                  {/* ↓ Reduced height */}
+                  <div className="aspect-[3/4]">
                     <img
                       src={book.cover}
                       alt={book.title}
@@ -175,7 +176,7 @@ const BeforeYouGoSection: React.FC = () => {
                       loading="lazy"
                     />
                   </div>
-                  <div className="bg-[#16a34a] text-white text-center font-medium text-xs sm:text-sm py-1.5 px-2 flex items-center justify-center gap-1.5">
+                  <div className="bg-[#16a34a] text-white text-center font-medium text-xs sm:text-sm py-1 px-2 flex items-center justify-center gap-1.5">
                     <span className="truncate">{book.title}</span>
                     <Download className="w-3.5 h-3.5" />
                   </div>
