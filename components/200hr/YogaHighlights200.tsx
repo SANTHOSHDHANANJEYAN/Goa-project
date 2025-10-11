@@ -8,7 +8,6 @@ import {
   Users,
   Heart,
   Globe,
-  Info,
   ChevronLeft,
   ChevronRight,
   Download
@@ -40,48 +39,39 @@ const BeforeYouGoSection: React.FC = () => {
     { icon: <Globe className="w-6 h-6 md:w-7 md:h-7" />, text: "Secure travel assistance from trusted taxi drivers with years of partnership" }
   ];
 
-const books = [
-  { title: 'Yoga Anatomy', author: 'Leslie Kaminoff', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Anatomy.pdf', cover: '/book-anatomy.webp' },
-  { title: 'Yoga Nidra', author: 'Swami Satyananda Saraswati', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Nidra.pdf', cover: '/book-nidra.webp' },
-  { title: 'Lights of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/lights-of-yoga.pdf', cover: '/book-lights.webp' },
-  { title: 'Yoga Mala', author: 'Sri K. Pattabhi Jois', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Mala.pdf', cover: '/book-yoga-mala.webp' },
-  { title: 'Autobiography of a Yogi', author: 'Paramahansa Yogananda', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/autobiography-of-yogi.pdf', cover: '/book-autobiography.webp' },
-  { title: 'Ajna Chakra', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ajna-chakra.pdf', cover: '/ajna-chakra.webp' },
-  { title: 'Mudra Bandha', author: 'Swami Satyananda Saraswati', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Mudra-Bandha.pdf', cover: '/mudra-bandha.webp' },
-  { title: 'The Ayurveda', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-ayurveda.pdf', cover: '/the-ayurveda.webp' },
-
-  { title: 'Moola Bandha', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/moola-bandha.pdf', cover: '/moola-bandha.webp' },
-  { title: 'Hatha Yoga Pradipika', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/hatha-yoga-pradipika.pdf', cover: '/hatha-yoga-pradipika.webp' },
-  { title: 'Ayurveda Encyclopedia', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ayurveda-encyclopedia.pdf', cover: '/ayurveda-encyclopedia.webp' },
-  { title: 'Bhagwat Gita', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/bhagwat-gita.pdf', cover: '/bhagwat-gita.webp' },
-  { title: 'Yogic Management', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yogic-management.pdf', cover: '/yogic-management.webp' },
-  { title: 'Yoga Sutras', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yoga-sutras.pdf', cover: '/yoga-sutras.webp' },
-  { title: 'Tattwa Shuddhi', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/tattwa-shuddhi.pdf', cover: '/tattwa-shuddhi.webp' },
-  { title: 'Prana and Pranayama', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/prana-and-pranayama.pdf', cover: '/prana-and-pranayama.webp' },
-  { title: 'Scientific Keys Volume 1', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/scientific-keys-volume-01.pdf', cover: '/scientific-keys-volume-01.webp' },
-  { title: 'Scientific Keys Volume 2', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/scientific-keys-volume-02.pdf', cover: '/scientific-keys-volume-02.webp' },
-  { title: 'Kundalini Tantra', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/kundalini-tantra.pdf', cover: '/kundalini-tantra.webp' },
-  { title: 'Hatha Yoga Illustrated', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/hatha-yoga-illustrated-by-martin-kirk.pdf', cover: '/hatha-yoga-illustrated.webp' },
-  { title: 'Ashtanga Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ashtanga-yoga.pdf', cover: '/ashtanga-yoga.webp' },
-  { title: 'The Inner Tradition of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-inner-tradition-of-yoga.pdf', cover: '/the-inner-tradition-of-yoga.webp' },
-  { title: 'The Art of Vinyasa', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-art-of-vinyasa.pdf', cover: '/the-art-of-vinyasa.webp' },
-  { title: 'Teaching Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/teaching-yoga.pdf', cover: '/teaching-yoga.webp' },
-  { title: 'Stretching Anatomy', author: '', href: 'http://rishikulyogshalarishikesh.com/ebooks/stretching-anatomy.pdf', cover: '/stretching-anatomy.webp' },
-  { title: 'The Seven Spiritual Laws of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-seven-spiritual-laws-of-yoga.pdf', cover: '/the-seven-spiritual-laws-of-yoga.jpg' },
-  { title: 'Yoga Therapy', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yoga-therapy.pdf', cover: '/yoga-therapy.webp' },
-  { title: 'Yoga of the Subtle Body', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yoga-of-the-subtle-body.pdf', cover: '/yoga-of-the-subtle-body.webp' },
-  { title: 'Yin Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yin-yoga.pdf', cover: '/yin-yoga.webp' },
-  { title: 'Vinyasa Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/vinyasa-yoga.pdf', cover: '/vinyasa-yoga.webp' },
-  { title: 'The Power of Ashtanga Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-power-of-ashtanga-yoga.pdf', cover: '/the-power-of-ashtanga-yoga.webp' }
-];
-
-
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const scrollByAmount = (dir: 'left' | 'right') => {
-    if (!sliderRef.current) return;
-    const amt = Math.round(sliderRef.current.clientWidth * 0.8);
-    sliderRef.current.scrollBy({ left: dir === 'left' ? -amt : amt, behavior: 'smooth' });
-  };
+  const books = [
+    { title: 'Yoga Anatomy', author: 'Leslie Kaminoff', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Anatomy.pdf', cover: '/book-anatomy.webp' },
+    { title: 'Yoga Nidra', author: 'Swami Satyananda Saraswati', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Nidra.pdf', cover: '/book-nidra.webp' },
+    { title: 'Lights of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/lights-of-yoga.pdf', cover: '/book-lights.webp' },
+    { title: 'Yoga Mala', author: 'Sri K. Pattabhi Jois', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Yoga-Mala.pdf', cover: '/book-yoga-mala.webp' },
+    { title: 'Autobiography of a Yogi', author: 'Paramahansa Yogananda', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/autobiography-of-yogi.pdf', cover: '/book-autobiography.webp' },
+    { title: 'Ajna Chakra', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ajna-chakra.pdf', cover: '/ajna-chakra.webp' },
+    { title: 'Mudra Bandha', author: 'Swami Satyananda Saraswati', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/Mudra-Bandha.pdf', cover: '/mudra-bandha.webp' },
+    { title: 'The Ayurveda', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-ayurveda.pdf', cover: '/the-ayurveda.webp' },
+    { title: 'Moola Bandha', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/moola-bandha.pdf', cover: '/moola-bandha.webp' },
+    { title: 'Hatha Yoga Pradipika', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/hatha-yoga-pradipika.pdf', cover: '/hatha-yoga-pradipika.webp' },
+    { title: 'Ayurveda Encyclopedia', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ayurveda-encyclopedia.pdf', cover: '/ayurveda-encyclopedia.webp' },
+    { title: 'Bhagwat Gita', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/bhagwat-gita.pdf', cover: '/bhagwat-gita.webp' },
+    { title: 'Yogic Management', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yogic-management.pdf', cover: '/yogic-management.webp' },
+    { title: 'Yoga Sutras', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yoga-sutras.pdf', cover: '/yoga-sutras.webp' },
+    { title: 'Tattwa Shuddhi', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/tattwa-shuddhi.pdf', cover: '/tattwa-shuddhi.webp' },
+    { title: 'Prana and Pranayama', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/prana-and-pranayama.pdf', cover: '/prana-and-pranayama.webp' },
+    { title: 'Scientific Keys Volume 1', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/scientific-keys-volume-01.pdf', cover: '/scientific-keys-volume-01.webp' },
+    { title: 'Scientific Keys Volume 2', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/scientific-keys-volume-02.pdf', cover: '/scientific-keys-volume-02.webp' },
+    { title: 'Kundalini Tantra', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/kundalini-tantra.pdf', cover: '/kundalini-tantra.webp' },
+    { title: 'Hatha Yoga Illustrated', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/hatha-yoga-illustrated-by-martin-kirk.pdf', cover: '/hatha-yoga-illustrated.webp' },
+    { title: 'Ashtanga Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/ashtanga-yoga.pdf', cover: '/ashtanga-yoga.webp' },
+    { title: 'The Inner Tradition of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-inner-tradition-of-yoga.pdf', cover: '/the-inner-tradition-of-yoga.webp' },
+    { title: 'The Art of Vinyasa', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-art-of-vinyasa.pdf', cover: '/the-art-of-vinyasa.webp' },
+    { title: 'Teaching Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/teaching-yoga.pdf', cover: '/teaching-yoga.webp' },
+    { title: 'Stretching Anatomy', author: '', href: 'http://rishikulyogshalarishikesh.com/ebooks/stretching-anatomy.pdf', cover: '/stretching-anatomy.webp' },
+    { title: 'The Seven Spiritual Laws of Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-seven-spiritual-laws-of-yoga.pdf', cover: '/the-seven-spiritual-laws-of-yoga.jpg' },
+    { title: 'Yoga Therapy', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yoga-therapy.pdf', cover: '/yoga-therapy.webp' },
+    { title: 'Yoga of the Subtle Body', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yoga-of-the-subtle-body.pdf', cover: '/yoga-of-the-subtle-body.webp' },
+    { title: 'Yin Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/yin-yoga.pdf', cover: '/yin-yoga.webp' },
+    { title: 'Vinyasa Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/vinyasa-yoga.pdf', cover: '/vinyasa-yoga.webp' },
+    { title: 'The Power of Ashtanga Yoga', author: '', href: 'https://www.rishikulyogshalarishikesh.com/ebooks/the-power-of-ashtanga-yoga.pdf', cover: '/the-power-of-ashtanga-yoga.webp' }
+  ];
 
   return (
     <section className="relative bg-white py-12 sm:py-16 md:py-24 overflow-hidden">
@@ -151,64 +141,35 @@ const books = [
           ))}
         </motion.div>
 
-        {/* Mobile + Desktop Book Slider */}
-        <motion.section
-          variants={fadeInUp}
-          className="text-center"
-        >
+        {/* BOOK GRID (like in image) */}
+        <motion.section variants={fadeInUp} className="text-center">
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
             Recommended Readings Before This Course
           </h3>
           <div className="mt-3 w-24 h-1 bg-[#150e70] mx-auto rounded-full mb-8"></div>
 
-          {/* Scrollable slider (all devices) */}
-          <div className="relative">
-            <button
-              onClick={() => scrollByAmount('left')}
-              className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-10 h-10 w-10 sm:h-12 sm:w-12 bg-white/90 hover:bg-white shadow-lg rounded-full flex justify-center items-center ring-1 ring-[#150e70]/20 hover:ring-[#150e70]/40 transition"
-            >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#16a34a]" />
-            </button>
-
-            <div
-              ref={sliderRef}
-              className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-3 px-1 scrollbar-hide"
-            >
-              {books.map((book, idx) => (
-                <div key={idx} className="snap-start min-w-[220px] sm:min-w-[260px] flex-shrink-0">
-                  <div className="group bg-white rounded-xl border border-gray-100 overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition duration-300 flex flex-col h-full">
-                    <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
-                      <img
-                        src={book.cover}
-                        alt={book.title}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                      />
-                    </div>
-                    <div className="flex flex-col justify-between flex-1 p-4">
-                      <div>
-                        <h4 className="font-semibold text-base sm:text-lg text-gray-800">{book.title}</h4>
-                        {book.author && <p className="text-xs sm:text-sm text-gray-600 mt-1">By {book.author}</p>}
-                      </div>
-                      <a
-                        href={book.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-full bg-[#16a34a] text-white py-2 rounded-lg font-medium text-sm mt-3 hover:bg-[#e6a823] transition duration-300"
-                      >
-                        <Download className="w-4 h-4 mr-2" /> Download
-                      </a>
-                    </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {books.map((book, idx) => (
+              <div
+                key={idx}
+                className="border border-[#16a34a] rounded-lg overflow-hidden bg-white shadow-md hover:shadow-lg transition"
+              >
+                <a href={book.href} target="_blank" rel="noopener noreferrer">
+                  <div className="aspect-[3/4]">
+                    <img
+                      src={book.cover}
+                      alt={book.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
-                </div>
-              ))}
-            </div>
-
-            <button
-              onClick={() => scrollByAmount('right')}
-              className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-10 h-10 w-10 sm:h-12 sm:w-12 bg-white/90 hover:bg-white shadow-lg rounded-full flex justify-center items-center ring-1 ring-[#150e70]/20 hover:ring-[#150e70]/40 transition"
-            >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#16a34a]" />
-            </button>
+                  <div className="bg-[#16a34a] text-white text-center font-semibold py-2 flex items-center justify-center gap-2">
+                    {book.title}
+                    <Download className="w-4 h-4" />
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
         </motion.section>
       </div>
