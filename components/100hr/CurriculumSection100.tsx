@@ -1,147 +1,148 @@
 "use client";
 
-import React, { memo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, ChevronDown } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import Image from "next/image";
 
 const curriculum = [
   {
-    title: "Foundations of Yoga & Teaching",
+    title: "Hatha Yoga",
     image: "/Curriculumimg/1.jpg",
     description:
-      "Explore the origins, philosophies, diverse styles of yoga, and the essential role of a yoga teacher.",
+      "This Hatha Yoga course covers classical asanas, breath awareness, alignment, posture sequencing, and therapeutic benefits for holistic body-mind balance.",
   },
   {
-    title: "Asana Mastery & Alignment Techniques",
+    title: "Vinyasa Yoga",
     image: "/Curriculumimg/2.jpg",
     description:
-      "Learn key yoga poses with proper alignment, modifications, hands-on adjustments, and guided practice to ensure safety, strength, and mindfulness.",
+      "Explore the dynamic practice of Vinyasa Yoga, including breath-synchronized movement, preparatory techniques, structured sequences, and flowing postures for strength and flexibility.",
   },
   {
-    title: "Pranayama & Energetic Awareness",
+    title: "Ashtanga Vinyas",
     image: "/Curriculumimg/3.jpg",
     description:
-      "Discover powerful breathwork techniques, their benefits, and how to harness breath and energy flow through pranayama, chakra awareness, and mindful movement.",
+      "Ashtanga Vinyasa covers a progressive sequence of postures from the Primary Series, focusing on breath-led movement, strength, flexibility, and flow.",
   },
   {
-    title: "Yoga Anatomy & Safe Movement",
+    title: "Yoga Philosophy",
     image: "/Curriculumimg/4.jpg",
     description:
-      "Understand the body’s structure, key muscle groups, breath mechanics, and injury prevention to support safe, effective, and informed yoga practice.",
+      "Yoga Philosophy explores the origin, purpose, mind-body connection, and deeper spiritual concepts like karma, chakras, kundalini, and liberation in yogic science.",
   },
   {
-    title: "Teaching Methodology & Class Leadership",
+    title: "Yoga Anatomy",
     image: "/Curriculumimg/5.jpg",
     description:
-      "Learn to communicate effectively, structure balanced classes, apply teaching techniques, and embody the ethics and responsibilities of a yoga teacher.",
+      "Yoga Anatomy provides an understanding of the body's structure, systems, and functions to support safe, effective, and aligned yoga practice.",
   },
   {
-    title: "Sequencing & Intentional Class Design",
+    title: "Build Teaching Skills",
     image: "/Curriculumimg/6.jpg",
     description:
-      "Master the art of creating balanced, level-appropriate class sequences with purposeful themes, effective timing, and engaging flow from start to finish.",
+      "Learn how to cue, adjust, and guide classes confidently with methodology rooted in modern and classical yoga.",
   },
   {
-    title: "Teaching Practicum & Constructive Feedback",
+    title: "Pranayama",
     image: "/Curriculumimg/7.jpg",
     description:
-      "Gain real-world teaching experience through guided practice sessions, peer reviews, and expert feedback to refine your skills and build confidence as a yoga teacher.",
+      "Learn the science and techniques of breath control, prana flow, nostril activation, and various pranayama practices for physical, emotional, and mental purification.",
   },
   {
-    title: "Personal Growth & Wellness for Yoga Teachers",
+    title: "Meditation Techniques",
     image: "/Curriculumimg/8.jpg",
     description:
-      "Cultivating mindful self-reflection, journaling insights, and sustainable self-care to manage stress and prevent burnout.",
+      "Practice full-body, emotional, chakra, and deep causal relaxation methods including Yoga Nidra to promote restful sleep and mental calm.",
   },
 ];
 
-const CurriculumSection100: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+const CurriculumSection200: React.FC = () => {
+  const [index, setIndex] = useState(0);
 
-  const toggleDropdown = (i: number) => {
-    setOpenIndex(openIndex === i ? null : i);
-  };
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % curriculum.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section className="relative pt-16 px-4 sm:px-10 bg-transparent overflow-hidden">
-      {/* Floating Sparkle */}
-      <motion.div
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-10 left-10 z-0 opacity-10 pointer-events-none"
-      >
-        <Sparkles size={180} strokeWidth={0.8} />
-      </motion.div>
+    <section
+      className="relative py-20 px-4 sm:px-10 bg-cover bg-center bg-fixed overflow-hidden"
+      style={{ backgroundImage: "url('/aboutpics/curriculambg.png')" }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-      {/* Header */}
-      <div className="relative z-10 text-center max-w-3xl mx-auto">
+      {/* Floating Sparkle */}
+      <div className="absolute top-10 left-10 z-0 opacity-10">
+        <Sparkles size={180} strokeWidth={0.8} />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
+        {/* Header */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-5xl font-bold tracking-tight text-[#150e70] drop-shadow-sm"
+          className="text-5xl font-bold tracking-tight text-white drop-shadow-lg"
         >
           CURRICULUM
         </motion.h2>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 text-lg text-gray-200 max-w-2xl mx-auto">
           A transformational journey packed with practical wisdom and modern tools to elevate your practice.
         </p>
-      </div>
 
-      {/* Accordion Cards */}
-      <div className="relative z-10 max-w-3xl mx-auto mt-16 space-y-4">
-        {curriculum.map((item, i) => (
-          <motion.div
-            key={i}
-            className="bg-white shadow-lg rounded-2xl border border-gray-100 overflow-hidden"
-          >
-            {/* Title Row */}
-            <button
-              onClick={() => toggleDropdown(i)}
-              className="flex items-center justify-between w-full px-6 py-4 text-left text-lg font-bold text-[#2b0a72] hover:text-[#9B7EBD] transition-colors duration-300"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full overflow-hidden shadow-inner ring-2 ring-[#9B7EBD]/20">
+        {/* Slideshow Container */}
+        <div className="relative max-w-3xl mx-auto mt-16">
+          {/* Animated Slide */}
+          <div className="overflow-hidden rounded-3xl shadow-2xl border border-white/30 bg-white/90 backdrop-blur-md">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.6 }}
+                className="p-10 flex flex-col items-center text-center text-gray-800"
+              >
+                <div className="w-32 h-32 mb-6 rounded-full overflow-hidden shadow-inner ring-2 ring-[#9B7EBD]/30">
                   <Image
-                    src={item.image}
-                    alt={`${item.title} - Yoga Curriculum`}
-                    width={56}
-                    height={56}
-                    loading="lazy"
+                    src={curriculum[index].image}
+                    alt={curriculum[index].title}
+                    width={128}
+                    height={128}
                     className="object-cover w-full h-full"
                   />
                 </div>
-                {item.title}
-              </div>
-              <motion.div
-                animate={{ rotate: openIndex === i ? 180 : 0 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <ChevronDown size={20} />
+                <h3 className="text-2xl font-semibold text-[#2b0a72] mb-4">
+                  {curriculum[index].title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-base max-w-md">
+                  {curriculum[index].description}
+                </p>
               </motion.div>
-            </button>
-
-            {/* Smooth Dropdown Content */}
-            <AnimatePresence initial={false}>
-              {openIndex === i && (
-                <motion.div
-                  key="content"
-                  initial={{ height: 0, opacity: 0, paddingTop: 0, paddingBottom: 0 }}
-                  animate={{ height: "auto", opacity: 1, paddingTop: 16, paddingBottom: 16 }}
-                  exit={{ height: 0, opacity: 0, paddingTop: 0, paddingBottom: 0 }}
-                  transition={{ type: "spring", stiffness: 250, damping: 30 }}
-                  className="px-6 text-gray-600 text-sm leading-relaxed"
-                >
-                  {item.description}
-                </motion.div>
-              )}
             </AnimatePresence>
-          </motion.div>
-        ))}
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {curriculum.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIndex(i)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  i === index ? "bg-white scale-110" : "bg-gray-400"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default memo(CurriculumSection100);
+export default CurriculumSection200;

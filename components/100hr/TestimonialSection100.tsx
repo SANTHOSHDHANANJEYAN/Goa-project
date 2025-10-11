@@ -1,79 +1,188 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Image from "next/image";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle, XCircle, Coffee, Home, Award, MapPin, BookOpen, Plane, ShoppingBag, Calendar, Snowflake, Activity } from 'lucide-react';
 
-const videos = [
-  {
-    url: "https://www.youtube.com/embed/1oxK0cYax9s?autoplay=1&rel=0",
-    thumbnail: "/Thumbnail/Student Testimonials1.png",
-  },
-  {
-    url: "https://www.youtube.com/embed/0L8pv3fixrg?autoplay=1&rel=0",
-    thumbnail: "/Thumbnail/Student Testimonials2.png",
-  },
-  {
-    url: "https://www.youtube.com/embed/s6VazbcpPko?autoplay=1&rel=0",
-    thumbnail: "/Thumbnail/Student Testimonials3.png",
-  },
-];
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut' }
+  }
+};
 
-export default function TestimonialSection() {
-  const [playing, setPlaying] = useState<number | null>(null);
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const InclusionsExclusionsSection: React.FC = () => {
+  const inclusions = [
+    {
+      icon: <Home className="w-5 h-5" />,
+      text: "Private Rooms or Double Shared Rooms Accommodation During The 50 YTTC Program"
+    },
+    {
+      icon: <Coffee className="w-5 h-5" />,
+      text: "3 Sattvic Vegetarian Meals With Herbal Tea"
+    },
+    {
+      icon: <BookOpen className="w-5 h-5" />,
+      text: "Yoga Materials and Props"
+    },
+    {
+      icon: <MapPin className="w-5 h-5" />,
+      text: "Tours to Local Attractions and Refreshing Activities"
+    },
+    {
+      icon: <Award className="w-5 h-5" />,
+      text: "100 Hour YTT Course Certification"
+    }
+  ];
+
+  const exclusions = [
+    {
+      icon: <Plane className="w-5 h-5" />,
+      text: "Travel Costs To and From the Yoga School"
+    },
+    {
+      icon: <ShoppingBag className="w-5 h-5" />,
+      text: "Personal Expenses Such as Laundry, Telephone, and Extra Meals"
+    },
+    {
+      icon: <Activity className="w-5 h-5" />,
+      text: "Optional Additional Activities or Trips Not Mentioned in the Program"
+    },
+    {
+      icon: <Calendar className="w-5 h-5" />,
+      text: "Extra Stay Beyond Course Dates"
+    },
+    {
+      icon: <Snowflake className="w-5 h-5" />,
+      text: "AC Charges if you have not booked for an AC Accommodation"
+    }
+  ];
 
   return (
-    <section className="relative text-center px-4 sm:px-6 lg:px-8 pb-16">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-[#150e70]">
-        Testimonials
-      </h2>
-      <h3 className="text-base sm:text-lg md:text-xl mb-10 text-[#150e70] max-w-xl mx-auto">
-        View the self-transformation stories of our students
-      </h3>
+    <section className="py-16 md:py-20 bg-[#f4f5f3]  rounded-3xl shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+            What Is Included and Excluded?
+          </h2>
+          <div className="w-24 h-1 bg-[#e0b973] mx-auto"></div>
+        </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {videos.map((video, idx) => (
-          <div
-            key={idx}
-            role="button"
-            tabIndex={0}
-            aria-label={`Play testimonial video ${idx + 1}`}
-            onClick={() => setPlaying(idx)}
-            onKeyDown={(e) => e.key === "Enter" && setPlaying(idx)}
-            className="aspect-video rounded-xl border-4 overflow-hidden shadow-lg relative cursor-pointer transition hover:shadow-2xl"
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Inclusions Card */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-green-400"
           >
-            {playing === idx ? (
-              <iframe
-                className="w-full h-full"
-                src={video.url}
-                title={`Testimonial Video ${idx + 1}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            ) : (
-              <>
-                <Image
-                  src={video.thumbnail}
-                  alt={`Student Testimonial ${idx + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <svg
-                    className="h-16 w-16 text-white opacity-80 hover:opacity-100 transition"
-                    fill="currentColor"
-                    viewBox="0 0 84 84"
-                  >
-                    <circle cx="42" cy="42" r="42" fill="#000" opacity="0.6" />
-                    <polygon points="33,26 60,42 33,58" fill="white" />
-                  </svg>
-                </div>
-              </>
-            )}
-          </div>
-        ))}
+            <div className="bg-white p-6">
+              <div className="flex items-center justify-center">
+                <CheckCircle className="w-8 h-8 text-green-500 mr-3" />
+                <h3 className="text-2xl md:text-3xl font-bold text-black">Inclusions</h3>
+              </div>
+            </div>
+            
+            <motion.div 
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="p-6 md:p-8 space-y-4"
+            >
+              {inclusions.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-green-50 transition-colors duration-200 border border-green-200"
+                >
+                  <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 mt-0.5">
+                    {item.icon}
+                  </div>
+                  <p className="text-gray-700 flex-1 leading-relaxed">
+                    {item.text}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+
+          {/* Exclusions Card */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-red-400"
+          >
+            <div className="bg-white p-6">
+              <div className="flex items-center justify-center">
+                <XCircle className="w-8 h-8 text-red-600 mr-3" />
+                <h3 className="text-2xl md:text-3xl font-bold text-black">Exclusions</h3>
+              </div>
+            </div>
+            
+            <motion.div 
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="p-6 md:p-8 space-y-4"
+            >
+              {exclusions.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-red-50 transition-colors duration-200 border border-red-200"
+                >
+                  <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mt-0.5">
+                    {item.icon}
+                  </div>
+                  <p className="text-gray-700 flex-1 leading-relaxed">
+                    {item.text}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Optional: Bottom Note */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="mt-12 text-center"
+        >
+          <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto">
+            Please review these details carefully to understand what your course fee covers. 
+            For any questions or clarifications, feel free to contact our support team.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
-}
+};
+
+export default InclusionsExclusionsSection;

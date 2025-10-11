@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from "react";
 import Image from "next/image";
@@ -25,7 +25,7 @@ const FreeManualSignup: React.FC = () => {
 
   return (
     <section className="relative bg-gradient-to-b from-white via-[#f8faff] to-white pb-[4rem] text-center overflow-hidden">
-      {/* Background */}
+      {/* Decorative background */}
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
 
       <motion.div
@@ -40,7 +40,7 @@ const FreeManualSignup: React.FC = () => {
           variants={itemVariants}
           className="text-2xl sm:text-4xl font-bold text-[#150e70] mb-4 leading-snug"
         >
-          Get your FREE <br className="sm:hidden" /> 300-Hrs Study Manual
+          Get your FREE <br className="sm:hidden" /> 200-Hrs study manual
         </motion.h2>
 
         {/* Subtitle */}
@@ -49,7 +49,7 @@ const FreeManualSignup: React.FC = () => {
           className="text-[#150e70] max-w-xl mb-8 text-sm sm:text-base"
         >
           And 5 video lessons to discover the fundamental principles of creating your own
-          yoga class and essential tools for teaching.
+          yoga class and essential tools for teaching
         </motion.p>
 
         {/* Signup Form */}
@@ -60,7 +60,7 @@ const FreeManualSignup: React.FC = () => {
           <motion.input
             variants={itemVariants}
             type="email"
-            placeholder="Email"
+            placeholder="E-mail"
             className="w-full px-4 py-3 text-sm sm:text-base border border-indigo-200 rounded-full bg-white shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-300 transition"
           />
           <motion.input
@@ -99,7 +99,7 @@ const FreeManualSignup: React.FC = () => {
           >
             <Image
               src="/yg_logo-removebg-preview.png"
-              alt="300 hrs Yoga Teacher Training Manual"
+              alt="200 hrs Yoga Teacher Training Manual"
               width={224}
               height={224}
               className="w-32 sm:w-44 md:w-56 mx-auto drop-shadow-2xl transition-all duration-300"

@@ -4,20 +4,20 @@ import React from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import Accommodations300 from "@/components/300hr/Accomodations300";
+import Accommodation300 from "@/components/300hr/Accomodations300";
 import Food300 from "@/components/300hr/Food300";
 // Lazy imports
 const TestimonialCarousel = dynamic(() => import("@/components/testimonials-section"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
-const AboutTraining200 = dynamic(() => import("@/components/300hr/AboutTraining300"));
-const CurriculumSection200 = dynamic(() => import("@/components/300hr/CurriculumSection300"));
-const ActivitiesSection200 = dynamic(() => import("@/components/300hr/ActivitiesSection300"));
-const BatchScheduleTable200 = dynamic(() => import("@/components/300hr/BatchScheduleTable300"));
-const TestimonialSection200 = dynamic(() => import("@/components/300hr/TestimonialSection300"));
-const YogaHighlights200 = dynamic(() => import("@/components/300hr/YogaHighlights300"));
-const ApplicationForm200 = dynamic(() => import("@/components/300hr/ApplicationForm300"));
-const TeachersSection200 = dynamic(() => import("@/components/300hr/TeachersSection300"));
-const Schedule200 = dynamic(() => import("@/components/300hr/Schedule300"));
+const AboutTraining300 = dynamic(() => import("@/components/300hr/AboutTraining300"));
+const CurriculumSection300 = dynamic(() => import("@/components/300hr/CurriculumSection300"));
+const ActivitiesSection300 = dynamic(() => import("@/components/300hr/ActivitiesSection300"));
+const BatchScheduleTable300 = dynamic(() => import("@/components/300hr/BatchScheduleTable300"));
+const TestimonialSection300 = dynamic(() => import("@/components/300hr/TestimonialSection300"));
+const YogaHighlights300 = dynamic(() => import("@/components/300hr/YogaHighlights300"));
+const ApplicationForm300 = dynamic(() => import("@/components/300hr/ApplicationForm300"));
+const TeachersSection300 = dynamic(() => import("@/components/300hr/TeachersSection300"));
+const Schedule300 = dynamic(() => import("@/components/300hr/Schedule300"));
 const OurDinning7 = dynamic(() => import("@/components/R7days/OurDinning7"));
 const DinningSlides7 = dynamic(() => import("@/components/R7days/DinningSlides7"));
 const OurRooms7 = dynamic(() => import("@/components/R7days/OurRooms7"));
@@ -31,7 +31,7 @@ const ThreeHundredHourTTPage = () => (
 <div className="relative w-full h-[90vh] flex items-center justify-center">
   {/* Background Image */}
   <Image
-    src="/gallery/3.jpg"
+    src="/200bannerimg.jpg"
     alt="Yoga Teacher Training"
     fill
     className="object-cover brightness-95"
@@ -47,7 +47,7 @@ const ThreeHundredHourTTPage = () => (
       300-Hrs Accredited Yoga Teacher Training
     </h1>
     <p className="text-white text-lg md:text-2xl font-medium mt-4 drop-shadow-md">
-      Join an exciting and life-changing 27-Days journey in Goa
+      Join an exciting and life-changing 24-Days journey in Goa
     </p>
   </div>
 
@@ -60,26 +60,26 @@ const ThreeHundredHourTTPage = () => (
 </div>
 
 
-    <AboutTraining200 />
-    <Schedule200 />
+    <AboutTraining300 />
+    <Schedule300 />
 
 
 
 
 <section className="bg-white p-8 min-h-screen flex flex-col items-center">
   <div className="text-center mb-6">
-    <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mb-4">
+    <h2 className="text-xl md:text-2xl font-semibold text-black mb-4 tracking-wide uppercase">
       300-Hrs Accredited Yoga Teacher Training
     </h2>
-    <p className="text-3xl md:text-4xl font-bold text-[#2317bc]">In Goa</p>
+    <p className="text-3xl md:text-4xl font-bold text-black">In Goa</p>
   </div>
 
-  <h1 className="text-base md:text-xl font-semibold text-[#150e70] uppercase tracking-wide text-center">
+  <h1 className="text-base md:text-xl font-semibold text-black uppercase tracking-wide text-center">
     Become a Certified Yoga Teacher by Yoga Alliance
   </h1>
 
-  <p className="text-lg text-center text-[#150e70] mb-6">
-    Join an exciting and life-changing 27-Days journey in Goa
+  <p className="text-lg text-center text-black mb-6">
+    Join an exciting and life-changing 24-Days journey in Goa
   </p>
 
   <div className="flex justify-center mb-10">
@@ -90,32 +90,32 @@ const ThreeHundredHourTTPage = () => (
     {/* Info Card */}
     <div className="flex-1 bg-white rounded-2xl shadow-xl px-8 py-10 flex flex-col gap-8">
       <div className="flex items-center gap-5">
-        <span className="bg-[#2317bc] rounded-full p-4 text-white text-2xl">
+        <span className="bg-[#e0b973] rounded-full p-4 text-white text-2xl">
           <i className="fas fa-calendar-alt"></i>
         </span>
         <div>
           <div className="font-bold text-lg">Available batches:</div>
-          <div className="text-gray-500">November 2025 – February 2026</div>
+          <div className="text-gray-3000">September 2025 – April 2026</div>
         </div>
       </div>
 
       <div className="flex items-center gap-5">
-        <span className="bg-[#2317bc] rounded-full p-4 text-white text-2xl">
+        <span className="bg-[#e0b973] rounded-full p-4 text-white text-2xl">
           <i className="fas fa-play-circle"></i>
         </span>
         <div>
           <div className="font-bold text-lg">Course starts:</div>
-          <div className="text-gray-500">7th of every month</div>
+          <div className="text-gray-3000">7th of every month</div>
         </div>
       </div>
 
       <div className="flex items-center gap-5">
-        <span className="bg-[#2317bc] rounded-full p-4 text-white text-2xl">
+        <span className="bg-[#e0b973] rounded-full p-4 text-white text-2xl">
           <i className="fas fa-clock"></i>
         </span>
         <div>
           <div className="font-bold text-lg">Course ends:</div>
-          <div className="text-gray-500">30th of every month</div>
+          <div className="text-gray-3000">30th of every month</div>
         </div>
       </div>
     </div>
@@ -125,23 +125,23 @@ const ThreeHundredHourTTPage = () => (
       <table className="w-full text-base text-center border-separate border-spacing-y-1">
         <thead>
           <tr>
-            <th className="bg-[#2317bc] text-white py-2 rounded-l-md">Room Type</th>
-            <th className="bg-[#2317bc] text-white py-2">USD</th>
+            <th className="bg-[#e0b973] text-white py-2 rounded-l-md">Room Type</th>
+            <th className="bg-[#e0b973] text-white py-2">USD</th>
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-gray-50">
+          <tr className="bg-gray-300">
             <td className="py-3">Private Room</td>
-            <td className="py-3">$ 1700</td>
+            <td className="py-3">$ 1600</td>
           </tr>
           <tr className="bg-white">
             <td className="py-3">Shared Room</td>
-            <td className="py-3">$ 1400</td>
+            <td className="py-3">$ 1300</td>
           </tr>
         </tbody>
       </table>
 
-      <button className="bg-gradient-to-r from-yellow-200 to-yellow-400 rounded-full px-10 py-3 text-lg font-semibold shadow hover:from-yellow-300 hover:to-yellow-500 transition">
+      <button className="bg-[#16a34a] text-white rounded-full px-10 py-3 text-lg font-semibold shadow hover:bg-[#e6a822] hover:to-yellow-3000 transition">
         Book Now
       </button>
     </div>
@@ -151,15 +151,15 @@ const ThreeHundredHourTTPage = () => (
 
 
     
-    <BatchScheduleTable200 />
+    <BatchScheduleTable300 />
     <OurRooms7 />
-    <Accommodations300/>
+    <Accommodation300/>   
     <OurDinning7 />
     <DinningSlides7 />
-     <Food300/>
-    <ActivitiesSection200 />
-    <TeachersSection200 />
-    <TestimonialSection200 />
+    <Food300/>
+    <ActivitiesSection300 />
+    <TeachersSection300 />
+    <TestimonialSection300 />
 
     {/* Testimonials */}
     {/* <TestimonialCarousel
@@ -179,14 +179,14 @@ const ThreeHundredHourTTPage = () => (
       ]}
     /> */}
 
-    <YogaHighlights200 />
+    <YogaHighlights300 />
 
     {/* FAQs */}
     {/* <FAQSection
       title="Frequently Asked Questions"
       faqs={[
         {
-          question: "1. Who can join the 200-hour YTTC?",
+          question: "1. Who can join the 300-hour YTTC?",
           answer: "The course is open to yoga practitioners of all levels.",
         },
         {
@@ -194,7 +194,7 @@ const ThreeHundredHourTTPage = () => (
           answer: "Yes, this training is Yoga Alliance certified.",
         },
         {
-          question: "3. What are the benefits of completing the 200-hour YTTC?",
+          question: "3. What are the benefits of completing the 300-hour YTTC?",
           answer: "You'll deepen your practice and gain teaching credentials.",
         },
         {
@@ -220,11 +220,11 @@ const ThreeHundredHourTTPage = () => (
       ]}
     />
 
-    <ApplicationForm200 /> */}
+    <ApplicationForm300 /> */}
 
     {/* Certificate Section */}
     {/* <section className="text-center mb-8 relative px-4 sm:px-6 lg:px-8">
-      <h3 className="text-2xl sm:text-3xl font-semibold text-[#150e70] mb-6">
+      <h3 className="text-2xl sm:text-3xl font-semibold text-[#1300e70] mb-6">
         After Completing the Course...
       </h3>
       <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 pb-4">
@@ -238,7 +238,7 @@ const ThreeHundredHourTTPage = () => (
           />
         </div>
         <div className="flex flex-wrap justify-center gap-6 sm:gap-10 max-w-lg mx-auto sm:mx-0">
-          {["200", "300", "RPYS", "YACEP"].map((level, i) => (
+          {["300", "300", "RPYS", "YACEP"].map((level, i) => (
             <div key={i} className="flex flex-col items-center w-[4rem] h-[6rem] sm:w-[5rem] sm:h-[8rem]">
               <div className="relative w-full h-full mb-2">
                 <Image
@@ -253,7 +253,7 @@ const ThreeHundredHourTTPage = () => (
           ))}
         </div>
       </div>
-      <p className="text-medium text-[#150e70] max-w-md mx-auto leading-relaxed">
+      <p className="text-medium text-[#1300e70] max-w-md mx-auto leading-relaxed">
         You'll receive a Yoga Alliance certificate —<br />
         internationally recognized and accepted.
       </p>
@@ -277,5 +277,8 @@ const ThreeHundredHourTTPage = () => (
     </Link>
   </div>
 );
+
+
+
 
 export default ThreeHundredHourTTPage;

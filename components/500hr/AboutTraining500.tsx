@@ -267,7 +267,7 @@ export default function AboutTraining() {
   <div className="max-w-7xl mx-auto">
     {/* Section Heading */}
     <h2 className="text-3xl md:text-4xl font-semibold text-black mb-12 text-center">
-      Best 300 Hour Yoga Teacher Training in Goa
+      Best 500 Hour Yoga Teacher Training in Goa
     </h2>
 
     {/* Content Grid */}
@@ -276,9 +276,9 @@ export default function AboutTraining() {
       <div className="flex flex-col h-full">
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
-            Our 300 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners.
-            We at Rishikul Yogshala offer a comprehensive 300 Hour Yoga Teacher Training Course in Goa for students who
-            want to begin their Yogic Journey. The 300 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted
+            Our 500 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners.
+            We at Rishikul Yogshala offer a comprehensive 500 Hour Yoga Teacher Training Course in Goa for students who
+            want to begin their Yogic Journey. The 500 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted
             one combining the Classical Hatha Yoga to Dynamic Ashtanga Vinyasa Yoga as primary fields.
           </p>
 
@@ -291,12 +291,12 @@ export default function AboutTraining() {
 
           <p>
             Though participants who arrive at the course, belong to various physical and mental capabilities; nevertheless,
-            our 300 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others
+            our 500 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others
             and become the best platform for the beginners and the intermediate practitioners.
           </p>
 
           <p>
-            While you dedicate your valuable time in 300 Hour Yoga Teacher Training Course, it becomes our responsibility
+            While you dedicate your valuable time in 500 Hour Yoga Teacher Training Course, it becomes our responsibility
             to meet your needs with the best learning environment be it with facilities or staff too. If you seek the Best
             Yoga School in Goa, your search ends at Rishikul Yogshala. We offer you an intensive curriculum, exposure to
             yogic culture, picturesque landscape, and yogic food, which form your one-stop solution for classical learning
@@ -313,7 +313,7 @@ export default function AboutTraining() {
             href="https://www.instagram.com/reel/DF5UVRfIkRy/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block relative overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.1)] border border-gray-300 bg-black rounded-xl"
+            className="group block relative overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.1)] border border-gray-500 bg-black rounded-xl"
             aria-label="Open the Instagram Reel in a new tab"
           >
             {/* Portrait Thumbnail — show actual image size */}
@@ -325,7 +325,7 @@ export default function AboutTraining() {
 
             {/* Centered Play Button */}
             <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition duration-300 group-hover:bg-gray-300">
+              <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition duration-500 group-hover:bg-gray-500">
                 <svg
                   xmlns="http://www.w3.org/500/svg"
                   fill="#E1306C"
@@ -355,7 +355,7 @@ export default function AboutTraining() {
   <div className="relative max-w-4xl mx-auto py-16 px-4 md:px-10 text-center">
     <div className="bg-white/50 rounded-lg shadow-md p-8 md:p-12 backdrop-blur-md">
       <h2 className="text-xl md:text-2xl font-semibold text-black mb-4 tracking-wide uppercase">
-        300 Hour Yoga Teacher Training Curriculum
+        500 Hour Yoga Teacher Training Curriculum
       </h2>
 
       <p className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base">

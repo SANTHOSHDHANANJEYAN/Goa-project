@@ -27,7 +27,7 @@ const InclusionsExclusionsSection: React.FC = () => {
   const inclusions = [
     {
       icon: <Home className="w-5 h-5" />,
-      text: "Private Rooms or Double Shared Rooms Accommodation During The 200 YTTC Program"
+      text: "Private Rooms or Double Shared Rooms Accommodation During The 50 YTTC Program"
     },
     {
       icon: <Coffee className="w-5 h-5" />,
@@ -43,7 +43,7 @@ const InclusionsExclusionsSection: React.FC = () => {
     },
     {
       icon: <Award className="w-5 h-5" />,
-      text: "200 Hour YTT Course Certification"
+      text: "500 Hour YTT Course Certification"
     }
   ];
 
@@ -71,7 +71,7 @@ const InclusionsExclusionsSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white border border-gray-300 rounded-3xl shadow-lg">
+    <section className="py-16 md:py-20 bg-[#f4f5f3]  rounded-3xl shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -84,7 +84,7 @@ const InclusionsExclusionsSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
             What Is Included and Excluded?
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-red-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-[#e0b973] mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -116,7 +116,7 @@ const InclusionsExclusionsSection: React.FC = () => {
                   variants={fadeInUp}
                   className="flex items-start space-x-3 p-3 rounded-lg hover:bg-green-50 transition-colors duration-200 border border-green-200"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 mt-0.5">
+                  <div className="flex-shrink-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-green-600 mt-0.5">
                     {item.icon}
                   </div>
                   <p className="text-gray-700 flex-1 leading-relaxed">
@@ -155,7 +155,7 @@ const InclusionsExclusionsSection: React.FC = () => {
                   variants={fadeInUp}
                   className="flex items-start space-x-3 p-3 rounded-lg hover:bg-red-50 transition-colors duration-200 border border-red-200"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mt-0.5">
+                  <div className="flex-shrink-0 w-10 h-10 bg-red-500 rounded-full flex items-center justify-center text-red-600 mt-0.5">
                     {item.icon}
                   </div>
                   <p className="text-gray-700 flex-1 leading-relaxed">

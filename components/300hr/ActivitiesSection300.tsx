@@ -22,7 +22,7 @@ const EligibilitySection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#fffaf5]">
+    <section className="py-20 bg-[#f4f5f3]">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -45,7 +45,7 @@ const EligibilitySection: React.FC = () => {
         </motion.div>
 
         {/* Flex container for image and eligibility list */}
-        <div className="bg-white rounded-xl shadow-sm border border-orange-100 p-8 md:p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
+        <div className="bg-white rounded-xl shadow-sm border border-orange-300 p-8 md:p-10 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
           
           {/* Left image section */}
           <motion.div

@@ -28,7 +28,7 @@ const accommodationFeatures = [
   'A Calm Serene peaceful space for contemplation'
 ];
 
-export default function Accommodations300() {
+export default function Accommodation300() {
   const [isClient, setIsClient] = useState(false);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
@@ -37,14 +37,14 @@ export default function Accommodations300() {
   }, []);
 
   return (
-<section className="bg-gradient-to-b from-white to-orange-50 py-16 md:py-20">
+<section className="bg-[#f4f5f3] py-16 md:py-20">
   {/* Section Header */}
   <div className="container mx-auto px-4 mb-12">
     <div className="text-center mb-12">
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
         Yogic Accommodation
       </h2>
-      <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
+      <div className="w-24 h-1 bg-[#e0b973] mx-auto"></div>
     </div>
 
     {/* Description + Right Image */}
@@ -77,7 +77,7 @@ export default function Accommodations300() {
                 >
                   <path
                     fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    d="M10 18a8 8 0 300-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                     clipRule="evenodd"
                   />
                 </svg>
@@ -97,7 +97,7 @@ export default function Accommodations300() {
           height={400}
           className="rounded-2xl shadow-xl object-cover w-full max-h-[400px] transition-transform duration-500 hover:scale-105"
         />
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent opacity-0 hover:opacity-300 transition-opacity duration-500"></div>
       </div>
     </div>
   </div>
@@ -137,7 +137,7 @@ export default function Accommodations300() {
                 height={300}
                 className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-300 transition-opacity duration-300" />
             </div>
           </SwiperSlide>
         ))}
@@ -158,7 +158,7 @@ export default function Accommodations300() {
         <Image
           src={previewImage}
           alt="Preview"
-          width={1000}
+          width={3000}
           height={600}
           className="rounded-xl object-contain w-full h-auto max-h-[80vh] shadow-2xl"
         />

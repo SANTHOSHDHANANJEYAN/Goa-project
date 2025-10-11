@@ -9,18 +9,18 @@ export default function CourseSchedule() {
   return (
     <>
       {/* NEW SECTION — YTTC Certification (Goa) */}
-      <section className="bg-gradient-to-b from-[#fff8e1] to-[#fffef8] py-16 px-6 md:px-20">
+      <section className="bg-[#f4f5f3] py-16 px-6 md:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="mb-10">
             <h2 className="text-4xl font-extrabold text-gray-900">
               YTTC Certification
             </h2>
-            <p className="text-[#2317bc] italic font-semibold mt-2 text-lg">
-              300 hour Yoga TTC certification in Goa
+            <p className="text-[#000000] italic font-semibold mt-2 text-lg">
+              500 hour Yoga TTC certification in Goa
             </p>
             <p className="text-gray-700 mt-4 max-w-3xl">
-              After successful completion of 200 hour Yoga TTC in Goa, Rishikul Yogshala provides
+              After successful completion of 500 hour Yoga TTC in Goa, Rishikul Yogshala provides
               certification to participants. Get your Yoga Certification Course Today.
             </p>
           </div>
@@ -34,7 +34,7 @@ export default function CourseSchedule() {
                 alt="YTTC Certificate"
                 width={600}
                 height={400}
-                className="rounded-lg shadow-lg border border-gray-300"
+                className="rounded-lg shadow-lg border border-gray-500"
               />
             </div>
 
@@ -45,7 +45,7 @@ export default function CourseSchedule() {
                 alt="Yoga TTC Graduates"
                 width={700}
                 height={400}
-                className="rounded-lg shadow-lg border border-gray-300 object-cover"
+                className="rounded-lg shadow-lg border border-gray-500 object-cover"
               />
             </div>
           </div>

@@ -1,90 +1,85 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 
-export default function Schedule100() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoUrl = '/Videos/12daysvideo.mov';
+export default function Schedule50() {
+  const youtubeVideoId = 'DHbMWNWy7x4';
+  const youtubeUrl = `https://www.youtube.com/watch?v=${youtubeVideoId}`;
 
   const schedule = [
-    ['05:00 AM', 'Morning Tea'],
-    ['05:30 AM', 'Hatha- Vinayasa- Flow Yoga'],
-    ['07:30 AM', 'Pranayama & Meditation'],
-    ['09:00 AM', 'Breakfast'],
-    ['10:00 AM', 'Yoga Philosophy'],
-    ['11:15 AM', 'Yoga Practicum'],
-    ['12:30 PM', 'Yoga Practicum'],
-    ['13:15 PM', 'Lunch'],
-    ['15:30 PM', 'Yoga Anatomy'],
-    ['16:45 PM', 'Ashtanga Yoga'],
-    ['18:15 PM', 'Supper'],
+    ['05:00 AM – 05:30 AM', 'Herbal Tea'],
+    ['05:30 AM – 07:00 AM', 'Ashtanga Yoga'],
+    ['07:15 AM – 08:15 AM', 'Pranayama'],
+    ['08:15 AM – 09:15 AM', 'Breakfast'],
+    ['09:45 AM – 10:45 AM', 'Yoga Philosophy'],
+    ['11:00 AM – 12:00 PM', 'Mantra'],
+    ['12:15 PM – 01:15 PM', 'Adjustment & Alignment'],
+    ['01:15 PM – 02:15 PM', 'Lunch'],
+    ['04:00 PM – 04:15 PM', 'Drink Break'],
+    ['04:15 PM – 05:45 PM', 'Hatha Yoga'],
+    ['06:00 PM – 07:00 PM', 'Meditation / Yoga Nidra'],
+    ['07:00 PM – 08:00 PM', 'Dinner'],
+    ['08:00 PM – 09:00 PM', 'Self Study'],
+    ['10:00 PM', 'Lights Off'],
   ];
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-10">
-      <div className="flex flex-col md:flex-row gap-8 max-w-7xl mx-auto items-stretch">
+    <section className="w-full bg-[#f4f5f3] py-10 px-4 sm:px-6 lg:px-10">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
-        {/* Left Side: Daily Schedule */}
-        <div className="md:w-1/2 bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow flex flex-col">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#150e70] mb-6 text-center sm:text-left">
+        {/* LEFT: Daily Schedule */}
+        <div className="md:w-[48%] p-6 bg-white rounded-xl shadow-md border border-gray-200">
+          <h2 className="text-xl sm:text-2xl font-bold text-black mb-6 text-center md:text-left">
             Daily Schedule
           </h2>
-          <ul className="space-y-3 text-sm sm:text-base flex-1">
+
+          <ul className="divide-y divide-gray-200">
             {schedule.map(([time, activity], idx) => (
-              <li key={idx} className="flex items-start">
-                <span className="font-semibold text-[#150e70] w-24 flex-shrink-0">{time}</span>
-                <span className="text-gray-800">{activity}</span>
+              <li
+                key={idx}
+                className="grid grid-cols-[150px_1fr] sm:grid-cols-[180px_1fr] items-center py-2 px-2 hover:bg-[#f5f3ff] transition-colors rounded-md"
+              >
+                <span className="font-semibold text-[#150e70] text-sm sm:text-base text-left">
+                  {time}
+                </span>
+                <span className="text-gray-700 text-sm sm:text-base font-medium pl-3 border-l border-gray-300">
+                  {activity}
+                </span>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Right Side: Video Card */}
-        <div className="md:w-1/2 flex flex-col">
-          <div className="rounded-xl overflow-hidden shadow bg-white/60 flex-1">
-            <div className="relative aspect-video w-full">
-              {isPlaying ? (
-                <video
-                  src={videoUrl}
-                  controls
-                  autoPlay
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <>
-                  <Image
-                    src="/Thumbnail/Yogacourses 2.jpg"
-                    alt="Video Thumbnail"
-                    width={640}
-                    height={360}
-                    className="object-cover w-full h-full"
-                    loading="lazy"
-                  />
-                  <button
-                    aria-label="Play Video"
-                    className="absolute inset-0 flex items-center justify-center"
-                    onClick={() => setIsPlaying(true)}
-                  >
-                    <svg
-                      className="h-16 w-16 text-white opacity-80 hover:opacity-100 transition"
-                      fill="currentColor"
-                      viewBox="0 0 84 84"
-                    >
-                      <circle cx="42" cy="42" r="42" fill="#000" opacity="0.6" />
-                      <polygon points="33,26 60,42 33,58" fill="white" />
-                    </svg>
-                  </button>
-                </>
-              )}
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900">Yoga Course Introduction</h3>
-              <p className="text-gray-600 text-sm mt-1">
-                Watch this short video to get a feel of your upcoming experience.
-              </p>
-            </div>
-          </div>
+        {/* RIGHT: YouTube Thumbnail with Actual Image Size */}
+        <div className="md:w-[52%] flex items-center justify-center">
+          <a
+            href={youtubeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch the daily schedule video on YouTube"
+            className="relative group block overflow-hidden shadow-xl rounded-xl border border-gray-200 bg-black"
+          >
+            <Image
+              src="/aboutpics/Rishikul Yogshala Goa 2.jpg"
+              alt="Daily Schedule Video Thumbnail"
+              width={500} // Adjust width to image’s natural size
+              height={750} // Maintain natural proportion
+              className="object-contain w-auto h-auto max-w-full rounded-xl transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+
+            {/* Play button overlay */}
+            <span className="absolute inset-0 flex items-center justify-center">
+              <svg
+                className="h-16 w-16 sm:h-20 sm:w-20 text-white opacity-90 transition-transform group-hover:scale-110"
+                fill="currentColor"
+                viewBox="0 0 84 84"
+              >
+                <circle cx="42" cy="42" r="42" fill="#000" opacity="0.4" />
+                <polygon points="33,26 60,42 33,58" fill="white" />
+              </svg>
+            </span>
+          </a>
         </div>
 
       </div>

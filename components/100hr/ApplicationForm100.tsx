@@ -40,7 +40,7 @@ const FreeManualSignup: React.FC = () => {
           variants={itemVariants}
           className="text-2xl sm:text-4xl font-bold text-[#150e70] mb-4 leading-snug"
         >
-          Get your FREE <br className="sm:hidden" /> 100-Hrs Study Manual
+          Get your FREE <br className="sm:hidden" /> 200-Hrs study manual
         </motion.h2>
 
         {/* Subtitle */}
@@ -48,8 +48,8 @@ const FreeManualSignup: React.FC = () => {
           variants={itemVariants}
           className="text-[#150e70] max-w-xl mb-8 text-sm sm:text-base"
         >
-          Plus 5 video lessons to learn the fundamental principles of creating
-          your own yoga class and essential tools for teaching.
+          And 5 video lessons to discover the fundamental principles of creating your own
+          yoga class and essential tools for teaching
         </motion.p>
 
         {/* Signup Form */}
@@ -60,7 +60,7 @@ const FreeManualSignup: React.FC = () => {
           <motion.input
             variants={itemVariants}
             type="email"
-            placeholder="Your Email"
+            placeholder="E-mail"
             className="w-full px-4 py-3 text-sm sm:text-base border border-indigo-200 rounded-full bg-white shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-300 transition"
           />
           <motion.input
@@ -85,7 +85,7 @@ const FreeManualSignup: React.FC = () => {
               href="/privacy-policy"
               className="underline text-[#150e70] hover:text-indigo-700 transition"
             >
-              Privacy Policy
+              privacy policy
             </a>
           </motion.p>
         </motion.form>
@@ -99,7 +99,7 @@ const FreeManualSignup: React.FC = () => {
           >
             <Image
               src="/yg_logo-removebg-preview.png"
-              alt="100 hrs Yoga Teacher Training Manual"
+              alt="200 hrs Yoga Teacher Training Manual"
               width={224}
               height={224}
               className="w-32 sm:w-44 md:w-56 mx-auto drop-shadow-2xl transition-all duration-300"

@@ -28,7 +28,7 @@ const accommodationFeatures = [
   'A Calm Serene peaceful space for contemplation'
 ];
 
-export default function YogicAccommodationSection() {
+export default function Accommodation100() {
   const [isClient, setIsClient] = useState(false);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
@@ -37,14 +37,14 @@ export default function YogicAccommodationSection() {
   }, []);
 
   return (
-<section className="bg-gradient-to-b from-white to-orange-50 py-16 md:py-20">
+<section className="bg-[#f4f5f3] py-16 md:py-20">
   {/* Section Header */}
   <div className="container mx-auto px-4 mb-12">
     <div className="text-center mb-12">
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
         Yogic Accommodation
       </h2>
-      <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
+      <div className="w-24 h-1 bg-[#e0b973] mx-auto"></div>
     </div>
 
     {/* Description + Right Image */}

@@ -63,7 +63,7 @@ const BeforeYouGoSection: React.FC = () => {
           className="text-center mb-10 md:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-black leading-tight">
-            100 Hour Yoga Teacher Training in Goa
+            500 Hour Yoga Teacher Training in Goa
           </h2>
           <h3 className="text-lg sm:text-xl md:text-2xl mt-2 font-medium text-gray-700">
             What to Know Before You Go
@@ -73,7 +73,7 @@ const BeforeYouGoSection: React.FC = () => {
         {/* Intro */}
         <motion.div
           variants={fadeInUp}
-          className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 mb-10 md:mb-14 border border-gray-100"
+          className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 mb-10 md:mb-14 border border-gray-500"
         >
           <div className="flex flex-col sm:flex-row items-start gap-4">
             <Heart className="w-7 h-7 text-pink-500 mt-1" />
@@ -106,7 +106,7 @@ const BeforeYouGoSection: React.FC = () => {
             <motion.div
               key={i}
               variants={fadeInUp}
-              className="flex flex-col justify-center bg-white border border-gray-100 rounded-xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition duration-300 min-h-[160px]"
+              className="flex flex-col justify-center bg-white border border-gray-500 rounded-xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition duration-500 min-h-[160px]"
             >
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#e8ebff] text-[#150e70] flex-shrink-0">
