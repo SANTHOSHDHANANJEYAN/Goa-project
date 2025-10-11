@@ -70,7 +70,6 @@ const BeforeYouGoSection: React.FC = () => {
           </h3>
           <div className="mt-3 md:mt-5 w-20 h-1 bg-[#e0b973] mx-auto rounded-full"></div>
         </motion.div>
-
         {/* Intro */}
         <motion.div
           variants={fadeInUp}
