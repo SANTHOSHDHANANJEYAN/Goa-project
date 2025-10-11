@@ -142,36 +142,43 @@ const BeforeYouGoSection: React.FC = () => {
         </motion.div>
 
         {/* BOOK GRID (like in image) */}
-        <motion.section variants={fadeInUp} className="text-center">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-            Recommended Readings Before This Course
-          </h3>
-          <div className="mt-3 w-24 h-1 bg-[#150e70] mx-auto rounded-full mb-8"></div>
+       {/* BOOK GRID */}
+<motion.section variants={fadeInUp} className="text-center">
+  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
+    Recommended Readings Before This Course
+  </h3>
+  <div className="mt-3 w-24 h-1 bg-[#150e70] mx-auto rounded-full mb-8"></div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            {books.map((book, idx) => (
-              <div
-                key={idx}
-                className="border border-[#16a34a] rounded-lg overflow-hidden bg-white shadow-md hover:shadow-lg transition"
-              >
-                <a href={book.href} target="_blank" rel="noopener noreferrer">
-                  <div className="aspect-[3/4]">
-                    <img
-                      src={book.cover}
-                      alt={book.title}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="bg-[#16a34a] text-white text-center font-semibold py-2 flex items-center justify-center gap-2">
-                    {book.title}
-                    <Download className="w-4 h-4" />
-                  </div>
-                </a>
-              </div>
-            ))}
-          </div>
-        </motion.section>
+  {/* Clamp width so cards are smaller, keep it responsive */}
+  <div className="mx-auto max-w-5xl">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {books.map((book, idx) => (
+        <div
+          key={idx}
+          className="border border-[#16a34a] rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md transition"
+        >
+          <a href={book.href} target="_blank" rel="noopener noreferrer">
+            {/* Slightly shorter cards: reduce height ratio */}
+            <div className="aspect-[2/3]">
+              <img
+                src={book.cover}
+                alt={book.title}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Smaller title bar */}
+            <div className="bg-[#16a34a] text-white text-center font-medium text-xs sm:text-sm py-1.5 px-2 flex items-center justify-center gap-1.5">
+              <span className="truncate">{book.title}</span>
+              <Download className="w-3.5 h-3.5" />
+            </div>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</motion.section>
       </div>
     </section>
   );
