@@ -124,24 +124,25 @@ const BeforeYouGoSection: React.FC = () => {
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
             Recommended Readings Before This Course
           </h3>
-          <div className="mt-3 w-24 h-1 bg-[#150e70] mx-auto rounded-full mb-8"></div>
+          <div className="mt-3 w-24 h-1 bg-[#e0b973] mx-auto rounded-full mb-8"></div>
 
           {/* Arrows */}
-          <button
-            onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
-            aria-label="Previous"
-          >
-            <ChevronLeft size={26} />
-          </button>
+         <button
+  onClick={scrollLeft}
+  className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-[#fff6e0] text-[#e0b973] p-2 rounded-full z-10 transition"
+  aria-label="Previous"
+>
+  <ChevronLeft size={26} />
+</button>
 
-          <button
-            onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-indigo-50 text-indigo-600 p-2 rounded-full z-10 transition"
-            aria-label="Next"
-          >
-            <ChevronRight size={26} />
-          </button>
+<button
+  onClick={scrollRight}
+  className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-[#fff6e0] text-[#e0b973] p-2 rounded-full z-10 transition"
+  aria-label="Next"
+>
+  <ChevronRight size={26} />
+</button>
+
 
           {/* Horizontal scroll area */}
           <div
