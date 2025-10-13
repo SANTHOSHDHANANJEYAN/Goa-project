@@ -15,7 +15,6 @@ const OurRooms21 = dynamic(() => import("@/components/R21days/OurRooms21"), { ss
 const RoomSlides21 = dynamic(() => import("@/components/R21days/RoomSlides21"), { ssr: false });
 const OurDinning21 = dynamic(() => import("@/components/R21days/OurDinning21"), { ssr: false });
 const DinningSlides21 = dynamic(() => import("@/components/R21days/DinningSlides21"), { ssr: false });
-const DailySchedule21 = dynamic(() => import("@/components/R21days/DailySchedule21"), { ssr: false });
 const Importance21 = dynamic(() => import("@/components/R21days/Importance21"), { ssr: false });
 const Benefit21 = dynamic(() => import("@/components/R21days/Benefit21"), { ssr: false });
 const NearestAirport21 = dynamic(() => import("@/components/R21days/NearestAirport21"), { ssr: false });
@@ -33,7 +32,6 @@ export default function Page() {
       <RoomSlides21 />
       <OurDinning21 />
       <DinningSlides21 />
-      <DailySchedule21 />
       <TwoListing21 />
       <Importance21 />
       <Benefit21 />

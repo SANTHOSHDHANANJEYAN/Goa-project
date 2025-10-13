@@ -15,7 +15,6 @@ const OurRooms14 = dynamic(() => import("@/components/R14days/OurRooms14"), { ss
 const RoomSlides14 = dynamic(() => import("@/components/R14days/RoomSlides14"), { ssr: false });
 const OurDinning14 = dynamic(() => import("@/components/R14days/OurDinning14"), { ssr: false });
 const DinningSlides14 = dynamic(() => import("@/components/R14days/DinningSlides14"), { ssr: false });
-const DailySchedule14 = dynamic(() => import("@/components/R14days/DailySchedule14"), { ssr: false });
 const Importance14 = dynamic(() => import("@/components/R14days/Importance14"), { ssr: false });
 const Benefit14 = dynamic(() => import("@/components/R14days/Benefit14"), { ssr: false });
 const NearestAirport14 = dynamic(() => import("@/components/R14days/NearestAirport14"), { ssr: false });
@@ -33,7 +32,6 @@ export default function Page() {
       <RoomSlides14 />
       <OurDinning14 />
       <DinningSlides14 />
-      <DailySchedule14 />
       <TwoListing14 />
       <Importance14 />
       <Benefit14 />
