@@ -1,79 +1,31 @@
 import React from 'react';
 import Image from 'next/image';
 
-interface Activity {
-  title: string;
-  description: string;
-  image: string;
-}
-
-const activities: Activity[] = [
-  {
-    title: "Sunrise Beach Yoga",
-    description: "Begin your day with energizing yoga sessions by the rising sun over the sea.",
-    image: "/RetreatBG/Sunrise.jpeg.jpg",
-  },
-  {
-    title: "Sound Healing & Meditation",
-    description: "Experience deep relaxation through guided sound healing and meditation.",
-    image: "/RetreatBG/Sound.jpeg.jpg",
-  },
-  {
-    title: "Nature Walks & Beach View",
-    description: "Reconnect with nature through mindful walks along Goa’s lush trails.",
-    image: "/RetreatBG/naturalwalk.jpeg.jpg",
-  },
-  {
-    title: "Kirtan & Bhajan Evenings",
-    description: "Soak in the bliss of devotional music and community singing under the stars.",
-    image: "/RetreatBG/Kirtans.jpeg.jpg",
-  },
-  {
-    title: "Art & Expression Therapy",
-    description: "Channel creativity and inner clarity through guided art-based expression.",
-    image: "/RetreatBG/art.jpeg.jpg",
-  },
-  {
-    title: "Yoga Wellness Workshop",
-    description: "Learn foundational principles of self-care, meditation, and relaxation.",
-    image: "/RetreatBG/yogawellness.jpeg.jpg",
-  },
-];
-
 const ActivitiesSection: React.FC = () => {
   return (
-    <section className="relative bg-transparent py-12 sm:py-16 text-center overflow-hidden">
-      {/* Optional radial background decoration */}
-      <div className="absolute inset-0 z-0 opacity-10 bg-[url('/images/radial-bg.png')] bg-cover bg-center" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-16 sm:mb-20">
-          Retreat Program Essentials
+    <section className="relative bg-white py-16 px-4 sm:px-8 lg:px-16 text-[#262626] font-sans">
+      <div className="max-w-5xl mx-auto text-center space-y-8">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] leading-snug">
+          How Different is it from Yoga Teacher Training Course?
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-16">
-          {activities.map((activity, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition relative flex flex-col items-center p-6"
-            >
-              <div className="-mt-16 mb-6">
-                <Image
-                  src={activity.image}
-                  alt={activity.title}
-                  width={96}
-                  height={96}
-                  className="rounded-full border-4 border-white shadow object-cover"
-                />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-[#150e70] text-center">
-                {activity.title}
-              </h3>
-              <p className="text-sm sm:text-base text-[#150e70] mt-3 text-center">
-                {activity.description}
-              </p>
-            </div>
-          ))}
+        <div className="text-left space-y-6 mt-8 text-base sm:text-lg text-gray-800">
+          <p>
+            <strong>Focus:</strong> Yoga TTC (Teacher Training Certification) focuses on training individuals to teach yoga, 
+            while a 21-day Intensive Yoga Immersion Program focuses on personal growth and transformation 
+            — helping participants become better practitioners rather than teachers.
+          </p>
+
+          <p>
+            <strong>Duration:</strong> Yoga TTC courses typically last for 23 to 50 days depending on the curriculum you choose, 
+            whereas the 21-Day Intensive Yoga Immersion Program offers a more concise, short-term commitment.
+          </p>
+
+          <p>
+            <strong>Curriculum:</strong> Yoga TTC covers teaching methodology, anatomy, and philosophy, while the 21-Day Intensive Yoga Immersion 
+            Program explores Yoga TTC concepts during the first two weeks and then progresses to deeper yogic practices, meditation, 
+            and breath awareness enhancement.
+          </p>
         </div>
       </div>
     </section>

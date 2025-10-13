@@ -1,105 +1,48 @@
 'use client';
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import Image from "next/image";
-import "swiper/css";
-import "swiper/css/pagination";
-
-const excursions = [
-  { id: 1, image: "/excursion/7.jpg" },
-  { id: 2, image: "/excursion/6.jpg" },
-  { id: 3, image: "/excursion/3.jpg" },
-  { id: 4, image: "/excursion/1.jpg" },
-  { id: 5, image: "/excursion/10.jpg" },
-  { id: 6, image: "/excursion/11.jpg" },
-  { id: 7, image: "/excursion/12.jpg" },
-  { id: 8, image: "/excursion/13.jpg" },
-  { id: 9, image: "/excursion/15.jpg" },
-  { id: 10, image: "/excursion/16.jpg" },
-  { id: 11, image: "/excursion/17.jpg" },
-  { id: 12, image: "/excursion/18.jpg" },
-  { id: 13, image: "/excursion/19.jpg" },
-];
+import React from 'react';
 
 export default function OurExcursions() {
-  const [previewImage, setPreviewImage] = useState<string | null>(null);
-
   return (
-    <section
-      className="bg-transparent pb-[5rem] px-4 text-center"
-      role="region"
-      aria-label="Yoga Retreat Excursions"
-    >
-      <h2 className="text-4xl md:text-5xl font-semibold text-[#4c2a65] mb-4">
-        Our Excursions
-      </h2>
-      <p className="text-lg text-[#3d3d3d] max-w-2xl mx-auto mb-12">
-        These are real stories from our Yoga Teacher Training students — raw, honest, and deeply
-        moving. See how yoga has helped them heal, grow, and reconnect with themselves.
-      </p>
+    <section className="bg-white py-16 px-6 sm:px-10 lg:px-20 text-[#262626] font-sans">
+      <div className="max-w-5xl mx-auto space-y-12">
+        {/* Section 1 - Program Types */}
+        <div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] text-center mb-8">
+            Types of 21 Day Intensive Yoga Immersion Programs
+          </h2>
 
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        loop
-        speed={2000}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        modules={[Autoplay, Pagination]}
-        className="max-w-6xl mx-auto"
-      >
-        {excursions.map(({ id, image }) => (
-          <SwiperSlide key={id}>
-            <div
-              onClick={() => setPreviewImage(image)}
-              className="relative rounded-3xl overflow-hidden group shadow-md cursor-pointer"
-            >
-              <Image
-                src={image}
-                alt={`Yoga excursion ${id}`}
-                width={400}
-                height={300}
-                className="aspect-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      {previewImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-          onClick={() => setPreviewImage(null)}
-        >
-          <div
-            className="relative max-w-4xl w-full mx-4 max-h-[80vh]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Image
-              src={previewImage}
-              alt="Excursion preview"
-              width={1000}
-              height={600}
-              className="rounded-xl object-contain w-full h-full"
-              priority
-            />
-            <button
-              onClick={() => setPreviewImage(null)}
-              aria-label="Close preview"
-              className="absolute top-2 right-2 text-white text-3xl bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75 transition"
-            >
-              &times;
-            </button>
-          </div>
+          <ul className="space-y-6 text-base sm:text-lg text-gray-800">
+            <li>
+              <strong>Online Programs:</strong> Offer flexibility and accessibility, with some programs providing lifetime access to recordings.
+            </li>
+            <li>
+              <strong>In-Person Programs:</strong> Provide a more immersive experience, often with expert instructors and a supportive community.
+            </li>
+            <li>
+              <strong>Specialized Programs:</strong> Focus on specific areas, such as Yoga Nidra, Sound Healing, or Reiki.
+            </li>
+          </ul>
         </div>
-      )}
+
+        {/* Section 2 - What to Expect */}
+        <div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#150e70] text-center mb-8">
+            What to Expect
+          </h3>
+
+          <ul className="space-y-6 text-base sm:text-lg text-gray-800">
+            <li>
+              <strong>Daily Yoga Practices:</strong> Explore various yoga styles, breathing techniques, and meditation practices.
+            </li>
+            <li>
+              <strong>Guided Sessions:</strong> Expert instructors provide guidance and support throughout the program.
+            </li>
+            <li>
+              <strong>Community Support:</strong> Connect with like-minded individuals and share experiences on your yogic and spiritual journey.
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   );
 }

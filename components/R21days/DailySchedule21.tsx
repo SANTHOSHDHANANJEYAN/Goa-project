@@ -1,72 +1,101 @@
-import Image from 'next/image';
+import React from 'react';
 
 export default function DailySchedule21() {
-  const itinerary = [
-    { day: 'Day 1: Arrival Day', description: 'Pickup from Airport – Check-In After 10 AM – Welcome Ceremony followed by Digestive Lunch – Introduction to Retreat schedule – Gentle Yoga and Meditation – Holistic Dinner – Relaxing & stargazing' },
-    { day: 'Day 2:', description: 'Morning Nature Walk – Holistic Drink – Yoga Asana – Meditation – Healthy Breakfast – Yoga Therapy – Digestive Lunch – Visit To World Famous Ganga Arati – Holistic Dinner' },
-    { day: 'Day 3:', description: 'Nature Walk – Holistic Drink – Yoga Asana – Pranayama – Healthy Breakfast – Wellness Holistic Massage – Digestive Lunch – Yoga Nidra and Meditation – Holistic Dinner' },
-    { day: 'Day 4:', description: 'Nature Walk – Holistic Drink – Ganga Bath – Meditation – Healthy Breakfast – Rejuvenation Therapy – Digestive Lunch – Yoga Asana – Yoga Nidra – Holistic Dinner' },
-    { day: 'Day 5:', description: 'Nature Walk – Holistic Drink – Yoga Asana – Meditation – Breakfast – Ayurvedic Cooking Workshop – Digestive Lunch – Mantra Chanting – Holistic Dinner' },
-    { day: 'Day 6:', description: 'Sunrise Yoga – Holistic Drink – Breathwork Session – Breakfast – Free Time for Reflection – Digestive Lunch – Creative Journaling – Yoga Nidra – Dinner' },
-    { day: 'Day 7:', description: 'Nature Walk – Yoga Asana – Guided Meditation – Breakfast – Chakra Workshop – Digestive Lunch – Sound Healing – Dinner – Stargazing' },
-    { day: 'Day 8:', description: 'Yoga – Meditation – Philosophy Talk – Healthy Breakfast – Forest Walk – Digestive Lunch – Reiki Healing – Holistic Dinner' },
-    { day: 'Day 9:', description: 'Pranayama – Sunrise Yoga – Herbal Drink – Breakfast – Volunteer Activity – Digestive Lunch – Guided Visualization – Dinner' },
-    { day: 'Day 10:', description: 'Nature Walk – Holistic Drink – Partner Yoga – Breakfast – Wellness Workshop – Digestive Lunch – Sunset Meditation – Dinner' },
-    { day: 'Day 11:', description: 'Yoga Asana – Chanting – Philosophy Lecture – Breakfast – Massage Therapy – Digestive Lunch – Group Circle – Dinner' },
-    { day: 'Day 12:', description: 'Meditation – Breathwork – Breakfast – Day Trip to Temple – Packed Lunch – Return & Rest – Restorative Yoga – Dinner' },
-    { day: 'Day 13:', description: 'Yoga – Tea Ceremony – Breakfast – Sound Bath – Digestive Lunch – Nature Sketching – Evening Meditation – Dinner' },
-    { day: 'Day 14:', description: 'Pranayama – Yoga Flow – Meditation – Breakfast – Yoga Nidra Workshop – Digestive Lunch – Campfire Sharing – Dinner' },
-    { day: 'Day 15:', description: 'Silent Morning – Meditation – Holistic Drink – Breakfast – Free Exploration Time – Digestive Lunch – Restorative Yoga – Dinner' },
-    { day: 'Day 16:', description: 'Kriya Yoga Practice – Herbal Tea – Light Breakfast – Ayurvedic Lecture – Digestive Lunch – Deep Stretching – Evening Kirtan' },
-    { day: 'Day 17:', description: 'Nature Walk – Yoga – Breakfast – Workshop on Yogic Diet – Digestive Lunch – Gratitude Journaling – Sunset Asana – Dinner' },
-    { day: 'Day 18:', description: 'Meditation – Yoga – Philosophy Talk – Breakfast – Sharing Circle – Digestive Lunch – Candlelight Yoga – Dinner' },
-    { day: 'Day 19:', description: 'Sun Salutations – Pranayama – Breakfast – Free Time – Digestive Lunch – Gentle Yoga – Yoga Nidra – Dinner' },
-    { day: 'Day 20:', description: 'Morning Routine – Sound Therapy – Breakfast – Rejuvenation Massage – Digestive Lunch – Kirtan – Dinner' },
-    { day: 'Day 21: Departure Day', description: 'Morning Meditation – Light Breakfast – Closing Ceremony – Feedback Sharing – Check-Out before 12 PM – Airport Drop-off' },
-  ];
-
-  const images = [
-    '/Curriculumimg/8.jpg',
-    '/Curriculumimg/5.jpg',
-    '/Curriculumimg/4.jpg',
-    '/Curriculumimg/2.jpg',
-    '/Curriculumimg/1.jpg',
-  ];
-
   return (
-    <section className="flex flex-col lg:flex-row px-4 sm:px-8 md:px-16 lg:px-20 py-10 gap-10 items-stretch bg-white">
-      
-      {/* Left - Timeline */}
-      <div className="w-full lg:w-1/2 flex flex-col">
-        <h2 className="text-2xl sm:text-3xl lg:text-left text-center font-semibold text-[#150E70] mb-8">
-          Our Sample Schedule: Table of Time and Program
+    <section className="bg-white py-16 px-6 sm:px-10 lg:px-20 text-[#262626] font-sans">
+      <div className="max-w-5xl mx-auto space-y-10">
+        {/* Heading */}
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] text-center leading-snug">
+          Here's a Sample Curriculum and Syllabus for a 21-Day Intensive Yoga Immersion Program
         </h2>
-        <div className="border-l-2 border-dotted border-[#150E70] ml-4 pl-6 space-y-8 relative flex-1">
-          {itinerary.map((item, idx) => (
-            <article key={idx} className="relative">
-              <div className="absolute -left-6 top-1 w-6 h-6 rounded-full bg-white border-4 border-[#150E70] flex items-center justify-center">
-                <span className="w-3 h-3 bg-[#150E70] rounded-full" />
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold text-[#150E70] mb-1">{item.day}</h3>
-              <p className="text-gray-800 text-sm sm:text-base leading-relaxed">{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </div>
 
-      {/* Right - Image Stack */}
-      <div className="w-full lg:w-1/2 flex flex-col gap-6">
-        {images.map((src, idx) => (
-          <div key={idx} className="relative w-full flex-1 rounded-lg overflow-hidden shadow-lg min-h-[200px]">
-            <Image
-              src={src}
-              alt={`Retreat ${idx + 1}`}
-              fill
-              className="object-cover w-full h-full"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+        {/* Week 1 */}
+        <div>
+          <h3 className="text-2xl font-semibold text-[#150e70] mb-4">Week 1: Foundations</h3>
+          <ul className="list-disc list-inside space-y-2 text-base sm:text-lg text-gray-800">
+            <li>Introduction to Yoga Philosophy</li>
+            <li>Basic Asanas (postures)</li>
+            <li>Pranayama (breathing techniques)</li>
+            <li>Meditation and Relaxation</li>
+          </ul>
+        </div>
+
+        {/* Week 2 */}
+        <div>
+          <h3 className="text-2xl font-semibold text-[#150e70] mb-4">Week 2: Balance and Alignment</h3>
+          <ul className="list-disc list-inside space-y-2 text-base sm:text-lg text-gray-800">
+            <li>Dynamic Flow Sequences</li>
+            <li>Balancing and Alignment Techniques</li>
+            <li>Yin Yoga for Deep Relaxation</li>
+            <li>Mindfulness and Self-Awareness</li>
+          </ul>
+        </div>
+
+        {/* Week 3 */}
+        <div>
+          <h3 className="text-2xl font-semibold text-[#150e70] mb-4">Week 3: Inner Transformation</h3>
+          <ul className="list-disc list-inside space-y-2 text-base sm:text-lg text-gray-800">
+            <li>Advanced Asanas and Variations</li>
+            <li>Kundalini Awakening and Energy Work</li>
+            <li>Yoga Nidra for Deep Relaxation</li>
+            <li>Meditation and Inner Reflection</li>
+          </ul>
+        </div>
+
+        {/* Special Sessions */}
+        <div>
+          <h3 className="text-2xl font-semibold text-[#150e70] mb-4">Special Sessions</h3>
+          <ul className="list-disc list-inside space-y-2 text-base sm:text-lg text-gray-800">
+            <li>Yoga and Ayurveda</li>
+            <li>Yoga and Emotional Intelligence</li>
+            <li>Yoga and Mindful Living</li>
+          </ul>
+        </div>
+
+        {/* Syllabus */}
+        <div>
+          <h3 className="text-2xl font-semibold text-[#150e70] mb-4">Syllabus</h3>
+
+          <div className="space-y-6 text-gray-800 text-base sm:text-lg">
+            <div>
+              <h4 className="font-semibold text-[#150e70] mb-2">Day 1–3: Introduction and Foundations</h4>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Introduction to yoga philosophy and history</li>
+                <li>Basic asanas and pranayama techniques</li>
+                <li>Meditation and relaxation practices</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-[#150e70] mb-2">Day 4–7: Balance and Alignment</h4>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Dynamic flow sequences and balancing techniques</li>
+                <li>Yin yoga for deep relaxation</li>
+                <li>Mindfulness and self-awareness practices</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-[#150e70] mb-2">Day 8–14: Inner Transformation</h4>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Advanced asanas and variations</li>
+                <li>Yoga Nidra for deep relaxation</li>
+                <li>Meditation and inner reflection</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-[#150e70] mb-2">Day 15–21: Integration and Application</h4>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Applying yoga principles to daily life</li>
+                <li>Kundalini awakening and energy work</li>
+                <li>Yoga and Ayurveda</li>
+                <li>Yoga and emotional intelligence</li>
+                <li>Final project and reflection</li>
+              </ul>
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );

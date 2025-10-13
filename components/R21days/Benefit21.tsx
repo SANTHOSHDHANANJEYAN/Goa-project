@@ -1,38 +1,103 @@
 import Image from "next/image";
+import { FaSun, FaCloudSun, FaMoon, FaLeaf } from "react-icons/fa";
 
 export default function Benefit21() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-white">
-      {/* Left image */}
-      <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
-        <Image
-          src="/Imp&bene/bene - Copy.jpg"
-          alt="Goa Yoga Retreat"
-          width={800}
-          height={600}
-          className="rounded-xl shadow-lg w-full h-auto max-h-[28rem] object-cover"
-        />
-      </div>
+    <section className="bg-white py-16 px-6 sm:px-10 lg:px-20 text-[#150e70]">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12">
+          Daily Schedule
+        </h2>
 
-      {/* Right content */}
-      <article className="w-full lg:w-1/2 lg:pl-12">
-        <p className="text-orange-500 font-medium tracking-wide uppercase mb-2 text-sm sm:text-base">
-          Awaken Your Inner Bliss
-        </p>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#150e70] mb-6 leading-tight">
-          Benefits of Our Goa Retreats
-        </h1>
-        <p className="text-gray-800 font-semibold mb-4 text-base sm:text-lg">
-          Refresh Your Mind, Rejuvenate Your Body & Rediscover Your Soul
-        </p>
-        <p className="text-gray-700 mb-6 text-sm sm:text-base leading-relaxed">
-          Escape the hustle of daily life and immerse yourself in the serene charm of Goa’s pristine beaches. 
-          Surrounded by swaying palms and the soothing sounds of the Arabian Sea, our retreat offers a chance to reconnect with your inner self. 
-          Experience revitalizing sunrise yoga sessions, guided meditation, and calming breathwork while soaking in the coastal breeze. 
-          Relish nourishing sattvic meals and embrace a slower, more mindful rhythm of life. 
-          Leave behind stress and chaos, returning home with a lighter heart, a clearer mind, and a deeply rejuvenated soul.
-        </p>
-      </article>
+        <div className="space-y-16">
+          {/* Morning Routine */}
+          <div className="flex flex-col lg:flex-row items-center gap-10">
+            <div className="w-full lg:w-1/2">
+              <Image
+                src="/Imp&bene/morning.jpg"
+                alt="Morning Yoga Routine"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </div>
+            <div className="w-full lg:w-1/2 space-y-5">
+              <div className="flex items-center gap-3">
+                <FaSun className="text-orange-400 text-2xl" />
+                <h3 className="text-2xl font-semibold">Morning Routine (6:00 AM - 10:00 AM)</h3>
+              </div>
+              <ul className="list-decimal list-inside text-gray-700 leading-relaxed space-y-2">
+                <li>6:00 AM - 7:30 AM: Yoga asana practice (dynamic flow or vinyasa yoga)</li>
+                <li>7:45 AM - 8:45 AM: Pranayama</li>
+                <li>9:00 AM - 10:00 AM: Healthy breakfast and journaling</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Daytime Sessions */}
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
+            <div className="w-full lg:w-1/2 space-y-5">
+              <div className="flex items-center gap-3">
+                <FaCloudSun className="text-yellow-500 text-2xl" />
+                <h3 className="text-2xl font-semibold">Daytime Sessions (10:30 AM - 4:00 PM)</h3>
+              </div>
+              <ul className="list-decimal list-inside text-gray-700 leading-relaxed space-y-2">
+                <li>10:30 AM - 12:00 Noon: Yoga philosophy and theory</li>
+                <li>12:00 Noon - 1:00 PM: Asana practice (gentle flow or hatha yoga)</li>
+                <li>1:00 PM - 2:00 PM: Lunch break</li>
+                <li>2:00 PM - 4:00 PM: Free time for relaxation, reading, or exploration</li>
+              </ul>
+            </div>
+            <div className="w-full lg:w-1/2">
+              <Image
+                src="/Imp&bene/daytime.jpg"
+                alt="Daytime Yoga Sessions"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Evening Routine */}
+          <div className="flex flex-col lg:flex-row items-center gap-10">
+            <div className="w-full lg:w-1/2">
+              <Image
+                src="/Imp&bene/evening.jpg"
+                alt="Evening Yoga Routine"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </div>
+            <div className="w-full lg:w-1/2 space-y-5">
+              <div className="flex items-center gap-3">
+                <FaMoon className="text-indigo-500 text-2xl" />
+                <h3 className="text-2xl font-semibold">Evening Routine (4:15 PM - 9:00 PM)</h3>
+              </div>
+              <ul className="list-decimal list-inside text-gray-700 leading-relaxed space-y-2">
+                <li>4:15 PM - 5:45 PM: Evening yoga practice (restorative yoga or yin yoga)</li>
+                <li>6:00 PM - 7:00 PM: Workshops or special sessions (e.g., Meditation, yoga nidra, sound healing)</li>
+                <li>7:00 PM - 8:00 PM: Dinner</li>
+                <li>8:00 PM - 9:00 PM: Relaxation, reading, or exploration</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Additional Activities */}
+          <div className="text-center space-y-5">
+            <div className="flex justify-center items-center gap-3">
+              <FaLeaf className="text-green-600 text-2xl" />
+              <h3 className="text-2xl font-semibold">Additional Activities</h3>
+            </div>
+            <ul className="list-disc list-inside text-gray-700 leading-relaxed inline-block text-left space-y-2">
+              <li>Daily journaling and reflection</li>
+              <li>Group discussions and sharing</li>
+              <li>Nature walks or outdoor activities (optional)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

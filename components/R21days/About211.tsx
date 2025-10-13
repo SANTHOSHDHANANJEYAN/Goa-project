@@ -2,7 +2,7 @@
 
 import { FaCertificate, FaUtensils } from "react-icons/fa";
 import { GiMeditation } from "react-icons/gi";
-import { MdOnlinePrediction } from "react-icons/md";
+import { MdOutlineSelfImprovement } from "react-icons/md";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
@@ -26,10 +26,26 @@ export default function About211() {
   };
 
   const iconList = [
-    { Icon: FaCertificate, text: "Yoga Alliance accredited certificate (worldwide)", size: 20 },
-    { Icon: GiMeditation, text: "20 days / 19 nights in a boutique resort in Goa.", size: 22 },
-    { Icon: FaUtensils, text: "Daily delicious vegan/vegetarian buffet meals", size: 20 },
-    { Icon: MdOnlinePrediction, text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course", size: 22 },
+    {
+      Icon: GiMeditation,
+      text: "Focus purely on yoga practice without the pressure of exams or certification.",
+      size: 22,
+    },
+    {
+      Icon: FaCertificate,
+      text: "Blend of Yoga Teacher Training (first 2 weeks) and practitioner-focused last week.",
+      size: 20,
+    },
+    {
+      Icon: FaUtensils,
+      text: "A holistic experience combining physical postures, breathwork, and spiritual exploration.",
+      size: 20,
+    },
+    {
+      Icon: MdOutlineSelfImprovement,
+      text: "Ideal for graduates of 200-hour YTT or anyone seeking deep personal transformation.",
+      size: 22,
+    },
   ];
 
   return (
@@ -43,7 +59,7 @@ export default function About211() {
           <div className="col-span-2 relative h-[325px]">
             <Image
               src="/aboutpics/2422.jpg"
-              alt="Yoga Group"
+              alt="Yoga Practice"
               fill
               className="rounded-xl object-cover"
               priority
@@ -52,7 +68,7 @@ export default function About211() {
           <div className="relative h-[160px]">
             <Image
               src="/aboutpics/524.jpg"
-              alt="Vegan Food"
+              alt="Meditation Session"
               fill
               className="rounded-xl object-cover"
               priority
@@ -61,7 +77,7 @@ export default function About211() {
           <div className="relative h-[160px]">
             <Image
               src="/aboutpics/777.jpg"
-              alt="Resort Room"
+              alt="Resort Environment"
               fill
               className="rounded-xl object-cover"
               priority
@@ -72,12 +88,43 @@ export default function About211() {
         {/* Right: Text Content */}
         <div>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#150e70] mb-6 leading-snug">
-            Transform your practice <br />
-            in an authentic, serene <br />
-            yoga learning environment
+            21 Days Intensive Yoga Immersive Program - <br />
+            A Transformational Journey
           </h2>
 
-          <ul className="space-y-4 text-[#150e70]">
+          <p className="text-[#150e70] mb-4 leading-relaxed">
+            Are you someone who is looking to pursue a Yoga program that purely focuses 
+            from a practitioner’s point of view — a program without exams, certification, 
+            or pressure? Welcome to the world of <strong>Practitioner’s Yoga</strong> for a truly transformational journey.
+          </p>
+
+          <p className="text-[#150e70] mb-4 leading-relaxed">
+            <strong>Rishikesh Yogshala</strong> is one of the oldest schools in India, providing classical yogic 
+            teachings for over 15 years, having trained more than <strong>34,500 students</strong> from 
+            around <strong>80 countries</strong>.
+          </p>
+
+          <p className="text-[#150e70] mb-4 leading-relaxed">
+            As a school, our mission is to bring forth genuine yogic practitioners — 
+            individuals who adopt yoga as a lifestyle, enhancing their postures, 
+            breathwork, and mental clarity.
+          </p>
+
+          <p className="text-[#150e70] mb-4 leading-relaxed">
+            The <strong>21 Days Intensive Yoga Immersive Program</strong> is curated to merge 
+            the structure of a Yoga Teacher Training for the first two weeks, 
+            while dedicating the final week to an intense practitioner mode. 
+            This ensures a balanced blend of learning, practice, and transformation.
+          </p>
+
+          <p className="text-[#150e70] mb-4 leading-relaxed">
+            Whether you’ve already completed your <strong>200-Hour Yoga Teacher Training</strong> 
+            or simply wish to deepen your personal practice — this immersive experience 
+            is designed for you. Embark on this journey to evolve physically, mentally, 
+            and spiritually.
+          </p>
+
+          <ul className="space-y-4 text-[#150e70] mt-6">
             {iconList.map(({ Icon, text, size }, i) => (
               <motion.li
                 key={i}
@@ -87,7 +134,7 @@ export default function About211() {
                 animate={controls}
                 variants={itemVariants}
               >
-                <Icon className="mt-1" size={size} aria-hidden="true" />
+                <Icon className="mt-1 shrink-0" size={size} aria-hidden="true" />
                 <span>{text}</span>
               </motion.li>
             ))}
