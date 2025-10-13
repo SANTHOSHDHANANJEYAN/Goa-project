@@ -35,6 +35,7 @@ const FreeManualSignup: React.FC = () => {
         variants={containerVariants}
         className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center"
       >
+      
         {/* Title */}
         <motion.h2
           variants={itemVariants}
