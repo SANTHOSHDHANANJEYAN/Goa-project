@@ -2,7 +2,7 @@
 
 export default function NearestAirport7() {
   return (
-    <section className="bg-white pb-12 px-4 sm:px-6 md:px-10 lg:px-20">
+    <section className="bg-[#f4f5f3] pt-12 pb-12 px-4 sm:px-6 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto mb-8 sm:mb-12 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#150e70]">
           Rishikul Yogshala Location

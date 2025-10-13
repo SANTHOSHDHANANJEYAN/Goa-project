@@ -37,7 +37,7 @@ export default function YogicAccommodationSection() {
   }, []);
 
   return (
-<section className="bg-gradient-to-b from-white to-orange-50 py-16 md:py-20">
+<section className="bg-white py-16 md:py-20">
   {/* Section Header */}
   <div className="container mx-auto px-4 mb-12">
     <div className="text-center mb-12">
@@ -52,7 +52,7 @@ export default function YogicAccommodationSection() {
       {/* Left Text Section */}
       <div>
         <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
-          Experience the best and most comfortable stay in your 200 Hour Yoga Teacher Training
+          Experience the best and most comfortable stay in your 7 Days Yoga Retreat
           in Goa at Rishikul Yogshala. Located few minutes walking distance from Arambol scenic
           beach, our yoga centre provides just the best blend of Nature and therapeutic yoga
           practices to enhance your Yogic Experience. With an appealing smell of sea waves in

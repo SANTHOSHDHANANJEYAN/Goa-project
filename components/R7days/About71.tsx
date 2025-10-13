@@ -41,9 +41,9 @@ export default function About71() {
   return (
     <>
       {/* Section 1: Experience Inner Peace */}
-      <section className="relative bg-white px-6 sm:px-10 lg:px-20 py-12 text-black">
+      <section className="relative bg-[#f4f5f3] px-6 sm:px-10 lg:px-20 py-12 text-black">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-[7rem] items-center">
-          {/* Image Section */}
+          {/* Left: Image Section */}
           <div className="grid grid-cols-2 gap-4">
             <div className="col-span-2">
               <Image
@@ -73,7 +73,7 @@ export default function About71() {
             />
           </div>
 
-          {/* Experience Inner Peace Content */}
+          {/* Right: Experience Inner Peace Content */}
           <div className="pb-14 md:pb-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-4 leading-snug">
               Experience Inner Peace
@@ -100,32 +100,65 @@ export default function About71() {
       </section>
 
       {/* Section 2: Transform Your Practice */}
-      <section className="relative bg-white px-6 sm:px-10 lg:px-20 py-12 text-black">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-6 leading-snug">
-            Transform your practice
-            <br className="hidden sm:block" />
-            in an authentic, serene
-            <br className="hidden sm:block" />
-            yoga learning environment
-          </h2>
+      <section className="relative bg-white px-6 sm:px-10 lg:px-20 py-12 text-black ">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-[6rem] items-center">
+          {/* Left: Text Content */}
+          <div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-6 leading-snug">
+              Transform your practice
+              <br className="hidden sm:block" />
+              in an authentic, serene
+              <br className="hidden sm:block" />
+              yoga learning environment
+            </h2>
 
-          <ul className="space-y-4 text-black text-base sm:text-lg">
-            {iconList.map(({ Icon, text }, i) => (
-              <motion.li
-                key={i}
-                className="flex items-start gap-3"
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={itemVariants}
-              >
-                <Icon className="text-black mt-1 shrink-0" size={20} />
-                {text}
-              </motion.li>
-            ))}
-          </ul>
+            <ul className="space-y-4 text-black text-base sm:text-lg">
+              {iconList.map(({ Icon, text }, i) => (
+                <motion.li
+                  key={i}
+                  className="flex items-start gap-3"
+                  custom={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                  variants={itemVariants}
+                >
+                  <Icon className="text-black mt-1 shrink-0" size={20} />
+                  {text}
+                </motion.li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right: Image Grid */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="col-span-2">
+              <Image
+                src="/aboutpics/000.jpg"
+                alt="Yoga Group"
+                className="rounded-xl object-cover w-full h-[355px] sm:h-[300px] md:h-[355px]"
+                width={600}
+                height={355}
+                priority
+              />
+            </div>
+            <Image
+              src="/aboutpics/113.jpg"
+              alt="Vegan Food"
+              className="rounded-xl object-cover w-full h-[170px]"
+              width={300}
+              height={170}
+              loading="lazy"
+            />
+            <Image
+              src="/aboutpics/116.jpg"
+              alt="Resort Room"
+              className="rounded-xl object-cover w-full h-[170px]"
+              width={300}
+              height={170}
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
     </>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Importance7() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 py-16 bg-white text-black gap-8">
+    <section className="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 py-16 bg-[#f4f5f3] text-black gap-8">
       {/* Left content */}
       <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">

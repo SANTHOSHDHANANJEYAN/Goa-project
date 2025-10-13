@@ -1,14 +1,17 @@
+'use client';
+
 import Image from "next/image";
 
-export default function Importance14() {
+export default function Importance7() {
   return (
-    <section className="px-6 lg:px-20 py-16 bg-white">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4 leading-snug">
+    <section className="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 py-16 bg-[#f4f5f3] text-black gap-8">
+      {/* Left content */}
+      <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">
           Attending to the Holistic Wellness in Our Goa Retreat:
         </h1>
         <p className="font-semibold mb-4 text-base sm:text-lg">
-          Reconnect With Nature, Revive Your Energy & Refresh Your Soul
+          Heal Your Mind, Rejuvenate Your Body & Refresh Your Soul
         </p>
         <ul className="list-disc pl-5 space-y-2 text-sm sm:text-base leading-relaxed">
           <li>
@@ -24,6 +27,20 @@ export default function Importance14() {
             Leave our retreat feeling lighter, recharged, and deeply transformed — inside and out.
           </li>
         </ul>
+      </div>
+
+      {/* Right image */}
+      <div className="w-full lg:w-1/2">
+        <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] relative rounded-xl overflow-hidden shadow-lg">
+          <Image
+            src="/Imp&bene/imp1 - Copy.JPG"
+            alt="Goa Yoga Retreat"
+            fill
+            loading="lazy"
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
+          />
+        </div>
       </div>
     </section>
   );

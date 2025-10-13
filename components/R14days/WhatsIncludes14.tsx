@@ -50,7 +50,7 @@ const activities: Activity[] = [
 
 const ActivitiesSection: React.FC = () => {
   return (
-    <section className="bg-transparent py-12 sm:py-16 text-center relative overflow-hidden">
+    <section className="bg-[#f4f5f3] py-12 sm:py-16 text-center relative overflow-hidden">
       {/* Radial background decoration */}
       <div className="absolute inset-0 opacity-10 bg-[url('/images/radial-bg.png')] bg-cover bg-center z-0" />
 
