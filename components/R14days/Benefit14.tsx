@@ -1,42 +1,32 @@
 'use client';
 
-import Image from "next/image";
-
 export default function Benefit14() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-white">
-      {/* Left Image */}
-      <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
-        <Image
-          src="/Imp&bene/bene - Copy.jpg"
-          alt="Goa Yoga Retreat"
-          width={800}
-          height={600}
-          className="rounded-xl shadow-lg h-[22rem] w-full object-cover"
-        />
-      </div>
-
-      {/* Right Content */}
-      <div className="w-full lg:w-1/2 lg:pl-12">
-        <p className="text-orange-500 font-medium tracking-wide uppercase mb-2 text-sm sm:text-base">
-          Awaken Your Inner Bliss
-        </p>
-
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#150e70] mb-4 leading-tight">
-          Benefits of Our Goa Retreats
+    <section className="px-6 lg:px-20 py-16 bg-white">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4 leading-tight">
+          What you Seek is What you Get in Our Goa Retreat:
         </h1>
-
-        <p className="text-gray-800 font-semibold mb-4 text-base sm:text-lg">
+        <p className="font-semibold mb-4 text-base sm:text-lg">
           Refresh Your Mind, Rejuvenate Your Body & Rediscover Your Soul
         </p>
-
-        <p className="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
-          Escape the hustle and chaos of everyday life and immerse yourself in the serene beauty of Goa’s golden beaches.
-          Let the soothing sound of waves and swaying palms guide you into a deeper connection with your inner self.
-          Experience soulful sunrise yoga sessions, guided meditation, and rejuvenating breathwork right by the Arabian Sea.
-          Savor nourishing sattvic meals while embracing a slower, more mindful coastal lifestyle.
-          Return home feeling lighter, more balanced, and completely refreshed in body, mind, and spirit.
-        </p>
+        <ul className="list-disc pl-5 space-y-2 text-sm sm:text-base leading-relaxed">
+          <li>
+            Escape the hustle of daily life and immerse yourself in the tranquil beauty of Goa’s golden beaches.
+          </li>
+          <li>
+            Our retreat offers a unique blend of traditional yoga, meditation, and mindful practices right by the Arabian Sea.
+          </li>
+          <li>
+            Experience soulful sunrise yoga sessions, guided breathwork, and deep relaxation under swaying palms.
+          </li>
+          <li>
+            Relish nourishing sattvic meals while embracing the peaceful rhythm of coastal living.
+          </li>
+          <li>
+            Leave behind stress and chaos, returning home fully recharged — with a renewed sense of balance, clarity, and inner harmony.
+          </li>
+        </ul>
       </div>
     </section>
   );

@@ -20,7 +20,6 @@ const Importance7 = dynamic(() => import("@/components/R7days/Importance7"), { s
 const Benefit7 = dynamic(() => import("@/components/R7days/Benefit7"), { ssr: false });
 const NearestAirport7 = dynamic(() => import("@/components/R7days/NearestAirport7"), { ssr: false });
 const Beauty7 = dynamic(() => import("@/components/R7days/Beauty7"), { ssr: false });
-const Faqs7 = dynamic(() => import("@/components/R7days/Faqs7"), { ssr: false });
 
 export default function Page() {
   return (
@@ -28,7 +27,6 @@ export default function Page() {
       <SpaHero7 />
       <About71 />
       <KeySkills7 />
-      <TwoListing7 />
       <WhatsIncludes7 />
       <OurExcursions7 />
       <OurRooms7 />
@@ -36,12 +34,12 @@ export default function Page() {
       <OurDinning7 />
       <DinningSlides7 />
       <DailySchedule7 />
+      <TwoListing7 />
       <Importance7 />
       <Benefit7 />
       <NearestAirport7 />
       <Beauty7 />
-      <Faqs7 />
-       <Link
+      <Link
       href="https://wa.me/919520024333"
       target="_blank"
       rel="noopener noreferrer"

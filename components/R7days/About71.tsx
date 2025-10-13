@@ -39,7 +39,7 @@ export default function About71() {
   };
 
   return (
-    <section className="relative bg-white px-6 sm:px-10 lg:px-20 py-12">
+    <section className="relative bg-white px-6 sm:px-10 lg:px-20 py-12 text-black">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-[7rem] items-center">
         
         {/* Image Section */}
@@ -74,13 +74,36 @@ export default function About71() {
 
         {/* Text Content */}
         <div className="pb-14 md:pb-0">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#150e70] mb-6 leading-snug">
+          {/* Experience Inner Peace */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-4 leading-snug">
+            Experience Inner Peace
+          </h2>
+          <div className="space-y-4 text-black text-base sm:text-lg leading-relaxed mb-8">
+            <p>
+              Get away from the craziness of everyday living and immerse yourself into a healing process in the very heart of Goa. Our 7 days Yoga Holiday Retreat is purely a getaway and a refuge for healing yourself. Enjoy the pristine beaches and involve yourself in practicing yoga through the ancient yogic and meditation techniques.
+            </p>
+            <p>
+              Guided by expert teachers, our program is structured to suit all levels of yogic enthusiasts, who want to get away from the hustle and bustle of their day schedule. Everyday, you will be treated to refreshing yoga and meditation classes, healthy vegetarian cuisine in the soothing beauty of the landscapes of Goa.
+            </p>
+            <p>
+              With the hustle and bustle of day-to-day life and getting consumed by the stress of career and personal life, the 7 days Yoga Holiday Retreat is expected to be a welcome change. Leaving your worries aside and practice yoga by the beaches of Goa, you would experience the calmness and peace within.
+            </p>
+            <p>
+              At Rishikul Yogshala, we offer flexible retreat options. You can schedule our retreat at any time that is suitable to you, giving you the liberty to take on this wellness adventure whenever you will be most convenient.
+            </p>
+            <p>
+              Stay with us on a never-forgotten experience that will refresh, inspire, and empower you. Reconnect with your inner balance in the calm environments of Goa. Your journey towards wellness and harmony begins here, at Rishikul Yogashala&apos;s 7 Day Yoga holiday Retreat.
+            </p>
+          </div>
+
+          {/* Transform your practice */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-6 leading-snug">
             Transform your practice <br />
             in an authentic, serene <br />
             yoga learning environment
           </h2>
 
-          <ul className="space-y-4 text-[#150e70] text-base sm:text-lg">
+          <ul className="space-y-4 text-black text-base sm:text-lg">
             {iconList.map(({ Icon, text }, i) => (
               <motion.li
                 key={i}
@@ -91,7 +114,7 @@ export default function About71() {
                 viewport={{ once: true, amount: 0.2 }}
                 variants={itemVariants}
               >
-                <Icon className="text-[#150e70] mt-1 shrink-0" size={20} />
+                <Icon className="text-black mt-1 shrink-0" size={20} />
                 {text}
               </motion.li>
             ))}

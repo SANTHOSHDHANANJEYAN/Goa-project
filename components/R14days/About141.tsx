@@ -1,8 +1,5 @@
 'use client';
 
-import { FaCertificate, FaUtensils } from "react-icons/fa";
-import { GiMeditation } from "react-icons/gi";
-import { MdOnlinePrediction } from "react-icons/md";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
@@ -26,15 +23,23 @@ export default function About141() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
-  const iconList = [
-    { Icon: FaCertificate, text: "Yoga Alliance accredited certificate (worldwide)", size: 20 },
-    { Icon: GiMeditation, text: "20 days / 19 nights in a boutique resort in Goa.", size: 22 },
-    { Icon: FaUtensils, text: "Daily delicious vegan/vegetarian meals (buffet style)", size: 20 },
-    { Icon: MdOnlinePrediction, text: "BONUS: lifelong access to our Online 200hr Yoga Alliance course", size: 22 },
+  const transformList = [
+    "Affordable Yoga Retreats in Goa",
+    "Flexible Stay Duration",
+    "Ideal Location for Relaxation",
+    "Daily Yoga & Meditation Practice",
+    "Optional Excursions",
+    "Personalized Yoga Schedule",
+    "Holistic Mind-Body-Spirit Experience",
+    "Cultivate Inner Peace",
+    "Rejuvenate Through Yoga",
+    "Yoga Alliance accredited certificate - YACEP Certification - (worldwide)",
+    "14 days / 13 nights in a boutique resort in Goa.",
+    "Daily delicious vegan/vegetarian meals (buffet style)",
   ];
 
   return (
-    <section className="relative bg-white px-4 py-12 sm:py-16">
+    <section className="relative bg-white text-black px-4 py-12 sm:py-16">
       <div
         ref={sectionRef}
         className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-[7rem] items-center"
@@ -69,26 +74,38 @@ export default function About141() {
 
         {/* Right: Text Content */}
         <div className="pb-6 md:pb-0">
-          <h2 className="text-3xl sm:text-4xl md:text-4xl font-semibold text-[#150e70] mb-6 leading-snug">
-            Transform your practice <br />
-            in an authentic, serene <br />
-            yoga learning environment
+          {/* Refresh, Rejuvenate section (kept from previous update) */}
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-semibold mb-4 leading-snug">
+            Refresh, Rejuvenate and Experience Happiness within:
+          </h2>
+          <ul className="list-disc pl-5 space-y-2 text-base sm:text-lg leading-relaxed mb-4">
+            <li>Do you think that you need a refreshing change in your life from your hectic schedule?</li>
+            <li>Do you think is it time for you to detox yourself and begin your yoga practice?</li>
+            <li>Do you want to unwind in the beautiful beaches of Goa and experience physical fitness and mental peace?</li>
+            <li>Do you want to learn and experience about the ancient science of Yoga?</li>
+            <li>Most important of all, Do you want to experience Happiness within?</li>
+          </ul>
+          <p className="text-base sm:text-lg leading-relaxed mb-8">
+            Then, the 14 Day Yoga Detox Retreat is the right way going forward! Specifically designed for the new practitioner, the beginner&apos;s yoga retreat involves various practices such as asana, pranayama, meditation, and chanting. Yoga philosophy/theory is also an integral of the program. How about experiencing the ancient science of Yoga beside the beaches of Goa? The cool breeze and the moving waves of the sea will also help in the soothing experience and help you detox and energize your soul.
+          </p>
+
+          {/* Updated Transform section */}
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-semibold mb-6 leading-snug">
+            Transform your practice in an authentic, serene yoga learning environment:
           </h2>
 
           <motion.ul
-            className="space-y-4 text-[#150e70]"
+            className="space-y-3 list-disc pl-5"
             variants={containerVariants}
             initial="hidden"
             animate={controls}
           >
-            {iconList.map(({ Icon, text, size }, i) => (
+            {transformList.map((text, i) => (
               <motion.li
-                role="listitem"
                 key={i}
-                className="flex items-start gap-3"
+                className="text-base sm:text-lg leading-relaxed"
                 variants={itemVariants}
               >
-                <Icon className="text-[#150e70] mt-1" size={size} />
                 {text}
               </motion.li>
             ))}
