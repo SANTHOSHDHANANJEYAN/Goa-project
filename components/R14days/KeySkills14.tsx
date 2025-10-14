@@ -35,7 +35,7 @@ const KeySkills14: React.FC = () => {
 
           {/* Right Text */}
           <div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#150e70] mb-6 text-center lg:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6 text-center lg:text-left">
               Daily Tentative Schedule
             </h2>
             <p className="text-base sm:text-lg leading-relaxed text-center lg:text-left mb-6">
@@ -56,7 +56,7 @@ const KeySkills14: React.FC = () => {
 
       {/* Why Choose Section */}
       <section className="bg-white py-14 px-4 sm:px-6 md:px-10 lg:px-20">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black mb-12">
           Why Choose Rishikul Yogshala’s 14-Day Yoga Retreat in Goa?
         </h2>
 
@@ -78,7 +78,7 @@ const KeySkills14: React.FC = () => {
             {skills.map((skill, idx) => (
               <li
                 key={idx}
-                className="flex items-start gap-3 text-[#150e70] text-base sm:text-lg"
+                className="flex items-start gap-3 text-black text-base sm:text-lg"
               >
                 <FaCheckCircle className="text-green-600 mt-1 shrink-0" />
                 <span>{skill}</span>

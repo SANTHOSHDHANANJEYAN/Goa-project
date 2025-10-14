@@ -40,10 +40,10 @@ export default function TwoListing7() {
       <div className="max-w-7xl mx-auto">
         {/* Headings */}
         <div className="mb-8">
-          <h4 className="text-[#150e70] font-semibold tracking-widest uppercase text-xs">
+          <h4 className="text-black font-semibold tracking-widest uppercase text-xs">
             Application Process
           </h4>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[#150e70] mt-2 leading-snug">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-black mt-2 leading-snug">
             Book Your Yoga Retreat in 4 Easy Steps
           </h2>
           <p className="text-gray-700 max-w-2xl text-base md:text-lg mt-3">
@@ -54,10 +54,10 @@ export default function TwoListing7() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Steps */}
           <div className="relative pl-10">
-            <div className="absolute left-8 top-4 bottom-[5rem] w-1 bg-[#150e70]" />
+            <div className="absolute left-8 top-4 bottom-[5rem] w-1 bg-black" />
             {steps.map((step, idx) => (
               <div key={idx} className="relative pl-10 mb-6 group">
-                <div className="absolute left-[-22px] top-4 w-8 h-8 rounded-full bg-[#150e70] text-white flex items-center justify-center font-bold shadow-md group-hover:scale-105 transition-transform duration-200 ease-in-out">
+                <div className="absolute left-[-22px] top-4 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold shadow-md group-hover:scale-105 transition-transform duration-200 ease-in-out">
                   {idx + 1}
                 </div>
                 <div className="bg-white border border-[#d1d5db] rounded-xl p-4 shadow-sm group-hover:shadow-md transition duration-300">
@@ -69,7 +69,7 @@ export default function TwoListing7() {
           </div>
 
           {/* Pricing */}
-          <div className="bg-white border border-[#150e70] rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+          <div className="bg-white border border-black rounded-2xl p-6 shadow-md hover:shadow-lg transition">
             <h3 className="text-xl md:text-2xl font-bold text-[#1C1C1C] mb-3">{selected} Yoga Retreat</h3>
 
             {/* Duration Buttons */}
@@ -81,8 +81,8 @@ export default function TwoListing7() {
                   aria-pressed={selected === day}
                   className={`px-4 py-2 rounded-full text-sm font-medium border transition duration-200 ${
                     selected === day
-                      ? 'bg-[#150e70] text-white'
-                      : 'text-[#150e70] border-[#150e70] bg-white hover:bg-[#e0e7ff]'
+                      ? 'bg-black text-white'
+                      : 'text-black border-black bg-white hover:bg-gray-100'
                   }`}
                 >
                   {day}
@@ -99,8 +99,8 @@ export default function TwoListing7() {
                   aria-pressed={currency === cur}
                   className={`px-3 py-1 rounded-full text-xs font-medium border transition duration-200 ${
                     currency === cur
-                      ? 'bg-[#150e70] text-white'
-                      : 'text-[#150e70] border-[#150e70] bg-white hover:bg-[#e0e7ff]'
+                      ? 'bg-black text-white'
+                      : 'text-black border-black bg-white hover:bg-gray-100'
                   }`}
                 >
                   {cur}
@@ -109,13 +109,13 @@ export default function TwoListing7() {
             </div>
 
             {/* Offer */}
-            <div className="bg-[#e0e7ff] text-[#150e70] px-3 py-1 rounded-full text-xs md:text-sm inline-flex items-center font-medium mb-4">
+            <div className="bg-gray-100 text-black px-3 py-1 rounded-full text-xs md:text-sm inline-flex items-center font-medium mb-4">
               <span className="mr-2">🔸</span> 20% Off for Groups of 3+
             </div>
 
             {/* Price */}
             <div className="bg-[#f3f4f6] p-5 rounded-xl text-center mb-4">
-              <h4 className="text-[#150e70] font-semibold mb-1">Private</h4>
+              <h4 className="text-black font-semibold mb-1">Private</h4>
               <p className="text-2xl font-bold text-[#1C1C1C]">{formattedPrice}</p>
             </div>
 

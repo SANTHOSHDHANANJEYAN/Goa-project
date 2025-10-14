@@ -377,43 +377,77 @@ export default function AboutTraining() {
   return (
     <>
       {/* Section 1 - Overview */}
-      <section className="py-16 px-6 md:px-20 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-black mb-12 text-center">
-            Best 300 Hour Yoga Teacher Training in Goa
-          </h2>
+<section className="py-16 px-6 md:px-20 bg-white">
+  <div className="max-w-7xl mx-auto">
+    {/* Section Heading */}
+    <h2 className="text-3xl md:text-4xl font-semibold text-black mb-12 text-center">
+      Best 300 Hour Yoga Teacher Training in Goa
+    </h2>
 
-          <div className="space-y-6 text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            <p>
-              Our 300 Hour Yoga Teacher Training Program in Goa is a wonderful opportunity for beginner Yoga Practitioners.
-              We at Rishikul Yogshala offer a comprehensive 300 Hour Yoga Teacher Training Course in Goa for students who
-              want to begin their Yogic Journey. The 300 hours Yoga Teacher Training Program is a Multi Style - Multi Faceted
-              one combining the Classical Hatha Yoga to Dynamic Ashtanga Vinyasa Yoga as primary fields.
-            </p>
+    {/* Content Grid */}
+    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+      {/* Left Text Content */}
+      <div className="flex flex-col h-full">
+        <div className="space-y-6 text-gray-700 leading-relaxed">
+          <p>
+            Welcome to the Advanced Curriculum of Yoga. Once you have completed the foundational concepts of yoga from the 200 hours Yoga Teacher Training Program, you have indeed reached one step closer to pursuing your dreams to be one of the best yoga teachers out there by pursuing the 300 hours Yoga Teacher Training Program.
+          </p>
 
-            <p>
-              Our yoga school offers holistic yoga program under the guidance of competent teachers who have International
-              teaching experience and value personal attention to students for better learning. The Yoga Philosophy taught
-              brings in different dimensions of Yoga into understanding and the Teaching Methodology sessions will equip
-              the students with technique, alignment, and modifications suited to be qualified and a good practitioner.
-            </p>
+          <p>
+            Rishikul Yogshala offers the 300 Hour Yoga Teacher Training in Goa, India, to students who practice or teach yoga and desire to be master practitioners and career-oriented professional yoga teachers themselves. This is an intensive, 28-day program in which you'll be completely immersed in multi-style study and practice of yoga from different dimensions.
+          </p>
 
-            <p>
-              Though participants who arrive at the course, belong to various physical and mental capabilities; nevertheless,
-              our 300 hour Yoga Alliance teacher training in Goa, is curated in such a way, that it may stand out from others
-              and become the best platform for the beginners and the intermediate practitioners.
-            </p>
+          <p>
+            Immerse yourself in intensive asana sessions, or advance breath awareness practices, intense meditative sessions, in-depth alignment and anatomy physiology sessions, and extensive teaching methodology sessions and many more.
+          </p>
 
-            <p>
-              While you dedicate your valuable time in 300 Hour Yoga Teacher Training Course, it becomes our responsibility
-              to meet your needs with the best learning environment be it with facilities or staff too. If you seek the Best
-              Yoga School in Goa, your search ends at Rishikul Yogshala. We offer you an intensive curriculum, exposure to
-              yogic culture, picturesque landscape, and yogic food, which form your one-stop solution for classical learning
-              and discovery of yogic dimension within you.
-            </p>
-          </div>
+          <p>
+            Apart from the above, Rishikul Yogshala welcomes you to Goa's picturesque towns, where you can be in complete serenity and at peace of mind.
+          </p>
         </div>
-      </section>
+      </div>
+
+      {/* Right Media Section */}
+      <div className="flex flex-col h-full gap-16 md:gap-10">
+        {/* Instagram Reel Portrait Frame */}
+        <div className="relative w-full flex justify-center">
+          <a
+            href="https://www.instagram.com/reel/DF5UVRfIkRy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.1)] border border-gray-100 bg-black rounded-xl"
+            aria-label="Open the Instagram Reel in a new tab"
+          >
+            {/* Portrait Thumbnail */}
+            <img
+              src="/aboutpics/Rishikul Yogshala Goa 1.jpg"
+              alt="Instagram Reel: 300 Hour Yoga Teacher Training in Goa"
+              className="max-w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+            />
+
+            {/* Centered Play Button */}
+            <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md transition duration-300 group-hover:bg-gray-100">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#E1306C"
+                  viewBox="0 0 24 24"
+                  width="28"
+                  height="28"
+                  aria-hidden="true"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Section 2 - Curriculum */}
       <section

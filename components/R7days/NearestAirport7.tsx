@@ -4,7 +4,7 @@ export default function NearestAirport7() {
   return (
     <section className="bg-[#f4f5f3] pt-12 pb-12 px-4 sm:px-6 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto mb-8 sm:mb-12 text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#150e70]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black">
           Rishikul Yogshala Location
         </h2>
       </div>
@@ -12,7 +12,7 @@ export default function NearestAirport7() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left Side - How to Reach */}
         <div className="text-left flex flex-col justify-center">
-          <h3 className="text-xl sm:text-2xl font-semibold text-[#150e70] mb-5">
+          <h3 className="text-xl sm:text-2xl font-semibold text-black mb-5">
             How to Reach Us
           </h3>
           <p className="text-gray-700 mb-5 leading-relaxed">
@@ -25,21 +25,21 @@ export default function NearestAirport7() {
             <li className="flex items-start gap-2">
               <span className="text-xl">🚕</span>
               <p>
-                <span className="font-semibold text-[#150e70]">By Taxi:</span>  
+                <span className="font-semibold text-black">By Taxi:</span>  
                 Available 24/7 at the airport, approx <span className="font-semibold">1.5 hours</span>.
               </p>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-xl">🛵</span>
               <p>
-                <span className="font-semibold text-[#150e70]">Rental Scooter/Car:</span>  
+                <span className="font-semibold text-black">Rental Scooter/Car:</span>  
                 Flexible option to explore Goa.
               </p>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-xl">🚌</span>
               <p>
-                <span className="font-semibold text-[#150e70]">By Bus:</span>  
+                <span className="font-semibold text-black">By Bus:</span>  
                 Budget-friendly, but may take longer with multiple changes.
               </p>
             </li>
@@ -49,7 +49,7 @@ export default function NearestAirport7() {
             For airport transfer assistance,{" "}
             <a
               href="#contact"
-              className="text-[#150e70] font-semibold underline hover:text-[#0d0a52] transition"
+              className="text-black font-semibold underline hover:text-[#0d0a52] transition"
             >
               contact us
             </a>.

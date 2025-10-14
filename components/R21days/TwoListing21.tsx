@@ -22,7 +22,7 @@ export default function TwoListing7() {
 
           {/* Right Text */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#150e70] mb-6 leading-snug">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-6 leading-snug">
               Why Should You Pursue the 21 Days Intensive Yoga Immersion Program?
             </h2>
             <ul className="space-y-3 text-gray-800 text-base md:text-lg">
@@ -38,7 +38,7 @@ export default function TwoListing7() {
         <div className="grid md:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left Text */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#150e70] mb-6 leading-snug">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-6 leading-snug">
               Who Should Pursue the 21 Days Intensive Yoga Immersion Program?
             </h2>
             <ul className="space-y-3 text-gray-800 text-base md:text-lg">

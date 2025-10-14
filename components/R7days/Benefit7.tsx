@@ -21,7 +21,7 @@ export default function Benefit7() {
 
       {/* Right content */}
       <div className="w-full lg:w-1/2">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#150e70] mb-4 leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-black mb-4 leading-tight">
           What you Seek is What you Get in Our Goa Retreat:
         </h1>
         <p className="text-gray-800 font-semibold mb-4 text-base sm:text-lg">

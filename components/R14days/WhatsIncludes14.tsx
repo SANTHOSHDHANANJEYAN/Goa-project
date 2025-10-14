@@ -55,8 +55,8 @@ const ActivitiesSection: React.FC = () => {
       <div className="absolute inset-0 opacity-10 bg-[url('/images/radial-bg.png')] bg-cover bg-center z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#150e70] mb-16 sm:mb-20">
-          Retreat Program Essentials
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-16 sm:mb-20">
+          Special Activities of the Retreat Program
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
@@ -76,10 +76,10 @@ const ActivitiesSection: React.FC = () => {
                   loading="lazy"
                 />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-[#150e70] text-center">
+              <h3 className="text-lg sm:text-xl font-semibold text-black text-center">
                 {activity.title}
               </h3>
-              <p className="text-sm sm:text-base text-[#150e70] mt-3 text-center">
+              <p className="text-sm sm:text-base text-gray-800 mt-3 text-center">
                 {activity.description}
               </p>
             </div>

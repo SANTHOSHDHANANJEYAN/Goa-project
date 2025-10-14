@@ -44,7 +44,7 @@ export default function YogicAccommodationSection() {
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
         Yogic Accommodation
       </h2>
-      <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
+      <div className="w-24 h-1 bg-black mx-auto"></div>
     </div>
 
     {/* Description + Right Image */}
@@ -71,7 +71,7 @@ export default function YogicAccommodationSection() {
             {accommodationFeatures.map((feature, index) => (
               <li key={index} className="flex items-start">
                 <svg
-                  className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0"
+                  className="w-6 h-6 text-black mr-3 mt-0.5 flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >

@@ -30,17 +30,11 @@ const SpaHero7: React.FC = () => {
           <a
             href="/Aboutyogshala"
             aria-label="Explore Program"
-            className="bg-[#150e70] hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full transition duration-300"
+            className="bg-[#16a34a] hover:bg-[#e5a724] text-white font-semibold px-8 py-3 rounded-full transition duration-300"
           >
             Explore Program
           </a>
-          <a
-            href="/contact"
-            aria-label="Book Now"
-            className="border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-semibold px-8 py-3 rounded-full transition duration-300"
-          >
-            Book Now
-          </a>
+
         </div>
       </div>
 

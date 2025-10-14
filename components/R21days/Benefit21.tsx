@@ -8,7 +8,7 @@ export default function Benefit21() {
     <section className="bg-white py-12 px-5 sm:px-8 lg:px-16 text-[#262626]">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#627d6a]">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-black">
           Daily Schedule
         </h2>
 
@@ -26,7 +26,7 @@ export default function Benefit21() {
           <div className="w-full lg:w-1/2 space-y-4">
             <div className="flex items-center gap-3">
               <FaSun className="text-yellow-500 text-2xl" />
-              <h3 className="text-xl sm:text-2xl font-semibold text-[#627d6a]">
+              <h3 className="text-xl sm:text-2xl font-semibold text-black">
                 Morning Routine (6:00 AM – 10:00 AM)
               </h3>
             </div>
@@ -43,7 +43,7 @@ export default function Benefit21() {
           <div className="w-full lg:w-1/2 space-y-4">
             <div className="flex items-center gap-3">
               <FaCloudSun className="text-orange-400 text-2xl" />
-              <h3 className="text-xl sm:text-2xl font-semibold text-[#627d6a]">
+              <h3 className="text-xl sm:text-2xl font-semibold text-black">
                 Daytime Sessions (10:30 AM – 4:00 PM)
               </h3>
             </div>
@@ -79,7 +79,7 @@ export default function Benefit21() {
           <div className="w-full lg:w-1/2 space-y-4">
             <div className="flex items-center gap-3">
               <FaMoon className="text-indigo-500 text-2xl" />
-              <h3 className="text-xl sm:text-2xl font-semibold text-[#627d6a]">
+              <h3 className="text-xl sm:text-2xl font-semibold text-black">
                 Evening Routine (4:15 PM – 9:00 PM)
               </h3>
             </div>
@@ -95,11 +95,11 @@ export default function Benefit21() {
         </div>
 
         {/* Additional Activities */}
-<div className="relative bg-gradient-to-r from-[#e9f0ec] to-[#f7faf8] text-center py-10 px-6 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300">
+<div className="relative bg-[#bebebe] text-center py-10 px-6 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300">
   {/* Icon and Title */}
   <div className="flex justify-center items-center gap-3 mb-6">
-    <FaLeaf className="text-[#627d6a] text-3xl" />
-    <h3 className="text-2xl sm:text-3xl font-semibold text-[#627d6a] tracking-wide">
+    <FaLeaf className="text-black text-3xl" />
+    <h3 className="text-2xl sm:text-3xl font-semibold text-black tracking-wide">
       Additional Activities
     </h3>
   </div>
@@ -112,21 +112,21 @@ export default function Benefit21() {
   {/* Activity List */}
   <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
     <div className="flex items-start gap-3 bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition">
-      <span className="text-[#627d6a] text-lg mt-1">🌿</span>
+      <span className="text-black text-lg mt-1">🌿</span>
       <p className="text-gray-700 text-sm sm:text-base">
         <strong>Daily Journaling:</strong> Reflect on your experiences and deepen your awareness.
       </p>
     </div>
 
     <div className="flex items-start gap-3 bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition">
-      <span className="text-[#627d6a] text-lg mt-1">🕊️</span>
+      <span className="text-black text-lg mt-1">🕊️</span>
       <p className="text-gray-700 text-sm sm:text-base">
         <strong>Group Sharing:</strong> Connect through mindful discussions and collective energy.
       </p>
     </div>
 
     <div className="flex items-start gap-3 bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition sm:col-span-2">
-      <span className="text-[#627d6a] text-lg mt-1">🌞</span>
+      <span className="text-black text-lg mt-1">🌞</span>
       <p className="text-gray-700 text-sm sm:text-base">
         <strong>Nature Walks:</strong> Reconnect with the earth through peaceful outdoor activities.
       </p>

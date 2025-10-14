@@ -20,7 +20,7 @@ export default function OurExcursions7() {
 
   return (
     <section className="bg-transparent pb-20 px-4 text-center">
-      <h2 className="text-4xl md:text-5xl font-semibold text-[#4c2a65] mb-4">
+      <h2 className="text-4xl md:text-5xl font-semibold text-black mb-4">
         Our Excursions
       </h2>
       <p className="text-lg text-[#3d3d3d] max-w-2xl mx-auto mb-12">

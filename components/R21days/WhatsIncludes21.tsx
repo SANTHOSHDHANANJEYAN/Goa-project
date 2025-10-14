@@ -5,7 +5,7 @@ const ActivitiesSection: React.FC = () => {
   return (
     <section className="relative bg-white py-16 px-4 sm:px-8 lg:px-16 text-[#262626] font-sans">
       <div className="max-w-5xl mx-auto text-center space-y-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] leading-snug">
+        <h2 className="text-3xl sm:text-4xl font-bold text-black leading-snug">
           How Different is it from Yoga Teacher Training Course?
         </h2>
 

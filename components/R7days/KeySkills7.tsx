@@ -45,7 +45,7 @@ const KeySkills7: React.FC = () => {
 
           {/* Right Text Section */}
           <div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center lg:text-left mb-6 leading-snug">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center lg:text-left mb-6 leading-snug text-black" >
               Daily Tentative Schedule
             </h2>
             <p className="text-base sm:text-lg leading-relaxed text-center lg:text-left max-w-3xl mx-auto mb-6">

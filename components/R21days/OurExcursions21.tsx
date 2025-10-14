@@ -7,7 +7,7 @@ export default function OurExcursions() {
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Section 1 - Program Types */}
         <div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#150e70] text-center mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black text-center mb-8">
             Types of 21 Day Intensive Yoga Immersion Programs
           </h2>
 
@@ -26,7 +26,7 @@ export default function OurExcursions() {
 
         {/* Section 2 - What to Expect */}
         <div>
-          <h3 className="text-2xl sm:text-3xl font-bold text-[#150e70] text-center mb-8">
+          <h3 className="text-2xl sm:text-3xl font-bold text-black text-center mb-8">
             What to Expect
           </h3>
 

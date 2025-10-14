@@ -37,7 +37,7 @@ const KeySkills21: React.FC = () => {
 
   return (
     <section className="bg-white py-14 px-4 sm:px-6 md:px-10 lg:px-20">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#150e70] mb-12 leading-snug">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black mb-12 leading-snug">
         Why Choose Rishikul Yogshala to Pursue Your <br /> 21-Day Intensive Immersion Program?
       </h2>
 
@@ -65,7 +65,7 @@ const KeySkills21: React.FC = () => {
               animate={controls}
               variants={itemVariants}
               role="listitem"
-              className="flex items-start gap-3 text-[#150e70] text-base sm:text-m leading-relaxed"
+              className="flex items-start gap-3 text-gray-800 text-base sm:text-m leading-relaxed"
               aria-label={`Reason ${idx + 1}`}
             >
               <FaCheckCircle className="text-green-600 mt-1 shrink-0" />
