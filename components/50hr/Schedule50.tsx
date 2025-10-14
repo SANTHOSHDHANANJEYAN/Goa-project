@@ -60,7 +60,7 @@ export default function Schedule50() {
             className="relative group block overflow-hidden shadow-xl rounded-xl border border-gray-200 bg-black"
           >
             <Image
-              src="/aboutpics/Rishikul Yogshala Goa 2.jpg"
+              src="/aboutpics/daily50.jpg"
               alt="Daily Schedule Video Thumbnail"
               width={500} // Adjust width to image’s natural size
               height={750} // Maintain natural proportion
