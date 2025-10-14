@@ -1,6 +1,6 @@
 export default function Importance21() {
   return (
-    <section className="bg-white py-16 px-6 sm:px-10 lg:px-20">
+    <section className="bg-[#f4f5f3] py-16 px-6 sm:px-10 lg:px-20">
       <div className="max-w-5xl mx-auto text-[#150e70] space-y-12">
         {/* Additional Features Section */}
         <div>

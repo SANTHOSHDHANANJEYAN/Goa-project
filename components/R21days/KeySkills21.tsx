@@ -52,6 +52,7 @@ const KeySkills21: React.FC = () => {
             sizes="(max-width: 768px) 100vw, 50vw"
             loading="lazy"
           />
+          
         </div>
 
         {/* Reasons List */}
@@ -64,7 +65,7 @@ const KeySkills21: React.FC = () => {
               animate={controls}
               variants={itemVariants}
               role="listitem"
-              className="flex items-start gap-3 text-[#150e70] text-base sm:text-lg leading-relaxed"
+              className="flex items-start gap-3 text-[#150e70] text-base sm:text-m leading-relaxed"
               aria-label={`Reason ${idx + 1}`}
             >
               <FaCheckCircle className="text-green-600 mt-1 shrink-0" />

@@ -49,7 +49,7 @@ export default function About211() {
   ];
 
   return (
-    <section className="relative bg-white px-4">
+    <section className="relative bg-[#f4f5f3] px-4">
       <div
         ref={sectionRef}
         className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-28 items-center pt-12"
@@ -83,7 +83,35 @@ export default function About211() {
               priority
             />
           </div>
+                    <div className="col-span-2 relative h-[325px]">
+            <Image
+              src="/aboutpics/2422.jpg"
+              alt="Yoga Practice"
+              fill
+              className="rounded-xl object-cover"
+              priority
+            />
+          </div>
+          <div className="relative h-[160px]">
+            <Image
+              src="/aboutpics/524.jpg"
+              alt="Meditation Session"
+              fill
+              className="rounded-xl object-cover"
+              priority
+            />
+          </div>
+          <div className="relative h-[160px]">
+            <Image
+              src="/aboutpics/777.jpg"
+              alt="Resort Environment"
+              fill
+              className="rounded-xl object-cover"
+              priority
+            />
+          </div>
         </div>
+        
 
         {/* Right: Text Content */}
         <div>

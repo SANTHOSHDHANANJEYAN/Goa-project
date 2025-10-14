@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function OurExcursions() {
   return (
-    <section className="bg-white py-16 px-6 sm:px-10 lg:px-20 text-[#262626] font-sans">
+    <section className="bg-[#f4f5f3] py-16 px-6 sm:px-10 lg:px-20 text-[#262626] font-sans">
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Section 1 - Program Types */}
         <div>

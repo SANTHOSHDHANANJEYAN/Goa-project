@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function TwoListing7() {
   return (
-    <section className="bg-white px-4 md:px-16 py-16 text-[#262626] font-sans">
+    <section className="bg-[#f4f5f3] px-4 md:px-16 py-16 text-[#262626] font-sans">
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Section 1: Why Should You Pursue */}
         <div className="grid md:grid-cols-2 gap-10 lg:gap-20 items-center">
