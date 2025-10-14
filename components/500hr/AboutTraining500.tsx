@@ -362,7 +362,7 @@ export default function AboutTraining() {
               >
                 {/* Portrait Thumbnail */}
                 <img
-                  src="/aboutpics/Rishikul Yogshala Goa 1.jpg"
+                  src="/aboutpics/about500.jpg"
                   alt="Instagram Reel: 500 Hour Yoga Teacher Training in Goa"
                   className="max-w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                 />
