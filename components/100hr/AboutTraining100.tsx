@@ -45,7 +45,7 @@ export default function AboutTraining() {
                   aria-label="Open the Instagram Reel in a new tab"
                 >
                   <img
-                    src="/aboutpics/Rishikul Yogshala Goa 1.jpg"
+                    src="/aboutpics/about100.jpg"
                     alt="Instagram Reel: 100 Hour Yoga Teacher Training in Goa"
                     className="max-w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                   />
