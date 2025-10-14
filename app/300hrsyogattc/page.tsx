@@ -31,7 +31,7 @@ const ThreeHundredHourTTPage = () => (
 <div className="relative w-full h-[90vh] flex items-center justify-center">
   {/* Background Image */}
   <Image
-    src="/200bannerimg.jpg"
+    src="/aboutpics/333.jpg"
     alt="Yoga Teacher Training"
     fill
     className="object-cover brightness-95"
