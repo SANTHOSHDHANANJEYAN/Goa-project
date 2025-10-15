@@ -49,45 +49,43 @@ const BeforeYouGoSection: React.FC = () => {
     { icon: <Globe className="w-6 h-6 md:w-7 md:h-7" />, text: "Secure travel assistance from trusted taxi drivers with years of partnership" }
   ];
 
- const books = [
-  { title: 'Yoga Anatomy', author: 'Leslie Kaminoff', href: '/ebooks/Yoga-Anatomy.pdf', cover: '/book-anatomy.webp' },
-  { title: 'Yoga Nidra', author: 'Swami Satyananda Saraswati', href: '/ebooks/Yoga-Nidra.pdf', cover: '/book-nidra.webp' },
-  { title: 'Lights of Yoga', author: '', href: '/ebooks/lights-of-yoga.pdf', cover: '/book-lights.webp' },
-  { title: 'Yoga Mala', author: 'Sri K. Pattabhi Jois', href: '/ebooks/Yoga-Mala.pdf', cover: '/book-yoga-mala.webp' },
-  { title: 'Autobiography of a Yogi', author: 'Paramahansa Yogananda', href: '/ebooks/autobiography-of-yogi.pdf', cover: '/book-autobiography.webp' },
-  { title: 'Ajna Chakra', author: '', href: '/ebooks/ajna-chakra.pdf', cover: '/ajna-chakra.webp' },
-  { title: 'Mudra Bandha', author: 'Swami Satyananda Saraswati', href: '/ebooks/Mudra-Bandha.pdf', cover: '/mudra-bandha.webp' },
-  { title: 'The Ayurveda', author: '', href: '/ebooks/the-ayurveda.pdf', cover: '/the-ayurveda.webp' },
-  { title: 'Moola Bandha', author: '', href: '/ebooks/moola-bandha.pdf', cover: '/moola-bandha.webp' },
-  { title: 'Hatha Yoga Pradipika', author: '', href: '/ebooks/hatha-yoga-pradipika.pdf', cover: '/hatha-yoga-pradipika.webp' },
-  { title: 'Ayurveda Encyclopedia', author: '', href: '/ebooks/ayurveda-encyclopedia.pdf', cover: '/ayurveda-encyclopedia.webp' },
-  { title: 'Bhagwat Gita', author: '', href: '/ebooks/bhagwat-gita.pdf', cover: '/bhagwat-gita.webp' },
-  { title: 'Yogic Management', author: '', href: '/ebooks/yogic-management.pdf', cover: '/yogic-management.webp' },
-  { title: 'Yoga Sutras', author: '', href: '/ebooks/yoga-sutras.pdf', cover: '/yoga-sutras.webp' },
-  { title: 'Tattwa Shuddhi', author: '', href: '/ebooks/tattwa-shuddhi.pdf', cover: '/tattwa-shuddhi.webp' },
-  { title: 'Prana and Pranayama', author: '', href: '/ebooks/prana-and-pranayama.pdf', cover: '/prana-and-pranayama.webp' },
-  { title: 'Scientific Keys Volume 1', author: '', href: '/ebooks/scientific-keys-volume-01.pdf', cover: '/scientific-keys-volume-01.webp' },
-  { title: 'Scientific Keys Volume 2', author: '', href: '/ebooks/scientific-keys-volume-02.pdf', cover: '/scientific-keys-volume-02.webp' },
-  { title: 'Kundalini Tantra', author: '', href: '/ebooks/kundalini-tantra.pdf', cover: '/kundalini-tantra.webp' },
-  { title: 'Hatha Yoga Illustrated', author: '', href: '/ebooks/hatha-yoga-illustrated.pdf', cover: '/hatha-yoga-illustrated.webp' },
-  { title: 'Ashtanga Yoga', author: '', href: '/ebooks/ashtanga-yoga.pdf', cover: '/ashtanga-yoga.webp' },
-  { title: 'The Inner Tradition of Yoga', author: '', href: '/ebooks/the-inner-tradition-of-yoga.pdf', cover: '/the-inner-tradition-of-yoga.webp' },
-  { title: 'The Art of Vinyasa', author: '', href: '/ebooks/the-art-of-vinyasa.pdf', cover: '/the-art-of-vinyasa.webp' },
-  { title: 'Teaching Yoga', author: '', href: '/ebooks/teaching-yoga.pdf', cover: '/teaching-yoga.webp' },
-  { title: 'Stretching Anatomy', author: '', href: '/ebooks/stretching-anatomy.pdf', cover: '/stretching-anatomy.webp' },
-  { title: 'The Seven Spiritual Laws of Yoga', author: '', href: '/ebooks/the-seven-spiritual-laws-of-yoga.pdf', cover: '/the-seven-spiritual-laws-of-yoga.jpg' },
-  { title: 'Yoga Therapy', author: '', href: '/ebooks/yoga-therapy.pdf', cover: '/yoga-therapy.webp' },
-  { title: 'Yoga of the Subtle Body', author: '', href: '/ebooks/yoga-of-the-subtle-body.pdf', cover: '/yoga-of-the-subtle-body.webp' },
-  { title: 'Yin Yoga', author: '', href: '/ebooks/yin-yoga.pdf', cover: '/yin-yoga.webp' },
-  { title: 'Vinyasa Yoga', author: '', href: '/ebooks/vinyasa-yoga.pdf', cover: '/vinyasa-yoga.webp' },
-  { title: 'The Power of Ashtanga Yoga', author: '', href: '/ebooks/the-power-of-ashtanga-yoga.pdf', cover: '/the-power-of-ashtanga-yoga.webp' }
-];
+  const books = [
+    { title: 'Yoga Anatomy', author: 'Leslie Kaminoff', href: '/ebooks/Yoga-Anatomy.pdf', cover: '/book-anatomy.webp' },
+    { title: 'Yoga Nidra', author: 'Swami Satyananda Saraswati', href: '/ebooks/Yoga-Nidra.pdf', cover: '/book-nidra.webp' },
+    { title: 'Lights of Yoga', author: '', href: '/ebooks/lights-of-yoga.pdf', cover: '/book-lights.webp' },
+    { title: 'Yoga Mala', author: 'Sri K. Pattabhi Jois', href: '/ebooks/Yoga-Mala.pdf', cover: '/book-yoga-mala.webp' },
+    { title: 'Autobiography of a Yogi', author: 'Paramahansa Yogananda', href: '/ebooks/autobiography-of-yogi.pdf', cover: '/book-autobiography.webp' },
+    { title: 'Ajna Chakra', author: '', href: '/ebooks/ajna-chakra.pdf', cover: '/ajna-chakra.webp' },
+    { title: 'Mudra Bandha', author: 'Swami Satyananda Saraswati', href: '/ebooks/Mudra-Bandha.pdf', cover: '/mudra-bandha.webp' },
+    { title: 'The Ayurveda', author: '', href: '/ebooks/the-ayurveda.pdf', cover: '/the-ayurveda.webp' },
+    { title: 'Moola Bandha', author: '', href: '/ebooks/moola-bandha.pdf', cover: '/moola-bandha.webp' },
+    { title: 'Hatha Yoga Pradipika', author: '', href: '/ebooks/hatha-yoga-pradipika.pdf', cover: '/hatha-yoga-pradipika.webp' },
+    { title: 'Ayurveda Encyclopedia', author: '', href: '/ebooks/ayurveda-encyclopedia.pdf', cover: '/ayurveda-encyclopedia.webp' },
+    { title: 'Bhagwat Gita', author: '', href: '/ebooks/bhagwat-gita.pdf', cover: '/bhagwat-gita.webp' },
+    { title: 'Yogic Management', author: '', href: '/ebooks/yogic-management.pdf', cover: '/yogic-management.webp' },
+    { title: 'Yoga Sutras', author: '', href: '/ebooks/yoga-sutras.pdf', cover: '/yoga-sutras.webp' },
+    { title: 'Tattwa Shuddhi', author: '', href: '/ebooks/tattwa-shuddhi.pdf', cover: '/tattwa-shuddhi.webp' },
+    { title: 'Prana and Pranayama', author: '', href: '/ebooks/prana-and-pranayama.pdf', cover: '/prana-and-pranayama.webp' },
+    { title: 'Scientific Keys Volume 1', author: '', href: '/ebooks/scientific-keys-volume-01.pdf', cover: '/scientific-keys-volume-01.webp' },
+    { title: 'Scientific Keys Volume 2', author: '', href: '/ebooks/scientific-keys-volume-02.pdf', cover: '/scientific-keys-volume-02.webp' },
+    { title: 'Kundalini Tantra', author: '', href: '/ebooks/kundalini-tantra.pdf', cover: '/kundalini-tantra.webp' },
+    { title: 'Hatha Yoga Illustrated', author: '', href: '/ebooks/hatha-yoga-illustrated.pdf', cover: '/hatha-yoga-illustrated.webp' },
+    { title: 'Ashtanga Yoga', author: '', href: '/ebooks/ashtanga-yoga.pdf', cover: '/ashtanga-yoga.webp' },
+    { title: 'The Inner Tradition of Yoga', author: '', href: '/ebooks/the-inner-tradition-of-yoga.pdf', cover: '/the-inner-tradition-of-yoga.webp' },
+    { title: 'The Art of Vinyasa', author: '', href: '/ebooks/the-art-of-vinyasa.pdf', cover: '/the-art-of-vinyasa.webp' },
+    { title: 'Teaching Yoga', author: '', href: '/ebooks/teaching-yoga.pdf', cover: '/teaching-yoga.webp' },
+    { title: 'Stretching Anatomy', author: '', href: '/ebooks/stretching-anatomy.pdf', cover: '/stretching-anatomy.webp' },
+    { title: 'The Seven Spiritual Laws of Yoga', author: '', href: '/ebooks/the-seven-spiritual-laws-of-yoga.pdf', cover: '/the-seven-spiritual-laws-of-yoga.jpg' },
+    { title: 'Yoga Therapy', author: '', href: '/ebooks/yoga-therapy.pdf', cover: '/yoga-therapy.webp' },
+    { title: 'Yoga of the Subtle Body', author: '', href: '/ebooks/yoga-of-the-subtle-body.pdf', cover: '/yoga-of-the-subtle-body.webp' },
+    { title: 'Yin Yoga', author: '', href: '/ebooks/yin-yoga.pdf', cover: '/yin-yoga.webp' },
+    { title: 'Vinyasa Yoga', author: '', href: '/ebooks/vinyasa-yoga.pdf', cover: '/vinyasa-yoga.webp' },
+    { title: 'The Power of Ashtanga Yoga', author: '', href: '/ebooks/the-power-of-ashtanga-yoga.pdf', cover: '/the-power-of-ashtanga-yoga.webp' }
+  ];
 
   return (
     <section className="relative bg-white py-12 sm:py-16 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-
-        {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -103,7 +101,6 @@ const BeforeYouGoSection: React.FC = () => {
           <div className="mt-3 md:mt-5 w-20 h-1 bg-[#e0b973] mx-auto rounded-full"></div>
         </motion.div>
 
-        {/* Intro */}
         <motion.div
           variants={fadeInUp}
           className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 mb-10 md:mb-14 border border-gray-100"
@@ -116,7 +113,6 @@ const BeforeYouGoSection: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Safety Section */}
         <motion.div
           variants={fadeInUp}
           className="bg-gradient-to-r from-[#fff8ec] via-white to-[#e6edff] rounded-2xl p-6 sm:p-8 mb-10 md:mb-14 shadow-md"
@@ -130,7 +126,6 @@ const BeforeYouGoSection: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Safety Cards */}
         <motion.div
           variants={staggerContainer}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12"
@@ -158,25 +153,22 @@ const BeforeYouGoSection: React.FC = () => {
           </h3>
           <div className="mt-3 w-24 h-1 bg-[#e0b973] mx-auto rounded-full mb-8"></div>
 
-          {/* Arrows */}
-         <button
-  onClick={scrollLeft}
-  className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-[#fff6e0] text-[#e0b973] p-2 rounded-full z-10 transition"
-  aria-label="Previous"
->
-  <ChevronLeft size={26} />
-</button>
+          <button
+            onClick={scrollLeft}
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-[#fff6e0] text-[#e0b973] p-2 rounded-full z-10 transition"
+            aria-label="Previous"
+          >
+            <ChevronLeft size={26} />
+          </button>
 
-<button
-  onClick={scrollRight}
-  className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-[#fff6e0] text-[#e0b973] p-2 rounded-full z-10 transition"
-  aria-label="Next"
->
-  <ChevronRight size={26} />
-</button>
+          <button
+            onClick={scrollRight}
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-[#fff6e0] text-[#e0b973] p-2 rounded-full z-10 transition"
+            aria-label="Next"
+          >
+            <ChevronRight size={26} />
+          </button>
 
-
-          {/* Horizontal scroll area */}
           <div
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto no-scrollbar px-6 py-4 scroll-smooth"
@@ -184,23 +176,21 @@ const BeforeYouGoSection: React.FC = () => {
             {books.map((book, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-32 sm:w-40 md:w-48 border border-[#16a34a] rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md transition"
+                className="flex-shrink-0 w-32 sm:w-40 md:w-48 border border-[#16a34a] rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition cursor-pointer"
+                onClick={() => window.open(book.href, '_blank', 'noopener,noreferrer')}
               >
-                <a href={book.href} target="_blank" rel="noopener noreferrer">
-                  {/* ↓ Reduced height */}
-                  <div className="aspect-[3/4]">
-                    <img
-                      src={book.cover}
-                      alt={book.title}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="bg-[#16a34a] text-white text-center font-medium text-xs sm:text-sm py-1 px-2 flex items-center justify-center gap-1.5">
-                    <span className="truncate">{book.title}</span>
-                    <Download className="w-3.5 h-3.5" />
-                  </div>
-                </a>
+                <div className="aspect-[3/4]">
+                  <img
+                    src={book.cover}
+                    alt={book.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="bg-[#16a34a] text-white text-center font-medium text-xs sm:text-sm py-1 px-2 flex items-center justify-center gap-1.5">
+                  <span className="truncate">{book.title}</span>
+                  <Download className="w-3.5 h-3.5" />
+                </div>
               </div>
             ))}
           </div>

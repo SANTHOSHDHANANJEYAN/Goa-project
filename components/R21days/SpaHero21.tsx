@@ -20,7 +20,7 @@ const SpaHero21: React.FC = () => {
       {/* Hero Content */}
       <div className="container mx-auto px-4 relative z-10 text-center text-white">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
-          21 Days Yoga Wellness Retreat – A Journey to Self Discovery
+          21 Days Yoga Immersion Program – A Journey to Self Discovery
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
           Find inner peace and rejuvenate your spirit with our transformative yoga experience in the serene beaches of Goa.

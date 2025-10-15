@@ -11,7 +11,7 @@ export default function TwoListing7() {
           {/* Left Image */}
           <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/aboutpics/why.jpg"
+              src="/aboutpics/113.jpg"
               alt="Yoga Practice Transformation"
               fill
               className="object-cover"
@@ -54,7 +54,7 @@ export default function TwoListing7() {
           {/* Right Image */}
           <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/aboutpics/who.jpg"
+              src="/aboutpics/000.jpg"
               alt="Yoga Practitioners in Retreat"
               fill
               className="object-cover"

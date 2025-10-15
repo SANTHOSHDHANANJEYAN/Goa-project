@@ -63,7 +63,7 @@ const mainNav = [
     dropdown: [
       { name: "7 Days Yoga Holiday Retreat", href: "/7daysretreat" },
       { name: "14 Days Yoga Detox Retreat", href: "/14daysretreat" },
-      { name: "21 Days Yoga Wellness Retreat", href: "/21daysretreat" },
+      { name: "21 Days Yoga Immersion Program", href: "/21daysretreat" },
     ],
   },
   { name: "Gallery", href: "/gallery" },

@@ -85,7 +85,7 @@ export default function About211() {
           </div>
                     <div className="col-span-2 relative h-[325px]">
             <Image
-              src="/aboutpics/2422.jpg"
+              src="/aboutpics/242.jpg"
               alt="Yoga Practice"
               fill
               className="rounded-xl object-cover"
@@ -94,7 +94,7 @@ export default function About211() {
           </div>
           <div className="relative h-[160px]">
             <Image
-              src="/aboutpics/524.jpg"
+              src="/aboutpics/555.jpg"
               alt="Meditation Session"
               fill
               className="rounded-xl object-cover"
@@ -103,7 +103,7 @@ export default function About211() {
           </div>
           <div className="relative h-[160px]">
             <Image
-              src="/aboutpics/777.jpg"
+              src="/aboutpics/AB1.png"
               alt="Resort Environment"
               fill
               className="rounded-xl object-cover"

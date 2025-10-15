@@ -13,17 +13,20 @@ export default function Benefit21() {
         </h2>
 
         {/* Morning Routine */}
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-          <div className="w-full lg:w-1/2">
+        <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+          {/* Left Section */}
+          <div className="w-full lg:w-1/2 flex">
             <Image
-              src="/Imp&bene/morning.jpg"
+              src="/gallery/7.WEBP"
               alt="Morning Yoga Routine"
               width={800}
               height={500}
-              className="rounded-xl shadow-md w-full object-cover"
+              className="rounded-xl shadow-md w-full h-full object-cover"
             />
           </div>
-          <div className="w-full lg:w-1/2 space-y-4">
+
+          {/* Right Section */}
+          <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-4">
             <div className="flex items-center gap-3">
               <FaSun className="text-yellow-500 text-2xl" />
               <h3 className="text-xl sm:text-2xl font-semibold text-black">
@@ -37,6 +40,7 @@ export default function Benefit21() {
             </ul>
           </div>
         </div>
+
 
         {/* Daytime Sessions */}
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
@@ -56,7 +60,7 @@ export default function Benefit21() {
           </div>
           <div className="w-full lg:w-1/2">
             <Image
-              src="/Imp&bene/daytime.jpg"
+              src="/Activity/Multi-Style Yoga Classes.png"
               alt="Daytime Yoga Sessions"
               width={800}
               height={500}
@@ -69,7 +73,7 @@ export default function Benefit21() {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
           <div className="w-full lg:w-1/2">
             <Image
-              src="/Imp&bene/evening.jpg"
+              src="/Activity/cultural.png"
               alt="Evening Yoga Routine"
               width={800}
               height={500}
